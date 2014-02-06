@@ -43,9 +43,9 @@ dependencies[] = jquery_update
 dependencies[] = panels_everywhere
 
 ; Setup architecture and system features
-; dependencies[] = uclalib_system
-; dependencies[] = uclalib_users
-; dependencies[] = uclalib_arch
+dependencies[] = uclalib_system
+dependencies[] = uclalib_users
+dependencies[] = uclalib_arch
 
 ; Setup global content types
 ; dependencies[] = ct_
