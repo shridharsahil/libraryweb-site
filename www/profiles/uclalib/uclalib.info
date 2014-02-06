@@ -21,7 +21,6 @@ dependencies[] = shortcut
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = dblog
-dependencies[] = toolbar
 
 ; Basic Contrib modules
 dependencies[] = ctools
@@ -41,6 +40,7 @@ dependencies[] = diff
 dependencies[] = strongarm
 dependencies[] = jquery_update
 dependencies[] = panels_everywhere
+dependencies[] = navbar
 
 ; Setup architecture and system features
 dependencies[] = uclalib_system
