@@ -1,0 +1,67 @@
+name = UCLALIB Project
+description = Install for UCLALIB Project
+version = VERSION
+core = 7.x
+
+; Use this install profile as default, don't allow to choose another one
+exclusive = yes
+
+; Core modules
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = php
+dependencies[] = taxonomy
+dependencies[] = shortcut
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = dblog
+dependencies[] = toolbar
+
+; Basic Contrib modules
+dependencies[] = ctools
+dependencies[] = panels
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = views_content
+dependencies[] = page_manager
+dependencies[] = link
+dependencies[] = entity
+dependencies[] = entityreference
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = token
+dependencies[] = features
+dependencies[] = diff
+dependencies[] = strongarm
+dependencies[] = jquery_update
+
+; Setup architecture and system features
+; dependencies[] = uclalib_system
+; dependencies[] = uclalib_users
+; dependencies[] = uclalib_arch
+
+; Setup global content types
+; dependencies[] = ct_
+
+; Search dependencies
+; dependencies[] = search_api
+; dependencies[] = search_api_solr
+; dependencies[] = search_api_views
+; dependencies[] = search_api_solr_overrides
+
+; Search features
+; dependencies[] = uclalib_solr_server
+; dependencies[] = uclalib_search
+
+; OTHER FEATURES
+; dependencies[] = uclalib_homepage
+; dependencies[] = uclalib_default_content
+
+; MIGRATION
+; dependencies[] = uclalib_migration

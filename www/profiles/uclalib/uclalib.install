@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the minimal installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function uclalib_install() {
+  // Enable default and admin themes.
+  $default_theme = 'uclalib_omega';
+  $admin_theme = 'ember';
+
+  variable_set('theme_default', $default_theme);
+  variable_set('admin_theme', $admin_theme);
+
+  // Use admin theme on node edit pages.
+  variable_set('node_admin_theme', '1');
+
+  // To prevent spam accounts, restrict account creation to admins only.
+  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
+
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
+}
