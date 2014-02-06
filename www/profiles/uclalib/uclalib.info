@@ -23,23 +23,12 @@ dependencies[] = file
 dependencies[] = dblog
 
 ; Basic Contrib modules
-dependencies[] = ctools
-dependencies[] = panels
-dependencies[] = views
-dependencies[] = views_ui
-dependencies[] = views_content
-dependencies[] = page_manager
-dependencies[] = link
 dependencies[] = entity
-dependencies[] = entityreference
-dependencies[] = date
-dependencies[] = date_api
-dependencies[] = token
+dependencies[] = ctools
 dependencies[] = features
-dependencies[] = diff
 dependencies[] = strongarm
 dependencies[] = jquery_update
-dependencies[] = panels_everywhere
+dependencies[] = libraries
 dependencies[] = navbar
 
 ; Setup architecture and system features
