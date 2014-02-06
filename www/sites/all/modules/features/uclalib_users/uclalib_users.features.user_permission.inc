@@ -17,6 +17,13 @@ function uclalib_users_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer panelizer user user defaults'.
+  $permissions['administer panelizer user user defaults'] = array(
+    'name' => 'administer panelizer user user defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
