@@ -30,7 +30,7 @@ $conf['search_api_solr_overrides'] = array(
   'uclalib_solr_server' => array(
     'name' => t('Solr Server (Staging)'),
     'options' => array(
-      'host' => 'sky.bluespark.com',
+      'host' => '192.168.129.217',
       'port' => '8080',
       'path' => '/solr/uclalibdev',
     ),
