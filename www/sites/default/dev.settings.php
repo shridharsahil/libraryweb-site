@@ -6,7 +6,7 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'devuclalib',
+      'database' => 'uclalib',
       'username' => 'uclalib',
       'password' => 'uclalib',
       'host' => 'localhost',
