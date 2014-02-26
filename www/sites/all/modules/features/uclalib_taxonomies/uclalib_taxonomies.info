@@ -1,0 +1,14 @@
+name = UCLALIB TAxonomies
+description = Taxonomy vocabularies.
+core = 7.x
+package = UCLALIB
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = strongarm
+dependencies[] = taxonomy
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[taxonomy][] = location_amenities
+features[taxonomy][] = location_equipment
+features[taxonomy][] = location_study_areas
+features[variable][] = pathauto_taxonomy_term_pattern

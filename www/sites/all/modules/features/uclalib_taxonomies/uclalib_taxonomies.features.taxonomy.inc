@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * uclalib_location.features.taxonomy.inc
+ * uclalib_taxonomies.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function uclalib_location_taxonomy_default_vocabularies() {
+function uclalib_taxonomies_taxonomy_default_vocabularies() {
   return array(
     'location_amenities' => array(
       'name' => 'Location Amenities',
