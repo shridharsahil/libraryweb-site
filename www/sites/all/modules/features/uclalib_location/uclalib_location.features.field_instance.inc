@@ -396,6 +396,53 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-location-field_location_destinations'
+  $field_instances['node-location-field_location_destinations'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location_destinations',
+    'label' => 'Destinations',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 1,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-location-field_location_email'
   $field_instances['node-location-field_location_email'] = array(
     'bundle' => 'location',
@@ -806,6 +853,7 @@ function uclalib_location_field_default_field_instances() {
   t('Amenities');
   t('Building Name');
   t('Comment');
+  t('Destinations');
   t('Email');
   t('Equipment');
   t('Link');

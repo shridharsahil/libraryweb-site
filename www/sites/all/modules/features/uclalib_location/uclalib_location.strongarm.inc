@@ -91,7 +91,7 @@ function uclalib_location_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
       ),
       'display' => array(),
