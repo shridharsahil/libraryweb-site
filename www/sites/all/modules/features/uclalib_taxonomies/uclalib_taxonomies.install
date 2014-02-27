@@ -1,0 +1,103 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the  module.
+ */
+
+/**
+ * Create some example terms.
+ *
+ * We don't put this on features because it will be modified often.
+ */
+function _uclalib_taxonomies_create_terms() {
+  $terms = array(
+    'location_amenities' => array(
+      'Wifi',
+      'Vending Machines (Beverage)',
+      'Vending Machines (Snack)',
+      'Therapy Dog - only during certain times of the quarter - how would we do this?',
+      'Coffee',
+      'Kitchenette',
+      'Public Restrooms (include?)',
+      'Self Check-out',
+      'Fireplace - this would be nice!',
+      'Cafe',
+      'Art Gallery',
+      'Publicly accessible electrical outlets',
+      'Lockers',
+      'Bike Racks',
+      'Lost and Found',
+      'Nap Pod',
+    ),
+    'location_equipment' => array(
+      'Copier',
+      'color copier',
+      'printer',
+      'color printer',
+      'free scanner',
+      'book scanner (fee)',
+      'public computer',
+      'UCLA-only computer',
+      'CLICC computers (UCLA login only:  instructional software included)',
+      'iPads',
+      'iPods',
+      'Laptops',
+      'Projector',
+      'Display Monitor (mounted)',
+      'Display Monitor (mobile)',
+      'Checkout Projector',
+      'Headphones',
+    ),
+    'location_study_areas' => array(
+      'absolute quiet',
+      'conversation allowed',
+      'group study',
+      'individual study',
+      'large tables',
+      'open late',
+      'outdoor space',
+      'reservable collaboration pod',
+      'classrooms',
+    ),
+  );
+
+
+  foreach ($terms as $vocab_name => $term_list) {
+    $vocab = taxonomy_vocabulary_machine_name_load($vocab_name);
+    foreach ($term_list as $weight => $term_name) {
+      // Check if the term already exists.
+      $query = new EntityFieldQuery();
+      $query->entityCondition('entity_type', 'taxonomy_term');
+      $query->propertyCondition('name', $term_name);
+      $query->propertyCondition('vid', $vocab->vid);
+      $results = $query->execute();
+
+      // Only create the term if it doesn't exist already.
+      if (empty($results['taxonomy_term'])) {
+        $term = new stdClass();
+        $term->name = $term_name;
+        $term->vid = $vocab->vid;
+        $term->vocabulary_machine_name = $vocab_name;
+        $term->format = filter_fallback_format();
+        $term->weight = $weight;
+        $term->language = LANGUAGE_NONE;
+        taxonomy_term_save($term);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_enable().
+ */
+function uclalib_taxonomies_enable() {
+  _uclalib_taxonomies_create_terms();
+}
+
+/**
+ * Create some test terms.
+ */
+function uclalib_taxonomies_update_7000(&$sandbox) {
+  _uclalib_taxonomies_create_terms();
+}
