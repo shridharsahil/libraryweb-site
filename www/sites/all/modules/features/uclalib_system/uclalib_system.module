@@ -5,3 +5,51 @@
  */
 
 include_once 'uclalib_system.features.inc';
+
+/**
+ * List of modules that we want always enabled.
+ *
+ * We don't use dependencies because we don't want that disabling one of
+ * the modules disables the system feature.
+ */
+function uclalib_system_required_modules() {
+  return array(
+    'uclalib_arch',
+    'uclalib_users',
+    'uclalib_taxonomies',
+    'uclalib_static',
+    'uclalib_location',
+    'uclalib_destination',
+  );
+}
+
+/**
+ * Implements hook_flush_caches().
+ */
+function uclalib_system_flush_caches() {
+  // Just make sure all modules are enabled when we deploy.
+  _uclalib_system_enable_modules();
+}
+
+/**
+ * Returns a list of modules that must be enabled.
+ *
+ * Your update functions just have to call this function if you add
+ * any new module.
+ *
+ * @return array
+ */
+function _uclalib_system_enable_modules() {
+  static $called;
+
+  // Avoid recursion.
+  if (!$called) {
+    $called = TRUE;
+
+    $modules = uclalib_system_required_modules();
+
+    // module_enable() ignores modules which are already enabled.
+    module_enable($modules);
+    $called = FALSE;
+  }
+}
