@@ -470,16 +470,16 @@ function uclalib_location_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-10';
     $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'at_this_location_block-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'At this Location',
-      'body' => 'Lorem ipsum dolor sit amet.',
-      'format' => 'plain_text',
-      'substitute' => 1,
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'At this Location',
     );
     $pane->cache = array();
     $pane->style = array(
