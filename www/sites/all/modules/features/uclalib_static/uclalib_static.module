@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB Static feature.
+ */
+
+include_once 'uclalib_static.features.inc';
