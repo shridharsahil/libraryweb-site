@@ -5,3 +5,69 @@
  */
 
 include_once 'uclalib_location.features.inc';
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function uclalib_location_field_formatter_info() {
+  $return = array();
+
+  $return['uclalib_location_social_links'] = array(
+    'label' => t('Uclalib location: Social links'),
+    'field types' => array('field_collection'),
+  );
+
+  return $return;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function uclalib_location_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, &$items, $display) {
+  $link_options = array(
+    'external' => TRUE,
+    'attributes' => array(
+      'target' => '_blank',
+    ),
+    'html' => TRUE,
+  );
+
+  $element = array(
+  );
+
+  switch ($display['type']) {
+    case 'uclalib_location_social_links':
+      $links = array();
+      foreach ($items as $delta => $item) {
+        $id = $item['value'];
+        $collection = entity_load('field_collection_item', array($id));
+        $type = $collection[$id]->field_social_type[LANGUAGE_NONE][0]['value'];
+        $url = $collection[$id]->field_social_link[LANGUAGE_NONE][0]['url'];
+
+        $image_html = _uclalib_location_social_image($type);
+
+        $link = l($image_html, $url, $link_options);
+        $element[$delta] = array(
+          '#type' => 'markup',
+          '#markup' => $link,
+        );
+      }
+
+
+      break;
+
+  }
+
+  return $element;
+}
+
+/**
+ * Returns an image html for a social link type.
+ *
+ * @param $type
+ * @return mixed
+ */
+function _uclalib_location_social_image($type) {
+  // @todo: generate the image html.
+  return $type;
+}
