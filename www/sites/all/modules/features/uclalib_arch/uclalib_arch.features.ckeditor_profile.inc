@@ -127,7 +127,9 @@ function uclalib_arch_ckeditor_profile_defaults() {
         'scayt_autoStartup' => 'f',
         'html_entities' => 'f',
       ),
-      'input_formats' => array(),
+      'input_formats' => array(
+        'full_html' => 'Full HTML',
+      ),
     ),
   );
   return $data;
