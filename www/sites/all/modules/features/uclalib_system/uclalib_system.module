@@ -17,6 +17,7 @@ function uclalib_system_required_modules() {
     'uclalib_arch',
     'uclalib_users',
     'uclalib_taxonomies',
+    'uclalib_navigation',
     'uclalib_static',
     'uclalib_location',
     'uclalib_destination',
