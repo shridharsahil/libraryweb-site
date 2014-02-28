@@ -26,7 +26,7 @@ function uclalib_form_install_configure_form_alter(&$form, $form_state) {
   // Timezone settings.
   // Note: awaiting to definitive timezone - setup Los Angeles
   // http://drupal.org/node/1017020#comment-6897960 - to solve unset default_select
-  $form['server_settings']['date_default_timezone']['#default_value'] = array('America/Los_Angeles');
+  $form['server_settings']['date_default_timezone']['#default_value'] = 'America/Los_Angeles';
   unset($form['server_settings']['date_default_timezone']['#attributes']);
 }
 
