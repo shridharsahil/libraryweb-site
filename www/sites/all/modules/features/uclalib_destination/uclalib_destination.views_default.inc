@@ -65,11 +65,6 @@ function uclalib_destination_views_default_views() {
   $handler->display->display_options['fields']['field_destination_email']['field'] = 'field_destination_email';
   $handler->display->display_options['fields']['field_destination_email']['label'] = '';
   $handler->display->display_options['fields']['field_destination_email']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Destinations (field_location_destinations:delta) */
-  $handler->display->display_options['sorts']['delta']['id'] = 'delta';
-  $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_location_destinations';
-  $handler->display->display_options['sorts']['delta']['field'] = 'delta';
-  $handler->display->display_options['sorts']['delta']['relationship'] = 'reverse_field_location_destinations_node';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
