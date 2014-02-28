@@ -5,7 +5,6 @@ package = UCLALIB
 dependencies[] = ctools
 dependencies[] = fe_block
 dependencies[] = features
-dependencies[] = features_extra
 dependencies[] = menu
 dependencies[] = menu_block
 dependencies[] = strongarm
