@@ -22,7 +22,15 @@ function uclalib_static_panelizer_defaults() {
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
   $panelizer->contexts = array();
-  $panelizer->relationships = array();
+  $panelizer->relationships = array(
+    0 => array(
+      'identifier' => 'Menu parent',
+      'keyword' => 'menu_parent_node',
+      'name' => 'menu_parent_node',
+      'context' => 'panelizer',
+      'id' => 1,
+    ),
+  );
   $panelizer->access = array();
   $panelizer->view_mode = 'page_manager';
   $panelizer->css_class = '';
@@ -50,6 +58,30 @@ function uclalib_static_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
+    $pane->panel = 'center';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'location_header';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'relationship_menu_parent_node_1',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['center'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
     $pane->panel = 'center_top';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -72,10 +104,10 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center_top'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['center_top'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-3';
     $pane->panel = 'center_top';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -99,10 +131,10 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center_top'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['center_top'][1] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
@@ -120,10 +152,10 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['left'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = 'new-3';
   $panelizer->display = $display;
   $export['node:static:default'] = $panelizer;
 
