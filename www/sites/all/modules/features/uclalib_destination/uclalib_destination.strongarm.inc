@@ -14,7 +14,7 @@ function uclalib_destination_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_destination';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-opening-hours';
   $export['additional_settings__active_tab_destination'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -90,7 +90,9 @@ function uclalib_destination_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_destination';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
   $export['menu_options_destination'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -126,6 +128,20 @@ function uclalib_destination_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'opening_hours_category_vocabulary_destination';
+  $strongarm->value = '0';
+  $export['opening_hours_category_vocabulary_destination'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'opening_hours_enabled_destination';
+  $strongarm->value = 1;
+  $export['opening_hours_enabled_destination'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_defaults_node_destination';
   $strongarm->value = array(
     'status' => 1,
@@ -140,22 +156,7 @@ function uclalib_destination_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'rss' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'token' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
