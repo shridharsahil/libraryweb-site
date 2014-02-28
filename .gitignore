@@ -1,0 +1,2 @@
+# Copy drushrc.php.example to drushrc.php for each environment.
+/www/sites/all/drush/drushrc.php
