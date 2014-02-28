@@ -346,30 +346,13 @@ function uclalib_location_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '<ul>
-	<li>
-		At a Glance</li>
-	<li>
-		Collections</li>
-	<li>
-		Blog</li>
-	<li>
-		At this Location</li>
-	<li>
-		Directions &amp; Parking</li>
-	<li>
-		About</li>
-</ul>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -455,7 +438,7 @@ function uclalib_location_panelizer_defaults() {
       'formatter_settings' => array(),
       'context' => 'panelizer',
       'override_title' => 1,
-      'override_title_text' => 'About the Librry',
+      'override_title_text' => 'About the Library',
     );
     $pane->cache = array();
     $pane->style = array(
