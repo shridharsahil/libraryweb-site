@@ -5,3 +5,15 @@
  */
 
 include_once 'uclalib_navigation.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function uclalib_navigation_ctools_plugin_directory($owner, $plugin_type) {
+  switch ("$owner:$plugin_type") {
+    case 'ctools:relationships':
+      return "plugins/$owner/$plugin_type";
+  }
+
+  return NULL;
+}
