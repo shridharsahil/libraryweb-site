@@ -74,8 +74,9 @@ function uclalib_location_views_default_views() {
     2 => '2',
   );
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: By Location */
+  $handler = $view->new_display('panel_pane', 'By Location', 'panel_pane_1');
+  $handler->display->display_options['display_description'] = 'List terms in a given location by passing the location NID. Does not include destinations terms.';
   $handler->display->display_options['pane_category']['name'] = 'Locations';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -97,6 +98,31 @@ function uclalib_location_views_default_views() {
       'label' => 'Content: Nid',
     ),
   );
+
+  /* Display: By Term */
+  $handler = $view->new_display('panel_pane', 'By Term', 'panel_pane_2');
+  $handler->display->display_options['display_description'] = 'You pass a list of term tids that must appear in the view.';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy vocabulary: Vocabulary ID */
+  $handler->display->display_options['sorts']['vid']['id'] = 'vid';
+  $handler->display->display_options['sorts']['vid']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['sorts']['vid']['field'] = 'vid';
+  /* Sort criterion: Taxonomy term: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
   $export['at_this_location_block'] = $view;
 
   return $export;
