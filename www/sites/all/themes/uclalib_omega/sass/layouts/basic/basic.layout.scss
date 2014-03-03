@@ -1,0 +1,23 @@
+@import "susy";
+@import "compass";
+@import "variables/grid";
+
+.l-header,
+.l-navigation,
+.l-main,
+.l-highlighted,
+.l-footer {
+  max-width: 960px;
+  @include container;
+}
+
+.l-region--branding {
+  @include span-columns(2, 16);
+}
+.l-region--header {
+  @include span-columns(14 omega, 16);
+}
+
+.l-region--footer {
+  
+}

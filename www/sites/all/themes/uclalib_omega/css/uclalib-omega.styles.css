@@ -1,5 +1,269 @@
+@import url(../fonts/stylesheet.css);
+@import url(../icons/style.css);
+/* No files to import found in abstractions/**\/* */
 img, media {
   max-width: 100%;
 }
 
-/* No files to import found in partials/components/**\/* */
+html {
+  font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a, a:visited {
+  color: #3283be;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+/* UCLA Library custom Iconfont */
+.l-main-wrapper {
+  padding: 14px 0 25px;
+}
+
+.l-footer-wrapper {
+  background: black;
+  color: white;
+  padding: 50px 0;
+}
+
+.l-footer a, .l-footer a:visited {
+  color: #d8cfc7;
+  font-weight: bold;
+}
+.l-footer a:hover, .l-footer a:active, .l-footer a:focus {
+  text-decoration: underline;
+}
+.l-footer ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+.l-footer li {
+  margin: 0.5em 0;
+}
+.l-footer h1,
+.l-footer h2,
+.l-footer h3 {
+  margin-top: 0;
+}
+
+.l-header-wrapper {
+  background: #3283be;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.l-header a, .l-header a:visited {
+  color: white;
+}
+.l-header a:hover, .l-header a:active, .l-header a:focus {
+  text-decoration: underline;
+}
+.l-header .menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
+  *zoom: 1;
+  list-style: none;
+  list-style-image: none;
+}
+.l-header .menu:before, .l-header .menu:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.l-header .menu:after {
+  clear: both;
+}
+.l-header .menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.l-header .menu li:first-child, .l-header .menu li.first {
+  padding-left: 0;
+}
+.l-header .menu li:last-child {
+  padding-right: 0;
+}
+.l-header .menu li.last {
+  padding-right: 0;
+}
+.l-header .menu .leaf {
+  margin: 0;
+  list-style-image: none;
+  list-style-type: none;
+}
+.l-header .menu .leaf a {
+  padding-right: 4px;
+}
+.l-header .menu .leaf:after {
+  content: " | ";
+}
+.l-header .menu .leaf.last:after {
+  content: "";
+}
+.l-header .menu .leaf.last:after a {
+  padding-right: 0;
+}
+
+.l-region--branding {
+  padding-top: 18px;
+}
+
+.l-region--header {
+  text-align: right;
+}
+.l-region--header .panel-pane {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 14px;
+}
+
+.l-highlighted-wrapper {
+  background: #eff3f4;
+  padding: 14px 0;
+}
+
+.l-navigation-wrapper {
+  background: black;
+  border-bottom: 4px solid #fdb930;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.l-navigation a, .l-navigation a:visited {
+  color: white;
+}
+.l-navigation a:active, .l-navigation a:focus {
+  text-decoration: underline;
+}
+.l-navigation ul,
+.l-navigation .menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
+  *zoom: 1;
+  list-style: none;
+  list-style-image: none;
+}
+.l-navigation ul:before, .l-navigation ul:after,
+.l-navigation .menu:before,
+.l-navigation .menu:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.l-navigation ul:after,
+.l-navigation .menu:after {
+  clear: both;
+}
+.l-navigation ul li,
+.l-navigation .menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.l-navigation ul li:first-child, .l-navigation ul li.first,
+.l-navigation .menu li:first-child,
+.l-navigation .menu li.first {
+  padding-left: 0;
+}
+.l-navigation ul li:last-child,
+.l-navigation .menu li:last-child {
+  padding-right: 0;
+}
+.l-navigation ul li.last,
+.l-navigation .menu li.last {
+  padding-right: 0;
+}
+.l-navigation ul li,
+.l-navigation ul .leaf,
+.l-navigation .menu li,
+.l-navigation .menu .leaf {
+  margin: 0;
+  list-style-image: none;
+  list-style-type: none;
+  padding-right: 50px;
+}
+.l-navigation ul li.last,
+.l-navigation ul .leaf.last,
+.l-navigation .menu li.last,
+.l-navigation .menu .leaf.last {
+  padding-right: 0;
+}
+
+.pane-ask-a-librarian {
+  border-radius: 3px;
+  background: #fdb930;
+  padding: 6px 10px;
+  position: relative;
+}
+.pane-ask-a-librarian p {
+  margin: 0;
+  padding: 0;
+}
+.pane-ask-a-librarian a, .pane-ask-a-librarian a:visited {
+  color: #fff;
+  text-shadow: 0 1px 1px #666666;
+  vertical-align: middle;
+}
+.pane-ask-a-librarian a:hover, .pane-ask-a-librarian a:focus, .pane-ask-a-librarian a:active {
+  text-decoration: none;
+}
+.pane-ask-a-librarian a span {
+  vertical-align: middle;
+  font-size: 17px;
+}
+
+.pane-ask-a-librarian:before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #fdb930 transparent;
+  border-width: 0 .8em .8em 0;
+}
+
+.pane-search-form {
+  background: #2a6d9e;
+  padding: 10px;
+}
+.pane-search-form p {
+  margin: 0;
+}
+.pane-search-form .icon-search {
+  font-size: 31px;
+}
+.pane-search-form .icon-search + span {
+  display: none;
+}
+.pane-search-form a:hover, .pane-search-form a:focus, .pane-search-form a:active {
+  text-decoration: none;
+}

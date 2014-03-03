@@ -1,0 +1,33 @@
+.pane-ask-a-librarian {
+  border-radius: 3px;
+  background: $ucla-yellow;
+  padding: 6px 10px;
+  position: relative;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  a, a:visited {
+    color: #fff;
+    text-shadow: 0 1px 1px $ucla-gray;
+    vertical-align: middle;
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: none;
+  }
+  a span {
+    vertical-align: middle;
+    font-size: 17px;
+  }
+}
+.pane-ask-a-librarian:before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent $ucla-yellow transparent;
+  border-width: 0 .8em .8em 0;
+}

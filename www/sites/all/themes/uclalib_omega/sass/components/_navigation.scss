@@ -1,0 +1,31 @@
+.l-navigation-wrapper {
+  background: $nav-bg-color;
+  border-bottom: 4px solid $ucla-yellow;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.l-navigation {
+  a, a:visited {
+    color: $nav-link-color;
+  }
+  a:active, a:focus {
+    text-decoration: underline;
+  }
+  ul,
+  .menu {
+    @include horizontal-list;
+    list-style: none;
+    list-style-image: none;
+    li,
+   .leaf {
+      margin: 0;
+      list-style-image: none;
+      list-style-type: none;
+      padding-right: 50px;
+      &.last {
+        padding-right: 0;
+      }
+    }
+  }
+}

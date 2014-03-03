@@ -1,0 +1,16 @@
+.pane-search-form {
+  background: #2a6d9e;
+  padding: 10px;
+  p {
+    margin: 0;
+  }
+  .icon-search {
+    font-size: 31px;
+  }
+  .icon-search + span {
+    display: none;
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: none;
+  }
+}

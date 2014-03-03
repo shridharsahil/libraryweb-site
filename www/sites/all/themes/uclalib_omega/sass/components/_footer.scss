@@ -1,0 +1,28 @@
+.l-footer-wrapper {
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 50px 0;
+}
+.l-footer {
+  a, a:visited {
+    color: $footer-link-color;
+    font-weight: bold;
+  }
+  a:hover, a:active, a:focus {
+    text-decoration: underline;
+  }
+  ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0.5em 0;
+  }
+  h1,
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+}

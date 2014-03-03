@@ -1,0 +1,17 @@
+
+@import '../fonts/stylesheet.css';
+
+html {
+  font-family: $akzidenz;
+}
+
+a, a:visited {
+  color: #3283be;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+/* UCLA Library custom Iconfont */
+@import '../icons/style.css';

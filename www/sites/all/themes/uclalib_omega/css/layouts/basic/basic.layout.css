@@ -1,0 +1,38 @@
+.l-header,
+.l-navigation,
+.l-main,
+.l-highlighted,
+.l-footer {
+  max-width: 960px;
+  *zoom: 1;
+  max-width: 940px;
+  _width: 940px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-header:after,
+.l-navigation:after,
+.l-main:after,
+.l-highlighted:after,
+.l-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.l-region--branding {
+  width: 10.6383%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.l-region--header {
+  width: 87.23404%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}

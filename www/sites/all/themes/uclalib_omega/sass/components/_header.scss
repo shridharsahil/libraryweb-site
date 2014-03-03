@@ -1,0 +1,49 @@
+.l-header-wrapper {
+  background: #3283be;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.l-header {
+  a, a:visited {
+    color: $header-link-color;
+  }
+  a:hover, a:active, a:focus {
+    text-decoration: underline;
+  }
+  .menu {
+    @include horizontal-list;
+    list-style: none;
+    list-style-image: none;
+   .leaf {
+      margin: 0;
+      list-style-image: none;
+      list-style-type: none;
+      a {
+        padding-right: 4px;
+      }
+      &:after {
+        content: " | ";
+      }
+      &.last:after {
+        content: "";
+        a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.l-region--branding {
+  padding-top: 18px;
+}
+.l-region--header {
+  text-align: right;
+  .panel-pane {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 14px;
+  }
+}
