@@ -12,7 +12,9 @@ regions[help]           = Help
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
-regions[footer]         = Footer
+regions[footer_first]   = Footer first
+regions[footer_second]  = Footer second
+regions[footer_third]   = Footer third
 
 ; Stylesheets
 stylesheets[all][] = css/layouts/basic/basic.layout.css

@@ -7,8 +7,8 @@
 .l-main,
 .l-highlighted,
 .l-footer {
-  max-width: 960px;
   @include container;
+  width: 960px;
 }
 
 .l-region--branding {
@@ -18,6 +18,35 @@
   @include span-columns(14 omega, 16);
 }
 
-.l-region--footer {
-  
+// Save original susy grid values.
+$save-total-columns: $total-columns;
+$save-column-width: $column-width;
+$save-gutter-width: $gutter-width;
+$save-grid-padding: $grid-padding;
+
+// Custom susy grid values for footer.
+$total-columns: 16;
+$column-width: 50px;
+$gutter-width: 0px;
+$grid-padding: 50px;
+
+.l-region--footer-first {
+  @include span-columns(10, 16);
+  @include pad(0, 1, 16);
+  // margin-right: 0;
 }
+.l-region--footer-second {
+  @include span-columns(3, 16);
+  @include pad(.6, 0, 16);
+  // margin-right: 0;
+}
+.l-region--footer-third {
+  @include span-columns(3 omega, 16);
+  @include pad(.6, 0, 16);
+}
+
+// Replace original susy grid values.
+$total-columns: $save-total-columns;
+$column-width: $save-column-width;
+$gutter-width: $save-gutter-width;
+$grid-padding: $save-grid-padding;

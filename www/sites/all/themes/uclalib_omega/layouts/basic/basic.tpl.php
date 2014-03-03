@@ -35,7 +35,9 @@
 
   <div class="l-footer-wrapper">
     <div class="l-footer" role="contentinfo">
-      <?php print render($page['footer']); ?>
+      <?php print render($page['footer_first']); ?>
+      <?php print render($page['footer_second']); ?>
+      <?php print render($page['footer_third']); ?>
     </div>
   </div>
 </div>

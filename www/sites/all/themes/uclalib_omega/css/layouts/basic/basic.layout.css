@@ -3,7 +3,6 @@
 .l-main,
 .l-highlighted,
 .l-footer {
-  max-width: 960px;
   *zoom: 1;
   max-width: 940px;
   _width: 940px;
@@ -11,6 +10,7 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  width: 960px;
 }
 .l-header:after,
 .l-navigation:after,
@@ -35,4 +35,32 @@
   margin-right: 0;
   *margin-left: -20px;
   display: inline;
+}
+
+.l-region--footer-first {
+  width: 62.5%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+  padding-left: 0%;
+  padding-right: 6.25%;
+}
+
+.l-region--footer-second {
+  width: 18.75%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+  padding-left: 3.75%;
+  padding-right: 0%;
+}
+
+.l-region--footer-third {
+  width: 18.75%;
+  float: right;
+  margin-right: 0;
+  *margin-left: 0px;
+  display: inline;
+  padding-left: 3.75%;
+  padding-right: 0%;
 }

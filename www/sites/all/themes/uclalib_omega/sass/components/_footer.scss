@@ -26,3 +26,10 @@
     margin-top: 0;
   }
 }
+.l-region--footer-first {
+  border-right: 1px solid $ucla-gray;
+}
+.l-region--footer-second,
+.l-region--footer-third {
+  padding-top: 2.6em;
+}
