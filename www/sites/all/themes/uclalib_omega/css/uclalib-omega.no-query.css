@@ -276,3 +276,21 @@ a:hover, a:active, a:focus {
 .pane-search-form a:hover, .pane-search-form a:focus, .pane-search-form a:active {
   text-decoration: none;
 }
+
+.pane-start-your-research a, .pane-start-your-research a:visited {
+  display: inline-block;
+  background: #3283be;
+  color: #fff;
+  padding: 16px;
+  font-size: 30px;
+  font-weight: 100;
+  vertical-align: middle;
+}
+.pane-start-your-research a span, .pane-start-your-research a:visited span {
+  vertical-align: middle;
+  font-size: 31px;
+}
+.pane-start-your-research a:hover, .pane-start-your-research a:focus, .pane-start-your-research a:active {
+  text-decoration: none;
+  background: #529cd1;
+}

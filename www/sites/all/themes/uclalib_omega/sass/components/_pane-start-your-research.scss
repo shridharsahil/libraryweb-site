@@ -1,0 +1,19 @@
+.pane-start-your-research {
+  a, a:visited {
+    display: inline-block;
+    background: $ucla-blue;
+    color: #fff;
+    padding: 16px;
+    font-size: 30px;
+    font-weight: 100;
+    vertical-align: middle;
+    span {
+      vertical-align: middle;
+      font-size: 31px;
+    }
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: none;
+    background: lighten($ucla-blue, 10%);
+  }
+}
