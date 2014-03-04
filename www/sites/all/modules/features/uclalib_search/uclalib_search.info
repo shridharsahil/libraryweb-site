@@ -7,4 +7,4 @@ dependencies[] = search_api
 dependencies[] = search_api_solr
 dependencies[] = search_api_solr_overrides
 features[features_api][] = api:2
-features[search_api_server][] = default_solr_server
+features[search_api_server][] = uclalib_solr_server
