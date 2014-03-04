@@ -65,7 +65,14 @@ function uclalib_opening_hours_ctools_content_types_opening_hours_table_render($
   $header = array('');
   for ($i = 0; $i < 7; $i++) {
     $day_str = _uclalib_opening_hours_short_day($day->format('w'));
-    $header[] = $day_str . ' ' . $day->format('d');
+    $header_cell = array('data' => $day_str . ' ' . $day->format('d'));
+
+    // If current day add a class.
+    if ($day->format('d') == date_create()->format('d')) {
+      $header_cell['class'][] = 'current-day';
+    }
+
+    $header[] = $header_cell;
 
     // Add 1 day.
     $day->add($interval);
@@ -112,10 +119,18 @@ function uclalib_opening_hours_ctools_content_types_opening_hours_table_render($
         ->execute()
         ->fetchAssoc();
 
-      $row[] =
+      $row_cell = array('data' =>
         _uclalib_opening_hours_short_time($oh['start_time'])
         . '-' .
-        _uclalib_opening_hours_short_time($oh['end_time']);
+        _uclalib_opening_hours_short_time($oh['end_time'])
+      );
+
+      // If current day add a class.
+      if ($day->format('d') == date_create()->format('d')) {
+        $row_cell['class'][] = 'current-day';
+      }
+
+      $row[] = $row_cell;
 
       // Add one day.
       $day->add($interval);
