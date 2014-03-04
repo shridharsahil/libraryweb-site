@@ -111,7 +111,7 @@ function uclalib_location_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Destinations',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_location_destinations',
     ),

@@ -91,6 +91,9 @@ function uclalib_location_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
+          'weight' => '6',
+        ),
+        'default_opening_hours' => array(
           'weight' => '5',
         ),
       ),
