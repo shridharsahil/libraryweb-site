@@ -270,6 +270,68 @@ function uclalib_destination_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-destination-field_destination_oh_name'
+  $field_instances['node-destination-field_destination_oh_name'] = array(
+    'bundle' => 'destination',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is the name that will be used in the tables that display these opening hours.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_destination_oh_name',
+    'label' => 'Opening Hours alternate short name',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 50,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-destination-field_destination_phone'
   $field_instances['node-destination-field_destination_phone'] = array(
     'bundle' => 'destination',
@@ -416,9 +478,11 @@ function uclalib_destination_field_default_field_instances() {
   t('Email');
   t('Equipment');
   t('Location');
+  t('Opening Hours alternate short name');
   t('Phone number');
   t('Schedule appointment link');
   t('Study Areas');
+  t('This is the name that will be used in the tables that display these opening hours.');
 
   return $field_instances;
 }

@@ -169,9 +169,8 @@ function uclalib_location_field_group_info() {
     'label' => 'Default Hours',
     'weight' => '4',
     'children' => array(
-      0 => 'field_location_open_from',
-      1 => 'field_location_open_to',
-      2 => 'default_opening_hours',
+      0 => 'default_opening_hours',
+      1 => 'field_location_oh_name',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

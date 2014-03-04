@@ -78,7 +78,10 @@ function uclalib_destination_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
+        ),
+        'default_opening_hours' => array(
+          'weight' => '4',
         ),
       ),
       'display' => array(),
