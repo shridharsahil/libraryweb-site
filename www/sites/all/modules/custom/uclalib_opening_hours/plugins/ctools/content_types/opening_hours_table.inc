@@ -70,24 +70,24 @@ function uclalib_opening_hours_ctools_content_types_opening_hours_table_render($
     $day->add($interval);
   }
 
+  // Check for alternate name.
+  $title = isset($node->field_location_oh_name[LANGUAGE_NONE][0]['value']) ?
+    $node->field_location_oh_name[LANGUAGE_NONE][0]['value'] : $node->title;
 
   // List of nodes that will be displayed. By default the passed node.
   $nodes = array(
-    $node->nid => check_plain($node->title),
+    $node->nid => check_plain($title),
   );
 
   if (isset($node->field_location_destinations[LANGUAGE_NONE]) && is_array($node->field_location_destinations[LANGUAGE_NONE])) {
     foreach ($node->field_location_destinations[LANGUAGE_NONE] as $value) {
       if (isset($value['target_id'])) {
-        $title = db_select('node', 'n')
-          ->fields('n', array('title'))
-          ->condition('nid', $value['target_id'])
-          ->execute()
-          ->fetchField();
+        // @todo: avoid node_load.
+        $dest_node = node_load($value['target_id']);
 
-        if ($title) {
-          $nodes[$value['target_id']] = check_plain($title);
-        }
+        $title = isset($dest_node->field_destination_oh_name[LANGUAGE_NONE][0]['value']) ?
+          $dest_node->field_destination_oh_name[LANGUAGE_NONE][0]['value'] : $dest_node->title;
+        $nodes[$dest_node->nid] = check_plain($title);
       }
     }
   }
