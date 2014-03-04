@@ -125,5 +125,63 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
   $export['at_this_location_block'] = $view;
 
+  $view = new view();
+  $view->name = 'todays_hours';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Today\'s Hours';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'table';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Locations';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Opening hours: Opening hours today */
+  $handler->display->display_options['fields']['opening_hours_today']['id'] = 'opening_hours_today';
+  $handler->display->display_options['fields']['opening_hours_today']['table'] = 'node';
+  $handler->display->display_options['fields']['opening_hours_today']['field'] = 'opening_hours_today';
+  $handler->display->display_options['fields']['opening_hours_today']['label'] = 'Hours';
+  /* Field: Content: Phone Number */
+  $handler->display->display_options['fields']['field_location_phone']['id'] = 'field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['table'] = 'field_data_field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['field'] = 'field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['label'] = 'Phone';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  $handler->display->display_options['sorts']['title']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'location' => 'location',
+  );
+  $export['todays_hours'] = $view;
+
   return $export;
 }
