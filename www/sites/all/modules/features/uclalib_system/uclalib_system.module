@@ -20,6 +20,7 @@ function uclalib_system_required_modules() {
     'uclalib_navigation',
     'uclalib_pe_template',
     'uclalib_static',
+    'uclalib_opening_hours',
     'uclalib_location',
     'uclalib_destination',
   );
