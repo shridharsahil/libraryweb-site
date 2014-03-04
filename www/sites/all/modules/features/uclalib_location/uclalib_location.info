@@ -57,6 +57,7 @@ features[field_group][] = group_location_basic|node|location|form
 features[field_group][] = group_location_categories|node|location|form
 features[field_group][] = group_location_destinations|node|location|form
 features[field_group][] = group_location_facilities|node|location|form
+features[field_group][] = group_location_hours|node|location|form
 features[field_group][] = group_location_map|node|location|form
 features[field_instance][] = comment-comment_node_location-comment_body
 features[field_instance][] = field_collection_item-field_location_social-field_social_link
