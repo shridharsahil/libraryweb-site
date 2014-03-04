@@ -212,34 +212,6 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'header';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'PLACEHOLDER',
-      'title' => '',
-      'body' => '<p>asdflaksdjf</p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane-my-custom-content',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['header'][0] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'header';
     $pane->type = 'block';
     $pane->subtype = 'system-user-menu';
     $pane->shown = TRUE;
@@ -254,12 +226,12 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['header'][1] = 'new-8';
+    $display->content['new-7'] = $pane;
+    $display->panels['header'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-8';
     $pane->panel = 'header';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -281,12 +253,12 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
       'css_class' => 'pane-ask-a-librarian',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['header'][2] = 'new-9';
+    $display->content['new-8'] = $pane;
+    $display->panels['header'][1] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-9';
     $pane->panel = 'header';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -309,12 +281,12 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
       'css_class' => 'pane-search-form',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['header'][3] = 'new-10';
+    $display->content['new-9'] = $pane;
+    $display->panels['header'][2] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-10';
     $pane->panel = 'help';
     $pane->type = 'pane_messages';
     $pane->subtype = 'pane_messages';
@@ -329,10 +301,10 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['help'][0] = 'new-11';
+    $display->content['new-10'] = $pane;
+    $display->panels['help'][0] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-11';
     $pane->panel = 'highlighted';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -371,10 +343,10 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['highlighted'][0] = 'new-12';
+    $display->content['new-11'] = $pane;
+    $display->panels['highlighted'][0] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-12';
     $pane->panel = 'navigation';
     $pane->type = 'page_primary_links';
     $pane->subtype = 'page_primary_links';
@@ -392,8 +364,8 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['navigation'][0] = 'new-13';
+    $display->content['new-12'] = $pane;
+    $display->panels['navigation'][0] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
