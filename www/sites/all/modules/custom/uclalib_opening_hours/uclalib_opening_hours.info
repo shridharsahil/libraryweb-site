@@ -1,0 +1,6 @@
+name = UCLALIB Opening Hours
+description = Custom components for opening hours display.
+package = UCLALIB
+core = 7.x
+
+dependencies[] = opening_hours

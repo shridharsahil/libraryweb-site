@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Main code file for uclalib_opening_hours module.
+ */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function uclalib_opening_hours_ctools_plugin_api($module, $api) {
+  switch ("$module:$api") {
+    default:
+      return array('version' => '1');
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function uclalib_opening_hours_ctools_plugin_directory($owner, $plugin_type) {
+  switch ("$owner:$plugin_type") {
+    case 'ctools:content_types':
+      return "plugins/$owner/$plugin_type";
+  }
+
+  return NULL;
+}
