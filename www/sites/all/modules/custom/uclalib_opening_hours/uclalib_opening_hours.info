@@ -4,3 +4,7 @@ package = UCLALIB
 core = 7.x
 
 dependencies[] = opening_hours
+
+files[] = uclalib_opening_hours_field_opening_hours_week.inc
+files[] = uclalib_opening_hours_field_opening_hours_today.inc
+
