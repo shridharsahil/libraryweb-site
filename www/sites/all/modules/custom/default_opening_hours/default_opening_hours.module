@@ -118,16 +118,22 @@ function _default_opening_hours_create_defaults($node) {
     6 => 'sat_instance_id',
   );
 
-  $this_year = date_create()->format('Y');
-  $next_year = $this_year + 1;
+
+  $date_prefix = date_create()->format('Y-m');
+  $to_date = date_create('last day of next month')->format('Y-m-d');
 
   $record = array(
     'nid' => $node->nid,
   );
 
   for ($i = 1; $i <= 7; $i++) {
-    $date = $this_year . '-01-' . "0$i";
+    // Build the date of the i th day of the month.
+    $date = $date_prefix  . "-0$i";
+
+    // Find what day of the week it is.
     $dow = date_create($date)->format('w');
+
+    // Get the day field we need to read.
     $field = $days[$dow];
 
     if (isset($node->default_opening_hours[$field])) {
@@ -139,7 +145,7 @@ function _default_opening_hours_create_defaults($node) {
         $instance->nid = $node->nid;
         $instance->date = $date;
         $instance->repeat_rule = 'weekly';
-        $instance->repeat_end_date = $next_year . '-12-31';
+        $instance->repeat_end_date = $to_date;
         if (drupal_write_record('opening_hours', $instance) === SAVED_NEW) {
           default_opening_hours_repeat_instance_propagate($instance);
           $record[$field] = $instance->instance_id;
@@ -386,4 +392,19 @@ function theme_default_opening_hours_field($vars) {
   $output = theme('table', array('header' => $header, 'rows' => $rows));
 
   return $output;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function default_opening_hours_cron() {
+  $results = db_select('default_opening_hours', 'd')
+    ->fields('d')
+    ->execute();
+
+  foreach ($results as $result) {
+    if ($node = node_load($result->nid)) {
+      default_opening_hours_node_update($node);
+    }
+  }
 }
