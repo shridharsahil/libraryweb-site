@@ -64,7 +64,8 @@ function uclalib_opening_hours_ctools_content_types_opening_hours_table_render($
   // Generate a header with the days of the week.
   $header = array('');
   for ($i = 0; $i < 7; $i++) {
-    $header[] = $day->format('D d');
+    $day_str = _uclalib_opening_hours_short_day($day->format('w'));
+    $header[] = $day_str . ' ' . $day->format('d');
 
     // Add 1 day.
     $day->add($interval);

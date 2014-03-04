@@ -59,3 +59,25 @@ function _uclalib_opening_hours_short_time($time) {
 
   return $time;
 }
+
+/**
+ * Get the short custom text for days of the week.
+ *
+ * @param $dow
+ * @return mixed
+ */
+function _uclalib_opening_hours_short_day($dow) {
+  $strs = array(
+    'Su',
+    'M',
+    'Tu',
+    'W',
+    'Th',
+    'F',
+    'Sa',
+  );
+
+  if (isset($strs[$dow])) {
+    return $strs[$dow];
+  }
+}
