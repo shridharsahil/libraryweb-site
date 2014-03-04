@@ -26,3 +26,36 @@ function uclalib_opening_hours_ctools_plugin_directory($owner, $plugin_type) {
 
   return NULL;
 }
+
+/**
+ * Abbreviate a time string to the required format.
+ *
+ * @param $time
+ *   The time as 'HH:MM:SS';
+ * @return string
+ *   The time with the abbreviated form. Ex: 2p, 12:30a
+ */
+function _uclalib_opening_hours_short_time($time) {
+  $matches = array();
+
+  if (preg_match('/^([0-9]{2}):([0-9]{2}):([0-9]{2})$/', $time, $matches)) {
+    $hour = $matches[1];
+    $minute = $matches[2];
+
+    $ap = 'a';
+    if ($hour > 12) {
+      $hour = $hour - 12;
+      $ap = 'p';
+    }
+
+    $time = $hour;
+
+    if ($minute != '00') {
+      $time .= ':' . $minute;
+    }
+
+    $time .= $ap;
+  }
+
+  return $time;
+}

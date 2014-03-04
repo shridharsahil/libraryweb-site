@@ -111,8 +111,10 @@ function uclalib_opening_hours_ctools_content_types_opening_hours_table_render($
         ->execute()
         ->fetchAssoc();
 
-      // @TODO: Abbreviate the time range.
-      $row[] = $oh['start_time'] . '-' . $oh['end_time'];
+      $row[] =
+        _uclalib_opening_hours_short_time($oh['start_time'])
+        . '-' .
+        _uclalib_opening_hours_short_time($oh['end_time']);
 
       // Add one day.
       $day->add($interval);
