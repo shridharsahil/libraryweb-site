@@ -110,8 +110,8 @@ function uclalib_destination_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-destination-field_destination_amenities'
-  $field_instances['node-destination-field_destination_amenities'] = array(
+  // Exported field_instance: 'node-destination-field_amenities'
+  $field_instances['node-destination-field_amenities'] = array(
     'bundle' => 'destination',
     'default_value' => NULL,
     'deleted' => 0,
@@ -122,7 +122,7 @@ function uclalib_destination_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -132,7 +132,7 @@ function uclalib_destination_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_destination_amenities',
+    'field_name' => 'field_amenities',
     'label' => 'Amenities',
     'required' => 0,
     'settings' => array(
@@ -143,7 +143,7 @@ function uclalib_destination_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -183,43 +183,6 @@ function uclalib_destination_field_default_field_instances() {
       ),
       'type' => 'email_textfield',
       'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-destination-field_destination_equipment'
-  $field_instances['node-destination-field_destination_equipment'] = array(
-    'bundle' => 'destination',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_destination_equipment',
-    'label' => 'Equipment',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 10,
     ),
   );
 
@@ -433,8 +396,8 @@ function uclalib_destination_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-destination-field_destination_study_areas'
-  $field_instances['node-destination-field_destination_study_areas'] = array(
+  // Exported field_instance: 'node-destination-field_equipment'
+  $field_instances['node-destination-field_equipment'] = array(
     'bundle' => 'destination',
     'default_value' => NULL,
     'deleted' => 0,
@@ -445,7 +408,7 @@ function uclalib_destination_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -455,8 +418,8 @@ function uclalib_destination_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_destination_study_areas',
-    'label' => 'Study Areas',
+    'field_name' => 'field_equipment',
+    'label' => 'Equipment',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -466,7 +429,44 @@ function uclalib_destination_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-destination-field_study_areas'
+  $field_instances['node-destination-field_study_areas'] = array(
+    'bundle' => 'destination',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_study_areas',
+    'label' => 'Study areas',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 11,
     ),
   );
 
@@ -481,7 +481,7 @@ function uclalib_destination_field_default_field_instances() {
   t('Opening Hours alternate short name');
   t('Phone number');
   t('Schedule appointment link');
-  t('Study Areas');
+  t('Study areas');
   t('This is the name that will be used in the tables that display these opening hours.');
 
   return $field_instances;

@@ -243,6 +243,80 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-location-field_amenities'
+  $field_instances['node-location-field_amenities'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_amenities',
+    'label' => 'Amenities',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-location-field_equipment'
+  $field_instances['node-location-field_equipment'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_equipment',
+    'label' => 'Equipment',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'node-location-field_location_alt_names'
   $field_instances['node-location-field_location_alt_names'] = array(
     'bundle' => 'location',
@@ -298,43 +372,6 @@ function uclalib_location_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-location-field_location_amenities'
-  $field_instances['node-location-field_location_amenities'] = array(
-    'bundle' => 'location',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_location_amenities',
-    'label' => 'Amenities',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 9,
     ),
   );
 
@@ -482,43 +519,6 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_location_equipment'
-  $field_instances['node-location-field_location_equipment'] = array(
-    'bundle' => 'location',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_location_equipment',
-    'label' => 'Equipment',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 11,
-    ),
-  );
-
   // Exported field_instance: 'node-location-field_location_map_file'
   $field_instances['node-location-field_location_map_file'] = array(
     'bundle' => 'location',
@@ -661,7 +661,7 @@ function uclalib_location_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -874,8 +874,8 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_location_study_areas'
-  $field_instances['node-location-field_location_study_areas'] = array(
+  // Exported field_instance: 'node-location-field_study_areas'
+  $field_instances['node-location-field_study_areas'] = array(
     'bundle' => 'location',
     'default_value' => NULL,
     'deleted' => 0,
@@ -886,7 +886,7 @@ function uclalib_location_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -896,7 +896,7 @@ function uclalib_location_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_location_study_areas',
+    'field_name' => 'field_study_areas',
     'label' => 'Study areas',
     'required' => 0,
     'settings' => array(
@@ -907,7 +907,7 @@ function uclalib_location_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 

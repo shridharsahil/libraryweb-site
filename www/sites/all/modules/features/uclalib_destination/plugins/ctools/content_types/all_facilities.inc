@@ -54,9 +54,9 @@ function uclalib_destination_ctools_content_types_all_facilities_render($subtype
   $node = isset($context->data) ? clone($context->data) : NULL;
 
   $vocs = array(
-    'field_location_amenities',
-    'field_location_study_areas',
-    'field_location_equipment',
+    'field_amenities',
+    'field_study_areas',
+    'field_equipment',
   );
 
   $tids = uclalib_destination_fetch_facilities_tids($node, $vocs);
@@ -72,9 +72,9 @@ function uclalib_destination_ctools_content_types_all_facilities_render($subtype
     $destinations = node_load_multiple($dest_nids);
 
     $dest_fields = array(
-      'field_destination_amenities',
-      'field_destination_study_areas',
-      'field_destination_equipment',
+      'field_amenities',
+      'field_study_areas',
+      'field_equipment',
     );
     foreach ($destinations as $dest) {
       $dest_tids = uclalib_destination_fetch_facilities_tids($dest, $dest_fields);

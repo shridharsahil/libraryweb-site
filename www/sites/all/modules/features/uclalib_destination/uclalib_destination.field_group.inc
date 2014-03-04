@@ -26,6 +26,9 @@ function uclalib_destination_field_group_info() {
       0 => 'field_destination_amenities',
       1 => 'field_destination_study_areas',
       2 => 'field_destination_equipment',
+      3 => 'field_amenities',
+      4 => 'field_study_areas',
+      5 => 'field_equipment',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

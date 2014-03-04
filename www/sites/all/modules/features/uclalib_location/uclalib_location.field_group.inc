@@ -143,6 +143,9 @@ function uclalib_location_field_group_info() {
       0 => 'field_location_amenities',
       1 => 'field_location_study_areas',
       2 => 'field_location_equipment',
+      3 => 'field_amenities',
+      4 => 'field_study_areas',
+      5 => 'field_equipment',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -169,8 +172,8 @@ function uclalib_location_field_group_info() {
     'label' => 'Default Hours',
     'weight' => '4',
     'children' => array(
-      0 => 'default_opening_hours',
-      1 => 'field_location_oh_name',
+      0 => 'field_location_oh_name',
+      1 => 'default_opening_hours',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
