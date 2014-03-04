@@ -3,6 +3,7 @@ description = Location content type.
 core = 7.x
 package = UCLALIB
 dependencies[] = ctools
+dependencies[] = default_opening_hours
 dependencies[] = email
 dependencies[] = entityreference
 dependencies[] = features
