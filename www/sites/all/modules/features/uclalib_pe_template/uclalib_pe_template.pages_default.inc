@@ -48,6 +48,9 @@ function uclalib_pe_template_default_page_manager_handlers() {
       'footer_second' => NULL,
       'footer_third' => NULL,
     ),
+    'content' => array(
+      'style' => 'naked',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -348,6 +351,32 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane = new stdClass();
     $pane->pid = 'new-12';
     $pane->panel = 'navigation';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'alert_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array(
+      'method' => 'ajax_pane',
+      'settings' => array(
+        'lifetime' => '15',
+      ),
+    );
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['navigation'][0] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'navigation';
     $pane->type = 'page_primary_links';
     $pane->subtype = 'page_primary_links';
     $pane->shown = TRUE;
@@ -362,10 +391,10 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['navigation'][0] = 'new-12';
+    $display->content['new-13'] = $pane;
+    $display->panels['navigation'][1] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
