@@ -7,17 +7,17 @@
     margin: 0;
     padding: 0;
   }
-  a, a:visited {
-    color: #fff;
+  a {
+    @include link-colors(#fff);
     text-shadow: 0 1px 1px $ucla-gray;
-    vertical-align: middle;
-  }
-  a:hover, a:focus, a:active {
-    text-decoration: none;
-  }
-  a span {
-    vertical-align: middle;
-    font-size: 17px;
+    vertical-align: bottom;
+    line-height: 20px;
+    &:hover {
+      text-decoration: none;
+    }
+    span {
+      font-size: 17px;
+    }
   }
 }
 .pane-ask-a-librarian:before {

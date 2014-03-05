@@ -235,16 +235,16 @@ a:hover {
   margin: 0;
   padding: 0;
 }
-.pane-ask-a-librarian a, .pane-ask-a-librarian a:visited {
-  color: #fff;
+.pane-ask-a-librarian a {
+  color: white;
   text-shadow: 0 1px 1px #666666;
-  vertical-align: middle;
+  vertical-align: bottom;
+  line-height: 20px;
 }
-.pane-ask-a-librarian a:hover, .pane-ask-a-librarian a:focus, .pane-ask-a-librarian a:active {
+.pane-ask-a-librarian a:hover {
   text-decoration: none;
 }
 .pane-ask-a-librarian a span {
-  vertical-align: middle;
   font-size: 17px;
 }
 
