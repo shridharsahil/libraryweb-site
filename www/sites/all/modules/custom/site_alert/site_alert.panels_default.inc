@@ -48,10 +48,8 @@ $display->panels = array();
   );
   $pane->configuration = array();
   $pane->cache = array(
-    'method' => 'ajax_pane',
-    'settings' => array(
-      'lifetime' => '60',
-    ),
+    'method' => '0',
+    'settings' => array(),
   );
   $pane->style = array(
     'settings' => NULL,
