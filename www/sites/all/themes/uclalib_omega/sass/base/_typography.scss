@@ -5,12 +5,9 @@ html {
   font-family: $akzidenz;
 }
 
-a, a:visited {
-  color: #3283be;
-  text-decoration: none;
-}
-a:hover, a:active, a:focus {
-  text-decoration: underline;
+a {
+  @include link-colors($ucla-blue);
+  @include hover-link;
 }
 
 /* UCLA Library custom Iconfont */

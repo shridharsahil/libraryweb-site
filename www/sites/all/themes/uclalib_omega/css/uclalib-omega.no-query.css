@@ -9,12 +9,11 @@ html {
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-a, a:visited {
+a {
   color: #3283be;
   text-decoration: none;
 }
-
-a:hover, a:active, a:focus {
+a:hover {
   text-decoration: underline;
 }
 
