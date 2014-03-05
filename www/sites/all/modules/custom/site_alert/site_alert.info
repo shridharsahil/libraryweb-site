@@ -1,0 +1,12 @@
+name = Site Alert
+description = Simple module to display text alert site wide with an expiration date.
+core = 7.x
+
+dependencies[] = date
+dependencies[] = panels_mini
+dependencies[] = ajax_pane
+
+panels_mini[] = alert_pane
+
+stylesheets[all][] = css/site-alert.css
+
