@@ -55,7 +55,9 @@ function uclalib_search_default_search_api_index() {
         "field_location_phone" : { "type" : "text" },
         "field_destination_phone" : { "type" : "text" },
         "field_destination_email" : { "type" : "text" },
-        "search_api_language" : { "type" : "string" }
+        "search_api_language" : { "type" : "string" },
+        "body:value" : { "type" : "text" },
+        "body:summary" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
