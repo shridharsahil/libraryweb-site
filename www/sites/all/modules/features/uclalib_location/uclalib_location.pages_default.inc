@@ -15,7 +15,7 @@ function uclalib_location_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Location Search';
   $page->admin_description = '';
-  $page->path = 'locations/search';
+  $page->path = 'locations';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
