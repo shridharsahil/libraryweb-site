@@ -13,3 +13,7 @@ a {
 
 /* UCLA Library custom Iconfont */
 @import '../icons/style.css';
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  vertical-align: middle;
+}

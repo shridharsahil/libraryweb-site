@@ -1,7 +1,7 @@
 .pane-ask-a-librarian {
   border-radius: 3px;
   background: $ucla-yellow;
-  padding: 6px 10px;
+  padding: 4px 10px 6px;
   position: relative;
   p {
     margin: 0;
@@ -10,13 +10,11 @@
   a {
     @include link-colors(#fff);
     text-shadow: 0 1px 1px $ucla-gray;
-    vertical-align: bottom;
-    line-height: 20px;
-    &:hover {
+    &, &:hover, &:active, &:focus {
       text-decoration: none;
     }
     span {
-      font-size: 17px;
+      font-size: 16px;
     }
   }
 }

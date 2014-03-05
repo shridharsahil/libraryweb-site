@@ -19,6 +19,10 @@ a:hover {
 }
 
 /* UCLA Library custom Iconfont */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  vertical-align: middle;
+}
+
 .l-main-wrapper {
   padding: 14px 0 25px;
 }
@@ -228,7 +232,7 @@ a:hover {
 .pane-ask-a-librarian {
   border-radius: 3px;
   background: #fdb930;
-  padding: 6px 10px;
+  padding: 4px 10px 6px;
   position: relative;
 }
 .pane-ask-a-librarian p {
@@ -238,14 +242,12 @@ a:hover {
 .pane-ask-a-librarian a {
   color: white;
   text-shadow: 0 1px 1px #666666;
-  vertical-align: bottom;
-  line-height: 20px;
 }
-.pane-ask-a-librarian a:hover {
+.pane-ask-a-librarian a, .pane-ask-a-librarian a:hover, .pane-ask-a-librarian a:active, .pane-ask-a-librarian a:focus {
   text-decoration: none;
 }
 .pane-ask-a-librarian a span {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .pane-ask-a-librarian:before {
@@ -267,7 +269,7 @@ a:hover {
 .pane-search-form p {
   margin: 0;
 }
-.pane-search-form .icon-search {
+.pane-search-form .btn-search {
   font-size: 31px;
 }
 .pane-search-form .icon-search + span {
@@ -284,10 +286,8 @@ a:hover {
   padding: 16px;
   font-size: 30px;
   font-weight: 100;
-  vertical-align: middle;
 }
 .pane-start-your-research a span, .pane-start-your-research a:visited span {
-  vertical-align: middle;
   font-size: 31px;
 }
 .pane-start-your-research a:hover, .pane-start-your-research a:focus, .pane-start-your-research a:active {
