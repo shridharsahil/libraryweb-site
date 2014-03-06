@@ -57,4 +57,12 @@
     }
   };
 
+  Drupal.behaviors.uclalibSearchToggle = {
+    attach: function () {
+      $('.header-search-form-label').click( function () {
+        $(this).toggleClass('is-active');
+      });
+    }
+  };
+
 })(jQuery);

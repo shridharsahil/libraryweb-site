@@ -263,26 +263,19 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'header';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'search_form';
+    $pane->subtype = 'search_form';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Header Search [PLACEHOLDER]',
-      'title' => '',
-      'body' => '<a class="btn-search" href="#"><span class="icon-search"></span> <span>Search</span></a>
-<!-- @todo: hidden search form goes here -->',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane-search-form',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
