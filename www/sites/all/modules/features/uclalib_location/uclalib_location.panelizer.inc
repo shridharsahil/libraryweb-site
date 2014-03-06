@@ -30,7 +30,7 @@ function uclalib_location_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'sidebar-left';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -217,6 +217,12 @@ function uclalib_location_panelizer_defaults() {
       'right' => NULL,
       'center_left' => NULL,
       'center_right' => NULL,
+      'top' => NULL,
+      'sidebar' => NULL,
+      'sidebar_left' => NULL,
+      'main' => NULL,
+      'below_main_left' => NULL,
+      'below_main_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -225,31 +231,7 @@ function uclalib_location_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'location_header';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'panelizer',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'center_left';
+    $pane->panel = 'below_main_left';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -269,11 +251,11 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center_left'][0] = 'new-2';
+    $display->content['new-1'] = $pane;
+    $display->panels['below_main_left'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'center_right';
+    $pane->pid = 'new-2';
+    $pane->panel = 'below_main_right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -293,11 +275,11 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['center_right'][0] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['below_main_right'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'center_top';
+    $pane->pid = 'new-3';
+    $pane->panel = 'main';
     $pane->type = 'opening_hours_table';
     $pane->subtype = 'opening_hours_table';
     $pane->shown = TRUE;
@@ -315,11 +297,11 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['center_top'][0] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['main'][0] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'left';
+    $pane->pid = 'new-4';
+    $pane->panel = 'sidebar_left';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -340,11 +322,11 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left'][0] = 'new-5';
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'left';
+    $pane->pid = 'new-5';
+    $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
     $pane->shown = TRUE;
@@ -361,11 +343,11 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][1] = 'new-6';
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'left';
+    $pane->pid = 'new-6';
+    $pane->panel = 'sidebar_left';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -395,11 +377,11 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['left'][2] = 'new-7';
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'left';
+    $pane->pid = 'new-7';
+    $pane->panel = 'sidebar_left';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -419,11 +401,35 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'top';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'location_header';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
     $display->content['new-8'] = $pane;
-    $display->panels['left'][3] = 'new-8';
+    $display->panels['top'][0] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
-    $pane->panel = 'right';
+    $pane->panel = 'top';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
     $pane->shown = TRUE;
@@ -445,13 +451,13 @@ function uclalib_location_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['right'][0] = 'new-9';
+    $display->panels['top'][1] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'right';
+    $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'at_this_location_block-panel_pane_1';
     $pane->shown = TRUE;
@@ -469,10 +475,10 @@ function uclalib_location_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
-    $display->panels['right'][1] = 'new-10';
+    $display->panels['top'][2] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
