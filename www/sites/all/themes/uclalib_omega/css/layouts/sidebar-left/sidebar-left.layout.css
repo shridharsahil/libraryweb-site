@@ -1,0 +1,55 @@
+.l-region {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.panel-sidebar-left:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.l-region--sidebar-left {
+  width: 23.80952%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 0;
+}
+
+.l-region--main-column {
+  width: 76.19048%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-right: 0;
+}
+
+.l-region--below-main-left {
+  width: 50%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 0;
+}
+
+.l-region--below-main-right {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-right: 0;
+}

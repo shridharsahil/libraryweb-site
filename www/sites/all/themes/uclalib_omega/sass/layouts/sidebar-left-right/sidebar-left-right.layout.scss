@@ -1,0 +1,50 @@
+@import "singularitygs";
+
+// 4-column assymetrical grid w/ fixed 30px gutters between columns.
+$grid: 5 5 5 6;
+$gutters: 30px;
+$gutter-styles: 'split'; // gitter is split between left and right of each col.
+
+.l-region {
+  @include box-sizing(border-box);
+}
+
+@include layout($grid) {
+  .panel-sidebar-left-right {
+    //@include background-grid($color: blue);
+    @include clearfix;
+  }
+
+  // Span 1 column, starting at the 1st column
+  .l-region--sidebar-left {
+    @include grid-span(1, 1);
+    padding-left: 0; // kill left rail gutter.
+  }
+
+  // Span 2 columns, starting at the 2nd column
+  .l-region--main-column {
+    @include grid-span(2, 2);
+  }
+
+  // Span 1 column, starting at the 4th column
+  .l-region--sidebar-right {
+    @include float-span(1, 4);
+    padding-left: 0; // kill right rail gutter.
+  }
+}
+
+// Adjust these nested grid elements for a two column layout.
+@include layout(2) {
+  // Span 1 column, starting at the 1st column
+  .l-region--below-main-left {
+    @include grid-span(1, 1);
+    padding-left: 0; // kill left rail gutter.
+  }
+
+  // Span 1 column, starting at the 1st column
+  .l-region--below-main-right {
+    @include grid-span(1, 2);
+    padding-right: 0; // kill right rail gutter.
+  }
+}
+

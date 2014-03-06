@@ -19,6 +19,12 @@ stylesheets[all][] = css/uclalib-omega.no-query.css
 scripts[] = js/uclalib-omega.behaviors.js
 
 ; ========================================
+; Plugins
+; ========================================
+plugins[panels][layouts] = panels/layouts
+;plugins[panels][styles] = panels/styles
+
+; ========================================
 ; Regions
 ; ========================================
 regions[branding] = Branding
