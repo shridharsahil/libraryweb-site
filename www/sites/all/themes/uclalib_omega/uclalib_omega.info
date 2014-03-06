@@ -1,5 +1,5 @@
-name = UCLALIB Omega
-description = Please provide a description for your theme.
+name = UCLA Library Theme
+description = A custom theme for UCLA Library based on the Omega 4.x framework.
 base theme = omega
 screenshot = screenshot.png
 engine = phptemplate
