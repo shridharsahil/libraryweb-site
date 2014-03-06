@@ -266,12 +266,6 @@ a:hover {
   background: #2a6d9e;
   padding: 10px;
 }
-.pane-search-form p {
-  margin: 0;
-}
-.pane-search-form .btn-search {
-  font-size: 31px;
-}
 .pane-search-form .icon-search + span {
   display: none;
 }
