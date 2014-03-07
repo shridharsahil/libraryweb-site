@@ -47,6 +47,7 @@ features[field_instance][] = node-destination-field_equipment
 features[field_instance][] = node-destination-field_study_areas
 features[node][] = destination
 features[panelizer_defaults][] = node:destination:default
+features[panelizer_defaults][] = node:destination:default:teaser
 features[panelizer_defaults][] = node:static:static_at_this_location
 features[variable][] = additional_settings__active_tab_destination
 features[variable][] = comment_anonymous_destination
