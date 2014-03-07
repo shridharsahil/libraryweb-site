@@ -47,6 +47,15 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Sort criterion: Indexed Node: Queue position */
+  $handler->display->display_options['sorts']['queue_position']['id'] = 'queue_position';
+  $handler->display->display_options['sorts']['queue_position']['table'] = 'search_api_index_location_search';
+  $handler->display->display_options['sorts']['queue_position']['field'] = 'queue_position';
+  /* Sort criterion: Search: Relevance */
+  $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
+  $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_index_location_search';
+  $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
+  $handler->display->display_options['sorts']['search_api_relevance']['order'] = 'DESC';
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
