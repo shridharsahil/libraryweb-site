@@ -81,6 +81,7 @@ features[field_instance][] = node-location-field_study_areas
 features[node][] = location
 features[page_manager_pages][] = location_search
 features[panelizer_defaults][] = node:location:default
+features[panelizer_defaults][] = node:location:default:teaser
 features[panels_mini][] = location_header
 features[variable][] = additional_settings__active_tab_location
 features[variable][] = comment_anonymous_location
