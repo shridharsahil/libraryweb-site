@@ -64,6 +64,7 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
   $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
+    'destination' => 'destination',
     'location' => 'location',
   );
   /* Filter criterion: Taxonomy term: Vocabulary */
