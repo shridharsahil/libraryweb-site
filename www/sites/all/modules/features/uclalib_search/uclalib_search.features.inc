@@ -27,6 +27,38 @@ function uclalib_search_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_nodequeue_export_fields().
+ */
+function uclalib_search_fe_nodequeue_export_fields() {
+  $nodequeues = array();
+
+  // Exported nodequeues: promoted_locations
+  $nodequeues['promoted_locations'] = array(
+    'name' => 'promoted_locations',
+    'title' => 'Promoted Locations',
+    'subqueue_title' => '',
+    'size' => 0,
+    'link' => '',
+    'link_remove' => '',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 0,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'location',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  return $nodequeues;
+}
+
+/**
  * Implements hook_default_search_api_index().
  */
 function uclalib_search_default_search_api_index() {
