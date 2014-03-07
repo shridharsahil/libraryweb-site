@@ -55,3 +55,24 @@ function uclalib_search_views_pre_view(&$view, &$display_id, &$args) {
   }
 }
 
+/**
+ * Implements hook_nodequeue_save_subqueue_order_alter().
+ *
+ * When the promoted locations nodequeue is saved, reindex all location nodes.
+ */
+function uclalib_search_nodequeue_save_subqueue_order_alter($sqid, $nodes) {
+  $queue = nodequeue_load_queue_by_name('promoted_locations');
+  $subqueues = nodequeue_load_subqueues_by_queue($queue->qid);
+  $subqueue = reset($subqueues);
+
+  if ($sqid == $subqueue->sqid) {
+    $nids = db_select('node', 'n')
+      ->condition('type', 'location')
+      ->fields('n', array('nid'))
+      ->execute()
+      ->fetchAllAssoc('nid');
+    $nids = array_keys($nids);
+
+    search_api_track_item_change('node', $nids);
+  }
+}
