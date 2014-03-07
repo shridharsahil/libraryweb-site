@@ -5,3 +5,35 @@
  */
 
 include_once 'uclalib_search.features.inc';
+
+/**
+ * Implements hook_entity_property_info_alter().
+ *
+ * From: https://drupal.org/node/1480882
+ *
+ * We add an additional property to the locations that can be indexed by search_api.
+ * This property will be the position of the node in a given queue.
+ * Once the node is indexed it can be used in views to sort.
+ */
+function uclalib_search_entity_property_info_alter(&$info) {
+  $bundles = &$info['node']['bundles'];
+  $bundles['location']['properties']['queue_position'] = array(
+    'type' => 'integer',
+    'label' => 'Queue position',
+    'getter callback' => 'uclalib_search_queue_position',
+    'description' => t('Position in the nodequeue'),
+    'entity views field' => TRUE,
+  );
+}
+
+/**
+ * Entity property getter callback: Returns the relevant nodequeue position for the queue.
+ */
+function uclalib_search_queue_position($entity, $options, $name, $entity_type, $info) {
+  if ($pos = nodequeue_get_subqueue_position(1, $entity->nid)) {
+    $subqueue = subqueue_load(1);
+    // Easier to reverse the queue ordering so that we can order in a way that NULL/0 comes last.
+    return -1 * (1+ $subqueue->count - $pos);
+  }
+}
+
