@@ -9,19 +9,19 @@
 
 $plugin = array(
   'category' => t('UCLALIB Opening Hours'),
-  'title' => t('Opening hours table'),
-  'description' => t('Table with the opening hours for a node.'),
+  'title' => t("Today's Hours"),
+  'description' => t("Today's opening hours for a node"),
 
   'required context' => new ctools_context_required(t('Node'), array('node')),
 
-  'edit form'          => 'uclalib_opening_hours_ctools_content_types_opening_hours_table_edit_form',
-  'render callback' => 'uclalib_opening_hours_ctools_content_types_opening_hours_table_render',
+  'edit form'          => 'uclalib_opening_hours_ctools_content_types_todays_hours_edit_form',
+  'render callback' => 'uclalib_opening_hours_ctools_content_types_todays_hours_render',
 );
 
 /**
  * Edit form callback.
  */
-function uclalib_opening_hours_ctools_content_types_opening_hours_table_edit_form($form, &$form_state) {
+function uclalib_opening_hours_ctools_content_types_todays_hours_edit_form($form, &$form_state) {
 
   return $form;
 }
@@ -45,9 +45,7 @@ function uclalib_opening_hours_ctools_content_types_opening_hours_table_edit_for
  * @return object
  *   The content.
  */
-function uclalib_opening_hours_ctools_content_types_opening_hours_table_render($subtype, $conf, $args, $pane_context, $incoming_content) {
-  $output = '';
-
+function uclalib_opening_hours_ctools_content_types_todays_hours_render($subtype, $conf, $args, $pane_context, $incoming_content) {
   if (isset($pane_context->data) && !empty($pane_context->data)) {
     $node = $pane_context->data;
   }
@@ -55,7 +53,23 @@ function uclalib_opening_hours_ctools_content_types_opening_hours_table_render($
     return;
   }
 
-  $output = uclalib_opening_hours_generate_table($node);
+  $date = date_create()->format('Y-m-d');
+  $oh = db_select('opening_hours', 'oh')
+    ->condition('nid', $node->nid)
+    ->fields('oh', array('start_time', 'end_time'))
+    ->condition('date', $date)
+    ->execute()
+    ->fetchAssoc();
+
+  $output = '';
+  if (isset($oh['start_time']) && isset($oh['end_time'])) {
+    $hours =
+      _uclalib_opening_hours_short_time($oh['start_time'])
+      . ' - ' .
+      _uclalib_opening_hours_short_time($oh['end_time']);
+
+    $output .= t("Today's hours") . ': ' . $hours;
+  }
 
   $block = new stdClass();
   $block->module = 'uclalib_opening_hours';
