@@ -22,4 +22,3 @@ features[variable][] = menu_block_1_sort
 features[variable][] = menu_block_1_title_link
 features[variable][] = menu_block_ids
 features[variable][] = menu_expanded
-features[variable][] = menu_masks
