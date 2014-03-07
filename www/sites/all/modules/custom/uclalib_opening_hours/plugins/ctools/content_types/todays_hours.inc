@@ -12,7 +12,10 @@ $plugin = array(
   'title' => t("Today's Hours"),
   'description' => t("Today's opening hours for a node"),
 
-  'required context' => new ctools_context_required(t('Node'), array('node')),
+  'required context' => array(
+    new ctools_context_required(t('Node'), array('node')),
+    new ctools_context_optional(t('Fallback Node'), array('node')),
+  ),
 
   'edit form'          => 'uclalib_opening_hours_ctools_content_types_todays_hours_edit_form',
   'render callback' => 'uclalib_opening_hours_ctools_content_types_todays_hours_render',
@@ -46,20 +49,20 @@ function uclalib_opening_hours_ctools_content_types_todays_hours_edit_form($form
  *   The content.
  */
 function uclalib_opening_hours_ctools_content_types_todays_hours_render($subtype, $conf, $args, $pane_context, $incoming_content) {
-  if (isset($pane_context->data) && !empty($pane_context->data)) {
-    $node = $pane_context->data;
+  if (isset($pane_context[0]->data) && !empty($pane_context[0]->data)) {
+    $node = $pane_context[0]->data;
   }
   else {
     return;
   }
 
-  $date = date_create()->format('Y-m-d');
-  $oh = db_select('opening_hours', 'oh')
-    ->condition('nid', $node->nid)
-    ->fields('oh', array('start_time', 'end_time'))
-    ->condition('date', $date)
-    ->execute()
-    ->fetchAssoc();
+  $oh = uclalib_opening_hours_get_node_todays_hours($node->nid);
+  if (!$oh) {
+    if (isset($pane_context[1]->data) && !empty($pane_context[1]->data)) {
+      $node = $pane_context[1]->data;
+      $oh = uclalib_opening_hours_get_node_todays_hours($node->nid);
+    }
+  }
 
   $output = '';
   if (isset($oh['start_time']) && isset($oh['end_time'])) {
@@ -82,5 +85,23 @@ function uclalib_opening_hours_ctools_content_types_todays_hours_render($subtype
   );
 
   return $block;
+}
+
+/**
+ * Get today's opening hours for a given nid.
+ *
+ * @param $nid
+ * @return mixed
+ */
+function uclalib_opening_hours_get_node_todays_hours($nid) {
+  $date = date_create()->format('Y-m-d');
+  $oh = db_select('opening_hours', 'oh')
+    ->condition('nid', $nid)
+    ->fields('oh', array('start_time', 'end_time'))
+    ->condition('date', $date)
+    ->execute()
+    ->fetchAssoc();
+
+  return $oh;
 }
 
