@@ -30,8 +30,11 @@ function uclalib_search_entity_property_info_alter(&$info) {
  * Entity property getter callback: Returns the relevant nodequeue position for the queue.
  */
 function uclalib_search_queue_position($entity, $options, $name, $entity_type, $info) {
-  if ($pos = nodequeue_get_subqueue_position(1, $entity->nid)) {
-    $subqueue = subqueue_load(1);
+  $queue = nodequeue_load_queue_by_name('promoted_locations');
+  $subqueues = nodequeue_load_subqueues_by_queue($queue->qid);
+  $subqueue = reset($subqueues);
+
+  if ($pos = nodequeue_get_subqueue_position($subqueue->sqid, $entity->nid)) {
     // Easier to reverse the queue ordering so that we can order in a way that NULL/0 comes last.
     return -1 * (1+ $subqueue->count - $pos);
   }
