@@ -225,18 +225,6 @@ function nodequeue_views_data_alter(&$data) {
       'label' => t('queue'),
     ),
   );
-  $data['search_api_index_location_search']['nodequeue_rel'] = array(
-    'group' => t('Nodequeue'),
-    'title' => t('Queue'),
-    'help' => t('Create a relationship to a nodequeue.'),
-    'real field' => 'nid',
-    'relationship' => array(
-      'handler' => 'nodequeue_handler_relationship_nodequeue',
-      'base' => 'nodequeue_nodes',
-      'field' => 'nid',
-      'label' => t('queue'),
-    ),
-  );
 
   // links
   $data['node']['nodequeue_links'] = array(
