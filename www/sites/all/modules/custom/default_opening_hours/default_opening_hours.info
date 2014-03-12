@@ -3,3 +3,5 @@ description = Provides fields in the node form that can automatically generate d
 core = 7.x
 
 dependencies[] = opening_hours
+
+files[] = uclalib_opening_hours_filter_open_now.inc

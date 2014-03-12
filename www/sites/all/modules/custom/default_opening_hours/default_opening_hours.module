@@ -408,3 +408,12 @@ function default_opening_hours_cron() {
     }
   }
 }
+
+/**
+ * Implements hook_views_api().
+ */
+function default_opening_hours_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
