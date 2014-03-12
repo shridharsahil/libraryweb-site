@@ -5,15 +5,7 @@
  * Main code file for uclalib_opening_hours module.
  */
 
-/**
- * Implements hook_ctools_plugin_api().
- */
-function uclalib_opening_hours_ctools_plugin_api($module, $api) {
-  switch ("$module:$api") {
-    default:
-      return array('version' => '1');
-  }
-}
+include_once 'uclalib_opening_hours.features.inc';
 
 /**
  * Implements hook_ctools_plugin_directory().
@@ -83,14 +75,8 @@ function _uclalib_opening_hours_short_day($dow) {
 }
 
 /**
- * Implements hook_views_api().
+ * Generate hours table header.
  */
-function uclalib_opening_hours_views_api() {
-  return array(
-    'api' => 3,
-  );
-}
-
 function uclalib_opening_hours_generate_table_header() {
   // Get the date of the first day of this week.
   $day = date_create('this week');
