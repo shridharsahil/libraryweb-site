@@ -11,48 +11,50 @@
 function default_opening_hours_form_node_form_alter(&$form, &$form_state) {
   $node = $form_state['node'];
 
-  $fs = array(
-    '#type' => 'fieldset',
-    '#title' => t('Default Opening Hours'),
-    '#description' => t('Expected time format is HH:MM, in 24 hour format.'),
-    '#tree' => TRUE,
-    '#theme' => 'default_opening_hours_field',
-  );
-
-  $days = array(
-    'mon_instance_id' => t('Monday'),
-    'tue_instance_id' => t('Tuesday'),
-    'wed_instance_id' => t('Wednesday'),
-    'thu_instance_id' => t('Thursday'),
-    'fri_instance_id' => t('Friday'),
-    'sat_instance_id' => t('Saturday'),
-    'sun_instance_id' => t('Sunday'),
-  );
-
-  foreach ($days as $day => $label) {
-    $value = isset($node->default_opening_hours[$day]) ? $node->default_opening_hours[$day] : NULL;
-
-    $fs[$day] = array(
+  if (in_array($node->type, array('location', 'destination'))) {
+    $fs = array(
       '#type' => 'fieldset',
-      '#title' => $label,
+      '#title' => t('Default Opening Hours'),
+      '#description' => t('Expected time format is HH:MM, in 24 hour format.'),
+      '#tree' => TRUE,
+      '#theme' => 'default_opening_hours_field',
     );
-    $fs[$day]['start_time'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Start Time'),
-      '#default_value' => $value ? $value['start_time'] : '',
-    );
-    $fs[$day]['end_time'] = array(
-      '#type' => 'textfield',
-      '#title' => t('End Time'),
-      '#default_value' => $value ? $value['end_time'] : '',
-    );
-    $fs[$day]['instance_id'] = array(
-      '#type' => 'value',
-      '#value' => $value ? $value['instance_id'] : NULL,
-    );
-  }
 
-  $form['default_opening_hours'] = $fs;
+    $days = array(
+      'mon_instance_id' => t('Monday'),
+      'tue_instance_id' => t('Tuesday'),
+      'wed_instance_id' => t('Wednesday'),
+      'thu_instance_id' => t('Thursday'),
+      'fri_instance_id' => t('Friday'),
+      'sat_instance_id' => t('Saturday'),
+      'sun_instance_id' => t('Sunday'),
+    );
+
+    foreach ($days as $day => $label) {
+      $value = isset($node->default_opening_hours[$day]) ? $node->default_opening_hours[$day] : NULL;
+
+      $fs[$day] = array(
+        '#type' => 'fieldset',
+        '#title' => $label,
+      );
+      $fs[$day]['start_time'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Start Time'),
+        '#default_value' => $value ? $value['start_time'] : '',
+      );
+      $fs[$day]['end_time'] = array(
+        '#type' => 'textfield',
+        '#title' => t('End Time'),
+        '#default_value' => $value ? $value['end_time'] : '',
+      );
+      $fs[$day]['instance_id'] = array(
+        '#type' => 'value',
+        '#value' => $value ? $value['instance_id'] : NULL,
+      );
+    }
+
+    $form['default_opening_hours'] = $fs;
+  }
 }
 
 /**
