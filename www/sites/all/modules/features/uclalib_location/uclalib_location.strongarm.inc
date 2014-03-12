@@ -84,7 +84,11 @@ function uclalib_location_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__location';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'hours_page' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
@@ -173,6 +177,11 @@ function uclalib_location_strongarm() {
         'choice' => 0,
       ),
       'teaser' => array(
+        'status' => 1,
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'hours_page' => array(
         'status' => 1,
         'default' => 1,
         'choice' => 0,

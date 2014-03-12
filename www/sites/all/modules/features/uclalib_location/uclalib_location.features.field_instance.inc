@@ -136,6 +136,13 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'hours_page' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -193,6 +200,13 @@ function uclalib_location_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'hours_page' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -257,6 +271,13 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 16,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 16,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -294,6 +315,13 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 18,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 18,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -325,6 +353,13 @@ function uclalib_location_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'hours_page' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -383,6 +418,13 @@ function uclalib_location_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'hours_page' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -449,6 +491,15 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 14,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -494,6 +545,13 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'email_default',
         'weight' => 3,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -526,6 +584,13 @@ function uclalib_location_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 11,
+      ),
+      'hours_page' => array(
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
@@ -568,6 +633,16 @@ function uclalib_location_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 12,
+      ),
+      'hours_page' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
@@ -625,6 +700,13 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 13,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -673,6 +755,13 @@ function uclalib_location_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'hours_page' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -741,6 +830,13 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 15,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -803,6 +899,13 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'phone',
         'weight' => 6,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -851,6 +954,19 @@ function uclalib_location_field_default_field_instances() {
         'type' => 'field_collection_view',
         'weight' => 7,
       ),
+      'hours_page' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -882,6 +998,13 @@ function uclalib_location_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 17,
+      ),
+      'hours_page' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
