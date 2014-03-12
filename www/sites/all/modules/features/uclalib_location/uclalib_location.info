@@ -78,6 +78,7 @@ features[field_instance][] = node-location-field_location_oh_name
 features[field_instance][] = node-location-field_location_phone
 features[field_instance][] = node-location-field_location_social
 features[field_instance][] = node-location-field_study_areas
+features[image][] = location_teaser_thumnail
 features[node][] = location
 features[page_manager_pages][] = location_search
 features[panelizer_defaults][] = node:location:default
