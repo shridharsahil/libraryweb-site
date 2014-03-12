@@ -33,6 +33,11 @@ function uclalib_system_required_modules() {
     'uclalib_search',
     'uclalib_location',
     'uclalib_destination',
+    'uclalib_event',
+    'uclalib_exhibition',
+    'uclalib_news',
+    'uclalib_resources',
+    'uclalib_staff_profile',
   );
 }
 
