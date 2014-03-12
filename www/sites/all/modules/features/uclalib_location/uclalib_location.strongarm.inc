@@ -101,7 +101,14 @@ function uclalib_location_strongarm() {
           'weight' => '5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'default_opening_hours' => array(
+          'hours_page' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__location'] = $strongarm;

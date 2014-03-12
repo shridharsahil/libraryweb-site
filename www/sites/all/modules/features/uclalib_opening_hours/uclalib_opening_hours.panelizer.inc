@@ -140,20 +140,11 @@ function uclalib_opening_hours_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'left';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_location_map_image';
+    $pane->type = 'linked_map';
+    $pane->subtype = 'linked_map';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'location_teaser_thumnail',
-        'image_link' => '',
-      ),
       'context' => 'panelizer',
       'override_title' => 1,
       'override_title_text' => '',

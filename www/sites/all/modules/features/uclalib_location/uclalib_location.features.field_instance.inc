@@ -643,11 +643,11 @@ function uclalib_location_field_default_field_instances() {
         'weight' => 12,
       ),
       'hours_page' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'location_teaser_thumnail',
         ),
         'type' => 'image',
         'weight' => 12,
