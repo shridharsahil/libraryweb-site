@@ -83,3 +83,101 @@ function uclalib_location_ctools_plugin_directory($owner, $plugin_type) {
 
   return NULL;
 }
+
+/**
+ * Implements hook_form_ID_alter().
+ */
+function uclalib_location_form_location_node_form_alter(&$form, $form_state) {
+  // By default we want menu link.
+  $form['menu']['enabled']['#default_value'] = 1;
+
+  // Locations must have the 'Locations' menu item as parent.
+  // We can't save the default parent menu item to features because it is
+  // environment dependant. So we calculate it on runtime.
+  $mlid = db_select('menu_links', 'ml')
+    ->condition('menu_name', 'main-menu')
+    ->condition('link_title', 'Locations')
+    ->fields('ml', array('mlid'))
+    ->execute()
+    ->fetchField();
+
+  if ($mlid) {
+    $form['menu']['link']['parent']['#default_value'] = 'main-menu:' . $mlid;
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function uclalib_location_node_insert($node) {
+  if ($node->type == 'location') {
+    // If the parent node doesn't have menu item we cannot create subpages.
+    // Because subpages by definition are pages with menu items child of their parent.
+    if (isset($node->menu['mlid'])) {
+      _uclalib_location_create_at_this_location_page($node);
+    }
+  }
+}
+
+/**
+ * Create a sponsors and exhibitors page for a given location site node.
+ *
+ * @param $location_node
+ */
+function _uclalib_location_create_at_this_location_page($location_node) {
+  // Assign the "At this location" default panel for this page.
+  $panelizer_panel = 'node:static:static_at_this_location';
+
+  $menu_title = t('At this location');
+  $title = $menu_title;
+
+  // Create the subpage.
+  _uclalib_location_create_subpage($location_node, $title, $menu_title, $panelizer_panel);
+}
+
+/**
+ * Generalized function that creates a subpage for a location.
+ *
+ * It creates the menu item and assigns a panelizer default panel.
+ *
+ * @param $meeting_node
+ * @param $title
+ * @param null $panelizer_panel
+ */
+function _uclalib_location_create_subpage($location_node, $title, $menu_title, $panelizer_panel = NULL) {
+  // This can only be done with location site nodes.
+  if ($location_node->type != 'location') {
+    return;
+  }
+
+  // Create the base sub-page node object.
+  $sp_node = new stdClass();
+  $sp_node->type = 'static';
+  $sp_node->uid = $location_node->uid;
+  $sp_node->name = $location_node->name;
+  $sp_node->title = $title;
+  $sp_node->language = LANGUAGE_NONE;
+  node_object_prepare($sp_node);
+
+  // Create a menu link in the location site menu.
+  $link = array(
+    'enabled' => TRUE,
+    'link_title' => $menu_title,
+    'menu_name' => 'main-menu',
+    'weight' => 10,
+    'plid' => $location_node->menu['mlid'],
+    'description' => $menu_title,
+  );
+  $sp_node->menu = $link;
+
+  // This is the only way to save a node and assign a panel that is not the default
+  // for this content type.
+  if ($panelizer_panel) {
+    $sp_node->panelizer['page_manager'] = ctools_export_crud_load('panelizer_defaults', $panelizer_panel);
+  }
+
+  // Save the node.
+  node_save($sp_node);
+
+  return $sp_node;
+}

@@ -479,7 +479,7 @@ function uclalib_location_panelizer_defaults() {
     $pane->locks = array();
     $display->content['new-10'] = $pane;
     $display->panels['top'][2] = 'new-10';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:location:default'] = $panelizer;
