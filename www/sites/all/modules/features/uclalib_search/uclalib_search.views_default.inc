@@ -75,6 +75,21 @@ function uclalib_search_views_default_views() {
     'field_location_nickname' => 'field_location_nickname',
     'field_location_alt_names' => 'field_location_alt_names',
   );
+  /* Filter criterion: Opening hours: Open Now */
+  $handler->display->display_options['filters']['open_now']['id'] = 'open_now';
+  $handler->display->display_options['filters']['open_now']['table'] = 'search_api_index_location_search';
+  $handler->display->display_options['filters']['open_now']['field'] = 'open_now';
+  $handler->display->display_options['filters']['open_now']['value'] = 0;
+  $handler->display->display_options['filters']['open_now']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['open_now']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['open_now']['expose']['label'] = 'Open Now';
+  $handler->display->display_options['filters']['open_now']['expose']['operator'] = 'open_now_op';
+  $handler->display->display_options['filters']['open_now']['expose']['identifier'] = 'open_now';
+  $handler->display->display_options['filters']['open_now']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
