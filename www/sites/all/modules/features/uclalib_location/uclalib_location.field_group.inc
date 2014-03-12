@@ -140,12 +140,9 @@ function uclalib_location_field_group_info() {
     'label' => 'At this location',
     'weight' => '2',
     'children' => array(
-      0 => 'field_location_amenities',
-      1 => 'field_location_study_areas',
-      2 => 'field_location_equipment',
-      3 => 'field_amenities',
-      4 => 'field_study_areas',
-      5 => 'field_equipment',
+      0 => 'field_amenities',
+      1 => 'field_study_areas',
+      2 => 'field_equipment',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -203,6 +200,7 @@ function uclalib_location_field_group_info() {
       0 => 'field_location_map_file',
       1 => 'field_location_map_image',
       2 => 'field_location_map_link',
+      3 => 'field_location_floor_plan',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

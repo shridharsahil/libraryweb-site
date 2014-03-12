@@ -352,6 +352,12 @@ function uclalib_destination_panelizer_defaults() {
       'right' => NULL,
       'center_left' => NULL,
       'center_right' => NULL,
+      'top' => NULL,
+      'sidebar_left' => NULL,
+      'sidebar_right' => NULL,
+      'main' => NULL,
+      'below_main_left' => NULL,
+      'below_main_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -360,6 +366,32 @@ function uclalib_destination_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-9';
+    $pane->panel = 'main';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'markup' => 'h2',
+      'id' => '',
+      'class' => '',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['main'][0] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
     $pane->panel = 'main';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -380,12 +412,54 @@ function uclalib_destination_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['main'][0] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['main'][1] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
+    $pane->panel = 'main';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'Location has floor plan',
+            'php' => '$node = $contexts[\'relationship_menu_parent_node_1\']->data;
+
+if (isset($node->field_location_floor_plan[LANGUAGE_NONE][0][\'fid\'])) {
+  return TRUE;
+}
+
+return FALSE;',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<a href="%menu_parent_node:field_location_floor_plan">Download a Map of the Floor Plan</a>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['main'][2] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
     $pane->subtype = 'location_destinations-panel_pane_1';
@@ -404,12 +478,12 @@ function uclalib_destination_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['main'][1] = 'new-10';
+    $display->content['new-12'] = $pane;
+    $display->panels['main'][3] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-13';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
@@ -427,10 +501,10 @@ function uclalib_destination_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-11';
+    $display->content['new-13'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-14';
     $pane->panel = 'sidebar_right';
     $pane->type = 'all_facilities';
     $pane->subtype = 'all_facilities';
@@ -449,10 +523,10 @@ function uclalib_destination_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['sidebar_right'][0] = 'new-12';
+    $display->content['new-14'] = $pane;
+    $display->panels['sidebar_right'][0] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-15';
     $pane->panel = 'top';
     $pane->type = 'panels_mini';
     $pane->subtype = 'location_header';
@@ -473,10 +547,10 @@ function uclalib_destination_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['top'][0] = 'new-13';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-9';
+    $display->content['new-15'] = $pane;
+    $display->panels['top'][0] = 'new-15';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-10';
   $panelizer->display = $display;
   $export['node:static:static_at_this_location'] = $panelizer;
 

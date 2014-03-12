@@ -577,6 +577,54 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-location-field_location_floor_plan'
+  $field_instances['node-location-field_location_floor_plan'] = array(
+    'bundle' => 'location',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 19,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location_floor_plan',
+    'label' => 'Floor Plan',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'location_floor_maps',
+      'file_extensions' => 'pdf jpg png',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'node-location-field_location_map_file'
   $field_instances['node-location-field_location_map_file'] = array(
     'bundle' => 'location',
@@ -743,7 +791,7 @@ function uclalib_location_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 15,
+      'weight' => 14,
     ),
   );
 
@@ -1045,6 +1093,7 @@ function uclalib_location_field_default_field_instances() {
   t('Destinations');
   t('Email');
   t('Equipment');
+  t('Floor Plan');
   t('Link');
   t('Location Map');
   t('Map Link');
