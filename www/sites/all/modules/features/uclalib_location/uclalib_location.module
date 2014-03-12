@@ -71,3 +71,15 @@ function _uclalib_location_social_image($type) {
   // @todo: generate the image html.
   return $type;
 }
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function uclalib_location_ctools_plugin_directory($owner, $plugin_type) {
+  switch ("$owner:$plugin_type") {
+    case 'ctools:content_types':
+      return "plugins/$owner/$plugin_type";
+  }
+
+  return NULL;
+}
