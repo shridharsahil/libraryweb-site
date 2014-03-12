@@ -71,7 +71,11 @@ function uclalib_destination_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__destination';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'hours_page' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
