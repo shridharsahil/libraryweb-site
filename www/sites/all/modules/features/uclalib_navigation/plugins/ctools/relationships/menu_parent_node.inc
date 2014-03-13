@@ -32,24 +32,3 @@ function uclalib_navigation_menu_parent_node($context, $conf = FALSE) {
     return ctools_context_create_empty('node');
   }
 }
-
-/**
- * Get the parent node in the menu tree.
- *
- * @param $node
- * @return bool|mixed
- */
-function uclalib_navigation_menu_get_parent($node) {
-  menu_node_prepare($node);
-  if (isset($node->menu['plid'])) {
-  $pitem = menu_link_load($node->menu['plid']);
-    if ($pitem['router_path'] == 'node/%') {
-      $matches = array();
-      if (preg_match('/^node\/([0-9]+)$/', $pitem['link_path'], $matches)) {
-        return node_load($matches[1]);
-      }
-    }
-  }
-
-  return FALSE;
-}
