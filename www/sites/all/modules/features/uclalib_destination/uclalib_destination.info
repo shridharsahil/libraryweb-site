@@ -74,3 +74,4 @@ features_exclude[field_base][field_destination_equipment] = field_destination_eq
 features_exclude[field_instance][node-destination-field_destination_amenities] = node-destination-field_destination_amenities
 features_exclude[field_instance][node-destination-field_destination_equipment] = node-destination-field_destination_equipment
 features_exclude[field_instance][node-destination-field_destination_study_areas] = node-destination-field_destination_study_areas
+files[] = uclalib_destination_field_facilities_icons.inc

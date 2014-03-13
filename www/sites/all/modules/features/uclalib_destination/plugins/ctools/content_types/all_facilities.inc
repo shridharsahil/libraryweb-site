@@ -107,24 +107,4 @@ function uclalib_destination_ctools_content_types_all_facilities_render($subtype
   return $block;
 }
 
-/**
- * @param $node
- * @param $fields
- * @return array
- */
-function uclalib_destination_fetch_facilities_tids($node, $fields) {
-  $tids = array();
-
-  foreach ($fields as $field_name) {
-    if (isset($node->{$field_name}[LANGUAGE_NONE]) && !empty($node->{$field_name}[LANGUAGE_NONE])) {
-      foreach ($node->{$field_name}[LANGUAGE_NONE] as $value) {
-        if (isset($value['tid'])) {
-          $tids[] = $value['tid'];
-        }
-      }
-    }
-  }
-
-  return $tids;
-}
 
