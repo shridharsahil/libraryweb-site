@@ -340,12 +340,7 @@ function uclalib_destination_field_default_field_instances() {
   // Exported field_instance: 'node-destination-field_destination_sched_link'
   $field_instances['node-destination-field_destination_sched_link'] = array(
     'bundle' => 'destination',
-    'default_value' => array(
-      0 => array(
-        'title' => 'Schedule an Appointment',
-        'url' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -380,7 +375,7 @@ function uclalib_destination_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'optional',
+      'title' => 'none',
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',

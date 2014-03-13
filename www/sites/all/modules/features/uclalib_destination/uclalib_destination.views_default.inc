@@ -68,6 +68,17 @@ function uclalib_destination_views_default_views() {
   $handler->display->display_options['fields']['field_destination_email']['field'] = 'field_destination_email';
   $handler->display->display_options['fields']['field_destination_email']['label'] = '';
   $handler->display->display_options['fields']['field_destination_email']['element_label_colon'] = FALSE;
+  /* Field: Content: Schedule appointment link */
+  $handler->display->display_options['fields']['field_destination_sched_link']['id'] = 'field_destination_sched_link';
+  $handler->display->display_options['fields']['field_destination_sched_link']['table'] = 'field_data_field_destination_sched_link';
+  $handler->display->display_options['fields']['field_destination_sched_link']['field'] = 'field_destination_sched_link';
+  $handler->display->display_options['fields']['field_destination_sched_link']['label'] = '';
+  $handler->display->display_options['fields']['field_destination_sched_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_destination_sched_link']['alter']['text'] = '<a href="[field_destination_sched_link-url]">Schedule an appointment</a>';
+  $handler->display->display_options['fields']['field_destination_sched_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_destination_sched_link']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_destination_sched_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_destination_sched_link']['type'] = 'link_plain';
   /* Field: Opening hours: Opening hours week */
   $handler->display->display_options['fields']['opening_hours_week']['id'] = 'opening_hours_week';
   $handler->display->display_options['fields']['opening_hours_week']['table'] = 'node';
