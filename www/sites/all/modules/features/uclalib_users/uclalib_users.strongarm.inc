@@ -27,16 +27,6 @@ function uclalib_users_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'token' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
     ),
   );
   $export['panelizer_defaults_user_user'] = $strongarm;
