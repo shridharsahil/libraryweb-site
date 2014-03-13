@@ -197,5 +197,12 @@ function uclalib_location_strongarm() {
   );
   $export['panelizer_defaults_node_location'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_location_pattern';
+  $strongarm->value = 'location/[node:title]';
+  $export['pathauto_node_location_pattern'] = $strongarm;
+
   return $export;
 }

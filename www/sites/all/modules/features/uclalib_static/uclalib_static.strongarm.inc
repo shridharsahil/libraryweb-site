@@ -69,6 +69,23 @@ function uclalib_static_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__static';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'hours_page' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__static'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_static';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -130,6 +147,13 @@ function uclalib_static_strongarm() {
     ),
   );
   $export['panelizer_defaults_node_static'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_static_pattern';
+  $strongarm->value = '[node:title]';
+  $export['pathauto_node_static_pattern'] = $strongarm;
 
   return $export;
 }

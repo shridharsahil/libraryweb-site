@@ -66,6 +66,7 @@ features[variable][] = node_submitted_destination
 features[variable][] = opening_hours_category_vocabulary_destination
 features[variable][] = opening_hours_enabled_destination
 features[variable][] = panelizer_defaults_node_destination
+features[variable][] = pathauto_node_destination_pattern
 features[views_view][] = location_destinations
 features_exclude[field_base][field_destination_amenities] = field_destination_amenities
 features_exclude[field_base][field_destination_study_areas] = field_destination_study_areas

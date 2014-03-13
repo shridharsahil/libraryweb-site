@@ -108,6 +108,7 @@ features[variable][] = node_submitted_location
 features[variable][] = opening_hours_category_vocabulary_location
 features[variable][] = opening_hours_enabled_location
 features[variable][] = panelizer_defaults_node_location
+features[variable][] = pathauto_node_location_pattern
 features[views_view][] = at_this_location_block
 features[views_view][] = todays_hours
 features_exclude[field_base][field_location_amenities] = field_location_amenities
