@@ -39,6 +39,7 @@ function uclalib_system_required_modules() {
     'uclalib_resources',
     'uclalib_staff_profile',
     'uclalib_featured_content',
+    'uclalib_link_list',
   );
 }
 
