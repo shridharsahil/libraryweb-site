@@ -348,26 +348,17 @@ function uclalib_location_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'sidebar_left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'quick_links';
+    $pane->subtype = 'quick_links';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Quick Links',
-      'body' => '<ul>
-	<li>
-		Course Reserves</li>
-	<li>
-		Find Resources</li>
-	<li>
-		Research Guides</li>
-	<li>
-		Schedule a research appointment</li>
-</ul>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'context' => array(
+        0 => 'panelizer',
+        1 => 'empty',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
