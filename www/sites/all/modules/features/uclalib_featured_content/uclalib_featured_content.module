@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB Featured content feature.
+ */
+
+include_once 'uclalib_featured_content.features.inc';
