@@ -16,18 +16,18 @@ function uclalib_static_pathauto_alias_alter(&$alias, $context) {
     $node = $context['data']['node'];
 
     if ($node->type == 'static') {
-      $location_node = uclalib_navigation_menu_get_parent($node);
-
-      $location_path = drupal_get_path_alias('node/' . $location_node->nid);
-      if (!empty($alias)) {
-        // For the "at this location" we use the special case /location-url/destinations
-        // the words 'at' and 'this' would be removed by PA and with just read /location
-        if ($node->panelizer['page_manager']->name == 'node:static:static_at_this_location') {
-          $alias = $location_path . '/destinations';
-        }
-        else {
-          // All other cases just append the location url.
-          $alias = $location_path . '/' . $alias;
+      if ($parent_node = uclalib_navigation_menu_get_parent($node)) {
+        $parent_path = drupal_get_path_alias('node/' . $parent_node->nid);
+        if (!empty($alias) && ($alias != 'node/' . $parent_node->nid)) {
+          // The "at this parent" uses the special case /parent-url/destinations
+          // the words 'at' and 'this' would be removed by PA and with just read /parent
+          if ($node->panelizer['page_manager']->name == 'node:static:static_at_this_parent') {
+            $alias = $parent_path . '/destinations';
+          }
+          else {
+            // All other cases just append the parent url.
+            $alias = $parent_path . '/' . $alias;
+          }
         }
       }
     }
