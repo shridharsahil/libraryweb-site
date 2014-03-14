@@ -5,6 +5,7 @@ package = UCLALIB
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = image
+dependencies[] = insert
 dependencies[] = manualcrop
 dependencies[] = menu_block
 dependencies[] = panelizer
