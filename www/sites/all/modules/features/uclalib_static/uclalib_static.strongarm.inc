@@ -14,7 +14,7 @@ function uclalib_static_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_static';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-submenutree';
   $export['additional_settings__active_tab_static'] = $strongarm;
 
   $strongarm = new stdClass();
