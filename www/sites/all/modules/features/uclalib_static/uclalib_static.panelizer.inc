@@ -273,6 +273,31 @@ function uclalib_static_panelizer_defaults() {
     $display->panels['sidebar_left'][0] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'quick_links';
+    $pane->subtype = 'quick_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+        1 => 'relationship_menu_parent_node_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
     $pane->panel = 'top';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -295,8 +320,8 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['top'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['top'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-5';
   $panelizer->display = $display;
@@ -354,7 +379,7 @@ function uclalib_static_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'main';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -377,10 +402,10 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['main'][0] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['main'][0] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'main';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -403,10 +428,10 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['main'][1] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['main'][1] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'main';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -430,10 +455,10 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['main'][2] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['main'][2] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-12';
     $pane->panel = 'sidebar_left';
     $pane->type = 'sibling_content';
     $pane->subtype = 'sibling_content';
@@ -452,10 +477,35 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'quick_links';
+    $pane->subtype = 'quick_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+        1 => 'relationship_menu_parent_node_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
     $pane->panel = 'top';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -478,10 +528,10 @@ function uclalib_static_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['top'][0] = 'new-12';
+    $display->content['new-14'] = $pane;
+    $display->panels['top'][0] = 'new-14';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-10';
+  $display->title_pane = 'new-11';
   $panelizer->display = $display;
   $export['node:static:section_sub'] = $panelizer;
 
