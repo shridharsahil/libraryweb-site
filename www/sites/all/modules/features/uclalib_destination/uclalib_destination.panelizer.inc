@@ -505,6 +505,31 @@ return FALSE;',
     $display->panels['sidebar_left'][0] = 'new-13';
     $pane = new stdClass();
     $pane->pid = 'new-14';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'quick_links';
+    $pane->subtype = 'quick_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+        1 => 'relationship_menu_parent_node_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
     $pane->panel = 'sidebar_right';
     $pane->type = 'all_facilities';
     $pane->subtype = 'all_facilities';
@@ -523,10 +548,10 @@ return FALSE;',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['sidebar_right'][0] = 'new-14';
+    $display->content['new-15'] = $pane;
+    $display->panels['sidebar_right'][0] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-16';
     $pane->panel = 'top';
     $pane->type = 'panels_mini';
     $pane->subtype = 'location_header';
@@ -547,8 +572,8 @@ return FALSE;',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['top'][0] = 'new-15';
+    $display->content['new-16'] = $pane;
+    $display->panels['top'][0] = 'new-16';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-10';
   $panelizer->display = $display;
