@@ -77,7 +77,17 @@ function uclalib_static_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'default_opening_hours' => array(
+          'weight' => '5',
+        ),
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+      ),
       'display' => array(),
     ),
   );
@@ -121,6 +131,13 @@ function uclalib_static_strongarm() {
   $strongarm->name = 'node_submitted_static';
   $strongarm->value = 0;
   $export['node_submitted_static'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'opening_hours_enabled_static';
+  $strongarm->value = 0;
+  $export['opening_hours_enabled_static'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

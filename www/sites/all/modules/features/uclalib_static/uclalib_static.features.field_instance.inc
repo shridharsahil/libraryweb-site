@@ -87,10 +87,93 @@ function uclalib_static_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-static-field_static_images'
+  $field_instances['node-static-field_static_images'] = array(
+    'bundle' => 'static',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_static_images',
+    'label' => 'Images',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'static_images',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 1,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'image_static_images_crop',
+        'insert_styles' => array(
+          'auto' => 0,
+          'icon_link' => 0,
+          'image' => 'image',
+          'image_category_icon' => 0,
+          'image_large' => 'image_large',
+          'image_location_teaser_thumnail' => 0,
+          'image_medium' => 'image_medium',
+          'image_static_images_crop' => 'image_static_images_crop',
+          'image_thumbnail' => 'image_thumbnail',
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_filter_insert' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(
+          'static_images_crop' => 'static_images_crop',
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 32,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Comment');
+  t('Images');
 
   return $field_instances;
 }
