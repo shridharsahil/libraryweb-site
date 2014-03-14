@@ -38,6 +38,7 @@ function uclalib_system_required_modules() {
     'uclalib_news',
     'uclalib_resources',
     'uclalib_staff_profile',
+    'uclalib_featured_content',
   );
 }
 
