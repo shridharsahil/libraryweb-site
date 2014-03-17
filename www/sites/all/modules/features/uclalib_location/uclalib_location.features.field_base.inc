@@ -412,5 +412,28 @@ function uclalib_location_field_default_field_bases() {
     'type' => 'phone',
   );
 
+  // Exported field_base: 'field_location_social_links'
+  $field_bases['field_location_social_links'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_location_social_links',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'field_social_type_value' => array(
+        0 => 'field_social_type_value',
+      ),
+      'id' => array(
+        0 => 'id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'multifield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'social_links',
+  );
+
   return $field_bases;
 }
