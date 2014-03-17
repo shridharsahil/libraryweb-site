@@ -1,0 +1,110 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB Upcoming Events feature.
+ */
+
+include_once 'uclalib_upcoming_events.features.inc';
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function uclalib_upcoming_events_field_formatter_info() {
+  $return = array();
+
+  $return['uclablib_event_date_block'] = array(
+    'label' => t('UCLALIB Event Date Block Formatter'),
+      'field types' => array('date', 'datestamp', 'datetime'),
+  );
+
+  return $return;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function uclalib_upcoming_events_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, &$items, $display) {
+  $element = array();
+  switch ($display['type']) {
+    case 'uclablib_event_date_block':
+      $local_tz = 0;
+
+      foreach ($items as $delta => $item) {
+        $date_item = date_formatter_process('format_interval', $entity_type, $entity, $field, $instance, $langcode, $item,     $display);
+        if (empty($item['value2']) || $item['value'] == $item['value2']) {
+          $date = strtotime($date_item['value']['formatted_iso']);
+          $tz = $date_item['value']['local']['timezone'];
+
+          $month = format_date($date, 'custom', 'F', $tz);
+          $day = format_date($date, 'custom', 'j', $tz);
+          $time = format_date($date, 'custom', 'g:i a', $tz);
+          if ($local_tz) {
+            $tz = 'LT';
+          }
+          else {
+            $tz = format_date($date, 'custom', 'T', $tz);
+          }
+
+          $date_str = '<div class="cal-month">' . strtoupper($month) . '</div>';
+          $date_str .= '<div class="cal-day">' . $day . '</div>';
+
+          if ($time != '12:00 am') {
+            $date_str .= '<span class="cal-time">' . $time . '</span>';
+            $date_str .= ' <span class="cal-tz">' . $tz . '</span>';
+          }
+
+          $output = '<div class="cal-date">' . $date_str . '</div>';
+
+          $element[$delta] = array('#markup' => $output);
+        }
+        else {
+          $date1 = strtotime($date_item['value']['formatted_iso']);
+          $date2 = strtotime($date_item['value2']['formatted_iso']);
+          $tz_1 = $date_item['value']['local']['timezone'];
+          $tz_2 = $date_item['value2']['local']['timezone'];
+
+          $month_1 = format_date($date1, 'custom', 'M', $tz_1);
+          $day_1 = format_date($date1, 'custom', 'j', $tz_1);
+          $time_1 = format_date($date1, 'custom', 'g:i a', $tz_1);
+          $tz_1 = format_date($date1, 'custom', 'T', $tz_1);
+
+          $month_2 = format_date($date2, 'custom', 'M', $tz_2);
+          $day_2 = format_date($date2, 'custom', 'j', $tz_2);
+          $time_2 = format_date($date2, 'custom', 'g:i a', $tz_2);
+          $tz_2 = format_date($date2, 'custom', 'T', $tz_2);
+
+          if ($local_tz) {
+            $tz_1 = $tz_2 = 'LT';
+          }
+
+          $date_str_1 = '<div class="cal-month">' . strtoupper($month_1) . '</div>';
+          $date_str_1 .= '<div class="cal-day">' . $day_1 . '</div>';
+          $date_str_2 = '<div class="cal-month">' . strtoupper($month_2) . '</div>';
+          $date_str_2 .= '<div class="cal-day">' . $day_2 . '</div>';
+
+          if ($time_1 != '12:00 am') {
+            $date_str_1 .= '<span class="cal-time">' . $time_1 . '</span>';
+            $date_str_1 .= ' <span class="cal-tz">' . $tz_1 . '</span>';
+          }
+
+          if ($time_2 != '12:00 am') {
+            $date_str_2 .= '<span class="cal-time">' . $time_2 . '</span>';
+            $date_str_2 .= ' <span class="cal-tz">' . $tz_2 . '</span>';
+          }
+
+          $output =
+            '<div class="cal-date cal-date-range">' .
+              '<span class="date-range-start">' . $date_str_1 . '</span>' .
+              '<span class="date-range-separator">' . t('to') . '</span>' .
+              '<span class="date-range-end">' . $date_str_2 . '</span>' .
+            '</div>';
+
+          $element[$delta] = array('#markup' => $output);
+        }
+      }
+      break;
+
+  }
+
+  return $element;
+}
