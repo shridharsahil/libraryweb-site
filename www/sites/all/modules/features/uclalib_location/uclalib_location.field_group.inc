@@ -58,6 +58,7 @@ function uclalib_location_field_group_info() {
       5 => 'field_location_phone',
       6 => 'field_location_social',
       7 => 'title',
+      8 => 'field_location_social_links',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

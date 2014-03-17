@@ -127,16 +127,18 @@ function uclalib_location_default_panels_mini() {
     $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_location_social';
+    $pane->subtype = 'node:field_location_social_links';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'uclalib_location_social_links',
+      'formatter' => 'social_links',
       'delta_limit' => '0',
       'delta_offset' => '0',
       'delta_reversed' => 0,
-      'formatter_settings' => array(),
+      'formatter_settings' => array(
+        'view_mode' => 'default',
+      ),
       'context' => 'requiredcontext_entity:node_1',
       'override_title' => 1,
       'override_title_text' => '',

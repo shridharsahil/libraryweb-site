@@ -412,23 +412,27 @@ function uclalib_location_field_default_field_bases() {
     'type' => 'phone',
   );
 
-  // Exported field_base: 'field_location_social'
-  $field_bases['field_location_social'] = array(
+  // Exported field_base: 'field_location_social_links'
+  $field_bases['field_location_social_links'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_location_social',
+    'field_name' => 'field_location_social_links',
     'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'field_collection',
-    'settings' => array(
-      'hide_blank_items' => 1,
-      'path' => '',
+    'indexes' => array(
+      'field_social_type_value' => array(
+        0 => 'field_social_type_value',
+      ),
+      'id' => array(
+        0 => 'id',
+      ),
     ),
+    'locked' => 0,
+    'module' => 'multifield',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'field_collection',
+    'type' => 'social_links',
   );
 
   // Exported field_base: 'field_social_link'
@@ -478,13 +482,13 @@ function uclalib_location_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'Yelp' => 'Yelp',
-        'Pinterest' => 'Pinterest',
-        'Twitter' => 'Twitter',
-        'Facebook' => 'Facebook',
-        'Instagram' => 'Instagram',
-        'RSS' => 'RSS',
-        'Youtube' => 'Youtube',
+        'yelp' => 'Yelp',
+        'pinterest' => 'Pinterest',
+        'twitter' => 'Twitter',
+        'facebook' => 'Facebook',
+        'instagram' => 'Instagram',
+        'rss' => 'RSS',
+        'youtube' => 'Youtube',
       ),
       'allowed_values_function' => '',
     ),

@@ -43,9 +43,9 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_location_social-field_social_link'
-  $field_instances['field_collection_item-field_location_social-field_social_link'] = array(
-    'bundle' => 'field_location_social',
+  // Exported field_instance: 'multifield-social_links-field_social_link'
+  $field_instances['multifield-social_links-field_social_link'] = array(
+    'bundle' => 'social_links',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -58,7 +58,7 @@ function uclalib_location_field_default_field_instances() {
         'weight' => 1,
       ),
     ),
-    'entity_type' => 'field_collection_item',
+    'entity_type' => 'multifield',
     'field_name' => 'field_social_link',
     'label' => 'Link',
     'required' => 1,
@@ -91,9 +91,9 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_location_social-field_social_type'
-  $field_instances['field_collection_item-field_location_social-field_social_type'] = array(
-    'bundle' => 'field_location_social',
+  // Exported field_instance: 'multifield-social_links-field_social_type'
+  $field_instances['multifield-social_links-field_social_type'] = array(
+    'bundle' => 'social_links',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -106,7 +106,7 @@ function uclalib_location_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'entity_type' => 'field_collection_item',
+    'entity_type' => 'multifield',
     'field_name' => 'field_social_type',
     'label' => 'Type',
     'required' => 1,
@@ -1025,8 +1025,8 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_location_social'
-  $field_instances['node-location-field_location_social'] = array(
+  // Exported field_instance: 'node-location-field_location_social_links'
+  $field_instances['node-location-field_location_social_links'] = array(
     'bundle' => 'location',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1034,29 +1034,18 @@ function uclalib_location_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'field_collection',
+        'module' => 'multifield',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
+          'view_mode' => 'default',
         ),
-        'type' => 'field_collection_view',
-        'weight' => 7,
+        'type' => 'multifield_default',
+        'weight' => 21,
       ),
       'hours_page' => array(
         'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 7,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1066,18 +1055,18 @@ function uclalib_location_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_location_social',
-    'label' => 'Social Media',
+    'field_name' => 'field_location_social_links',
+    'label' => 'Social Links',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'field_collection',
+      'module' => 'multifield',
       'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 8,
+      'type' => 'multifield_default',
+      'weight' => 9,
     ),
   );
 
@@ -1210,7 +1199,7 @@ function uclalib_location_field_default_field_instances() {
   t('Opening Hours alternate short name');
   t('Phone Number');
   t('Quick Links');
-  t('Social Media');
+  t('Social Links');
   t('Study areas');
   t('This is the name that will be used in the tables that display these opening hours.');
   t('Type');

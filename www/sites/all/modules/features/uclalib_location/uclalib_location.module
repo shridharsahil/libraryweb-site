@@ -12,9 +12,9 @@ include_once 'uclalib_location.features.inc';
 function uclalib_location_field_formatter_info() {
   $return = array();
 
-  $return['uclalib_location_social_links'] = array(
-    'label' => t('Uclalib location: Social links'),
-    'field types' => array('field_collection'),
+  $return['social_links'] = array(
+    'label' => t('Social Links'),
+    'field types' => array('social_links'),
   );
 
   return $return;
@@ -24,52 +24,35 @@ function uclalib_location_field_formatter_info() {
  * Implements hook_field_formatter_view().
  */
 function uclalib_location_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, &$items, $display) {
-  $link_options = array(
-    'external' => TRUE,
-    'attributes' => array(
-      'target' => '_blank',
-    ),
-    'html' => TRUE,
-  );
-
   $element = array(
   );
 
   switch ($display['type']) {
-    case 'uclalib_location_social_links':
-      $links = array();
+    case 'social_links':
+      $image_path = drupal_get_path('module', 'uclalib_location') . '/social_icons';
       foreach ($items as $delta => $item) {
-        $id = $item['value'];
-        $collection = entity_load('field_collection_item', array($id));
-        $type = $collection[$id]->field_social_type[LANGUAGE_NONE][0]['value'];
-        $url = $collection[$id]->field_social_link[LANGUAGE_NONE][0]['url'];
+        if (isset($item['field_social_type'][LANGUAGE_NONE][0]['value']) &&
+          isset($item['field_social_link'][LANGUAGE_NONE][0]['url'])) {
+        $type = drupal_clean_css_identifier($item['field_social_type'][LANGUAGE_NONE][0]['value']);
+        $type = strtolower($type);
+        $img_url = url($image_path . '/' . $type . '-32-black.png');
+        $url = $item['field_social_link'][LANGUAGE_NONE][0]['url'];
 
-        $image_html = _uclalib_location_social_image($type);
+        $link = '<a href="' . $url . '">' .
+          '<img class="social-link social-link-' . $type . '" src="' . $img_url . '"/>' .
+          '</a>';
 
-        $link = l($image_html, $url, $link_options);
         $element[$delta] = array(
           '#type' => 'markup',
           '#markup' => $link,
         );
+        }
       }
-
-
       break;
 
   }
 
   return $element;
-}
-
-/**
- * Returns an image html for a social link type.
- *
- * @param $type
- * @return mixed
- */
-function _uclalib_location_social_image($type) {
-  // @todo: generate the image html.
-  return $type;
 }
 
 /**
