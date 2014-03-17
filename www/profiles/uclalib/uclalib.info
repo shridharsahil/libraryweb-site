@@ -22,36 +22,90 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = dblog
 
-; Basic Contrib modules
-dependencies[] = entity
-dependencies[] = ctools
-dependencies[] = features
-dependencies[] = strongarm
+; Development modules
+dependencies[] = devel
+; dependencies[] = schema
+
+; Library modules
 dependencies[] = jquery_update
 dependencies[] = libraries
+dependencies[] = entity
+dependencies[] = ctools
+dependencies[] = facetapi
+
+; Field modules
+dependencies[] = date
+dependencies[] = link
+dependencies[] = advanced_link
+dependencies[] = linkit
+dependencies[] = multifield
+dependencies[] = field_collection
+dependencies[] = field_group
+dependencies[] = entityreference
+dependencies[] = email
+dependencies[] = phone
+dependencies[] = cer
+
+; Features requirements
+dependencies[] = features
+dependencies[] = fe_block
+dependencies[] = fe_nodequeue
+dependencies[] = diff
+dependencies[] = strongarm
+; dependencies[] = uuid
+; dependencies[] = uuid_features
+
+; Architecture
+dependencies[] = token
+dependencies[] = panelizer
+dependencies[] = panels
+dependencies[] = panels_everywhere
+dependencies[] = entity_view_mode
+dependencies[] = nodequeue
+dependencies[] = views
+dependencies[] = views_bulk_operations
+dependencies[] = bean
+dependencies[] = pathauto
+
+; Migration
+; dependencies[] = migrate
+; dependencies[] = migrate_extras
+
+; Search
+dependencies[] = search_api
+dependencies[] = search_api_solr
+dependencies[] = search_api_solr_overrides
+dependencies[] = search_api_facetapi
+dependencies[] = search_api_views
+
+; Other crontib modules.
+dependencies[] = ajax_pane
+dependencies[] = better_formats
+dependencies[] = ckeditor
+dependencies[] = insert
+dependencies[] = manualcrop
+dependencies[] = menu_block
 dependencies[] = navbar
+dependencies[] = opening_hours
+dependencies[] = references_dialog
+dependencies[] = tipsy
 
 ; Setup architecture and system features
 dependencies[] = uclalib_system
 dependencies[] = uclalib_users
 dependencies[] = uclalib_arch
-
-; Setup global content types
-; dependencies[] = ct_
-
-; Search dependencies
-; dependencies[] = search_api
-; dependencies[] = search_api_solr
-; dependencies[] = search_api_views
-; dependencies[] = search_api_solr_overrides
-
-; Search features
-; dependencies[] = uclalib_solr_server
-; dependencies[] = uclalib_search
-
-; OTHER FEATURES
-; dependencies[] = uclalib_homepage
-; dependencies[] = uclalib_default_content
-
-; MIGRATION
-; dependencies[] = uclalib_migration
+dependencies[] = uclalib_taxonomies
+dependencies[] = uclalib_navigation
+dependencies[] = uclalib_pe_template
+dependencies[] = uclalib_static
+dependencies[] = uclalib_opening_hours
+dependencies[] = uclalib_search
+dependencies[] = uclalib_location
+dependencies[] = uclalib_destination
+dependencies[] = uclalib_event
+dependencies[] = uclalib_exhibition
+dependencies[] = uclalib_news
+dependencies[] = uclalib_resources
+dependencies[] = uclalib_staff_profile
+dependencies[] = uclalib_featured_content
+dependencies[] = uclalib_link_list
