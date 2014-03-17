@@ -109,3 +109,5 @@ dependencies[] = uclalib_resources
 dependencies[] = uclalib_staff_profile
 dependencies[] = uclalib_featured_content
 dependencies[] = uclalib_link_list
+dependencies[] = uclalib_upcoming_events
+dependencies[] = uclalib_quick_find
