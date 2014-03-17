@@ -53,5 +53,12 @@ function uclalib_upcoming_events_strongarm() {
   );
   $export['field_bundle_settings_bean__upcoming_events'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'unlimitedfield_remove_field_upcoming_events_events';
+  $strongarm->value = 1;
+  $export['unlimitedfield_remove_field_upcoming_events_events'] = $strongarm;
+
   return $export;
 }
