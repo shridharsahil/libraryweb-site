@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB Link List feature.
+ */
+
+include_once 'uclalib_link_list_multifield.features.inc';
