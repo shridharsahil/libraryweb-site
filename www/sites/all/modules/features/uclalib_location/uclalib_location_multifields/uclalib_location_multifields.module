@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB Location Multifields feature.
+ */
+
+include_once 'uclalib_location_multifields.features.inc';

@@ -1,0 +1,15 @@
+name = UCLALIB Location Multifields
+core = 7.x
+package = UCLALIB
+dependencies[] = features
+dependencies[] = link
+dependencies[] = list
+dependencies[] = multifield
+dependencies[] = options
+features[ctools][] = multifield:multifield:1
+features[features_api][] = api:2
+features[field_base][] = field_social_link
+features[field_base][] = field_social_type
+features[field_instance][] = multifield-social_links-field_social_link
+features[field_instance][] = multifield-social_links-field_social_type
+features[multifield][] = social_links

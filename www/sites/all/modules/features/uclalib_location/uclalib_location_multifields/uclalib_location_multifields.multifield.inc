@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * uclalib_location.multifield.inc
+ * uclalib_location_multifields.multifield.inc
  */
 
 /**
  * Implements hook_multifield_default_multifield().
  */
-function uclalib_location_multifield_default_multifield() {
+function uclalib_location_multifields_multifield_default_multifield() {
   $export = array();
 
   $multifield = new stdClass();

@@ -43,85 +43,6 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'multifield-social_links-field_social_link'
-  $field_instances['multifield-social_links-field_social_link'] = array(
-    'bundle' => 'social_links',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'multifield',
-    'field_name' => 'field_social_link',
-    'label' => 'Link',
-    'required' => 1,
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => '_blank',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 0,
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'multifield-social_links-field_social_type'
-  $field_instances['multifield-social_links-field_social_type'] = array(
-    'bundle' => 'social_links',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'multifield',
-    'field_name' => 'field_social_type',
-    'label' => 'Type',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'node-location-body'
   $field_instances['node-location-body'] = array(
     'bundle' => 'location',
@@ -1025,51 +946,6 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_location_social_links'
-  $field_instances['node-location-field_location_social_links'] = array(
-    'bundle' => 'location',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'multifield',
-        'settings' => array(
-          'view_mode' => 'default',
-        ),
-        'type' => 'multifield_default',
-        'weight' => 21,
-      ),
-      'hours_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_location_social_links',
-    'label' => 'Social Links',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'multifield',
-      'settings' => array(),
-      'type' => 'multifield_default',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-location-field_quick_links'
   $field_instances['node-location-field_quick_links'] = array(
     'bundle' => 'location',
@@ -1191,7 +1067,6 @@ function uclalib_location_field_default_field_instances() {
   t('Email');
   t('Equipment');
   t('Floor Plan');
-  t('Link');
   t('Location Map');
   t('Map Link');
   t('Map thumbnail image');
@@ -1199,10 +1074,8 @@ function uclalib_location_field_default_field_instances() {
   t('Opening Hours alternate short name');
   t('Phone Number');
   t('Quick Links');
-  t('Social Links');
   t('Study areas');
   t('This is the name that will be used in the tables that display these opening hours.');
-  t('Type');
 
   return $field_instances;
 }
