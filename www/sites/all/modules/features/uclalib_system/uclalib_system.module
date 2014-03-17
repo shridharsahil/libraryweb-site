@@ -41,6 +41,7 @@ function uclalib_system_required_modules() {
     'uclalib_featured_content',
     'uclalib_link_list_multifield',
     'uclalib_link_list',
+    'uclalib_upcoming_events',
   );
 }
 
