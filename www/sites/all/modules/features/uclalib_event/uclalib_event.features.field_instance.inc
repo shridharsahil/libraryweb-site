@@ -24,12 +24,6 @@ function uclalib_event_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -80,12 +74,6 @@ function uclalib_event_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 8,
       ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -118,6 +106,49 @@ function uclalib_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-uclalib_event-field_event_category'
+  $field_instances['node-uclalib_event-field_event_category'] = array(
+    'bundle' => 'uclalib_event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_category',
+    'label' => 'Event Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 40,
+    ),
+  );
+
   // Exported field_instance: 'node-uclalib_event-field_event_date'
   $field_instances['node-uclalib_event-field_event_date'] = array(
     'bundle' => 'uclalib_event',
@@ -126,19 +157,6 @@ function uclalib_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 2,
-      ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -204,12 +222,6 @@ function uclalib_event_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 6,
-      ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
         'weight' => 6,
       ),
       'hours_page' => array(
@@ -291,12 +303,6 @@ function uclalib_event_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 3,
       ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -355,12 +361,6 @@ function uclalib_event_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 4,
       ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -417,12 +417,6 @@ function uclalib_event_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 7,
       ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -467,12 +461,6 @@ function uclalib_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
         'weight' => 1,
       ),
       'hours_page' => array(
@@ -545,12 +533,6 @@ function uclalib_event_field_default_field_instances() {
         'type' => 'image',
         'weight' => 5,
       ),
-      'event_listed_from_bean' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -618,6 +600,7 @@ function uclalib_event_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Event Audience');
+  t('Event Category');
   t('Event Date');
   t('Event Image');
   t('Event Location');
