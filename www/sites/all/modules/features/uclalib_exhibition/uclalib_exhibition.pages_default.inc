@@ -70,7 +70,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'hidden',
       'formatter' => 'date_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -104,7 +104,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'hidden',
       'formatter' => 'entityreference_entity_view',
       'delta_limit' => '0',
       'delta_offset' => '0',
@@ -135,13 +135,13 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'hidden',
       'formatter' => 'image',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => '',
+        'image_style' => 'thumbnail',
         'image_link' => '',
       ),
       'context' => 'argument_entity_id:node_1',
@@ -166,7 +166,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'hidden',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -194,7 +194,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'hidden',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -216,37 +216,6 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $display->panels['main'][4] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'main';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_exhibition_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => '',
-        'image_link' => '',
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['main'][5] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
     $pane->panel = 'main';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_exhibition_related_content';
@@ -271,12 +240,12 @@ function uclalib_exhibition_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['main'][6] = 'new-7';
+    $display->content['new-6'] = $pane;
+    $display->panels['main'][5] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-7';
     $pane->panel = 'sidebar_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_exhibition_category';
@@ -301,10 +270,10 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['sidebar_right'][0] = 'new-8';
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_right'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-8';
     $pane->panel = 'sidebar_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_exhibition_series';
@@ -329,8 +298,8 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['sidebar_right'][1] = 'new-9';
+    $display->content['new-8'] = $pane;
+    $display->panels['sidebar_right'][1] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
