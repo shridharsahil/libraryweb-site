@@ -44,6 +44,7 @@ function uclalib_system_required_modules() {
     'uclalib_link_list',
     'uclalib_upcoming_events',
     'uclalib_quick_find',
+    'uclalib_support_services',
   );
 }
 
