@@ -1,0 +1,12 @@
+name = UCLALIB Support & Services
+description = Support & Services page layout and related configs.
+core = 7.x
+package = UCLALIB
+dependencies[] = ctools
+dependencies[] = ctools_custom_content
+dependencies[] = panelizer
+features[ctools][] = ctools_custom_content:ctools_content:1
+features[ctools][] = panelizer:panelizer:1
+features[ctools_custom_content][] = stub_content
+features[features_api][] = api:2
+features[panelizer_defaults][] = node:static:support_services

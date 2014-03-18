@@ -1,0 +1,62 @@
+.l-region {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.panel-support-services:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.l-region--sidebar-left {
+  width: 23.80952%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 0;
+}
+
+.l-region--main-column {
+  width: 76.19048%;
+  float: right;
+  clear: none;
+}
+
+.l-region--content-top-left {
+  width: 33%;
+  float: left;
+  clear: none;
+}
+.l-region--content-top-middle {
+  width: 33%;
+  float: left;
+  clear: none;
+}
+.l-region--content-top-right {
+  width: 33%;
+  float: left;
+  clear: none;
+}
+
+
+.l-region--content-bottom-left {
+  width: 33%;
+  float: left;
+  clear: none;
+}
+.l-region--content-bottom-middle {
+  width: 33%;
+  float: left;
+  clear: none;
+}
+.l-region--content-bottom-right {
+  width: 33%;
+  float: left;
+  clear: none;
+}
+
