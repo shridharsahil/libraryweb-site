@@ -77,9 +77,6 @@ function uclalib_event_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      'event_listed_from_bean' => array(
-        'custom_settings' => TRUE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -98,10 +95,6 @@ function uclalib_event_strongarm() {
           'default' => array(
             'weight' => '5',
             'visible' => TRUE,
-          ),
-          'event_listed_from_bean' => array(
-            'weight' => '5',
-            'visible' => FALSE,
           ),
         ),
       ),
@@ -131,7 +124,6 @@ function uclalib_event_strongarm() {
   $strongarm->name = 'node_options_uclalib_event';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_uclalib_event'] = $strongarm;
 
@@ -146,7 +138,7 @@ function uclalib_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_uclalib_event';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_uclalib_event'] = $strongarm;
 
   return $export;

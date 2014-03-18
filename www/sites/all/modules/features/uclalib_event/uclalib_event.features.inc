@@ -19,7 +19,7 @@ function uclalib_event_ctools_plugin_api($module = NULL, $api = NULL) {
 function uclalib_event_node_info() {
   $items = array(
     'uclalib_event' => array(
-      'name' => t('UCLALIB Event'),
+      'name' => t('Event'),
       'base' => 'node_content',
       'description' => t('Event content type'),
       'has_title' => '1',
