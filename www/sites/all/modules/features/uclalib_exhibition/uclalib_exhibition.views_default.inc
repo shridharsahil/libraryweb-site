@@ -28,10 +28,11 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -43,6 +44,16 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['not'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -62,7 +73,6 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['filters']['field_exhibition_date_value2']['table'] = 'field_data_field_exhibition_date';
   $handler->display->display_options['filters']['field_exhibition_date_value2']['field'] = 'field_exhibition_date_value2';
   $handler->display->display_options['filters']['field_exhibition_date_value2']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_exhibition_date_value2']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_exhibition_date_value2']['expose']['operator_id'] = 'field_exhibition_date_value2_op';
   $handler->display->display_options['filters']['field_exhibition_date_value2']['expose']['label'] = 'Exhibition Date - end date (field_exhibition_date:value2)';
   $handler->display->display_options['filters']['field_exhibition_date_value2']['expose']['operator'] = 'field_exhibition_date_value2_op';
@@ -78,6 +88,9 @@ function uclalib_exhibition_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'other-exhibitions';
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $export['other_exhibitions'] = $view;
 
   return $export;
