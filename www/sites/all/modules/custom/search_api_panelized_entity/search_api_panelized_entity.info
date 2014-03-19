@@ -1,0 +1,6 @@
+name = Search API Panelized Entity
+description = Data alteration to provided search api with a panelized entity when the panelized mode is not 'default'.
+core = 7.x
+version = 7.x-1.x
+
+files[] = search_api_panelized_entity_callback.inc

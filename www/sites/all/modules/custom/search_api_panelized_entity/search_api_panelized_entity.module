@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Data alteration module to provide search api with a panelizer entity in any view mode.
+ */
+
+/**
+ * Implements hook_search_api_alter_callback_info().
+ */
+function search_api_panelized_entity_search_api_alter_callback_info() {
+  $callbacks['search_api_alter_add_panelized_entity'] = array(
+    'name' => t('Panelized entity view'),
+    'description' => t('Adds an additional field containing the whole HTML content of the panelized entity when viewed.'),
+    'class' => 'SearchApiAlterAddPanelizedEntity',
+  );
+
+  return $callbacks;
+}
