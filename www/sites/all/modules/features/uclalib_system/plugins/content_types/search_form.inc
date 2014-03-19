@@ -35,13 +35,13 @@ function search_form_content_type_render($subtype, $conf, $args, $context) {
   $block->content = <<<EOD
     <a class="header-search-form-label" href="javascript:void(0);"><span class="icon-search"></span><span>{$label}</span></a>
     <div class="header-search-form-wrapper">
-      <form class="header-search-form" action="{$url}" method="post" accept-charset="UTF-8">
+      <form class="header-search-form" action="{$url}" method="get" accept-charset="UTF-8">
         <div class="form-wrapper">
           <div class="form-item form-type-textfield">
-            <input type="text" class="form-text" id="" name="q" value="" size="60" maxlength="128"  placeholder="{$placeholder}">
+            <input type="text" class="form-text" id='' name="search_query" value="" size="60" maxlength="128"  placeholder="{$placeholder}">
           </div>
           <div class="form-actions">
-            <input type="submit" class="form-submit" id="submit" name="submit" value="{$submit}" >
+            <input type="submit" class="form-submit" id="submit" value="{$submit}" >
           </div>
         </div>
       </form>
