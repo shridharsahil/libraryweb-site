@@ -75,6 +75,7 @@ class SearchApiAlterAddPanelizedEntity extends SearchApiAbstractAlterCallback {
     $handler = panelizer_entity_plugin_get_handler($type);
     foreach ($items as &$item) {
       try {
+        $text = '';
         if ($info = $handler->render_entity($item, $mode)) {
           $build = array();
           $build['#view_mode'] = $mode;
