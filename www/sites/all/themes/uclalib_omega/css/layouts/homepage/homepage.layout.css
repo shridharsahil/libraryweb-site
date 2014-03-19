@@ -1,0 +1,75 @@
+.l-region {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.panel-homepage:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.panel-homepage .content-bottom {
+  clear: both;
+}
+
+/**
+ * Separators
+ */
+.homepage-top {
+  clear: both;
+}
+
+.homepage-top-left {
+  width: 60%;
+  float: left;
+}
+
+.homepage-top-right-sidebar {
+  width: 30%;
+  float: left;
+}
+
+.homepage-bottom {
+  clear: both;
+}
+
+/**
+ * Regions
+ */
+
+/**
+ * Top
+ */
+.l-region--top-left-main {
+  width: 100%
+}
+
+.l-region--top-left-bottom-left {
+  width: 40%;
+  float: left;
+}
+
+.l-region--top-left-bottom-right {
+  width: 40%;
+  float: left;
+}
+
+.l-region--top-right-sidebar {
+
+}
+
+/**
+ * Bottom
+ */
+.l-region--bottom-left {
+  width: 40%;
+  float: left;
+}
+
+.l-region--bottom-right {
+  width: 40%;
+  float: left;
+}
+
