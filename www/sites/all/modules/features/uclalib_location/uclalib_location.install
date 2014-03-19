@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the UCLALIB Location module.
+ */
+
+/**
+ * Remove old field_location_social field.
+ */
+function uclalib_location_update_7001(&$sandbox) {
+  field_delete_field('field_location_social');
+}
