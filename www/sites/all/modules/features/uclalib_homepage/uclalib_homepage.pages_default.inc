@@ -64,13 +64,14 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'bottom_left';
     $pane->type = 'custom';
-    $pane->subtype = 'stub_content';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
+      'admin_title' => 'Upcoming Events',
+      'title' => 'Upcoming Events',
+      'body' => '<p>Upcoming Events goes here.</p>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -86,15 +87,16 @@ function uclalib_homepage_default_page_manager_pages() {
     $display->panels['bottom_left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'bottom_right';
+    $pane->panel = 'bottom_left';
     $pane->type = 'custom';
-    $pane->subtype = 'stub_content';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
+      'admin_title' => 'News',
+      'title' => 'News',
+      'body' => '<p>News goes here.</p>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -104,21 +106,22 @@ function uclalib_homepage_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['bottom_right'][0] = 'new-2';
+    $display->panels['bottom_left'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'top_left_bottom_left';
+    $pane->panel = 'bottom_right';
     $pane->type = 'custom';
-    $pane->subtype = 'stub_content';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
+      'admin_title' => 'Quick Find',
+      'title' => 'Quick Find',
+      'body' => '<p>Quick Find goes here.</p>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -131,20 +134,29 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['top_left_bottom_left'][0] = 'new-3';
+    $display->panels['bottom_right'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'top_left_bottom_right';
-    $pane->type = 'custom';
-    $pane->subtype = 'stub_content';
+    $pane->panel = 'top_left_bottom_left';
+    $pane->type = 'views';
+    $pane->subtype = 'todays_hours';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
-      'format' => 'full_html',
-      'substitute' => TRUE,
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -155,18 +167,31 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['top_left_bottom_right'][0] = 'new-4';
+    $display->panels['top_left_bottom_left'][0] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'top_left_main';
+    $pane->panel = 'top_left_bottom_right';
     $pane->type = 'custom';
-    $pane->subtype = 'stub_content';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
+      'admin_title' => 'Get started at the library',
+      'title' => 'Get started at the library',
+      'body' => '<p>Get started at the library goes here:</p>
+<ul>
+	<li>
+		A</li>
+	<li>
+		B</li>
+	<li>
+		C</li>
+	<li>
+		D</li>
+	<li>
+		E</li>
+</ul>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -179,18 +204,19 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['top_left_main'][0] = 'new-5';
+    $display->panels['top_left_bottom_right'][0] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'top_right_sidebar';
+    $pane->panel = 'top_left_main';
     $pane->type = 'custom';
-    $pane->subtype = 'stub_content';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
+      'admin_title' => 'Start your research',
+      'title' => 'Start your research',
+      'body' => '<p>Start your research goes here</p>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -203,9 +229,33 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['top_right_sidebar'][0] = 'new-6';
+    $display->panels['top_left_main'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'top_right_sidebar';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Project Hightligts',
+      'title' => 'Project Hightligts',
+      'body' => 'Project Hightligts goes here',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['top_right_sidebar'][0] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-5';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['homepage'] = $page;
