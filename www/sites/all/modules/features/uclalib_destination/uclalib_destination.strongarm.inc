@@ -75,6 +75,9 @@ function uclalib_destination_strongarm() {
       'hours_page' => array(
         'custom_settings' => FALSE,
       ),
+      'event_listed_from_bean' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

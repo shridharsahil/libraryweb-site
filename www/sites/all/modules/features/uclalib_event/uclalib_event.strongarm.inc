@@ -77,6 +77,9 @@ function uclalib_event_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'event_listed_from_bean' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -95,6 +98,10 @@ function uclalib_event_strongarm() {
           'default' => array(
             'weight' => '5',
             'visible' => TRUE,
+          ),
+          'event_listed_from_bean' => array(
+            'weight' => '5',
+            'visible' => FALSE,
           ),
         ),
       ),

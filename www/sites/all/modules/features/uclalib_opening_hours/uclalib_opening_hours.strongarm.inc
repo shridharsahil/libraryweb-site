@@ -20,6 +20,10 @@ function uclalib_opening_hours_strongarm() {
         'label' => 'Hours Page',
         'custom settings' => 1,
       ),
+      'event_listed_from_bean' => array(
+        'label' => 'Event Listed From a Bean',
+        'custom settings' => 1,
+      ),
     ),
   );
   $export['entity_view_modes'] = $strongarm;
