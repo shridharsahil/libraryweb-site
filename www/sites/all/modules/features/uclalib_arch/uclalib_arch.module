@@ -5,3 +5,30 @@
  */
 
 include_once 'uclalib_arch.features.inc';
+
+/**
+ * Implements hook_flush_caches().
+ */
+function uclalib_arch_flush_caches() {
+  if (module_exists('bean')) {
+    // Ensure permissions to view all bean types are enabled for anonymous
+    // and authenticated users.
+
+    $rids = array(
+      DRUPAL_ANONYMOUS_RID,
+      DRUPAL_AUTHENTICATED_RID,
+    );
+
+    // Permission for each entity type.
+    bean_reset(TRUE);
+    $perms = array();
+    foreach (bean_get_types() as $bean_type) {
+      $bean_type_name = check_plain($bean_type->type);
+      $perms[] = "view any $bean_type_name bean";
+    }
+
+    foreach ($rids as $rid) {
+      user_role_grant_permissions($rid, $perms);
+    }
+  }
+}
