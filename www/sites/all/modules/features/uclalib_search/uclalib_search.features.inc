@@ -223,7 +223,8 @@ function uclalib_search_default_search_api_index() {
         "field_study_areas:description" : { "type" : "list\\u003Ctext\\u003E" },
         "field_equipment:name" : { "type" : "list\\u003Ctext\\u003E" },
         "field_equipment:description" : { "type" : "list\\u003Ctext\\u003E" },
-        "search_api_viewed" : { "type" : "text" }
+        "search_api_viewed" : { "type" : "text" },
+        "search_api_panelized" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -231,12 +232,13 @@ function uclalib_search_default_search_api_index() {
           "weight" : "-10",
           "settings" : { "default" : "1", "bundles" : [] }
         },
-        "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] },
         "search_api_alter_node_status" : { "status" : 1, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_add_panelized_entity" : { "status" : 1, "weight" : "0", "settings" : { "mode" : "page_manager" } },
+        "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] },
         "search_api_alter_add_viewed_entity" : { "status" : 1, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 1, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] }
+        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } }
       },
       "processors" : {
         "search_api_case_ignore" : {
