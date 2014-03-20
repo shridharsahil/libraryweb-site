@@ -79,7 +79,7 @@ function uclalib_search_default_search_api_index() {
         "field_location_nickname" : { "type" : "text" },
         "field_location_alt_names" : { "type" : "list\\u003Ctext\\u003E" },
         "field_location_email" : { "type" : "text" },
-        "field_location_building" : { "type" : "text" },
+        "field_location_building" : { "type" : "string" },
         "field_address" : { "type" : "text" },
         "field_location_phone" : { "type" : "text" },
         "field_amenities" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
