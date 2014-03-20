@@ -173,6 +173,15 @@ function default_opening_hours_node_update($node) {
 }
 
 /**
+ * Implements hook_node_delete().
+ */
+function default_opening_hours_node_delete($node) {
+  db_delete('default_opening_hours')
+    ->condition('nid', $node->nid)
+    ->execute();
+}
+
+/**
  * @param $node
  */
 function _default_opening_hours_delete_defaults($node) {
