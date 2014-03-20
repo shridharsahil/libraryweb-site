@@ -50,7 +50,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['relationship'] = 'field_upcoming_events_events_target_id';
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['type'] = 'aas_new_calendar_date';
+  $handler->display->display_options['fields']['field_event_date']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
     'format_type' => 'short',
     'fromto' => 'both',
