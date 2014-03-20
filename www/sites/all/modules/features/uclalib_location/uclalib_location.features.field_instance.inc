@@ -946,6 +946,51 @@ function uclalib_location_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-location-field_location_social_links'
+  $field_instances['node-location-field_location_social_links'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'multifield',
+        'settings' => array(
+          'view_mode' => 'default',
+        ),
+        'type' => 'multifield_default',
+        'weight' => 21,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location_social_links',
+    'label' => 'Social Links',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'multifield',
+      'settings' => array(),
+      'type' => 'multifield_default',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-location-field_quick_links'
   $field_instances['node-location-field_quick_links'] = array(
     'bundle' => 'location',
@@ -1074,6 +1119,7 @@ function uclalib_location_field_default_field_instances() {
   t('Opening Hours alternate short name');
   t('Phone Number');
   t('Quick Links');
+  t('Social Links');
   t('Study areas');
   t('This is the name that will be used in the tables that display these opening hours.');
 
