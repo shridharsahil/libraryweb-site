@@ -38,6 +38,21 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = 'See all exhibitions >';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  /* Field: Content: Exhibition Date */
+  $handler->display->display_options['fields']['field_exhibition_date']['id'] = 'field_exhibition_date';
+  $handler->display->display_options['fields']['field_exhibition_date']['table'] = 'field_data_field_exhibition_date';
+  $handler->display->display_options['fields']['field_exhibition_date']['field'] = 'field_exhibition_date';
+  $handler->display->display_options['fields']['field_exhibition_date']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_date']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_date']['alter']['text'] = 'Through [field_exhibition_date]';
+  $handler->display->display_options['fields']['field_exhibition_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_date']['settings'] = array(
+    'format_type' => 'month_with_date',
+    'fromto' => 'value2',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -45,19 +60,6 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Exhibition Date */
-  $handler->display->display_options['fields']['field_exhibition_date']['id'] = 'field_exhibition_date';
-  $handler->display->display_options['fields']['field_exhibition_date']['table'] = 'field_data_field_exhibition_date';
-  $handler->display->display_options['fields']['field_exhibition_date']['field'] = 'field_exhibition_date';
-  $handler->display->display_options['fields']['field_exhibition_date']['label'] = 'Through';
-  $handler->display->display_options['fields']['field_exhibition_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exhibition_date']['settings'] = array(
-    'format_type' => 'long',
-    'fromto' => 'value2',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
