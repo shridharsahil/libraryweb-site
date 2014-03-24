@@ -19,6 +19,7 @@ function uclalib_arch_flush_caches() {
       DRUPAL_AUTHENTICATED_RID,
     );
 
+
     // Permission for each entity type.
     bean_reset(TRUE);
     $perms = array();
@@ -31,4 +32,13 @@ function uclalib_arch_flush_caches() {
       user_role_grant_permissions($rid, $perms);
     }
   }
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function uclalib_arch_date_format_types() {
+  return array(
+    'month_with_date' => t('Month with date'),
+  );
 }
