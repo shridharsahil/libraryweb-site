@@ -5,3 +5,12 @@
  */
 
 include_once 'uclalib_arch.features.inc';
+
+/**
+ * Implements hook_date_format_types().
+ */
+function uclalib_arch_date_format_types() {
+  return array(
+    'month_with_date' => t('Month with date'),
+  );
+}
