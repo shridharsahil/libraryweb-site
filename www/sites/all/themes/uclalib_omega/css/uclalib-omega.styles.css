@@ -28,13 +28,13 @@ a:hover {
 }
 
 .l-footer-wrapper {
-  background: black;
-  color: white;
+  background: #ececec;
+  color: #2d2f35;
   padding: 50px 0;
 }
 
 .l-footer a, .l-footer a:visited {
-  color: #d8cfc7;
+  color: #3283be;
   font-weight: bold;
 }
 .l-footer a:hover, .l-footer a:active, .l-footer a:focus {
@@ -56,7 +56,7 @@ a:hover {
 }
 
 .l-region--footer-first {
-  border-right: 1px solid #666666;
+  border-right: 1px solid #a2a2a2;
 }
 
 .l-region--footer-second,

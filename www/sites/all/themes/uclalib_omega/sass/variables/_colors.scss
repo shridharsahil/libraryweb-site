@@ -9,7 +9,7 @@ $ucla-lt-gray: #eff3f4;
 $link-color: $ucla-blue;
 $text-color: #2d2f35;
 $icon-color: #59595c;
-$border-color: #adcde5;
+$border-color: #a2a2a2;
 
 // Header section colors
 $header-bg-color: $ucla-blue;
@@ -23,7 +23,8 @@ $nav-link-color: #fff;
 $highlighted-bg-color: $ucla-lt-gray;
 
 // Footer section colors;
-$footer-bg-color: #000;
-$footer-text-color: #fff;
-$footer-link-color: #d8cfc7;
+$footer-bg-color: #ececec;
+$footer-text-color: $text-color;
+$footer-link-color: $ucla-blue;
+$footer-border-color: $border-color;
 
