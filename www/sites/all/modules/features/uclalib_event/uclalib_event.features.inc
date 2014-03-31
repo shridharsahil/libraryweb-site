@@ -8,9 +8,19 @@
  * Implements hook_ctools_plugin_api().
  */
 function uclalib_event_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function uclalib_event_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -19,7 +29,7 @@ function uclalib_event_ctools_plugin_api($module = NULL, $api = NULL) {
 function uclalib_event_node_info() {
   $items = array(
     'uclalib_event' => array(
-      'name' => t('UCLALIB Event'),
+      'name' => t('Event'),
       'base' => 'node_content',
       'description' => t('Event content type'),
       'has_title' => '1',
