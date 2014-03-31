@@ -57,4 +57,5 @@ features[variable][] = node_options_uclalib_event
 features[variable][] = node_preview_uclalib_event
 features[variable][] = node_submitted_uclalib_event
 features[views_view][] = other_events
+features[views_view][] = related_events
 project path = /tmp
