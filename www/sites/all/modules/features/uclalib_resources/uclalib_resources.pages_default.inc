@@ -13,13 +13,13 @@ function uclalib_resources_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context';
+  $handler->name = 'node_view_panel_context_4';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -99;
+  $handler->weight = -96;
   $handler->conf = array(
-    'title' => 'Panel',
+    'title' => 'Resource node view variant',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -66,18 +66,21 @@ function uclalib_resources_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'main';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:body';
+    $pane->subtype = 'node:field_resource_image_thumbnail';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'text_default',
+      'formatter' => 'image',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'formatter_settings' => array(
+        'image_style' => 'thumbnail',
+        'image_link' => '',
+      ),
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -92,23 +95,20 @@ function uclalib_resources_default_page_manager_handlers() {
     $display->panels['main'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'main';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_resource_image_thumbnail';
+    $pane->subtype = 'node:body';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'image',
+      'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'medium',
-        'image_link' => '',
-      ),
+      'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -117,10 +117,10 @@ function uclalib_resources_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-2';
+    $display->panels['main'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'sidebar_right';
@@ -129,17 +129,17 @@ function uclalib_resources_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'hidden',
       'formatter' => 'entityreference_entity_view',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'view_mode' => 'teaser',
+        'view_mode' => 'default',
         'links' => 1,
       ),
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -153,9 +153,9 @@ function uclalib_resources_default_page_manager_handlers() {
     $display->content['new-3'] = $pane;
     $display->panels['sidebar_right'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
-  $export['node_view_panel_context'] = $handler;
+  $export['node_view_panel_context_4'] = $handler;
 
   return $export;
 }
