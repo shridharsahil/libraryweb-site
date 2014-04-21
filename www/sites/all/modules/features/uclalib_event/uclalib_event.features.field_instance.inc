@@ -316,7 +316,7 @@ function uclalib_event_field_default_field_instances() {
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 1,
-        'preview_image_style' => 'widescreen_small',
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
