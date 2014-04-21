@@ -17,5 +17,4 @@ features[field_base][] = field_featured_link
 features[field_base][] = field_featured_thumbnail_image
 features[field_instance][] = bean-featured_content-field_featured_link
 features[field_instance][] = bean-featured_content-field_featured_thumbnail_image
-features[image][] = featured_content_thumbnail
 features[variable][] = field_bundle_settings_bean__featured_content

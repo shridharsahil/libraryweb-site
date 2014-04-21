@@ -161,7 +161,7 @@ function uclalib_destination_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'location_teaser_thumnail',
+        'image_style' => 'thumbnail_small',
         'image_link' => '',
       ),
       'context' => 'relationship_entity_from_field:field_destination_location-node-node_1',

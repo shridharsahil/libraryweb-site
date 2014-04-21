@@ -199,7 +199,7 @@ function uclalib_static_field_default_field_instances() {
           'image_category_icon' => 0,
           'image_custom_crop' => 'image_custom_crop',
           'image_large' => 'image_large',
-          'image_location_teaser_thumnail' => 0,
+          'image_thumbnail_small' => 0,
           'image_medium' => 'image_medium',
           'image_thumbnail' => 'image_thumbnail',
           'link' => 0,
