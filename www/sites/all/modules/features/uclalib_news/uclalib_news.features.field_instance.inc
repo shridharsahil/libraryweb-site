@@ -24,6 +24,12 @@ function uclalib_news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -74,6 +80,12 @@ function uclalib_news_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 4,
       ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -121,6 +133,12 @@ function uclalib_news_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 3,
+      ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'hours_page' => array(
         'label' => 'above',
@@ -201,6 +219,12 @@ function uclalib_news_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 2,
       ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'hours_page' => array(
         'label' => 'above',
         'settings' => array(),
@@ -253,6 +277,12 @@ function uclalib_news_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 5,
+      ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'hours_page' => array(
         'label' => 'above',
