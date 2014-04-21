@@ -185,7 +185,7 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->pid = 'new-5';
     $pane->panel = 'main';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_event_thumbnail';
+    $pane->subtype = 'node:field_event_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -195,11 +195,11 @@ function uclalib_event_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'thumbnail',
+        'image_style' => 'thumbnail_large',
         'image_link' => '',
       ),
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
