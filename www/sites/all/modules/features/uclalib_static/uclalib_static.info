@@ -23,7 +23,6 @@ features[field_instance][] = comment-comment_node_static-comment_body
 features[field_instance][] = node-static-body
 features[field_instance][] = node-static-field_quick_links
 features[field_instance][] = node-static-field_static_images
-features[image][] = static_images_crop
 features[node][] = static
 features[panelizer_defaults][] = node:static:default
 features[panelizer_defaults][] = node:static:section_main

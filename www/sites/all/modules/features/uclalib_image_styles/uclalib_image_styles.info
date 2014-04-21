@@ -3,6 +3,7 @@ core = 7.x
 package = Features
 dependencies[] = image
 features[features_api][] = api:2
+features[image][] = custom_crop
 features[image][] = thumbnail_crop
 features[image][] = thumbnail_large
 features[image][] = thumbnail_small

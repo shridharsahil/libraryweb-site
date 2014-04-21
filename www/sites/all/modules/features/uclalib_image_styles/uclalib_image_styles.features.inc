@@ -10,6 +10,31 @@
 function uclalib_image_styles_image_default_styles() {
   $styles = array();
 
+  // Exported image style: custom_crop.
+  $styles['custom_crop'] = array(
+    'name' => 'custom_crop',
+    'label' => 'Custom Crop',
+    'effects' => array(
+      21 => array(
+        'label' => 'Manual Crop: Custom crop',
+        'help' => 'Crop a freely user-selected area.',
+        'effect callback' => 'manualcrop_crop_effect',
+        'form callback' => 'manualcrop_crop_form',
+        'summary theme' => 'manualcrop_crop_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => '',
+          'height' => '',
+          'keepproportions' => 0,
+          'reuse_crop_style' => '',
+          'style_name' => 'custom_crop',
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   // Exported image style: thumbnail_crop.
   $styles['thumbnail_crop'] = array(
     'name' => 'thumbnail_crop',
