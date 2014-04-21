@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * uclalib_link_list.linkit_profiles.inc
+ * uclalib_link_list_multifield.linkit_profiles.inc
  */
 
 /**

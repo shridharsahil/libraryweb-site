@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * uclalib_link_list.strongarm.inc
+ * uclalib_link_list_multifield.strongarm.inc
  */
 
 /**

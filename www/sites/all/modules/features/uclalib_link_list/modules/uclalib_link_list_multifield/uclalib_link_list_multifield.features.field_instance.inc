@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * uclalib_link_list.features.field_instance.inc
+ * uclalib_link_list_multifield.features.field_instance.inc
  */
 
 /**
