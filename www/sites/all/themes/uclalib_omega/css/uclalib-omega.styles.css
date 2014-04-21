@@ -1,10 +1,18 @@
 @import url(../fonts/stylesheet.css);
 @import url(../icons/style.css);
 /* No files to import found in abstractions/**\/* */
-img, media {
+/* Responsive images */
+img {
   max-width: 100%;
+  height: auto;
 }
 
+/* Responsive images for IE8. */
+@media \0screen {
+  img {
+    width: auto;
+  }
+}
 html {
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #2d2f35;

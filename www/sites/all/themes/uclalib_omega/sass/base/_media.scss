@@ -1,3 +1,11 @@
-img, media {
+/* Responsive images */
+img {
   max-width: 100%;
+  height: auto;
+}
+/* Responsive images for IE8. */
+@media \0screen {
+  img {
+    width: auto;
+  }
 }
