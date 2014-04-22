@@ -12,10 +12,10 @@
 }
 
 .l-region--branding {
-  @include span-columns(2, 16);
+  @include span-columns(3, 16);
 }
 .l-region--header {
-  @include span-columns(14 omega, 16);
+  @include span-columns(13 omega, 16);
 }
 
 // Save original susy grid values.
