@@ -16,12 +16,12 @@
 			"properties": {
 				"order": 1,
 				"id": 10,
-				"prevSize": 30,
-				"code": 58880,
+				"prevSize": 20,
+				"code": 58881,
 				"name": "arrow-right",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 0
 		},
 		{
@@ -38,12 +38,12 @@
 			"properties": {
 				"order": 2,
 				"id": 9,
-				"prevSize": 30,
-				"code": 58881,
+				"prevSize": 20,
+				"code": 58882,
 				"name": "cash",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 1
 		},
 		{
@@ -60,12 +60,12 @@
 			"properties": {
 				"order": 3,
 				"id": 8,
-				"prevSize": 30,
-				"code": 58882,
+				"prevSize": 20,
+				"code": 58883,
 				"name": "copy",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 2
 		},
 		{
@@ -82,12 +82,12 @@
 			"properties": {
 				"order": 4,
 				"id": 7,
-				"prevSize": 30,
-				"code": 58883,
+				"prevSize": 20,
+				"code": 58884,
 				"name": "help",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 3
 		},
 		{
@@ -104,12 +104,12 @@
 			"properties": {
 				"order": 5,
 				"id": 6,
-				"prevSize": 30,
-				"code": 58884,
+				"prevSize": 20,
+				"code": 58885,
 				"name": "hours",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 4
 		},
 		{
@@ -126,12 +126,12 @@
 			"properties": {
 				"order": 6,
 				"id": 5,
-				"prevSize": 30,
-				"code": 58885,
+				"prevSize": 20,
+				"code": 58886,
 				"name": "more",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 5
 		},
 		{
@@ -148,12 +148,12 @@
 			"properties": {
 				"order": 7,
 				"id": 4,
-				"prevSize": 30,
-				"code": 58886,
+				"prevSize": 20,
+				"code": 58887,
 				"name": "news",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 6
 		},
 		{
@@ -172,12 +172,12 @@
 			"properties": {
 				"order": 8,
 				"id": 3,
-				"prevSize": 30,
-				"code": 58887,
+				"prevSize": 20,
+				"code": 58888,
 				"name": "printer",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 7
 		},
 		{
@@ -194,12 +194,12 @@
 			"properties": {
 				"order": 9,
 				"id": 2,
-				"prevSize": 30,
-				"code": 58888,
+				"prevSize": 20,
+				"code": 58889,
 				"name": "search",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 8
 		},
 		{
@@ -215,12 +215,12 @@
 			"properties": {
 				"order": 10,
 				"id": 1,
-				"prevSize": 30,
-				"code": 58889,
+				"prevSize": 20,
+				"code": 58890,
 				"name": "start",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 9
 		},
 		{
@@ -237,13 +237,34 @@
 			"properties": {
 				"order": 11,
 				"id": 0,
-				"prevSize": 30,
-				"code": 58890,
+				"prevSize": 20,
+				"code": 58891,
 				"name": "todo",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 10
+		},
+		{
+			"icon": {
+				"paths": [
+					"M512.48 67.296c206.432 173.92 367.040 307.584 481.92 401.216 12.832 10.080 19.264 22.592 19.264 37.376 0 13.248-4.8 24.736-14.432 34.496-9.664 9.76-21.312 14.624-35.008 14.624h-101.12v340.352c0 13.312-4.8 24.736-14.496 34.56-9.696 9.728-21.28 14.592-34.976 14.592h-150.592c-13.664 0-25.472-4.864-35.52-14.592-10.016-9.824-15.104-21.248-15.104-34.56v-194.176h-201.152v194.176c0 13.312-4.832 24.736-14.464 34.56-9.664 9.728-21.28 14.592-34.944 14.592h-150.56c-13.664 0-25.504-4.864-35.552-14.592-10.048-9.824-15.072-21.248-15.072-34.56v-340.352h-100c-13.632 0-25.472-4.864-35.52-14.624s-15.072-21.248-15.072-34.496c0-13.216 6.016-25.696 18.080-37.376l484.32-401.216z"
+				],
+				"grid": 0,
+				"tags": [
+					"home"
+				]
+			},
+			"properties": {
+				"order": 12,
+				"id": 1,
+				"prevSize": 20,
+				"code": 58880,
+				"name": "home",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 0
 		}
 	],
 	"height": 1024,
@@ -258,16 +279,21 @@
 			"metadata": {
 				"fontFamily": "uclalib",
 				"majorVersion": 1,
-				"minorVersion": 0
+				"minorVersion": 1
 			},
 			"metrics": {
 				"emSize": 512,
 				"baseline": 6.25,
 				"whitespace": 50
-			}
+			},
+			"showMetrics": false,
+			"showMetadata": false,
+			"showVersion": true,
+			"resetPoint": 58880
 		},
 		"imagePref": {},
 		"historySize": 100,
-		"showCodes": true
+		"showCodes": true,
+		"search": ""
 	}
 }
