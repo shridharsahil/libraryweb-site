@@ -14,8 +14,7 @@ $nav-horiz-space: 30px;
     @include horizontal-list;
     list-style: none;
     list-style-image: none;
-    li,
-   .leaf {
+    > li {
       padding: 0;
       margin: 0 1px 0 0;
       list-style-image: none;
@@ -74,9 +73,6 @@ $nav-horiz-space: 30px;
           background: transparent;
           color: $nav-link-active-color;
         }
-        // a:hover {
-        //   color: $nav-link-hover-color;
-        // }
       }
     }
   }

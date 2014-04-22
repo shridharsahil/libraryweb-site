@@ -207,46 +207,35 @@ a:hover {
 .l-navigation ul.primary-links li.last {
   padding-right: 0;
 }
-.l-navigation ul.primary-links li,
-.l-navigation ul.primary-links .leaf {
+.l-navigation ul.primary-links > li {
   padding: 0;
   margin: 0 1px 0 0;
   list-style-image: none;
   list-style-type: none;
 }
-.l-navigation ul.primary-links li a,
-.l-navigation ul.primary-links .leaf a {
+.l-navigation ul.primary-links > li a {
   padding: 16px 30px;
   line-height: 1.2em;
 }
-.l-navigation ul.primary-links li a,
-.l-navigation ul.primary-links li a:visited,
-.l-navigation ul.primary-links .leaf a,
-.l-navigation ul.primary-links .leaf a:visited {
+.l-navigation ul.primary-links > li a,
+.l-navigation ul.primary-links > li a:visited {
   color: #333333;
 }
-.l-navigation ul.primary-links li.active-trail > a, .l-navigation ul.primary-links li.active-trail > a:hover,
-.l-navigation ul.primary-links .leaf.active-trail > a,
-.l-navigation ul.primary-links .leaf.active-trail > a:hover {
+.l-navigation ul.primary-links > li.active-trail > a, .l-navigation ul.primary-links > li.active-trail > a:hover {
   background: #eff3f4;
   color: #3283be;
   text-decoration: none;
 }
-.l-navigation ul.primary-links li a:hover,
-.l-navigation ul.primary-links li a:active,
-.l-navigation ul.primary-links li a:focus,
-.l-navigation ul.primary-links .leaf a:hover,
-.l-navigation ul.primary-links .leaf a:active,
-.l-navigation ul.primary-links .leaf a:focus {
+.l-navigation ul.primary-links > li a:hover,
+.l-navigation ul.primary-links > li a:active,
+.l-navigation ul.primary-links > li a:focus {
   color: black;
   text-decoration: underline;
 }
-.l-navigation ul.primary-links li.active-trail > a:hover,
-.l-navigation ul.primary-links .leaf.active-trail > a:hover {
+.l-navigation ul.primary-links > li.active-trail > a:hover {
   cursor: normal;
 }
-.l-navigation ul.primary-links li.first a,
-.l-navigation ul.primary-links .leaf.first a {
+.l-navigation ul.primary-links > li.first a {
   text-indent: -999px;
   width: 0;
   display: inline-block;
@@ -254,8 +243,7 @@ a:hover {
   overflow: hidden;
   padding: 0 50px 0 0;
 }
-.l-navigation ul.primary-links li.first a:after,
-.l-navigation ul.primary-links .leaf.first a:after {
+.l-navigation ul.primary-links > li.first a:after {
   font-family: uclalib;
   content: "\e600";
   font-size: 17px;
@@ -266,17 +254,11 @@ a:hover {
   line-height: 1em;
   vertical-align: middle;
 }
-.l-navigation ul.primary-links li.first.active-trail a, .l-navigation ul.primary-links li.first.active a,
-.l-navigation ul.primary-links li.first a.active,
-.l-navigation ul.primary-links li.first a:active,
-.l-navigation ul.primary-links li.first a:hover,
-.l-navigation ul.primary-links li.first a:focus,
-.l-navigation ul.primary-links .leaf.first.active-trail a,
-.l-navigation ul.primary-links .leaf.first.active a,
-.l-navigation ul.primary-links .leaf.first a.active,
-.l-navigation ul.primary-links .leaf.first a:active,
-.l-navigation ul.primary-links .leaf.first a:hover,
-.l-navigation ul.primary-links .leaf.first a:focus {
+.l-navigation ul.primary-links > li.first.active-trail a, .l-navigation ul.primary-links > li.first.active a,
+.l-navigation ul.primary-links > li.first a.active,
+.l-navigation ul.primary-links > li.first a:active,
+.l-navigation ul.primary-links > li.first a:hover,
+.l-navigation ul.primary-links > li.first a:focus {
   background: transparent;
   color: #3283be;
 }
