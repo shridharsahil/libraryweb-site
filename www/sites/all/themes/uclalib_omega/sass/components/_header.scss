@@ -47,3 +47,15 @@
     margin-left: 14px;
   }
 }
+
+/* Skip to main content link */
+a[href="#main-content"] {
+  background: hsl(0, 0%, 0%);
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.3em;
+  color: hsl(0, 100%, 100%);
+  font-weight: normal;
+}

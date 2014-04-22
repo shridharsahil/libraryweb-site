@@ -155,6 +155,18 @@ a:hover {
   margin-left: 14px;
 }
 
+/* Skip to main content link */
+a[href="#main-content"] {
+  background: black;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.3em;
+  color: white;
+  font-weight: normal;
+}
+
 .l-highlighted-wrapper {
   background: #eff3f4;
   padding: 14px 0;
