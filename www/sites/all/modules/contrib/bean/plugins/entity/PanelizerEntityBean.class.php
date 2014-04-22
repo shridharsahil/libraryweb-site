@@ -17,8 +17,11 @@ class PanelizerEntityBean extends PanelizerEntityDefault {
   public $views_table = 'bean';
   public $uses_page_manager = FALSE;
 
+  /**
+   * Access callback.
+   */
   public function entity_access($op, $entity) {
-    // This must be implemented by the extending clas.
+    // This must be implemented by the extending class.
     return bean_access($op, $entity);
   }
 
@@ -29,10 +32,16 @@ class PanelizerEntityBean extends PanelizerEntityDefault {
     bean_save($entity);
   }
 
+  /**
+   * Define the visible identifier of the identity.
+   */
   public function entity_identifier($entity) {
     return t('This bean');
   }
 
+  /**
+   * Define the name of bundles on the entity.
+   */
   public function entity_bundle_label() {
     return t('bean type');
   }
@@ -41,18 +50,14 @@ class PanelizerEntityBean extends PanelizerEntityDefault {
    * Determine if the entity allows revisions.
    */
   public function entity_allows_revisions($entity) {
+    $bean_type_name = $entity->type;
     $retval = array();
 
-    list($entity_id, $revision_id, $bundle) = entity_extract_ids($this->entity_type, $entity);
-
     $retval[0] = TRUE;
-    $retval[1] = user_access('administer beans');
+    $retval[1] = user_access("edit any $bean_type_name bean");
+    $retval[2] = TRUE;
 
     return $retval;
-  }
-
-  function get_default_display($bundle, $view_mode) {
-    return parent::get_default_display($bundle, $view_mode);
   }
 
   /**
@@ -84,6 +89,9 @@ class PanelizerEntityBean extends PanelizerEntityDefault {
       $bean_info = bean_entity_info();
       $names = $bean_info['bean']['bundles'];
       foreach ($names as $bundle => $name) {
+
+        // @see bean_admin_ui_admin_page() for information on why we have to
+        // append '_0'.
         $type_url_str = str_replace(' ', '', $name['label'] . '_0');
         if ($this->is_panelized($bundle) && panelizer_administer_entity_bundle($this, $bundle)) {
           $table['#rows'][$type_url_str][] = array('data' => l(t('panelizer'), 'admin/structure/block-types/manage/' . $bundle . '/panelizer'));

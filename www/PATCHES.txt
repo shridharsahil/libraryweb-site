@@ -18,4 +18,4 @@ https://drupal.org/files/ajax_pane-properly_load_display_when_in_code-1997384-1.
 
 Bean - Panelizer support for Bean
 https://drupal.org/node/2161535
-https://drupal.org/files/issues/bean-panelizer_support-2161535-1.patch
+https://drupal.org/files/issues/bean-panelizer_support-2161535-9.patch
