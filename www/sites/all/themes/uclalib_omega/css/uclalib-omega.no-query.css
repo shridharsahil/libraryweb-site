@@ -342,19 +342,3 @@ a[href="#main-content"] {
 .header-search-form-wrapper .form-submit:focus {
   background-image: url(../images/icon-search-hover.png);
 }
-
-.pane-start-your-research a, .pane-start-your-research a:visited {
-  display: inline-block;
-  background: #3283be;
-  color: #fff;
-  padding: 16px;
-  font-size: 30px;
-  font-weight: 100;
-}
-.pane-start-your-research a span, .pane-start-your-research a:visited span {
-  font-size: 31px;
-}
-.pane-start-your-research a:hover, .pane-start-your-research a:focus, .pane-start-your-research a:active {
-  text-decoration: none;
-  background: #529cd1;
-}

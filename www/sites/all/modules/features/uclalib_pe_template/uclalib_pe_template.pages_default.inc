@@ -301,48 +301,6 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $display->panels['help'][0] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
-    $pane->panel = 'highlighted';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '1',
-            'paths' => '<front>',
-          ),
-          'context' => 'empty',
-          'not' => FALSE,
-        ),
-      ),
-    );
-    $pane->configuration = array(
-      'admin_title' => 'Start Your Research [PLACEHOLDER]',
-      'title' => '',
-      'body' => '<div class="bg">
-	&nbsp;</div>
-<p><a href="#">Start Your Research <span class="icon-arrow-right"></span></a></p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane-start-your-research',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['highlighted'][0] = 'new-11';
-    $pane = new stdClass();
-    $pane->pid = 'new-12';
     $pane->panel = 'navigation';
     $pane->type = 'panels_mini';
     $pane->subtype = 'alert_pane';
@@ -365,10 +323,10 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['navigation'][0] = 'new-12';
+    $display->content['new-11'] = $pane;
+    $display->panels['navigation'][0] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-12';
     $pane->panel = 'navigation';
     $pane->type = 'page_primary_links';
     $pane->subtype = 'page_primary_links';
@@ -386,8 +344,8 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['navigation'][1] = 'new-13';
+    $display->content['new-12'] = $pane;
+    $display->panels['navigation'][1] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
