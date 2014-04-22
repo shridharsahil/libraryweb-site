@@ -161,20 +161,14 @@ a:hover {
 }
 
 .l-navigation-wrapper {
-  background: black;
-  border-bottom: 4px solid #fdb930;
+  background: #d7d9da;
   font-size: 18px;
-  padding: 10px 0;
 }
 
-.l-navigation a, .l-navigation a:visited {
-  color: white;
+.l-navigation .l-region {
+  padding: 16px 0;
 }
-.l-navigation a:active, .l-navigation a:focus {
-  text-decoration: underline;
-}
-.l-navigation ul,
-.l-navigation .menu {
+.l-navigation ul.primary-links {
   margin: 0;
   padding: 0;
   border: 0;
@@ -185,20 +179,16 @@ a:hover {
   list-style: none;
   list-style-image: none;
 }
-.l-navigation ul:before, .l-navigation ul:after,
-.l-navigation .menu:before,
-.l-navigation .menu:after {
+.l-navigation ul.primary-links:before, .l-navigation ul.primary-links:after {
   content: ".";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.l-navigation ul:after,
-.l-navigation .menu:after {
+.l-navigation ul.primary-links:after {
   clear: both;
 }
-.l-navigation ul li,
-.l-navigation .menu li {
+.l-navigation ul.primary-links li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -208,33 +198,87 @@ a:hover {
   padding-left: 4px;
   padding-right: 4px;
 }
-.l-navigation ul li:first-child, .l-navigation ul li.first,
-.l-navigation .menu li:first-child,
-.l-navigation .menu li.first {
+.l-navigation ul.primary-links li:first-child, .l-navigation ul.primary-links li.first {
   padding-left: 0;
 }
-.l-navigation ul li:last-child,
-.l-navigation .menu li:last-child {
+.l-navigation ul.primary-links li:last-child {
   padding-right: 0;
 }
-.l-navigation ul li.last,
-.l-navigation .menu li.last {
+.l-navigation ul.primary-links li.last {
   padding-right: 0;
 }
-.l-navigation ul li,
-.l-navigation ul .leaf,
-.l-navigation .menu li,
-.l-navigation .menu .leaf {
-  margin: 0;
+.l-navigation ul.primary-links li,
+.l-navigation ul.primary-links .leaf {
+  padding: 0;
+  margin: 0 1px 0 0;
   list-style-image: none;
   list-style-type: none;
-  padding-right: 50px;
 }
-.l-navigation ul li.last,
-.l-navigation ul .leaf.last,
-.l-navigation .menu li.last,
-.l-navigation .menu .leaf.last {
-  padding-right: 0;
+.l-navigation ul.primary-links li a,
+.l-navigation ul.primary-links .leaf a {
+  padding: 16px 30px;
+  line-height: 1.2em;
+}
+.l-navigation ul.primary-links li a,
+.l-navigation ul.primary-links li a:visited,
+.l-navigation ul.primary-links .leaf a,
+.l-navigation ul.primary-links .leaf a:visited {
+  color: #333333;
+}
+.l-navigation ul.primary-links li.active-trail > a, .l-navigation ul.primary-links li.active-trail > a:hover,
+.l-navigation ul.primary-links .leaf.active-trail > a,
+.l-navigation ul.primary-links .leaf.active-trail > a:hover {
+  background: #eff3f4;
+  color: #3283be;
+  text-decoration: none;
+}
+.l-navigation ul.primary-links li a:hover,
+.l-navigation ul.primary-links li a:active,
+.l-navigation ul.primary-links li a:focus,
+.l-navigation ul.primary-links .leaf a:hover,
+.l-navigation ul.primary-links .leaf a:active,
+.l-navigation ul.primary-links .leaf a:focus {
+  color: black;
+  text-decoration: underline;
+}
+.l-navigation ul.primary-links li.active-trail > a:hover,
+.l-navigation ul.primary-links .leaf.active-trail > a:hover {
+  cursor: normal;
+}
+.l-navigation ul.primary-links li.first a,
+.l-navigation ul.primary-links .leaf.first a {
+  text-indent: -999px;
+  width: 0;
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  padding: 0 50px 0 0;
+}
+.l-navigation ul.primary-links li.first a:after,
+.l-navigation ul.primary-links .leaf.first a:after {
+  font-family: uclalib;
+  content: "\e600";
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  text-indent: 954px;
+  display: inline-block;
+  line-height: 1em;
+  vertical-align: middle;
+}
+.l-navigation ul.primary-links li.first.active-trail a, .l-navigation ul.primary-links li.first.active a,
+.l-navigation ul.primary-links li.first a.active,
+.l-navigation ul.primary-links li.first a:active,
+.l-navigation ul.primary-links li.first a:hover,
+.l-navigation ul.primary-links li.first a:focus,
+.l-navigation ul.primary-links .leaf.first.active-trail a,
+.l-navigation ul.primary-links .leaf.first.active a,
+.l-navigation ul.primary-links .leaf.first a.active,
+.l-navigation ul.primary-links .leaf.first a:active,
+.l-navigation ul.primary-links .leaf.first a:hover,
+.l-navigation ul.primary-links .leaf.first a:focus {
+  background: transparent;
+  color: #3283be;
 }
 
 .pane-ask-a-librarian {
