@@ -181,7 +181,7 @@ function uclalib_exhibition_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_exhibition_end',
     'label' => 'Exhibition End Date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -491,7 +491,7 @@ function uclalib_exhibition_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_exhibition_start',
     'label' => 'Exhibition Start Date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
