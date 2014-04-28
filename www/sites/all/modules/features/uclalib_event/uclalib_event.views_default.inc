@@ -36,27 +36,30 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Event Date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'month',
+  /* Field: Indexed Node: Exhibition Start Date */
+  $handler->display->display_options['fields']['field_exhibition_start']['id'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_start']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_start']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_start']['settings'] = array(
+    'format_type' => 'month_with_date',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Indexed Node: Event Date */
-  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
-  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
-    'format_type' => 'day',
+  /* Field: Indexed Node: Exhibition End Date */
+  $handler->display->display_options['fields']['field_exhibition_end']['id'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '[field_exhibition_start] to [field_exhibition_end]';
+  $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
+    'format_type' => 'month_with_date',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -68,8 +71,9 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date_2']['field'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date_2']['label'] = '';
   $handler->display->display_options['fields']['field_event_date_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_2']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_event_date_2']['settings'] = array(
-    'format_type' => '12_hour_time',
+    'format_type' => 'month_with_date',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -98,7 +102,11 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'uclalib_event' => 'uclalib_event',
+    'exhibition' => 'exhibition',
   );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $export['events_agenda'] = $view;
 
   $view = new view();
@@ -113,7 +121,7 @@ function uclalib_event_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Exhibitions Highlight';
+  $handler->display->display_options['title'] = 'Exhibitions';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -123,15 +131,15 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Exhibition Date */
-  $handler->display->display_options['fields']['field_exhibition_date']['id'] = 'field_exhibition_date';
-  $handler->display->display_options['fields']['field_exhibition_date']['table'] = 'field_data_field_exhibition_date';
-  $handler->display->display_options['fields']['field_exhibition_date']['field'] = 'field_exhibition_date';
-  $handler->display->display_options['fields']['field_exhibition_date']['label'] = '';
-  $handler->display->display_options['fields']['field_exhibition_date']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_date']['alter']['text'] = '<em>Through [field_exhibition_date]</em>';
-  $handler->display->display_options['fields']['field_exhibition_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exhibition_date']['settings'] = array(
+  /* Field: Content: Exhibition End Date */
+  $handler->display->display_options['fields']['field_exhibition_end']['id'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = 'through [field_exhibition_end]';
+  $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
     'format_type' => 'month_with_date',
     'fromto' => 'both',
     'multiple_number' => '',
@@ -145,10 +153,6 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Exhibition Date - end date (field_exhibition_date:value2) */
-  $handler->display->display_options['sorts']['field_exhibition_date_value2']['id'] = 'field_exhibition_date_value2';
-  $handler->display->display_options['sorts']['field_exhibition_date_value2']['table'] = 'field_data_field_exhibition_date';
-  $handler->display->display_options['sorts']['field_exhibition_date_value2']['field'] = 'field_exhibition_date_value2';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -164,8 +168,8 @@ function uclalib_event_views_default_views() {
     'exhibition' => 'exhibition',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Exhibitions Highlight */
+  $handler = $view->new_display('panel_pane', 'Exhibitions Highlight', 'exhibition_highlight_pane');
   $export['exhibitions_highlight'] = $view;
 
   $view = new view();
