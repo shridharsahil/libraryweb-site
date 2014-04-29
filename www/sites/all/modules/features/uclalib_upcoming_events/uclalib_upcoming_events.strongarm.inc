@@ -35,10 +35,10 @@ function uclalib_upcoming_events_strongarm() {
           'weight' => '1',
         ),
         'revision' => array(
-          'weight' => '4',
+          'weight' => '6',
         ),
         'view_mode' => array(
-          'weight' => '3',
+          'weight' => '5',
         ),
       ),
       'display' => array(

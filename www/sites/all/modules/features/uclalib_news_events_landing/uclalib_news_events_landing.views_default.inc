@@ -1,0 +1,225 @@
+<?php
+/**
+ * @file
+ * uclalib_news_events_landing.views_default.inc
+ */
+
+/**
+ * Implements hook_views_default_views().
+ */
+function uclalib_news_events_landing_views_default_views() {
+  $export = array();
+
+  $view = new view();
+  $view->name = 'news_events_landing_display';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'bean';
+  $view->human_name = 'News+Events Landing Page Bean Display';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<a href="news-events/events-agenda">Featured Events</a>';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'More News >';
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'news-events/events-agenda';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_events_target_id']['id'] = 'field_events_target_id';
+  $handler->display->display_options['relationships']['field_events_target_id']['table'] = 'field_data_field_events';
+  $handler->display->display_options['relationships']['field_events_target_id']['field'] = 'field_events_target_id';
+  /* Field: Block: Internal, numeric block ID */
+  $handler->display->display_options['fields']['bid']['id'] = 'bid';
+  $handler->display->display_options['fields']['bid']['table'] = 'bean';
+  $handler->display->display_options['fields']['bid']['field'] = 'bid';
+  $handler->display->display_options['fields']['bid']['label'] = '';
+  $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['bid']['separator'] = '';
+  /* Field: Content: Event Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['relationship'] = 'field_events_target_id';
+  $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['type'] = 'uclablib_event_date_block';
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Exhibition Start Date */
+  $handler->display->display_options['fields']['field_exhibition_start']['id'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['table'] = 'field_data_field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['relationship'] = 'field_events_target_id';
+  $handler->display->display_options['fields']['field_exhibition_start']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_start']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_start']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_start']['settings'] = array(
+    'format_type' => 'month_with_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Exhibition End Date */
+  $handler->display->display_options['fields']['field_exhibition_end']['id'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['relationship'] = 'field_events_target_id';
+  $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = 'EXHIBITION </br> [field_exhibition_start] to [field_exhibition_end]';
+  $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
+    'format_type' => 'month_with_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_events_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['relationship'] = 'field_events_target_id';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['text'] = '[body-summary]';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '128';
+  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Contextual filter: Block: Block Delta */
+  $handler->display->display_options['arguments']['delta']['id'] = 'delta';
+  $handler->display->display_options['arguments']['delta']['table'] = 'bean';
+  $handler->display->display_options['arguments']['delta']['field'] = 'delta';
+  $handler->display->display_options['arguments']['delta']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['delta']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['delta']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['delta']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['delta']['limit'] = '0';
+  /* Filter criterion: Block: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'bean';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_and_events_bean' => 'news_and_events_bean',
+  );
+
+  /* Display: Events  */
+  $handler = $view->new_display('panel_pane', 'Events ', 'panel_pane_1');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'More Events >';
+  $handler->display->display_options['link_url'] = 'news-events/events-agenda';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: News */
+  $handler = $view->new_display('panel_pane', 'News', 'panel_pane_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<a href="news">News</a>';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'news';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_news_target_id']['id'] = 'field_news_target_id';
+  $handler->display->display_options['relationships']['field_news_target_id']['table'] = 'field_data_field_news';
+  $handler->display->display_options['relationships']['field_news_target_id']['field'] = 'field_news_target_id';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Block: Internal, numeric block ID */
+  $handler->display->display_options['fields']['bid']['id'] = 'bid';
+  $handler->display->display_options['fields']['bid']['table'] = 'bean';
+  $handler->display->display_options['fields']['bid']['field'] = 'bid';
+  $handler->display->display_options['fields']['bid']['label'] = '';
+  $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['bid']['separator'] = '';
+  /* Field: Content: News Image */
+  $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['relationship'] = 'field_news_target_id';
+  $handler->display->display_options['fields']['field_news_image']['label'] = '';
+  $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_news_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_news_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['relationship'] = 'field_news_target_id';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['text'] = '[body-summary]';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '128';
+  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $export['news_events_landing_display'] = $view;
+
+  return $export;
+}

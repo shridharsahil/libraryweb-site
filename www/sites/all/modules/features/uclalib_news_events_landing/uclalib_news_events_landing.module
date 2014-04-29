@@ -1,0 +1,57 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB News events landing feature.
+ */
+
+include_once 'uclalib_news_events_landing.features.inc';
+
+/**
+ * Implements hook_cron().
+ *
+ * Remove all events and exhibitions with past dates from all beans of type 'news_and_events_bean'.
+ *
+ */
+function uclalib_news_events_landing_cron() {
+  $results = db_select('bean', 'b')
+    ->condition('type', 'news_and_events_bean')
+    ->fields('b', array('bid'))
+    ->execute()
+    ->fetchAllAssoc('bid');
+
+  foreach ($results as $bid => $result) {
+    $bean = bean_load($bid);
+
+    $now = date_create()->format('Y-m-d h:i:s');
+
+    // Calculate what events are past.
+    if (isset($bean->field_events[LANGUAGE_NONE]) && is_array($bean->field_events[LANGUAGE_NONE])) {
+      $remove_deltas = array();
+      foreach ($bean->field_events[LANGUAGE_NONE] as $delta => $value) {
+        if (isset($value['target_id']) && ($event_node = node_load($value['target_id']))) {
+
+          if (isset($event_node->field_event_date[LANGUAGE_NONE][0]['value'])) {
+            if ($event_node->field_event_date[LANGUAGE_NONE][0]['value'] < $now) {
+              $remove_deltas[] = $delta;
+            }
+          }
+          elseif (isset($event_node->field_exhibition_end[LANGUAGE_NONE][0]['value'])) {
+            if ($event_node->field_exhibition_end[LANGUAGE_NONE][0]['value'] < $now) {
+              $remove_deltas[] = $delta;
+            }
+          }
+        }
+      }
+
+      foreach ($remove_deltas as $delta) {
+        // Remove pass event.
+        unset($bean->field_events[LANGUAGE_NONE][$delta]);
+        // Reset deltas.
+        $bean->field_events[LANGUAGE_NONE] = array_values($bean->field_events[LANGUAGE_NONE]);
+      }
+
+      // Save the bean.
+      bean_save($bean);
+    }
+  }
+}

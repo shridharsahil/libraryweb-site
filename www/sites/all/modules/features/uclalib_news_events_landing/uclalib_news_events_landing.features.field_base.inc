@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * uclalib_upcoming_events.features.field_base.inc
+ * uclalib_news_events_landing.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function uclalib_upcoming_events_field_default_field_bases() {
+function uclalib_news_events_landing_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_upcoming_events_events'
-  $field_bases['field_upcoming_events_events'] = array(
+  // Exported field_base: 'field_events'
+  $field_bases['field_events'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_upcoming_events_events',
+    'field_name' => 'field_events',
     'foreign keys' => array(
       'node' => array(
         'columns' => array(
@@ -54,13 +54,13 @@ function uclalib_upcoming_events_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_upcoming_news_news'
-  $field_bases['field_upcoming_news_news'] = array(
+  // Exported field_base: 'field_news'
+  $field_bases['field_news'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_upcoming_news_news',
+    'field_name' => 'field_news',
     'foreign keys' => array(
       'node' => array(
         'columns' => array(
