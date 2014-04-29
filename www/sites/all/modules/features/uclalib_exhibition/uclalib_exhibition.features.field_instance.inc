@@ -142,7 +142,7 @@ function uclalib_exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -261,46 +261,113 @@ function uclalib_exhibition_field_default_field_instances() {
           'auto' => 'auto',
           'icon_link' => 0,
           'image' => 0,
-          'image_category_icon' => 0,
-          'image_custom_crop' => 0,
           'image_large' => 0,
-          'image_linkit_thumb' => 0,
           'image_medium' => 0,
           'image_thumbnail' => 0,
-          'image_thumbnail_crop' => 0,
-          'image_thumbnail_large' => 0,
-          'image_thumbnail_small' => 0,
-          'image_widescreen_crop' => 0,
-          'image_widescreen_large' => 0,
-          'image_widescreen_medium' => 0,
-          'image_widescreen_small' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
-        'manualcrop_crop_info' => 0,
+        'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 1,
+        'manualcrop_enable' => FALSE,
         'manualcrop_filter_insert' => 0,
-        'manualcrop_inline_crop' => 1,
+        'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
-        'manualcrop_instant_preview' => 0,
-        'manualcrop_keyboard' => 0,
-        'manualcrop_maximize_default_crop_area' => 1,
-        'manualcrop_require_cropping' => array(
-          'thumbnail_crop' => 'thumbnail_crop',
-          'widescreen_crop' => 'widescreen_crop',
-        ),
-        'manualcrop_styles_list' => array(
-          'thumbnail_crop' => 'thumbnail_crop',
-          'widescreen_crop' => 'widescreen_crop',
-        ),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => 1,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_exhibition_image_thumbnail'
+  $field_instances['node-exhibition-field_exhibition_image_thumbnail'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 6,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_exhibition_image_thumbnail',
+    'label' => 'Exhibition Image Thumbnail',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_large' => 0,
+          'image_medium' => 0,
+          'image_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => FALSE,
+        'manualcrop_filter_insert' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 9,
     ),
   );
 
@@ -353,7 +420,7 @@ function uclalib_exhibition_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -406,7 +473,7 @@ function uclalib_exhibition_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -579,7 +646,7 @@ function uclalib_exhibition_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -590,6 +657,7 @@ function uclalib_exhibition_field_default_field_instances() {
   t('Exhibition Category');
   t('Exhibition End Date');
   t('Exhibition Image');
+  t('Exhibition Image Thumbnail');
   t('Exhibition Location');
   t('Exhibition Related Content');
   t('Exhibition Series');
