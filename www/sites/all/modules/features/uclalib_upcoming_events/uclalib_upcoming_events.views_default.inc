@@ -65,15 +65,14 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['title']['relationship'] = 'field_upcoming_events_events_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Contextual filter: Block: Block Delta */
-  $handler->display->display_options['arguments']['delta']['id'] = 'delta';
-  $handler->display->display_options['arguments']['delta']['table'] = 'bean';
-  $handler->display->display_options['arguments']['delta']['field'] = 'delta';
-  $handler->display->display_options['arguments']['delta']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['delta']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['delta']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['delta']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['delta']['limit'] = '0';
+  /* Contextual filter: Block: Internal, numeric block ID */
+  $handler->display->display_options['arguments']['bid']['id'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['table'] = 'bean';
+  $handler->display->display_options['arguments']['bid']['field'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['bid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['bid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['bid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Block: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'bean';
