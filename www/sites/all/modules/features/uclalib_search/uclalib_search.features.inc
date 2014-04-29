@@ -162,7 +162,7 @@ function uclalib_search_default_search_api_index() {
     "name" : "Site General Search",
     "machine_name" : "site_general_search",
     "description" : null,
-    "server" : "local",
+    "server" : "uclalib_solr_server",
     "item_type" : "node",
     "options" : {
       "index_directly" : 1,
