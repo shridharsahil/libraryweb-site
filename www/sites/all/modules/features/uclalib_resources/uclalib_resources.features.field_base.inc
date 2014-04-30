@@ -49,7 +49,7 @@ function uclalib_resources_field_default_field_bases() {
   // Exported field_base: 'field_resource_display_icon'
   $field_bases['field_resource_display_icon'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_resource_display_icon',
