@@ -21,7 +21,7 @@ function uclalib_news_events_landing_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference_views_formatter',
         'settings' => array(
-          'view_display' => 'panel_pane_2',
+          'view_display' => 'panel_pane_1',
           'view_name' => 'news_events_landing_display',
         ),
         'type' => 'entityreference_views_formatter',

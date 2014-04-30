@@ -118,15 +118,15 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Contextual filter: Block: Block Delta */
-  $handler->display->display_options['arguments']['delta']['id'] = 'delta';
-  $handler->display->display_options['arguments']['delta']['table'] = 'bean';
-  $handler->display->display_options['arguments']['delta']['field'] = 'delta';
-  $handler->display->display_options['arguments']['delta']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['delta']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['delta']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['delta']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['delta']['limit'] = '0';
+  /* Contextual filter: Block: Title */
+  $handler->display->display_options['arguments']['title']['id'] = 'title';
+  $handler->display->display_options['arguments']['title']['table'] = 'bean';
+  $handler->display->display_options['arguments']['title']['field'] = 'title';
+  $handler->display->display_options['arguments']['title']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['title']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['title']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['title']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['title']['limit'] = '0';
   /* Filter criterion: Block: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'bean';
@@ -154,6 +154,16 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'title' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Block: Title',
+    ),
+  );
 
   /* Display: News */
   $handler = $view->new_display('panel_pane', 'News', 'panel_pane_2');
@@ -219,6 +229,24 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'bid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Block: Internal, numeric block ID',
+    ),
+    'title' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Block: Title',
+    ),
+  );
   $export['news_events_landing_display'] = $view;
 
   return $export;
