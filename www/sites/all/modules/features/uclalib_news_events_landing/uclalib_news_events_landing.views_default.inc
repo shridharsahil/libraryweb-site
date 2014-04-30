@@ -72,6 +72,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_start']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_start']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_start']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_exhibition_start']['settings'] = array(
     'format_type' => 'month_with_date',
     'fromto' => 'both',
@@ -86,10 +87,29 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_end']['relationship'] = 'field_events_target_id';
   $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = 'EXHIBITION </br> [field_exhibition_start] to [field_exhibition_end]';
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '[field_exhibition_start] to [field_exhibition_end]';
   $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
     'format_type' => 'month_with_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Exhibition Label */
+  $handler->display->display_options['fields']['field_exhibition_end_1']['id'] = 'field_exhibition_end_1';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['relationship'] = 'field_events_target_id';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['ui_name'] = 'Exhibition Label';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['text'] = 'EXHIBITION';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['type'] = 'date_plain';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['settings'] = array(
+    'format_type' => 'long',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
