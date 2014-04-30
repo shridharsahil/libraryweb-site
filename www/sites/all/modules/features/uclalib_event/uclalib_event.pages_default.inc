@@ -404,10 +404,27 @@ function uclalib_event_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Events Agenda';
   $page->admin_description = 'Events Agenda landing page';
-  $page->path = 'news-events/events-agenda';
+  $page->path = 'news-events/events-agenda/!start/!end';
   $page->access = array();
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'start' => array(
+      'id' => 1,
+      'identifier' => 'Start Date',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+    'end' => array(
+      'id' => 2,
+      'identifier' => 'End Date',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -452,11 +469,14 @@ function uclalib_event_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'events_agenda-panel_pane_1';
+    $pane->type = 'daterangepicker';
+    $pane->subtype = 'daterangepicker';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -469,6 +489,24 @@ function uclalib_event_default_page_manager_pages() {
     $display->panels['main'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events_agenda-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['main'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-zItRqA5RFuDfSs4G2t7RRpoLl2i48MIl';
@@ -486,10 +524,10 @@ function uclalib_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-K8oMPaSbIBACYBFBfyeXeWjlcnpbOesE';
@@ -507,10 +545,10 @@ function uclalib_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-dPTRrvJVywvmbk8IrApIgbk8EveZIybL';
@@ -528,10 +566,10 @@ function uclalib_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-dS9NrtY8lix1Z1JilcWmN5XY52FtPcSK';
@@ -549,10 +587,10 @@ function uclalib_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar_left'][3] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'sidebar_right';
     $pane->type = 'views_panes';
     $pane->subtype = 'exhibitions_highlight-exhibition_highlight_pane';
@@ -567,8 +605,8 @@ function uclalib_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar_right'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_right'][0] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
