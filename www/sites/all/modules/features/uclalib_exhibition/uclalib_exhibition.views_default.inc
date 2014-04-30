@@ -82,23 +82,27 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '125',
   );
-  /* Sort criterion: Broken/missing handler */
+  /* Sort criterion: Indexed Node: Exhibition End Date */
   $handler->display->display_options['sorts']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['sorts']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['field_exhibition_end']['field'] = 'field_exhibition_end';
-  /* Contextual filter: Broken/missing handler */
+  /* Contextual filter: Indexed Node: Exhibition End Date */
   $handler->display->display_options['arguments']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['arguments']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['arguments']['field_exhibition_end']['field'] = 'field_exhibition_end';
   $handler->display->display_options['arguments']['field_exhibition_end']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_exhibition_end']['summary']['format'] = 'default_summary';
-  /* Contextual filter: Broken/missing handler */
+  $handler->display->display_options['arguments']['field_exhibition_end']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['field_exhibition_end']['not'] = 0;
+  /* Contextual filter: Indexed Node: Exhibition Start Date */
   $handler->display->display_options['arguments']['field_exhibition_start']['id'] = 'field_exhibition_start';
   $handler->display->display_options['arguments']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['arguments']['field_exhibition_start']['field'] = 'field_exhibition_start';
   $handler->display->display_options['arguments']['field_exhibition_start']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_exhibition_start']['summary']['format'] = 'default_summary';
-  /* Filter criterion: Broken/missing handler */
+  $handler->display->display_options['arguments']['field_exhibition_start']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['field_exhibition_start']['not'] = 0;
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['type']['field'] = 'type';
