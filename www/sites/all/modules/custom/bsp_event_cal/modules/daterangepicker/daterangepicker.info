@@ -1,0 +1,7 @@
+core = "7.x"
+name = "JQuery Date-Range Picker"
+description = "A custom date-picker for the Princeton University Art Museum."
+package = "PUAM"
+php = "5.2.4"
+project = "puam_jquery_daterangepicker"
+version = "7.x-0.1"

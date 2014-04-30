@@ -1,0 +1,114 @@
+/* Events page */
+.view-events-featured .views-field-field-thumbnail img,
+.view-events-upcoming .views-field-field-thumbnail img,
+.view-events-list .views-field-field-thumbnail img {
+  float: left;
+  max-width: 128px;
+  height: auto;
+  margin-right: 8px;
+  /* force content below the image. */
+  margin-bottom: 1px;
+}
+
+/* reduce spacing under date headers. */
+.view-events-featured .view-content h3,
+.view-events-upcoming .view-content h3,
+.view-events-list .view-content h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+  color: #122F57;
+}
+.view-events-upcoming .views-field-field-event-date-1,
+.view-events-featured .views-field-field-event-date-1,
+.view-events-list .views-field-field-event-date-1 {
+  font-size: .8em;
+}
+.view-events-featured .views-row,
+.view-events-list .views-row {
+  margin-bottom:15px;
+}
+
+/* Homepage upcoming events and featured events blocks. */
+.view-events-featured .views-field-field-thumbnail img,
+.view-events-upcoming .views-field-field-thumbnail img {
+  float: left;
+  max-width: 128px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+.pane-events-upcoming .view-footer {
+  clear: both;
+}
+.pane-events-upcoming .view-footer p {
+  text-align: right;
+}
+
+.view-events-featured .views-row {
+  padding-bottom: 13px;
+  padding-top:16px;
+  border-bottom: 1px solid #ccc;
+}
+.view-events-featured .views-row-first {
+  padding-top:5px;
+}
+.view-events-featured .views-row-last {
+  border-bottom:none;
+  padding-bottom:5px;
+}
+
+/* Category picker styling */
+.pane-category-picker .pane-content {
+  padding-top: 0;
+}
+.pane-category-picker ul {
+  list-style: none;
+}
+.pane-category-picker li {
+  clear: both;
+  width: 100%;
+}
+.pane-category-picker li img {
+  float: left;
+  margin: 5px 5px;
+  height: 1.2em;
+  width: auto;
+}
+
+/* event category icons. */
+.pane-category-picker .taxonomy-term img,
+.field-name-field-event-term-icon img,
+.views-field-field-event-term-icon img {
+  float: left;
+  max-width: 25px;
+}
+
+/* date picker styling. */
+.pane-daterangepicker {
+  margin:0 15px 0 0;
+}
+.pane-daterangepicker .date-input,
+.pane-daterangepicker .date-submit{
+  float:left;
+}
+.pane-daterangepicker .date-input {
+  padding-right: 23px;
+  width: auto;
+  background: transparent url(./images/date-select.png) no-repeat 100% 50%;
+  font-size: 20px;
+  font-family: Helvetica Neue;
+  font-weight: 500;
+  display: block;
+  text-transform: uppercase;
+  color: #122F57;
+  border: none;
+}
+.pane-daterangepicker .date-input:hover,
+.pane-daterangepicker .date-input:focus,
+.pane-daterangepicker .date-input:active {
+  border: none;
+  background-color: #d2e2f3;
+  color: #000;
+}

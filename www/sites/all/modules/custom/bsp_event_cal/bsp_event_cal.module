@@ -1,0 +1,329 @@
+<?php
+/**
+ * @file
+ * Code for the Event Calendar feature.
+ */
+
+include_once 'bsp_event_cal.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function bsp_event_cal_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/content_types';
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function bsp_event_cal_preprocess_views_view_field(&$vars) {
+  $view = $vars['view'];
+  $field = $vars['field'];
+  $row = $vars['row'];
+
+  // The list of events on calendar pages.
+  if ($view->name == 'events_list') {
+    // Work on the Repeating Event value.
+    if ($field->definition['handler'] == 'views_handler_field_node') {
+      if (!empty($row->field_field_event_repeating[0]['raw']['nid'])) {
+        $repeating_node = node_load($row->field_field_event_repeating[0]['raw']['nid']);
+        // Output the date in a "Through [date]" message.
+        $row->field_field_event_repeating[0]['rendered']['#markup'] = theme('event_repeat_through', array('node' => $repeating_node));
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter.
+ *
+ * Modify views exposed form to submit to the correct URL.
+function bsp_event_cal_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    $query = explode('/', $_GET['q']);
+    if ($query[0] == variable_get('bsp_event_cal_calendar_base_path', 'calendar')) {
+      $form['#action'] = '/' . $_GET['q'];
+    }
+  }
+}
+*/
+
+/**
+ * Implements hook_node_view().
+ *
+ * Set breadcrumb on event pages.
+ */
+function bsp_event_cal_node_view($node) {
+  if ($node->type == 'event') {
+    $calendar_path = variable_get('bsp_event_cal_calendar_base_path', 'calendar');
+
+    // Build Breadcrumb array.
+    $breadcrumb = array();
+    $breadcrumb[] = l('Home', '<front>');
+
+    // Check if there's a referring link.
+    if (strlen($_SERVER['HTTP_REFERER'])) {
+
+      $url = parse_url($_SERVER['HTTP_REFERER']);
+      $calendar_path = variable_get('bsp_event_cal_calendar_base_path', 'calendar');
+      if ($url['host'] == $_SERVER['HTTP_HOST'] && substr_compare($url['path'], $calendar_path, 1, strlen($calendar_path)) == 0) {
+        $breadcrumb[] = l('Calendar', $_SERVER['HTTP_REFERER']);
+      }
+    }
+    else {
+      $breadcrumb[] = l('Calendar', $calendar_path);
+    }
+
+    $breadcrumb[] = l($node->title, 'node/' . $node->nid);
+
+    drupal_set_breadcrumb($breadcrumb);
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function bsp_event_cal_views_query_alter(&$view, &$query) {
+  if ($view->name == 'events_list') {
+    // See if a date range was passed in.
+    // @FIXME: we might need to add code for the 'My events' block.
+    if (isset($query->where['date']['conditions'][0]['value'][':node_date_argument'])) {
+      if (strpos($query->where['date']['conditions'][0]['value'][':node_date_argument'], '--')) {
+        $range = explode('--', $query->where['date']['conditions'][0]['value'][':node_date_argument']);
+        // Only proceed if there were exactly two arguments passed.
+        if (count($range == 2)) {
+          // Clone condition 0 as condition 1.
+          $query->where['date']['conditions'][1] = $query->where['date']['conditions'][0];
+          // Not going to need this.
+          unset($query->where['date']['conditions'][1]['value'][':node_date_argument']);
+          // Fix the field string.
+          $query->where['date']['conditions'][0]['field'] = str_replace(' = :node_date_argument', ' >= :node_date_argument', $query->where['date']['conditions'][0]['field']);
+          $query->where['date']['conditions'][1]['field'] = str_replace(' = :node_date_argument', ' <= :node_date_argument1', $query->where['date']['conditions'][1]['field']);
+          // Update the argument values.
+          $query->where['date']['conditions'][0]['value'][':node_date_argument'] = $range[0];
+          $query->where['date']['conditions'][1]['value'][':node_date_argument1'] = $range[1];
+          // Both attributes must match.
+          $query->where['date']['type'] = 'AND';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function bsp_event_cal_init() {
+  global $language;
+
+   // Load the content-type specific style sheet.
+   drupal_add_css(drupal_get_path('module', 'bsp_event_cal') . '/bsp_event_cal.css');
+
+  // Redirect event terms to the matching calendar term.
+  $request_path = request_path();
+  $calendar_path = _bsp_event_cal_term_to_calendar_url($request_path);
+  if ($calendar_path != $request_path) {
+    drupal_goto($calendar_path);
+  }
+  $query = explode('/', $_GET['q']);
+  if ($query[0] == variable_get('bsp_event_cal_base_path', 'calendar')) {
+    if (!isset($query[1])) {
+      $start_date = date('Y-m-d', time());
+      $end_date = date('Y-m-d', time() + (60 * 60 * 24 * 30));
+      $_GET['q'] .= '/' . $start_date . '--' . $end_date;
+    }
+  }
+}
+
+/**
+ * Helper function to create a calendar url from an event term path.
+ */
+function _bsp_event_cal_term_to_calendar_url($path) {
+  $path_array = explode('/', $path);
+
+  if (count($path_array) >= 3 && $path_array[0] == 'taxonomy' && $path_array[1] == 'term' && is_numeric($path_array[2])) {
+    $redirect = FALSE;
+    $term = taxonomy_term_load($path_array[2]);
+
+    if (!empty($term) && $term->vid == variable_get('bsp_event_cal_events_category', 2)) {
+      $redirect = TRUE;
+    }
+
+    // Don't redirect the term-edit pages.
+    if (isset($path_array[3]) && $path_array[3] = 'edit') {
+      $redirect = FALSE;
+    }
+
+    if ($redirect) {
+      $path = variable_get('bsp_event_cal_base_path', 'calendar') . '/' . $path_array[2];
+    }
+  }
+
+  return $path;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bsp_event_cal_theme($existing, $type, $theme, $path) {
+  return array(
+    'related_events' => array(
+      'variables' => array('events' => NULL),
+      'template' => 'related-events',
+    ),
+    'event_repeat_through' => array(
+      'variables' => array('node' => NULL, 'bare' => NULL),
+    ),
+    // This would be useful.
+    // 'event_link_with_icon' => array(
+    //   'variables' => array('event' => NULL),
+    //   'template' => 'event-link-with-icon',
+    // )
+  );
+}
+
+/**
+ * Implements hook_date_formats().
+ */
+function bsp_event_cal_date_formats() {
+  $formats = array();
+
+  // Custom formats.
+  $formats[] = array(
+    'type' => 'bsp_event_cal_date',
+    'format' => 'l, F jS, Y',
+    'locales' => array(),
+  );
+
+  $formats[] = array(
+    'type' => 'bsp_event_cal_date_short',
+    'format' => 'F jS Y',
+    'locales' => array(),
+  );
+
+  $formats[] = array(
+    'type' => 'bsp_event_cal_time',
+    'format' => 'g:ia',
+    'locales' => array(),
+  );
+
+  $formats[] = array(
+    'type' => 'bsp_event_cal_datetime',
+    'format' => 'l, F jS, Y \@ g:ia',
+    'locales' => array(),
+  );
+
+  $formats[] = array(
+    'type' => 'bsp_event_cal_datetime_short',
+    'format' => 'F jS Y \@ g:ia',
+    'locales' => array(),
+  );
+
+  $formats[] = array(
+    'type' => 'bsp_event_cal_day',
+    'format' => 'l',
+    'locales' => array(),
+  );
+  return $formats;
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function bsp_event_cal_date_format_types() {
+  // Define the core date format types.
+  return array(
+    'bsp_event_cal_date' => t('Event date (long)'),
+    'bsp_event_cal_date_short' => t('Event date (short)'),
+    'bsp_event_cal_time' => t('Event time'),
+    'bsp_event_cal_datetime' => t('Event date & time (long)'),
+    'bsp_event_cal_datetime_short' => t('Event date & time (short)'),
+    'bsp_event_cal_day' => t('Day of the Week'),
+  );
+}
+
+/**
+ * Implements hook_load().
+ */
+function bsp_event_cal_entity_load(&$entities, $type) {
+  if ($type == 'node') {
+    // Loop over each of the nodes.
+    foreach ($entities as $nid => $node) {
+      // Work on the Event content type.
+      if ($node->type == 'event') {
+        // Prep the date_through for later.
+        $node->date_through = 0;
+
+        // Load the repeating node.
+        if (!empty($node->field_event_repeating[$node->language][0]['nid'])) {
+          $repeating_node = node_load($node->field_event_repeating[$node->language][0]['nid']);
+          // Assign the date_through.
+          if (!empty($repeating_node->date_through)) {
+            $node->date_through = $repeating_node->date_through;
+          }
+        }
+      }
+
+      // Work on the Repeating Event content type.
+      if ($node->type == 'repeating_event') {
+        $date_through = db_query("SELECT
+            d.field_event_date_value event_date
+          FROM
+            {node} n
+          INNER JOIN {field_data_field_event_repeating} r
+            ON r.entity_id = n.nid
+            AND r.revision_id = n.vid
+            AND r.entity_type = 'node'
+            AND r.bundle = n.type
+          INNER JOIN {field_data_field_event_date} d
+            ON r.entity_id = n.nid
+            AND r.revision_id = n.vid
+            AND r.entity_type = 'node'
+            AND r.bundle = n.type
+          WHERE
+            r.field_event_repeating_nid = :nid
+          ORDER BY
+            event_date DESC
+          LIMIT 1
+          ", array(':nid' => $node->nid))->fetchField();
+
+        if (!empty($date_through)) {
+          $node->date_through = new DateObject($date_through);
+        }
+        else {
+          $node->date_through = 0;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Base implementation of theme_event_repeat_through().
+ */
+function theme_event_repeat_through($vars) {
+  $node = $vars['node'];
+  if (!empty($node->date_through)) {
+    // Show just the date.
+    if (!empty($vars['bare'])) {
+      return date_format_date($node->date_through, 'custom', 'F jS, Y');
+    }
+    // Show the full line.
+    else {
+      return '<span>' . t('through !date', array('!date' => date_format_date($node->date_through, 'custom', 'F jS, Y'))) . '</span>';
+    }
+  }
+}
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function bsp_event_cal_form_event_node_form_alter(&$form, &$form_state, $form_id) {
+  // Remove the Featured option entirely.
+  $form['options']['promote']['#access'] = FALSE;
+
+  // Remove the Sticky option entirely.
+  $form['options']['sticky']['#access'] = FALSE;
+}

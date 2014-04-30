@@ -1,0 +1,304 @@
+<?php
+
+/**
+ * @file
+ *   Bluespark's Custom Date Range Picker module.
+ * @author
+ *   James Wilson <james@bluesparklabs.com>
+ */
+
+/**
+ * Implementation of hook_ctools_plugin_directory().
+ */
+function daterangepicker_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Helper method to add the required libraries.
+ */
+function daterangepicker_add() {
+  static $loaded = FALSE;
+
+  // "I will say this only once."
+  if (!$loaded) {
+    // The DateRangePicker requires the jQuery UI DatePicker, Button, and Date.js
+    drupal_add_library('system', 'ui.datepicker');
+    drupal_add_library('system', 'ui.button');
+    drupal_add_library('daterangepicker', 'daterangepicker');
+
+    // Add the path setting.
+    drupal_add_js(array('dateRangePicker' => array('base_path' => variable_get('bsp_event_cal_calendar_base_path', 'calendar'))), 'setting');
+    // Add the module's JS.
+    drupal_add_js(drupal_get_path('module', 'daterangepicker') . '/daterangepicker.js');
+
+    // "I will not say it a second time."
+    $loaded = TRUE;
+  }
+}
+
+/**
+ * Implements hook_library().
+ */
+function daterangepicker_library() {
+  $libraries = array();
+  $path = 'sites/all/libraries/jquery_ui_date_range_picker';
+
+  $libraries['daterangepicker'] = array(
+    'title' => 'jQuery UI Date Range Picker',
+    'website' => 'http://www.github.com/jameswilson/jQuery-UI-Date-Range-Picker',
+    'version' => 'HEAD',
+    'js' => array(
+      $path . '/js/date.js' => array('group' => JS_LIBRARY),
+      $path . '/js/daterangepicker.jQuery.js' => array('group' => JS_LIBRARY),
+    ),
+    'css' => array(
+      //"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/smoothness/jquery-ui.css" => array('type' => 'external'),
+      $path . '/css/ui.daterangepicker.css' => array('preprocess' => FALSE),
+    ),
+  );
+  return $libraries;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function daterangepicker_block_info() {
+  // A block wrapper for a custom implementation of the jquery DateRangePicker
+  // by Scott Jehl.
+  $blocks['daterangepicker'] = array(
+    'info' => t('Date Range Picker'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function daterangepicker_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'daterangepicker':
+      $block['subject'] = t('Select a date range');
+      $block['content'] = theme('daterangepicker', array('default_date' => date('M j, Y')));
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function daterangepicker_theme($existing, $type, $theme, $path) {
+  return array(
+    // A custom themable template for the daterangepicker.
+    'daterangepicker' => array(
+      'template' => 'daterangepicker',
+      'arguments' => array('default_date' => NULL),
+    ),
+  );
+}
+
+/**
+ * Default implementation of hook_preprocess_daterangepicker().
+ */
+function daterangepicker_preprocess_daterangepicker($variables) {
+  daterangepicker_add();
+  drupal_add_js(drupal_get_path('module', 'daterangepicker') . '/autogrowinput.js');
+  drupal_add_js(drupal_get_path('module', 'daterangepicker') . '/daterangepicker.js');
+}
+
+/**
+ * Parse and convert an ISO 8601 date string into a human-readable string. The
+ * function returns a human-readable string representing the date, or date range
+ * formatted with the desired separator.
+ *
+ * The ISO 8601 defines notation various types of date intervals. The basic
+ * interval expected by this function is a single day, an interval from 00:00:00
+ * to 23:59:59 of the same day. For simplicity, a time interval of a single day
+ * will hereby be referred to as a date.
+ *
+ * Date-range strings are typically passed into this method from URL arguments.
+ * The accepted string input may be a single date or a date range. Date range
+ * notation is denoted by the existence of the double-hyphen.
+ *
+ *  - single date:  [date1]
+ *  - date range:   [date1]--[date2]
+ *
+ * The function expects that both date1 and date2 will be an ISO-formatted date
+ * string of the format YYY-MM-DD, however, the function does support any date
+ * format that can be parsed by PHP's strtotime() funtion.
+ *
+ * Examples include, but are not limited to:
+ *
+ *  - single year:  YYYY
+ *  - single month: YYYY-mm
+ *  - single day:   YYYY-mm-dd
+ *  - day range:    YYYY-mm-dd--YYYY-mm-dd
+ *
+ * Note that special handling is present for Year and Month intervals, however
+ * the ISO Week interval notation is currently not supported.
+ *
+ * @param $string
+ *    The date string to parse.
+ *
+ * @param $format
+ *    The human-readable string format for the default date format. Note, special
+ *    cases for year and month intervals ignore this format.
+ *
+ * @param $separator
+ *    The value used to separate two dates (when a date range is specified).
+ *
+ * @return
+ *    If the string provided could not be parsed return FALSE, otherwise return
+ *    a human-readable formatted date range. If the string is empty or null, return
+ *    the default range, the current month.
+ */
+function daterangepicker_parse_isodaterange($string = '', $format = 'l, F j, Y', $separator = ' - ') {
+  $output = '';
+
+  // If no date range string was provided, return the current month.
+  if (empty($string)) {
+    return date('F Y');
+  }
+
+  // If a string was provided, then parse the string by first splitting potential
+  // date range's by the divider. The divider is optional, but if used, is
+  // required to be of the format "--".
+  $values = explode('--', $string);
+
+  // Initialize the return value with the (first) formatted date.
+  if (($output = daterangepicker_format_date($date1, $values[0], $format)) === FALSE) {
+    return FALSE;
+  }
+
+  // If a second date was provided, parse and add it to the date string.
+  if (count($values)>1) {
+
+    // Parse the second date into a formatted string.
+    if (($date2_string = daterangepicker_format_date($date2, $values[1], $format)) === FALSE) {
+      // If the formatter errors, then return FALSE.
+      return FALSE;
+    }
+
+    // Add the second formatted date string to the existing return value joind by the specified $separator.
+    $output .= $separator . $date2_string;
+
+    // With the flexibility of specifying any two conceivable dates, there are
+    // some special cases that should be handled for brevity and readability.
+
+    // When the date range is within a single year.
+    if (date('Y', $date1) == date('Y', $date2)) {
+
+      // When the range starts on the first of a month.
+      if (date('j', $date1) == '1') {
+        $start_month = date('n', $date1);
+        $end_month = date('n', $date2);
+
+        // When the date range ends on the last day of a month.
+        if (is_ldotm($date2)) {
+
+          // If the start month and end month happen to be the same, show the
+          // date range as "Monthname, Year"
+          if ($start_month == $end_month) {
+            return date('F, Y', $date1);
+          }
+
+          // If the start month is January, and the end month is December, show
+          // the date range as "Calendar Year YYYY".
+          // TODO: should we redirect to the shorthand visit/calendar/YYYY instead?
+          if ($start_month == 1 && $end_month == 12) {
+            return date('Y', $date1);
+          }
+
+          // Otherwise, show the date range "Monthname - Monthname, Year".
+          return date('F', $date1) . $separator . date('F, Y', $date2);
+        }
+      }
+    }
+  }
+  return $output;
+}
+
+/**
+ * Turn a single ISO 8601 formatted date string into a human readable string.
+ *
+ * @param $date
+ *    A PHP timestamp, representing the provided date.
+ *
+ * @param $string
+ *    The input string to work on. This function will attempt to parse any string
+ *    into a date, but has additional special handling for strings in the
+ *    following formats:
+ *     - YYYY
+ *     - YYYY-MM
+ *    You will note that this function does not provide specific support for
+ *    strings formatted with the "ISO week" notation (eg 2011-W25 or 2011W25).
+ *
+ * @param $format
+ *    The format of the default output string. (See php date() function).
+ *
+ * @return
+ *    If there were any parse errors, then the module returns FALSE after setting
+ *    an appropriate Drupal message. Otherwise, the $date variable, which is
+ *    passed as a reference, is populated with a valid timestamp, and the return
+ *    value is a formatted date string.
+ *
+ * @todo Support ISO Week formatted strings.
+ */
+function daterangepicker_format_date(&$date, $date_string = '', $format = 'l, F j, Y') {
+
+  // Handle date parsing errors by setting a Drupal error message and return.
+  if (($date = strtotime($date_string)) === FALSE) {
+    drupal_set_message(t("Oops, @date was not recognized as a valid date.", array("@date" => $date_string)));
+    return FALSE;
+  }
+
+  // Format the date for the general case when the date is a normal date.
+  $output = date($format, $date);
+
+  // Handle special cases when non-standard date formats were provided.
+  // Currently this logic is built to handle the two specific special cases for
+  // date strings used on the URLs, the logic may need to be expanded later.
+  //
+  // - YYYY   (no month or day is specified)
+  // - YYYY-MM  (no day is specified)
+  @list($year, $month, $day) = explode('-', $date_string);
+
+  // If the day was left off, then show "Monthname, Year".
+  if (!$day) {
+    $output = date('F, Y', $date);
+  }
+
+  // If the month was left off, then show the calendar year.
+  if (!$month) {
+    $output = date('Y', $date);
+  }
+
+  // If the string uses the "ISO year with ISO week" format.
+  if (strpos($month, 'W') === 0) {
+    // This is currently not specifically handled.
+  }
+  return $output;
+}
+
+/**
+ * Returns true if the specified timestamp is the last day of the month (ldotm).
+ */
+function is_ldotm($timestamp) {
+  // The calculation for $ldotm takes advantage of the mktime() function's
+  // method of calculating days, where values less than 1 (including negative
+  // values) reference the days in the previous month, so 0 is the last day of
+  // the previous month.
+  $day = date('j', $timestamp);
+  $month = date('n', $timestamp);
+  $year = date('Y', $timestamp);
+  $ldotm = mktime(0, 0, 0, $month+1, 0, $year);
+
+  return ($day == date('j', $ldotm));
+}

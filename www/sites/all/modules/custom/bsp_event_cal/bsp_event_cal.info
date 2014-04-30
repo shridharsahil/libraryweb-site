@@ -1,0 +1,19 @@
+name = Date Picker
+description = Date range picker
+core = 7.x
+package = Bluespark
+version = 7.x-1.0-beta1
+project = bsp_event_cal
+dependencies[] = date_popup
+dependencies[] = date_views
+dependencies[] = daterangepicker
+dependencies[] = views
+dependencies[] = views_content
+features[ctools][] = strongarm:strongarm:1
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = events_children
+features[views_view][] = events_featured
+features[views_view][] = events_list
+features[views_view][] = events_listings
+
