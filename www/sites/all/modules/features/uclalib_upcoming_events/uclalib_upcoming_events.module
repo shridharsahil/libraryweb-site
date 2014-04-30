@@ -35,9 +35,9 @@ function uclalib_upcoming_events_field_formatter_view($entity_type, $entity, $fi
           $date = strtotime($date_item['value']['formatted_iso']);
           $tz = $date_item['value']['local']['timezone'];
 
-          $month = format_date($date, 'custom', 'F', $tz);
+          $month = format_date($date, 'custom', 'M', $tz);
           $day = format_date($date, 'custom', 'j', $tz);
-          $time = format_date($date, 'custom', 'g:i a', $tz);
+          $time = format_date($date, 'custom', 'D', $tz);
           if ($local_tz) {
             $tz = 'LT';
           }
@@ -47,11 +47,8 @@ function uclalib_upcoming_events_field_formatter_view($entity_type, $entity, $fi
 
           $date_str = '<div class="cal-month">' . strtoupper($month) . '</div>';
           $date_str .= '<div class="cal-day">' . $day . '</div>';
+          $date_str .= '<span class="cal-time">' . $time . '</span>';
 
-          if ($time != '12:00 am') {
-            $date_str .= '<span class="cal-time">' . $time . '</span>';
-            $date_str .= ' <span class="cal-tz">' . $tz . '</span>';
-          }
 
           $output = '<div class="cal-date">' . $date_str . '</div>';
 
