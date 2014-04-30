@@ -173,6 +173,8 @@ function uclalib_search_default_search_api_index() {
         "title" : { "type" : "text" },
         "url" : { "type" : "uri" },
         "status" : { "type" : "boolean" },
+        "created" : { "type" : "date" },
+        "changed" : { "type" : "date" },
         "author" : { "type" : "integer", "entity_type" : "user" },
         "field_amenities" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_equipment" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
