@@ -38,7 +38,7 @@ function uclalib_support_services_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'support-services';
+  $display->layout = 'grid-sidebar-left';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(

@@ -7,11 +7,11 @@
 
 // Plugin definition.
 $plugin = array(
-  'title' => t('Support and Services'),
+  'title' => t('Grid, Sidebar Left'),
   'icon' => 'preview.png',
   'category' => t('UCLA Library content layouts'),
-  'theme' => 'support_services',
-  'css' => '../../../css/layouts/support-services/support-services.layout.css',
+  'theme' => 'grid_sidebar_left',
+  'css' => '../../../css/layouts/grid-sidebar-left/grid-sidebar-left.layout.css',
   'regions' => array(
     'top' => t('Top'),
     'sidebar_left' => t('Sidebar Left'),
@@ -26,10 +26,10 @@ $plugin = array(
 );
 
 /**
- * Implements hook_preprocess_support_services().
+ * Implements hook_preprocess_grid_sidebar_left().
  */
-function template_preprocess_support_services(&$variables) {
-  $variables['attributes_array']['class'][] = 'panel-support-services';
+function template_preprocess_grid_sidebar_left(&$variables) {
+  $variables['attributes_array']['class'][] = 'panel-grid-sidebar-left';
 
   foreach($variables['content'] as $name => $item) {
     $variables['region_attributes_array'][$name]['class'][] = 'l-region';

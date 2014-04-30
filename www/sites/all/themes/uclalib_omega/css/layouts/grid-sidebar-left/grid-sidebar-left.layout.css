@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
-.panel-support-services:after {
+.panel-grid-sidebar-left:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.panel-support-services .content-bottom {
+.panel-grid-sidebar-left .content-bottom {
   clear: both;
 }
 
