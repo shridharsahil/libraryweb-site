@@ -407,7 +407,7 @@ function uclalib_resources_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Search and Research';
   $page->admin_description = 'Search and Research landing page.';
-  $page->path = 'search-and-research';
+  $page->path = 'search-research';
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
@@ -465,13 +465,19 @@ function uclalib_resources_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'main';
-    $pane->type = 'block';
-    $pane->subtype = 'bean-books--more';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<div>
+	Need help with your research? <a href="">Ask a Librarian</a>, <a href="">request a research appointment</a> or consult our <a href="">subject research guides</a>.
+</div>
+',
+      'format' => 'full_html',
+      'substitute' => TRUE,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -487,7 +493,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->pid = 'new-7';
     $pane->panel = 'main';
     $pane->type = 'block';
-    $pane->subtype = 'bean-journals';
+    $pane->subtype = 'bean-books--more';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -508,7 +514,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->pid = 'new-8';
     $pane->panel = 'main';
     $pane->type = 'block';
-    $pane->subtype = 'bean-articles';
+    $pane->subtype = 'bean-journals';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -529,7 +535,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->pid = 'new-9';
     $pane->panel = 'main';
     $pane->type = 'block';
-    $pane->subtype = 'bean-databases';
+    $pane->subtype = 'bean-articles';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -550,7 +556,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->pid = 'new-10';
     $pane->panel = 'main';
     $pane->type = 'block';
-    $pane->subtype = 'bean-images-audio-video';
+    $pane->subtype = 'bean-databases';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -571,7 +577,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->pid = 'new-11';
     $pane->panel = 'main';
     $pane->type = 'block';
-    $pane->subtype = 'bean-popular-databases';
+    $pane->subtype = 'bean-images-audio-video';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -590,6 +596,69 @@ function uclalib_resources_default_page_manager_pages() {
     $display->panels['main'][5] = 'new-11';
     $pane = new stdClass();
     $pane->pid = 'new-12';
+    $pane->panel = 'main';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-popular-databases';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['main'][6] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'At a Glance',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-quick-links---search-and-researc';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
     $pane->panel = 'sidebar_left';
     $pane->type = 'custom';
     $pane->subtype = 'questions_highlight';
@@ -608,10 +677,55 @@ function uclalib_resources_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-15'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-15';
+    $pane = new stdClass();
+    $pane->pid = 'new-16';
+    $pane->panel = 'top';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p><a href="">Get help with your research</a> | <a href="">Find a Quiet Study Area</a> | <a href="">Find a Group Study Area</a></p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-12';
+    $display->content['new-16'] = $pane;
+    $display->panels['top'][0] = 'new-16';
+    $pane = new stdClass();
+    $pane->pid = 'new-17';
+    $pane->panel = 'top';
+    $pane->type = 'resources_search_pane';
+    $pane->subtype = 'resources_search_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-17'] = $pane;
+    $display->panels['top'][1] = 'new-17';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
