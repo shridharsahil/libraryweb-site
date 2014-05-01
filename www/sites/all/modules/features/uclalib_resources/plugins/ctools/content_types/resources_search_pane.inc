@@ -28,14 +28,24 @@ function uclalib_resources_ctools_content_types_edit_form($form, &$form_state) {
  */
 function uclalib_resources_ctools_content_types_render($subtype, $conf, $args, $contexts) {
   $block = new stdClass();
+  $url = url('search-research/find-resources');
   $placeholder = t('Search for a database, collection, or other resource');
+  $submit = t('Go');
   $description = t('The UCLA Library has over 5,000 databases, special collections, and other resources that will help you locate materials for your research.');
   $block->title = t('Find a Resource');
   $block->content = <<<EOD
-    <form action="" method="">
-      <input type="text" size="70" maxlength="128" placeholder="{$placeholder}">
-      <input type="submit" id="submit" value="Go">
-    </form>
+    <div class="header-search-form-wrapper">
+      <form class="header-search-form" action="{$url}" method="get" accept-charset="UTF-8">
+        <div class="form-wrapper">
+          <div class="form-item form-type-textfield">
+            <input type="text" class="form-text" id='' name="title" value="" size="70" maxlength="128"  placeholder="{$placeholder}">
+          </div>
+          <div class="form-actions">
+            <input type="submit" class="form-submit" id="submit" value="{$submit}" >
+          </div>
+        </div>
+      </form>
+    </div>
     <p>{$description}</p>
 EOD;
   return $block;
