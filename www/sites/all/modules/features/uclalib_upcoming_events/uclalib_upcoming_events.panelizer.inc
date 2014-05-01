@@ -30,7 +30,7 @@ function uclalib_upcoming_events_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'grid-2';
+  $display->layout = 'naked';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -43,6 +43,9 @@ function uclalib_upcoming_events_panelizer_defaults() {
       'bottom_left' => NULL,
       'bottom_right' => NULL,
     ),
+    'content' => array(
+      'style' => 'tabs',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -50,7 +53,7 @@ function uclalib_upcoming_events_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'top_left';
+    $pane->panel = 'content';
     $pane->type = 'views_panes';
     $pane->subtype = 'upcoming_events_display-panel_pane_1';
     $pane->shown = TRUE;
@@ -71,10 +74,10 @@ function uclalib_upcoming_events_panelizer_defaults() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['top_left'][0] = 'new-1';
+    $display->panels['content'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'top_right';
+    $pane->panel = 'content';
     $pane->type = 'views_panes';
     $pane->subtype = 'upcoming_events_display-panel_pane_2';
     $pane->shown = TRUE;
@@ -92,10 +95,10 @@ function uclalib_upcoming_events_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['top_right'][0] = 'new-2';
+    $display->panels['content'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
