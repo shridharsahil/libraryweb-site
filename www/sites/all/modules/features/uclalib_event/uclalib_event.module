@@ -5,3 +5,25 @@
  */
 
 include_once 'uclalib_event.features.inc';
+
+/**
+ * Implements hook_views_pre_view().
+ *
+ * Set date range from path if present.
+ */
+function uclalib_event_views_pre_view(&$view) {
+  if ($view->name == 'events_agenda') {
+    $date = explode('/', current_path());
+    if (isset($date[2])) {
+      $values = explode('--', $date[2]);
+      if (isset($values[0])) {
+        $view->display['default']->handler->options['filters']['field_event_date']['value'] = $values[0];
+        $view->display['default']->handler->options['filters']['field_exhibition_start']['value'] = $values[0];
+      }
+      if (isset($values[1])) {
+        $view->display['default']->handler->options['filters']['field_event_date_1']['value'] = $values[1];
+        $view->display['default']->handler->options['filters']['field_exhibition_end']['value'] = $values[1];
+      }
+    }
+  }
+}
