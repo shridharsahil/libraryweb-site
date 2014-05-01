@@ -97,39 +97,56 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '125',
   );
-  /* Contextual filter: Indexed Node: Event Date */
-  $handler->display->display_options['arguments']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['arguments']['field_event_date']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['arguments']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['arguments']['field_event_date']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_event_date']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_event_date']['validate']['type'] = 'numeric';
-  $handler->display->display_options['arguments']['field_event_date']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_event_date']['not'] = 0;
-  /* Contextual filter: Indexed Node: Event Date */
-  $handler->display->display_options['arguments']['field_event_date_1']['id'] = 'field_event_date_1';
-  $handler->display->display_options['arguments']['field_event_date_1']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['arguments']['field_event_date_1']['field'] = 'field_event_date';
-  $handler->display->display_options['arguments']['field_event_date_1']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_event_date_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_event_date_1']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_event_date_1']['not'] = 0;
-  /* Contextual filter: Indexed Node: Exhibition End Date */
-  $handler->display->display_options['arguments']['field_exhibition_end']['id'] = 'field_exhibition_end';
-  $handler->display->display_options['arguments']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['arguments']['field_exhibition_end']['field'] = 'field_exhibition_end';
-  $handler->display->display_options['arguments']['field_exhibition_end']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_exhibition_end']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_exhibition_end']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_exhibition_end']['not'] = 0;
-  /* Contextual filter: Indexed Node: Exhibition End Date */
-  $handler->display->display_options['arguments']['field_exhibition_end_1']['id'] = 'field_exhibition_end_1';
-  $handler->display->display_options['arguments']['field_exhibition_end_1']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['arguments']['field_exhibition_end_1']['field'] = 'field_exhibition_end';
-  $handler->display->display_options['arguments']['field_exhibition_end_1']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_exhibition_end_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_exhibition_end_1']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_exhibition_end_1']['not'] = 0;
+  /* Sort criterion: Indexed Node: Event Date */
+  $handler->display->display_options['sorts']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['sorts']['field_event_date']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['sorts']['field_event_date']['field'] = 'field_event_date';
+  /* Sort criterion: Indexed Node: Exhibition Start Date */
+  $handler->display->display_options['sorts']['field_exhibition_start']['id'] = 'field_exhibition_start';
+  $handler->display->display_options['sorts']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['sorts']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
+  /* Filter criterion: Indexed Node: Event Date */
+  $handler->display->display_options['filters']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['filters']['field_event_date']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['filters']['field_event_date']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date']['value'] = '2014-01-01';
+  $handler->display->display_options['filters']['field_event_date']['group'] = 1;
+  /* Filter criterion: Indexed Node: Event Date */
+  $handler->display->display_options['filters']['field_event_date_1']['id'] = 'field_event_date_1';
+  $handler->display->display_options['filters']['field_event_date_1']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['filters']['field_event_date_1']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_event_date_1']['value'] = '2015-01-01';
+  $handler->display->display_options['filters']['field_event_date_1']['group'] = 1;
+  /* Filter criterion: Indexed Node: Exhibition Start Date */
+  $handler->display->display_options['filters']['field_exhibition_start']['id'] = 'field_exhibition_start';
+  $handler->display->display_options['filters']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['filters']['field_exhibition_start']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_exhibition_start']['value'] = '2014-01-01';
+  $handler->display->display_options['filters']['field_exhibition_start']['group'] = 2;
+  /* Filter criterion: Indexed Node: Exhibition End Date */
+  $handler->display->display_options['filters']['field_exhibition_end']['id'] = 'field_exhibition_end';
+  $handler->display->display_options['filters']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_exhibition_end']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['filters']['field_exhibition_end']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_exhibition_end']['value'] = '2015-01-01';
+  $handler->display->display_options['filters']['field_exhibition_end']['group'] = 2;
+  $handler->display->display_options['filters']['field_exhibition_end']['expose']['operator_id'] = 'field_exhibition_end_op';
+  $handler->display->display_options['filters']['field_exhibition_end']['expose']['label'] = 'Exhibition End Date';
+  $handler->display->display_options['filters']['field_exhibition_end']['expose']['operator'] = 'field_exhibition_end_op';
+  $handler->display->display_options['filters']['field_exhibition_end']['expose']['identifier'] = 'field_exhibition_end';
+  $handler->display->display_options['filters']['field_exhibition_end']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
