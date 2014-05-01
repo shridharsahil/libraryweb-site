@@ -40,8 +40,8 @@ function daterangepicker_daterangepicker_content_type_render($subtype, $conf, $p
   // If nothing was provided by the context, then create a default date. This is
   // currently hardcoded to be the current day.
   if (!$default_date) {
-    // Default to this month
-    $default_date = date('F j, Y');
+    // Default to the next 14 days
+    $default_date = date('l, F j, Y') . ' - ' . date('l, F j, Y', strtotime('+14 days'));
 
     // Get date from path and use that if present.
     $current_path = '';

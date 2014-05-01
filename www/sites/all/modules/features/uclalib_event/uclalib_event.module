@@ -25,5 +25,13 @@ function uclalib_event_views_pre_view(&$view) {
         $view->display['default']->handler->options['filters']['field_exhibition_end']['value'] = $values[1];
       }
     }
+    else {
+
+      // Default to showing the next 14 days.
+      $view->display['default']->handler->options['filters']['field_event_date']['value'] = date('Y-m-d');
+      $view->display['default']->handler->options['filters']['field_exhibition_start']['value'] = date('Y-m-d');
+      $view->display['default']->handler->options['filters']['field_event_date_1']['value'] = date('Y-m-d', strtotime('+14 days'));
+      $view->display['default']->handler->options['filters']['field_exhibition_end']['value'] = date('Y-m-d', strtotime('+14 days'));
+    }
   }
 }
