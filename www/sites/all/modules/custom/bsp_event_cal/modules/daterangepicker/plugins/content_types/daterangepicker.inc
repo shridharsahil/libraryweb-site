@@ -19,7 +19,6 @@ function daterangepicker_daterangepicker_ctools_content_types() {
  * Output function for the 'date range picker' content type.
  */
 function daterangepicker_daterangepicker_content_type_render($subtype, $conf, $panel_args, $context) {
-  dpm($context);
 
   // $context in this case should be tagged as a 'date' context.
   // @TODO: create a custom CTools Date Context?
@@ -41,7 +40,17 @@ function daterangepicker_daterangepicker_content_type_render($subtype, $conf, $p
   // If nothing was provided by the context, then create a default date. This is
   // currently hardcoded to be the current day.
   if (!$default_date) {
-    $default_date = date('l, F j, Y');
+    // Default to this month
+    $default_date = date('F j, Y');
+
+    // Get date from path and use that if present.
+    $current_path = '';
+    $components = explode('/', current_path());
+    foreach ($components as $component) {
+      if (preg_match('/[0-9]{4}-[0-9]{2}-[0-9]{2}--[0-9]{4}-[0-9]{2}-[0-9]{2}/', $component)) {
+        $default_date = daterangepicker_parse_isodaterange($component);
+      }
+    }
   }
 
   // Make a new empty "block" which will be a Pane you can add to your Panel.

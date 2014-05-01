@@ -29,8 +29,19 @@ function daterangepicker_add() {
     drupal_add_library('system', 'ui.button');
     drupal_add_library('daterangepicker', 'daterangepicker');
 
+    // Get current path and remove trailing date components.
+    $current_path = '';
+    $components = explode('/', current_path());
+    foreach ($components as $component) {
+      $path_date = date_parse($component);
+      if ($path_date['year'] === FALSE) {
+        $current_path .= '/' . $component;
+      }
+    }
+    $current_path = substr($current_path, 1);
+
     // Add the path setting.
-    drupal_add_js(array('dateRangePicker' => array('base_path' => variable_get('bsp_event_cal_calendar_base_path', 'calendar'))), 'setting');
+    drupal_add_js(array('dateRangePicker' => array('base_path' => $current_path)), 'setting');
     // Add the module's JS.
     drupal_add_js(drupal_get_path('module', 'daterangepicker') . '/daterangepicker.js');
 
