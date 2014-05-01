@@ -22,7 +22,7 @@ function uclalib_upcoming_events_field_default_field_instances() {
         'module' => 'entityreference_views_formatter',
         'settings' => array(
           'view_display' => 'panel_pane_1',
-          'view_name' => 'upcoming_events_bean_display',
+          'view_name' => 'upcoming_events_display',
         ),
         'type' => 'entityreference_views_formatter',
         'weight' => 0,
@@ -64,7 +64,7 @@ function uclalib_upcoming_events_field_default_field_instances() {
         'module' => 'entityreference_views_formatter',
         'settings' => array(
           'view_display' => 'panel_pane_2',
-          'view_name' => 'upcoming_events_bean_display',
+          'view_name' => 'upcoming_events_display',
         ),
         'type' => 'entityreference_views_formatter',
         'weight' => 2,

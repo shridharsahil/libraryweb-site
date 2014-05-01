@@ -11,7 +11,7 @@ function uclalib_upcoming_events_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'upcoming_events_bean_display';
+  $view->name = 'upcoming_events_display';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'bean';
@@ -22,19 +22,25 @@ function uclalib_upcoming_events_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['title'] = 'Upcoming Events';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'More News >';
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'news-events/events-agenda';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_upcoming_events_events_target_id']['id'] = 'field_upcoming_events_events_target_id';
   $handler->display->display_options['relationships']['field_upcoming_events_events_target_id']['table'] = 'field_data_field_upcoming_events_events';
   $handler->display->display_options['relationships']['field_upcoming_events_events_target_id']['field'] = 'field_upcoming_events_events_target_id';
-  $handler->display->display_options['relationships']['field_upcoming_events_events_target_id']['required'] = TRUE;
   /* Field: Block: Internal, numeric block ID */
   $handler->display->display_options['fields']['bid']['id'] = 'bid';
   $handler->display->display_options['fields']['bid']['table'] = 'bean';
@@ -58,6 +64,57 @@ function uclalib_upcoming_events_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
+  /* Field: Content: Exhibition Start Date */
+  $handler->display->display_options['fields']['field_exhibition_start']['id'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['table'] = 'field_data_field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['relationship'] = 'field_upcoming_events_events_target_id';
+  $handler->display->display_options['fields']['field_exhibition_start']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_start']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_start']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_start']['type'] = 'uclablib_event_date_block';
+  $handler->display->display_options['fields']['field_exhibition_start']['settings'] = array(
+    'format_type' => 'month_with_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Exhibition End Date */
+  $handler->display->display_options['fields']['field_exhibition_end']['id'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['relationship'] = 'field_upcoming_events_events_target_id';
+  $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '[field_exhibition_start] to [field_exhibition_end]';
+  $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['type'] = 'uclablib_event_date_block';
+  $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
+    'format_type' => 'month_with_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Exhibition Label */
+  $handler->display->display_options['fields']['field_exhibition_end_1']['id'] = 'field_exhibition_end_1';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['relationship'] = 'field_upcoming_events_events_target_id';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['ui_name'] = 'Exhibition Label';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['text'] = 'EXHIBITION';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['type'] = 'date_plain';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -65,14 +122,15 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['title']['relationship'] = 'field_upcoming_events_events_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Contextual filter: Block: Internal, numeric block ID */
-  $handler->display->display_options['arguments']['bid']['id'] = 'bid';
-  $handler->display->display_options['arguments']['bid']['table'] = 'bean';
-  $handler->display->display_options['arguments']['bid']['field'] = 'bid';
-  $handler->display->display_options['arguments']['bid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['bid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['bid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['bid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Block: Title */
+  $handler->display->display_options['arguments']['title']['id'] = 'title';
+  $handler->display->display_options['arguments']['title']['table'] = 'bean';
+  $handler->display->display_options['arguments']['title']['field'] = 'title';
+  $handler->display->display_options['arguments']['title']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['title']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['title']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['title']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['title']['limit'] = '0';
   /* Filter criterion: Block: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'bean';
@@ -80,7 +138,95 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'upcoming_events' => 'upcoming_events',
   );
-  $export['upcoming_events_bean_display'] = $view;
+
+  /* Display: Upcoming Events  */
+  $handler = $view->new_display('panel_pane', 'Upcoming Events ', 'panel_pane_1');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'More Events >';
+  $handler->display->display_options['link_url'] = 'news-events/events-agenda';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'title' => array(
+      'type' => 'panel',
+      'context' => 'token.current-page:title',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Block: Title',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: News Highlight */
+  $handler = $view->new_display('panel_pane', 'News Highlight', 'panel_pane_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'News';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'news';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_upcoming_news_news_target_id']['id'] = 'field_upcoming_news_news_target_id';
+  $handler->display->display_options['relationships']['field_upcoming_news_news_target_id']['table'] = 'field_data_field_upcoming_news_news';
+  $handler->display->display_options['relationships']['field_upcoming_news_news_target_id']['field'] = 'field_upcoming_news_news_target_id';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Block: Internal, numeric block ID */
+  $handler->display->display_options['fields']['bid']['id'] = 'bid';
+  $handler->display->display_options['fields']['bid']['table'] = 'bean';
+  $handler->display->display_options['fields']['bid']['field'] = 'bid';
+  $handler->display->display_options['fields']['bid']['label'] = '';
+  $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['bid']['separator'] = '';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_upcoming_news_news_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'bid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Block: Internal, numeric block ID',
+    ),
+    'title' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Block: Title',
+    ),
+  );
+  $export['upcoming_events_display'] = $view;
 
   $view = new view();
   $view->name = 'upcoming_events_reference';
