@@ -10,13 +10,13 @@
 function uclalib_living_library_gallery_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_image'
-  $field_bases['field_image'] = array(
+  // Exported field_base: 'field_gallery_images'
+  $field_bases['field_gallery_images'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_image',
+    'field_name' => 'field_gallery_images',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(

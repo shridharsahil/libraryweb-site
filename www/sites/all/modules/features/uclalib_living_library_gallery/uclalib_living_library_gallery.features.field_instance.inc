@@ -10,8 +10,8 @@
 function uclalib_living_library_gallery_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-living_library_gallery-field_image'
-  $field_instances['bean-living_library_gallery-field_image'] = array(
+  // Exported field_instance: 'bean-living_library_gallery-field_gallery_images'
+  $field_instances['bean-living_library_gallery-field_gallery_images'] = array(
     'bundle' => 'living_library_gallery',
     'deleted' => 0,
     'description' => '',
@@ -32,7 +32,7 @@ function uclalib_living_library_gallery_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_image',
+    'field_name' => 'field_gallery_images',
     'label' => 'Image',
     'required' => 1,
     'settings' => array(
