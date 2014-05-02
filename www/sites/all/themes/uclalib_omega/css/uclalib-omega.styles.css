@@ -173,6 +173,11 @@ a[href="#main-content"] {
   padding: 14px 0;
 }
 
+/* Hide more than 4 Living Library thumbnails */
+.field--name-field-gallery-images .field__item:nth-child(n+5) {
+  display: none;
+}
+
 .l-navigation-wrapper {
   background: #d7d9da;
   font-size: 18px;
