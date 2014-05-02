@@ -96,6 +96,36 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'main';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Using the Library FAQ block',
+      'title' => 'Frequently Asked Questions',
+      'body' => '<p>This is a question we are often asked.</p>
+<p>&nbsp;</p>
+<p>This another question that comes up a lot.</p>
+<p>&nbsp;</p>
+<p>More &gt;&nbsp;</p>
+<p>PLACEHOLDER TEXT, DIY links go above.</p>
+',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['main'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'main';
     $pane->type = 'block';
     $pane->subtype = 'bean-using-the-library-upcoming-event';
     $pane->shown = TRUE;
@@ -110,12 +140,42 @@ function uclalib_using_library_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['main'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['main'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'main-menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'menu_name' => 'main-menu',
+      'parent_mlid' => 'main-menu:0',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '2',
+      'follow' => 0,
+      'depth' => '1',
+      'expanded' => 0,
+      'sort' => 0,
+      'override_title' => 1,
+      'override_title_text' => 'At a glance',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'bean-using-the-library-quick-links-bl';
@@ -131,12 +191,12 @@ function uclalib_using_library_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-3';
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-6';
     $pane->panel = 'sidebar_left';
     $pane->type = 'custom';
     $pane->subtype = 'questions_highlight';
@@ -155,12 +215,33 @@ function uclalib_using_library_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-4';
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-7';
+    $pane->panel = 'sidebar_right';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-get-started-at-the-library-for-u';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Getting Started at the Library',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_right'][0] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
     $pane->panel = 'sidebar_right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -183,12 +264,12 @@ function uclalib_using_library_default_page_manager_pages() {
       'css_class' => 'link-highlight',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar_right'][0] = 'new-5';
+    $display->content['new-8'] = $pane;
+    $display->panels['sidebar_right'][1] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-9';
     $pane->panel = 'sidebar_right';
     $pane->type = 'block';
     $pane->subtype = 'bean-using-the-library-equipment-bloc';
@@ -204,10 +285,10 @@ function uclalib_using_library_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar_right'][1] = 'new-6';
+    $display->content['new-9'] = $pane;
+    $display->panels['sidebar_right'][2] = 'new-9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
