@@ -56,6 +56,52 @@ function uclalib_upcoming_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_bean:upcoming_events_bean_default';
+  $strongarm->value = array(
+    'token' => 'token',
+    'entity_form_field' => 'entity_form_field',
+    'entity_field' => 'entity_field',
+    'entity_field_extra' => 'entity_field_extra',
+    'custom' => 'custom',
+    'block' => 'block',
+    'entity_view' => 'entity_view',
+    'menu_tree' => 'menu_tree',
+    'panels_mini' => 'panels_mini',
+    'views' => 'views',
+    'views_panes' => 'views_panes',
+    'other' => 'other',
+  );
+  $export['panelizer_bean:upcoming_events_bean_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_bean_upcoming_events_bean';
+  $strongarm->value = array(
+    'status' => 0,
+    'view modes' => array(
+      'default' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'diff_standard' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'token' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_bean_upcoming_events_bean'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'unlimitedfield_remove_field_upcoming_events_events';
   $strongarm->value = 1;
   $export['unlimitedfield_remove_field_upcoming_events_events'] = $strongarm;

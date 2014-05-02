@@ -160,7 +160,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'title' => array(
-      'type' => 'panel',
+      'type' => 'user',
       'context' => 'token.current-page:title',
       'context_optional' => 0,
       'panel' => '0',
