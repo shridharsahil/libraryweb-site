@@ -47,6 +47,7 @@ function uclalib_system_required_modules() {
     'uclalib_support_services',
     'uclalib_homepage',
     'daterangepicker',
+    'uclalib_living_library_gallery',
   );
 }
 
