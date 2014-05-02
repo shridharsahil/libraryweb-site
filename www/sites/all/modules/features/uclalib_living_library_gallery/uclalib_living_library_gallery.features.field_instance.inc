@@ -33,7 +33,7 @@ function uclalib_living_library_gallery_field_default_field_instances() {
     ),
     'entity_type' => 'bean',
     'field_name' => 'field_gallery_images',
-    'label' => 'Image',
+    'label' => 'Gallery Images',
     'required' => 1,
     'settings' => array(
       'alt_field' => 1,
@@ -114,7 +114,7 @@ function uclalib_living_library_gallery_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Image');
+  t('Gallery Images');
 
   return $field_instances;
 }
