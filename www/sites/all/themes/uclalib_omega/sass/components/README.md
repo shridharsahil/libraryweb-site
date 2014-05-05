@@ -25,6 +25,7 @@ Almost everything that doesn't belong in base should be made a component.
 ## Some common examples throughout Drupal
 
 * Blocks
+* Panel Panes
 * Content Types
     For example, you may have a generic node component that contains
     sub-components for the submitted by line and links. Specific components can
