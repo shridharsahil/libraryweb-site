@@ -12,14 +12,16 @@
   a:hover, a:active, a:focus {
     text-decoration: underline;
   }
-  ul {
+  .menu {
     list-style: none;
     list-style-image: none;
     margin: 0;
     padding: 0;
-  }
-  li {
-    margin: 0.5em 0;
+    .leaf {
+      margin: 0.5em 0;
+      list-style: none;
+      list-style-image: none;
+    }
   }
   h1,
   h2,

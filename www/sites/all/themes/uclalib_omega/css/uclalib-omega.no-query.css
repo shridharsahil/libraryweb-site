@@ -47,14 +47,16 @@ a:hover {
 .l-colophon a:hover, .l-colophon a:active, .l-colophon a:focus {
   text-decoration: underline;
 }
-.l-colophon ul {
+.l-colophon .menu {
   list-style: none;
   list-style-image: none;
   margin: 0;
   padding: 0;
 }
-.l-colophon li {
+.l-colophon .menu .leaf {
   margin: 0.5em 0;
+  list-style: none;
+  list-style-image: none;
 }
 .l-colophon h1,
 .l-colophon h2,
