@@ -5,3 +5,16 @@
  */
 
 include_once 'uclalib_resources.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory()
+ */
+function uclalib_resources_ctools_plugin_directory($owner, $plugin_type) {
+  switch ("$owner:$plugin_type") {
+    case 'ctools:content_types':
+      return "plugins/$owner/$plugin_type";
+  }
+
+  return NULL;
+}
+
