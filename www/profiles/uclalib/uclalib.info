@@ -65,6 +65,7 @@ dependencies[] = nodequeue
 dependencies[] = views
 dependencies[] = views_bulk_operations
 dependencies[] = bean
+dependencies[] = bean_admin_ui
 dependencies[] = pathauto
 
 ; Migration
@@ -111,3 +112,5 @@ dependencies[] = uclalib_featured_content
 dependencies[] = uclalib_link_list
 dependencies[] = uclalib_upcoming_events
 dependencies[] = uclalib_quick_find
+dependencies[] = uclalib_text_block_bean
+dependencies[] = uclalib_footer_settings
