@@ -1,0 +1,111 @@
+<?php
+/**
+ * @file
+ * Code for the Basic Text Block feature.
+ */
+
+include_once 'uclalib_text_block_bean.features.inc';
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function uclalib_text_block_bean_form_bean_form_alter(&$form, &$form_state, $form_id) {
+
+  // Hide the view mode selector if there is only one to choose from.
+  // This really should be built into the Bean module itself. ;)
+  if(count($form['view_mode']['#options']) == 1) {
+    $form['view_mode']['#type'] = 'hidden';
+  }
+
+  if ($form['#bundle'] == 'text_block') {
+    // The basic text block doesn't need a title.
+    $form['title']['#type'] = 'hidden';
+    // The basic text block uses only the "default" view mode.
+    $form['view_mode']['#type'] = 'hidden';
+
+    // Change the label here only. This is so other places outside the scope
+    // of this edit form retain the more logical default label "Text Block".
+    $form['field_text_block']['und'][0]['#title'] = t('Content');
+
+    // Space is cheap; default to new revision and simplify the log message.
+    if (isset($form['revision'])) {
+      $form['revision']['is_new_revision']['#default_value'] = true;
+      $form['revision']['is_new_revision']['#type'] = 'hidden';
+      $form['revision']['default_revision']['#default_value'] = true;
+      $form['revision']['default_revision']['#type'] = 'hidden';
+      $form['revision']['log']['#type'] = 'textfield';
+      unset($form['revision']['log']['#dependency']);
+      $form['revision']['log']['#title'] = t('What changed?');
+      $form['field_text_block']['#weight'] = $form['revision']['#weight'] - 1;
+    }
+  }
+
+}
+
+/**
+ * Implements hook_post_features_enable_feature().
+ *
+ * Use this hook to create content after feature installation.
+ *
+ * WARNING:  This code only executes when the module is enabled
+ *           with features_install_modules() or `drush enable`.
+ */
+function uclalib_text_block_bean_post_features_enable_feature($component) {
+
+  // Certain features components must be enabled before importing the blocks.
+  static $enabled_components;
+  $enabled_components[] = $component;
+  $required_components = array('bean_type', 'field_base', 'field_instance');
+  foreach ($required_components as $required_component) {
+    if (!in_array($required_component, $enabled_components)) {
+      return;
+    }
+  }
+
+  // Import placeholder text blocks
+  $blocks['block-first'] = array(
+    'delta' => 'block-first',   // Use dashes to separate words in delta.
+    'label' => 'Placeholder 1', // Changeme
+    'title' => 'Placeholder 1', // Changeme
+    'type' => 'text_block',
+    'view_mode' => 'default',
+    'data' => array(),
+    'field_text_block' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '<p>Lorem ipsum dolor sit amet, consectetuer <a href="http://example.com">adipiscing</a> elit.</p>',
+          'format' => 'filtered_html',
+        ),
+      ),
+    ),
+  );
+  $blocks['block-second'] = array(
+    'delta' => 'block-second',  // Use dashes to separate words in delta.
+    'label' => 'Placeholder 2', // Changeme
+    'title' => 'Placeholder 2', // Changeme
+    'type' => 'text_block',
+    'view_mode' => 'default',
+    'data' => array(),
+    'field_text_block' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '<p>Lorem ipsum dolor sit amet, consectetuer <a href="http://example.com">adipiscing</a> elit.</p>',
+          'format' => 'filtered_html',
+        ),
+      ),
+    ),
+  );
+
+  // Create the block only if the delta doesn't already exist.
+  foreach($blocks as $key => $block) {
+    if (!bean_load_delta($block['delta'])) {
+      $bean = bean_create($block);
+      if (bean_save($bean)) {
+        drupal_set_message($block['label'] . ' block was created.');
+      } else {
+        drupal_set_message($block['label'] . ' block could not be saved!', 'warning');
+      }
+    }
+  }
+}

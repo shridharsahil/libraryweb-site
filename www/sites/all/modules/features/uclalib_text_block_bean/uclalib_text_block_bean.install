@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function uclalib_text_block_bean_install() {
+
+  uclalib_text_block_bean_update_7000();
+
+}
+
+/**
+ * Enable default permissions for system roles.
+ */
+function uclalib_text_block_bean_update_7000() {
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('view any text_block bean'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('view any text_block bean'));
+}
