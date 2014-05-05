@@ -4,7 +4,10 @@
  * Implements hook_enable().
  */
 function uclalib_footer_settings_enable() {
+
+  // Ensure certain updates are always run when the feature is enabled.
   uclalib_footer_settings_update_7001();
+  uclalib_footer_settings_update_7003();
 }
 
 /**
