@@ -10,9 +10,9 @@
 function uclalib_footer_settings_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-footer_description-field_colophon_description'
-  $field_instances['bean-footer_description-field_colophon_description'] = array(
-    'bundle' => 'footer_description',
+  // Exported field_instance: 'bean-colophon_description-field_colophon_description'
+  $field_instances['bean-colophon_description-field_colophon_description'] = array(
+    'bundle' => 'colophon_description',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Add text for footer',
