@@ -228,7 +228,10 @@ function uclalib_resources_default_page_manager_pages() {
   $page->admin_title = 'Find Resources';
   $page->admin_description = '';
   $page->path = 'search-research/find-resources';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Find Resources',
@@ -408,7 +411,10 @@ function uclalib_resources_default_page_manager_pages() {
   $page->admin_title = 'Search and Research';
   $page->admin_description = 'Search and Research landing page.';
   $page->path = 'search-research';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Search and Research',

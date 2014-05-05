@@ -34,7 +34,8 @@ function uclalib_resources_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
   /* Header: Global: Result summary */
   $handler->display->display_options['header']['result']['id'] = 'result';
   $handler->display->display_options['header']['result']['table'] = 'views';
@@ -85,19 +86,6 @@ function uclalib_resources_views_default_views() {
   $handler->display->display_options['fields']['body_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_summary']['empty'] = '[body]';
   $handler->display->display_options['fields']['body_summary']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Resource Display Icon for Search Link */
-  $handler->display->display_options['fields']['field_resource_display_icon']['id'] = 'field_resource_display_icon';
-  $handler->display->display_options['fields']['field_resource_display_icon']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['fields']['field_resource_display_icon']['field'] = 'field_resource_display_icon';
-  $handler->display->display_options['fields']['field_resource_display_icon']['label'] = '';
-  $handler->display->display_options['fields']['field_resource_display_icon']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_resource_display_icon']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_resource_display_icon']['settings'] = array(
-    'image_style' => 'category_icon',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_resource_display_icon']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_resource_display_icon']['multi_type'] = 'ul';
   /* Sort criterion: Indexed Node: Date changed */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'search_api_index_site_general_search';

@@ -66,6 +66,59 @@ function uclalib_resources_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-uclalib_resources-field_icon'
+  $field_instances['node-uclalib_resources-field_icon'] = array(
+    'bundle' => 'uclalib_resources',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select an icon or icons that apply to this resource.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'icon_field',
+        'settings' => array(
+          'link_to_content' => FALSE,
+        ),
+        'type' => 'icon_field_default',
+        'weight' => 8,
+      ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_icon',
+    'label' => 'Icon',
+    'required' => 0,
+    'settings' => array(
+      'bundle' => NULL,
+      'icon' => NULL,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'icon_field',
+      'settings' => array(),
+      'type' => 'icon_field',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-uclalib_resources-field_resource_associated_loc'
   $field_instances['node-uclalib_resources-field_resource_associated_loc'] = array(
     'bundle' => 'uclalib_resources',
@@ -118,91 +171,6 @@ function uclalib_resources_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete_tags',
       'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-uclalib_resources-field_resource_display_icon'
-  $field_instances['node-uclalib_resources-field_resource_display_icon'] = array(
-    'bundle' => 'uclalib_resources',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 5,
-      ),
-      'event_listed_from_bean' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'hours_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_resource_display_icon',
-    'label' => 'Resource Display Icon for Search Link',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'insert' => 0,
-        'insert_absolute' => FALSE,
-        'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
-        'insert_styles' => array(
-          0 => 'auto',
-        ),
-        'insert_width' => '',
-        'manualcrop_crop_info' => TRUE,
-        'manualcrop_default_crop_area' => TRUE,
-        'manualcrop_enable' => FALSE,
-        'manualcrop_filter_insert' => TRUE,
-        'manualcrop_inline_crop' => FALSE,
-        'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => TRUE,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => FALSE,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => FALSE,
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 4,
     ),
   );
 
@@ -488,14 +456,15 @@ function uclalib_resources_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Icon');
   t('Other access links associated with the resource.');
   t('Primary link to resource.');
   t('Resource Associated Location');
-  t('Resource Display Icon for Search Link');
   t('Resource Image Thumbnail');
   t('Resource Link');
   t('Resource Type');
   t('Resource_Other_Links');
+  t('Select an icon or icons that apply to this resource.');
 
   return $field_instances;
 }
