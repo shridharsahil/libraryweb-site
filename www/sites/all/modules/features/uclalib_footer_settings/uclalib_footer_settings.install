@@ -51,3 +51,11 @@ function uclalib_footer_settings_update_7001() {
     }
   }
 }
+
+/**
+ * Delete old footer menus (they were renamed for colophon).
+ */
+function uclalib_footer_settings_update_7002() {
+  menu_delete(array('menu_name' => 'menu-footer-first'));
+  menu_delete(array('menu_name' => 'menu-footer-second'));
+}
