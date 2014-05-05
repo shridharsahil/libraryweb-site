@@ -174,6 +174,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'important-column-heading',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -198,6 +199,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'important-column-heading',
     );
     $pane->css = array();
     $pane->extras = array();
