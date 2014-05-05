@@ -305,6 +305,21 @@ a[href="#main-content"] {
   color: #3283be;
 }
 
+.pane-title--important-column-heading {
+  background-color: transparent;
+  background-image: url("../images/bg-heading-important-horiz.png"), url("../images/bg-heading-important-vert.png");
+  background-position: 0 50%, 100% 50%;
+  background-repeat: repeat-x, repeat-y;
+}
+.pane-title--important-column-heading > h2 {
+  display: inline;
+  background: white;
+  padding-right: 10px;
+  font-weight: 100;
+  font-size: 30px;
+  color: #3283be;
+}
+
 /* Hide more than 4 Living Library thumbnails */
 .field--name-field-gallery-images .field__item:nth-child(n+5) {
   display: none;

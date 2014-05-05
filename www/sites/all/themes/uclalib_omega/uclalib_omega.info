@@ -29,7 +29,7 @@ scripts[] = js/uclalib-omega.behaviors.js
 ; Plugins
 ; ========================================
 plugins[panels][layouts] = panels/layouts
-;plugins[panels][styles] = panels/styles
+plugins[panels][styles] = panels/styles
 
 ; ========================================
 ; Regions
