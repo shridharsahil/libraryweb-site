@@ -77,27 +77,19 @@ function uclalib_pe_template_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'colophon_first';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-colophon-about';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'About the UCLA Library [PLACEHOLDER]',
-      'title' => 'About the <span>UCLA Library</span>',
-      'body' => 'The mission of the UCLA Library is to provide access to and delivery of information resources to UCLA students, faculty, and staff in support of the research and instructional mission of the university. The Library develops, organizes, and preserves collections for optimal use and provides links to remote information sources. The Library provides services, including instruction for information literacy and information management, to enable its users to fulfill their academic and intellectual needs. The Library provides resources and services to non-UCLA users to the extent possible.
-
-Relying on its highly skilled staff, the Library encourages innovation, capitalizes on appropriate technologies, forges effective partnerships and aggressively promotes excellence.',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane-colophon-about',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
