@@ -320,6 +320,56 @@ a[href="#main-content"] {
   color: #3283be;
 }
 
+/**
+ * Override jQuery UI rounded corner default styles.
+ */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-right {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/**
+ * Override jQuery UI tabs default styles.
+ */
+.ui-tabs {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+.ui-tabs .ui-tabs-nav {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #adcde5;
+  background: none;
+}
+.ui-tabs .ui-tabs-nav li {
+  background: #84b5d8;
+  border-color: #84b5d8;
+  margin: 0 1px 0 0;
+  padding: 0;
+  font-weight: 100;
+}
+.ui-tabs .ui-tabs-nav li a {
+  color: white;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  background: #3283be;
+  border-color: #3283be #3283be #438ec3;
+}
+.ui-tabs .ui-tabs-panel {
+  border-width: 0 1px 1px;
+  border-color: #adcde5;
+}
+
 /* Hide more than 4 Living Library thumbnails */
 .field--name-field-gallery-images .field__item:nth-child(n+5) {
   display: none;
