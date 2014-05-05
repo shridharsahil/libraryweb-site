@@ -128,15 +128,15 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['filters']['field_exhibition_start']['id'] = 'field_exhibition_start';
   $handler->display->display_options['filters']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_exhibition_start']['field'] = 'field_exhibition_start';
-  $handler->display->display_options['filters']['field_exhibition_start']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_exhibition_start']['value'] = '2014-01-01';
+  $handler->display->display_options['filters']['field_exhibition_start']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_exhibition_start']['value'] = 'now + 14 days';
   $handler->display->display_options['filters']['field_exhibition_start']['group'] = 2;
   /* Filter criterion: Indexed Node: Exhibition End Date */
   $handler->display->display_options['filters']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['filters']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_exhibition_end']['field'] = 'field_exhibition_end';
-  $handler->display->display_options['filters']['field_exhibition_end']['operator'] = '<=';
-  $handler->display->display_options['filters']['field_exhibition_end']['value'] = '2015-01-01';
+  $handler->display->display_options['filters']['field_exhibition_end']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_exhibition_end']['value'] = 'now';
   $handler->display->display_options['filters']['field_exhibition_end']['group'] = 2;
   $handler->display->display_options['filters']['field_exhibition_end']['expose']['operator_id'] = 'field_exhibition_end_op';
   $handler->display->display_options['filters']['field_exhibition_end']['expose']['label'] = 'Exhibition End Date';

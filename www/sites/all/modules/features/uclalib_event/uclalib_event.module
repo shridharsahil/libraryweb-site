@@ -12,26 +12,34 @@ include_once 'uclalib_event.features.inc';
  * Set date range from path if present.
  */
 function uclalib_event_views_pre_view(&$view) {
-  if ($view->name == 'events_agenda') {
+  if ($view->name == 'events_agenda' || $view->name == 'exhibitions_main_view') {
     $date = explode('/', current_path());
     if (isset($date[2])) {
       $values = explode('--', $date[2]);
       if (isset($values[0])) {
-        $view->display['default']->handler->options['filters']['field_event_date']['value'] = $values[0];
-        $view->display['default']->handler->options['filters']['field_exhibition_start']['value'] = $values[0];
+        if (isset($view->display['default']->handler->options['filters']['field_event_date'])) {
+          $view->display['default']->handler->options['filters']['field_event_date']['value'] = $values[0];
+        }
+        $view->display['default']->handler->options['filters']['field_exhibition_end']['value'] = $values[0];
       }
       if (isset($values[1])) {
-        $view->display['default']->handler->options['filters']['field_event_date_1']['value'] = $values[1];
-        $view->display['default']->handler->options['filters']['field_exhibition_end']['value'] = $values[1];
+        if (isset($view->display['default']->handler->options['filters']['field_event_date_1'])) {
+          $view->display['default']->handler->options['filters']['field_event_date_1']['value'] = $values[1];
+        }
+        $view->display['default']->handler->options['filters']['field_exhibition_start']['value'] = $values[1];
       }
     }
     else {
 
       // Default to showing the next 14 days.
-      $view->display['default']->handler->options['filters']['field_event_date']['value'] = date('Y-m-d');
-      $view->display['default']->handler->options['filters']['field_exhibition_start']['value'] = date('Y-m-d');
-      $view->display['default']->handler->options['filters']['field_event_date_1']['value'] = date('Y-m-d', strtotime('+14 days'));
-      $view->display['default']->handler->options['filters']['field_exhibition_end']['value'] = date('Y-m-d', strtotime('+14 days'));
+      if (isset($view->display['default']->handler->options['filters']['field_event_date'])) {
+        $view->display['default']->handler->options['filters']['field_event_date']['value'] = date('Y-m-d');
+      }
+      $view->display['default']->handler->options['filters']['field_exhibition_start']['value'] = date('Y-m-d', strtotime('+14 days'));
+      if (isset($view->display['default']->handler->options['filters']['field_event_date_1'])) {
+        $view->display['default']->handler->options['filters']['field_event_date_1']['value'] = date('Y-m-d', strtotime('+14 days'));
+      }
+      $view->display['default']->handler->options['filters']['field_exhibition_end']['value'] = date('Y-m-d');
     }
   }
 }

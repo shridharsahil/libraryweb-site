@@ -86,22 +86,6 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['sorts']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['sorts']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['field_exhibition_end']['field'] = 'field_exhibition_end';
-  /* Contextual filter: Indexed Node: Exhibition End Date */
-  $handler->display->display_options['arguments']['field_exhibition_end']['id'] = 'field_exhibition_end';
-  $handler->display->display_options['arguments']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['arguments']['field_exhibition_end']['field'] = 'field_exhibition_end';
-  $handler->display->display_options['arguments']['field_exhibition_end']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_exhibition_end']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_exhibition_end']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_exhibition_end']['not'] = 0;
-  /* Contextual filter: Indexed Node: Exhibition Start Date */
-  $handler->display->display_options['arguments']['field_exhibition_start']['id'] = 'field_exhibition_start';
-  $handler->display->display_options['arguments']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['arguments']['field_exhibition_start']['field'] = 'field_exhibition_start';
-  $handler->display->display_options['arguments']['field_exhibition_start']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_exhibition_start']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_exhibition_start']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_exhibition_start']['not'] = 0;
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
@@ -109,6 +93,28 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'exhibition' => 'exhibition',
   );
+  /* Filter criterion: Indexed Node: Exhibition Start Date */
+  $handler->display->display_options['filters']['field_exhibition_start']['id'] = 'field_exhibition_start';
+  $handler->display->display_options['filters']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['filters']['field_exhibition_start']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_exhibition_start']['value'] = 'now + 14 days';
+  $handler->display->display_options['filters']['field_exhibition_start']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_exhibition_start']['expose']['operator_id'] = 'field_exhibition_start_op';
+  $handler->display->display_options['filters']['field_exhibition_start']['expose']['label'] = 'Exhibition Start Date';
+  $handler->display->display_options['filters']['field_exhibition_start']['expose']['operator'] = 'field_exhibition_start_op';
+  $handler->display->display_options['filters']['field_exhibition_start']['expose']['identifier'] = 'field_exhibition_start';
+  $handler->display->display_options['filters']['field_exhibition_start']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Indexed Node: Exhibition End Date */
+  $handler->display->display_options['filters']['field_exhibition_end']['id'] = 'field_exhibition_end';
+  $handler->display->display_options['filters']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_exhibition_end']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['filters']['field_exhibition_end']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_exhibition_end']['value'] = 'now';
 
   /* Display: Exhibitions Main Page View */
   $handler = $view->new_display('panel_pane', 'Exhibitions Main Page View', 'panel_pane_1');
