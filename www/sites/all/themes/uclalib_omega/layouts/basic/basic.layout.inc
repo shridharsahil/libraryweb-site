@@ -15,7 +15,7 @@ regions[sidebar_second] = Second sidebar
 regions[colophon_first]   = Colophon first
 regions[colophon_second]  = Colophon second
 regions[colophon_third]   = Colophon third
-regions[footer]   = Footer third
+regions[footer]         = Footer
 
 ; Stylesheets
 stylesheets[all][] = css/layouts/basic/basic.layout.css
