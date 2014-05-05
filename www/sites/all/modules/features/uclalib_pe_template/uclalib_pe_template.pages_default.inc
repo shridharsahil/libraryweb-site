@@ -297,10 +297,8 @@ function uclalib_pe_template_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array(
-      'method' => 'ajax_pane',
-      'settings' => array(
-        'lifetime' => '15',
-      ),
+      'method' => '0',
+      'settings' => array(),
     );
     $pane->style = array(
       'settings' => NULL,
