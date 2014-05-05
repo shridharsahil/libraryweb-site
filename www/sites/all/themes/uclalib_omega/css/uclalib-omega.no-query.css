@@ -72,6 +72,30 @@ a:hover {
   padding: 14px 0 25px;
 }
 
+.l-footer-wrapper {
+  background: #3283be;
+  color: white;
+  font-size: 11px;
+}
+
+.l-region--footer {
+  padding: 22px;
+  text-align: center;
+}
+
+.l-footer ul.menu {
+  list-style-type: none;
+}
+.l-footer ul.menu, .l-footer ul.menu li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+
+.l-footer ul.menu a {
+  color: white;
+}
+
 .l-header-wrapper {
   background: #3283be;
   font-size: 13px;

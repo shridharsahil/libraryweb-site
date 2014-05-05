@@ -1,0 +1,15 @@
+.l-footer-wrapper {
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  font-size: 11px;
+}
+.l-region--footer {
+  padding: 22px;
+  text-align: center;
+}
+.l-footer ul.menu {
+  @include inline-list;
+}
+.l-footer ul.menu a {
+  color: $footer-link-color;
+}
