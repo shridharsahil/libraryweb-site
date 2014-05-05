@@ -37,6 +37,9 @@ a:hover {
   padding: 50px 0;
 }
 
+.l-colophon {
+  font-size: 12px;
+}
 .l-colophon a, .l-colophon a:visited {
   color: #3283be;
   font-weight: bold;
@@ -66,10 +69,6 @@ a:hover {
 .l-region--colophon-second,
 .l-region--colophon-third {
   padding-top: 2.6em;
-}
-
-.l-colophon {
-  font-size: 12px;
 }
 
 .l-footer-wrapper {

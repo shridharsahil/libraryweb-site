@@ -4,6 +4,7 @@
   padding: 50px 0;
 }
 .l-colophon {
+  font-size: 12px;
   a, a:visited {
     color: $colophon-link-color;
     font-weight: bold;
@@ -32,7 +33,4 @@
 .l-region--colophon-second,
 .l-region--colophon-third {
   padding-top: 2.6em;
-}
-.l-colophon {
-  font-size: 12px;
 }
