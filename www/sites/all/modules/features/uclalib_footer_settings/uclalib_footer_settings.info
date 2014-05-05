@@ -1,5 +1,5 @@
-name = uclalib_footer_settings
-description = footer menu and bean
+name = UCLALIB Footer & Colophon
+description = Menu and bean configurations for site footer and colophon.
 core = 7.x
 package = UCLALIB
 dependencies[] = bean_admin_ui
