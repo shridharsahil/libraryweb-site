@@ -42,3 +42,69 @@ function uclalib_arch_date_format_types() {
     'month_with_date' => t('Month with date'),
   );
 }
+
+/**
+ * Implements hook_icon_bundles().
+ *
+ * Define UCLALIB custom icon set.
+ */
+function uclalib_arch_icon_bundles() {
+  $bundles = array();
+  $bundles['uclalib'] = array(
+    'icons' => array (
+      'todo' => 'todo',
+      'start' => 'start',
+      'search' => 'search',
+      'printer' => 'printer',
+      'news' => 'news',
+      'more' => 'more',
+      'hours' => 'hours',
+      'help' => 'help',
+      'copy' => 'copy',
+      'cash' => 'cash',
+      'arrow-right' => 'arrow-right',
+      'home' => 'home',
+      'email' => 'email',
+      'telephone' => 'telephone',
+      'specialist' => 'specialist',
+      'calendar' => 'calendar',
+    ),
+    'name' => 'uclalib',
+    'provider' => 'icomoon',
+    'settings' => array (
+      'ie7' => 0,
+      'tag' => 'span',
+      'prefix' => 'icon-',
+      'metadata' => array (
+        'fontFamily' => 'icomoon',
+      ),
+      'showGlyphs' => true,
+      'metrics' => array (
+        'emSize' => 512,
+        'baseline' => 6.25,
+        'whitespace' => 50,
+      ),
+      'resetPoint' => 58880,
+      'showQuickUse' => true,
+      'quickUsageToken' => false,
+      'showMetrics' => true,
+      'showMetadata' => false,
+    ),
+    'status' => 1,
+    'title' => 'Uclalib',
+    'version' => '',
+    '#attached' => array (
+      'icomoon_process_attached' => array (
+        0 => array (
+          0 => 'uclalib',
+        ),
+      ),
+    ),
+    'path' => 'sites/all/themes/uclalib_omega/icons',
+    'render' => 'sprite',
+    'import' => true,
+    'database' => true,
+  );
+
+  return $bundles;
+}

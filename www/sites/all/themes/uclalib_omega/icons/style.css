@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'uclalib';
-	src:url('fonts/uclalib.eot?he7y63');
-	src:url('fonts/uclalib.eot?#iefixhe7y63') format('embedded-opentype'),
-		url('fonts/uclalib.woff?he7y63') format('woff'),
-		url('fonts/uclalib.ttf?he7y63') format('truetype'),
-		url('fonts/uclalib.svg?he7y63#uclalib') format('svg');
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?kv2ad1');
+	src:url('fonts/icomoon.eot?#iefixkv2ad1') format('embedded-opentype'),
+		url('fonts/icomoon.woff?kv2ad1') format('woff'),
+		url('fonts/icomoon.ttf?kv2ad1') format('truetype'),
+		url('fonts/icomoon.svg?kv2ad1#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'uclalib';
+	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -23,39 +23,51 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home:before {
+.icon-todo:before {
 	content: "\e600";
 }
-.icon-arrow-right:before {
+.icon-start:before {
 	content: "\e601";
 }
-.icon-cash:before {
+.icon-search:before {
 	content: "\e602";
 }
-.icon-copy:before {
+.icon-printer:before {
 	content: "\e603";
 }
-.icon-help:before {
+.icon-news:before {
 	content: "\e604";
 }
-.icon-hours:before {
+.icon-more:before {
 	content: "\e605";
 }
-.icon-more:before {
+.icon-hours:before {
 	content: "\e606";
 }
-.icon-news:before {
+.icon-help:before {
 	content: "\e607";
 }
-.icon-printer:before {
+.icon-copy:before {
 	content: "\e608";
 }
-.icon-search:before {
+.icon-cash:before {
 	content: "\e609";
 }
-.icon-start:before {
+.icon-arrow-right:before {
 	content: "\e60a";
 }
-.icon-todo:before {
+.icon-home:before {
 	content: "\e60b";
+}
+.icon-email:before {
+	content: "\e60c";
+}
+.icon-telephone:before {
+	content: "\e60d";
+}
+.icon-specialist:before {
+	content: "\e60e";
+}
+.icon-calendar:before {
+	content: "\e60f";
 }
