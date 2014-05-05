@@ -68,6 +68,10 @@ a:hover {
   padding-top: 2.6em;
 }
 
+.l-colophon {
+  font-size: 12px;
+}
+
 .l-main-wrapper {
   padding: 14px 0 25px;
 }
@@ -75,7 +79,7 @@ a:hover {
 .l-footer-wrapper {
   background: #3283be;
   color: white;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .l-region--footer {
