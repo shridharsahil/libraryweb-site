@@ -43,5 +43,6 @@ features[variable][] = menu_parent_uclalib_resources
 features[variable][] = node_options_uclalib_resources
 features[variable][] = node_preview_uclalib_resources
 features[variable][] = node_submitted_uclalib_resources
+features[variable][] = panelizer_defaults_node_uclalib_resources
 features[views_view][] = find_resources
 project path = /tmp
