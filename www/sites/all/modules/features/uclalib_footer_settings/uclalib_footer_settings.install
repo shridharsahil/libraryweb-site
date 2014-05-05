@@ -59,3 +59,50 @@ function uclalib_footer_settings_update_7002() {
   menu_delete(array('menu_name' => 'menu-footer-first'));
   menu_delete(array('menu_name' => 'menu-footer-second'));
 }
+
+/**
+ * Add copyright to Footer.
+ */
+function uclalib_footer_settings_update_7003() {
+
+  // Ensure the required special menu items module is enabled.
+  if (!module_exists('special_menu_items')) {
+    module_enable(array('special_menu_items'));
+  }
+
+  $link = array(
+    'link_title' => 'Copyright © 2014 UCLA',
+    'link_path' => '<nolink>',  // Provided by special menu items module.
+    'router_path' => '<nolink>',
+    'menu_name' => 'menu-footer',
+    'weight' => 0,
+    'expanded' => 0,
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+        'class' => 'footer-copyright',
+      ),
+    ),
+    'module' => 'uclalib_footer_settings',
+  );
+
+  // Save the menu link if it doesn't already exist.
+  $exists = db_query("SELECT mlid
+    FROM {menu_links}
+    WHERE menu_name=:menu_name
+    AND link_title LIKE :link_title
+    AND link_path=:link_path", array(
+    ':menu_name' => $link['menu_name'],
+    ':link_title' => '%Copyright%',
+    ':link_path' => $link['link_path'])
+  )->fetchField();
+
+  if(!$exists) {
+    menu_link_save($link);
+    menu_cache_clear_all();
+    drupal_set_message('Copyright message was added to the site footer.');
+  }
+  else {
+    drupal_set_message('Copyright exists: '. $exists);
+  }
+}
