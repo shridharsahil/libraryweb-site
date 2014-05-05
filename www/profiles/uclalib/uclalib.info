@@ -52,8 +52,9 @@ dependencies[] = fe_block
 dependencies[] = fe_nodequeue
 dependencies[] = diff
 dependencies[] = strongarm
-; dependencies[] = uuid
-; dependencies[] = uuid_features
+dependencies[] = uuid
+dependencies[] = uuid_features
+dependencies[] = bean_uuid
 
 ; Architecture
 dependencies[] = token
@@ -79,7 +80,7 @@ dependencies[] = search_api_solr_overrides
 dependencies[] = search_api_facetapi
 dependencies[] = search_api_views
 
-; Other crontib modules.
+; Other contrib modules.
 dependencies[] = ajax_pane
 dependencies[] = better_formats
 dependencies[] = ckeditor
