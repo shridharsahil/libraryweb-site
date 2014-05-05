@@ -33,11 +33,17 @@
     </div>
   </div>
 
+  <div class="l-colophon-wrapper">
+    <div class="l-colophon" role="contentinfo">
+      <?php print render($page['colophon_first']); ?>
+      <?php print render($page['colophon_second']); ?>
+      <?php print render($page['colophon_third']); ?>
+    </div>
+  </div>
+
   <div class="l-footer-wrapper">
     <div class="l-footer" role="contentinfo">
-      <?php print render($page['footer_first']); ?>
-      <?php print render($page['footer_second']); ?>
-      <?php print render($page['footer_third']); ?>
+      <?php print render($page['footer']); ?>
     </div>
   </div>
 </div>

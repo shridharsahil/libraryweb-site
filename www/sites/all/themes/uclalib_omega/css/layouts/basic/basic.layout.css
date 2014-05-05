@@ -2,6 +2,7 @@
 .l-navigation,
 .l-main,
 .l-highlighted,
+.l-colophon,
 .l-footer {
   *zoom: 1;
   max-width: 940px;
@@ -16,6 +17,7 @@
 .l-navigation:after,
 .l-main:after,
 .l-highlighted:after,
+.l-colophon:after,
 .l-footer:after {
   content: "";
   display: table;
@@ -37,7 +39,7 @@
   display: inline;
 }
 
-.l-region--footer-first {
+.l-region--colophon-first {
   width: 62.5%;
   float: left;
   margin-right: 0%;
@@ -46,7 +48,7 @@
   padding-right: 6.25%;
 }
 
-.l-region--footer-second {
+.l-region--colophon-second {
   width: 18.75%;
   float: left;
   margin-right: 0%;
@@ -55,7 +57,7 @@
   padding-right: 0%;
 }
 
-.l-region--footer-third {
+.l-region--colophon-third {
   width: 18.75%;
   float: right;
   margin-right: 0;

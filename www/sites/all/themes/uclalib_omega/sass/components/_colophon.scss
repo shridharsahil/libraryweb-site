@@ -1,11 +1,11 @@
-.l-footer-wrapper {
-  background: $footer-bg-color;
-  color: $footer-text-color;
+.l-colophon-wrapper {
+  background: $colophon-bg-color;
+  color: $colophon-text-color;
   padding: 50px 0;
 }
-.l-footer {
+.l-colophon {
   a, a:visited {
-    color: $footer-link-color;
+    color: $colophon-link-color;
     font-weight: bold;
   }
   a:hover, a:active, a:focus {
@@ -26,10 +26,10 @@
     margin-top: 0;
   }
 }
-.l-region--footer-first {
-  border-right: 1px solid $footer-border-color;
+.l-region--colophon-first {
+  border-right: 1px solid $colophon-border-color;
 }
-.l-region--footer-second,
-.l-region--footer-third {
+.l-region--colophon-second,
+.l-region--colophon-third {
   padding-top: 2.6em;
 }

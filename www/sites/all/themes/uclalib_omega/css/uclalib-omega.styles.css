@@ -31,45 +31,45 @@ a:hover {
   vertical-align: middle;
 }
 
-.l-main-wrapper {
-  padding: 14px 0 25px;
-}
-
-.l-footer-wrapper {
+.l-colophon-wrapper {
   background: #ececec;
   color: #2d2f35;
   padding: 50px 0;
 }
 
-.l-footer a, .l-footer a:visited {
+.l-colophon a, .l-colophon a:visited {
   color: #3283be;
   font-weight: bold;
 }
-.l-footer a:hover, .l-footer a:active, .l-footer a:focus {
+.l-colophon a:hover, .l-colophon a:active, .l-colophon a:focus {
   text-decoration: underline;
 }
-.l-footer ul {
+.l-colophon ul {
   list-style: none;
   list-style-image: none;
   margin: 0;
   padding: 0;
 }
-.l-footer li {
+.l-colophon li {
   margin: 0.5em 0;
 }
-.l-footer h1,
-.l-footer h2,
-.l-footer h3 {
+.l-colophon h1,
+.l-colophon h2,
+.l-colophon h3 {
   margin-top: 0;
 }
 
-.l-region--footer-first {
+.l-region--colophon-first {
   border-right: 1px solid #a2a2a2;
 }
 
-.l-region--footer-second,
-.l-region--footer-third {
+.l-region--colophon-second,
+.l-region--colophon-third {
   padding-top: 2.6em;
+}
+
+.l-main-wrapper {
+  padding: 14px 0 25px;
 }
 
 .l-header-wrapper {

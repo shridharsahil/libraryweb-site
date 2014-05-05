@@ -44,9 +44,9 @@ function uclalib_pe_template_default_page_manager_handlers() {
       'sidebar_first' => NULL,
       'sidebar_second' => NULL,
       'footer' => NULL,
-      'footer_first' => NULL,
-      'footer_second' => NULL,
-      'footer_third' => NULL,
+      'colophon_first' => NULL,
+      'colophon_second' => NULL,
+      'colophon_third' => NULL,
     ),
     'content' => array(
       'style' => 'naked',
@@ -116,7 +116,7 @@ function uclalib_pe_template_default_page_manager_handlers() {
     $display->panels['content'][1] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'footer_first';
+    $pane->panel = 'colophon_first';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -142,10 +142,10 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['footer_first'][0] = 'new-4';
+    $display->panels['colophon_first'][0] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'footer_second';
+    $pane->panel = 'colophon_second';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -175,10 +175,10 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['footer_second'][0] = 'new-5';
+    $display->panels['colophon_second'][0] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'footer_third';
+    $pane->panel = 'colophon_third';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -211,7 +211,7 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['footer_third'][0] = 'new-6';
+    $display->panels['colophon_third'][0] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'header';
