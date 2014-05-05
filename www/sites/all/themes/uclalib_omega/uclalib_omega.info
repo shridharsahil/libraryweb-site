@@ -6,6 +6,11 @@ engine = phptemplate
 core = 7.x
 
 ; ========================================
+; Core Stylesheet Overrides
+; ========================================
+stylesheets[all][] = css/modules/system/system.menus.theme.css
+
+; ========================================
 ; Stylesheets
 ; ========================================
 stylesheets[all][] = css/uclalib-omega.normalize.css
@@ -13,8 +18,7 @@ stylesheets[all][] = css/uclalib-omega.hacks.css
 stylesheets[all][] = css/uclalib-omega.styles.css
 stylesheets[all][] = css/uclalib-omega.no-query.css
 
-; List any core/contrib stylesheets to disable.
-stylesheets[all][] = css/modules/system/system.menus.theme.css
+
 
 ; ========================================
 ; Scripts
