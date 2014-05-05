@@ -10,13 +10,13 @@
 function uclalib_footer_settings_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_footer_descripton'
-  $field_bases['field_footer_descripton'] = array(
+  // Exported field_base: 'field_colophon_description'
+  $field_bases['field_colophon_description'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_footer_descripton',
+    'field_name' => 'field_colophon_description',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(

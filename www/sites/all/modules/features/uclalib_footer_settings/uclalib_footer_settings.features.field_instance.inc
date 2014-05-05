@@ -10,8 +10,8 @@
 function uclalib_footer_settings_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-footer_description-field_footer_descripton'
-  $field_instances['bean-footer_description-field_footer_descripton'] = array(
+  // Exported field_instance: 'bean-footer_description-field_colophon_description'
+  $field_instances['bean-footer_description-field_colophon_description'] = array(
     'bundle' => 'footer_description',
     'default_value' => NULL,
     'deleted' => 0,
@@ -26,7 +26,7 @@ function uclalib_footer_settings_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_footer_descripton',
+    'field_name' => 'field_colophon_description',
     'label' => 'Footer Descripton',
     'required' => 0,
     'settings' => array(

@@ -10,25 +10,33 @@
 function uclalib_footer_settings_menu_default_menu_custom() {
   $menus = array();
 
-  // Exported menu: menu-footer-first.
-  $menus['menu-footer-first'] = array(
-    'menu_name' => 'menu-footer-first',
-    'title' => 'Footer first',
-    'description' => 'First Footer menu items',
+  // Exported menu: menu-colophon-first.
+  $menus['menu-colophon-first'] = array(
+    'menu_name' => 'menu-colophon-first',
+    'title' => 'Colphon first',
+    'description' => 'Links for left column in colophon.',
   );
-  // Exported menu: menu-footer-second.
-  $menus['menu-footer-second'] = array(
-    'menu_name' => 'menu-footer-second',
-    'title' => 'Footer second',
-    'description' => 'Second Footer menu list',
+  // Exported menu: menu-colophon-second.
+  $menus['menu-colophon-second'] = array(
+    'menu_name' => 'menu-colophon-second',
+    'title' => 'Colophon second',
+    'description' => 'Links for right column in colophon.',
+  );
+
+  // Exported menu: menu-footer.
+  $menus['menu-footer'] = array(
+    'menu_name' => 'menu-footer',
+    'title' => 'Footer',
+    'description' => 'Links for page footer horizontal menu.',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('First Footer menu items');
-  t('Footer first');
-  t('Footer second');
-  t('Second Footer menu list');
-
+  t('Colophon first');
+  t('Colophon second');
+  t('Footer');
+  t('Links for left column in colophon.');
+  t('Links for right column in colophon.');
+  t('Links for page footer horizontal menu.');
 
   return $menus;
 }
