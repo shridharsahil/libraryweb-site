@@ -136,7 +136,7 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'pane-footer-about',
+      'css_class' => 'pane-colophon-about',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -151,7 +151,7 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Footer Menu [PLACEHOLDER]',
+      'admin_title' => 'Colophon Menu [PLACEHOLDER]',
       'title' => '',
       'body' => '<ul>
 <li><a href="#">Mission</a></li>
@@ -169,7 +169,7 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'pane-footer-menu-1',
+      'css_class' => 'pane-colophon-menu-1',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -184,7 +184,7 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Footer Menu 2 [PLACEHOLDER]',
+      'admin_title' => 'Colophon Menu 2 [PLACEHOLDER]',
       'title' => '',
       'body' => '<ul>
 <li><a href="#">Giving to the Library</a></li>
@@ -205,7 +205,7 @@ Relying on its highly skilled staff, the Library encourages innovation, capitali
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'pane-footer-menu-2',
+      'css_class' => 'pane-colophon-menu-2',
     );
     $pane->extras = array();
     $pane->position = 0;
