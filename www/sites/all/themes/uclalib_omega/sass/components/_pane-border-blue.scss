@@ -1,0 +1,15 @@
+.pane-border-blue {
+  .pane-content {
+    border: 1px solid $border-color;
+  }
+  .pane-title {
+    background: $ucla-blue;
+    &, a {
+      color: white;
+    }
+  }
+}
+
+.pane-border-blue--inline-title {
+  display: inline-block;
+}

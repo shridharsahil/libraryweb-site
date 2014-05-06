@@ -1,0 +1,14 @@
+
+/**
+ * Base styles for panel pane titles.
+ */
+.pane-title {
+  font-size: 19px;
+  font-weight: 100;
+}
+
+.inline-pane-title {
+  > .pane-title {
+    display: inline-block;
+  }
+}
