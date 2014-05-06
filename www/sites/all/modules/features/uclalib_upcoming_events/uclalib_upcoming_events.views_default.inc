@@ -23,7 +23,9 @@ function uclalib_upcoming_events_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'News';
-  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['use_more_text'] = '';
+  $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -32,6 +34,13 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<a href="news?f[0]=field_news_categories%3A!1&f[1]=field_news_location%3A!2">More ></a>';
+  $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   /* Field: Content: News Image */
   $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
   $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
