@@ -55,6 +55,9 @@ function uclalib_homepage_default_page_manager_pages() {
       'bottom_left' => NULL,
       'bottom_right' => NULL,
     ),
+    'bottom_left' => array(
+      'style' => 'tabs',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -64,11 +67,11 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'bottom_left';
     $pane->type = 'block';
-    $pane->subtype = 'bean-upcoming-events';
+    $pane->subtype = 'bean-using-the-library-upcoming-event';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -83,6 +86,29 @@ function uclalib_homepage_default_page_manager_pages() {
     $display->panels['bottom_left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'bottom_left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'recent_news_highlight-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'field_news_categories_tid' => '50',
+        'field_news_location_target_id' => '18',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['bottom_left'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'bottom_right';
     $pane->type = 'block';
     $pane->subtype = 'bean-find-printers-copiers-and-other-';
@@ -100,10 +126,10 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['bottom_right'][0] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['bottom_right'][0] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'top_left_bottom_left';
     $pane->type = 'views';
     $pane->subtype = 'todays_hours';
@@ -133,10 +159,10 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['top_left_bottom_left'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['top_left_bottom_left'][0] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'top_left_bottom_right';
     $pane->type = 'block';
     $pane->subtype = 'bean-get-started-at-the-library';
@@ -154,10 +180,10 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['top_left_bottom_right'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['top_left_bottom_right'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'top_left_main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -180,10 +206,10 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['top_left_main'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['top_left_main'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'top_right_sidebar';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -205,8 +231,8 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['top_right_sidebar'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['top_right_sidebar'][0] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
