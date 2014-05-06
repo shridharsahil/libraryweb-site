@@ -320,6 +320,14 @@ a[href="#main-content"] {
 }
 
 /**
+ * Override jQuery UI widget default font sizes.
+ */
+.ui-widget {
+  font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/**
  * Override jQuery UI rounded corner default styles.
  */
 .ui-corner-all,
@@ -372,6 +380,22 @@ a[href="#main-content"] {
 /* Hide more than 4 Living Library thumbnails */
 .field--name-field-gallery-images .field__item:nth-child(n+5) {
   display: none;
+}
+
+div.more-link > a,
+a.more-link {
+  color: #3283be;
+}
+div.more-link > a::after,
+a.more-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: .2em;
+  border-top: .4em solid transparent;
+  border-bottom: .4em solid transparent;
+  border-left: 0.4em solid #3283be;
 }
 
 .pane-ask-a-librarian {
@@ -446,4 +470,47 @@ a[href="#main-content"] {
 .header-search-form-wrapper .form-submit:active,
 .header-search-form-wrapper .form-submit:focus {
   background-image: url(../images/icon-search-hover.png);
+}
+
+.cal-date {
+  display: inline-block;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+  min-width: 2.3em;
+  vertical-align: middle;
+}
+
+.cal-month {
+  line-height: 1em;
+  font-weight: bold;
+}
+
+.cal-day {
+  font-size: 29px;
+  font-weight: 100;
+  line-height: 1em;
+}
+
+.cal-time {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.view-upcoming-events-display .views-row {
+  clear: both;
+  overflow: hidden;
+  display: table-row;
+}
+.view-upcoming-events-display .views-field {
+  padding: 10px 4px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.view-upcoming-events-display .views-field-field-exhibition-end,
+.view-upcoming-events-display .views-field-field-event-date {
+  float: left;
+  margin-right: 14px;
 }

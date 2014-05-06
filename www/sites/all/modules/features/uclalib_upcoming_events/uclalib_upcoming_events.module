@@ -101,7 +101,7 @@ function uclalib_upcoming_events_field_formatter_view($entity_type, $entity, $fi
 
           $date_str = '<div class="cal-month">' . strtoupper($month) . '</div>';
           $date_str .= '<div class="cal-day">' . $day . '</div>';
-          $date_str .= '<span class="cal-time">' . $time . '</span>';
+          $date_str .= '<div class="cal-time">' . $time . '</div>';
 
 
           $output = '<div class="cal-date">' . $date_str . '</div>';

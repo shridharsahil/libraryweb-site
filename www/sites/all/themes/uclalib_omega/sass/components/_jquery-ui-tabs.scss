@@ -1,4 +1,11 @@
 /**
+ * Override jQuery UI widget default font sizes.
+ */
+.ui-widget {
+  font-family: $akzidenz;
+  font-size: 1em;
+}
+/**
  * Override jQuery UI rounded corner default styles.
  */
 .ui-corner-all,
