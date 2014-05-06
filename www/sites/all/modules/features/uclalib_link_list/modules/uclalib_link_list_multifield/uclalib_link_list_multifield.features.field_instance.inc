@@ -10,6 +10,41 @@
 function uclalib_link_list_multifield_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'multifield-link_with_description-field_icon'
+  $field_instances['multifield-link_with_description-field_icon'] = array(
+    'bundle' => 'link_with_description',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional: select an icon to be displayed with this link.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'icon_field',
+        'settings' => array(
+          'link_to_content' => 0,
+        ),
+        'type' => 'icon_field_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'multifield',
+    'field_name' => 'field_icon',
+    'label' => 'Icon',
+    'required' => 0,
+    'settings' => array(
+      'bundle' => NULL,
+      'icon' => NULL,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'icon_field',
+      'settings' => array(),
+      'type' => 'icon_field',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'multifield-link_with_description-field_link_description'
   $field_instances['multifield-link_with_description-field_link_description'] = array(
     'bundle' => 'link_with_description',
@@ -22,7 +57,7 @@ function uclalib_link_list_multifield_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'multifield',
@@ -83,7 +118,7 @@ function uclalib_link_list_multifield_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'multifield',
@@ -127,7 +162,9 @@ function uclalib_link_list_multifield_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
+  t('Icon');
   t('Link');
+  t('Optional: select an icon to be displayed with this link.');
 
   return $field_instances;
 }
