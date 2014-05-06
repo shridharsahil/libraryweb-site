@@ -110,6 +110,7 @@ features[facetapi][] = search_api@site_general_search:block:type
 features[facetapi][] = search_api@site_general_search:block:url
 features[fe_nodequeue][] = promoted_locations
 features[features_api][] = api:2
+features[page_manager_pages][] = news_search_page
 features[search_api_index][] = location_search
 features[search_api_index][] = site_general_search
 features[search_api_server][] = uclalib_solr_server
