@@ -67,7 +67,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'bottom_left';
     $pane->type = 'block';
-    $pane->subtype = 'bean-using-the-library-upcoming-event';
+    $pane->subtype = 'bean-upcoming-events';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -93,8 +93,8 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_news_categories_tid' => '50',
-        'field_news_location_target_id' => '18',
+        'field_news_categories_tid' => '63',
+        'field_news_location_target_id' => '1',
       ),
     );
     $pane->cache = array();
