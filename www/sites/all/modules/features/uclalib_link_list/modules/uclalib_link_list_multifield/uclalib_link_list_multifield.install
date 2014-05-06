@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Add icon columns to linklist multifield.
+ */
+function uclalib_link_list_multifield_update_7001() {
+  $field = array(
+    'type' => 'varchar',
+    'length' => 64,
+    'default' => NULL,
+  );
+  db_add_field('field_data_field_linklist_links', 'field_linklist_links_field_icon_bundle', $field);
+  db_add_field('field_revision_field_linklist_links', 'field_linklist_links_field_icon_bundle', $field);
+
+  $field = array(
+    'type' => 'varchar',
+    'length' => 64,
+    'default' => NULL,
+  );
+  db_add_field('field_data_field_linklist_links', 'field_linklist_links_field_icon_icon', $field);
+  db_add_field('field_revision_field_linklist_links', 'field_linklist_links_field_icon_icon', $field);
+}
