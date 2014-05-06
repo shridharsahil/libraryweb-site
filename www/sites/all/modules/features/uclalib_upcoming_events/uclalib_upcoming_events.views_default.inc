@@ -11,6 +11,206 @@ function uclalib_upcoming_events_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'recent_news_highlight';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Recent News Highlight ';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'News';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: News Image */
+  $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['label'] = '';
+  $handler->display->display_options['fields']['field_news_image']['alter']['nl2br'] = TRUE;
+  $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_news_image']['settings'] = array(
+    'image_style' => 'featured_content_thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '100',
+  );
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: News items by categories */
+  $handler->display->display_options['arguments']['field_news_categories_tid']['id'] = 'field_news_categories_tid';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['table'] = 'field_data_field_news_categories';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['field'] = 'field_news_categories_tid';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['ui_name'] = 'News items by categories';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_options']['code'] = 'function uclalib-omega_form_alter(&$form, $form_state, $form_id) {
+    if(isset($form_state[\'pane\'])) {        
+      // You have to test if the field exists
+        if(in_array($form_state[\'pane\']->subtype, array("filtered_entities-block_input_category"))) { // filtered_entities is the view name, block_input_category is the display name
+            // field_type_activity_tid is the id of the field you want to replace by a select input
+            // You can find this id by inspecting the input field, get the id (should look like edit-arguments-field-type-activity-tid), remove "edit-arguments" and transform dashes to underscores. You have your id.
+            $form["arguments"]["field_type_activity_tid"]["#type"] = "select";
+            $form["arguments"]["field_type_activity_tid"]["#options"] = _uclalib-omega_taxonomy_select(3, 0, 1);
+        }
+    }
+}
+
+// The first argument (3) is the vocabulary id. You can find it in the taxonomy_vocabulary table
+// The second argument is the depth
+function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $depth = NULL) {
+    $terms = taxonomy_get_tree($vid, $parent, $depth);
+
+    foreach ($terms as $data) {
+        $output[$data->tid] = $data->name;
+    }
+
+    return $output;
+}
+';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['vocabularies'] = array(
+    'news_categories' => 'news_categories',
+  );
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['type'] = 'tids';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: News items by categories */
+  $handler->display->display_options['arguments']['field_news_categories_tid']['id'] = 'field_news_categories_tid';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['table'] = 'field_data_field_news_categories';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['field'] = 'field_news_categories_tid';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['ui_name'] = 'News items by categories';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_options']['code'] = 'function uclalib-omega_form_alter(&$form, $form_state, $form_id) {
+    if(isset($form_state[\'pane\'])) {        
+      // You have to test if the field exists
+        if(in_array($form_state[\'pane\']->subtype, array("filtered_entities-block_input_category"))) { // filtered_entities is the view name, block_input_category is the display name
+            // field_type_activity_tid is the id of the field you want to replace by a select input
+            // You can find this id by inspecting the input field, get the id (should look like edit-arguments-field-type-activity-tid), remove "edit-arguments" and transform dashes to underscores. You have your id.
+            $form["arguments"]["field_type_activity_tid"]["#type"] = "select";
+            $form["arguments"]["field_type_activity_tid"]["#options"] = _uclalib-omega_taxonomy_select(3, 0, 1);
+        }
+    }
+}
+
+// The first argument (3) is the vocabulary id. You can find it in the taxonomy_vocabulary table
+// The second argument is the depth
+function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $depth = NULL) {
+    $terms = taxonomy_get_tree($vid, $parent, $depth);
+
+    foreach ($terms as $data) {
+        $output[$data->tid] = $data->name;
+    }
+
+    return $output;
+}
+';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['vocabularies'] = array(
+    'news_categories' => 'news_categories',
+  );
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['type'] = 'tids';
+  /* Contextual filter: Content: News Location (field_news_location) */
+  $handler->display->display_options['arguments']['field_news_location_target_id']['id'] = 'field_news_location_target_id';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['table'] = 'field_data_field_news_location';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['field'] = 'field_news_location_target_id';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_location_target_id']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['break_phrase'] = TRUE;
+  $handler->display->display_options['pane_description'] = 'Display news categories by selected cateories';
+  $handler->display->display_options['argument_input'] = array(
+    'field_news_categories_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by category',
+    ),
+    'field_destination_location_target_id' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by Location',
+    ),
+    'field_staff_subject_areas_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by Subject Area',
+    ),
+    'field_news_location_target_id' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: News Location (field_news_location)',
+    ),
+  );
+  $export['recent_news_highlight'] = $view;
+
+  $view = new view();
   $view->name = 'upcoming_events_display';
   $view->description = '';
   $view->tag = 'default';
@@ -122,15 +322,14 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['title']['relationship'] = 'field_upcoming_events_events_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Contextual filter: Block: Title */
-  $handler->display->display_options['arguments']['title']['id'] = 'title';
-  $handler->display->display_options['arguments']['title']['table'] = 'bean';
-  $handler->display->display_options['arguments']['title']['field'] = 'title';
-  $handler->display->display_options['arguments']['title']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['title']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['title']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['title']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['title']['limit'] = '0';
+  /* Contextual filter: Block: Internal, numeric block ID */
+  $handler->display->display_options['arguments']['bid']['id'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['table'] = 'bean';
+  $handler->display->display_options['arguments']['bid']['field'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['bid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['bid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['bid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Block: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'bean';
@@ -139,93 +338,8 @@ function uclalib_upcoming_events_views_default_views() {
     'upcoming_events' => 'upcoming_events',
   );
 
-  /* Display: Upcoming Events  */
-  $handler = $view->new_display('panel_pane', 'Upcoming Events ', 'panel_pane_1');
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'More Events >';
-  $handler->display->display_options['link_url'] = 'news-events/events-agenda';
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-  $handler->display->display_options['argument_input'] = array(
-    'title' => array(
-      'type' => 'user',
-      'context' => 'token.current-page:title',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Block: Title',
-    ),
-  );
-  $handler->display->display_options['inherit_panels_path'] = '1';
-
-  /* Display: News Highlight */
-  $handler = $view->new_display('panel_pane', 'News Highlight', 'panel_pane_2');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'News';
-  $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'custom_url';
-  $handler->display->display_options['link_url'] = 'news';
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_upcoming_news_news_target_id']['id'] = 'field_upcoming_news_news_target_id';
-  $handler->display->display_options['relationships']['field_upcoming_news_news_target_id']['table'] = 'field_data_field_upcoming_news_news';
-  $handler->display->display_options['relationships']['field_upcoming_news_news_target_id']['field'] = 'field_upcoming_news_news_target_id';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Block: Internal, numeric block ID */
-  $handler->display->display_options['fields']['bid']['id'] = 'bid';
-  $handler->display->display_options['fields']['bid']['table'] = 'bean';
-  $handler->display->display_options['fields']['bid']['field'] = 'bid';
-  $handler->display->display_options['fields']['bid']['label'] = '';
-  $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['bid']['separator'] = '';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'field_upcoming_news_news_target_id';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-  $handler->display->display_options['argument_input'] = array(
-    'bid' => array(
-      'type' => 'user',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Block: Internal, numeric block ID',
-    ),
-    'title' => array(
-      'type' => 'user',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Block: Title',
-    ),
-  );
+  /* Display: Upcoming Events Block Display */
+  $handler = $view->new_display('block', 'Upcoming Events Block Display', 'upcoming_events_display');
   $export['upcoming_events_display'] = $view;
 
   $view = new view();

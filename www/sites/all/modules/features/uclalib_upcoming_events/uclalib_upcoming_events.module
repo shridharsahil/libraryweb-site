@@ -7,6 +7,60 @@
 include_once 'uclalib_upcoming_events.features.inc';
 
 /**
+ * Implements hook_form_alter
+ * Override view pane edit form (input on pane config)
+ * Based on code from: https://maslow.snipt.net/drupal-7-override-view-pane-edit-form-input-on-pane-config/
+ */
+function uclalib_upcoming_events_form_alter(&$form, $form_state, $form_id) {
+  if (isset($form_state['pane'])) {
+    if (in_array($form_state['pane']->subtype, array("recent_news_highlight-panel_pane_1"))) {
+    // filtered_entities is the view name, block_input_category is the display name
+      $form["arguments"]["field_news_categories_tid"]["#type"] = "select";
+      // get News Categories vocabulary
+      $form["arguments"]["field_news_categories_tid"]["#options"] = _uclalib_upcoming_events_taxonomy_select(7, 0, 1);
+      //$form["arguments"]["field_staff_subject_areas_tid"]["#type"] = "select";
+      // get Staff Subject Areas vocabulary
+      //$form["arguments"]["field_staff_subject_areas_tid"]["#options"] = _uclalib_upcoming_events_taxonomy_select(10, 0, 1);
+      $form["arguments"]["field_news_location_target_id"]["#type"] = "select";
+      $form["arguments"]["field_news_location_target_id"]["#options"] = uclalib_upcoming_events_content_type_select($output);
+    }
+  }
+}
+
+/**
+ * Gets terms for given vocabulary
+ * The first argument (3) is the vocabulary id.
+ * You can find it in the taxonomy_vocabulary table
+ * The second argument is the depth
+ */
+function _uclalib_upcoming_events_taxonomy_select($vid, $parent = 0, $depth = NULL) {
+  $terms = taxonomy_get_tree($vid, $parent, $depth);
+  foreach ($terms as $data) {
+    $output[$data->tid] = $data->name;
+  }
+  return $output;
+}
+
+
+function uclalib_upcoming_events_content_type_select($node_type) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'location')
+    ->propertyCondition('status', 1);
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    $location_nids = array_keys($result['node']);
+    $location_items = entity_load('node', $location_nids);
+  }
+
+  $output = array();
+  foreach ($location_items as $data) {
+    $output[$data->nid] = $data->title;
+  }
+
+  return $output;
+}
+/**
  * Implements hook_field_formatter_info().
  */
 function uclalib_upcoming_events_field_formatter_info() {
