@@ -6,23 +6,27 @@
 /* Tabs */
 .tabs {
   a {
-    background-color: #eee;
+    background-color: transparent;
     text-decoration: none;
 
-    &.active {
-      background-color: #ccc;
-    }
     &:hover,
     &:focus {
-      background-color: #bbb;
+      text-decoration: underline;
+    }
+    &.active {
+      background-color: white;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        cursor: pointer;
+      }
     }
   }
 }
 
 /* Primary Tabs */
 .tabs--primary {
-  margin-bottom: 1em;
-  border-bottom: 1px solid #bbb;
+  margin-top: 1em;
 
   a {
     padding: 0.3em 0.8em;
