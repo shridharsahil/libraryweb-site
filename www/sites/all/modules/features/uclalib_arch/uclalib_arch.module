@@ -68,6 +68,8 @@ function uclalib_arch_icon_bundles() {
       'telephone' => 'telephone',
       'specialist' => 'specialist',
       'calendar' => 'calendar',
+      'address' => 'address',
+      'web' => 'web',
     ),
     'name' => 'uclalib',
     'provider' => 'icomoon',
