@@ -93,7 +93,7 @@ function uclalib_arch_icon_bundles() {
       'showMetadata' => false,
     ),
     'status' => 1,
-    'title' => 'Uclalib',
+    'title' => 'UCLALIB Icons',
     'version' => '',
     '#attached' => array (
       'icomoon_process_attached' => array (
