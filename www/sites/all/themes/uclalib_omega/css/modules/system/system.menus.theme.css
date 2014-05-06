@@ -69,12 +69,14 @@
 .tabs a {
   background-color: transparent;
   text-decoration: none;
+  color: #999;
 }
 .tabs a:hover, .tabs a:focus {
   text-decoration: underline;
 }
 .tabs a.active {
   background-color: white;
+  color: #222;
 }
 .tabs a.active:hover, .tabs a.active:focus {
   text-decoration: none;

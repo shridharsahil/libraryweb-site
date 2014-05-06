@@ -407,6 +407,13 @@ a[href="#main-content"] {
   border-width: 0 .7em .7em 0;
 }
 
+.pane-page-title h1 {
+  font-size: 30px;
+  font-weight: 100;
+  color: #3283be;
+  margin: 0.9em 0;
+}
+
 .header-search-form-wrapper .form-type-textfield {
   margin: 1em -4px 1.3em 0;
   display: inline-block;
