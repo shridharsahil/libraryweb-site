@@ -40,7 +40,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<a href="news-events/events-agenda">More Events ></a>';
+  $handler->display->display_options['header']['area']['content'] = '<a class="more-link" href="/news-events/events-agenda">More Events</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_events_target_id']['id'] = 'field_events_target_id';
@@ -167,7 +167,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'More Events >';
+  $handler->display->display_options['use_more_text'] = 'More Events';
   $handler->display->display_options['link_url'] = 'news-events/events-agenda';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
