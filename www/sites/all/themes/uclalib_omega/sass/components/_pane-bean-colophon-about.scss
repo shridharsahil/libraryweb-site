@@ -1,0 +1,12 @@
+.pane-bean-colophon-about {
+  h2 {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: image-height('logo-colophon.png');
+    span {
+      display: inline-block;
+      @include replace-text-with-dimensions('logo-colophon.png');
+      vertical-align: bottom;
+    }
+  }
+}

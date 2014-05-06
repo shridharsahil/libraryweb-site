@@ -431,6 +431,24 @@ a.more-link::after {
   border-width: 0 .7em .7em 0;
 }
 
+.pane-bean-colophon-about h2 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+}
+.pane-bean-colophon-about h2 span {
+  display: inline-block;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('../images/logo-colophon.png?1399382991');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 150px;
+  height: 30px;
+  vertical-align: bottom;
+}
+
 .pane-page-title h1 {
   font-size: 30px;
   font-weight: 100;
