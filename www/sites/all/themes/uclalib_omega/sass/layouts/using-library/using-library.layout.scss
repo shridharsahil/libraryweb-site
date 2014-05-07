@@ -35,5 +35,6 @@ $gutter-styles: 'split'; // gitter is split between left and right of each col.
 
   // Span 2 columns, starting at the 1st column
   .l-region--below-main-left {
-    @include grid-span(2, 2);
+    width: 100%;
+    clear: none;
   }
