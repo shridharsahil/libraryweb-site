@@ -436,7 +436,7 @@ a.more-link::after {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399452290');
+  background-image: url('../images/logo-colophon.png?1399382991');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -509,6 +509,11 @@ a.more-link::after {
 }
 .pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item:last-child {
   margin: 0;
+}
+
+.pane-style-background-gray {
+  background: #ccc;
+  padding: 15px;
 }
 
 .pane-border-blue .pane-content {
