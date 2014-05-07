@@ -9,7 +9,9 @@
 .l-colophon,
 .l-footer {
   @include container;
-  width: 960px;
+  // width: $page-max-width;
+  // max-width: $page-max-width;
+  // _width: $page-max-width;
 }
 
 .l-region--branding {

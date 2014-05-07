@@ -5,13 +5,12 @@
 .l-colophon,
 .l-footer {
   *zoom: 1;
-  max-width: 940px;
-  _width: 940px;
+  max-width: 964px;
+  _width: 964px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
 }
 .l-header:after,
 .l-navigation:after,
