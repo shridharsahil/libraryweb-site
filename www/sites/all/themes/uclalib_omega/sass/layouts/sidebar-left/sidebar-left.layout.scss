@@ -1,4 +1,5 @@
 @import "singularitygs";
+@import "abstractions/faux-columns";
 
 // 3-column assymetrical grid w/ fixed 30px gutters between columns.
 $grid: 5 8 8;
@@ -13,18 +14,29 @@ $gutter-styles: 'split'; // gitter is split between left and right of each col.
   .panel-sidebar-left {
     //@include background-grid($color: blue);
     @include clearfix;
+    position: relative; // Needed for faux-column.
   }
 
   // Span 1 column, starting at the 1st column
   .l-region--sidebar-left {
     @include grid-span(1, 1);
     padding-left: 0; // kill left rail gutter.
+
+    // Full-height faux-column for adding a background color in the theme.
+    $left: column-span(0, 1); // Span 0 columns, starting from 1st column.
+    $width: column-span(1, 1); // Span 1 column, starting from 1st column.
+    @include faux-column($left, $width/* , #eee */);
   }
 
   // Span 2 columns, starting at the 2nd column
   .l-region--main-column {
     @include grid-span(2, 2);
     padding-right: 0; // kill right rail gutter.
+
+    // Full-height faux-column for adding a background color in the theme.
+    $left: column-span(1, 1); // Span 1 columns, starting from 1st column.
+    $width: column-span(2, 2); // Span 2 columns, starting from 2nd column.
+    @include faux-column($left, $width/* , #ddd */);
   }
 }
 

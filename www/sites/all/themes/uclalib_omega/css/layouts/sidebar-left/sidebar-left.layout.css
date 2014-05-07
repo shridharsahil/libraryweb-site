@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+.panel-sidebar-left {
+  position: relative;
+}
 .panel-sidebar-left:after {
   content: "";
   display: table;
@@ -20,6 +23,16 @@
   padding-right: 15px;
   padding-left: 0;
 }
+.l-region--sidebar-left:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0%;
+  width: 23.80952%;
+  bottom: 0;
+  background: "";
+}
 
 .l-region--main-column {
   width: 76.19048%;
@@ -30,6 +43,16 @@
   padding-left: 15px;
   padding-right: 15px;
   padding-right: 0;
+}
+.l-region--main-column:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 23.80952%;
+  width: 76.19048%;
+  bottom: 0;
+  background: "";
 }
 
 .l-region--below-main-left {

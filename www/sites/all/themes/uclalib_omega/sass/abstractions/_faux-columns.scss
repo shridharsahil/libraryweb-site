@@ -1,0 +1,24 @@
+// Full-height faux-column for adding a background color to singularity
+// grid-span elements using the Nicolas Gallagher method.
+//
+// See http://css-tricks.com/fluid-width-equal-height-columns/
+//
+// Note: The full-height faux-column background requires a
+//       position:relative on the column *parent* not the column itself.
+//
+// @todo: refactor this so you don't have to calculate the $left and $width,
+// and instead use the same arguments as @mixin grid-span().
+@mixin faux-column($left, $width, $background : '') {
+   &:before {
+    content: " ";
+    position: absolute; // The relative parent must not be the column itself, but the column's parent div wrapper
+    z-index: -1;
+    top: 0;
+    left: $left;
+    width: $width;
+    bottom: 0;
+    @if ($background) {
+      background: $background;
+    }
+  }
+}
