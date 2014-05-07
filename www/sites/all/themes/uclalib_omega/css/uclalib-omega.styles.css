@@ -578,7 +578,7 @@ a.more-link::after {
   background: #eff3f4;
   line-height: 1.7em;
   margin: 0 -25px;
-  padding: 10px 28px;
+  padding: 10px 28px 11px;
 }
 .panel-sidebar-left .l-region--sidebar-left .sidebar-tier-2 .pane-title,
 .panel-using-library .l-region--sidebar-left .sidebar-tier-2 .pane-title {
@@ -589,6 +589,12 @@ a.more-link::after {
 .panel-using-library .l-region--sidebar-left .sidebar-tier-2 a {
   color: #3283be;
   font-size: 0.750em;
+}
+.panel-sidebar-left .l-region--sidebar-left .sidebar-tier-3 p, .panel-sidebar-left .l-region--sidebar-left .sidebar-tier-3 a,
+.panel-using-library .l-region--sidebar-left .sidebar-tier-3 p,
+.panel-using-library .l-region--sidebar-left .sidebar-tier-3 a {
+  font-size: 13px;
+  font-weight: normal;
 }
 
 .no-gray-sidebar .l-region--sidebar-left {

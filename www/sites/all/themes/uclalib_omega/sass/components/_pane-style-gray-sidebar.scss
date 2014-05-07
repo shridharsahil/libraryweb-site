@@ -43,7 +43,7 @@
       background: $ucla-lt-gray;
       line-height: 1.7em;
       margin: 0 -25px;
-      padding: 10px 28px;
+      padding: 10px 28px 11px;
       .pane-title {
         font-size: 0.875em;
         margin: 0;
@@ -52,6 +52,12 @@
         color: $ucla-blue;
         font-size: 0.750em;
       }    
+    }
+    .sidebar-tier-3 {
+      p, a {
+        font-size: 13px;
+        font-weight: normal;
+      }
     }
   }
 }
