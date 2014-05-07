@@ -4,72 +4,89 @@
   box-sizing: border-box;
 }
 
+/**
+ * Main columns and separators.
+ */
+.panel-homepage {
+  position: relative;
+}
 .panel-homepage:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.panel-homepage .content-bottom {
+.homepage-top, .homepage-bottom {
   clear: both;
 }
 
-/**
- * Separators
- */
-.homepage-top {
-  clear: both;
-}
-
-.homepage-top-left {
-  width: 60%;
+.homepage-top-left,
+.l-region--bottom-left {
+  width: 68.75%;
   float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-left: 0;
+}
+.homepage-top-left:before,
+.l-region--bottom-left:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0%;
+  width: 68.75%;
+  bottom: 0;
+  background: "";
 }
 
-.homepage-top-right-sidebar {
-  width: 30%;
-  float: left;
+.homepage-top-right-sidebar,
+.l-region--bottom-right {
+  width: 31.25%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-right: 0;
 }
-
-.homepage-bottom {
-  clear: both;
+.homepage-top-right-sidebar:before,
+.l-region--bottom-right:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 68.75%;
+  width: 31.25%;
+  bottom: 0;
+  background: "";
 }
 
 /**
- * Regions
+ * Embedded regions inside columns.
  */
-
-/**
- * Top
- */
-.l-region--top-left-main {
-  width: 100%
-}
-
 .l-region--top-left-bottom-left {
-  width: 40%;
+  width: 50%;
   float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-left: 0;
 }
 
 .l-region--top-left-bottom-right {
-  width: 40%;
-  float: left;
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-right: 0;
 }
-
-.l-region--top-right-sidebar {
-
-}
-
-/**
- * Bottom
- */
-.l-region--bottom-left {
-  width: 40%;
-  float: left;
-}
-
-.l-region--bottom-right {
-  width: 40%;
-  float: left;
-}
-
