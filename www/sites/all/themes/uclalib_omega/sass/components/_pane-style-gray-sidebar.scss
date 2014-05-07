@@ -12,6 +12,33 @@
     &:before {
       background: #d7d9da;
     }
+    a, p, .pane-title {
+      font-weight: bold;
+    }
+    .sidebar-tier-1 {
+      background: $sidebar-bg-lt-blue;
+      margin: 0 -25px;
+      padding: 24px 0 15px;
+      .pane-title {
+        background: $ucla-blue;
+        color: #fff;
+        font-size: 0.938em;
+        margin: 0;
+        padding: 10px 8px 10px 28px;
+      }
+      ul {
+        margin: 0;
+        padding: 0 8px 0 28px;
+        li {
+          line-height: 2.35em;
+          list-style: none;
+            a {
+            color: $ucla-blue;
+            font-size: 0.938em;
+          }
+        } 
+      }      
+    }
   }
 }
 
