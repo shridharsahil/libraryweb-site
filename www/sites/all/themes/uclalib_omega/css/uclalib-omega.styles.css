@@ -315,21 +315,6 @@ a[href="#main-content"] {
   color: #3283be;
 }
 
-.pane-title--important-column-heading {
-  background-color: transparent;
-  background-image: url("../images/bg-heading-important-horiz.png"), url("../images/bg-heading-important-vert.png");
-  background-position: 0 50%, 100% 50%;
-  background-repeat: repeat-x, repeat-y;
-}
-.pane-title--important-column-heading > h2 {
-  display: inline;
-  background: white;
-  padding-right: 10px;
-  font-weight: 100;
-  font-size: 30px;
-  color: #3283be;
-}
-
 /**
  * Override jQuery UI widget default font sizes.
  */
@@ -460,20 +445,6 @@ a.more-link::after {
   vertical-align: bottom;
 }
 
-.pane-border-blue .pane-content {
-  border: 1px solid #adcde5;
-}
-.pane-border-blue .pane-title {
-  background: #3283be;
-}
-.pane-border-blue .pane-title, .pane-border-blue .pane-title a {
-  color: white;
-}
-
-.pane-border-blue--inline-title {
-  display: inline-block;
-}
-
 .pane-page-title h1 {
   font-size: 30px;
   font-weight: 100;
@@ -513,6 +484,35 @@ a.more-link::after {
 .header-search-form-wrapper .form-submit:active,
 .header-search-form-wrapper .form-submit:focus {
   background-image: url(../images/icon-search-hover.png);
+}
+
+.pane-border-blue .pane-content {
+  border: 1px solid #adcde5;
+}
+.pane-border-blue .pane-title {
+  background: #3283be;
+}
+.pane-border-blue .pane-title, .pane-border-blue .pane-title a {
+  color: white;
+}
+
+.pane-border-blue--inline-title {
+  display: inline-block;
+}
+
+.pane-title--important-column-heading {
+  background-color: transparent;
+  background-image: url("../images/bg-heading-important-horiz.png"), url("../images/bg-heading-important-vert.png");
+  background-position: 0 50%, 100% 50%;
+  background-repeat: repeat-x, repeat-y;
+}
+.pane-title--important-column-heading > h2 {
+  display: inline;
+  background: white;
+  padding-right: 10px;
+  font-weight: 100;
+  font-size: 30px;
+  color: #3283be;
 }
 
 .cal-date {
