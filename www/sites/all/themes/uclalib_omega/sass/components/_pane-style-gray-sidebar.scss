@@ -32,12 +32,26 @@
         li {
           line-height: 2.35em;
           list-style: none;
-            a {
+          a {
             color: $ucla-blue;
             font-size: 0.938em;
           }
         } 
       }      
+    }
+    .sidebar-tier-2 {
+      background: $ucla-lt-gray;
+      line-height: 1.7em;
+      margin: 0 -25px;
+      padding: 10px 28px;
+      .pane-title {
+        font-size: 0.875em;
+        margin: 0;
+      }
+      a {
+        color: $ucla-blue;
+        font-size: 0.750em;
+      }    
     }
   }
 }
