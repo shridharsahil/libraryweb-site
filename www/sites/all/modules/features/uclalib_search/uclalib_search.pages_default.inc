@@ -145,6 +145,48 @@ function uclalib_search_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['sidebar_left'][2] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-84S0KVjaMOzKINqvN9dhV2N1rBClgyEu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Series',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-PzdHd4VPqXA3qjWQCFasjwlBBCzmEbe0';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Audience',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][4] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
