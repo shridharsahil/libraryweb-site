@@ -53,6 +53,7 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
   $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
   $handler->display->display_options['fields']['field_icon']['label'] = '';
+  $handler->display->display_options['fields']['field_icon']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_icon']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_icon']['empty'] = '[name]';
   $handler->display->display_options['fields']['field_icon']['click_sort_column'] = 'bundle';
@@ -60,6 +61,15 @@ function uclalib_location_views_default_views() {
     'link_to_content' => 0,
   );
   $handler->display->display_options['fields']['field_icon']['delta_offset'] = '0';
+  /* Field: Global: Tooltip field */
+  $handler->display->display_options['fields']['tooltip']['id'] = 'tooltip';
+  $handler->display->display_options['fields']['tooltip']['table'] = 'views';
+  $handler->display->display_options['fields']['tooltip']['field'] = 'tooltip';
+  $handler->display->display_options['fields']['tooltip']['label'] = '';
+  $handler->display->display_options['fields']['tooltip']['alter']['text'] = '[field_icon]';
+  $handler->display->display_options['fields']['tooltip']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tooltip']['tooltip_text'] = '[name]';
+  $handler->display->display_options['fields']['tooltip']['tooltip_hide_if_equal'] = 1;
   /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
@@ -153,17 +163,15 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Icon */
-  $handler->display->display_options['fields']['field_term_icon']['id'] = 'field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['table'] = 'field_data_field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['field'] = 'field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['label'] = '';
-  $handler->display->display_options['fields']['field_term_icon']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_term_icon']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_term_icon']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_term_icon']['settings'] = array(
-    'image_style' => 'category_icon',
-    'image_link' => '',
+  /* Field: Field: Icon */
+  $handler->display->display_options['fields']['field_icon']['id'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
+  $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['label'] = '';
+  $handler->display->display_options['fields']['field_icon']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_icon']['click_sort_column'] = 'bundle';
+  $handler->display->display_options['fields']['field_icon']['settings'] = array(
+    'link_to_content' => 0,
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Taxonomy vocabulary: Vocabulary ID */
@@ -196,11 +204,6 @@ function uclalib_location_views_default_views() {
     3 => '3',
     2 => '2',
   );
-  /* Filter criterion: Taxonomy term: Icon (field_term_icon:fid) */
-  $handler->display->display_options['filters']['field_term_icon_fid']['id'] = 'field_term_icon_fid';
-  $handler->display->display_options['filters']['field_term_icon_fid']['table'] = 'field_data_field_term_icon';
-  $handler->display->display_options['filters']['field_term_icon_fid']['field'] = 'field_term_icon_fid';
-  $handler->display->display_options['filters']['field_term_icon_fid']['operator'] = 'not empty';
   $export['at_this_location_block'] = $view;
 
   $view = new view();
