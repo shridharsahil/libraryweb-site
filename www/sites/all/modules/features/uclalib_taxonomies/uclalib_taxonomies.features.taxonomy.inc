@@ -9,9 +9,9 @@
  */
 function uclalib_taxonomies_taxonomy_default_vocabularies() {
   return array(
-    'events_and_exhibitions_audience' => array(
-      'name' => 'Events and Exhibitions Audience',
-      'machine_name' => 'events_and_exhibitions_audience',
+    'audience' => array(
+      'name' => 'Audience',
+      'machine_name' => 'audience',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
