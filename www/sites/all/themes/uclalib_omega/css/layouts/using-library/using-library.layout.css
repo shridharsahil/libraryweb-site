@@ -19,8 +19,8 @@
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-left: 0;
 }
 .l-region--sidebar-left:before {
@@ -40,8 +40,8 @@
   margin-right: -100%;
   margin-left: 23.80952%;
   clear: none;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .l-region--main-column:before {
   content: " ";
@@ -58,8 +58,8 @@
   width: 28.57143%;
   clear: right;
   float: right;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-left: 0;
 }
 .l-region--sidebar-right:before {

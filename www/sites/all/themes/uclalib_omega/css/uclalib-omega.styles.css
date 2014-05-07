@@ -542,7 +542,7 @@ a.more-link::after {
 
 .no-gray-sidebar .l-region--sidebar-left {
   padding-left: 0;
-  padding-right: 15px;
+  padding-right: 20px;
 }
 .no-gray-sidebar .l-region--sidebar-left:before {
   background: transparent;
