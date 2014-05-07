@@ -1,0 +1,16 @@
+
+// Gray sidebar column uses the faux-column background solution
+// by Nicholas Gallagher.
+.panel-sidebar-left,
+.panel-using-library {
+
+  // Add padding and a background color. If any panes need to be
+  // flush left or right, just use negative margines.
+  .l-region--sidebar-left {
+    padding-left: 15px;
+    padding-right: 15px;
+    &:before {
+      background: #d7d9da;
+    }
+  }
+}
