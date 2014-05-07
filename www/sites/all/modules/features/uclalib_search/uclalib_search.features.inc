@@ -206,6 +206,8 @@ function uclalib_search_default_search_api_index() {
         "field_news_categories" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_news_location" : { "type" : "integer", "entity_type" : "node" },
         "field_news_related_content" : { "type" : "integer", "entity_type" : "node" },
+        "field_news_series" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_news_audience" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resource_associated_loc" : { "type" : "integer", "entity_type" : "node" },
         "field_resource_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_staff_departments" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
