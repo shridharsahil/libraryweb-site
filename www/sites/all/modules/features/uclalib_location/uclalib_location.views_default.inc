@@ -37,27 +37,29 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['relationships']['nid']['table'] = 'taxonomy_index';
   $handler->display->display_options['relationships']['nid']['field'] = 'nid';
   $handler->display->display_options['relationships']['nid']['required'] = TRUE;
-  /* Field: Taxonomy term: Icon */
-  $handler->display->display_options['fields']['field_term_icon']['id'] = 'field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['table'] = 'field_data_field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['field'] = 'field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['label'] = '';
-  $handler->display->display_options['fields']['field_term_icon']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_term_icon']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_term_icon']['settings'] = array(
-    'image_style' => 'category_icon',
-    'image_link' => '',
-  );
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_class'] = '[name]';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Field: Field: Icon */
+  $handler->display->display_options['fields']['field_icon']['id'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
+  $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['label'] = '';
+  $handler->display->display_options['fields']['field_icon']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_icon']['empty'] = '[name]';
+  $handler->display->display_options['fields']['field_icon']['click_sort_column'] = 'bundle';
+  $handler->display->display_options['fields']['field_icon']['settings'] = array(
+    'link_to_content' => 0,
+  );
+  $handler->display->display_options['fields']['field_icon']['delta_offset'] = '0';
   /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
