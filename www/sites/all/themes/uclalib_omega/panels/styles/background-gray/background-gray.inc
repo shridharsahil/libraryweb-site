@@ -25,11 +25,11 @@ function theme_uclalib_omega_background_gray_render_pane($vars) {
     return;
   }
 
-  // Add a class for theming the gray background.
-  if ($pane->css && isset($pane->css['css_class'])) {
-    $pane->css['css_class'] .= ' pane-style-background-gray';
+  // Add a class for theming the the border blue.
+  if (isset($content->css_class)) {
+    $content->css_class .= ' pane-style-background-gray';
   } else {
-    $pane->css['css_class'] = ' pane-style-background-gray';
+    $content->css_class = 'pane-style-background-gray';
   }
 
   return theme('panels_pane', $vars);

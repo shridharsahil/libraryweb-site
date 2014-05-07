@@ -18,26 +18,18 @@ $plugin = array(
  *
  * @ingroup themeable
  */
-function theme_uclalib_omega_border_blue_render_pane($vars) {
+function theme_uclalib_omega_border_blue_render_pane(&$vars) {
   $content = $vars['content'];
 
   if (empty($content->content)) {
     return;
   }
 
-  kpr($vars);
-
-  drupal_set_message("Hello world");
-
-  // Add a wrapper div around the panel pane, for theming purposes.
-  $vars['pane_prefix'] = '<aside class="pane-border-blue">';
-  $vars['pane_suffix'] = '</aside>';
-
-
-  if ($pane->css && isset($pane->css['css_class'])) {
-    $pane->css['css_class'] .= ' pane-border-blue';
+  // Add a class for theming the the border blue.
+  if (isset($content->css_class)) {
+    $content->css_class .= ' pane-style-border-blue';
   } else {
-    $pane->css['css_class'] = ' pane-border-blue';
+    $content->css_class = 'pane-style-border-blue';
   }
 
   return theme('panels_pane', $vars);
