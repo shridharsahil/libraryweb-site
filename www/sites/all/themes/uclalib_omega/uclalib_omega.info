@@ -11,6 +11,12 @@ core = 7.x
 stylesheets[all][] = css/modules/system/system.menus.theme.css
 
 ; ========================================
+; Icons and Fonts
+; ========================================
+stylesheets[all][] = icons/style.css
+stylesheets[all][] = fonts/stylesheet.css
+
+; ========================================
 ; Stylesheets
 ; ========================================
 stylesheets[all][] = css/uclalib-omega.normalize.css
