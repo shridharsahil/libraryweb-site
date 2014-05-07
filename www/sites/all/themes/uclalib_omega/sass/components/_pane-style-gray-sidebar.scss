@@ -8,9 +8,19 @@
   // flush left or right, just use negative margines.
   .l-region--sidebar-left {
     padding-left: 15px;
-    padding-right: 15px;
     &:before {
       background: #d7d9da;
+    }
+  }
+}
+
+// This body class will remove the gray left sidebar used by default.
+// Use it on specific panel pages.
+.no-gray-sidebar {
+  .l-region--sidebar-left {
+    padding-left: 0;
+    &:before {
+      background: transparent;
     }
   }
 }
