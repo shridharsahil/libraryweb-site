@@ -437,7 +437,7 @@ a.more-link::after {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -484,6 +484,32 @@ a.more-link::after {
 .header-search-form-wrapper .form-submit:active,
 .header-search-form-wrapper .form-submit:focus {
   background-image: url(../images/icon-search-hover.png);
+}
+
+.pane-bean-news-events-showcase .field-collection-container {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item {
+  float: left;
+  line-height: 1.1em;
+  margin: 0 10px 0 0;
+  text-align: center;
+  width: 24.16%;
+}
+.pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item > div {
+  border-bottom: none;
+  padding-top: 0;
+  margin: 0;
+}
+.pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item > div .field--name-field-showcase-image {
+  margin-bottom: 4px;
+}
+.pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item > div a {
+  font-size: 0.875em;
+}
+.pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item:last-child {
+  margin: 0;
 }
 
 .pane-border-blue .pane-content {
