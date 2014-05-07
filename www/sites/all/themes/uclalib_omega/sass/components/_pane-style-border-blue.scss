@@ -1,15 +1,18 @@
-.pane-border-blue {
+.pane-style-border-blue {
   .pane-content {
     border: 1px solid $border-color;
+    padding: 1em 1.5em;
   }
   .pane-title {
     background: $ucla-blue;
+    margin: 0;
+    padding: 0.5em 15px;
     &, a {
       color: white;
     }
   }
 }
 
-.pane-border-blue--inline-title {
+.pane-style-border-blue--inline-title .pane-title {
   display: inline-block;
 }

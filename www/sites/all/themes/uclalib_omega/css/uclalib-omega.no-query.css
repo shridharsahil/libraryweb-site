@@ -515,17 +515,20 @@ a.more-link::after {
   padding: 15px;
 }
 
-.pane-border-blue .pane-content {
+.pane-style-border-blue .pane-content {
   border: 1px solid #adcde5;
+  padding: 1em 1.5em;
 }
-.pane-border-blue .pane-title {
+.pane-style-border-blue .pane-title {
   background: #3283be;
+  margin: 0;
+  padding: 0.5em 15px;
 }
-.pane-border-blue .pane-title, .pane-border-blue .pane-title a {
+.pane-style-border-blue .pane-title, .pane-style-border-blue .pane-title a {
   color: white;
 }
 
-.pane-border-blue--inline-title {
+.pane-style-border-blue--inline-title .pane-title {
   display: inline-block;
 }
 
