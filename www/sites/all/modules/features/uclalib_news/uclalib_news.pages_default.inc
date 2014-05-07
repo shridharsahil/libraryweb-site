@@ -199,24 +199,14 @@ function uclalib_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'sidebar_right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_news_location';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_category_links-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'entityreference_entity_view',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'link' => 0,
-        'view_mode' => 'teaser',
-        'links' => 0,
+      'arguments' => array(
+        'nid' => '%node:nid',
       ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => 'Location',
     );
     $pane->cache = array();
     $pane->style = array(

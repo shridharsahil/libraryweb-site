@@ -15,14 +15,14 @@ function uclalib_news_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'News Category Links';
+  $view->human_name = 'News Node views';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Category';
+  $handler->display->display_options['title'] = 'Location';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -82,6 +82,34 @@ function uclalib_news_views_default_views() {
 
   /* Display: News Category Links */
   $handler = $view->new_display('panel_pane', 'News Category Links', 'category_search_links');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Category';
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+  );
+
+  /* Display: News Location Links */
+  $handler = $view->new_display('panel_pane', 'News Location Links', 'panel_pane_1');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_news_location_target_id']['id'] = 'field_news_location_target_id';
+  $handler->display->display_options['relationships']['field_news_location_target_id']['table'] = 'field_data_field_news_location';
+  $handler->display->display_options['relationships']['field_news_location_target_id']['field'] = 'field_news_location_target_id';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_news_location_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
       'type' => 'user',
