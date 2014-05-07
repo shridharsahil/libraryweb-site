@@ -532,7 +532,8 @@ a.more-link::after {
 
 .panel-sidebar-left .l-region--sidebar-left,
 .panel-using-library .l-region--sidebar-left {
-  padding-left: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .panel-sidebar-left .l-region--sidebar-left:before,
 .panel-using-library .l-region--sidebar-left:before {
@@ -541,6 +542,7 @@ a.more-link::after {
 
 .no-gray-sidebar .l-region--sidebar-left {
   padding-left: 0;
+  padding-right: 15px;
 }
 .no-gray-sidebar .l-region--sidebar-left:before {
   background: transparent;

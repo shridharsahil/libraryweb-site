@@ -7,18 +7,21 @@
   // Add padding and a background color. If any panes need to be
   // flush left or right, just use negative margines.
   .l-region--sidebar-left {
-    padding-left: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     &:before {
       background: #d7d9da;
     }
   }
 }
 
-// This body class will remove the gray left sidebar used by default.
+// This body class will remove the gray left sidebar used by default, and reset
+// the padding back to the original values.
 // Use it on specific panel pages.
 .no-gray-sidebar {
   .l-region--sidebar-left {
     padding-left: 0;
+    padding-right: 15px;
     &:before {
       background: transparent;
     }
