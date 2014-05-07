@@ -35,7 +35,7 @@ function uclalib_exhibition_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'events_and_exhibitions_audience',
+          'vocabulary' => 'audience',
           'parent' => 0,
         ),
       ),
