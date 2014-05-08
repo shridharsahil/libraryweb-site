@@ -39,7 +39,7 @@
         } 
       }      
     }
-    .sidebar-tier-2 {
+    .pane-block {
       background: $ucla-lt-gray;
       line-height: 1.7em;
       margin: 0 -25px;
@@ -48,10 +48,17 @@
         font-size: 0.875em;
         margin: 0;
       }
-      a {
-        color: $ucla-blue;
-        font-size: 0.750em;
-      }    
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          a {
+            color: $ucla-blue;
+            font-size: 0.750em;
+          } 
+        }
+      }
     }
     .sidebar-tier-3 {
       p, a {
