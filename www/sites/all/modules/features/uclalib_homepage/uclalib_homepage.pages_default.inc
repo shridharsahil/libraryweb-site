@@ -121,6 +121,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'border-blue',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -154,6 +155,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'border-blue-inline-title',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -175,6 +177,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'border-blue',
     );
     $pane->css = array();
     $pane->extras = array();
