@@ -701,6 +701,8 @@ a.more-link::after {
 
 .pane-todays-hours .views-table {
   width: 100%;
+  border: none;
+  padding: 0;
 }
 .pane-todays-hours thead {
   display: none;
