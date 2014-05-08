@@ -1,6 +1,10 @@
 Patches to Drupal Core
 **********************
 
+Fix drupal_add_region_content for adding panel panes to theme regions.
+https://drupal.org/node/713462
+https://drupal.org/files/713462-drupal-add-region-content-D7.patch
+
 Patches to Contrib modules
 **************************
 
