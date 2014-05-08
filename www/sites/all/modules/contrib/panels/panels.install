@@ -47,7 +47,19 @@ function panels_requirements_install() {
 function panels_schema() {
   // This should always point to our 'current' schema. This makes it relatively easy
   // to keep a record of schema as we make changes to it.
-  return panels_schema_5();
+  return panels_schema_6();
+}
+
+function panels_schema_6() {
+  $schema = panels_schema_5();
+
+  $schema['panels_display']['fields']['window_title'] = array(
+    'type' => 'varchar',
+    'length' => '255',
+    'default' => '',
+  );
+
+  return $schema;
 }
 
 function panels_schema_5() {
@@ -475,5 +487,28 @@ function panels_update_7303() {
   if (!db_table_exists($table_name)) {
     $schema = drupal_get_schema_unprocessed('system', 'cache');
     db_create_table($table_name, $schema);
+  }
+}
+
+/**
+ * Adding window title field to panels displays.
+ */
+function panels_update_7304() {
+  // Load the schema.
+  $schema = panels_schema_6();
+  $msg = array();
+
+  // Add the window_title column to the display table.
+  $table = 'panels_display';
+  $field = 'window_title';
+  // Due to a previous failure, the column may already exist:
+  if (!db_field_exists($table, $field)) {
+    $spec = $schema[$table]['fields'][$field];
+    db_add_field($table, $field, $spec);
+    $msg[] = t('Added panels_display.window_title column.');
+  }
+
+  if (empty($msg)) {
+    $msg[] = t('window_title column already present in the panels_display & panels_pane tables.');
   }
 }
