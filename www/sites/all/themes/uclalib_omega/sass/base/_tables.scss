@@ -1,0 +1,19 @@
+table {
+  border: 1px solid #ADCDE5;
+  display: inline-block;
+  th, tr.even {
+    background: #fff;
+  }
+  tr.odd {
+    background: $table-row-color;
+  }
+  th,
+  td {
+    border: 2px solid #fff;
+    padding: 2px 5px;
+  }
+  th + th, 
+  td + td {
+    text-align: center;
+  }
+}

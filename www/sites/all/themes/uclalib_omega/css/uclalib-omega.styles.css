@@ -22,6 +22,26 @@ img {
   display: inline-block;
 }
 
+table {
+  border: 1px solid #ADCDE5;
+  display: inline-block;
+}
+table th, table tr.even {
+  background: #fff;
+}
+table tr.odd {
+  background: #eff3f4;
+}
+table th,
+table td {
+  border: 2px solid #fff;
+  padding: 2px 5px;
+}
+table th + th,
+table td + td {
+  text-align: center;
+}
+
 html {
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #2d2f35;
