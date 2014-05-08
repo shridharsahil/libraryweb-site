@@ -208,6 +208,7 @@ a[href="#main-content"] {
 
 .l-main-wrapper {
   padding: 0 0 25px;
+  overflow: hidden;
 }
 
 .l-navigation-wrapper {
@@ -311,6 +312,33 @@ a[href="#main-content"] {
 .l-navigation ul.primary-links > li.first a:focus {
   background: transparent;
   color: #3283be;
+}
+
+.l-region--top {
+  background: #eff3f4;
+  margin: 0;
+  padding: 1em 0;
+  position: relative;
+}
+
+.l-region--top:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background: #eff3f4;
+}
+
+.l-region--top:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: #eff3f4;
 }
 
 /**
