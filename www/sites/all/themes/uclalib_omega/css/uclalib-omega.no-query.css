@@ -539,8 +539,9 @@ a.more-link::after {
 }
 
 .pane-style-background-gray {
-  background: #ccc;
-  padding: 15px;
+  background: #eff3f4;
+  padding: 1px 15px;
+  margin: 1em 0;
 }
 
 .pane-style-border-blue .pane-content {
