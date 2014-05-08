@@ -62,6 +62,7 @@ function uclalib_homepage_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'f17360f4-b63b-4fb3-9811-d091de9826e5';
+  $display->window_title = 'Welcome to the UCLA Library';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -244,7 +245,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->uuid = 'e080e2cb-f504-4491-9f25-10b1dab5273d';
     $display->content['new-e080e2cb-f504-4491-9f25-10b1dab5273d'] = $pane;
     $display->panels['top_right_sidebar'][0] = 'new-e080e2cb-f504-4491-9f25-10b1dab5273d';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
