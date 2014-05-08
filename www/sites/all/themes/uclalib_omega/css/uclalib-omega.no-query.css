@@ -528,8 +528,20 @@ a.more-link::after {
   color: white;
 }
 
-.pane-style-border-blue--inline-title .pane-title {
+.pane-title-inline-wrapper .pane-title {
   display: inline-block;
+}
+
+.pane-title-align-left .pane-title {
+  text-align: left;
+}
+
+.pane-title-align-right .pane-title {
+  text-align: right;
+}
+
+.pane-title-align-center .pane-title {
+  text-align: center;
 }
 
 .panel-sidebar-left .l-region--sidebar-left,
