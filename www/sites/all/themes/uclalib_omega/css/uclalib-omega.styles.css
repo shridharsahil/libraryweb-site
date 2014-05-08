@@ -698,6 +698,17 @@ a.more-link::after {
   color: #3283be;
 }
 
+.pane-todays-hours.pane-style-border-blue .pane-content {
+  padding: 3px;
+}
+
+.pane-todays-hours .views-table {
+  width: 100%;
+}
+.pane-todays-hours thead {
+  display: none;
+}
+
 .cal-date {
   display: inline-block;
   margin: 0;
