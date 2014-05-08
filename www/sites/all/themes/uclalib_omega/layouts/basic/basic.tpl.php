@@ -15,6 +15,7 @@
   <?php if ($page['highlighted']) : ?>
   <div class="l-highlighted-wrapper">
     <div class="l-highlighted">
+      <?php print render($page['help']); ?>
       <?php print render($page['highlighted']); ?>
     </div>
   </div>
