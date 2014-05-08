@@ -3,6 +3,9 @@
   background: $sidebar-bg-lt-blue;
   margin: 0 -25px;
   padding: 24px 0 15px;
+  .no-gray-sidebar-left & {
+    margin: 0;
+  }
   .pane-title {
     background: $ucla-blue;
     color: #fff;
@@ -23,11 +26,15 @@
     }
   }
 }
+
 .sidebar-tier-2 {
   background: $ucla-lt-gray;
   line-height: 1.7em;
   margin: 0 -25px;
   padding: 10px 28px 11px;
+  .no-gray-sidebar-left & {
+    margin: 0;
+  }
   .pane-title {
     font-size: 0.875em;
     margin: 0;
