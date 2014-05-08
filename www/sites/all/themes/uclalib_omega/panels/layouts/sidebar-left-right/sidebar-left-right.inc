@@ -32,13 +32,4 @@ function template_preprocess_sidebar_left_right(&$variables) {
     $variables['region_attributes_array'][$name]['class'][] = 'l-region';
     $variables['region_attributes_array'][$name]['class'][] = 'l-region--' . drupal_clean_css_identifier($name);
   }
-
-  // Place panes in the 'highlighted' theme region that exists outside
-  // the panel area itself. This functionality requires a CORE PATCH!
-  // See http://drupal.org/node/713462
-  if (get_class($variables['renderer'] != 'panels_renderer_editor')
-    && isset($variables['content']['top'])) {
-    drupal_add_region_content('highlighted', $variables['content']['top']);
-    $variables['content']['top'] = '';
-  }
 }
