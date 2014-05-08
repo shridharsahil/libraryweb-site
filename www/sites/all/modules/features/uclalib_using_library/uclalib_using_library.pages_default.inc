@@ -191,6 +191,7 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'background-gray',
     );
     $pane->css = array(
       'css_id' => '',
