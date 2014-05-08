@@ -226,9 +226,9 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Project Hightligts',
-      'title' => 'Project Hightligts',
-      'body' => 'Project Hightligts goes here',
+      'admin_title' => 'Project Highlights',
+      'title' => 'Project Highlights',
+      'body' => 'Project Highlights goes here',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
