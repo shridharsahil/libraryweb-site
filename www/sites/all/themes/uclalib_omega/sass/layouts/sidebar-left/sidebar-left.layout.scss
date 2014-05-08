@@ -40,18 +40,31 @@ $gutter-styles: 'split'; // gitter is split between left and right of each col.
   }
 }
 
-// Adjust this nested grid for a two column layout.
-@include layout(2) {
+// Adjust this nested grid for a two column golden ratio layout.
+@include layout(3 2) {
+
+  .l-region--main,
+  .l-region--secondary {
+    @include grid-span(2, 1);
+    padding-left: 0;
+    padding-right: 0;
+    clear: both;
+    float: left;
+  }
+
   // Span 1 column, starting at the 1st column
-  .l-region--below-main-left {
+  .l-region--below-main-left,
+  .l-region--below-secondary-left {
     @include grid-span(1, 1);
     padding-left: 0;
+    clear: left;
   }
 
   // Span 1 column, starting at the 1st column
-  .l-region--below-main-right {
+  .l-region--below-main-right,
+  .l-region--below-secondary-right {
     @include grid-span(1, 2);
     padding-right: 0;
+    clear: right;
   }
 }
-
