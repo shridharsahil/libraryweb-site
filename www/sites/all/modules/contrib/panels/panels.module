@@ -1804,7 +1804,13 @@ function panels_preprocess_html(&$vars) {
 
   // Set window title if manually configured.
   $tasks = page_manager_get_current_page();
-  if (isset($tasks['handler']) && $display = $tasks['handler']->conf['display']) {
+  if (isset($tasks['handler'])) {
+    if (strpos($tasks['handler']->handler, 'panelizer') === 0) {
+      $display = $tasks['contexts'][$tasks['handler']->conf['context']]->data->panelizer['page_manager']->display;
+    }
+    else {
+      $display = $tasks['handler']->conf['display'];
+    }
     if (!empty($display->window_title)) {
       $display_context = $display->context;
 

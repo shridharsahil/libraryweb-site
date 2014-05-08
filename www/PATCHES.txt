@@ -22,4 +22,4 @@ https://drupal.org/files/issues/bean-panelizer_support-2161535-9.patch
 
 Panels - Allow users to manually control window title.
 https://drupal.org/node/2262173
-https://drupal.org/files/issues/panels-allow_users_control_window_title-2262173-1.patch
+https://drupal.org/files/issues/panels-allow_users_control_window_title-2262173-4.patch

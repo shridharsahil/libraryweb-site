@@ -250,7 +250,7 @@ function panels_edit_display_settings_form($form, &$form_state) {
       '#type' => 'textfield',
       '#default_value' => $display->window_title,
       '#title' => t('Window Title'),
-      '#description' => t('The window title of this panel. (As shown in the browser\'s title bar) If left blank, a default title will be used.'),
+      '#description' => t('The window title of this panel, as shown in the browser\'s title bar. If left blank, a default title will be used.'),
       '#maxlength' => 255,
     );
 
