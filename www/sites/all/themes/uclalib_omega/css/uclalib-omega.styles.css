@@ -492,6 +492,10 @@ a.more-link::after {
   vertical-align: bottom;
 }
 
+.pane-page-messages {
+  padding: 1em 0;
+}
+
 .pane-page-title h1 {
   font-size: 30px;
   font-weight: 100;
