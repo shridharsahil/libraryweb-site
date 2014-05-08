@@ -22,20 +22,36 @@
   line-height: 1em;
 }
 
-.view-upcoming-events-display {
-  .views-row {
-    clear: both;
-    overflow: hidden;
-    display: table-row;
-  }
-  .views-field {
-    padding: 10px 4px;
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .views-field-field-exhibition-end,
-  .views-field-field-event-date {
-    float: left;
-    margin-right: 14px;
+.ui-tabs .ui-tabs-panel {
+  padding: 6px;
+  .view-upcoming-events-display {
+    .view-content {
+      display: table;
+      width: 100%;
+      .views-row {
+        clear: both;
+        overflow: hidden;
+        display: table-row;
+        &:hover {
+          background: $ucla-lt-gray;
+        }
+      }
+      .views-field {
+        padding: 10px 11px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .views-field +.views-field {
+        padding: 10px 0;
+      }
+      .views-field-field-exhibition-end,
+      .views-field-field-event-date {
+        float: left;
+        margin-right: 14px;
+      }
+      a {
+        color: $ucla-blue;
+      }
+    }
   }
 }

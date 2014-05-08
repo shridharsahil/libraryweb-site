@@ -484,7 +484,7 @@ a.more-link::after {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -735,18 +735,34 @@ a.more-link::after {
   line-height: 1em;
 }
 
-.view-upcoming-events-display .views-row {
+.ui-tabs .ui-tabs-panel {
+  padding: 6px;
+}
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content {
+  display: table;
+  width: 100%;
+}
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row {
   clear: both;
   overflow: hidden;
   display: table-row;
 }
-.view-upcoming-events-display .views-field {
-  padding: 10px 4px;
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row:hover {
+  background: #eff3f4;
+}
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field {
+  padding: 10px 11px;
   display: table-cell;
   vertical-align: middle;
 }
-.view-upcoming-events-display .views-field-field-exhibition-end,
-.view-upcoming-events-display .views-field-field-event-date {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field + .views-field {
+  padding: 10px 0;
+}
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-exhibition-end,
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-event-date {
   float: left;
   margin-right: 14px;
+}
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content a {
+  color: #3283be;
 }
