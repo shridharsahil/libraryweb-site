@@ -638,29 +638,29 @@ a.more-link::after {
   color: #3283be;
   font-size: 0.938em;
 }
-.panel-sidebar-left .l-region--sidebar-left .pane-block,
-.panel-using-library .l-region--sidebar-left .pane-block {
+.panel-sidebar-left .l-region--sidebar-left .sidebar-teir-2,
+.panel-using-library .l-region--sidebar-left .sidebar-teir-2 {
   background: #eff3f4;
   line-height: 1.7em;
   margin: 0 -25px;
   padding: 10px 28px 11px;
 }
-.panel-sidebar-left .l-region--sidebar-left .pane-block .pane-title,
-.panel-using-library .l-region--sidebar-left .pane-block .pane-title {
+.panel-sidebar-left .l-region--sidebar-left .sidebar-teir-2 .pane-title,
+.panel-using-library .l-region--sidebar-left .sidebar-teir-2 .pane-title {
   font-size: 0.875em;
   margin: 0;
 }
-.panel-sidebar-left .l-region--sidebar-left .pane-block ul,
-.panel-using-library .l-region--sidebar-left .pane-block ul {
+.panel-sidebar-left .l-region--sidebar-left .sidebar-teir-2 ul,
+.panel-using-library .l-region--sidebar-left .sidebar-teir-2 ul {
   margin: 0;
   padding: 0;
 }
-.panel-sidebar-left .l-region--sidebar-left .pane-block ul li,
-.panel-using-library .l-region--sidebar-left .pane-block ul li {
+.panel-sidebar-left .l-region--sidebar-left .sidebar-teir-2 ul li,
+.panel-using-library .l-region--sidebar-left .sidebar-teir-2 ul li {
   list-style: none;
 }
-.panel-sidebar-left .l-region--sidebar-left .pane-block ul li a,
-.panel-using-library .l-region--sidebar-left .pane-block ul li a {
+.panel-sidebar-left .l-region--sidebar-left .sidebar-teir-2 ul li a,
+.panel-using-library .l-region--sidebar-left .sidebar-teir-2 ul li a {
   color: #3283be;
   font-size: 0.750em;
 }
