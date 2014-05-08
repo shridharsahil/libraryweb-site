@@ -24,6 +24,7 @@
 
 .ui-tabs .ui-tabs-panel {
   padding: 6px;
+  .view-recent-news-highlight,
   .view-upcoming-events-display {
     .view-content {
       display: table;
@@ -49,9 +50,12 @@
         float: left;
         margin-right: 14px;
       }
-      a {
-        color: $ucla-blue;
-      }
     }
-  }
+    a {
+      color: $ucla-blue;
+    }
+    .view-footer {
+      text-align: right;
+    }
+  }    
 }
