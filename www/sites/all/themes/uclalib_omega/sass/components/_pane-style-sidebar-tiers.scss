@@ -1,0 +1,52 @@
+
+.sidebar-tier-1 {
+  background: $sidebar-bg-lt-blue;
+  margin: 0 -25px;
+  padding: 24px 0 15px;
+  .pane-title {
+    background: $ucla-blue;
+    color: #fff;
+    font-size: 0.938em;
+    margin: 0;
+    padding: 10px 8px 10px 28px;
+  }
+  ul {
+    margin: 0;
+    padding: 0 8px 0 28px;
+    li {
+      line-height: 2.35em;
+      list-style: none;
+      a {
+        color: $ucla-blue;
+        font-size: 0.938em;
+      }
+    }
+  }
+}
+.sidebar-tier-2 {
+  background: $ucla-lt-gray;
+  line-height: 1.7em;
+  margin: 0 -25px;
+  padding: 10px 28px 11px;
+  .pane-title {
+    font-size: 0.875em;
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        color: $ucla-blue;
+        font-size: 0.750em;
+      }
+    }
+  }
+}
+.sidebar-tier-3 {
+  p, a {
+    font-size: 13px;
+    font-weight: normal;
+  }
+}
