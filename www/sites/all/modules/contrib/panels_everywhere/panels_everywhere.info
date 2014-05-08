@@ -6,9 +6,9 @@ dependencies[] = page_manager
 core = 7.x
 files[] = panels_everywhere.module
 
-; Information added by drupal.org packaging script on 2012-07-11
-version = "7.x-1.0-rc1"
+; Information added by Drupal.org packaging script on 2014-05-06
+version = "7.x-1.0-rc1+37-dev"
 core = "7.x"
 project = "panels_everywhere"
-datestamp = "1342012935"
+datestamp = "1399337928"
 
