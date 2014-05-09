@@ -13,10 +13,10 @@
  */
 function uclalib_omega_preprocess_panels_pane(&$vars) {
   if ($vars['pane']->type == 'block') {
-    if (isset($vars['content']['bean'])) {
+    if (isset($vars['content']['bean']) && is_array($vars['content']['bean'])) {
       $bean_info = current($vars['content']['bean']);
       $bean_type = $bean_info['#bundle'];
-      $vars['classes_array'][] = 'bean--' . $bean_type;
+      $vars['classes_array'][] = drupal_html_class('bean--' . $bean_type);
     }
   }
 }
