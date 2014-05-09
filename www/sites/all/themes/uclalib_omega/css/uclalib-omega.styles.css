@@ -23,6 +23,7 @@ img {
 }
 
 table {
+  border: 1px solid #adcde5;
   display: inline-block;
 }
 table th, table tr.even {
