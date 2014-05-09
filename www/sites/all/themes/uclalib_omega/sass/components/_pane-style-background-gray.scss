@@ -1,6 +1,12 @@
 
 .pane-style-background-gray {
   background: $highlighted-bg-color;
-  padding: 1px 15px;
+  padding: 22px 15px;
   margin: 1em 0;
+  p {
+    margin: 0;
+  }
+  p + p {
+    margin-top: 15px;
+  }
 }

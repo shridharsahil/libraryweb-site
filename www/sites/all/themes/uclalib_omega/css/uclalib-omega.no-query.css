@@ -618,8 +618,14 @@ a.more-link {
 
 .pane-style-background-gray {
   background: #eff3f4;
-  padding: 1px 15px;
+  padding: 22px 15px;
   margin: 1em 0;
+}
+.pane-style-background-gray p {
+  margin: 0;
+}
+.pane-style-background-gray p + p {
+  margin-top: 15px;
 }
 
 .pane-style-border-blue {
