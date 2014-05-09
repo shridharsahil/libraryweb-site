@@ -9,7 +9,9 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
    * Add this filter to the query.
    */
   public function query() {
-    if (isset($this->view->exposed_input['open_now']) && $this->view->exposed_input['open_now']) {
+    if ((isset($this->view->exposed_input['open_now']) && $this->view->exposed_input['open_now']) ||
+       (isset($this->view->filter['open_now']) && $this->view->filter['open_now']->value)) {
+
       $this->get_opening_results();
 
       // Add the list of nids as condition to the query.
