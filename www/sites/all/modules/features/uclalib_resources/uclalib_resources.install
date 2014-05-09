@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Delete old image icon field.
+ */
+function uclalib_resources_update_7001() {
+  if (field_info_instance('node', 'field_resource_display_icon', 'uclalib_resources')) {
+    field_delete_field('field_resource_display_icon');
+    field_purge_batch();
+  }
+}
