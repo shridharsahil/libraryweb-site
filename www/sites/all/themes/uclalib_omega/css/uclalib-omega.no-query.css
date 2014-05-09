@@ -430,7 +430,7 @@ a[href="#main-content"] {
 }
 
 .more-link-triangle-after:after, div.more-link > a:after,
-a.more-link:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
+a.more-link:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -510,6 +510,15 @@ a.more-link {
 .pane-bean-link-list .field--name-field-link-link,
 .pane-bean-link-list .field--name-field-link-link div {
   display: inline;
+}
+.pane-bean-link-list .field--name-field-link-link a {
+  color: #3283be;
+}
+.pane-bean-link-list .field--name-field-link-link a:after {
+  z-index: -1;
+}
+.pane-bean-link-list .field--name-field-link-description {
+  background-color: white;
 }
 
 .pane-bean-quick-find .pane-content {

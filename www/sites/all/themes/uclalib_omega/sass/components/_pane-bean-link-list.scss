@@ -9,4 +9,15 @@
       display: inline;
     }
   }
+  // 1. sneaky way to hide the triangle when there is a description
+  .field--name-field-link-link a {
+    @extend .more-link-triangle-after;
+    color: $ucla-blue;
+    &:after {
+      z-index: -1; // 1.
+    }
+  }
+  .field--name-field-link-description {
+    background-color: white; // 1.
+  }
 }
