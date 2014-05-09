@@ -67,10 +67,12 @@ function uclalib_opening_hours_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Library Hours';
+  $display->uuid = '19ee4022-1a6d-428f-b400-9f81eb7a784c';
+  $display->window_title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-03801bad-ffff-413e-a99c-6a222769eec9';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'library_hours-panel_pane_1';
@@ -88,10 +90,11 @@ function uclalib_opening_hours_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    $pane->uuid = '03801bad-ffff-413e-a99c-6a222769eec9';
+    $display->content['new-03801bad-ffff-413e-a99c-6a222769eec9'] = $pane;
+    $display->panels['middle'][0] = 'new-03801bad-ffff-413e-a99c-6a222769eec9';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-03801bad-ffff-413e-a99c-6a222769eec9';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['library_hours'] = $page;
