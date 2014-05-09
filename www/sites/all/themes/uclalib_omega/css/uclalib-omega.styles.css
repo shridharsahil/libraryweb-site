@@ -607,12 +607,6 @@ a.more-link::after {
 .panel-using-library .l-region--sidebar-left:before {
   background: #d7d9da;
 }
-.gray-sidebar-left .l-region--sidebar-left a, .panel-sidebar-left .l-region--sidebar-left a,
-.panel-using-library .l-region--sidebar-left a, .gray-sidebar-left .l-region--sidebar-left p, .panel-sidebar-left .l-region--sidebar-left p,
-.panel-using-library .l-region--sidebar-left p, .gray-sidebar-left .l-region--sidebar-left .pane-title, .panel-sidebar-left .l-region--sidebar-left .pane-title,
-.panel-using-library .l-region--sidebar-left .pane-title {
-  font-weight: bold;
-}
 
 .no-gray-sidebar-left .l-region--sidebar-left {
   padding-left: 0;
@@ -650,6 +644,7 @@ a.more-link::after {
   background: #3283be;
   color: #fff;
   font-size: 0.938em;
+  font-weight: bold;
   margin: 0;
   padding: 10px 8px 10px 28px;
 }
@@ -678,6 +673,7 @@ a.more-link::after {
 }
 .sidebar-tier-2 .pane-title {
   font-size: 0.875em;
+  font-weight: bold;
   margin: 0;
 }
 .sidebar-tier-2 ul {
@@ -692,7 +688,7 @@ a.more-link::after {
   font-size: 0.750em;
 }
 
-.sidebar-tier-3 p, .sidebar-tier-3 a {
+.sidebar-tier-3 {
   font-size: 13px;
 }
 
