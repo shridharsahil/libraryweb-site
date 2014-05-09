@@ -270,7 +270,7 @@ function uclalib_static_panelizer_defaults() {
     $display->panels['main'][1] = 'new-212989c4-d37d-4068-8b80-ba07dcabffb9';
     $pane = new stdClass();
     $pane->pid = 'new-e8c9b83a-10ea-4b25-a9a8-55dda8aa1fc8';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'sub_content';
     $pane->subtype = 'sub_content';
     $pane->shown = TRUE;
@@ -293,7 +293,7 @@ function uclalib_static_panelizer_defaults() {
     $display->panels['sidebar_left'][0] = 'new-e8c9b83a-10ea-4b25-a9a8-55dda8aa1fc8';
     $pane = new stdClass();
     $pane->pid = 'new-42e32055-fd48-4e18-96a5-77f3be857b34';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'quick_links';
     $pane->subtype = 'quick_links';
     $pane->shown = TRUE;
@@ -496,7 +496,7 @@ function uclalib_static_panelizer_defaults() {
     $display->panels['main'][2] = 'new-85e90fbd-65ce-4e3e-9108-caaf0e0664be';
     $pane = new stdClass();
     $pane->pid = 'new-914d158d-b8d4-4662-a39d-5499ba0a43f0';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'sibling_content';
     $pane->subtype = 'sibling_content';
     $pane->shown = TRUE;
@@ -519,7 +519,7 @@ function uclalib_static_panelizer_defaults() {
     $display->panels['sidebar_left'][0] = 'new-914d158d-b8d4-4662-a39d-5499ba0a43f0';
     $pane = new stdClass();
     $pane->pid = 'new-a3b20d8c-dc0b-4c9a-a061-4a18b1ee2e9a';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'quick_links';
     $pane->subtype = 'quick_links';
     $pane->shown = TRUE;

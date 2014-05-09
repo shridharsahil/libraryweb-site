@@ -134,7 +134,7 @@ function uclalib_location_default_page_manager_pages() {
     $display->panels['main'][0] = 'new-960f21bf-0df1-4b81-a2f1-11fa2320def9';
     $pane = new stdClass();
     $pane->pid = 'new-69c3b8ef-8da7-4440-9083-0cfffe6b48e9';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'views-7676abd10308a3844c65d210917a6c50';
     $pane->shown = TRUE;
@@ -157,7 +157,7 @@ function uclalib_location_default_page_manager_pages() {
     $display->panels['sidebar_left'][0] = 'new-69c3b8ef-8da7-4440-9083-0cfffe6b48e9';
     $pane = new stdClass();
     $pane->pid = 'new-2d43cb10-cc00-47f9-9953-d7f3d1d2a1a0';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-bTI1w8Nuhrk7oP24NO1OJO4pkObiIq4G';
     $pane->shown = TRUE;
@@ -179,7 +179,7 @@ function uclalib_location_default_page_manager_pages() {
     $display->panels['sidebar_left'][1] = 'new-2d43cb10-cc00-47f9-9953-d7f3d1d2a1a0';
     $pane = new stdClass();
     $pane->pid = 'new-320c7bc8-848a-4e6f-86e6-97a7ecb19f9d';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-lezaXRxGQehgf5TeDb5KW0dKO65R1G6d';
     $pane->shown = TRUE;
@@ -201,7 +201,7 @@ function uclalib_location_default_page_manager_pages() {
     $display->panels['sidebar_left'][2] = 'new-320c7bc8-848a-4e6f-86e6-97a7ecb19f9d';
     $pane = new stdClass();
     $pane->pid = 'new-f3b6a022-1723-41f8-afdf-4eb33ddfbb69';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-1ynNBlTvQZV71h2pYFLkyG41OqkbIABs';
     $pane->shown = TRUE;
@@ -223,7 +223,7 @@ function uclalib_location_default_page_manager_pages() {
     $display->panels['sidebar_left'][3] = 'new-f3b6a022-1723-41f8-afdf-4eb33ddfbb69';
     $pane = new stdClass();
     $pane->pid = 'new-635eb81a-5b91-4b64-8fef-67558c847cb6';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-ZYdPWBsFGwiQKrzDoGQYdOl1OO6hCz4Z';
     $pane->shown = TRUE;

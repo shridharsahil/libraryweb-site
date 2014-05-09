@@ -444,7 +444,7 @@ function uclalib_exhibition_default_page_manager_pages() {
     $display->panels['main'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-ly1J8SSCdGwj0cMhWyVBGEdkbbXCocxH';
     $pane->shown = TRUE;
@@ -465,7 +465,7 @@ function uclalib_exhibition_default_page_manager_pages() {
     $display->panels['sidebar_left'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-3R2fSstWpR0eqQuINJg1HUmpaYIWrcVZ';
     $pane->shown = TRUE;
@@ -486,7 +486,7 @@ function uclalib_exhibition_default_page_manager_pages() {
     $display->panels['sidebar_left'][1] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-kMqWyKrKuWzTo16rRLs1Z4nGrEbOYzCa';
     $pane->shown = TRUE;

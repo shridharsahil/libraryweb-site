@@ -11,7 +11,7 @@ $gutter-styles: 'split'; // gitter is split between left and right of each col.
 }
 
 @include layout($grid) {
-  .panel-sidebar-left {
+  .panel-sidebar-left-golden {
     //@include background-grid($color: blue);
     @include clearfix;
     position: relative; // Needed for faux-column.

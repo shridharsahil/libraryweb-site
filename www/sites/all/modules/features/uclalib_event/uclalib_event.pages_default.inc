@@ -510,7 +510,7 @@ function uclalib_event_default_page_manager_pages() {
     $display->panels['main'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-zItRqA5RFuDfSs4G2t7RRpoLl2i48MIl';
     $pane->shown = TRUE;
@@ -531,7 +531,7 @@ function uclalib_event_default_page_manager_pages() {
     $display->panels['sidebar_left'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-K8oMPaSbIBACYBFBfyeXeWjlcnpbOesE';
     $pane->shown = TRUE;
@@ -552,7 +552,7 @@ function uclalib_event_default_page_manager_pages() {
     $display->panels['sidebar_left'][1] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-dPTRrvJVywvmbk8IrApIgbk8EveZIybL';
     $pane->shown = TRUE;
@@ -573,7 +573,7 @@ function uclalib_event_default_page_manager_pages() {
     $display->panels['sidebar_left'][2] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-dS9NrtY8lix1Z1JilcWmN5XY52FtPcSK';
     $pane->shown = TRUE;

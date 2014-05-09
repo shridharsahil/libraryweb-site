@@ -83,7 +83,7 @@ function uclalib_search_default_page_manager_pages() {
     $display->panels['main'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'views--exp-news_search-news_search';
     $pane->shown = TRUE;
@@ -105,7 +105,7 @@ function uclalib_search_default_page_manager_pages() {
     $display->panels['sidebar_left'][0] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-1qpndRwdfnD7bkZtKnnGtokz0uDgzZul';
     $pane->shown = TRUE;
@@ -126,7 +126,7 @@ function uclalib_search_default_page_manager_pages() {
     $display->panels['sidebar_left'][1] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-Dc1qU0dwxgIBMqJw2hsEBHKKXSdiRmmV';
     $pane->shown = TRUE;
@@ -147,7 +147,7 @@ function uclalib_search_default_page_manager_pages() {
     $display->panels['sidebar_left'][2] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-84S0KVjaMOzKINqvN9dhV2N1rBClgyEu';
     $pane->shown = TRUE;
@@ -168,7 +168,7 @@ function uclalib_search_default_page_manager_pages() {
     $display->panels['sidebar_left'][3] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-PzdHd4VPqXA3qjWQCFasjwlBBCzmEbe0';
     $pane->shown = TRUE;

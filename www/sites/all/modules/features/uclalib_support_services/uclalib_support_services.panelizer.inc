@@ -230,7 +230,7 @@ function uclalib_support_services_panelizer_defaults() {
     $display->panels['main'][0] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'sub_content';
     $pane->subtype = 'sub_content';
     $pane->shown = TRUE;
@@ -252,7 +252,7 @@ function uclalib_support_services_panelizer_defaults() {
     $display->panels['sidebar_left'][0] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'quick_links';
     $pane->subtype = 'quick_links';
     $pane->shown = TRUE;
@@ -277,7 +277,7 @@ function uclalib_support_services_panelizer_defaults() {
     $display->panels['sidebar_left'][1] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'custom';
     $pane->subtype = 'questions_highlight';
     $pane->shown = TRUE;

@@ -306,7 +306,7 @@ function uclalib_location_panelizer_defaults() {
     $display->panels['main'][0] = 'new-04116a50-5279-4343-88bb-5a0067e72626';
     $pane = new stdClass();
     $pane->pid = 'new-5e466d3e-f0c3-468c-a132-84c8e4a70284';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -332,7 +332,7 @@ function uclalib_location_panelizer_defaults() {
     $display->panels['sidebar_left'][0] = 'new-5e466d3e-f0c3-468c-a132-84c8e4a70284';
     $pane = new stdClass();
     $pane->pid = 'new-1b8e24fc-00be-40f5-81c6-7aeb133963d0';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
     $pane->shown = TRUE;
@@ -354,7 +354,7 @@ function uclalib_location_panelizer_defaults() {
     $display->panels['sidebar_left'][1] = 'new-1b8e24fc-00be-40f5-81c6-7aeb133963d0';
     $pane = new stdClass();
     $pane->pid = 'new-d0b937a2-f5b9-4271-853f-f5374b33e65f';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'quick_links';
     $pane->subtype = 'quick_links';
     $pane->shown = TRUE;
@@ -380,7 +380,7 @@ function uclalib_location_panelizer_defaults() {
     $display->panels['sidebar_left'][2] = 'new-d0b937a2-f5b9-4271-853f-f5374b33e65f';
     $pane = new stdClass();
     $pane->pid = 'new-e775749b-89e4-49e5-b50b-9f3235a8612f';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;

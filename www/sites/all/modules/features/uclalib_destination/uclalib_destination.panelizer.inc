@@ -484,7 +484,7 @@ return FALSE;',
     $display->panels['main'][3] = 'new-12';
     $pane = new stdClass();
     $pane->pid = 'new-13';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
     $pane->shown = TRUE;
@@ -505,7 +505,7 @@ return FALSE;',
     $display->panels['sidebar_left'][0] = 'new-13';
     $pane = new stdClass();
     $pane->pid = 'new-14';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'sidebar_left_golden';
     $pane->type = 'quick_links';
     $pane->subtype = 'quick_links';
     $pane->shown = TRUE;

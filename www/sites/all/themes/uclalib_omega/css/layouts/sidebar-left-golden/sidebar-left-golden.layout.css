@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-.panel-sidebar-left {
+.panel-sidebar-left-golden {
   position: relative;
 }
-.panel-sidebar-left:after {
+.panel-sidebar-left-golden:after {
   content: "";
   display: table;
   clear: both;
