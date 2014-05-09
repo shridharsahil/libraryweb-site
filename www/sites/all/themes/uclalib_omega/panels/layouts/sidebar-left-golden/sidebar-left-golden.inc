@@ -7,11 +7,11 @@
 
 // Plugin definition.
 $plugin = array(
-  'title' => t('Sidebar Left'),
+  'title' => t('Sidebar Left Golden Ratio'),
   'icon' => 'preview.png',
   'category' => t('UCLA Library content layouts'),
-  'theme' => 'sidebar_left',
-  'css' => '../../../css/layouts/sidebar-left/sidebar-left.layout.css',
+  'theme' => 'sidebar_left_golden',
+  'css' => '../../../css/layouts/sidebar-left-golden/sidebar-left-golden.layout.css',
   'regions' => array(
     'top' => t('Top'),
     'sidebar_left' => t('Sidebar Left'),
@@ -25,10 +25,10 @@ $plugin = array(
 );
 
 /**
- * Implements hook_preprocess_sidebar_left().
+ * Implements hook_preprocess_sidebar_left_golden().
  */
-function template_preprocess_sidebar_left(&$variables) {
-  $variables['attributes_array']['class'][] = 'panel-sidebar-left';
+function template_preprocess_sidebar_left_golden(&$variables) {
+  $variables['attributes_array']['class'][] = 'panel-sidebar-left-golden';
 
   foreach($variables['content'] as $name => $item) {
     $variables['region_attributes_array'][$name]['class'][] = 'l-region';

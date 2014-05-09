@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Template for the Sidebar left grid layout.
+ * Template for the Sidebar left Golden Ratio layout.
  *
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.
