@@ -484,7 +484,7 @@ a.more-link::after {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399452290');
+  background-image: url('../images/logo-colophon.png?1399382991');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -641,6 +641,7 @@ a.more-link::after {
   background: #c1daeb;
   margin: 0 -25px;
   padding: 24px 0 15px;
+  font-weight: bold;
 }
 .no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content {
   margin: 0;
@@ -670,6 +671,7 @@ a.more-link::after {
   line-height: 1.7em;
   margin: 0 -25px;
   padding: 10px 28px 11px;
+  font-weight: bold;
 }
 .no-gray-sidebar-left .sidebar-tier-2 {
   margin: 0;
@@ -692,7 +694,6 @@ a.more-link::after {
 
 .sidebar-tier-3 p, .sidebar-tier-3 a {
   font-size: 13px;
-  font-weight: normal !important;
 }
 
 .pane-todays-hours.pane-style-border-blue .pane-content {
