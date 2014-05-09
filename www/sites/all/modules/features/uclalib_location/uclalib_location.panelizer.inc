@@ -426,19 +426,16 @@ function uclalib_location_panelizer_defaults() {
     $display->content['new-59c67c9e-9265-427f-b7a6-ca0ead13e902'] = $pane;
     $display->panels['main'][6] = 'new-59c67c9e-9265-427f-b7a6-ca0ead13e902';
     $pane = new stdClass();
-    $pane->pid = 'new-5e466d3e-f0c3-468c-a132-84c8e4a70284';
+    $pane->pid = 'new-012ea686-9f07-489f-a902-787035559e8d';
     $pane->panel = 'sidebar_left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'open_now';
+    $pane->subtype = 'open_now';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '<p class="rtecenter">Open Now</p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -448,9 +445,9 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '5e466d3e-f0c3-468c-a132-84c8e4a70284';
-    $display->content['new-5e466d3e-f0c3-468c-a132-84c8e4a70284'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-5e466d3e-f0c3-468c-a132-84c8e4a70284';
+    $pane->uuid = '012ea686-9f07-489f-a902-787035559e8d';
+    $display->content['new-012ea686-9f07-489f-a902-787035559e8d'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-012ea686-9f07-489f-a902-787035559e8d';
     $pane = new stdClass();
     $pane->pid = 'new-1b8e24fc-00be-40f5-81c6-7aeb133963d0';
     $pane->panel = 'sidebar_left';
