@@ -627,6 +627,11 @@ a.more-link {
 .pane-style-background-gray p + p {
   margin-top: 15px;
 }
+.pane-style-background-gray .pane-title {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
 
 .pane-style-border-blue {
   margin-bottom: 1em;
