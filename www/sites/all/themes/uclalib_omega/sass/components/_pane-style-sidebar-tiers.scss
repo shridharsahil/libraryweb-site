@@ -56,5 +56,9 @@
   }
 }
 .sidebar-tier-3 {
-  font-size: 13px;
+  font-size: 0.875em;
+  .pane-title {
+    font-size: 0.938em;
+    font-weight: bold;
+  }
 }

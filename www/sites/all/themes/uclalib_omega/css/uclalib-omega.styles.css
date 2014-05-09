@@ -689,7 +689,11 @@ a.more-link::after {
 }
 
 .sidebar-tier-3 {
-  font-size: 13px;
+  font-size: 0.875em;
+}
+.sidebar-tier-3 .pane-title {
+  font-size: 0.938em;
+  font-weight: bold;
 }
 
 .pane-todays-hours.pane-style-border-blue .pane-content {
