@@ -210,10 +210,10 @@ function uclalib_using_library_default_page_manager_pages() {
     $display->content['new-85649857-96d9-45cf-894d-a16c0d721d87'] = $pane;
     $display->panels['below_secondary_right'][0] = 'new-85649857-96d9-45cf-894d-a16c0d721d87';
     $pane = new stdClass();
-    $pane->pid = 'new-ad6d143a-ece0-435b-b9a0-5c45c2cf855d';
+    $pane->pid = 'new-558390d6-b2aa-4855-a1e0-39cf8d8363b9';
     $pane->panel = 'below_secondary_right';
     $pane->type = 'block';
-    $pane->subtype = 'bean-using-the-library-equipment-bloc';
+    $pane->subtype = 'bean-find-printers-copiers-and-other-';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -228,9 +228,9 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'ad6d143a-ece0-435b-b9a0-5c45c2cf855d';
-    $display->content['new-ad6d143a-ece0-435b-b9a0-5c45c2cf855d'] = $pane;
-    $display->panels['below_secondary_right'][1] = 'new-ad6d143a-ece0-435b-b9a0-5c45c2cf855d';
+    $pane->uuid = '558390d6-b2aa-4855-a1e0-39cf8d8363b9';
+    $display->content['new-558390d6-b2aa-4855-a1e0-39cf8d8363b9'] = $pane;
+    $display->panels['below_secondary_right'][1] = 'new-558390d6-b2aa-4855-a1e0-39cf8d8363b9';
     $pane = new stdClass();
     $pane->pid = 'new-eb6812a7-5ada-47bd-b1a8-b1d590ce24e3';
     $pane->panel = 'main';
