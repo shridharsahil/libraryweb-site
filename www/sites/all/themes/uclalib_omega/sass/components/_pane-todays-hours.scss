@@ -13,4 +13,28 @@
   thead {
     display: none;
   }
+
+  .views-row {
+    display: table;
+    width: 100%;
+  }
+  span.views-field {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 8px;
+    border: 1px solid white;
+  }
+  .views-row-odd span.views-field {
+    background: $highlighted-bg-color;
+  }
+  span.views-field-opening-hours-today {
+    text-align: right;
+    padding-right: 20px !important;
+  }
+  span.views-field-title {
+    width: 60%;
+  }
+  .views-field-title a {
+    @extend .more-link-triangle-after;
+  }
 }
