@@ -566,6 +566,22 @@ a.more-link {
   margin-top: -20px;
 }
 
+.pane-open-now .location-open,
+.pane-open-now .location-closed {
+  display: block;
+  padding: 22px 28px;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: bold;
+}
+.pane-open-now .location-open {
+  background: #fdb930;
+}
+.pane-open-now .location-closed {
+  background: #fdb930;
+  font-style: italic;
+}
+
 .pane-page-messages {
   padding: 1em 0;
 }
@@ -751,6 +767,11 @@ a.more-link {
 }
 .sidebar-tier-1 ul .leaf a, .l-region--sidebar-left .pane-sibling-content ul .leaf a {
   color: #3283be;
+}
+
+.sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content {
+  margin-top: -15px;
+  padding-top: 0;
 }
 
 .sidebar-tier-2 {
