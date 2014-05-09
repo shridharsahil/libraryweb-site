@@ -22,7 +22,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722666,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '86058cc9-4263-447c-ac03-f4647cbda15c',
@@ -50,6 +50,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 19,
         ),
         1 => array(
@@ -66,6 +69,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 20,
         ),
@@ -84,7 +90,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398969197,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '95745709-2104-4d2c-b237-8139836f3008',
@@ -106,6 +112,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 26,
         ),
         1 => array(
@@ -122,6 +131,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 27,
         ),
@@ -140,6 +152,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 28,
         ),
         3 => array(
@@ -156,6 +171,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 29,
         ),
@@ -174,6 +192,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 30,
         ),
       ),
@@ -191,7 +212,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722734,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '1087b58c-f0a8-46dc-9806-0c424bd1ac5f',
@@ -213,6 +234,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 21,
         ),
         1 => array(
@@ -229,6 +253,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 22,
         ),
@@ -247,6 +274,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 23,
         ),
         3 => array(
@@ -263,6 +293,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 24,
         ),
@@ -281,6 +314,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 25,
         ),
       ),
@@ -298,7 +334,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722354,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '6af3ea98-f8b9-4531-be52-394394cc5553',
@@ -320,6 +356,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 5,
         ),
         1 => array(
@@ -336,6 +375,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 6,
         ),
@@ -354,6 +396,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 7,
         ),
       ),
@@ -371,7 +416,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722227,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '874ead3d-654f-41b6-8500-0f6ca7be6009',
@@ -393,6 +438,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 1,
         ),
         1 => array(
@@ -409,6 +457,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 2,
         ),
@@ -427,6 +478,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 3,
         ),
         3 => array(
@@ -443,6 +497,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 4,
         ),
@@ -461,7 +518,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722604,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '2afc053b-5a2b-4353-aab8-c794ed39fb37',
@@ -483,6 +540,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 14,
         ),
         1 => array(
@@ -499,6 +559,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 15,
         ),
@@ -517,6 +580,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 16,
         ),
         3 => array(
@@ -533,6 +599,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 17,
         ),
@@ -551,6 +620,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 18,
         ),
       ),
@@ -568,7 +640,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722406,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '106e9ea0-ca4e-4c3c-9350-1e6bf3691027',
@@ -596,6 +668,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 8,
         ),
         1 => array(
@@ -612,6 +687,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 9,
         ),
@@ -630,6 +708,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 10,
         ),
         3 => array(
@@ -646,6 +727,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 11,
         ),
@@ -670,6 +754,9 @@ function uclalib_resources_uuid_features_default_beans() {
               ),
             ),
           ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
           'id' => 12,
         ),
         5 => array(
@@ -686,6 +773,9 @@ function uclalib_resources_uuid_features_default_beans() {
                 ),
               ),
             ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
           ),
           'id' => 13,
         ),
