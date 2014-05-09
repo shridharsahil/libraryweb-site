@@ -16,7 +16,7 @@
   ul {
     margin: 0;
     padding: 0 8px 0 28px;
-    li {
+    .leaf {
       line-height: 2.35em;
       list-style: none;
       a {
@@ -54,6 +54,6 @@
 .sidebar-tier-3 {
   p, a {
     font-size: 13px;
-    font-weight: normal;
+    font-weight: normal !important;
   }
 }
