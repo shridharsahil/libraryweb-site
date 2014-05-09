@@ -21,15 +21,17 @@
   span.views-field {
     display: table-cell;
     vertical-align: middle;
-    padding: 5px 8px;
-    border: 1px solid white;
+    padding: 7px 14px;
+    border-left: 3px solid white;
+  }
+  span.views-field:first-child {
+    border-left: 0;
   }
   .views-row-odd span.views-field {
     background: $highlighted-bg-color;
   }
   span.views-field-opening-hours-today {
     text-align: right;
-    padding-right: 20px !important;
   }
   span.views-field-title {
     width: 60%;
