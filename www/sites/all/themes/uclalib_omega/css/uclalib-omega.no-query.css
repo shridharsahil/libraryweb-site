@@ -502,6 +502,10 @@ a.more-link {
 .pane-bean-link-list .menu li {
   margin: 10px 0;
 }
+.pane-bean-link-list .field--name-field-link-description,
+.pane-bean-link-list .field--name-field-link-link {
+  margin-right: 4px;
+}
 .pane-bean-link-list .field--name-field-link-description, .pane-bean-link-list .field--name-field-link-description div,
 .pane-bean-link-list .field--name-field-link-link,
 .pane-bean-link-list .field--name-field-link-link div {
