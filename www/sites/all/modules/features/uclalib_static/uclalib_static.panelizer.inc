@@ -59,6 +59,7 @@ function uclalib_static_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->window_title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -156,7 +157,14 @@ function uclalib_static_panelizer_defaults() {
   $panelizer->css_id = '';
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
-  $panelizer->contexts = array();
+  $panelizer->contexts = array(
+    0 => array(
+      'identifier' => 'Global',
+      'keyword' => 'global',
+      'name' => 'token',
+      'id' => 1,
+    ),
+  );
   $panelizer->relationships = array(
     0 => array(
       'identifier' => 'Menu parent',
@@ -194,6 +202,7 @@ function uclalib_static_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->window_title = '%node:title | %global:site:name';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -338,7 +347,14 @@ function uclalib_static_panelizer_defaults() {
   $panelizer->css_id = '';
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
-  $panelizer->contexts = array();
+  $panelizer->contexts = array(
+    0 => array(
+      'identifier' => 'Global',
+      'keyword' => 'global',
+      'name' => 'token',
+      'id' => 1,
+    ),
+  );
   $panelizer->relationships = array(
     0 => array(
       'identifier' => 'Menu parent',
@@ -376,6 +392,7 @@ function uclalib_static_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->window_title = '%node:title | %global:site:name';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
