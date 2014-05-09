@@ -290,7 +290,7 @@ function uclalib_static_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = 'e8c9b83a-10ea-4b25-a9a8-55dda8aa1fc8';
     $display->content['new-e8c9b83a-10ea-4b25-a9a8-55dda8aa1fc8'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-e8c9b83a-10ea-4b25-a9a8-55dda8aa1fc8';
+    $display->panels['sidebar_left_golden'][0] = 'new-e8c9b83a-10ea-4b25-a9a8-55dda8aa1fc8';
     $pane = new stdClass();
     $pane->pid = 'new-42e32055-fd48-4e18-96a5-77f3be857b34';
     $pane->panel = 'sidebar_left_golden';
@@ -316,7 +316,7 @@ function uclalib_static_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = '42e32055-fd48-4e18-96a5-77f3be857b34';
     $display->content['new-42e32055-fd48-4e18-96a5-77f3be857b34'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-42e32055-fd48-4e18-96a5-77f3be857b34';
+    $display->panels['sidebar_left_golden'][1] = 'new-42e32055-fd48-4e18-96a5-77f3be857b34';
     $pane = new stdClass();
     $pane->pid = 'new-26c73e33-f09f-44a0-aebc-462ce2b17e08';
     $pane->panel = 'top';
@@ -516,7 +516,7 @@ function uclalib_static_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = '914d158d-b8d4-4662-a39d-5499ba0a43f0';
     $display->content['new-914d158d-b8d4-4662-a39d-5499ba0a43f0'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-914d158d-b8d4-4662-a39d-5499ba0a43f0';
+    $display->panels['sidebar_left_golden'][0] = 'new-914d158d-b8d4-4662-a39d-5499ba0a43f0';
     $pane = new stdClass();
     $pane->pid = 'new-a3b20d8c-dc0b-4c9a-a061-4a18b1ee2e9a';
     $pane->panel = 'sidebar_left_golden';
@@ -542,7 +542,7 @@ function uclalib_static_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = 'a3b20d8c-dc0b-4c9a-a061-4a18b1ee2e9a';
     $display->content['new-a3b20d8c-dc0b-4c9a-a061-4a18b1ee2e9a'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-a3b20d8c-dc0b-4c9a-a061-4a18b1ee2e9a';
+    $display->panels['sidebar_left_golden'][1] = 'new-a3b20d8c-dc0b-4c9a-a061-4a18b1ee2e9a';
     $pane = new stdClass();
     $pane->pid = 'new-c65ce2ca-1120-49aa-bf0b-aa4e652f00b3';
     $pane->panel = 'top';

@@ -35,10 +35,12 @@ function uclalib_showcase_panelizer_defaults() {
   $display->panel_settings = array();
   $display->cache = array();
   $display->title = '';
+  $display->uuid = 'ab7be954-55af-4b99-becc-ad8a4a0be2a8';
+  $display->window_title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-af4732ed-720d-4a95-9769-e02b6df84af9';
     $pane->panel = 'first';
     $pane->type = 'entity_field';
     $pane->subtype = 'bean:field_showcase';
@@ -65,10 +67,11 @@ function uclalib_showcase_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['first'][0] = 'new-1';
+    $pane->uuid = 'af4732ed-720d-4a95-9769-e02b6df84af9';
+    $display->content['new-af4732ed-720d-4a95-9769-e02b6df84af9'] = $pane;
+    $display->panels['first'][0] = 'new-af4732ed-720d-4a95-9769-e02b6df84af9';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-af4732ed-720d-4a95-9769-e02b6df84af9';
   $panelizer->display = $display;
   $export['bean:showcase:default:default'] = $panelizer;
 
