@@ -636,6 +636,7 @@ a.more-link::after {
   margin: 0 -25px;
   padding: 24px 0 15px;
   font-weight: bold;
+  font-size: 15px;
 }
 .no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content {
   margin: 0;
@@ -643,7 +644,7 @@ a.more-link::after {
 .sidebar-tier-1 .pane-title, .l-region--sidebar-left .pane-sibling-content .pane-title {
   background: #3283be;
   color: #fff;
-  font-size: 0.938em;
+  font-size: 15px;
   font-weight: bold;
   margin: 0;
   padding: 10px 8px 10px 28px;
@@ -658,7 +659,6 @@ a.more-link::after {
 }
 .sidebar-tier-1 ul .leaf a, .l-region--sidebar-left .pane-sibling-content ul .leaf a {
   color: #3283be;
-  font-size: 0.938em;
 }
 
 .sidebar-tier-2 {
@@ -667,12 +667,13 @@ a.more-link::after {
   margin: 0 -25px;
   padding: 10px 28px 11px;
   font-weight: bold;
+  font-size: 13px;
 }
 .no-gray-sidebar-left .sidebar-tier-2 {
   margin: 0;
 }
 .sidebar-tier-2 .pane-title {
-  font-size: 0.875em;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
 }
@@ -685,14 +686,13 @@ a.more-link::after {
 }
 .sidebar-tier-2 ul li a {
   color: #3283be;
-  font-size: 0.750em;
 }
 
 .sidebar-tier-3 {
-  font-size: 0.875em;
+  font-size: 13px;
 }
 .sidebar-tier-3 .pane-title {
-  font-size: 0.938em;
+  font-size: 14px;
   font-weight: bold;
 }
 

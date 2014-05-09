@@ -4,13 +4,14 @@
   margin: 0 -25px;
   padding: 24px 0 15px;
   font-weight: bold;
+  font-size: 15px;
   .no-gray-sidebar-left & {
     margin: 0;
   }
   .pane-title {
     background: $ucla-blue;
     color: #fff;
-    font-size: 0.938em;
+    font-size: 15px;
     font-weight: bold;
     margin: 0;
     padding: 10px 8px 10px 28px;
@@ -23,7 +24,6 @@
       list-style: none;
       a {
         color: $ucla-blue;
-        font-size: 0.938em;
       }
     }
   }
@@ -35,11 +35,12 @@
   margin: 0 -25px;
   padding: 10px 28px 11px;
   font-weight: bold;
+  font-size: 13px;
   .no-gray-sidebar-left & {
     margin: 0;
   }
   .pane-title {
-    font-size: 0.875em;
+    font-size: 14px;
     font-weight: bold;
     margin: 0;
   }
@@ -50,15 +51,14 @@
       list-style: none;
       a {
         color: $ucla-blue;
-        font-size: 0.750em;
       }
     }
   }
 }
 .sidebar-tier-3 {
-  font-size: 0.875em;
+  font-size: 13px;
   .pane-title {
-    font-size: 0.938em;
+    font-size: 14px;
     font-weight: bold;
   }
 }
