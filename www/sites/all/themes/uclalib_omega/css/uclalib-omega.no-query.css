@@ -586,7 +586,8 @@ a.more-link {
   padding: 1em 0;
 }
 
-.pane-page-title h1 {
+.pane-page-title h1,
+.pane-node-title h1 {
   font-size: 30px;
   font-weight: 100;
   color: #3283be;
