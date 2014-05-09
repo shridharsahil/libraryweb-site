@@ -286,6 +286,9 @@ function uclalib_resources_default_page_manager_pages() {
       'main' => NULL,
       'below_main_left' => NULL,
       'below_main_right' => NULL,
+      'secondary' => NULL,
+      'below_secondary_left' => NULL,
+      'below_secondary_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -313,6 +316,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'background-gray',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -356,7 +360,10 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-horizontal-tab-navigation',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -393,7 +400,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
+      'admin_title' => 'Find Resources Horizontal Tab Navigation',
       'title' => '',
       'body' => '<p>Get help with your research | <a href="/locations?f[0]=field_study_areas%3A34">Find a quiet Study Area</a> | <a href="/locations?f[0]=field_study_areas%3A36">Find a Group Study Area</a></p>
 ',
@@ -404,7 +411,10 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-horizontal-tab-navigation',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();

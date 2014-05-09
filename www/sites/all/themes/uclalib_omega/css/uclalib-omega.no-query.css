@@ -232,6 +232,10 @@ a[href="#main-content"] {
   overflow: hidden;
 }
 
+.l-region--main-column {
+  padding-top: 1em;
+}
+
 .l-navigation-wrapper {
   background: #d7d9da;
   font-size: 18px;
@@ -338,7 +342,7 @@ a[href="#main-content"] {
 .l-region--top {
   background: #eff3f4;
   margin: 0;
-  padding: 1em 0;
+  padding: 1px 0 1em;
   position: relative;
 }
 
@@ -535,6 +539,10 @@ a.more-link {
 }
 .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after {
   margin-top: 12px;
+}
+
+.pane-horizontal-tab-navigation {
+  margin-top: -20px;
 }
 
 .pane-page-messages {
