@@ -19,11 +19,17 @@ function uclalib_omega_preprocess_panels_pane(&$vars) {
       $bean_class = drupal_html_class('pane-bean-' . $bean_type);
 
       // Replace class 'pane-block' with more useful 'pane-bean-$bean-type';
+      $found = FALSE;
       foreach ($vars['classes_array'] as $index => $block_class) {
         if ($block_class == 'pane-block') {
           $vars['classes_array'][$index] = $bean_class;
+          $found = TRUE;
           break;
         }
+      }
+      // If we couldnt find the pane-block class, add the new class to the end.
+      if (!$found) {
+        $vars['classes_array'][] = $bean_class;
       }
     }
   }
