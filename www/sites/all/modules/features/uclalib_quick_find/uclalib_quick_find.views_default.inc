@@ -31,6 +31,10 @@ function uclalib_quick_find_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_icon' => 'field_icon',
+    'name' => 'name',
+  );
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
@@ -60,18 +64,18 @@ function uclalib_quick_find_views_default_views() {
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['tid']['separator'] = '';
-  /* Field: Taxonomy term: Icon */
-  $handler->display->display_options['fields']['field_term_icon']['id'] = 'field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['table'] = 'field_data_field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['field'] = 'field_term_icon';
-  $handler->display->display_options['fields']['field_term_icon']['relationship'] = 'field_quick_find_terms_target_id';
-  $handler->display->display_options['fields']['field_term_icon']['label'] = '';
-  $handler->display->display_options['fields']['field_term_icon']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_term_icon']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_term_icon']['settings'] = array(
-    'image_style' => 'category_icon',
-    'image_link' => '',
+  /* Field: Field: Icon */
+  $handler->display->display_options['fields']['field_icon']['id'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
+  $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['relationship'] = 'field_quick_find_terms_target_id';
+  $handler->display->display_options['fields']['field_icon']['label'] = '';
+  $handler->display->display_options['fields']['field_icon']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_icon']['click_sort_column'] = 'bundle';
+  $handler->display->display_options['fields']['field_icon']['settings'] = array(
+    'link_to_content' => 0,
   );
+  $handler->display->display_options['fields']['field_icon']['delta_offset'] = '0';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
