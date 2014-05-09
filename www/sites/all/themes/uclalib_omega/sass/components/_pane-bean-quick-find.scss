@@ -1,0 +1,47 @@
+.pane-bean-quick-find {
+  .pane-content {
+    padding: 1em 3.5em;
+    font-size: 14px;
+    font-weight: 100;
+  }
+  .views-row {
+    margin: 10px 0;
+  }
+  .views-field-name,
+  .views-field-field-term-icon {
+    display: inline;
+    vertical-align: middle;
+  }
+  .views-field-name {
+    a {
+      color: $ucla-gray;
+      line-height: 32px;
+      vertical-align: middle;
+    }
+  }
+  .icon {
+    vertical-align: middle;
+    font-size: 32px;
+    line-height: 32px;
+    color: $ucla-gray;
+    margin-right: 4px;
+  }
+  .icon:before {
+    vertical-align: baseline;
+  }
+  a:hover .icon,
+  a:hover .icon:before {
+    text-decoration: none;
+  }
+}
+
+.pane-bean-quick-find.pane-style-border-blue {
+  .views-field-name a {
+    @extend .more-link-triangle-after;
+    color: $ucla-blue;
+    font-size: 15px;
+    &:after {
+      margin-top: 12px;
+    }
+  }
+}

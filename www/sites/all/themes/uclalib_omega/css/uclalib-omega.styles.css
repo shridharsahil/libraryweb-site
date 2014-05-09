@@ -427,7 +427,7 @@ a[href="#main-content"] {
 }
 
 .more-link-triangle-after:after, div.more-link > a:after,
-a.more-link:after, .pane-todays-hours .views-field-title a:after {
+a.more-link:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -494,6 +494,47 @@ a.more-link {
   width: 150px;
   height: 30px;
   vertical-align: bottom;
+}
+
+.pane-bean-quick-find .pane-content {
+  padding: 1em 3.5em;
+  font-size: 14px;
+  font-weight: 100;
+}
+.pane-bean-quick-find .views-row {
+  margin: 10px 0;
+}
+.pane-bean-quick-find .views-field-name,
+.pane-bean-quick-find .views-field-field-term-icon {
+  display: inline;
+  vertical-align: middle;
+}
+.pane-bean-quick-find .views-field-name a {
+  color: #666666;
+  line-height: 32px;
+  vertical-align: middle;
+}
+.pane-bean-quick-find .icon {
+  vertical-align: middle;
+  font-size: 32px;
+  line-height: 32px;
+  color: #666666;
+  margin-right: 4px;
+}
+.pane-bean-quick-find .icon:before {
+  vertical-align: baseline;
+}
+.pane-bean-quick-find a:hover .icon,
+.pane-bean-quick-find a:hover .icon:before {
+  text-decoration: none;
+}
+
+.pane-bean-quick-find.pane-style-border-blue .views-field-name a {
+  color: #3283be;
+  font-size: 15px;
+}
+.pane-bean-quick-find.pane-style-border-blue .views-field-name a:after {
+  margin-top: 12px;
 }
 
 .pane-page-messages {
