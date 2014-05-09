@@ -11,6 +11,7 @@
   list-style: none;
   text-align: left;
   /* LTR */
+  padding: 0;
   /* Menu Item Hierarchy Modifiers */
 }
 .menu .expanded {
@@ -25,6 +26,9 @@
 .menu .leaf {
   list-style-image: url('../../../images/misc/menu-leaf.png?1399322589');
   list-style-type: square;
+}
+.menu ul {
+  padding-left: 1em;
 }
 
 /* Menu State Modifiers */

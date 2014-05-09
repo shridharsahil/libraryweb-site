@@ -7,6 +7,7 @@
   border: none;
   list-style: none;
   text-align: left; /* LTR */
+  padding: 0;
 
   /* Menu Item Hierarchy Modifiers */
   .expanded {
@@ -20,6 +21,9 @@
   .leaf {
     list-style-image: image-url('misc/menu-leaf.png');
     list-style-type: square;
+  }
+  ul {
+    padding-left: 1em;
   }
 }
 
