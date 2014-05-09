@@ -17,8 +17,10 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
       // Add the list of nids as condition to the query.
       if ($this->opening_results) {
         $nids = array_keys($this->opening_results);
-        $nids = implode(',', $nids);
-        $this->query->condition('nid', $nids, 'IN', $this->options['group']);
+        foreach ($nids as $nid) {
+          $this->query->condition('nid', $nid, 'IN', $this->options['group']);
+        }
+        $this->query->where[$this->options['group']]['type'] = 'OR';
       }
     }
   }
