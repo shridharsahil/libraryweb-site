@@ -1,0 +1,28 @@
+.pane-location-header {
+  position: relative;
+  .pane-node-title {
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  .pane-node-field-address,
+  .pane-node-field-location-phone {
+    font-size: 13px;
+    // display: inline;
+    &, div {
+      display: inline;
+    }
+  }
+  .pane-node-field-location-phone:before {
+    content: " | ";
+    display: inline;
+  }
+  .pane-node-field-location-social-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .field__item {
+      display: inline;
+    }
+  }
+}
