@@ -318,12 +318,12 @@ a[href="#main-content"] {
   padding: 0 50px 0 0;
 }
 .l-navigation ul.primary-links > li.first a:after {
-  font-family: uclalib;
-  content: "\e600";
+  font-family: icomoon;
+  content: "\e60b";
   font-size: 17px;
   font-weight: normal;
   font-style: normal;
-  text-indent: 954px;
+  text-indent: 909px;
   display: inline-block;
   line-height: 1em;
   vertical-align: middle;

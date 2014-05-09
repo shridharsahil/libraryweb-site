@@ -53,12 +53,12 @@ $nav-horiz-space: 30px;
           overflow: hidden;
           padding: 0 $nav-horiz-space+20px 0 0;
           &:after {
-            font-family: uclalib;
-            content: "\e600";
+            font-family: icomoon;
+            content: "\e60b";
             font-size: 17px;
             font-weight: normal;
             font-style: normal;
-            text-indent: 999px - ($nav-horiz-space+15px);
+            text-indent: 909px;
             display: inline-block;
             line-height: 1em;
             vertical-align: middle;
