@@ -365,6 +365,13 @@ a[href="#main-content"] {
   background: #eff3f4;
 }
 
+.destination-icons-horiz li {
+  margin-right: 2px;
+}
+.destination-icons-horiz .icon:before {
+  font-size: 32px;
+}
+
 /**
  * Override jQuery UI widget default font sizes.
  */
