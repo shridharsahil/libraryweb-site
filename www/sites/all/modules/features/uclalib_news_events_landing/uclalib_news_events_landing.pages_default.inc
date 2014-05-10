@@ -57,7 +57,7 @@ function uclalib_news_events_landing_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar-left-right';
+  $display->layout = 'two-column';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -68,6 +68,11 @@ function uclalib_news_events_landing_default_page_manager_pages() {
       'main' => NULL,
       'below_main_left' => NULL,
       'below_main_right' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'secondary' => NULL,
+      'below_left' => NULL,
+      'below_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -76,6 +81,28 @@ function uclalib_news_events_landing_default_page_manager_pages() {
   $display->window_title = '';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-88df0f09-5455-4606-ade2-02e0a53850fd';
+    $pane->panel = 'main';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-news--events-landing-page';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '88df0f09-5455-4606-ade2-02e0a53850fd';
+    $display->content['new-88df0f09-5455-4606-ade2-02e0a53850fd'] = $pane;
+    $display->panels['main'][0] = 'new-88df0f09-5455-4606-ade2-02e0a53850fd';
     $pane = new stdClass();
     $pane->pid = 'new-182fca69-d75c-482e-8da8-f01ad1ff1c72';
     $pane->panel = 'top';
@@ -98,28 +125,6 @@ function uclalib_news_events_landing_default_page_manager_pages() {
     $pane->uuid = '182fca69-d75c-482e-8da8-f01ad1ff1c72';
     $display->content['new-182fca69-d75c-482e-8da8-f01ad1ff1c72'] = $pane;
     $display->panels['top'][0] = 'new-182fca69-d75c-482e-8da8-f01ad1ff1c72';
-    $pane = new stdClass();
-    $pane->pid = 'new-88df0f09-5455-4606-ade2-02e0a53850fd';
-    $pane->panel = 'top';
-    $pane->type = 'block';
-    $pane->subtype = 'bean-news--events-landing-page';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '88df0f09-5455-4606-ade2-02e0a53850fd';
-    $display->content['new-88df0f09-5455-4606-ade2-02e0a53850fd'] = $pane;
-    $display->panels['top'][1] = 'new-88df0f09-5455-4606-ade2-02e0a53850fd';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
