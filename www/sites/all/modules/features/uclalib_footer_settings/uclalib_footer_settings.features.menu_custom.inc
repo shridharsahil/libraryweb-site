@@ -22,7 +22,6 @@ function uclalib_footer_settings_menu_default_menu_custom() {
     'title' => 'Colophon second',
     'description' => 'Links for right column in colophon.',
   );
-
   // Exported menu: menu-footer.
   $menus['menu-footer'] = array(
     'menu_name' => 'menu-footer',
@@ -31,12 +30,13 @@ function uclalib_footer_settings_menu_default_menu_custom() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Colophon first');
   t('Colophon second');
+  t('Colphon first');
   t('Footer');
   t('Links for left column in colophon.');
-  t('Links for right column in colophon.');
   t('Links for page footer horizontal menu.');
+  t('Links for right column in colophon.');
+
 
   return $menus;
 }

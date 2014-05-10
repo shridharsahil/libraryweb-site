@@ -16,7 +16,10 @@ function uclalib_news_events_landing_default_page_manager_pages() {
   $page->admin_title = 'News and Events';
   $page->admin_description = '';
   $page->path = 'news-events';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'News and Events',
