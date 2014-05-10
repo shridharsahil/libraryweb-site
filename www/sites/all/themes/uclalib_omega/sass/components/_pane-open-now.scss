@@ -1,17 +1,11 @@
 .pane-open-now {
-  .location-open,
+  .location-open-now,
   .location-closed {
     display: block;
     padding: 22px 28px;
     font-style: italic;
     font-size: 14px;
     font-weight: bold;
-  }
-  .location-open {
     background: $ucla-yellow;
-  }
-  .location-closed {
-    background: $ucla-yellow;
-    font-style: italic;
   }
 }

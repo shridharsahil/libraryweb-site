@@ -601,20 +601,14 @@ a.more-link {
   display: inline;
 }
 
-.pane-open-now .location-open,
+.pane-open-now .location-open-now,
 .pane-open-now .location-closed {
   display: block;
   padding: 22px 28px;
   font-style: italic;
   font-size: 14px;
   font-weight: bold;
-}
-.pane-open-now .location-open {
   background: #fdb930;
-}
-.pane-open-now .location-closed {
-  background: #fdb930;
-  font-style: italic;
 }
 
 .pane-page-messages {
