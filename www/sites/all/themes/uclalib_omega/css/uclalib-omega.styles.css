@@ -341,8 +341,11 @@ a[href="#main-content"] {
 .l-region--top {
   background: #eff3f4;
   margin: 0;
-  padding: 1px 0 1em;
+  padding: 1px 0;
   position: relative;
+}
+.l-region--top .panel-pane {
+  margin: 24px 0;
 }
 
 .l-region--top:before {

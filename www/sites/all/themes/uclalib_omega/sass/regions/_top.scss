@@ -1,8 +1,11 @@
 .l-region--top {
   background: $highlighted-bg-color;
   margin: 0;
-  padding: 1px 0 1em;
+  padding: 1px 0;
   position: relative;
+  .panel-pane {
+    margin: 24px 0;
+  }
 }
 
 .l-region--top:before {
