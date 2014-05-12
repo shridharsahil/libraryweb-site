@@ -472,11 +472,18 @@ a.more-link {
   font-size: 1.625em;
   text-decoration: none;
 }
-.pane-bean-news-events-landing-page .more-link {
-  margin: -42px 11px 40px 0;
+.pane-bean-news-events-landing-page .pane-title a:hover {
+  text-decoration: underline;
+}
+.pane-bean-news-events-landing-page .view-header {
+  float: right;
+}
+.pane-bean-news-events-landing-page .view-header .more-link {
+  margin: -66px 11px 0 0;
 }
 .pane-bean-news-events-landing-page .view-content {
   font-size: 0.875em;
+  margin-top: 40px;
 }
 .pane-bean-news-events-landing-page .view-content .views-field-field-news-image {
   float: left;
