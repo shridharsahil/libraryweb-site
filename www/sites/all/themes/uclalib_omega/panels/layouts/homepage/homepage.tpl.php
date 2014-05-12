@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Template for the Golden layout.
+ * Template for the Homepage layout.
  *
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.
@@ -10,6 +10,12 @@
  */
 ?>
 <div<?php print $attributes ?>>
+
+  <?php if (!empty($content['top'])): ?>
+    <div<?php print drupal_attributes($region_attributes_array['top'])?>>
+      <?php print $content['top'] ?>
+    </div>
+  <?php endif; ?>
 
   <div class="homepage-top">
     <div class="homepage-top-left">
