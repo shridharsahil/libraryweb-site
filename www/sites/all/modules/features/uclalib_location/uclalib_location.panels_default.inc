@@ -51,7 +51,7 @@ function uclalib_location_default_panels_mini() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'link' => 0,
+      'link' => 1,
       'markup' => 'h1',
       'id' => '',
       'class' => '',
