@@ -473,7 +473,7 @@ a.more-link {
   text-decoration: none;
 }
 .pane-bean-news-events-landing-page .more-link {
-  margin: -42px 10px 40px 0;
+  margin: -42px 11px 40px 0;
 }
 .pane-bean-news-events-landing-page .view-content {
   font-size: 0.875em;
@@ -485,30 +485,29 @@ a.more-link {
 .pane-bean-news-events-landing-page .view-content .views-field-body {
   font-size: 0.857em;
 }
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content {
-  display: table;
-  width: 100%;
-}
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-row {
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-row {
   clear: both;
   overflow: hidden;
   display: table-row;
 }
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-row:hover {
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-row:hover {
   background: #eff3f4;
 }
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field {
-  padding: 10px 11px;
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field {
+  padding: 15px 11px;
   display: table-cell;
   vertical-align: middle;
 }
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field + .views-field {
-  padding: 10px 0;
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field + .views-field {
+  padding: 15px 0;
 }
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field-field-exhibition-end,
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field-field-event-date {
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field-field-exhibition-end,
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field-field-event-date {
   float: left;
   margin-right: 14px;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-2 .views-row {
+  margin-bottom: 32px;
 }
 
 .pane-ask-a-librarian {
