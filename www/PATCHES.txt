@@ -24,6 +24,10 @@ Bean - Panelizer support for Bean
 https://drupal.org/node/2161535
 https://drupal.org/files/issues/bean-panelizer_support-2161535-9.patch
 
+Ctools - hide empty page title pane when wrapper tag is used
+https://drupal.org/node/2265451
+https://drupal.org/files/issues/ctools-hide-empty-page-title-with-wrapper-tag-2265451.patch
+
 Panels - Allow users to manually control window title.
 https://drupal.org/node/2262173
 https://drupal.org/files/issues/panels-allow_users_control_window_title-2262173-4.patch

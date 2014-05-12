@@ -100,8 +100,14 @@ function ctools_page_title_content_type_edit_form_submit($form, &$form_state) {
  * Variable token callback to properly render the page title, with markup.
  */
 function ctools_page_title_content_type_token(&$variables, $tag, $id, $class) {
+  $title = drupal_get_title();
+
+  if (empty($title)) {
+    return '';
+  }
+
   if ($tag == 'none') {
-    return drupal_get_title();
+    return $title;
   }
 
   $output = '<' . $tag;
@@ -113,6 +119,6 @@ function ctools_page_title_content_type_token(&$variables, $tag, $id, $class) {
     $output .= ' class="' . $class . '"';
   }
 
-  $output .= '>' . drupal_get_title() . '</' . $tag . '>' . "\n";
+  $output .= '>' . $title . '</' . $tag . '>' . "\n";
   return $output;
 }
