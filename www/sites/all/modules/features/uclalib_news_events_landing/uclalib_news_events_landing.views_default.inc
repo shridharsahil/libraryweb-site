@@ -35,6 +35,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'clearfix';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -61,6 +62,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['relationship'] = 'field_events_target_id';
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_date']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
     'format_type' => 'short',
@@ -77,6 +79,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_start']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_start']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_start']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_exhibition_start']['settings'] = array(
     'format_type' => 'month_with_date',
@@ -94,6 +97,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '[field_exhibition_start] to [field_exhibition_end]';
   $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
     'format_type' => 'month_with_date',
