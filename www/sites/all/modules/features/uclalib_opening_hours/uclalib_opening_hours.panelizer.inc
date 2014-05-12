@@ -244,7 +244,10 @@ function uclalib_opening_hours_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'icon-telephone',
+    );
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
@@ -273,7 +276,10 @@ function uclalib_opening_hours_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'icon-email',
+    );
     $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
