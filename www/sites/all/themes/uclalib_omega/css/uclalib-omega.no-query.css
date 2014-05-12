@@ -494,7 +494,6 @@ a.more-link {
 }
 .pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-row {
   clear: both;
-  display: table;
   overflow: hidden;
 }
 .pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-row:hover {
