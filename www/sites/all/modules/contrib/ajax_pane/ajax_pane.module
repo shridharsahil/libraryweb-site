@@ -121,6 +121,10 @@ function ajax_pane_panels_pane_content_alter($content, $pane, $args, $context) {
     return;
   }
 
+  if (!is_object($content)) {
+    $content = new StdClass();
+  }
+
   $display = panels_get_current_page_display();
 
   // Ensure that the correct display arguments are being returned (Panels Everywhere fix.)
