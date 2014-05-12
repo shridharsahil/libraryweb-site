@@ -877,8 +877,6 @@ a.more-link {
 .sidebar-tier-1 ul .leaf, .l-region--sidebar-left .pane-sibling-content ul .leaf {
   line-height: 2.35em;
   list-style: none;
-}
-.sidebar-tier-1 ul .leaf a, .l-region--sidebar-left .pane-sibling-content ul .leaf a {
   color: #3283be;
 }
 
