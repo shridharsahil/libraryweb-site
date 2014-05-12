@@ -39,7 +39,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<a href="news?f[0]=field_news_categories%3A!1&f[1]=field_news_location%3A!2">More ></a>';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="more-link"> <a href="news?f[0]=field_news_categories%3A!1&f[1]=field_news_location%3A!2">More</a></div>';
   $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   /* Field: Content: News Image */
   $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
