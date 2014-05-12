@@ -39,8 +39,8 @@
   .pane-news-events-landing-display-panel-pane-1 {
     .views-row {
       clear: both;
+      display: table;
       overflow: hidden;
-      display: table-row;
       &:hover {
         background: $ucla-lt-gray;
       }
@@ -49,13 +49,20 @@
       padding: 15px 11px;
       display: table-cell;
       vertical-align: middle;
+      p {
+        font-size: 0.857em;
+        font-style: italic;
+        margin: 0;
+      }
     }
-    .views-field + .views-field {
+    .views-field-nothing {
       padding: 15px 0;
     }
-    .views-field-field-exhibition-end,
+    .views-field-field-exhibition-end {
+      margin-right: 10px;
+      min-width: 125px;
+    }
     .views-field-field-event-date {
-      float: left;
       margin-right: 14px;
     }
   }
