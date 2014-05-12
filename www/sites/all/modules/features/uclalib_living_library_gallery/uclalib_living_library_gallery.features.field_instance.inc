@@ -24,7 +24,7 @@ function uclalib_living_library_gallery_field_default_field_instances() {
           'fancybox_caption_custom' => '',
           'fancybox_gallery' => 'post',
           'fancybox_gallery_custom' => '',
-          'fancybox_image_style_content' => 'widescreen_small',
+          'fancybox_image_style_content' => 'widescreen_medium',
           'fancybox_image_style_fancybox' => 'widescreen_large',
         ),
         'type' => 'fancybox',
