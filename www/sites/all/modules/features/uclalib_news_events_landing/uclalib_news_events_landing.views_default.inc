@@ -113,6 +113,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_end_1']['relationship'] = 'field_events_target_id';
   $handler->display->display_options['fields']['field_exhibition_end_1']['ui_name'] = 'Exhibition Label';
   $handler->display->display_options['fields']['field_exhibition_end_1']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['text'] = 'EXHIBITION';
   $handler->display->display_options['fields']['field_exhibition_end_1']['element_label_colon'] = FALSE;
@@ -130,6 +131,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_events_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
@@ -137,6 +139,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['relationship'] = 'field_events_target_id';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['text'] = '[body-summary]';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '128';
@@ -147,6 +150,15 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="event-type">[field_exhibition_end_1]</div>
+<div class="event-title">[title]</div>
+<div class="event-body">[body]</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Contextual filter: Block: Title */
   $handler->display->display_options['arguments']['title']['id'] = 'title';
   $handler->display->display_options['arguments']['title']['table'] = 'bean';
