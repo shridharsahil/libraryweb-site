@@ -1,0 +1,37 @@
+.pane-library-hours-panel-pane-1 {
+  padding-top: 30px;
+  
+  .views-row {
+    border-bottom: 1px solid $border-color;
+    color: $ucla-gray;
+    font-size: 0.875em;
+    margin-bottom: 26px;
+    padding-bottom: 30px;
+    .views-row-last {
+      border-bottom: none;
+    }
+    h2 {
+      font-weight: 100;
+      margin-top: 0;
+    }
+    .pane-linked-map {
+      float: left;
+      margin-right: 22px;
+    }
+    .icon-telephone,
+    .icon-email {
+      clear: right;
+      font-size: 0.875em;
+      margin: 10px 0;
+    }
+    .icon-telephone:before,
+    .icon-email:before {
+      float: left;
+      font-size: 1.250em;
+      margin-right: 3px;
+    }
+    .panels-flexible-region-last {
+      padding-top: 24px;
+    }
+  }
+}

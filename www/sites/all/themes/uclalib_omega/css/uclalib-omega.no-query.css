@@ -651,6 +651,43 @@ a.more-link {
   margin-top: -20px;
 }
 
+.pane-library-hours-panel-pane-1 {
+  padding-top: 30px;
+}
+.pane-library-hours-panel-pane-1 .views-row {
+  border-bottom: 1px solid #adcde5;
+  color: #666666;
+  font-size: 0.875em;
+  margin-bottom: 26px;
+  padding-bottom: 30px;
+}
+.pane-library-hours-panel-pane-1 .views-row .views-row-last {
+  border-bottom: none;
+}
+.pane-library-hours-panel-pane-1 .views-row h2 {
+  font-weight: 100;
+  margin-top: 0;
+}
+.pane-library-hours-panel-pane-1 .views-row .pane-linked-map {
+  float: left;
+  margin-right: 22px;
+}
+.pane-library-hours-panel-pane-1 .views-row .icon-telephone,
+.pane-library-hours-panel-pane-1 .views-row .icon-email {
+  clear: right;
+  font-size: 0.875em;
+  margin: 10px 0;
+}
+.pane-library-hours-panel-pane-1 .views-row .icon-telephone:before,
+.pane-library-hours-panel-pane-1 .views-row .icon-email:before {
+  float: left;
+  font-size: 1.250em;
+  margin-right: 3px;
+}
+.pane-library-hours-panel-pane-1 .views-row .panels-flexible-region-last {
+  padding-top: 24px;
+}
+
 .pane-location-header {
   position: relative;
 }
