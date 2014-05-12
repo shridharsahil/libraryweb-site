@@ -455,6 +455,62 @@ a.more-link {
   color: #3283be;
 }
 
+.pane-bean-news-events-landing-page .grid-item:first-child {
+  margin: 1em 0;
+  width: 50%;
+}
+.pane-bean-news-events-landing-page .grid-item:first-child .panel-pane {
+  border-right: 1px solid #adcde5;
+  padding-right: 8%;
+}
+.pane-bean-news-events-landing-page .grid-item:last-child {
+  margin-right: 0;
+  padding-left: 1.5%;
+}
+.pane-bean-news-events-landing-page .pane-title a {
+  color: #333333;
+  font-size: 1.625em;
+  text-decoration: none;
+}
+.pane-bean-news-events-landing-page .more-link {
+  margin: -42px 10px 40px 0;
+}
+.pane-bean-news-events-landing-page .view-content {
+  font-size: 0.875em;
+}
+.pane-bean-news-events-landing-page .view-content .views-field-field-news-image {
+  float: left;
+  margin-right: 10px;
+}
+.pane-bean-news-events-landing-page .view-content .views-field-body {
+  font-size: 0.857em;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content {
+  display: table;
+  width: 100%;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-row {
+  clear: both;
+  overflow: hidden;
+  display: table-row;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-row:hover {
+  background: #eff3f4;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field {
+  padding: 10px 11px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field + .views-field {
+  padding: 10px 0;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field-field-exhibition-end,
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .view-content .views-field-field-event-date {
+  float: left;
+  margin-right: 14px;
+}
+
 .pane-ask-a-librarian {
   border-radius: 3px;
   background: #fdb930;
@@ -498,7 +554,7 @@ a.more-link {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
