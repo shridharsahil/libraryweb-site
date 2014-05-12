@@ -294,7 +294,7 @@ function uclalib_resources_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_resource_link',
-    'label' => 'Resource Link',
+    'label' => 'Search Link',
     'required' => 1,
     'settings' => array(
       'attributes' => array(
@@ -365,7 +365,7 @@ function uclalib_resources_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_resource_other_links',
-    'label' => 'Resource_Other_Links',
+    'label' => 'Other Access Links',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -457,13 +457,13 @@ function uclalib_resources_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Icon');
+  t('Other Access Links');
   t('Other access links associated with the resource.');
   t('Primary link to resource.');
   t('Resource Associated Location');
   t('Resource Image Thumbnail');
-  t('Resource Link');
   t('Resource Type');
-  t('Resource_Other_Links');
+  t('Search Link');
   t('Select an icon or icons that apply to this resource.');
 
   return $field_instances;
