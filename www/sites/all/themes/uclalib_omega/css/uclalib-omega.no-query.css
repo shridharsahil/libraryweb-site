@@ -523,7 +523,14 @@ a.more-link {
   margin-right: 14px;
 }
 .pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-2 .views-row {
-  margin-bottom: 32px;
+  margin: 0 -12px 12px;
+  padding: 12px;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-2 .views-row:hover {
+  background: #eff3f4;
+}
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-2 .views-row .views-field-body {
+  padding-right: 6px;
 }
 
 .pane-ask-a-librarian {
@@ -569,7 +576,7 @@ a.more-link {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;

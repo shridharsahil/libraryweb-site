@@ -67,7 +67,14 @@
   }
   .pane-news-events-landing-display-panel-pane-2 {
     .views-row {
-      margin-bottom: 32px;
+      margin: 0 -12px 12px;
+      padding: 12px;
+      &:hover {
+        background: $ucla-lt-gray;
+      }
+      .views-field-body {
+        padding-right: 6px;
+      }
     }
   }
 }
