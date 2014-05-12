@@ -626,7 +626,7 @@ function uclalib_location_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'thumbnail_large',
         ),
         'type' => 'image',
         'weight' => 12,
