@@ -508,7 +508,7 @@ return FALSE;',
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'context' => 'panelizer',
+      'context' => 'relationship_menu_parent_node_1',
       'override_title' => 1,
       'override_title_text' => '',
     );
