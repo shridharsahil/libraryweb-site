@@ -663,6 +663,11 @@ a.more-link {
   display: inline;
 }
 
+.pane-news-search-news-search .views-field-field-news-image {
+  float: left;
+  margin-right: 18px;
+}
+
 .pane-open-now .location-open-now,
 .pane-open-now .location-closed {
   display: block;
