@@ -661,9 +661,6 @@ a.more-link {
   margin-bottom: 26px;
   padding-bottom: 30px;
 }
-.pane-library-hours-panel-pane-1 .views-row .views-row-last {
-  border-bottom: none;
-}
 .pane-library-hours-panel-pane-1 .views-row h2 {
   font-weight: 100;
   margin-top: 0;
@@ -671,6 +668,9 @@ a.more-link {
 .pane-library-hours-panel-pane-1 .views-row .pane-linked-map {
   float: left;
   margin-right: 22px;
+}
+.pane-library-hours-panel-pane-1 .views-row .pane-node-field-location-building {
+  padding-top: 26px;
 }
 .pane-library-hours-panel-pane-1 .views-row .icon-telephone,
 .pane-library-hours-panel-pane-1 .views-row .icon-email {
@@ -686,6 +686,9 @@ a.more-link {
 }
 .pane-library-hours-panel-pane-1 .views-row .panels-flexible-region-last {
   padding-top: 24px;
+}
+.pane-library-hours-panel-pane-1 .views-row-last {
+  border-bottom: none;
 }
 
 .pane-location-header {

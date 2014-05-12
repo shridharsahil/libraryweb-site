@@ -1,15 +1,12 @@
 .pane-library-hours-panel-pane-1 {
   padding-top: 30px;
-  
   .views-row {
     border-bottom: 1px solid $border-color;
     color: $ucla-gray;
     font-size: 0.875em;
     margin-bottom: 26px;
     padding-bottom: 30px;
-    .views-row-last {
-      border-bottom: none;
-    }
+    
     h2 {
       font-weight: 100;
       margin-top: 0;
@@ -17,6 +14,9 @@
     .pane-linked-map {
       float: left;
       margin-right: 22px;
+    }
+    .pane-node-field-location-building {
+      padding-top: 26px;
     }
     .icon-telephone,
     .icon-email {
@@ -33,5 +33,9 @@
     .panels-flexible-region-last {
       padding-top: 24px;
     }
+
+  }
+  .views-row-last {
+    border-bottom: none;
   }
 }
