@@ -348,6 +348,10 @@ a[href="#main-content"] {
 .l-region--top .panel-pane {
   margin: 24px 0;
 }
+.l-region--top .search-research-nav,
+.l-region--top .search-research-nav p {
+  margin-top: 0;
+}
 
 .l-region--top:before {
   content: " ";
