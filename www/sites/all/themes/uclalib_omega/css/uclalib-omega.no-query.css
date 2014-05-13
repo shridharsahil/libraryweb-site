@@ -32,6 +32,9 @@ table th, table tr.even {
 table tr.odd {
   background: #eff3f4;
 }
+table tr.odd .current-day {
+  background: #fed97e;
+}
 table th,
 table td {
   border: 2px solid #fff;
@@ -41,6 +44,12 @@ table td {
 table th + th,
 table td + td {
   text-align: center;
+}
+table td.current-day {
+  background: #ffefc4;
+}
+table .current-day {
+  color: #2d2f35;
 }
 
 html {

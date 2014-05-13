@@ -6,6 +6,9 @@ table {
   }
   tr.odd {
     background: $ucla-lt-gray;
+    .current-day {
+      background: #fed97e;
+    }
   }
   th,
   td {
@@ -16,5 +19,11 @@ table {
   th + th,
   td + td {
     text-align: center;
+  }
+  td.current-day {
+    background: #ffefc4;
+  }
+  .current-day {
+    color: $ucla-gray;
   }
 }
