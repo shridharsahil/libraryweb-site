@@ -434,6 +434,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_subject_areas']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_staff_subject_areas']['alter']['text'] = '<strong>I can help with </strong>[field_staff_subject_areas]';
   $handler->display->display_options['fields']['field_staff_subject_areas']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_staff_subject_areas']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_staff_subject_areas']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_staff_subject_areas']['bypass_access'] = 0;
@@ -454,6 +455,10 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_phone']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_staff_phone']['empty'] = '[field_staff_email]';
   $handler->display->display_options['fields']['field_staff_phone']['hide_alter_empty'] = FALSE;
+  /* Sort criterion: Indexed Node: Staff Alpha */
+  $handler->display->display_options['sorts']['field_staff_glossary_index']['id'] = 'field_staff_glossary_index';
+  $handler->display->display_options['sorts']['field_staff_glossary_index']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['sorts']['field_staff_glossary_index']['field'] = 'field_staff_glossary_index';
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
