@@ -364,5 +364,202 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['inherit_panels_path'] = '1';
   $export['news_search'] = $view;
 
+  $view = new view();
+  $view->name = 'staff_directory';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_index_site_general_search';
+  $view->human_name = 'Staff Directory';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Submit';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'All Staff';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Indexed Node: Staff Image Thumbnail */
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['id'] = 'field_staff_image_thumbnail';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['field'] = 'field_staff_image_thumbnail';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Indexed Node: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Staff First Name */
+  $handler->display->display_options['fields']['field_staff_first_name']['id'] = 'field_staff_first_name';
+  $handler->display->display_options['fields']['field_staff_first_name']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_first_name']['field'] = 'field_staff_first_name';
+  $handler->display->display_options['fields']['field_staff_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_first_name']['element_label_colon'] = FALSE;
+  /* Field: Indexed Node: Staff Last Name */
+  $handler->display->display_options['fields']['field_staff_last_name']['id'] = 'field_staff_last_name';
+  $handler->display->display_options['fields']['field_staff_last_name']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_last_name']['field'] = 'field_staff_last_name';
+  $handler->display->display_options['fields']['field_staff_last_name']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_last_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_last_name']['alter']['text'] = '<a href="node/[nid]">[field_staff_first_name] [field_staff_last_name]</a>';
+  $handler->display->display_options['fields']['field_staff_last_name']['element_label_colon'] = FALSE;
+  /* Field: Indexed Node: Staff Job Title */
+  $handler->display->display_options['fields']['field_staff_job_title']['id'] = 'field_staff_job_title';
+  $handler->display->display_options['fields']['field_staff_job_title']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_job_title']['field'] = 'field_staff_job_title';
+  $handler->display->display_options['fields']['field_staff_job_title']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_job_title']['element_label_colon'] = FALSE;
+  /* Field: Indexed Node: Staff Subject Areas */
+  $handler->display->display_options['fields']['field_staff_subject_areas']['id'] = 'field_staff_subject_areas';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['field'] = 'field_staff_subject_areas';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['alter']['text'] = '<strong>I can help with </strong>[field_staff_subject_areas]';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['bypass_access'] = 0;
+  /* Field: Indexed Node: Staff Email */
+  $handler->display->display_options['fields']['field_staff_email']['id'] = 'field_staff_email';
+  $handler->display->display_options['fields']['field_staff_email']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
+  $handler->display->display_options['fields']['field_staff_email']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_email']['element_label_colon'] = FALSE;
+  /* Field: Indexed Node: Staff Phone */
+  $handler->display->display_options['fields']['field_staff_phone']['id'] = 'field_staff_phone';
+  $handler->display->display_options['fields']['field_staff_phone']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_phone']['field'] = 'field_staff_phone';
+  $handler->display->display_options['fields']['field_staff_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_phone']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_phone']['alter']['text'] = '[field_staff_email] | [field_staff_phone] ';
+  $handler->display->display_options['fields']['field_staff_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_phone']['empty'] = '[field_staff_email]';
+  $handler->display->display_options['fields']['field_staff_phone']['hide_alter_empty'] = FALSE;
+  /* Filter criterion: Indexed Node: Content type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'staff_profile' => 'staff_profile',
+  );
+  /* Filter criterion: Search: Fulltext search */
+  $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Fulltext search';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Indexed Node: Staff Subject Librarian */
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['id'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['field'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['operator_id'] = 'field_staff_is_subject_librarian_op';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['label'] = 'Staff Subject Librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['operator'] = 'field_staff_is_subject_librarian_op';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['identifier'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['is_grouped'] = TRUE;
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['label'] = 'Staff Subject Librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['identifier'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['remember'] = FALSE;
+
+  /* Display: Staff DIrectory */
+  $handler = $view->new_display('panel_pane', 'Staff DIrectory', 'staff_directory_pane');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Indexed Node: Content type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'staff_profile' => 'staff_profile',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Indexed Node: Staff Subject Librarian */
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['id'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['field'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['value'] = array();
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group'] = 1;
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['operator_id'] = 'field_staff_is_subject_librarian_op';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['label'] = 'Staff Subject Librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['operator'] = 'field_staff_is_subject_librarian_op';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['identifier'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['reduce'] = 0;
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['is_grouped'] = TRUE;
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['label'] = 'Show';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['identifier'] = 'field_staff_is_subject_librarian';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['optional'] = FALSE;
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['widget'] = 'radios';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['default_group'] = '1';
+  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => 'All Staff',
+      'operator' => '=',
+      'value' => array(
+        0 => '0',
+        1 => '1',
+      ),
+    ),
+    2 => array(
+      'title' => 'Subject Librarians only',
+      'operator' => '=',
+      'value' => array(
+        0 => 0,
+      ),
+    ),
+  );
+  /* Filter criterion: Search: Fulltext search */
+  $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['group'] = 1;
+  $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
+  $export['staff_directory'] = $view;
+
   return $export;
 }

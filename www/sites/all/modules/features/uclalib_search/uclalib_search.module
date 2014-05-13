@@ -90,3 +90,55 @@ function uclalib_search_facet_items_alter(&$build, &$settings) {
     }
   }
 }
+
+/**
+ * Implements hook_search_api_alter_callback_info() to provide a staff alpha pager.
+ */
+function uclalib_search_search_api_alter_callback_info() {
+  $callbacks['uclalib_search_staff_index_fields'] = array(
+    'name' => t('Generate Staff custom index fields.'),
+    'description' => t('This is an Alter Callback implementation to add custom fields to Staff nodes.'),
+    'class' => 'UclalibSearchStaffIndexFields',
+  );
+
+  return $callbacks;
+}
+
+/**
+ * Search API data alteration callback to dynamically create staff index fields.
+ */
+class UclalibSearchStaffIndexFields extends SearchApiAbstractAlterCallback {
+  public function alterItems(array &$items) {
+
+    foreach ($items as $id => &$item) {
+
+      if ($item->type == 'staff_profile') {
+
+        // wrap the node for easier property access
+        $node_wrapper = entity_metadata_wrapper('node', $item);
+        // Populate dynamic index fields
+        if (isset($item->field_staff_last_name) && !empty($item->field_staff_last_name)) {
+          $name = $node_wrapper->field_staff_last_name->value();
+
+        // glossary field only allows A-Z letters
+        $upper = strtoupper($name);
+        $letter = substr($upper, 0, 1);
+        if (preg_match("/^[A-Z]$/", $letter)) {
+          $items[$id]->field_staff_glossary_index = $letter;
+        }
+      }
+    }
+  }
+}
+  public function propertyInfo() {
+    return array(
+
+     // alpha last name
+     'field_staff_glossary_index' => array(
+        'label' => t('Staff Alpha'),
+        'description' => t('This is a custom bundle type that takes the first letter of a staff members last name for an alpha pager.'),
+        'type' => 'string',
+      ),
+    );
+  }
+}
