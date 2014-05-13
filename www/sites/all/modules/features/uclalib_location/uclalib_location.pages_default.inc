@@ -46,7 +46,7 @@ function uclalib_location_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar-left';
+  $display->layout = 'sidebar-left-golden';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -102,6 +102,8 @@ function uclalib_location_default_page_manager_pages() {
       'main' => NULL,
       'below_main_left' => NULL,
       'below_main_right' => NULL,
+      'below_secondary_left' => NULL,
+      'below_secondary_right' => NULL,
     ),
   );
   $display->cache = array();
