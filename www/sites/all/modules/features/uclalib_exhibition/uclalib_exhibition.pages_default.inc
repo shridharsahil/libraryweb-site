@@ -19,14 +19,21 @@ function uclalib_exhibition_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -99;
   $handler->conf = array(
-    'title' => 'Exhibition node view variant',
+    'title' => 'Exhibition',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'css_id' => '',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'Global',
+        'keyword' => 'global',
+        'name' => 'token',
+        'id' => 1,
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'plugins' => array(

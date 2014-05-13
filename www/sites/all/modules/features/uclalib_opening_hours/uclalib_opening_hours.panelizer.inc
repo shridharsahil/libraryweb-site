@@ -21,7 +21,14 @@ function uclalib_opening_hours_panelizer_defaults() {
   $panelizer->css_id = '';
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
-  $panelizer->contexts = array();
+  $panelizer->contexts = array(
+    0 => array(
+      'identifier' => 'Global',
+      'keyword' => 'global',
+      'name' => 'token',
+      'id' => 1,
+    ),
+  );
   $panelizer->relationships = array();
   $panelizer->access = array();
   $panelizer->view_mode = 'hours_page';
@@ -88,7 +95,7 @@ function uclalib_opening_hours_panelizer_defaults() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = 'e24e2950-d153-4979-a392-a659f2606e1a';
-  $display->window_title = '';
+  $display->window_title = '%node:title | %global:site:name';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

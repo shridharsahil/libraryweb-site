@@ -21,7 +21,14 @@ function uclalib_static_panelizer_defaults() {
   $panelizer->css_id = '';
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
-  $panelizer->contexts = array();
+  $panelizer->contexts = array(
+    0 => array(
+      'identifier' => 'Global',
+      'keyword' => 'global',
+      'name' => 'token',
+      'id' => 1,
+    ),
+  );
   $panelizer->relationships = array(
     0 => array(
       'identifier' => 'Menu parent',
@@ -55,12 +62,15 @@ function uclalib_static_panelizer_defaults() {
       'main' => NULL,
       'below_main_left' => NULL,
       'below_main_right' => NULL,
+      'secondary' => NULL,
+      'below_secondary_left' => NULL,
+      'below_secondary_right' => NULL,
     ),
   );
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = '36fdf48c-e3d5-48e9-8ec2-42baa0f9e967';
-  $display->window_title = '';
+  $display->window_title = '%node:title | %global:site:name';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

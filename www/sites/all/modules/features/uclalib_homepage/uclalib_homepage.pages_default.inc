@@ -57,6 +57,7 @@ function uclalib_homepage_default_page_manager_pages() {
       'top_right_sidebar' => NULL,
       'bottom_left' => NULL,
       'bottom_right' => NULL,
+      'top' => NULL,
     ),
     'bottom_left' => array(
       'style' => 'tabs',

@@ -21,7 +21,14 @@ function uclalib_support_services_panelizer_defaults() {
   $panelizer->css_id = '';
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
-  $panelizer->contexts = array();
+  $panelizer->contexts = array(
+    0 => array(
+      'identifier' => 'Global',
+      'keyword' => 'global',
+      'name' => 'token',
+      'id' => 1,
+    ),
+  );
   $panelizer->relationships = array(
     0 => array(
       'identifier' => 'Menu parent',
