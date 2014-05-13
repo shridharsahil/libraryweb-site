@@ -50,18 +50,31 @@ function uclalib_navigation_menu_get_about($node) {
   menu_node_prepare($node);
   if (isset($node->menu['mlid'])) {
     $full_menu_items = menu_tree_all_data($node->menu['menu_name']);
-    $pitem = menu_link_load($node->menu['plid']);
     foreach ($full_menu_items as $menu_item) {
       if ($menu_item['link']['mlid'] == $node->menu['mlid']) {
         $links = $menu_item['below'];
         break;
       }
+      else {
+
+        // Also check sub-items.
+        if (count($menu_item['below'])) {
+          foreach ($menu_item['below'] as $menu_item) {
+            if ($menu_item['link']['mlid'] == $node->menu['mlid']) {
+              $links = $menu_item['below'];
+              break 2;
+            }
+          }
+        }
+      }
     }
-    foreach ($links as $link) {
-      if ($link['link']['link_title'] == 'About') {
-        $menu_item = menu_get_item($link['link']['link_path']);
-        if (isset($menu_item['page_arguments'][0])) {
-          return $menu_item['page_arguments'][0];
+    if (isset($links)) {
+      foreach ($links as $link) {
+        if ($link['link']['link_title'] == 'About') {
+          $menu_item = menu_get_item($link['link']['link_path']);
+          if (isset($menu_item['page_arguments'][0])) {
+            return $menu_item['page_arguments'][0];
+          }
         }
       }
     }
