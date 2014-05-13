@@ -607,6 +607,18 @@ a.more-link {
   background-color: white;
 }
 
+.pane-bean-living-library-gallery {
+  margin-bottom: 10px !important;
+}
+.pane-bean-living-library-gallery .field__item {
+  float: left;
+  margin: 0 1.6% 0 0;
+  width: 23.8%;
+}
+.pane-bean-living-library-gallery .field__item:nth-child(4) {
+  margin: 0;
+}
+
 .pane-bean-quick-find .pane-content {
   padding: 1em 3.5em;
   font-size: 14px;
