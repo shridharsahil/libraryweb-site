@@ -1,6 +1,7 @@
 table {
   border: 1px solid $border-color;
   display: inline-block;
+  margin-bottom: 1em;
   th, tr.even {
     background: #fff;
   }

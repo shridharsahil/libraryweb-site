@@ -25,6 +25,7 @@ img {
 table {
   border: 1px solid #adcde5;
   display: inline-block;
+  margin-bottom: 1em;
 }
 table th, table tr.even {
   background: #fff;
