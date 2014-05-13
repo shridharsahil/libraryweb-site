@@ -340,7 +340,7 @@ function uclalib_staff_profile_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
       'weight' => 11,
@@ -636,8 +636,8 @@ function uclalib_staff_profile_field_default_field_instances() {
     'label' => 'Staff Phone',
     'required' => 0,
     'settings' => array(
-      'ca_phone_parentheses' => 1,
-      'ca_phone_separator' => '-',
+      'ca_phone_parentheses' => 0,
+      'ca_phone_separator' => '.',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
