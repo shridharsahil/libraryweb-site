@@ -76,3 +76,17 @@ function uclalib_search_nodequeue_save_subqueue_order_alter($sqid, $nodes) {
     search_api_track_item_change('node', $nids);
   }
 }
+
+/**
+ * Implements hook_facet_items_alter()
+ */
+function uclalib_search_facet_items_alter(&$build, &$settings) {
+  foreach ($build as $key => $values) {
+    if ($key == 'location') {
+      $build[$key]['#markup'] = t('Libraries Only');
+    }
+    if ($key == 'destination') {
+      unset($build[$key]);
+    }
+  }
+}

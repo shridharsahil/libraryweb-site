@@ -5,6 +5,7 @@ package = UCLALIB
 dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = facetapi
+dependencies[] = facetapi_bonus
 dependencies[] = fe_nodequeue
 dependencies[] = page_manager
 dependencies[] = search_api
