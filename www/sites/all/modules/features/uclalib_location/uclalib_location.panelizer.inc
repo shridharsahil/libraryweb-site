@@ -639,7 +639,7 @@ function uclalib_location_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'thumbnail_small',
+        'image_style' => 'thumbnail_large',
         'image_link' => '',
       ),
       'context' => 'panelizer',
