@@ -98,12 +98,13 @@ function uclalib_location_node_insert($node) {
     // Because subpages by definition are pages with menu items child of their parent.
     if (isset($node->menu['mlid'])) {
       _uclalib_location_create_at_this_location_page($node);
+      _uclalib_location_create_about_page($node);
     }
   }
 }
 
 /**
- * Create a sponsors and exhibitors page for a given location site node.
+ * Create a 'at this location' page for a given location site node.
  *
  * @param $location_node
  */
@@ -116,6 +117,31 @@ function _uclalib_location_create_at_this_location_page($location_node) {
 
   // Create the subpage.
   _uclalib_location_create_subpage($location_node, $title, $menu_title, $panelizer_panel);
+}
+
+/**
+ * Create an "about" page for a given location site node.
+ *
+ * @param $location_node
+ */
+function _uclalib_location_create_about_page($location_node) {
+  // Assign the "At this location" default panel for this page.
+  $panelizer_panel = 'node:static:default';
+
+  $menu_title = t('About');
+  $title = $menu_title;
+
+  // Create the subpage.
+  $about_page = _uclalib_location_create_subpage($location_node, $title, $menu_title, $panelizer_panel);
+  $about_page->body = array(
+    LANGUAGE_NONE => array(
+      0 => array(
+        'value' => '<p>About this library.</p>',
+        'format' => 'full_html',
+      ),
+    ),
+  );
+  node_save($about_page);
 }
 
 /**
