@@ -45,7 +45,7 @@ table td + td {
 
 html {
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #2d2f35;
+  color: #666666;
 }
 
 a {
@@ -63,7 +63,7 @@ a:hover {
 
 .l-colophon-wrapper {
   background: #ececec;
-  color: #2d2f35;
+  color: #333333;
   padding: 50px 0;
 }
 
@@ -557,7 +557,7 @@ a.more-link-block {
 }
 .pane-ask-a-librarian a {
   color: white;
-  text-shadow: 0 1px 1px #666666;
+  text-shadow: 0 1px 1px #2d2f35;
 }
 .pane-ask-a-librarian a, .pane-ask-a-librarian a:hover, .pane-ask-a-librarian a:active, .pane-ask-a-librarian a:focus {
   text-decoration: none;
@@ -644,7 +644,6 @@ a.more-link-block {
   vertical-align: middle;
 }
 .pane-bean-quick-find .views-field-name a {
-  color: #666666;
   line-height: 32px;
   vertical-align: middle;
 }
@@ -652,7 +651,6 @@ a.more-link-block {
   vertical-align: middle;
   font-size: 32px;
   line-height: 32px;
-  color: #666666;
   margin-right: 4px;
 }
 .pane-bean-quick-find .icon:before {
@@ -680,7 +678,7 @@ a.more-link-block {
 }
 .pane-library-hours-panel-pane-1 .views-row {
   border-bottom: 1px solid #adcde5;
-  color: #666666;
+  color: #2d2f35;
   font-size: 0.875em;
   margin-bottom: 26px;
   padding-bottom: 30px;
@@ -977,6 +975,7 @@ a.more-link-block {
 }
 
 .sidebar-tier-3 {
+  color: #2d2f35;
   font-size: 13px;
 }
 .sidebar-tier-3 .pane-title {

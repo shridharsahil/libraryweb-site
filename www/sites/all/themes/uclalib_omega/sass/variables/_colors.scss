@@ -3,12 +3,12 @@
 $ucla-blue: #3283be;
 $ucla-lt-blue: #84b5d8;
 $ucla-yellow: #fdb930;
-$ucla-gray: #666;
+$ucla-gray: #2d2f35;
 $ucla-lt-gray: #eff3f4;
 
 // General content colors
 $link-color: $ucla-blue;
-$text-color: #2d2f35;
+$text-color: #666;
 $icon-color: #59595c;
 $border-color: #adcde5;
 
@@ -31,7 +31,7 @@ $highlighted-bg-color: $ucla-lt-gray;
 
 // Colophon section colors;
 $colophon-bg-color: #ececec;
-$colophon-text-color: $text-color;
+$colophon-text-color: $nav-link-color;
 $colophon-link-color: $ucla-blue;
 $colophon-border-color: #a2a2a2;
 
