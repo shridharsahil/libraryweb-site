@@ -126,7 +126,7 @@ function _uclalib_location_create_at_this_location_page($location_node) {
  */
 function _uclalib_location_create_about_page($location_node) {
   // Assign the "At this location" default panel for this page.
-  $panelizer_panel = 'node:static:default';
+  $panelizer_panel = 'node:static:static_at_this_location';
 
   $menu_title = t('About');
   $title = $menu_title;
