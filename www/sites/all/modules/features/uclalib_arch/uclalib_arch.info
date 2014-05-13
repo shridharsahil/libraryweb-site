@@ -15,6 +15,7 @@ dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_group
 dependencies[] = filter
+dependencies[] = globalredirect
 dependencies[] = icomoon
 dependencies[] = icon
 dependencies[] = link
