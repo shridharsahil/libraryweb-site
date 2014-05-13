@@ -304,7 +304,7 @@ function uclalib_location_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => 'Schedule a Research Appointment',
       'title' => '',
-      'body' => '<p><a href="/">Schedule a Research Appointment</a></p>
+      'body' => '<p><a class="more-link-block" href="/">Schedule a Research Appointment</a></p>
 ',
       'format' => 'full_html',
       'substitute' => 1,
