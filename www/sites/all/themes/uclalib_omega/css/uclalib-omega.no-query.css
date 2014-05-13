@@ -72,6 +72,11 @@ a:hover {
   vertical-align: middle;
 }
 
+.icon-copy-color:before,
+.icon-printer-color:before {
+  color: #fdb930;
+}
+
 .l-colophon-wrapper {
   background: #ececec;
   color: #333333;

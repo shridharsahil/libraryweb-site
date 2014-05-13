@@ -14,3 +14,8 @@ a {
 [class^="icon-"]:before, [class*=" icon-"]:before {
   vertical-align: middle;
 }
+
+.icon-copy-color:before,
+.icon-printer-color:before {
+  color: $ucla-yellow;
+}
