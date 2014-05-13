@@ -309,15 +309,15 @@ function uclalib_search_default_search_api_index() {
 function uclalib_search_default_search_api_server() {
   $items = array();
   $items['uclalib_solr_server'] = entity_import('search_api_server', '{
-    "name" : "Solr (dev)",
+    "name" : "Solr Server (Staging)",
     "machine_name" : "uclalib_solr_server",
     "description" : "",
     "class" : "search_api_solr_service",
     "options" : {
       "clean_ids" : true,
       "scheme" : "http",
-      "host" : "localhost",
-      "port" : "8983",
+      "host" : "192.168.129.217",
+      "port" : "8080",
       "path" : "\\/solr\\/uclalibdev",
       "http_user" : "",
       "http_pass" : "",
