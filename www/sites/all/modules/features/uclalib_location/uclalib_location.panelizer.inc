@@ -29,7 +29,15 @@ function uclalib_location_panelizer_defaults() {
       'id' => 1,
     ),
   );
-  $panelizer->relationships = array();
+  $panelizer->relationships = array(
+    0 => array(
+      'identifier' => 'About node',
+      'keyword' => 'menu_about_node',
+      'name' => 'about_node',
+      'context' => 'panelizer',
+      'id' => 1,
+    ),
+  );
   $panelizer->access = array();
   $panelizer->view_mode = 'page_manager';
   $panelizer->css_class = '';
@@ -346,22 +354,16 @@ function uclalib_location_panelizer_defaults() {
     $display->content['new-8eca67af-f582-47cb-8893-99bea98232c1'] = $pane;
     $display->panels['below_main_right'][1] = 'new-8eca67af-f582-47cb-8893-99bea98232c1';
     $pane = new stdClass();
-    $pane->pid = 'new-59c67c9e-9265-427f-b7a6-ca0ead13e902';
+    $pane->pid = 'new-665a8ad1-61ad-4340-833c-359cbb6f57a1';
     $pane->panel = 'main';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:body';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'about_this_library-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => 'About the Library',
+      'arguments' => array(
+        'nid' => '%menu_about_node:nid',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
@@ -371,9 +373,9 @@ function uclalib_location_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '59c67c9e-9265-427f-b7a6-ca0ead13e902';
-    $display->content['new-59c67c9e-9265-427f-b7a6-ca0ead13e902'] = $pane;
-    $display->panels['main'][0] = 'new-59c67c9e-9265-427f-b7a6-ca0ead13e902';
+    $pane->uuid = '665a8ad1-61ad-4340-833c-359cbb6f57a1';
+    $display->content['new-665a8ad1-61ad-4340-833c-359cbb6f57a1'] = $pane;
+    $display->panels['main'][0] = 'new-665a8ad1-61ad-4340-833c-359cbb6f57a1';
     $pane = new stdClass();
     $pane->pid = 'new-04116a50-5279-4343-88bb-5a0067e72626';
     $pane->panel = 'main';
