@@ -28,6 +28,10 @@ Ctools - hide empty page title pane when wrapper tag is used
 https://drupal.org/node/2265451
 https://drupal.org/files/issues/ctools-hide-empty-page-title-with-wrapper-tag-2265451.patch
 
+Facetapi_bonus - add plugin filter to hide facet count.
+https://drupal.org/node/2266717
+https://drupal.org/files/issues/facetapi-bonus-hide-count-2266717-1.patch
+
 Panels - Allow users to manually control window title.
 https://drupal.org/node/2262173
 https://drupal.org/files/issues/panels-allow_users_control_window_title-2262173-4.patch

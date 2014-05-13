@@ -63,6 +63,12 @@ function facetapi_bonus_facetapi_filters() {
         'class' => 'FacetapiFilterShowIfMinimumItems',
       ),
     ),
+    'hide_count' => array(
+      'handler' => array(
+        'label' => t('Hide the count for this facet'),
+        'class' => 'FacetapiFilterHideCount',
+      ),
+    ),
     'deepest_level_items' => array(
       'handler' => array(
         'label' => t('Show only deepest level items'),

@@ -9,8 +9,10 @@ files[] = plugins/facetapi/filter_rewrite_items.inc
 files[] = plugins/facetapi/filter_exclude_specified_items.inc
 files[] = plugins/facetapi/filter_narrow_results.inc
 files[] = plugins/facetapi/filter_show_if_minimum_items.inc
+files[] = plugins/facetapi/filter_hide_count.inc
 files[] = plugins/facetapi/filter_show_deepest_level_items.inc
 files[] = plugins/facetapi/current_search/current_search_reset_filters_link.inc
+
 
 ; Information added by drupal.org packaging script on 2012-05-26
 version = "7.x-1.1"
