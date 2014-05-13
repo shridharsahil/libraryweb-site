@@ -2679,6 +2679,30 @@ function uclalib_search_facetapi_default_facet_settings() {
         'status' => 0,
         'weight' => '-50',
       ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-44',
+      ),
     ),
     'active_sorts' => array(
       'display' => 'display',
@@ -2708,6 +2732,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_staff_glossary_index'] = $facet;
 
