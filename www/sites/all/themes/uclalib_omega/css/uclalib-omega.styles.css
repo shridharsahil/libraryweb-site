@@ -55,6 +55,7 @@ table .current-day {
 
 html {
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875em;
   color: #666666;
 }
 
@@ -228,7 +229,7 @@ a[href="#main-content"] {
   display: block;
   text-align: center;
   padding: 15px 0;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: white;
   font-weight: normal;
 }
@@ -474,7 +475,6 @@ a.more-link-block {
 .more-link-block {
   background: #eff3f4;
   display: block;
-  font-size: 0.875em;
   font-weight: bold;
   padding: 20px;
   text-align: left;
@@ -507,7 +507,6 @@ a.more-link-block {
   margin: -66px 11px 0 0;
 }
 .pane-bean-news-events-landing-page .view-content {
-  font-size: 0.875em;
   margin-top: 40px;
 }
 .pane-bean-news-events-landing-page .view-content .views-field-field-news-image {
@@ -688,8 +687,6 @@ a.more-link-block {
 }
 .pane-library-hours-panel-pane-1 .views-row {
   border-bottom: 1px solid #adcde5;
-  color: #2d2f35;
-  font-size: 0.875em;
   margin-bottom: 26px;
   padding-bottom: 30px;
 }
@@ -713,7 +710,7 @@ a.more-link-block {
 .pane-library-hours-panel-pane-1 .views-row .icon-telephone:before,
 .pane-library-hours-panel-pane-1 .views-row .icon-email:before {
   float: left;
-  font-size: 1.250em;
+  font-size: 1.429em;
   margin-right: 3px;
 }
 .pane-library-hours-panel-pane-1 .views-row .panels-flexible-region-last {
@@ -830,9 +827,6 @@ a.more-link-block {
 }
 .pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item > div .field--name-field-showcase-image {
   margin-bottom: 4px;
-}
-.pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item > div a {
-  font-size: 0.875em;
 }
 .pane-bean-news-events-showcase .field-collection-container .field--type-field-collection > div > .field__item:last-child {
   margin: 0;
@@ -1038,9 +1032,6 @@ a.more-link-block {
 }
 .l-region--top .pane-resources-search-pane h2, .l-region--top .pane-resources-search-pane p {
   margin: 0;
-}
-.l-region--top .pane-resources-search-pane p {
-  font-size: 0.875em;
 }
 
 .cal-date {
