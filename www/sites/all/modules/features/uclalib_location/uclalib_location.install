@@ -11,3 +11,11 @@
 function uclalib_location_update_7001(&$sandbox) {
   field_delete_field('field_location_social');
 }
+
+/**
+ * Remove old "about" field.
+ */
+function uclalib_location_update_7002(&$sandbox) {
+  $instance = field_info_instance('node', 'node-location-body', 'location');
+  field_delete_instance($instance);
+}
