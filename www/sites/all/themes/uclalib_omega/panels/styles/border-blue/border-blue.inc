@@ -10,7 +10,7 @@ $plugin = array(
   'title' => t('UCLA Library: Border blue'),
   'description' => t('Display the pane with a special 1px blue border around it.'),
   'render pane' => 'uclalib_omega_border_blue_render_pane',
-  'settings form' => 'uclalib_omega_border_blue_settings_form',
+  'pane settings form' => 'uclalib_omega_border_blue_settings_form',
   'weight' => -5,
 );
 

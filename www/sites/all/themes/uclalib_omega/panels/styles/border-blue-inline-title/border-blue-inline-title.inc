@@ -10,7 +10,7 @@ $plugin = array(
   'title' => t('UCLA Library: Border blue w/ inline title'),
   'description' => t('Display the pane with a special 1px border around it and an inline title.'),
   'render pane' => 'uclalib_omega_border_blue_inline_title_render_pane',
-  'settings form' => 'uclalib_omega_border_blue_inline_title_settings_form',
+  'pane settings form' => 'uclalib_omega_border_blue_inline_title_settings_form',
   'weight' => -5,
 );
 
