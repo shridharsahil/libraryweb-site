@@ -25,6 +25,7 @@ features[facetapi][] = search_api@location_search::field_amenities
 features[facetapi][] = search_api@location_search::field_equipment
 features[facetapi][] = search_api@location_search::field_location_building
 features[facetapi][] = search_api@location_search::field_study_areas
+features[facetapi][] = search_api@location_search::type
 features[facetapi][] = search_api@location_search:block:field_address
 features[facetapi][] = search_api@location_search:block:field_amenities
 features[facetapi][] = search_api@location_search:block:field_destination_email
