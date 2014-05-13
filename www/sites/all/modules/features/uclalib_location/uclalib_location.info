@@ -23,6 +23,7 @@ dependencies[] = page_manager
 dependencies[] = panelizer
 dependencies[] = panels
 dependencies[] = panels_mini
+dependencies[] = panels_style_collapsible
 dependencies[] = phone
 dependencies[] = strongarm
 dependencies[] = taxonomy
