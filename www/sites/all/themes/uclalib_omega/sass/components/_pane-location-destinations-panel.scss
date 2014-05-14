@@ -1,0 +1,17 @@
+.pane-location-destinations-panel-pane-1 {
+    .view-location-destinations > .view-content {
+    & > .views-row {
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 20px;
+      padding-bottom: 22px;
+    }
+    & > .views-row-last {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .views-field-opening-hours-week {
+      margin-top: 12px;
+    }
+  }
+}

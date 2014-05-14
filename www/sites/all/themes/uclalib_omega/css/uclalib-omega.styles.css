@@ -72,6 +72,9 @@ a:hover {
   font-weight: 100;
   margin: 0.5em 0 0;
 }
+.title-light + .panel-pane p {
+  margin-top: 0;
+}
 
 /* UCLA Library custom Iconfont */
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -729,6 +732,20 @@ a.more-link-block {
 }
 .pane-library-hours-panel-pane-1 .views-row-last {
   border-bottom: none;
+}
+
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row {
+  border-bottom: 1px solid #adcde5;
+  margin-bottom: 20px;
+  padding-bottom: 22px;
+}
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row-last {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content .views-field-opening-hours-week {
+  margin-top: 12px;
 }
 
 .pane-location-header {

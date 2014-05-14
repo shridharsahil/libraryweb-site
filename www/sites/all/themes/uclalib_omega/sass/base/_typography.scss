@@ -16,6 +16,9 @@ a {
     font-weight: 100;
     margin: 0.5em 0 0;
   }
+  & + .panel-pane p {
+    margin-top: 0;
+  }
 }
 
 /* UCLA Library custom Iconfont */
