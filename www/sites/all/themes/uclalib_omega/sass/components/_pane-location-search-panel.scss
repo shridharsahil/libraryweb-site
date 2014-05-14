@@ -1,0 +1,27 @@
+.pane-location-search-panel-pane-1 {
+  .view-location-search > .view-content {
+    & > .views-row {
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      h3 {
+        font-size: 1.500em;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+      .pane-todays-hours {
+        font-weight: bold;
+        margin-top: 17px;
+      }
+    }
+    & > .views-row-last {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .views-field-tooltip {
+    float: left;
+    margin-right: 4px;
+  }
+}
