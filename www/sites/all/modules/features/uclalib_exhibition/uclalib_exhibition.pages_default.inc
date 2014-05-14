@@ -96,7 +96,10 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-exhibition-breadcrumb',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -160,40 +163,34 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $display->content['new-65877dc3-10c5-45de-918f-29de7b38991b'] = $pane;
     $display->panels['top_left_main'][2] = 'new-65877dc3-10c5-45de-918f-29de7b38991b';
     $pane = new stdClass();
-    $pane->pid = 'new-16920224-2b5e-4665-bf45-af2b5018e6a0';
+    $pane->pid = 'new-5841e3fa-8f31-4f44-86c9-86e3063f272d';
     $pane->panel = 'top_left_main';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_exhibition_date';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'date_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'format_type' => 'long',
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'fromto' => 'both',
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'admin_title' => 'Exhibition Date Range',
+      'title' => '',
+      'body' => '<p>%node:field_exhibition_start to %node:field_exhibition_end</p>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-exhibition-date-range',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $pane->uuid = '16920224-2b5e-4665-bf45-af2b5018e6a0';
-    $display->content['new-16920224-2b5e-4665-bf45-af2b5018e6a0'] = $pane;
-    $display->panels['top_left_main'][3] = 'new-16920224-2b5e-4665-bf45-af2b5018e6a0';
+    $pane->uuid = '5841e3fa-8f31-4f44-86c9-86e3063f272d';
+    $display->content['new-5841e3fa-8f31-4f44-86c9-86e3063f272d'] = $pane;
+    $display->panels['top_left_main'][3] = 'new-5841e3fa-8f31-4f44-86c9-86e3063f272d';
     $pane = new stdClass();
     $pane->pid = 'new-22a3203e-e593-43b1-9ab6-f2bf5bcadab3';
     $pane->panel = 'top_left_main';
@@ -434,7 +431,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $display->content['new-04e42d17-d152-4a5f-a2a7-bd971dcc7c2c'] = $pane;
     $display->panels['top_right_sidebar'][2] = 'new-04e42d17-d152-4a5f-a2a7-bd971dcc7c2c';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-16920224-2b5e-4665-bf45-af2b5018e6a0';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 
