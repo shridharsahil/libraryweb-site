@@ -321,7 +321,10 @@ function uclalib_location_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'schedule-appointment',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -369,7 +372,10 @@ function uclalib_location_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'location-about',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -392,7 +398,10 @@ function uclalib_location_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
