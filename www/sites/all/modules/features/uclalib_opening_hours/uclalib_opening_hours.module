@@ -115,7 +115,7 @@ function uclalib_opening_hours_generate_table_rows($nodes) {
     $day = date_create('this week');
 
     // Add the title to the first column.
-    $row = array($title);
+    $row = array(array('data' => $title, 'class' => 'title'));
 
     // Fetch opening hours for each day.
     for ($i = 0; $i < 7; $i++) {
@@ -127,10 +127,12 @@ function uclalib_opening_hours_generate_table_rows($nodes) {
         ->execute()
         ->fetchAssoc();
 
-      $row_cell = array('data' =>
-        _uclalib_opening_hours_short_time($oh['start_time'])
-        . '-' .
-        _uclalib_opening_hours_short_time($oh['end_time'])
+      $start_time = _uclalib_opening_hours_short_time($oh['start_time']);
+      $end_time = _uclalib_opening_hours_short_time($oh['end_time']);
+      $class = (empty($start_time) && empty($end_time)) ? 'closed' : 'open';
+      $row_cell = array(
+        'data' => $start_time . '-' . $end_time,
+        'class' => array($class),
       );
 
       // If current day add a class.
