@@ -602,6 +602,21 @@ a.more-link-block {
   border-width: 0 .7em .7em 0;
 }
 
+.pane-at-this-location-block-panel-pane-1 {
+  padding-left: 24px;
+}
+.pane-at-this-location-block-panel-pane-1 h2 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 23px;
+}
+.pane-at-this-location-block-panel-pane-1 .views-tooltip {
+  display: inline;
+}
+.pane-at-this-location-block-panel-pane-1 span {
+  font-size: 1.5em;
+}
+
 .pane-bean-colophon-about h2 {
   font-weight: bold;
   font-size: 26px;
@@ -791,6 +806,10 @@ a.more-link-block {
 }
 .location-about + .pane-opening-hours-table table td, .location-about + .pane-opening-hours-table table th {
   width: 100%;
+}
+
+.schedule-appointment p {
+  margin-top: 0;
 }
 
 .pane-location-header {
