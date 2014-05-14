@@ -14,7 +14,7 @@
 }
 
 .l-region--sidebar-left {
-  width: 22.72727%;
+  width: 26.08696%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
@@ -29,16 +29,16 @@
   z-index: -1;
   top: 0;
   left: 0%;
-  width: 22.72727%;
+  width: 26.08696%;
   bottom: 0;
   background: "";
 }
 
 .l-region--main-column {
-  width: 54.54545%;
+  width: 52.17391%;
   float: left;
   margin-right: -100%;
-  margin-left: 22.72727%;
+  margin-left: 26.08696%;
   clear: none;
   padding-left: 30px;
   padding-right: 30px;
@@ -48,14 +48,14 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 22.72727%;
-  width: 54.54545%;
+  left: 26.08696%;
+  width: 52.17391%;
   bottom: 0;
   background: "";
 }
 
 .l-region--sidebar-right {
-  width: 22.72727%;
+  width: 21.73913%;
   clear: right;
   float: right;
   padding-left: 30px;
@@ -67,8 +67,8 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 77.27273%;
-  width: 22.72727%;
+  left: 78.26087%;
+  width: 21.73913%;
   bottom: 0;
   background: "";
 }
