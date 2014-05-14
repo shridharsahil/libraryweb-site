@@ -8,7 +8,7 @@ $grid-padding: $gutter-width;
 // But design calls for a max-width of 964 pixels of usable content area, but
 // the column widths and grid padding (minus gutter) add up to 940px, so we
 // correct this by specifying a custom container width (and include the gutter).
-$container-width: 964px + $gutter-width*2;
+$container-width: 1004px;
 
 // Uncomment the following line to disable responsive.
 //$container-style: static;
