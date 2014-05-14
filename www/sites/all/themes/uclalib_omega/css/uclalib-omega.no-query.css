@@ -737,7 +737,26 @@ a.more-link-block {
 .pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row {
   border-bottom: 1px solid #adcde5;
   margin-bottom: 20px;
-  padding-bottom: 22px;
+  padding-bottom: 10px;
+}
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .views-field-field-destination-phone,
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .views-field-field-destination-email {
+  display: inline-block;
+  margin-right: 24px;
+}
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .icon-telephone,
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .icon-email {
+  font-size: 0.875em;
+  margin: 10px 0;
+}
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .icon-telephone:before,
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .icon-email:before {
+  float: left;
+  font-size: 1.143em;
+  margin-right: 3px;
+}
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .destination-icons-horiz {
+  margin-bottom: 0.9em;
 }
 .pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row-last {
   border-bottom: none;

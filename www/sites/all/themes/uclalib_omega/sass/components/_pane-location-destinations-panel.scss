@@ -3,7 +3,26 @@
     & > .views-row {
       border-bottom: 1px solid $border-color;
       margin-bottom: 20px;
-      padding-bottom: 22px;
+      padding-bottom: 10px;
+      .views-field-field-destination-phone,
+      .views-field-field-destination-email {
+        display: inline-block;
+        margin-right: 24px;
+      }
+      .icon-telephone,
+      .icon-email {
+        font-size: 0.875em;
+        margin: 10px 0;
+      }
+      .icon-telephone:before,
+      .icon-email:before {
+        float: left;
+        font-size: 1.143em;
+        margin-right: 3px;
+      }
+      .destination-icons-horiz {
+        margin-bottom: 0.9em;
+      }
     }
     & > .views-row-last {
       border-bottom: none;
