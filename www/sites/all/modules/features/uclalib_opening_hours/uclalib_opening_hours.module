@@ -185,6 +185,7 @@ function uclalib_opening_hours_generate_table($node) {
   $output = theme('table', array(
     'header' => $header,
     'rows' => $rows,
+    'attributes' => array('class' => array('opening-hours-week')),
   ));
 
   return $output;
