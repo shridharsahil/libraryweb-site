@@ -129,6 +129,28 @@ function uclalib_static_panelizer_defaults() {
     $display->content['new-e69d18e5-0aea-4e04-8a28-c97eaf36817f'] = $pane;
     $display->panels['main'][1] = 'new-e69d18e5-0aea-4e04-8a28-c97eaf36817f';
     $pane = new stdClass();
+    $pane->pid = 'new-5c0cd61c-0cf0-4a1d-b72a-25c8379c778d';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '5c0cd61c-0cf0-4a1d-b72a-25c8379c778d';
+    $display->content['new-5c0cd61c-0cf0-4a1d-b72a-25c8379c778d'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-5c0cd61c-0cf0-4a1d-b72a-25c8379c778d';
+    $pane = new stdClass();
     $pane->pid = 'new-4de7fecc-5052-4027-86b8-f853977d85e2';
     $pane->panel = 'top';
     $pane->type = 'node_title';
