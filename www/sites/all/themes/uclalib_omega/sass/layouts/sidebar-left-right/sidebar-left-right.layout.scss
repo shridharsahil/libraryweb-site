@@ -41,7 +41,7 @@ $gutter-styles: 'split'; // gitter is split between left and right of each col.
   // Span 1 column, starting at the 4th column
   .l-region--sidebar-right {
     @include float-span(1, 4);
-    padding-left: 0; // kill right rail gutter.
+    padding-right: 0; // kill right rail gutter.
 
     // Full-height faux-column for adding a background color in the theme.
     $left: column-span(3, 1); // Span 3 columns, starting from 1st column.
