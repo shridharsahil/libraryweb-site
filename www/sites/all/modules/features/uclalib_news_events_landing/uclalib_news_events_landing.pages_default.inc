@@ -78,7 +78,7 @@ function uclalib_news_events_landing_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '81ff575b-b17b-4871-a3ed-f813b4574f00';
-  $display->window_title = '';
+  $display->window_title = 'UCLA Library Upcoming News & Events';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
