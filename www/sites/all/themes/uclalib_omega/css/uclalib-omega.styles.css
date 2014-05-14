@@ -613,8 +613,8 @@ a.more-link-block {
 .pane-at-this-location-block-panel-pane-1 .views-tooltip {
   display: inline;
 }
-.pane-at-this-location-block-panel-pane-1 span {
-  font-size: 1.5em;
+.pane-at-this-location-block-panel-pane-1 .icon:before {
+  font-size: 2.2em;
 }
 
 .pane-bean-colophon-about h2 {
