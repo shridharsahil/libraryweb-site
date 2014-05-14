@@ -14,7 +14,7 @@
 }
 
 .l-region--sidebar-left {
-  width: 23.80952%;
+  width: 25%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
@@ -29,16 +29,16 @@
   z-index: -1;
   top: 0;
   left: 0%;
-  width: 23.80952%;
+  width: 25%;
   bottom: 0;
   background: "";
 }
 
 .l-region--main-column {
-  width: 47.61905%;
+  width: 50%;
   float: left;
   margin-right: -100%;
-  margin-left: 23.80952%;
+  margin-left: 25%;
   clear: none;
   padding-left: 20px;
   padding-right: 20px;
@@ -48,14 +48,14 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 23.80952%;
-  width: 47.61905%;
+  left: 25%;
+  width: 50%;
   bottom: 0;
   background: "";
 }
 
 .l-region--sidebar-right {
-  width: 28.57143%;
+  width: 25%;
   clear: right;
   float: right;
   padding-left: 20px;
@@ -67,8 +67,8 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 71.42857%;
-  width: 28.57143%;
+  left: 75%;
+  width: 25%;
   bottom: 0;
   background: "";
 }
