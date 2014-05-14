@@ -768,6 +768,31 @@ a.more-link-block {
   margin-top: 12px;
 }
 
+.location-about {
+  border-bottom: 1px solid #adcde5;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+.location-about h2 {
+  font-size: 1.000em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.location-about p {
+  margin-top: 0;
+}
+.location-about + .pane-opening-hours-table h2 {
+  font-size: 1.000em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.location-about + .pane-opening-hours-table table {
+  width: 99.9%;
+}
+.location-about + .pane-opening-hours-table table td, .location-about + .pane-opening-hours-table table th {
+  width: 100%;
+}
+
 .pane-location-header {
   position: relative;
 }
