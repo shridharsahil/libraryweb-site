@@ -602,18 +602,21 @@ a.more-link-block {
   border-width: 0 .7em .7em 0;
 }
 
-.pane-at-this-location-block-panel-pane-1 {
-  padding-left: 24px;
-}
 .pane-at-this-location-block-panel-pane-1 h2 {
   font-size: 1em;
   font-weight: bold;
   margin-top: 23px;
+  padding-left: 24px;
 }
-.pane-at-this-location-block-panel-pane-1 .views-tooltip {
+
+.view-at-this-location-block {
+  padding-left: 24px;
+}
+.view-at-this-location-block .views-tooltip {
   display: inline;
+  line-height: 2.5em;
 }
-.pane-at-this-location-block-panel-pane-1 .icon:before {
+.view-at-this-location-block .icon:before {
   font-size: 2.2em;
 }
 
