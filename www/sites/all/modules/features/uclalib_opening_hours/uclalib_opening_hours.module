@@ -85,10 +85,13 @@ function uclalib_opening_hours_generate_table_header() {
   // Create an interval of 1 day to add to the date for each week day.
   $interval = DateInterval::createFromDateString('1 day');
 
-  $header = array('');
+  $header = array(array('data' => '','class' => array('empty-header-cell')));
   for ($i = 0; $i < 7; $i++) {
     $day_str = _uclalib_opening_hours_short_day($day->format('w'));
-    $header_cell = array('data' => $day_str . ' ' . $day->format('d'));
+    $header_cell = array(
+      'data' => $day_str . ' ' . $day->format('d'),
+      'class' => array(drupal_html_class('day-' . $day->format('D'))),
+    );
 
     // If current day add a class.
     if ($day->format('d') == date_create()->format('d')) {
@@ -115,7 +118,7 @@ function uclalib_opening_hours_generate_table_rows($nodes) {
     $day = date_create('this week');
 
     // Add the title to the first column.
-    $row = array(array('data' => $title, 'class' => 'title'));
+    $row = array(array('data' => $title, 'class' => array('title')));
 
     // Fetch opening hours for each day.
     for ($i = 0; $i < 7; $i++) {
@@ -132,7 +135,7 @@ function uclalib_opening_hours_generate_table_rows($nodes) {
       $class = (empty($start_time) && empty($end_time)) ? 'closed' : 'open';
       $row_cell = array(
         'data' => $start_time . '-' . $end_time,
-        'class' => array($class),
+        'class' => array(drupal_html_class('day-' . $day->format('D')), $class),
       );
 
       // If current day add a class.
