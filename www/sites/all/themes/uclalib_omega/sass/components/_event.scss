@@ -1,0 +1,36 @@
+.pane-events-breadcrumb {
+  & + .pane-node-title h1 {
+    color: $ucla-gray;
+    font-size: 2.286em;
+    font-weight: bold;
+    margin: 18px 0 0;
+  }
+}
+.pane-node-field-event-subtitle {
+  font-size: 1.286em;
+  margin-bottom: 16px;
+}
+.pane-node-field-event-date {
+  font-size: 1.143em;
+  font-style: italic;
+}
+.pane-node-field-event-location {
+  font-size: 1.143em;
+  margin-bottom: 25px;
+}
+.pane-node-field-event-image {
+  margin-bottom: 38px;
+  & + .pane-horizontal-rule {
+    margin-bottom: 35px;
+  }
+}
+.pane-node-field-event-related-content {
+  border-top: 1px solid $border-color;
+  margin-top: 56px;
+  padding-top: 15px;
+  h2 {
+    color: $ucla-gray;
+    font-size: 1.429em;
+    font-weight: normal;
+  }
+}

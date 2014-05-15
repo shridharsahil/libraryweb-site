@@ -402,6 +402,46 @@ a[href="#main-content"] {
   font-size: 32px;
 }
 
+.pane-events-breadcrumb + .pane-node-title h1 {
+  color: #2d2f35;
+  font-size: 2.286em;
+  font-weight: bold;
+  margin: 18px 0 0;
+}
+
+.pane-node-field-event-subtitle {
+  font-size: 1.286em;
+  margin-bottom: 16px;
+}
+
+.pane-node-field-event-date {
+  font-size: 1.143em;
+  font-style: italic;
+}
+
+.pane-node-field-event-location {
+  font-size: 1.143em;
+  margin-bottom: 25px;
+}
+
+.pane-node-field-event-image {
+  margin-bottom: 38px;
+}
+.pane-node-field-event-image + .pane-horizontal-rule {
+  margin-bottom: 35px;
+}
+
+.pane-node-field-event-related-content {
+  border-top: 1px solid #adcde5;
+  margin-top: 56px;
+  padding-top: 15px;
+}
+.pane-node-field-event-related-content h2 {
+  color: #2d2f35;
+  font-size: 1.429em;
+  font-weight: normal;
+}
+
 /**
  * Override jQuery UI widget default font sizes.
  */
@@ -675,7 +715,7 @@ a.more-link-block {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
