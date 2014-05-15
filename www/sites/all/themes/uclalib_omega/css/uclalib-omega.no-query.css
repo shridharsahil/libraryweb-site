@@ -1148,17 +1148,17 @@ a.more-link-block {
   color: #3283be;
 }
 
-.sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content {
+.sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .pane-sub-content {
   background: #c1daeb;
   margin: 0 -25px;
   padding: 24px 0 15px;
   font-weight: bold;
   font-size: 15px;
 }
-.no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content {
+.no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content, .no-gray-sidebar-left .l-region--sidebar-left .pane-sub-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sub-content {
   margin: 0;
 }
-.sidebar-tier-1 .pane-title, .l-region--sidebar-left .pane-sibling-content .pane-title {
+.sidebar-tier-1 .pane-title, .l-region--sidebar-left .pane-sibling-content .pane-title, .l-region--sidebar-left .pane-sub-content .pane-title {
   background: #3283be;
   color: #fff;
   font-size: 15px;
@@ -1166,17 +1166,17 @@ a.more-link-block {
   margin: 0;
   padding: 10px 8px 10px 28px;
 }
-.sidebar-tier-1 ul, .l-region--sidebar-left .pane-sibling-content ul {
+.sidebar-tier-1 ul, .l-region--sidebar-left .pane-sibling-content ul, .l-region--sidebar-left .pane-sub-content ul {
   margin: 0;
   padding: 0 8px 0 28px;
 }
-.sidebar-tier-1 ul .leaf, .l-region--sidebar-left .pane-sibling-content ul .leaf {
+.sidebar-tier-1 ul .leaf, .l-region--sidebar-left .pane-sibling-content ul .leaf, .l-region--sidebar-left .pane-sub-content ul .leaf {
   line-height: 2.643em;
   list-style: none;
   color: #3283be;
 }
 
-.sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content {
+.sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .pane-sub-content + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content, .l-region--sidebar-left .pane-sub-content + .pane-sibling-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-sub-content, .l-region--sidebar-left .pane-sibling-content + .pane-sub-content, .l-region--sidebar-left .pane-sub-content + .pane-sub-content {
   margin-top: -15px;
   padding-top: 0;
 }
