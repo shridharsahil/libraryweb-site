@@ -21,16 +21,29 @@
 .pane-node-field-event-image {
   margin-bottom: 38px;
   & + .pane-horizontal-rule {
+    border-bottom: 1px solid $border-color;
     margin-bottom: 35px;
+    hr {
+      display: none;
+    }
   }
 }
 .pane-node-field-event-related-content {
   border-top: 1px solid $border-color;
-  margin-top: 56px;
+  margin: 56px 0 40px;
   padding-top: 15px;
   h2 {
     color: $ucla-gray;
     font-size: 1.429em;
     font-weight: normal;
+  }
+}
+.pane-node-field-event-category,
+.pane-node-field-event-series,
+.pane-node-field-event-audience {
+  h2 {
+    font-size: 1.143em;
+    font-weight: bold;
+    margin: 20px 0 4px;
   }
 }

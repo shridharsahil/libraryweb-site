@@ -428,18 +428,30 @@ a[href="#main-content"] {
   margin-bottom: 38px;
 }
 .pane-node-field-event-image + .pane-horizontal-rule {
+  border-bottom: 1px solid #adcde5;
   margin-bottom: 35px;
+}
+.pane-node-field-event-image + .pane-horizontal-rule hr {
+  display: none;
 }
 
 .pane-node-field-event-related-content {
   border-top: 1px solid #adcde5;
-  margin-top: 56px;
+  margin: 56px 0 40px;
   padding-top: 15px;
 }
 .pane-node-field-event-related-content h2 {
   color: #2d2f35;
   font-size: 1.429em;
   font-weight: normal;
+}
+
+.pane-node-field-event-category h2,
+.pane-node-field-event-series h2,
+.pane-node-field-event-audience h2 {
+  font-size: 1.143em;
+  font-weight: bold;
+  margin: 20px 0 4px;
 }
 
 /**
