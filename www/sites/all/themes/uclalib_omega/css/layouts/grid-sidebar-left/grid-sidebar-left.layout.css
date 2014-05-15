@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+.panel-grid-sidebar-left {
+  position: relative;
+}
 .panel-grid-sidebar-left:after {
   content: "";
   display: table;
@@ -20,47 +23,109 @@
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-left: 0;
+}
+.l-region--sidebar-left:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0%;
+  width: 23.80952%;
+  bottom: 0;
+  background: "";
 }
 
 .l-region--main-column {
+  max-width: 50em;
+}
+
+.with-sidebar-left .l-region--main-column {
+  max-width: auto;
   width: 76.19048%;
   float: right;
+  margin-left: 0;
+  margin-right: 0;
   clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-right: 0;
+}
+.with-sidebar-left .l-region--main-column:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 23.80952%;
+  width: 76.19048%;
+  bottom: 0;
+  background: "";
 }
 
 .l-region--content-top-left {
-  width: 33%;
+  width: 50%;
   float: left;
+  margin-right: -100%;
+  margin-left: 0%;
   clear: none;
-}
-.l-region--content-top-middle {
-  width: 33%;
-  float: left;
-  clear: none;
-}
-.l-region--content-top-right {
-  width: 33%;
-  float: left;
-  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  clear: left;
 }
 
+.l-region--content-top-right {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  clear: right;
+}
+
+.l-region--content-middle-left {
+  width: 50%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  clear: left;
+}
+
+.l-region--content-middle-right {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  clear: right;
+}
 
 .l-region--content-bottom-left {
-  width: 33%;
+  width: 50%;
   float: left;
+  margin-right: -100%;
+  margin-left: 0%;
   clear: none;
-}
-.l-region--content-bottom-middle {
-  width: 33%;
-  float: left;
-  clear: none;
-}
-.l-region--content-bottom-right {
-  width: 33%;
-  float: left;
-  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  clear: left;
 }
 
+.l-region--content-bottom-right {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  clear: right;
+}

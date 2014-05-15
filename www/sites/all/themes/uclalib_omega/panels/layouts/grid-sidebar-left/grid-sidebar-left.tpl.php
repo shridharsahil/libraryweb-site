@@ -36,14 +36,22 @@
         <?php print $content['content_top_left'] ?>
       </div>
     <?php endif; ?>
-    <?php if (!empty($content['content_top_middle'])): ?>
-      <div<?php print drupal_attributes($region_attributes_array['content_top_middle'])?>>
-        <?php print $content['content_top_middle'] ?>
-      </div>
-    <?php endif; ?>
     <?php if (!empty($content['content_top_right'])): ?>
       <div<?php print drupal_attributes($region_attributes_array['content_top_right'])?>>
         <?php print $content['content_top_right'] ?>
+      </div>
+    <?php endif; ?>
+    </div>
+
+    <div class="content-middle">
+    <?php if (!empty($content['content_middle_left'])): ?>
+      <div<?php print drupal_attributes($region_attributes_array['content_middle_left'])?>>
+        <?php print $content['content_middle_left'] ?>
+      </div>
+    <?php endif; ?>
+    <?php if (!empty($content['content_middle_right'])): ?>
+      <div<?php print drupal_attributes($region_attributes_array['content_middle_right'])?>>
+        <?php print $content['content_middle_right'] ?>
       </div>
     <?php endif; ?>
     </div>
@@ -52,11 +60,6 @@
     <?php if (!empty($content['content_bottom_left'])): ?>
       <div<?php print drupal_attributes($region_attributes_array['content_bottom_left'])?>>
         <?php print $content['content_bottom_left'] ?>
-      </div>
-    <?php endif; ?>
-    <?php if (!empty($content['content_bottom_middle'])): ?>
-      <div<?php print drupal_attributes($region_attributes_array['content_bottom_middle'])?>>
-        <?php print $content['content_bottom_middle'] ?>
       </div>
     <?php endif; ?>
     <?php if (!empty($content['content_bottom_right'])): ?>

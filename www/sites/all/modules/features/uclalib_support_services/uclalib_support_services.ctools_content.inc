@@ -14,7 +14,7 @@ function uclalib_support_services_default_ctools_custom_content() {
   $content->disabled = FALSE; /* Edit this to true to make a default content disabled initially */
   $content->api_version = 1;
   $content->name = 'stub_content';
-  $content->admin_title = 'STUP LOREM';
+  $content->admin_title = 'STUB LOREM';
   $content->admin_description = 'Stub lorem ipsun';
   $content->category = 'STUB';
   $content->settings = array(
