@@ -190,3 +190,10 @@ function _uclalib_location_create_subpage($location_node, $title, $menu_title, $
 
   return $sp_node;
 }
+
+/* * Implementation of hook_form_alter() */ 
+function uclalib_location_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search');
+  }
+} 
