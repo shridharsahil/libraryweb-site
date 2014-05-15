@@ -1,0 +1,22 @@
+.pane-staff-directory-staff-directory-pane {
+  .view-staff-directory > .view-content {
+    & > .views-row {
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 30px;
+      padding-bottom: 27px;
+      .views-field-field-staff-last-name {
+        font-size: 1.143em;
+        padding-top: 12px;
+      }
+      .views-field-field-staff-image-thumbnail {
+        float: left;
+        margin-right: 18px;
+      }
+    }
+    & > .views-row-last {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
