@@ -675,7 +675,7 @@ a.more-link-block {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399452290');
+  background-image: url('../images/logo-colophon.png?1399382991');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1181,7 +1181,7 @@ a.more-link-block {
   padding-top: 0;
 }
 
-.sidebar-tier-2 {
+.sidebar-tier-2, .l-region--sidebar-left .pane-quick-links {
   background: #eff3f4;
   line-height: 2.143em;
   margin: 0 -25px;
@@ -1189,22 +1189,22 @@ a.more-link-block {
   font-weight: bold;
   font-size: 13px;
 }
-.no-gray-sidebar-left .sidebar-tier-2 {
+.no-gray-sidebar-left .sidebar-tier-2, .no-gray-sidebar-left .l-region--sidebar-left .pane-quick-links, .l-region--sidebar-left .no-gray-sidebar-left .pane-quick-links {
   margin: 0;
 }
-.sidebar-tier-2 .pane-title {
+.sidebar-tier-2 .pane-title, .l-region--sidebar-left .pane-quick-links .pane-title {
   font-size: 14px;
   font-weight: bold;
   margin: 0;
 }
-.sidebar-tier-2 ul {
+.sidebar-tier-2 ul, .l-region--sidebar-left .pane-quick-links ul {
   margin: 0;
   padding: 0;
 }
-.sidebar-tier-2 ul li {
+.sidebar-tier-2 ul li, .l-region--sidebar-left .pane-quick-links ul li {
   list-style: none;
 }
-.sidebar-tier-2 ul li a {
+.sidebar-tier-2 ul li a, .l-region--sidebar-left .pane-quick-links ul li a {
   color: #3283be;
 }
 
