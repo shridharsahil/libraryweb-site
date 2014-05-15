@@ -258,6 +258,30 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
   $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['bid']['separator'] = '';
+  /* Field: Content: Event Image */
+  $handler->display->display_options['fields']['field_event_image']['id'] = 'field_event_image';
+  $handler->display->display_options['fields']['field_event_image']['table'] = 'field_data_field_event_image';
+  $handler->display->display_options['fields']['field_event_image']['field'] = 'field_event_image';
+  $handler->display->display_options['fields']['field_event_image']['relationship'] = 'field_upcoming_events_events_target_id';
+  $handler->display->display_options['fields']['field_event_image']['label'] = '';
+  $handler->display->display_options['fields']['field_event_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_event_image']['settings'] = array(
+    'image_style' => 'widescreen_small',
+    'image_link' => '',
+  );
+  /* Field: Content: Exhibition Image */
+  $handler->display->display_options['fields']['field_exhibition_image']['id'] = 'field_exhibition_image';
+  $handler->display->display_options['fields']['field_exhibition_image']['table'] = 'field_data_field_exhibition_image';
+  $handler->display->display_options['fields']['field_exhibition_image']['field'] = 'field_exhibition_image';
+  $handler->display->display_options['fields']['field_exhibition_image']['relationship'] = 'field_upcoming_events_events_target_id';
+  $handler->display->display_options['fields']['field_exhibition_image']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_exhibition_image']['settings'] = array(
+    'image_style' => 'widescreen_small',
+    'image_link' => '',
+  );
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
