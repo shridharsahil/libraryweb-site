@@ -175,7 +175,7 @@ function uclalib_location_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'locations-sidebar-search',
+      'css_class' => 'sidebar-search',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -203,7 +203,7 @@ function uclalib_location_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'locations-sidebar-options',
+      'css_class' => 'sidebar-options',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -231,7 +231,7 @@ function uclalib_location_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'locations-sidebar-options',
+      'css_class' => 'sidebar-options',
     );
     $pane->extras = array();
     $pane->position = 2;
@@ -259,7 +259,7 @@ function uclalib_location_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'locations-sidebar-options',
+      'css_class' => 'sidebar-options',
     );
     $pane->extras = array();
     $pane->position = 3;
@@ -287,7 +287,7 @@ function uclalib_location_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'locations-sidebar-options',
+      'css_class' => 'sidebar-options',
     );
     $pane->extras = array();
     $pane->position = 4;
