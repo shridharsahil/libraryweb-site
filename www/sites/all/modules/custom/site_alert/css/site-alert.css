@@ -11,7 +11,7 @@ div.panel-pane.pane-page-site-alert div.text {
   font-size: 18px;
 }
 
-div.panel-pane.pane-page-site-alert div.l {
+div.panel-pane.pane-page-site-alert div.low {
   background: #F3EAAC;
   border: 1px solid #CC9E9F;
   background-image: url('icon-alert.png');
@@ -21,7 +21,7 @@ div.panel-pane.pane-page-site-alert div.l {
   margin-bottom: 1.5em;
 }
 
-div.panel-pane.pane-page-site-alert div.h {
+div.panel-pane.pane-page-site-alert div.high {
   max-height: 44px;
   background: #EDD5D6;
   border: 1px solid #B45F61;

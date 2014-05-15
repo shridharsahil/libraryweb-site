@@ -31,16 +31,16 @@ function page_site_alert_content_type_render($subtype, $conf, $panel_args) {
   $alert = variable_get('alerts_expire');
   $expire = strtotime($alert);
 
+  $level = variable_get('alerts_severity');
+  $alert = variable_get('alerts_content');
+
+
   if ($begin < time()) {
     if ($expire > time()) {
       $block = new stdClass();
 
-      $level = variable_get('alerts_severity');
-      $severity = $level['value'];
-      $output = '<div class=' .$severity .'>';
+      $output = '<div class=' .$level .'>';
       $output .= '<div class=text>';
-
-      $alert = variable_get('alerts_content');
 
       $tags = array('a', 'em', 'strong');
       $output .= filter_xss($alert, $tags);
