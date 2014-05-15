@@ -28,6 +28,16 @@ $plugin = array(
 function template_preprocess_sidebar_left_right(&$variables) {
   $variables['attributes_array']['class'][] = 'panel-sidebar-left-right';
 
+  // Use a class to change the layout when there is no sidebar content.
+  if (!empty($variables['content']['sidebar_left'])) {
+    $variables['attributes_array']['class'][] = 'with-sidebar-left';
+  }
+
+  // Use a class to change the layout when there is no sidebar content.
+  if (empty($variables['content']['sidebar_right'])) {
+    $variables['attributes_array']['class'][] = 'no-sidebar-right';
+  }
+
   foreach($variables['content'] as $name => $item) {
     $variables['region_attributes_array'][$name]['class'][] = 'l-region';
     $variables['region_attributes_array'][$name]['class'][] = 'l-region--' . drupal_clean_css_identifier($name);

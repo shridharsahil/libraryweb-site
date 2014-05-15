@@ -35,6 +35,10 @@
 }
 
 .l-region--main-column {
+  max-width: 50em;
+}
+
+.with-sidebar-left .l-region--main-column {
   width: 76.19048%;
   float: right;
   margin-left: 0;
@@ -44,7 +48,7 @@
   padding-right: 20px;
   padding-right: 0;
 }
-.l-region--main-column:before {
+.with-sidebar-left .l-region--main-column:before {
   content: " ";
   position: absolute;
   z-index: -1;
