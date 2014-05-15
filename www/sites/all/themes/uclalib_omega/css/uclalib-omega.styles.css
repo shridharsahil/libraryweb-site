@@ -479,17 +479,18 @@ a[href="#main-content"] {
   border: none;
   padding: 6px 3px;
 }
-.sidebar-search .views-widget-checkboxes,
-.sidebar-search .views-widget-filter-field_staff_is_subject_librarian {
+.sidebar-search .views-widget-checkboxes {
   color: #2d2f35;
   margin-left: 18px;
-  padding-right: 0;
 }
 .sidebar-search .views-submit-button {
   margin-left: 18px;
 }
 .sidebar-search .views-submit-button input {
   margin: 0 !important;
+}
+.sidebar-search .views-widget-filter-field_staff_is_subject_librarian {
+  display: none;
 }
 
 .sidebar-options .ctools-toggle {
@@ -674,7 +675,7 @@ a.more-link-block {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1009,7 +1010,7 @@ a.more-link-block {
 }
 .pane-staff-directory-staff-directory-pane .view-staff-directory > .view-content > .views-row .views-field-field-staff-last-name {
   font-size: 1.143em;
-  padding-top: 12px;
+  padding-top: 11px;
 }
 .pane-staff-directory-staff-directory-pane .view-staff-directory > .view-content > .views-row .views-field-field-staff-image-thumbnail {
   float: left;
@@ -1019,6 +1020,32 @@ a.more-link-block {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+/* Staff directory search panel */
+.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .views-widget-filter-field_staff_is_subject_librarian > label,
+.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .views-widget-filter-search_api_views_fulltext,
+.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .views-submit-button {
+  display: none;
+}
+.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .form-radios > div {
+  float: left;
+  margin: 8px 18px 0 0 !important;
+}
+.l-region--main .facetapi-facet-field-staff-glossary-index {
+  list-style: none;
+  padding: 0 0 30px;
+}
+.l-region--main .facetapi-facet-field-staff-glossary-index li {
+  border-right: 1px solid #adcde5;
+  float: left;
+  padding: 0 8px;
+}
+.l-region--main .facetapi-facet-field-staff-glossary-index li:first-child {
+  padding-left: 0;
+}
+.l-region--main .facetapi-facet-field-staff-glossary-index li:last-child {
+  border-right: none;
 }
 
 .pane-style-background-gray {

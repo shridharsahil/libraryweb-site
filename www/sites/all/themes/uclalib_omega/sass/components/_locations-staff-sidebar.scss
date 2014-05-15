@@ -14,17 +14,18 @@
     border: none;
     padding: 6px 3px;
   }
-  .views-widget-checkboxes,
-  .views-widget-filter-field_staff_is_subject_librarian {
+  .views-widget-checkboxes {
     color: $ucla-gray;
     margin-left: 18px;
-    padding-right: 0;
   }
   .views-submit-button {
     margin-left: 18px;
     input {
       margin: 0 !important;
     }
+  }
+  .views-widget-filter-field_staff_is_subject_librarian {
+    display: none;
   }
 }
 .sidebar-options {
