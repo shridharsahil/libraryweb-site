@@ -1,0 +1,16 @@
+.pane-bean-featured-content {
+  background: $highlighted-bg-color;
+  margin: 0 0 1em;
+  padding: 12px;
+  .field--name-field-featured-thumbnail-image {
+    float: left;
+    margin-right: 15px;
+  }
+  .field--name-field-featured-link {
+    float: left;
+    margin-top: 15px;
+    a {
+      @extend .more-link-triangle-after;
+    }
+  }
+}

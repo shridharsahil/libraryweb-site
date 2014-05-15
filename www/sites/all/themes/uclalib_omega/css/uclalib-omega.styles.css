@@ -514,7 +514,7 @@ a[href="#main-content"] {
 
 .more-link-triangle-after:after, div.more-link > a:after, div.more-link-block > a:after,
 a.more-link:after,
-a.more-link-block:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
+a.more-link-block:after, .pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -681,6 +681,20 @@ a.more-link-block {
   width: 150px;
   height: 30px;
   vertical-align: bottom;
+}
+
+.pane-bean-featured-content {
+  background: #eff3f4;
+  margin: 0 0 1em;
+  padding: 12px;
+}
+.pane-bean-featured-content .field--name-field-featured-thumbnail-image {
+  float: left;
+  margin-right: 15px;
+}
+.pane-bean-featured-content .field--name-field-featured-link {
+  float: left;
+  margin-top: 15px;
 }
 
 .pane-bean-link-list .menu li {
