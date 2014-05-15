@@ -344,6 +344,28 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->uuid = 'c25c61cf-888b-4634-8a47-ca09cfb394db';
     $display->content['new-c25c61cf-888b-4634-8a47-ca09cfb394db'] = $pane;
     $display->panels['sidebar_left'][2] = 'new-c25c61cf-888b-4634-8a47-ca09cfb394db';
+    $pane = new stdClass();
+    $pane->pid = 'new-e9fdf0f1-0876-4644-8524-ab2263f17204';
+    $pane->panel = 'top';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-using-the-library-living-library';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'e9fdf0f1-0876-4644-8524-ab2263f17204';
+    $display->content['new-e9fdf0f1-0876-4644-8524-ab2263f17204'] = $pane;
+    $display->panels['top'][0] = 'new-e9fdf0f1-0876-4644-8524-ab2263f17204';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
