@@ -1264,6 +1264,16 @@ a.more-link-block {
   margin: 0;
 }
 
+.page-search .view-id-content_search .views-exposed-widgets {
+  margin: 1em 0 2em;
+}
+.page-search .view-id-content_search .views-exposed-widgets .form-submit {
+  margin-top: 1.25em !important;
+}
+.page-search .view-id-content_search .views-row {
+  margin-bottom: 1em;
+}
+
 .cal-date {
   display: inline-block;
   margin: 0;
