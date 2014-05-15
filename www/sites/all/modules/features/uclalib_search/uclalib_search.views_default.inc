@@ -384,6 +384,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'All Staff';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'clearfix';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Indexed Node: Staff Image Thumbnail */
   $handler->display->display_options['fields']['field_staff_image_thumbnail']['id'] = 'field_staff_image_thumbnail';
