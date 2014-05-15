@@ -882,6 +882,12 @@ a.more-link-block {
   display: inline;
 }
 
+.page-locations #facetapi-facet-search-apilocation-search-block-type {
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
 .pane-location-search-panel-pane-1 .view-location-search > .view-content > .views-row {
   border-bottom: 1px solid #adcde5;
   margin-bottom: 30px;
