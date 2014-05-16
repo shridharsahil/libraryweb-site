@@ -302,6 +302,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
   $handler->display->display_options['fields']['field_news_image']['label'] = '';
   $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_news_image']['settings'] = array(
     'image_style' => 'thumbnail',
@@ -312,6 +313,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: The main body text: Summary (indexed) */
@@ -319,8 +321,18 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['body_summary']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['body_summary']['field'] = 'body_summary';
   $handler->display->display_options['fields']['body_summary']['label'] = '';
+  $handler->display->display_options['fields']['body_summary']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_summary']['link_to_entity'] = 0;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div><h3>[title]</h3></div>
+<div><p>[body_summary]</p></div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_site_general_search';
