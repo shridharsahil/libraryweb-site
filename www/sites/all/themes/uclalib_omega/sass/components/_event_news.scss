@@ -65,11 +65,13 @@
   h2 {
     font-size: 1.143em;
     font-weight: bold;
+    margin-bottom: 26px;
   }
   .views-row {
     display: table-row;
     & > div {
       display: table-cell;
+      padding: 14px 0;
       vertical-align: middle;
     }
     .views-field-field-event-date {

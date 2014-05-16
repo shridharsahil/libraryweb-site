@@ -477,6 +477,7 @@ a[href="#main-content"] {
 .pane-related-events-panel-pane-1 h2 {
   font-size: 1.143em;
   font-weight: bold;
+  margin-bottom: 26px;
 }
 .pane-other-events-panel-pane-1 .views-row,
 .pane-related-events-panel-pane-1 .views-row {
@@ -485,6 +486,7 @@ a[href="#main-content"] {
 .pane-other-events-panel-pane-1 .views-row > div,
 .pane-related-events-panel-pane-1 .views-row > div {
   display: table-cell;
+  padding: 14px 0;
   vertical-align: middle;
 }
 .pane-other-events-panel-pane-1 .views-row .views-field-field-event-date,
