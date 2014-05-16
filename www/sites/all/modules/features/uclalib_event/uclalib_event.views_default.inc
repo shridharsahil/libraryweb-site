@@ -309,16 +309,16 @@ function uclalib_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Event Date */
+  /* Field: Event Time */
   $handler->display->display_options['fields']['field_event_date_2']['id'] = 'field_event_date_2';
   $handler->display->display_options['fields']['field_event_date_2']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date_2']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_2']['ui_name'] = 'Event Time';
   $handler->display->display_options['fields']['field_event_date_2']['label'] = '';
   $handler->display->display_options['fields']['field_event_date_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_event_date_2']['alter']['text'] = '[field_event_location] - [field_event_date_2]';
   $handler->display->display_options['fields']['field_event_date_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_2']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_event_date_2']['type'] = 'date_plain';
   $handler->display->display_options['fields']['field_event_date_2']['settings'] = array(
     'format_type' => 'bsp_event_cal_time',
     'fromto' => 'both',
@@ -336,7 +336,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_location']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_location']['settings'] = array(
-    'link' => 1,
+    'link' => 0,
   );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -466,7 +466,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_location']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_location']['settings'] = array(
-    'link' => 1,
+    'link' => 0,
   );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
