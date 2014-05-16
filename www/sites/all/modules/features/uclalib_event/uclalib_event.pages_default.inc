@@ -431,7 +431,12 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->subtype = 'other_events-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '%node:nid',
+        'date_argument' => '%node:field_event_date',
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -450,7 +455,11 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->subtype = 'related_events-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '%node:nid',
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

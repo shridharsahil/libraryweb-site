@@ -13,7 +13,7 @@ function uclalib_event_field_default_field_bases() {
   // Exported field_base: 'field_event_audience'
   $field_bases['field_event_audience'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_event_audience',
@@ -35,7 +35,7 @@ function uclalib_event_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'events_and_exhibitions_series',
+          'vocabulary' => 'audience',
           'parent' => 0,
         ),
       ),
@@ -171,7 +171,9 @@ function uclalib_event_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(),
+        'target_bundles' => array(
+          'location' => 'location',
+        ),
       ),
       'target_type' => 'node',
     ),
@@ -182,7 +184,7 @@ function uclalib_event_field_default_field_bases() {
   // Exported field_base: 'field_event_related_content'
   $field_bases['field_event_related_content'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_event_related_content',
