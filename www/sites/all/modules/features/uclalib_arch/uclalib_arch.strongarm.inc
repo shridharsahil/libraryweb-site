@@ -14,7 +14,7 @@ function uclalib_arch_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_month_with_date';
-  $strongarm->value = 'F jS';
+  $strongarm->value = 'l, F jS, Y';
   $export['date_format_month_with_date'] = $strongarm;
 
   $strongarm = new stdClass();

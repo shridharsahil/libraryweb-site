@@ -292,8 +292,10 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Date for title */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
@@ -303,7 +305,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
-    'format_type' => 'month_with_date',
+    'format_type' => 'bsp_event_cal_date_short',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -320,8 +322,8 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_2']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_date_2']['settings'] = array(
-    'format_type' => 'bsp_event_cal_time',
-    'fromto' => 'both',
+    'format_type' => 'time_12hr_',
+    'fromto' => '',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
@@ -332,7 +334,8 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['label'] = '';
   $handler->display->display_options['fields']['field_event_location']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '[field_event_location] - [field_event_date_2]';
+  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '<div>[title]</div>
+<div><i>[field_event_location] - [field_event_date_2]</i></div>';
   $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_location']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_location']['settings'] = array(
@@ -358,6 +361,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['use_fromto'] = 'no';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
@@ -440,8 +444,10 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
@@ -450,7 +456,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
-    'format_type' => 'bsp_event_cal_time',
+    'format_type' => 'time_12hr_',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -462,7 +468,8 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['label'] = '';
   $handler->display->display_options['fields']['field_event_location']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '[field_event_location] - [field_event_date_1]';
+  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '<div>[title]</div>
+<div><i>[field_event_location] - [field_event_date_1]</i></div>';
   $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_location']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_location']['settings'] = array(
