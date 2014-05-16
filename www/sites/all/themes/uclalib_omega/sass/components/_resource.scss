@@ -1,0 +1,45 @@
+.pane-node-field-resource-link {
+  h2 {
+    color: $ucla-gray;
+    font-size: 1.429em;
+    font-weight: normal;
+  }
+  .field--type-link-field {
+    .field__item {
+      margin-bottom: 0.5em;
+      &:before {
+        font-family: 'icomoon';
+        font-size: 1.000em;
+        content: "\e610";
+        margin-right: 8px;
+        vertical-align: -7%;
+      }
+    }
+  }
+}
+.pane-node-field-resource-other-links {
+  @extend .pane-node-field-resource-link;
+  .field--type-link-field .field__item:before {
+    content: "\e611";
+  }
+}
+
+.pane-resource-category-search-links {
+  margin: 31px 0 40px;
+  h2 {
+    color: $ucla-gray;
+    font-size: 1.429em;
+    font-weight: normal;
+  }
+}
+.pane-node-field-resource-associated-loc {
+  h2 {
+    color: $ucla-gray;
+    font-size: 1.429em;
+    font-weight: normal;
+  }
+}
+
+.pane-node-field-resource-image-thumbnail {
+  margin-top: 2em;
+}
