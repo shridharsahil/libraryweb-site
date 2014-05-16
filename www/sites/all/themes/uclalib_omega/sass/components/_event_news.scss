@@ -44,6 +44,7 @@
     font-weight: normal;
   }
 }
+/* sidebar */
 .pane-node-field-event-category,
 .pane-node-field-event-series,
 .pane-node-field-event-audience,
@@ -54,5 +55,25 @@
     font-size: 1.143em;
     font-weight: bold;
     margin: 20px 0 4px;
+  }
+}
+.pane-other-events-panel-pane-1,
+.pane-related-events-panel-pane-1 {
+  border-top: 1px solid $border-color;
+  margin: 40px 0 40px;
+  padding-top: 19px;
+  h2 {
+    font-size: 1.143em;
+    font-weight: bold;
+  }
+  .views-row {
+    display: table-row;
+    & > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .views-field-field-event-date {
+      padding-right: 15px;
+    }
   }
 }

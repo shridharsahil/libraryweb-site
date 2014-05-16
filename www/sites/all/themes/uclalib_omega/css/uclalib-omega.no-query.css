@@ -455,6 +455,7 @@ a[href="#main-content"] {
   font-weight: normal;
 }
 
+/* sidebar */
 .pane-node-field-event-category h2,
 .pane-node-field-event-series h2,
 .pane-node-field-event-audience h2,
@@ -464,6 +465,31 @@ a[href="#main-content"] {
   font-size: 1.143em;
   font-weight: bold;
   margin: 20px 0 4px;
+}
+
+.pane-other-events-panel-pane-1,
+.pane-related-events-panel-pane-1 {
+  border-top: 1px solid #adcde5;
+  margin: 40px 0 40px;
+  padding-top: 19px;
+}
+.pane-other-events-panel-pane-1 h2,
+.pane-related-events-panel-pane-1 h2 {
+  font-size: 1.143em;
+  font-weight: bold;
+}
+.pane-other-events-panel-pane-1 .views-row,
+.pane-related-events-panel-pane-1 .views-row {
+  display: table-row;
+}
+.pane-other-events-panel-pane-1 .views-row > div,
+.pane-related-events-panel-pane-1 .views-row > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.pane-other-events-panel-pane-1 .views-row .views-field-field-event-date,
+.pane-related-events-panel-pane-1 .views-row .views-field-field-event-date {
+  padding-right: 15px;
 }
 
 /**
