@@ -1,4 +1,29 @@
-.pane-news-search-news-search .views-field-field-news-image {
-  float: left;
-  margin-right: 18px;
+.pane-news-search-news-search {
+  margin-top: 1em;
+  .views-row {
+    border-bottom: 1px solid $border-color;
+    display: table;
+    margin-bottom: 30px;
+    padding-bottom: 27px;
+    width: 100%;
+    .views-field-field-news-image,
+    .views-field-nothing {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .views-field-field-news-image {
+      width: 18%;
+    }
+    h3 {
+      margin: 0 0 0.4em;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .views-row-last {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }

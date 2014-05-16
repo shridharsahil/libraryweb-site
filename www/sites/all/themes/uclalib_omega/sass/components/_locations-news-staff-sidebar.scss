@@ -1,5 +1,6 @@
 // Blue sidebar for locations search page
 .page-locations,
+.page-news,
 .page-staff {
   .l-region--sidebar-left {
     &:before {
@@ -43,8 +44,12 @@
   ul {
     list-style: none;
     padding-left: 22px;
+    .facetapi-checkbox {
+      vertical-align: text-bottom;
+    }
     a {
       color: $ucla-gray;
+      vertical-align: middle;
     }
   }
 }
