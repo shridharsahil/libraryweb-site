@@ -91,7 +91,10 @@ function uclalib_news_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'news-entry-title',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -115,7 +118,10 @@ function uclalib_news_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'news-entry-author',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -139,7 +145,10 @@ function uclalib_news_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'news-entry-date',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
