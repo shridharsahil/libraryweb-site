@@ -403,8 +403,6 @@ a[href="#main-content"] {
 }
 
 .pane-events-breadcrumb + .pane-node-title h1,
-.pane-events-breadcrumb .pane-content,
-.news-entry-title + .pane-node-title h1,
 .news-entry-title .pane-content {
   color: #2d2f35;
   font-size: 2.286em;
