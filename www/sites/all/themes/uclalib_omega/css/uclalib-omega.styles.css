@@ -402,7 +402,10 @@ a[href="#main-content"] {
   font-size: 32px;
 }
 
-.pane-events-breadcrumb + .pane-node-title h1 {
+.pane-events-breadcrumb + .pane-node-title h1,
+.pane-events-breadcrumb .pane-content,
+.news-entry-title + .pane-node-title h1,
+.news-entry-title .pane-content {
   color: #2d2f35;
   font-size: 2.286em;
   font-weight: bold;
@@ -414,7 +417,12 @@ a[href="#main-content"] {
   margin-bottom: 16px;
 }
 
-.pane-node-field-event-date {
+.news-entry-author {
+  font-size: 1.286em;
+}
+
+.pane-node-field-event-date,
+.news-entry-date {
   font-size: 1.143em;
   font-style: italic;
 }
@@ -449,7 +457,10 @@ a[href="#main-content"] {
 
 .pane-node-field-event-category h2,
 .pane-node-field-event-series h2,
-.pane-node-field-event-audience h2 {
+.pane-node-field-event-audience h2,
+.pane-recent-news-panel-pane-1 h2,
+.pane-news-category-links-category-search-links h2,
+.pane-news-category-links-panel-pane-1 h2 {
   font-size: 1.143em;
   font-weight: bold;
   margin: 20px 0 4px;
