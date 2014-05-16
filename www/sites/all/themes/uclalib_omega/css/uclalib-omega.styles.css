@@ -491,6 +491,10 @@ a[href="#main-content"] {
 .pane-related-events-panel-pane-1 .views-row .views-field-field-event-date {
   padding-right: 15px;
 }
+.pane-other-events-panel-pane-1 .views-row-last > div,
+.pane-related-events-panel-pane-1 .views-row-last > div {
+  padding: 14px 0 0 !important;
+}
 
 /**
  * Override jQuery UI widget default font sizes.

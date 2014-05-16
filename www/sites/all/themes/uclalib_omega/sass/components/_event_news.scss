@@ -75,4 +75,9 @@
       padding-right: 15px;
     }
   }
+  .views-row-last {
+    & > div {
+      padding: 14px 0 0 !important;
+    }
+  }
 }
