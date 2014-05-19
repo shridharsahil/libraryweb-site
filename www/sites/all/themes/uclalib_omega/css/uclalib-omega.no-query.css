@@ -789,7 +789,7 @@ a.more-link-block {
 }
 .pane-bean-featured-content .field--name-field-featured-thumbnail-image {
   float: left;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .pane-bean-featured-content .field--name-field-featured-link {
   float: left;
@@ -867,6 +867,20 @@ a.more-link-block {
 }
 .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after {
   margin-top: 12px;
+}
+
+.pane-bean-upcoming-events h2 {
+  background: #3283be;
+  border-color: #3283be #3283be #438ec3;
+  display: inline-block;
+  margin: 0 1px 0 0;
+  padding: 0.5em 1em;
+  font-weight: 100;
+  font-size: 19px;
+  color: white;
+}
+.pane-bean-upcoming-events .pane-content {
+  border: 1px solid #adcde5;
 }
 
 .pane-horizontal-tab-navigation {
@@ -1466,46 +1480,65 @@ a.more-link-block {
   line-height: 1em;
 }
 
-.ui-tabs .ui-tabs-panel {
+.ui-tabs .ui-tabs-panel,
+.field--name-field-upcoming-events-events {
   padding: 6px;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content {
   display: table;
   width: 100%;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-row,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-row,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-row {
   clear: both;
   overflow: hidden;
   display: table-row;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-row:hover,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row:hover {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row:hover,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-row:hover,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-row:hover {
   background: #eff3f4;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field {
   padding: 10px 11px;
   display: table-cell;
   vertical-align: middle;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field + .views-field,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field + .views-field {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field + .views-field,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field + .views-field,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field + .views-field {
   padding: 10px 0;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field-field-exhibition-end,
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field-field-event-date,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-exhibition-end,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-event-date {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-event-date,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field-field-exhibition-end,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field-field-event-date,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field-field-exhibition-end,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field-field-event-date {
   float: left;
   margin-right: 14px;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight a,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display a {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display a,
+.field--name-field-upcoming-events-events .view-recent-news-highlight a,
+.field--name-field-upcoming-events-events .view-upcoming-events-display a {
   color: #3283be;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-footer,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-footer {
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-footer,
+.field--name-field-upcoming-events-events .view-recent-news-highlight .view-footer,
+.field--name-field-upcoming-events-events .view-upcoming-events-display .view-footer {
   text-align: right;
 }

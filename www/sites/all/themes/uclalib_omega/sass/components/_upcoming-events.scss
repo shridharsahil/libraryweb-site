@@ -22,7 +22,8 @@
   line-height: 1em;
 }
 
-.ui-tabs .ui-tabs-panel {
+.ui-tabs .ui-tabs-panel,
+.field--name-field-upcoming-events-events {
   padding: 6px;
   .view-recent-news-highlight,
   .view-upcoming-events-display {
