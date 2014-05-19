@@ -917,7 +917,8 @@ a.more-link,
 .pane-daterangepicker-results .views-row .views-field-title {
   font-size: 1.143em;
 }
-.pane-daterangepicker-results .views-row .views-field-field-event-date-2 {
+.pane-daterangepicker-results .views-row .views-field-field-event-date-2,
+.pane-daterangepicker-results .views-row .views-field-field-exhibition-end {
   font-style: italic;
 }
 .pane-daterangepicker-results .views-row .views-field-body p {
