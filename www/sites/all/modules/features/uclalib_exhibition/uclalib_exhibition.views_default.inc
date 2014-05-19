@@ -116,6 +116,7 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Indexed Node: The main body text */
@@ -123,11 +124,21 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '125',
   );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
+<div><p>[body]</p></div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Indexed Node: Exhibition End Date */
   $handler->display->display_options['sorts']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['sorts']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
