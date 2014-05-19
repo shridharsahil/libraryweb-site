@@ -41,6 +41,15 @@ function uclalib_arch_date_format_types() {
   return array(
     'month_with_date' => t('Month with date'),
   );
+  return array(
+    'month' => t('Month'),
+  );
+  return array(
+    'day' => t('Day'),
+  );
+  return array(
+    'time' => t('Time'),
+  );
 }
 
 /**
