@@ -201,7 +201,7 @@ function uclalib_using_library_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'link-highlight',
+      'css_class' => 'more-link-block',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -250,7 +250,10 @@ function uclalib_using_library_default_page_manager_pages() {
       'settings' => NULL,
       'style' => 'background-gray',
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'more-link-block',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
