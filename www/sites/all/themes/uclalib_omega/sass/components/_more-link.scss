@@ -20,10 +20,12 @@ a.more-link {
 }
 
 .more-link-block {
-  @extend .more-link;
   background: $ucla-lt-gray;
   display: block;
   font-weight: bold;
   padding: 20px;
-  text-align: left;
+  text-align: center;
+  a {
+    @extend .more-link;
+  }
 }

@@ -611,9 +611,9 @@ a[href="#main-content"] {
   vertical-align: middle;
 }
 
-.more-link-triangle-after:after, div.more-link > a:after, div.more-link-block > a:after,
+.more-link-triangle-after:after, div.more-link > a:after,
 a.more-link:after,
-a.more-link-block:after, .pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
+.more-link-block a:after, .pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -626,9 +626,9 @@ a.more-link-block:after, .pane-bean-featured-content .field--name-field-featured
   font-size: 0.9em;
 }
 
-div.more-link > a, div.more-link-block > a,
+div.more-link > a,
 a.more-link,
-a.more-link-block {
+.more-link-block a {
   color: #3283be;
 }
 
@@ -637,7 +637,7 @@ a.more-link-block {
   display: block;
   font-weight: bold;
   padding: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .pane-bean-news-events-landing-page .grid-item:first-child {
@@ -663,7 +663,7 @@ a.more-link-block {
 .pane-bean-news-events-landing-page .view-header {
   float: right;
 }
-.pane-bean-news-events-landing-page .view-header .more-link, .pane-bean-news-events-landing-page .view-header .more-link-block {
+.pane-bean-news-events-landing-page .view-header .more-link, .pane-bean-news-events-landing-page .view-header .more-link-block a, .more-link-block .pane-bean-news-events-landing-page .view-header a {
   margin: -66px 11px 0 0;
 }
 .pane-bean-news-events-landing-page .view-content {
@@ -830,6 +830,11 @@ a.more-link-block {
   margin: 0;
 }
 
+.pane-bean-quick-find h2 {
+  padding: 0 3.5em;
+  font-size: 1em;
+  font-weight: bold;
+}
 .pane-bean-quick-find .pane-content {
   padding: 1em 3.5em;
   font-size: 14px;
@@ -879,7 +884,7 @@ a.more-link-block {
   font-size: 19px;
   color: white;
 }
-.pane-bean-upcoming-events .pane-content {
+.pane-bean-upcoming-events h2 + .pane-content {
   border: 1px solid #adcde5;
 }
 
@@ -1481,64 +1486,64 @@ a.more-link-block {
 }
 
 .ui-tabs .ui-tabs-panel,
-.field--name-field-upcoming-events-events {
+.pane-bean-upcoming-events h2 + .pane-content {
   padding: 6px;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content {
   display: table;
   width: 100%;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-row,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-row,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-row {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .views-row,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-row {
   clear: both;
   overflow: hidden;
   display: table-row;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-row:hover,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-row:hover,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-row:hover,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-row:hover {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .views-row:hover,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-row:hover {
   background: #eff3f4;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .views-field,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-field {
   padding: 10px 11px;
   display: table-cell;
   vertical-align: middle;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field + .views-field,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field + .views-field,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field + .views-field,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field + .views-field {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .views-field + .views-field,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-field + .views-field {
   padding: 10px 0;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field-field-exhibition-end,
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field-field-event-date,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-exhibition-end,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-event-date,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field-field-exhibition-end,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-content .views-field-field-event-date,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field-field-exhibition-end,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-content .views-field-field-event-date {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .views-field-field-exhibition-end,
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .views-field-field-event-date,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-field-field-exhibition-end,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-field-field-event-date {
   float: left;
   margin-right: 14px;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight a,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display a,
-.field--name-field-upcoming-events-events .view-recent-news-highlight a,
-.field--name-field-upcoming-events-events .view-upcoming-events-display a {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight a,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display a {
   color: #3283be;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-footer,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-footer,
-.field--name-field-upcoming-events-events .view-recent-news-highlight .view-footer,
-.field--name-field-upcoming-events-events .view-upcoming-events-display .view-footer {
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-footer,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-footer {
   text-align: right;
 }
