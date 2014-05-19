@@ -1,0 +1,22 @@
+.pane-daterangepicker {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  h2 {
+    font-size: 1.143em;
+    font-weight: bold;
+    margin: 6px 0 3px;
+  }
+  .date-input {
+    color: $text-color;
+    font-family: $akzidenz;
+    font-size: 1.143em;
+    padding: 10px 23px 8px 1px;
+  }
+  .date-input:hover,
+  .date-input:focus,
+  .date-input:active {
+    background-color: #eff3f4;
+    color: $ucla-gray;
+  }
+}

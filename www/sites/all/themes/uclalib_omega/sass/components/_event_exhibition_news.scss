@@ -55,11 +55,16 @@
 .pane-news-category-links-panel-pane-1,
 .pane-node-field-exhibition-category,
 .pane-node-field-exhibition-series,
-.pane-other-exhibitions {
+.pane-other-exhibitions,
+.pane-exhibitions-highlight-exhibition-highlight-pane {
   h2 {
     font-size: 1.143em;
     font-weight: bold;
     margin: 20px 0 4px;
+  }
+  .views-field-field-exhibition-end {
+    font-style: italic;
+    margin-top: 8px;
   }
 }
 .pane-other-events-panel-pane-1,

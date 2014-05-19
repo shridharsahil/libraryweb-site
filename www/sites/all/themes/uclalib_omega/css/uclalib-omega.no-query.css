@@ -468,10 +468,24 @@ a[href="#main-content"] {
 .pane-news-category-links-panel-pane-1 h2,
 .pane-node-field-exhibition-category h2,
 .pane-node-field-exhibition-series h2,
-.pane-other-exhibitions h2 {
+.pane-other-exhibitions h2,
+.pane-exhibitions-highlight-exhibition-highlight-pane h2 {
   font-size: 1.143em;
   font-weight: bold;
   margin: 20px 0 4px;
+}
+.pane-node-field-event-category .views-field-field-exhibition-end,
+.pane-node-field-event-series .views-field-field-exhibition-end,
+.pane-node-field-event-audience .views-field-field-exhibition-end,
+.pane-recent-news-panel-pane-1 .views-field-field-exhibition-end,
+.pane-news-category-links-category-search-links .views-field-field-exhibition-end,
+.pane-news-category-links-panel-pane-1 .views-field-field-exhibition-end,
+.pane-node-field-exhibition-category .views-field-field-exhibition-end,
+.pane-node-field-exhibition-series .views-field-field-exhibition-end,
+.pane-other-exhibitions .views-field-field-exhibition-end,
+.pane-exhibitions-highlight-exhibition-highlight-pane .views-field-field-exhibition-end {
+  font-style: italic;
+  margin-top: 8px;
 }
 
 .pane-other-events-panel-pane-1,
@@ -895,6 +909,42 @@ a.more-link,
 }
 .pane-bean-upcoming-events h2 + .pane-content {
   border: 1px solid #adcde5;
+}
+
+.pane-daterangepicker-results .views-row {
+  margin-bottom: 2em;
+}
+.pane-daterangepicker-results .views-row .views-field-title {
+  font-size: 1.143em;
+}
+.pane-daterangepicker-results .views-row .views-field-field-event-date-2 {
+  font-style: italic;
+}
+.pane-daterangepicker-results .views-row .views-field-body p {
+  margin: 6px 0 10px;
+}
+
+.pane-daterangepicker {
+  border-bottom: 1px solid #adcde5;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+}
+.pane-daterangepicker h2 {
+  font-size: 1.143em;
+  font-weight: bold;
+  margin: 6px 0 3px;
+}
+.pane-daterangepicker .date-input {
+  color: #666666;
+  font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.143em;
+  padding: 10px 23px 8px 1px;
+}
+.pane-daterangepicker .date-input:hover,
+.pane-daterangepicker .date-input:focus,
+.pane-daterangepicker .date-input:active {
+  background-color: #eff3f4;
+  color: #2d2f35;
 }
 
 .pane-horizontal-tab-navigation {
