@@ -36,15 +36,61 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Exhibition Start Date */
+  /* Field: Start Month */
   $handler->display->display_options['fields']['field_exhibition_start']['id'] = 'field_exhibition_start';
   $handler->display->display_options['fields']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['ui_name'] = 'Start Month';
   $handler->display->display_options['fields']['field_exhibition_start']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_start']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_start']['settings'] = array(
-    'format_type' => 'month_with_date',
+    'format_type' => 'month',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Start Day */
+  $handler->display->display_options['fields']['field_exhibition_start_1']['id'] = 'field_exhibition_start_1';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['ui_name'] = 'Start Day';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_start_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_start_1']['settings'] = array(
+    'format_type' => 'day',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: End Month */
+  $handler->display->display_options['fields']['field_exhibition_end_1']['id'] = 'field_exhibition_end_1';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['ui_name'] = 'End Month';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['settings'] = array(
+    'format_type' => 'month',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: End Day */
+  $handler->display->display_options['fields']['field_exhibition_end_2']['id'] = 'field_exhibition_end_2';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['ui_name'] = 'End Day';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end_2']['settings'] = array(
+    'format_type' => 'day',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -56,7 +102,7 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
   $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '[field_exhibition_start] to [field_exhibition_end]';
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '<div class="cal-exhibition-date"><div class="cal-month">[field_exhibition_start]</div><div class="cal-day">[field_exhibition_start_1]</div>to<div class="cal-month">[field_exhibition_end_1]</div><div class="cal-day">[field_exhibition_end_2]</div></div>';
   $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
     'format_type' => 'month_with_date',
