@@ -1,15 +1,21 @@
 .pane-daterangepicker-results {
   .views-row {
+    display: table;
     margin-bottom: 2em;
     .views-field-title {
       font-size: 1.143em;
     }
-    .views-field-field-event-date-2,
-    .views-field-field-exhibition-end {
-      font-style: italic;
+    .views-field-nothing {
+      display: table-cell;
+      vertical-align: middle;
+      p {
+        margin: 6px 0 0;
+      }
     }
-    .views-field-body p {
-      margin: 6px 0 10px;
+    .views-field-field-event-date-3 {
+      @extend .views-field-nothing;
+      padding-right: 12px;
+      text-align: center;
     }
   }
 }

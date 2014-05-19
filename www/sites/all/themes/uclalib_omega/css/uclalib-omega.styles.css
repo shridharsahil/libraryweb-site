@@ -716,7 +716,7 @@ a.more-link,
   font-style: italic;
   margin: 0;
 }
-.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field-nothing {
+.pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field-nothing, .pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .pane-daterangepicker-results .views-row .views-field-field-event-date-3, .pane-daterangepicker-results .views-row .pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field-field-event-date-3 {
   padding: 15px 0;
 }
 .pane-bean-news-events-landing-page .pane-news-events-landing-display-panel-pane-1 .views-field-field-exhibition-end {
@@ -912,17 +912,22 @@ a.more-link,
 }
 
 .pane-daterangepicker-results .views-row {
+  display: table;
   margin-bottom: 2em;
 }
 .pane-daterangepicker-results .views-row .views-field-title {
   font-size: 1.143em;
 }
-.pane-daterangepicker-results .views-row .views-field-field-event-date-2,
-.pane-daterangepicker-results .views-row .views-field-field-exhibition-end {
-  font-style: italic;
+.pane-daterangepicker-results .views-row .views-field-nothing, .pane-daterangepicker-results .views-row .views-field-field-event-date-3 {
+  display: table-cell;
+  vertical-align: middle;
 }
-.pane-daterangepicker-results .views-row .views-field-body p {
-  margin: 6px 0 10px;
+.pane-daterangepicker-results .views-row .views-field-nothing p, .pane-daterangepicker-results .views-row .views-field-field-event-date-3 p {
+  margin: 6px 0 0;
+}
+.pane-daterangepicker-results .views-row .views-field-field-event-date-3 {
+  padding-right: 12px;
+  text-align: center;
 }
 
 .pane-daterangepicker {
@@ -1121,7 +1126,9 @@ a.more-link,
   width: 100%;
 }
 .pane-news-search-news-search .views-row .views-field-field-news-image,
-.pane-news-search-news-search .views-row .views-field-nothing {
+.pane-news-search-news-search .views-row .views-field-nothing,
+.pane-news-search-news-search .pane-daterangepicker-results .views-row .views-field-field-event-date-3,
+.pane-daterangepicker-results .pane-news-search-news-search .views-row .views-field-field-event-date-3 {
   display: table-cell;
   vertical-align: middle;
 }
