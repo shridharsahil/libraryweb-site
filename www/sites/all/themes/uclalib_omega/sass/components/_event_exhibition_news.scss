@@ -1,11 +1,13 @@
 .pane-events-breadcrumb + .pane-node-title h1,
+.pane-exhibition-breadcrumb + .pane-node-title h1,
 .news-entry-title .pane-content {
   color: $ucla-gray;
   font-size: 2.286em;
   font-weight: bold;
   margin: 18px 0 0;
 }
-.pane-node-field-event-subtitle {
+.pane-node-field-event-subtitle,
+.pane-node-field-exhibition-subtitle {
   font-size: 1.286em;
   margin-bottom: 16px;
 }
@@ -13,11 +15,13 @@
   font-size: 1.286em;
 }
 .pane-node-field-event-date,
+.pane-exhibition-date-range,
 .news-entry-date {
   font-size: 1.143em;
   font-style: italic;
 }
-.pane-node-field-event-location {
+.pane-node-field-event-location,
+.pane-node-field-exhibition-location {
   font-size: 1.143em;
   margin-bottom: 25px;
 }
@@ -31,7 +35,8 @@
     display: none;
   }
 }
-.pane-node-field-event-related-content {
+.pane-node-field-event-related-content,
+.pane-node-field-exhibition-related-content {
   border-top: 1px solid $border-color;
   margin: 56px 0 40px;
   padding-top: 15px;
@@ -47,7 +52,10 @@
 .pane-node-field-event-audience,
 .pane-recent-news-panel-pane-1,
 .pane-news-category-links-category-search-links,
-.pane-news-category-links-panel-pane-1 {
+.pane-news-category-links-panel-pane-1,
+.pane-node-field-exhibition-category,
+.pane-node-field-exhibition-series,
+.pane-other-exhibitions {
   h2 {
     font-size: 1.143em;
     font-weight: bold;
