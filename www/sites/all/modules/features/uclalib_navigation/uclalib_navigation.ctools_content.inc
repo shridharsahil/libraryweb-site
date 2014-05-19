@@ -20,9 +20,10 @@ function uclalib_navigation_default_ctools_custom_content() {
   $content->settings = array(
     'admin_title' => 'Questions Highlight',
     'title' => '',
-    'body' => 'Have questions about your research? <a href="/support/talk">We can help!</a>',
+    'body' => '<p>Have questions about your research? <a href="/support/talk" style="font-weight: normal">We can help!</a></p>
+',
     'format' => 'full_html',
-    'substitute' => TRUE,
+    'substitute' => 1,
   );
   $export['questions_highlight'] = $content;
 
