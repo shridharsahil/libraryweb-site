@@ -36,45 +36,131 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Exhibition Start Date */
+  /* Field: Start Month */
   $handler->display->display_options['fields']['field_exhibition_start']['id'] = 'field_exhibition_start';
   $handler->display->display_options['fields']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_exhibition_start']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start']['ui_name'] = 'Start Month';
   $handler->display->display_options['fields']['field_exhibition_start']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_start']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_start']['settings'] = array(
-    'format_type' => 'month_with_date',
+    'format_type' => 'month',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Indexed Node: Exhibition End Date */
-  $handler->display->display_options['fields']['field_exhibition_end']['id'] = 'field_exhibition_end';
-  $handler->display->display_options['fields']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
-  $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
-  $handler->display->display_options['fields']['field_exhibition_end']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '[field_exhibition_start] to [field_exhibition_end]';
-  $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
-    'format_type' => 'month_with_date',
+  /* Field: Start Day */
+  $handler->display->display_options['fields']['field_exhibition_start_1']['id'] = 'field_exhibition_start_1';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['field'] = 'field_exhibition_start';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['ui_name'] = 'Start Day';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_start_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_start_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_start_1']['settings'] = array(
+    'format_type' => 'day',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: End Month */
+  $handler->display->display_options['fields']['field_exhibition_end_1']['id'] = 'field_exhibition_end_1';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['ui_name'] = 'End Month';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end_1']['settings'] = array(
+    'format_type' => 'month',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: End Day */
+  $handler->display->display_options['fields']['field_exhibition_end_2']['id'] = 'field_exhibition_end_2';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['ui_name'] = 'End Day';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end_2']['settings'] = array(
+    'format_type' => 'day',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Exhibition Date */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Exhibition Date';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div class="cal-exhibition-date"><div class="cal-month">[field_exhibition_start]</div><div class="cal-day">[field_exhibition_start_1]</div>to<div class="cal-month">[field_exhibition_end_1]</div><div class="cal-day">[field_exhibition_end_2]</div></div>';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  /* Field: Month */
+  $handler->display->display_options['fields']['field_event_date_2']['id'] = 'field_event_date_2';
+  $handler->display->display_options['fields']['field_event_date_2']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_event_date_2']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_2']['ui_name'] = 'Month';
+  $handler->display->display_options['fields']['field_event_date_2']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_2']['settings'] = array(
+    'format_type' => 'month',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Day */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['ui_name'] = 'Day';
+  $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'day',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Time */
+  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
+  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['ui_name'] = 'Time';
+  $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
+    'format_type' => 'time',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
   );
   /* Field: Indexed Node: Event Date */
-  $handler->display->display_options['fields']['field_event_date_2']['id'] = 'field_event_date_2';
-  $handler->display->display_options['fields']['field_event_date_2']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['fields']['field_event_date_2']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date_2']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date_2']['empty'] = '[field_exhibition_end]';
-  $handler->display->display_options['fields']['field_event_date_2']['settings'] = array(
-    'format_type' => 'month_with_date',
+  $handler->display->display_options['fields']['field_event_date_3']['id'] = 'field_event_date_3';
+  $handler->display->display_options['fields']['field_event_date_3']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_event_date_3']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_3']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date_3']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_3']['alter']['text'] = '<div class="cal-date"><div class="cal-month">[field_event_date_2]</div><div class="cal-day">[field_event_date]</div><div class="cal-time">[field_event_date_1]</div></div>';
+  $handler->display->display_options['fields']['field_event_date_3']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_3']['empty'] = '[nothing_1]';
+  $handler->display->display_options['fields']['field_event_date_3']['settings'] = array(
+    'format_type' => 'long',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
