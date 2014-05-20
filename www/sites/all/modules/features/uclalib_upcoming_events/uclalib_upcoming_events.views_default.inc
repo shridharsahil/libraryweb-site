@@ -114,6 +114,16 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
     'news_categories' => 'news_categories',
   );
   $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['type'] = 'tids';
+  /* Contextual filter: Content: News Location (field_news_location) */
+  $handler->display->display_options['arguments']['field_news_location_target_id']['id'] = 'field_news_location_target_id';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['table'] = 'field_data_field_news_location';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['field'] = 'field_news_location_target_id';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_location_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_location_target_id']['validate']['fail'] = 'ignore';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -129,8 +139,8 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
     'news' => 'news',
   );
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: Recent News with Images */
+  $handler = $view->new_display('panel_pane', 'Recent News with Images', 'panel_pane_1');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: News items by categories */
   $handler->display->display_options['arguments']['field_news_categories_tid']['id'] = 'field_news_categories_tid';
@@ -207,6 +217,45 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
       'panel' => '0',
       'fixed' => '',
       'label' => 'News items by Subject Area',
+    ),
+    'field_news_location_target_id' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: News Location (field_news_location)',
+    ),
+  );
+
+  /* Display: Recent News No Images */
+  $handler = $view->new_display('panel_pane', 'Recent News No Images', 'panel_pane_2');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '100',
+  );
+  $handler->display->display_options['argument_input'] = array(
+    'field_news_categories_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by categories',
     ),
     'field_news_location_target_id' => array(
       'type' => 'user',
