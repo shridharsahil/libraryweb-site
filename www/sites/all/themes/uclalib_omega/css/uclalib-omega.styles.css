@@ -1607,6 +1607,7 @@ a.more-link,
 .pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-field-field-event-image,
 .pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-field-field-exhibition-image {
   padding: 4px 0 4px 11px;
+  min-width: 170px;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field-field-event-image img,
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field-field-exhibition-image img,
@@ -1622,7 +1623,7 @@ a.more-link,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .views-field-field-exhibition-end,
 .pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .views-field-field-exhibition-end,
 .pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .views-field-field-exhibition-end {
-  min-width: 116px;
+  min-width: 120px;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field.views-field-nothing, .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .pane-daterangepicker-results .views-row .views-field.views-field-field-event-date-3, .pane-daterangepicker-results .views-row .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .views-field.views-field-field-event-date-3,
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .pane-daterangepicker-results .views-row .views-field.views-field-field-exhibition-end,

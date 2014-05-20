@@ -46,12 +46,13 @@
       .views-field-field-event-image,
       .views-field-field-exhibition-image {
         padding: 4px 0 4px 11px;
+        min-width: 170px;
         img {
           display: block;
         }
       }
       .views-field-field-exhibition-end {
-        min-width: 116px;
+        min-width: 120px;
       }
       .views-field.views-field-nothing {
         width: 100%;
