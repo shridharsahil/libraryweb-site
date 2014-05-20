@@ -28,28 +28,33 @@
   .view-recent-news-highlight,
   .view-upcoming-events-display {
     .view-content {
-      display: table;
       width: 100%;
       .views-row {
         clear: both;
         overflow: hidden;
-        display: table-row;
+        display: table;
+        width: 100%;
         &:hover {
           background: $ucla-lt-gray;
         }
       }
       .views-field {
-        padding: 10px 11px;
+        padding: 10px 0 10px 22px;
         display: table-cell;
         vertical-align: middle;
       }
-      .views-field +.views-field {
-        padding: 10px 0;
+      .views-field-field-event-image,
+      .views-field-field-exhibition-image {
+        padding: 4px 0 4px 11px;
+        img {
+          display: block;
+        }
       }
-      .views-field-field-exhibition-end,
-      .views-field-field-event-date {
-        float: left;
-        margin-right: 14px;
+      .views-field-field-exhibition-end {
+        min-width: 116px;
+      }
+      .views-field.views-field-nothing {
+        width: 100%;
       }
     }
     a {
@@ -59,4 +64,9 @@
       text-align: right;
     }
   }    
+}
+/* Images only shown on homepage */
+.not-front .view-upcoming-events-display .views-field-field-event-image,
+.not-front .view-upcoming-events-display .views-field-field-exhibition-image {
+  display: none !important;
 }
