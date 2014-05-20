@@ -29,13 +29,14 @@ function template_preprocess_sidebar_left_right(&$variables) {
   $variables['attributes_array']['class'][] = 'panel-sidebar-left-right';
 
   // Use a class to change the layout when there is no sidebar content.
-  if (!empty($variables['content']['sidebar_left'])) {
-    $variables['attributes_array']['class'][] = 'with-sidebar-left';
+  if (!empty($variables['content']['sidebar_left']) && !empty($variables['content']['sidebar_right'])) {
+    $variables['attributes_array']['class'][] = 'with-both-sidebars';
   }
-
-  // Use a class to change the layout when there is no sidebar content.
-  if (empty($variables['content']['sidebar_right'])) {
-    $variables['attributes_array']['class'][] = 'no-sidebar-right';
+  elseif (!empty($variables['content']['sidebar_right'])) {
+    $variables['attributes_array']['class'][] = 'with-sidebar-right';
+  }
+  elseif (!empty($variables['content']['sidebar_left'])) {
+    $variables['attributes_array']['class'][] = 'with-sidebar-left';
   }
 
   foreach($variables['content'] as $name => $item) {

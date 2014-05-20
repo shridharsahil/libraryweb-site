@@ -33,7 +33,7 @@ $gutter-styles: 'split'; // gutter is split between left and right of each col.
   }
 
   // Span 2 columns, starting at the 2nd column
-  .with-sidebar-left .l-region--main-column {
+  .with-both-sidebars .l-region--main-column {
     @include grid-span(2, 2);
     padding-right: 0; // kill middle column right padding.
 
@@ -44,13 +44,25 @@ $gutter-styles: 'split'; // gutter is split between left and right of each col.
   }
 
   // Span 3 columns, starting at the 2nd column
-  .no-sidebar-right .l-region--main-column {
+  .with-sidebar-left .l-region--main-column {
     @include grid-span(3, 2);
     padding-right: 0; // kill middle column right padding.
 
     // Full-height faux-column for adding a background color in the theme.
-    $left: column-span(2, 1); // Span 1 columns, starting from 1st column.
-    $width: column-span(3, 2); // Span 2 columns, starting from 2nd column.
+    $left: column-span(1, 1); // Span 1 columns, starting from 1st column.
+    $width: column-span(3, 2); // Span 3 columns, starting from 2nd column.
+    @include faux-column($left, $width/* , #ddd */);
+  }
+
+  // Span 3 columns, starting at the 1st column
+  .with-sidebar-right .l-region--main-column {
+    @include grid-span(3, 1);
+    padding-left: 0; // kill left padding.
+    padding-right: 0; // kill right padding.
+
+    // Full-height faux-column for adding a background color in the theme.
+    $left: column-span(0, 1); // Span 0 columns, starting from 1st column.
+    $width: column-span(3, 1); // Span 3 columns, starting from 1st column.
     @include faux-column($left, $width/* , #ddd */);
   }
 
