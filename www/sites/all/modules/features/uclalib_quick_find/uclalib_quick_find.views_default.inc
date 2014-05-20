@@ -40,10 +40,10 @@ function uclalib_quick_find_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '
+  $handler->display->display_options['footer']['area']['content'] = '<div>
 <span class="views-field views-field-field-icon"><span class="icon icon-more"></span></span>
 <span class="views-field views-field-name"><a href="/locations">More Equipment</a></span>
-';
+</div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_quick_find_terms_target_id']['id'] = 'field_quick_find_terms_target_id';
