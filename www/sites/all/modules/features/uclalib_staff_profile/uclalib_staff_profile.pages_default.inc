@@ -238,8 +238,8 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Other Research Support Options',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -260,8 +260,8 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Looking for a librarian or staff?',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -284,9 +284,7 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Title with link for locations list box',
       'title' => '',
-      'body' => '<div>
-	Looking for a specific location?<a href="">Search all Locations</a>
-</div>
+      'body' => '<div class="contact-location-list"><h2 class="pane-title">Looking for a specific location?<h2><a href="/locations">Search all Locations</a></div>
 ',
       'format' => 'full_html',
       'substitute' => TRUE,
@@ -323,7 +321,7 @@ function uclalib_staff_profile_default_page_manager_pages() {
       'url' => '',
       'display' => 'default',
       'override_title' => 1,
-      'override_title_text' => 'Looking for a specific location?',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
