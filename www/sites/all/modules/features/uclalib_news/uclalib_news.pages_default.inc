@@ -68,9 +68,37 @@ function uclalib_news_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'c51b826b-d14a-4999-be2f-00d34f3b8f68';
-  $display->window_title = '';
+  $display->window_title = '%node:title | UCLA Library News';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-438c96d5-10c3-4e6d-98ef-dae03a33a074';
+    $pane->panel = 'main';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Back to News Breadcrumb',
+      'title' => '',
+      'body' => '<p><a href="/news-events">&lt; News & Events</a></p>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-events-breadcrumb',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '438c96d5-10c3-4e6d-98ef-dae03a33a074';
+    $display->content['new-438c96d5-10c3-4e6d-98ef-dae03a33a074'] = $pane;
+    $display->panels['main'][0] = 'new-438c96d5-10c3-4e6d-98ef-dae03a33a074';
     $pane = new stdClass();
     $pane->pid = 'new-7dc8de8a-1e25-43bf-896c-5e0630dad6ef';
     $pane->panel = 'main';
@@ -96,11 +124,11 @@ function uclalib_news_default_page_manager_handlers() {
       'css_class' => 'news-entry-title',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '7dc8de8a-1e25-43bf-896c-5e0630dad6ef';
     $display->content['new-7dc8de8a-1e25-43bf-896c-5e0630dad6ef'] = $pane;
-    $display->panels['main'][0] = 'new-7dc8de8a-1e25-43bf-896c-5e0630dad6ef';
+    $display->panels['main'][1] = 'new-7dc8de8a-1e25-43bf-896c-5e0630dad6ef';
     $pane = new stdClass();
     $pane->pid = 'new-9d095867-f4bd-4b9a-8691-1bb2c7ce9753';
     $pane->panel = 'main';
@@ -123,11 +151,11 @@ function uclalib_news_default_page_manager_handlers() {
       'css_class' => 'news-entry-author',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '9d095867-f4bd-4b9a-8691-1bb2c7ce9753';
     $display->content['new-9d095867-f4bd-4b9a-8691-1bb2c7ce9753'] = $pane;
-    $display->panels['main'][1] = 'new-9d095867-f4bd-4b9a-8691-1bb2c7ce9753';
+    $display->panels['main'][2] = 'new-9d095867-f4bd-4b9a-8691-1bb2c7ce9753';
     $pane = new stdClass();
     $pane->pid = 'new-98b37e94-0e22-476b-93d3-6a1d3b41913d';
     $pane->panel = 'main';
@@ -150,11 +178,11 @@ function uclalib_news_default_page_manager_handlers() {
       'css_class' => 'news-entry-date',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '98b37e94-0e22-476b-93d3-6a1d3b41913d';
     $display->content['new-98b37e94-0e22-476b-93d3-6a1d3b41913d'] = $pane;
-    $display->panels['main'][2] = 'new-98b37e94-0e22-476b-93d3-6a1d3b41913d';
+    $display->panels['main'][3] = 'new-98b37e94-0e22-476b-93d3-6a1d3b41913d';
     $pane = new stdClass();
     $pane->pid = 'new-8e3cc30f-87a4-4a6d-8597-f5405053f8a3';
     $pane->panel = 'main';
@@ -173,11 +201,11 @@ function uclalib_news_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '8e3cc30f-87a4-4a6d-8597-f5405053f8a3';
     $display->content['new-8e3cc30f-87a4-4a6d-8597-f5405053f8a3'] = $pane;
-    $display->panels['main'][3] = 'new-8e3cc30f-87a4-4a6d-8597-f5405053f8a3';
+    $display->panels['main'][4] = 'new-8e3cc30f-87a4-4a6d-8597-f5405053f8a3';
     $pane = new stdClass();
     $pane->pid = 'new-4252a3fc-3dff-49b2-9bfe-922a161b012b';
     $pane->panel = 'sidebar_right';
@@ -243,7 +271,37 @@ function uclalib_news_default_page_manager_handlers() {
     $pane->uuid = '344f81d1-77f5-47ef-810a-90ff2c71a95c';
     $display->content['new-344f81d1-77f5-47ef-810a-90ff2c71a95c'] = $pane;
     $display->panels['sidebar_right'][2] = 'new-344f81d1-77f5-47ef-810a-90ff2c71a95c';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane = new stdClass();
+    $pane->pid = 'new-61ee7246-2ec9-4c97-b1c5-f97700b64b2b';
+    $pane->panel = 'top';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'UCLA Library News',
+      'title' => '',
+      'body' => '<h1>
+	<a href="/news">UCLA Library News</a></h1>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-page-title',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '61ee7246-2ec9-4c97-b1c5-f97700b64b2b';
+    $display->content['new-61ee7246-2ec9-4c97-b1c5-f97700b64b2b'] = $pane;
+    $display->panels['top'][0] = 'new-61ee7246-2ec9-4c97-b1c5-f97700b64b2b';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_3'] = $handler;
