@@ -66,6 +66,122 @@ function uclalib_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-field_event_thumbnail'
+  $field_instances['node-news-field_event_thumbnail'] = array(
+    'bundle' => 'news',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 8,
+      ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_thumbnail',
+    'label' => 'News Thumbnail',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'fancybox__category_icon' => 0,
+          'fancybox__custom_crop' => 0,
+          'fancybox__large' => 0,
+          'fancybox__linkit_thumb' => 0,
+          'fancybox__medium' => 0,
+          'fancybox__thumbnail' => 0,
+          'fancybox__thumbnail_crop' => 0,
+          'fancybox__thumbnail_large' => 0,
+          'fancybox__thumbnail_small' => 0,
+          'fancybox__widescreen_crop' => 0,
+          'fancybox__widescreen_large' => 0,
+          'fancybox__widescreen_medium' => 0,
+          'fancybox__widescreen_small' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_category_icon' => 0,
+          'image_custom_crop' => 0,
+          'image_large' => 0,
+          'image_linkit_thumb' => 0,
+          'image_medium' => 0,
+          'image_thumbnail' => 0,
+          'image_thumbnail_crop' => 0,
+          'image_thumbnail_large' => 0,
+          'image_thumbnail_small' => 0,
+          'image_widescreen_crop' => 0,
+          'image_widescreen_large' => 0,
+          'image_widescreen_medium' => 0,
+          'image_widescreen_small' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_filter_insert' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(
+          'thumbnail_crop' => 'thumbnail_crop',
+        ),
+        'manualcrop_styles_list' => array(
+          'thumbnail_crop' => 'thumbnail_crop',
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_news_audience'
   $field_instances['node-news-field_news_audience'] = array(
     'bundle' => 'news',
@@ -111,7 +227,7 @@ function uclalib_news_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -163,7 +279,7 @@ function uclalib_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -171,7 +287,7 @@ function uclalib_news_field_default_field_instances() {
   $field_instances['node-news-field_news_image'] = array(
     'bundle' => 'news',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload images here. Once uploaded, they may be cropped and inserted into the body text.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -204,51 +320,53 @@ function uclalib_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_news_image',
-    'label' => 'News Image',
+    'label' => 'News Images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 0,
-        'insert_absolute' => FALSE,
+        'insert' => 1,
+        'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
+        'insert_default' => 'image_thumbnail_crop',
         'insert_styles' => array(
-          0 => 'auto',
+          '<all>' => '<all>',
         ),
         'insert_width' => '',
-        'manualcrop_crop_info' => TRUE,
-        'manualcrop_default_crop_area' => TRUE,
-        'manualcrop_enable' => FALSE,
-        'manualcrop_filter_insert' => TRUE,
-        'manualcrop_inline_crop' => FALSE,
-        'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => TRUE,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_filter_insert' => 1,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_list' => array(
+          'custom_crop' => 'custom_crop',
+          'thumbnail_crop' => 'thumbnail_crop',
+          'widescreen_crop' => 'widescreen_crop',
+        ),
         'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => FALSE,
+        'manualcrop_thumblist' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -307,7 +425,7 @@ function uclalib_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -366,7 +484,7 @@ function uclalib_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -417,7 +535,7 @@ function uclalib_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -426,10 +544,12 @@ function uclalib_news_field_default_field_instances() {
   t('Body');
   t('News Audience');
   t('News Categories');
-  t('News Image');
+  t('News Images');
   t('News Location');
   t('News Related Content');
   t('News Series');
+  t('News Thumbnail');
+  t('Upload images here. Once uploaded, they may be cropped and inserted into the body text.');
 
   return $field_instances;
 }
