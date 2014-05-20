@@ -42,7 +42,7 @@ function uclalib_arch_date_formats() {
     array(
       'type' => 'month',
       'format' => 'M',
-      'locales' => array('en', 'en-us'),
+      'locales' => array(),
     ),
     array(
       'type' => 'day',
