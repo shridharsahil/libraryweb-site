@@ -36,7 +36,7 @@ function theme_uclalib_omega_border_blue_render_pane(&$vars) {
     $title_alignment = isset($settings['title_alignment']) ? $settings['title_alignment'] : 'default';
 
     if ($title_alignment !== 'default') {
-      $classes[] = drupal_css_class('pane-title-align-' . $title_alignment);
+      $classes[] = drupal_html_class('pane-title-align-' . $title_alignment);
     }
 
     if (in_array($title_alignment, array('left', 'right'))) {

@@ -128,7 +128,9 @@ function uclalib_homepage_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'title_alignment' => 'center',
+      ),
       'style' => 'border-blue',
     );
     $pane->css = array();
@@ -186,7 +188,9 @@ function uclalib_homepage_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'title_alignment' => 'left',
+      ),
       'style' => 'border-blue',
     );
     $pane->css = array();
