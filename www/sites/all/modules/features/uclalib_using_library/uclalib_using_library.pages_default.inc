@@ -52,7 +52,7 @@ function uclalib_using_library_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar-left';
+  $display->layout = 'sidebar-left-golden';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -142,7 +142,7 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Upcoming Events',
+      'override_title_text' => 'Upcoming Events <i class="icon icon-todo"></i>',
     );
     $pane->cache = array();
     $pane->style = array(

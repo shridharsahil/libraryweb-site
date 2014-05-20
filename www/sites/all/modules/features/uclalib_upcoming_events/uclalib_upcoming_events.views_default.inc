@@ -22,7 +22,7 @@ function uclalib_upcoming_events_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'News';
+  $handler->display->display_options['title'] = 'News <i class="icon icon-news"></i>';
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = '';
   $handler->display->display_options['link_display'] = 'custom_url';
