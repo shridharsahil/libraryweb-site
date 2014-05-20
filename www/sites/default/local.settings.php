@@ -38,4 +38,4 @@ $conf['search_api_solr_overrides'] = array(
   ),
 );
 
-#$conf['stage_file_proxy_origin'] = 'http://uclalib:HTTP-PASSWORD@uclalib.dev.gobsp.com';
+$conf['stage_file_proxy_origin'] = 'http://uclalib:BDts_qP5Ewa2@uclalib.dev.gobsp.com';
