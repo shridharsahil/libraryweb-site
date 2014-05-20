@@ -41,6 +41,13 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="more-link"> <a href="news?f[0]=field_news_categories%3A!1&f[1]=field_news_location%3A!2">More</a></div>';
   $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: News Image */
   $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
   $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
@@ -50,7 +57,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'featured_content_thumbnail',
+    'image_style' => 'widescreen_small',
     'image_link' => '',
   );
   /* Field: Content: Title */
@@ -65,6 +72,11 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'more';
+  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
@@ -231,6 +243,13 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
   /* Display: Recent News No Images */
   $handler = $view->new_display('panel_pane', 'Recent News No Images', 'panel_pane_2');
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -243,6 +262,11 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'more';
+  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
