@@ -16,5 +16,17 @@ function uclalib_users_user_default_roles() {
     'weight' => 2,
   );
 
+  // Exported role: content editors.
+  $roles['content editors'] = array(
+    'name' => 'content editors',
+    'weight' => 3,
+  );
+
+  // Exported role: resources editors.
+  $roles['resources editors'] = array(
+    'name' => 'resources editors',
+    'weight' => 4,
+  );
+
   return $roles;
 }
