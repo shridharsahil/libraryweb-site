@@ -11,6 +11,143 @@ function uclalib_staff_profile_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'ask_a_librarian';
+  $page->task = 'page';
+  $page->admin_title = 'Ask a Librarian';
+  $page->admin_description = '';
+  $page->path = 'contact/ask-librarian';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Ask a Librarian',
+    'name' => 'user-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ask_a_librarian_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'ask_a_librarian';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'sidebar-left-right';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'sidebar_left' => NULL,
+      'sidebar_right' => NULL,
+      'main' => NULL,
+      'below_main_left' => NULL,
+      'below_main_right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Ask a Librarian';
+  $display->uuid = 'db3cfade-6cd6-49ef-886b-cdd1fc77c32b';
+  $display->window_title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-85c28d27-8d1b-4470-a879-e5ea93ba2aff';
+    $pane->panel = 'below_main_left';
+    $pane->type = 'ask_librarian';
+    $pane->subtype = 'ask_librarian';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Chat with a Librarian',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '85c28d27-8d1b-4470-a879-e5ea93ba2aff';
+    $display->content['new-85c28d27-8d1b-4470-a879-e5ea93ba2aff'] = $pane;
+    $display->panels['below_main_left'][0] = 'new-85c28d27-8d1b-4470-a879-e5ea93ba2aff';
+    $pane = new stdClass();
+    $pane->pid = 'new-89ad957a-f7a0-4fc4-9642-42e3fd2bf788';
+    $pane->panel = 'below_main_right';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-other-research-support-options';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Other Research Support Options',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '89ad957a-f7a0-4fc4-9642-42e3fd2bf788';
+    $display->content['new-89ad957a-f7a0-4fc4-9642-42e3fd2bf788'] = $pane;
+    $display->panels['below_main_right'][0] = 'new-89ad957a-f7a0-4fc4-9642-42e3fd2bf788';
+    $pane = new stdClass();
+    $pane->pid = 'new-a4bb8398-5285-41bf-a3a3-c132a497ae21';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'At a Glance',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a4bb8398-5285-41bf-a3a3-c132a497ae21';
+    $display->content['new-a4bb8398-5285-41bf-a3a3-c132a497ae21'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-a4bb8398-5285-41bf-a3a3-c132a497ae21';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['ask_a_librarian'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'contact';
   $page->task = 'page';
   $page->admin_title = 'Contact';
@@ -18,15 +155,15 @@ function uclalib_staff_profile_default_page_manager_pages() {
   $page->path = 'contact';
   $page->access = array();
   $page->menu = array(
-    'type' => 'none',
-    'title' => '',
+    'type' => 'normal',
+    'title' => 'Contact',
+    'name' => 'user-menu',
     'weight' => '0',
-    'name' => 'navigation',
     'parent' => array(
       'type' => 'none',
       'title' => '',
-      'weight' => 0,
       'name' => 'navigation',
+      'weight' => '0',
     ),
   );
   $page->arguments = array();
@@ -200,10 +337,10 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $display->content['new-325ee195-fb19-4d2d-a382-5b7af60885b4'] = $pane;
     $display->panels['main'][4] = 'new-325ee195-fb19-4d2d-a382-5b7af60885b4';
     $pane = new stdClass();
-    $pane->pid = 'new-c849cbd1-c921-40a9-ab36-2e9797d8bb0c';
+    $pane->pid = 'new-e4751dc2-8a26-4783-8669-87eb046f3505';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'menu_block-2';
+    $pane->subtype = 'menu_block-3';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -218,9 +355,9 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'c849cbd1-c921-40a9-ab36-2e9797d8bb0c';
-    $display->content['new-c849cbd1-c921-40a9-ab36-2e9797d8bb0c'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-c849cbd1-c921-40a9-ab36-2e9797d8bb0c';
+    $pane->uuid = 'e4751dc2-8a26-4783-8669-87eb046f3505';
+    $display->content['new-e4751dc2-8a26-4783-8669-87eb046f3505'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-e4751dc2-8a26-4783-8669-87eb046f3505';
     $pane = new stdClass();
     $pane->pid = 'new-5ca68471-1f73-44ac-8ffc-5a408b92104f';
     $pane->panel = 'sidebar_right';
