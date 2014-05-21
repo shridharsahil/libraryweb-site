@@ -395,6 +395,17 @@ a[href="#main-content"] {
   background: #eff3f4;
 }
 
+.contact-links li .field {
+  display: table-cell;
+  padding-right: 6px;
+}
+.contact-links li .field span {
+  font-size: 1.143em;
+}
+.contact-links li .field a {
+  font-size: 0.929em;
+}
+
 .destination-icons-horiz li {
   margin-right: 2px;
 }
@@ -764,6 +775,11 @@ a.more-link,
   border-width: 0 .7em .7em 0;
 }
 
+.pane-ask-librarian {
+  display: table-cell;
+  padding-right: 16px;
+}
+
 .pane-at-this-location-block-panel-pane-1 {
   padding-left: 24px;
 }
@@ -858,12 +874,8 @@ a.more-link,
   margin: 0;
 }
 
-.pane-bean-other-research-support-options li .field {
-  display: inline-block;
-  margin-right: 6px;
-}
-.pane-bean-other-research-support-options li .field span {
-  font-size: 1.143em;
+.pane-bean-other-research-support-options {
+  display: table-cell;
 }
 
 .pane-bean-quick-find h2 {
