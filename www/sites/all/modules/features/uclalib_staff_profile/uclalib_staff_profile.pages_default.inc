@@ -290,7 +290,10 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Title with link for locations list box',
       'title' => '',
-      'body' => '<div class="contact-location-list"><h2 class="pane-title">Looking for a specific location?<h2><a href="/locations">Search all Locations</a></div>
+      'body' => '<div class="contact-location-list">
+<h2 class="pane-title">Looking for a specific location?</h2>
+<p><a href="/locations">Search all Locations</a></p>
+</div>
 ',
       'format' => 'full_html',
       'substitute' => TRUE,
