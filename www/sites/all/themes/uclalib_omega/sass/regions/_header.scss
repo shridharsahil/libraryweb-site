@@ -33,6 +33,11 @@
         }
       }
     }
+    .expanded {
+      .menu {
+        display: none;
+      }
+    }
   }
 }
 
