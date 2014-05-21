@@ -31,7 +31,6 @@ function uclalib_staff_ctools_content_types_render($subtype, $conf, $args, $cont
   $url = url('staff-profile/search-staff-directory');
   $placeholder = t('search');
   $submit = t('Go');
-  $description = t('Search the Staff Directory');
   $block->title = t('Search the Staff Directory');
   $block->content = <<<EOD
     <div class="header-search-form-wrapper">
@@ -46,7 +45,6 @@ function uclalib_staff_ctools_content_types_render($subtype, $conf, $args, $cont
         </div>
       </form>
     </div>
-    <p>{$description}</p>
 EOD;
   return $block;
 }
