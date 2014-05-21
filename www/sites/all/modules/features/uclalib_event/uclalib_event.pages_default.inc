@@ -359,7 +359,10 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-links',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -388,7 +391,10 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-links',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -417,7 +423,10 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-links',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
