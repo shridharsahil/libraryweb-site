@@ -57,11 +57,27 @@
       .views-field.views-field-nothing {
         width: 100%;
       }
+      .text-news {
+        padding: 8px;
+        .views-field {
+          display: block;
+          padding: 2px 0;
+        }
+        .views-field-field-news-image {
+          display: table-cell;
+          padding: 4px 0 4px 11px;
+        }
+        .views-field-field-news-image + .views-field {
+          display: table-cell;
+          padding: 10px 0 10px 22px;
+        }
+      }
     }
     a {
       color: $ucla-blue;
     }
     .view-footer {
+      padding-right: 14px;
       text-align: right;
     }
   }    
