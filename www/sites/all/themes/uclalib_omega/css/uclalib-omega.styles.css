@@ -823,6 +823,7 @@ a.more-link,
 .pane-bean-featured-content .field--name-field-featured-link img {
   display: block;
   margin-right: 10px;
+  max-width: 70px;
 }
 .pane-bean-featured-content .field--name-field-featured-thumbnail-image .field__item,
 .pane-bean-featured-content .field--name-field-featured-link .field__item {
