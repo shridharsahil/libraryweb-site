@@ -437,7 +437,7 @@ function uclalib_resources_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'pane-horizontal-tab-navigation',
+      'css_class' => 'sidebar-search',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -460,7 +460,10 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-options',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -726,7 +729,10 @@ function uclalib_resources_default_page_manager_pages() {
       'settings' => NULL,
       'style' => 'background-gray',
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'search-research-help',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
