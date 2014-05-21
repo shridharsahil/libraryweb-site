@@ -10,6 +10,9 @@
       display: block;
       margin-right: 10px;
     }
+    .field__item {
+      position: relative;
+    }
     a {
       @extend .more-link-triangle-after;
       white-space: normal;

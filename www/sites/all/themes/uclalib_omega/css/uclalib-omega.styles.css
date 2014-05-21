@@ -824,6 +824,10 @@ a.more-link,
   display: block;
   margin-right: 10px;
 }
+.pane-bean-featured-content .field--name-field-featured-thumbnail-image .field__item,
+.pane-bean-featured-content .field--name-field-featured-link .field__item {
+  position: relative;
+}
 .pane-bean-featured-content .field--name-field-featured-thumbnail-image a,
 .pane-bean-featured-content .field--name-field-featured-link a {
   white-space: normal;
