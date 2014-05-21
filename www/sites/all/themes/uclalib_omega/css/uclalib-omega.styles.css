@@ -460,28 +460,18 @@ a[href="#main-content"] {
 }
 
 /* sidebar */
-.pane-node-field-event-category h2,
-.pane-node-field-event-series h2,
-.pane-node-field-event-audience h2,
-.pane-recent-news-panel-pane-1 h2,
+.sidebar-links h2,
 .pane-news-category-links-category-search-links h2,
 .pane-news-category-links-panel-pane-1 h2,
-.pane-node-field-exhibition-category h2,
-.pane-node-field-exhibition-series h2,
 .pane-other-exhibitions h2,
 .pane-exhibitions-highlight-exhibition-highlight-pane h2 {
   font-size: 1.143em;
   font-weight: bold;
   margin: 20px 0 4px;
 }
-.pane-node-field-event-category .views-field-field-exhibition-end,
-.pane-node-field-event-series .views-field-field-exhibition-end,
-.pane-node-field-event-audience .views-field-field-exhibition-end,
-.pane-recent-news-panel-pane-1 .views-field-field-exhibition-end,
+.sidebar-links .views-field-field-exhibition-end,
 .pane-news-category-links-category-search-links .views-field-field-exhibition-end,
 .pane-news-category-links-panel-pane-1 .views-field-field-exhibition-end,
-.pane-node-field-exhibition-category .views-field-field-exhibition-end,
-.pane-node-field-exhibition-series .views-field-field-exhibition-end,
 .pane-other-exhibitions .views-field-field-exhibition-end,
 .pane-exhibitions-highlight-exhibition-highlight-pane .views-field-field-exhibition-end {
   font-style: italic;
