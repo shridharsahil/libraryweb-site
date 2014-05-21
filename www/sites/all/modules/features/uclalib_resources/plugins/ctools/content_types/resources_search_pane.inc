@@ -30,7 +30,7 @@ function uclalib_resources_ctools_content_types_render($subtype, $conf, $args, $
   $block = new stdClass();
   $url = url('search-research/find-resources');
   $placeholder = t('Search for a database, collection, or other resource');
-  $submit = t('Go');
+  $submit = t('Search');
   $description = t('The UCLA Library has over 5,000 databases, special collections, and other resources that will help you locate materials for your research.');
   $block->title = t('Find a Resource');
   $block->content = <<<EOD
