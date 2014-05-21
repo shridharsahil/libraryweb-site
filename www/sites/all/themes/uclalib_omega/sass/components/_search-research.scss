@@ -1,0 +1,79 @@
+.page-search-research {
+  .l-region--highlighted h1 {
+    margin-bottom: 0;
+  }
+  .l-region--top {
+    background: $ucla-lt-gray url(../images/search_research.jpg) 0 100% no-repeat;
+    .search-research-nav,
+    .search-research-nav p {
+      margin-top: 0;
+    }
+    .pane-resources-search-pane {
+      margin: 0;
+      padding: 25px 25%;
+      h2 {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+        margin: 0;
+        padding: 16px 25px 0;
+      }
+      .pane-content {
+        background-color: rgba(255, 255, 255, 0.8);
+        .header-search-form-wrapper {
+          padding: 7px 25px;
+          div {
+            margin: 0;
+          }
+          .form-item {
+            width: 82%;
+            .form-text {
+              border: 1px solid #d9d9d9;
+              height: 33px;
+              width: 100%;
+            }
+          }
+          .form-actions {
+            margin-left: -4px;
+            width: 18%;
+            .form-submit {
+              background: #000;
+              border: medium none;
+              color: #fff;
+              font-weight: bold;
+              height: 33px;
+              margin: 0;
+              padding: 0.5em 0.6em 0.4em;
+              text-decoration: none;
+              text-indent: 0;
+              text-transform: uppercase;
+              width: 100%;
+            }
+          }
+        }
+        p {
+          font-size: 0.929em;
+          margin: 0;
+          padding: 0 30px 16px;
+        }
+      }
+    }
+  }
+  .l-region--main .pane-style-background-gray {
+    margin: 0.9em 0 0;
+  }
+  .l-region--below-main-left > div,
+  .l-region--below-main-right > div {
+    background: $sidebar-bg-lt-blue;
+    color: #333;
+    min-height: 277px;
+    margin-top: 1.8em;
+    padding: 0 20px;
+    h2 {
+      margin-top: 0;
+      padding: 17px 0 0;
+    }
+    div {
+      background: $sidebar-bg-lt-blue;
+    }
+  }
+}

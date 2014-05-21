@@ -799,7 +799,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1516,16 +1516,84 @@ a.more-link,
   margin-top: 2em;
 }
 
-.l-region--top .search-research-nav,
-.l-region--top .search-research-nav p {
+.page-search-research .l-region--highlighted h1 {
+  margin-bottom: 0;
+}
+.page-search-research .l-region--top {
+  background: #eff3f4 url(../images/search_research.jpg) 0 100% no-repeat;
+}
+.page-search-research .l-region--top .search-research-nav,
+.page-search-research .l-region--top .search-research-nav p {
   margin-top: 0;
 }
-.l-region--top .pane-resources-search-pane {
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 15px;
-}
-.l-region--top .pane-resources-search-pane h2, .l-region--top .pane-resources-search-pane p {
+.page-search-research .l-region--top .pane-resources-search-pane {
   margin: 0;
+  padding: 25px 25%;
+}
+.page-search-research .l-region--top .pane-resources-search-pane h2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  margin: 0;
+  padding: 16px 25px 0;
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper {
+  padding: 7px 25px;
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper div {
+  margin: 0;
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-item {
+  width: 82%;
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-item .form-text {
+  border: 1px solid #d9d9d9;
+  height: 33px;
+  width: 100%;
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-actions {
+  margin-left: -4px;
+  width: 18%;
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-actions .form-submit {
+  background: #000;
+  border: medium none;
+  color: #fff;
+  font-weight: bold;
+  height: 33px;
+  margin: 0;
+  padding: 0.5em 0.6em 0.4em;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+.page-search-research .l-region--top .pane-resources-search-pane .pane-content p {
+  font-size: 0.929em;
+  margin: 0;
+  padding: 0 30px 16px;
+}
+.page-search-research .l-region--main .pane-style-background-gray {
+  margin: 0.9em 0 0;
+}
+.page-search-research .l-region--below-main-left > div,
+.page-search-research .l-region--below-main-right > div {
+  background: #c1daeb;
+  color: #333;
+  min-height: 277px;
+  margin-top: 1.8em;
+  padding: 0 20px;
+}
+.page-search-research .l-region--below-main-left > div h2,
+.page-search-research .l-region--below-main-right > div h2 {
+  margin-top: 0;
+  padding: 17px 0 0;
+}
+.page-search-research .l-region--below-main-left > div div,
+.page-search-research .l-region--below-main-right > div div {
+  background: #c1daeb;
 }
 
 .page-search .view-id-content_search .views-exposed-widgets {
