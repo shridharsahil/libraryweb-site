@@ -206,6 +206,9 @@ function uclalib_staff_profile_default_page_manager_pages() {
       'main' => NULL,
       'below_main_left' => NULL,
       'below_main_right' => NULL,
+      'secondary' => NULL,
+      'below_secondary_left' => NULL,
+      'below_secondary_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -216,7 +219,7 @@ function uclalib_staff_profile_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-5d25bf9a-cdb3-4dc8-9d71-3524376d9067';
-    $pane->panel = 'main';
+    $pane->panel = 'below_main_left';
     $pane->type = 'ask_librarian';
     $pane->subtype = 'ask_librarian';
     $pane->shown = TRUE;
@@ -235,10 +238,10 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '5d25bf9a-cdb3-4dc8-9d71-3524376d9067';
     $display->content['new-5d25bf9a-cdb3-4dc8-9d71-3524376d9067'] = $pane;
-    $display->panels['main'][0] = 'new-5d25bf9a-cdb3-4dc8-9d71-3524376d9067';
+    $display->panels['below_main_left'][0] = 'new-5d25bf9a-cdb3-4dc8-9d71-3524376d9067';
     $pane = new stdClass();
     $pane->pid = 'new-b7fbd529-34d4-49d5-881a-4cfcc25a7f00';
-    $pane->panel = 'main';
+    $pane->panel = 'below_main_right';
     $pane->type = 'block';
     $pane->subtype = 'bean-other-research-support-options';
     $pane->shown = TRUE;
@@ -256,14 +259,14 @@ function uclalib_staff_profile_default_page_manager_pages() {
       'css_class' => 'contact-links',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'b7fbd529-34d4-49d5-881a-4cfcc25a7f00';
     $display->content['new-b7fbd529-34d4-49d5-881a-4cfcc25a7f00'] = $pane;
-    $display->panels['main'][1] = 'new-b7fbd529-34d4-49d5-881a-4cfcc25a7f00';
+    $display->panels['below_main_right'][0] = 'new-b7fbd529-34d4-49d5-881a-4cfcc25a7f00';
     $pane = new stdClass();
     $pane->pid = 'new-f1de1eb1-f39b-4795-b171-094355054b15';
-    $pane->panel = 'main';
+    $pane->panel = 'secondary';
     $pane->type = 'staff_search_pane';
     $pane->subtype = 'staff_search_pane';
     $pane->shown = TRUE;
@@ -278,14 +281,14 @@ function uclalib_staff_profile_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'f1de1eb1-f39b-4795-b171-094355054b15';
     $display->content['new-f1de1eb1-f39b-4795-b171-094355054b15'] = $pane;
-    $display->panels['main'][2] = 'new-f1de1eb1-f39b-4795-b171-094355054b15';
+    $display->panels['secondary'][0] = 'new-f1de1eb1-f39b-4795-b171-094355054b15';
     $pane = new stdClass();
     $pane->pid = 'new-3afaaaea-c358-4503-a1b4-c6c821355895';
-    $pane->panel = 'main';
+    $pane->panel = 'secondary';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -307,14 +310,14 @@ function uclalib_staff_profile_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '3afaaaea-c358-4503-a1b4-c6c821355895';
     $display->content['new-3afaaaea-c358-4503-a1b4-c6c821355895'] = $pane;
-    $display->panels['main'][3] = 'new-3afaaaea-c358-4503-a1b4-c6c821355895';
+    $display->panels['secondary'][1] = 'new-3afaaaea-c358-4503-a1b4-c6c821355895';
     $pane = new stdClass();
     $pane->pid = 'new-325ee195-fb19-4d2d-a382-5b7af60885b4';
-    $pane->panel = 'main';
+    $pane->panel = 'secondary';
     $pane->type = 'views';
     $pane->subtype = 'todays_hours';
     $pane->shown = TRUE;
@@ -341,11 +344,11 @@ function uclalib_staff_profile_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '325ee195-fb19-4d2d-a382-5b7af60885b4';
     $display->content['new-325ee195-fb19-4d2d-a382-5b7af60885b4'] = $pane;
-    $display->panels['main'][4] = 'new-325ee195-fb19-4d2d-a382-5b7af60885b4';
+    $display->panels['secondary'][2] = 'new-325ee195-fb19-4d2d-a382-5b7af60885b4';
     $pane = new stdClass();
     $pane->pid = 'new-e4751dc2-8a26-4783-8669-87eb046f3505';
     $pane->panel = 'sidebar_left';
@@ -380,12 +383,12 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Have a Technical Question?',
+      'override_title_text' => '<a href="/technical-questions">Have a Technical Question?</a>',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'default',
+      'style' => 'background-gray',
     );
     $pane->css = array(
       'css_id' => '',
