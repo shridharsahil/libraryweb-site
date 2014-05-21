@@ -1519,14 +1519,12 @@ a.more-link,
 .page-search-research .l-region--highlighted h1 {
   margin-bottom: 0;
 }
-.page-search-research .l-region--top {
-  background: #eff3f4 url(../images/search_research.jpg) 0 100% no-repeat;
-}
 .page-search-research .l-region--top .search-research-nav,
 .page-search-research .l-region--top .search-research-nav p {
   margin-top: 0;
 }
 .page-search-research .l-region--top .pane-resources-search-pane {
+  background: #eff3f4 url(../images/search_research.jpg) 50% 0 no-repeat;
   margin: 0;
   padding: 25px 25%;
 }

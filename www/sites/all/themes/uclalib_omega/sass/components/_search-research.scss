@@ -3,12 +3,12 @@
     margin-bottom: 0;
   }
   .l-region--top {
-    background: $ucla-lt-gray url(../images/search_research.jpg) 0 100% no-repeat;
     .search-research-nav,
     .search-research-nav p {
       margin-top: 0;
     }
     .pane-resources-search-pane {
+      background: $ucla-lt-gray url(../images/search_research.jpg) 50% 0 no-repeat;
       margin: 0;
       padding: 25px 25%;
       h2 {
