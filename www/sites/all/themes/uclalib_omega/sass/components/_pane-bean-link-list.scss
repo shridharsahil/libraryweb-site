@@ -20,4 +20,9 @@
   .field--name-field-link-description {
     background-color: white; // 1.
   }
+  // 2. Fix the background color assigned from 1. above, when the
+  // link list has the "gray background" pane style.
+  &.pane-style-background-gray .field--name-field-link-description {
+    background-color: $highlighted-bg-color;
+  }
 }

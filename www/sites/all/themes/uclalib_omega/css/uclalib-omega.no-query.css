@@ -861,6 +861,9 @@ a.more-link,
 .pane-bean-link-list .field--name-field-link-description {
   background-color: white;
 }
+.pane-bean-link-list.pane-style-background-gray .field--name-field-link-description {
+  background-color: #eff3f4;
+}
 
 .pane-bean-living-library-gallery {
   margin-bottom: 10px !important;

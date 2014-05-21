@@ -41,6 +41,24 @@
         <?php print $content['below_main_right'] ?>
       </div>
     <?php endif; ?>
+
+    <?php if (!empty($content['secondary'])): ?>
+      <div<?php print drupal_attributes($region_attributes_array['secondary'])?>>
+        <?php print $content['secondary'] ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if (!empty($content['below_secondary_left'])): ?>
+      <div<?php print drupal_attributes($region_attributes_array['below_secondary_left'])?>>
+        <?php print $content['below_secondary_left'] ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if (!empty($content['below_secondary_right'])): ?>
+      <div<?php print drupal_attributes($region_attributes_array['below_secondary_right'])?>>
+        <?php print $content['below_secondary_right'] ?>
+      </div>
+    <?php endif; ?>
   </div>
 
   <?php if (!empty($content['sidebar_right'])): ?>

@@ -19,6 +19,9 @@ $plugin = array(
     'main' => t('Main'),
     'below_main_left' => t('Below Main Left'),
     'below_main_right' => t('Below Main Right'),
+    'secondary' => t('Secondary'),
+    'below_secondary_left' => t('Below Secondary Left'),
+    'below_secondary_right' => t('Below Secondary Right'),
   ),
 );
 

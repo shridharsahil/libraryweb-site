@@ -78,18 +78,33 @@ $gutter-styles: 'split'; // gutter is split between left and right of each col.
   }
 }
 
-// Adjust these nested grid elements for a two column layout.
-@include layout(2) {
-  // Span 1 column, starting at the 1st column
-  .l-region--below-main-left {
-    @include grid-span(1, 1);
-    padding-left: 0; // kill left rail gutter.
+// Adjust these nested grid elements for the middle two columns.
+@include layout(6 6) {
+
+  .l-region--main,
+  .l-region--secondary {
+    @include grid-span(2, 1);
+    padding-left: 0;
+    padding-right: 0;
+    clear: both;
+    float: left;
   }
 
   // Span 1 column, starting at the 1st column
-  .l-region--below-main-right {
+  .l-region--below-main-left,
+  .l-region--below-secondary-left {
+    @include grid-span(1, 1);
+    padding-left: 0;
+    clear: left;
+  }
+
+  // Span 1 column, starting at the 1st column
+  .l-region--below-main-right,
+  .l-region--below-secondary-right {
     @include grid-span(1, 2);
-    padding-right: 0; // kill right rail gutter.
+    padding-left: 0;
+    padding-right: 0;
+    clear: right;
   }
 }
 
