@@ -1,7 +1,8 @@
-// Blue sidebar for locations search page
+// Blue sidebar
 .page-locations,
 .page-news,
-.page-staff {
+.page-staff,
+.page-search-research-find-resources {
   .l-region--sidebar-left {
     &:before {
       background: $sidebar-bg-lt-blue !important;
