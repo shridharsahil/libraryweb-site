@@ -24,7 +24,6 @@ dependencies[] = uuid_features
 __drupal_alter_by_ref[][bean][link_list] = link_list
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
-features[fe_block_settings][] = menu_block-3
 features[features_api][] = api:2
 features[field_base][] = field_staff_departments
 features[field_base][] = field_staff_email
