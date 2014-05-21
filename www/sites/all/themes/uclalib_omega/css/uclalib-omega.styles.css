@@ -777,7 +777,7 @@ a.more-link,
 
 .pane-ask-librarian {
   display: table-cell;
-  padding-right: 16px;
+  padding: 0 20px 1em 0;
 }
 
 .pane-at-this-location-block-panel-pane-1 {
@@ -1306,6 +1306,28 @@ a.more-link,
 }
 .l-region--main .facetapi-facet-field-staff-glossary-index li:last-child {
   border-right: none;
+}
+
+.pane-staff-search-pane {
+  margin-bottom: 2em;
+}
+.pane-staff-search-pane .form-item {
+  margin: 0;
+  width: 88%;
+}
+.pane-staff-search-pane .form-item .form-text {
+  border: 1px solid #d9d9d9;
+  height: 33px;
+  width: 100%;
+}
+.pane-staff-search-pane .form-actions {
+  margin: 0;
+}
+.pane-staff-search-pane p {
+  margin-top: 5px;
+}
+.pane-staff-search-pane + .panel-pane {
+  margin-bottom: 2em;
 }
 
 .pane-style-background-gray {

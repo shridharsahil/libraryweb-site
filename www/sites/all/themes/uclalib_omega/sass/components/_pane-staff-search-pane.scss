@@ -1,0 +1,21 @@
+.pane-staff-search-pane {
+  margin-bottom: 2em;
+  .form-item {
+    margin: 0;
+    width: 88%;
+    .form-text {
+      border: 1px solid #d9d9d9;
+      height: 33px;
+      width: 100%;
+    }
+  }
+  .form-actions {
+    margin: 0;
+  }
+  p {
+    margin-top: 5px;
+  }
+  & + .panel-pane {
+    margin-bottom: 2em;
+  }
+}
