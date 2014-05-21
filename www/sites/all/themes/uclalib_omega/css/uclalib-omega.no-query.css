@@ -637,7 +637,8 @@ a[href="#main-content"] {
 
 .more-link-triangle-after:after, div.more-link > a:after,
 a.more-link:after,
-.more-link-block a:after, .pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
+.more-link-block a:after, .pane-bean-featured-content .field--name-field-featured-thumbnail-image a:after,
+.pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -813,13 +814,19 @@ a.more-link,
   margin: 0 0 1em;
   padding: 12px;
 }
-.pane-bean-featured-content .field--name-field-featured-thumbnail-image {
-  float: left;
+.pane-bean-featured-content .field--name-field-featured-thumbnail-image,
+.pane-bean-featured-content .field--name-field-featured-link {
+  display: table-cell;
+  vertical-align: middle;
+}
+.pane-bean-featured-content .field--name-field-featured-thumbnail-image img,
+.pane-bean-featured-content .field--name-field-featured-link img {
+  display: block;
   margin-right: 10px;
 }
-.pane-bean-featured-content .field--name-field-featured-link {
-  float: left;
-  margin-top: 15px;
+.pane-bean-featured-content .field--name-field-featured-thumbnail-image a,
+.pane-bean-featured-content .field--name-field-featured-link a {
+  white-space: normal;
 }
 
 .pane-bean-link-list .menu li {

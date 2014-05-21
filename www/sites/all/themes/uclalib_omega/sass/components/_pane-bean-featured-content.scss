@@ -2,15 +2,17 @@
   background: $highlighted-bg-color;
   margin: 0 0 1em;
   padding: 12px;
-  .field--name-field-featured-thumbnail-image {
-    float: left;
-    margin-right: 10px;
-  }
+  .field--name-field-featured-thumbnail-image,
   .field--name-field-featured-link {
-    float: left;
-    margin-top: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    img {
+      display: block;
+      margin-right: 10px;
+    }
     a {
       @extend .more-link-triangle-after;
+      white-space: normal;
     }
   }
 }
