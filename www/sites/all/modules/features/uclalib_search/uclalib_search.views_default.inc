@@ -296,16 +296,15 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: News Image */
-  $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['table'] = 'search_api_index_site_general_search';
-  $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['label'] = '';
-  $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_news_image']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+  /* Field: Indexed Node: News Thumbnail */
+  $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
+    'image_style' => 'thumbnail_small',
     'image_link' => 'content',
   );
   /* Field: Indexed Node: Title */
