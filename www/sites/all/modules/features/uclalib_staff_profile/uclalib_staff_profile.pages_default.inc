@@ -379,12 +379,13 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Have a Technical Question?',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'default',
     );
     $pane->css = array(
       'css_id' => '',
@@ -410,6 +411,7 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'background-gray',
     );
     $pane->css = array(
       'css_id' => '',
@@ -435,6 +437,7 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'background-gray',
     );
     $pane->css = array(
       'css_id' => '',
