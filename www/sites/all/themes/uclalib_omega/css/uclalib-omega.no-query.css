@@ -779,8 +779,7 @@ a.more-link,
 }
 
 .pane-ask-librarian {
-  display: table-cell;
-  padding: 0 20px 1em 0;
+  margin-bottom: 47px;
 }
 
 .pane-at-this-location-block-panel-pane-1 {
@@ -810,7 +809,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -880,10 +879,6 @@ a.more-link,
   margin: 0;
 }
 
-.pane-bean-other-research-support-options {
-  display: table-cell;
-}
-
 .pane-bean-quick-find h2 {
   padding: 0 3.5em;
   font-size: 1em;
@@ -940,6 +935,11 @@ a.more-link,
 }
 .pane-bean-upcoming-events h2 + .pane-content {
   border: 1px solid #adcde5;
+}
+
+.pane-contact-location-list .more-link, .pane-contact-location-list .more-link-block a, .more-link-block .pane-contact-location-list a {
+  margin-bottom: 1em;
+  text-align: left;
 }
 
 .pane-daterangepicker-results .view-filters {
@@ -1315,7 +1315,7 @@ a.more-link,
 }
 
 .pane-staff-search-pane {
-  margin-bottom: 2em;
+  margin-bottom: 2.7em;
 }
 .pane-staff-search-pane .form-item {
   margin: 0;
