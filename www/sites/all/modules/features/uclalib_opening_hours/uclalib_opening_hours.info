@@ -22,3 +22,4 @@ features[views_view][] = library_hours
 features_exclude[dependencies][ctools] = ctools
 files[] = uclalib_opening_hours_field_opening_hours_week.inc
 files[] = uclalib_opening_hours_field_opening_hours_today.inc
+scripts[] = uclalib_opening_hours.js
