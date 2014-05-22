@@ -69,9 +69,14 @@ function uclalib_resources_field_default_field_instances() {
   // Exported field_instance: 'node-uclalib_resources-field_icon'
   $field_instances['node-uclalib_resources-field_icon'] = array(
     'bundle' => 'uclalib_resources',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'bundle' => 'uclalib',
+        'icon' => 'search',
+      ),
+    ),
     'deleted' => 0,
-    'description' => 'Select an icon or icons that apply to this resource.',
+    'description' => 'Select up to three of the \'web\', \'search\', or \'address\' icons to apply to this resource. They will appear on the \'find resources\' page to indicate whether this resource is a searchable resource and/or a web page or physical resource.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -103,7 +108,7 @@ function uclalib_resources_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_icon',
-    'label' => 'Icon',
+    'label' => 'Resource locations',
     'required' => 0,
     'settings' => array(
       'bundle' => NULL,
@@ -115,7 +120,7 @@ function uclalib_resources_field_default_field_instances() {
       'module' => 'icon_field',
       'settings' => array(),
       'type' => 'icon_field',
-      'weight' => 3,
+      'weight' => 9,
     ),
   );
 
@@ -170,7 +175,7 @@ function uclalib_resources_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -255,7 +260,7 @@ function uclalib_resources_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -264,7 +269,7 @@ function uclalib_resources_field_default_field_instances() {
     'bundle' => 'uclalib_resources',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Primary link to resource.',
+    'description' => 'If this is a searchable resource, add the link to its search page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -295,7 +300,7 @@ function uclalib_resources_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_resource_link',
     'label' => 'Search Link',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'attributes' => array(
         'class' => '',
@@ -326,7 +331,7 @@ function uclalib_resources_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -397,7 +402,7 @@ function uclalib_resources_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -456,15 +461,15 @@ function uclalib_resources_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Icon');
+  t('If this is a searchable resource, add the link to its search page.');
   t('Other Access Links');
   t('Other access links associated with the resource.');
-  t('Primary link to resource.');
   t('Resource Associated Location');
   t('Resource Image Thumbnail');
   t('Resource Type');
+  t('Resource locations');
   t('Search Link');
-  t('Select an icon or icons that apply to this resource.');
+  t('Select up to three of the \'web\', \'search\', or \'address\' icons to apply to this resource. They will appear on the \'find resources\' page to indicate whether this resource is a searchable resource and/or a web page or physical resource.');
 
   return $field_instances;
 }

@@ -17,4 +17,3 @@ function uclalib_resources_ctools_plugin_directory($owner, $plugin_type) {
 
   return NULL;
 }
-

@@ -68,13 +68,13 @@ function uclalib_resources_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'default_opening_hours' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '3',
         ),
       ),
       'display' => array(),
