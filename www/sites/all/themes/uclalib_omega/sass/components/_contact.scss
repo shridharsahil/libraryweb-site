@@ -1,32 +1,78 @@
-.pane-ask-librarian {
-  margin-bottom: 47px;
-}
-
-.pane-staff-search-pane {
-  margin-bottom: 2.7em;
-  .form-item {
-    margin: 0;
-    width: 88%;
-    .form-text {
-      border: 1px solid #d9d9d9;
-      height: 33px;
-      width: 100%;
+.page-contact {
+  .pane-content > h2 {
+    color: $ucla-gray;
+    font-size: 2.286em;
+    font-weight: 100;
+    margin-bottom: 2px;
+  }
+  .pane-title {
+    font-size: 1em;
+  }
+  .pane-horizontal-rule {
+    margin-bottom: 28px;
+  }
+  .pane-contact-question {
+    h2 {
+      margin-top: 8px;
     }
   }
-  .form-actions {
-    margin: 0;
+  
+  .pane-ask-librarian,
+  .pane-bean-other-research-support-options {
+    margin-bottom: 47px;
+    h2 {
+      font-weight: bold;
+    }
   }
-  p {
-    margin-top: 5px;
-  }
-  & + .panel-pane {
-    margin-bottom: 2em;
-  }
-}
 
-.pane-contact-location-list {
-  .more-link {
-    margin-bottom: 1em;
-    text-align: left;
+  .pane-staff-search-pane {
+    margin-bottom: 2.7em;
+    h2 {
+      margin: 23px 0 6px;
+    }
+    .header-search-form {
+      position: relative;
+      .form-item {
+        margin: 0;
+        width: 100%;
+        .form-text {
+          border: 1px solid #d9d9d9;
+          height: 33px;
+          width: 100%;
+        }
+      }
+      .form-actions {
+        margin: 0;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        .form-submit {
+          padding: 0.55em 0.6em 0.45em;
+        }
+      }
+    }
+    p {
+      margin-top: 5px;
+    }
+  }
+
+  .pane-contact-location-list {
+    .more-link {
+      margin-bottom: 1.5em;
+      text-align: left;
+    }
+    & + .pane-todays-hours .view-content {
+      border: 1px solid $border-color;
+      padding: 2px;
+      & .views-field-title {
+        width: 60%;
+        & + .views-field {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .l-region--sidebar-right {
+    margin-top: 28px;
   }
 }

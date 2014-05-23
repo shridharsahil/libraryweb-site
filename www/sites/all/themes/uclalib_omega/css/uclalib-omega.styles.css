@@ -462,35 +462,75 @@ a[href="#main-content"] {
   vertical-align: middle;
 }
 
-.pane-ask-librarian {
+.page-contact .pane-content > h2 {
+  color: #2d2f35;
+  font-size: 2.286em;
+  font-weight: 100;
+  margin-bottom: 2px;
+}
+.page-contact .pane-title {
+  font-size: 1em;
+}
+.page-contact .pane-horizontal-rule {
+  margin-bottom: 28px;
+}
+.page-contact .pane-contact-question h2 {
+  margin-top: 8px;
+}
+.page-contact .pane-ask-librarian,
+.page-contact .pane-bean-other-research-support-options {
   margin-bottom: 47px;
 }
-
-.pane-staff-search-pane {
+.page-contact .pane-ask-librarian h2,
+.page-contact .pane-bean-other-research-support-options h2 {
+  font-weight: bold;
+}
+.page-contact .pane-staff-search-pane {
   margin-bottom: 2.7em;
 }
-.pane-staff-search-pane .form-item {
-  margin: 0;
-  width: 88%;
+.page-contact .pane-staff-search-pane h2 {
+  margin: 23px 0 6px;
 }
-.pane-staff-search-pane .form-item .form-text {
+.page-contact .pane-staff-search-pane .header-search-form {
+  position: relative;
+}
+.page-contact .pane-staff-search-pane .header-search-form .form-item {
+  margin: 0;
+  width: 100%;
+}
+.page-contact .pane-staff-search-pane .header-search-form .form-item .form-text {
   border: 1px solid #d9d9d9;
   height: 33px;
   width: 100%;
 }
-.pane-staff-search-pane .form-actions {
+.page-contact .pane-staff-search-pane .header-search-form .form-actions {
   margin: 0;
+  position: absolute;
+  right: 1px;
+  top: 1px;
 }
-.pane-staff-search-pane p {
+.page-contact .pane-staff-search-pane .header-search-form .form-actions .form-submit {
+  padding: 0.55em 0.6em 0.45em;
+}
+.page-contact .pane-staff-search-pane p {
   margin-top: 5px;
 }
-.pane-staff-search-pane + .panel-pane {
-  margin-bottom: 2em;
-}
-
-.pane-contact-location-list .more-link, .pane-contact-location-list .more-link-block a, .more-link-block .pane-contact-location-list a {
-  margin-bottom: 1em;
+.page-contact .pane-contact-location-list .more-link, .page-contact .pane-contact-location-list .more-link-block a, .more-link-block .page-contact .pane-contact-location-list a {
+  margin-bottom: 1.5em;
   text-align: left;
+}
+.page-contact .pane-contact-location-list + .pane-todays-hours .view-content {
+  border: 1px solid #adcde5;
+  padding: 2px;
+}
+.page-contact .pane-contact-location-list + .pane-todays-hours .view-content .views-field-title {
+  width: 60%;
+}
+.page-contact .pane-contact-location-list + .pane-todays-hours .view-content .views-field-title + .views-field {
+  text-align: center;
+}
+.page-contact .l-region--sidebar-right {
+  margin-top: 28px;
 }
 
 .destination-icons-horiz li {
