@@ -49,17 +49,16 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: News Images */
-  $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['label'] = '';
-  $handler->display->display_options['fields']['field_news_image']['alter']['nl2br'] = TRUE;
-  $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'widescreen_small',
-    'image_link' => '',
+  /* Field: Content: News Thumbnail */
+  $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'field_data_field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
+    'image_style' => 'thumbnail_small',
+    'image_link' => 'content',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
