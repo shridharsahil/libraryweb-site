@@ -1189,6 +1189,9 @@ a.more-link,
 .l-region--top .pane-horizontal-tab-navigation {
   margin-top: 0;
 }
+.l-region--top .pane-horizontal-tab-navigation p {
+  margin: 0;
+}
 
 .pane-library-hours-panel-pane-1 {
   padding-top: 30px;
