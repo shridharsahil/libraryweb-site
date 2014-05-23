@@ -53,6 +53,23 @@ table td.current-day {
 table .current-day {
   color: #2d2f35;
 }
+table .week-selector {
+  width: 146px;
+}
+table .week-selector a {
+  color: #fff;
+  display: inline-block;
+  height: 18px;
+  overflow: hidden;
+  padding-top: 3px;
+  width: 18px;
+}
+table a.next-week {
+  text-indent: -66px;
+}
+table.opening-hours-week th, table.opening-hours-week td {
+  text-align: center;
+}
 
 html {
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -761,7 +778,7 @@ a[href="#main-content"] {
   display: none;
 }
 
-.more-link-triangle-after:after, div.more-link > a:after,
+.more-link-triangle-after:after, table a.next-week:after, div.more-link > a:after,
 a.more-link:after,
 .more-link-block a:after, .pane-bean-featured-content .field--name-field-featured-thumbnail-image a:after,
 .pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
@@ -774,6 +791,19 @@ a.more-link:after,
   border-top: .4em solid transparent;
   border-bottom: .4em solid transparent;
   border-left: 0.4em solid #3283be;
+  font-size: 0.9em;
+}
+
+.left-link-triangle-before:before, table a.previous-week:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: .4em;
+  margin-right: .4em;
+  border-top: .4em solid transparent;
+  border-bottom: .4em solid transparent;
+  border-right: 0.4em solid #3283be;
   font-size: 0.9em;
 }
 
