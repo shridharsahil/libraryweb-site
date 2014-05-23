@@ -64,6 +64,12 @@ table .week-selector a {
   padding-top: 3px;
   width: 18px;
 }
+table .week-selector a:after {
+  border-left: 0.4em solid #666666 !important;
+}
+table .week-selector a:before {
+  border-right: 0.4em solid #666666 !important;
+}
 table a.next-week {
   text-indent: -66px;
 }

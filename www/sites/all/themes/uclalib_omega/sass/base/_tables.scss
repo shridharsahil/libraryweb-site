@@ -38,6 +38,12 @@ table {
       padding-top: 3px;
       width: 18px;
     }
+    a:after {
+      border-left: .4em solid $text-color !important;
+    }
+    a:before {
+      border-right: .4em solid $text-color !important;
+    }
   }
   a.previous-week {
     @extend .left-link-triangle-before;
