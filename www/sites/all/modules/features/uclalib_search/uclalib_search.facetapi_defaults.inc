@@ -52,6 +52,12 @@ function uclalib_search_facetapi_default_facet_settings() {
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
+    'filters' => array(
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+    ),
     'flatten' => '0',
     'query_type' => 'term',
     'default_true' => '1',
@@ -102,6 +108,12 @@ function uclalib_search_facetapi_default_facet_settings() {
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
+    'filters' => array(
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+    ),
     'flatten' => '0',
     'query_type' => 'term',
     'default_true' => '1',
@@ -179,7 +191,12 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -365,7 +382,12 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
