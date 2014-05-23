@@ -11,15 +11,26 @@
   }
 }
 .sidebar-search {
-  margin: 16px 0 0 -13px;
+  margin: 16px 0 0;
+  position: relative;
+  .form-type-textfield {
+    margin-left: -13px;
+    margin-right: 17px;
+  }
   .form-text {
-    background: #fff url(../images/icon-search.png) 96% 55% no-repeat;
+    background: #fff ; //url(../images/icon-search.png) 96% 55% no-repeat;
     border: none;
     padding: 6px 3px;
+    width: 100%;
+  }
+  .views-widget-filter-search_api_views_fulltext,
+  .views-widget-filter-title {
+    margin: 0;
+    padding: 0;
   }
   .views-widget-checkboxes {
     color: $ucla-dark-gray;
-    margin-left: 18px;
+    margin-left: 5px;
   }
   .views-submit-button {
     margin-left: 18px;
@@ -29,6 +40,20 @@
   }
   .views-widget-filter-field_staff_is_subject_librarian {
     display: none;
+  }
+  .views-submit-button {
+    position: absolute;
+    right: -13px;
+    margin: 0;
+    padding: 0;
+  }
+  .form-submit {
+    background: #fff url(../images/icon-search.png) 50% 55% no-repeat;
+    width: 30px;
+    text-indent: -99999em;
+    border: none;
+    padding: 6px 6px;
+    line-height: normal;
   }
 }
 .sidebar-options {
@@ -45,7 +70,7 @@
   }
   ul {
     list-style: none;
-    padding-left: 22px;
+    padding-left: 5px;
     .facetapi-checkbox {
       vertical-align: text-bottom;
     }
@@ -53,5 +78,8 @@
       color: $ucla-dark-gray;
       vertical-align: middle;
     }
+  }
+  &.ctools-collapsible-container ul {
+    padding-left: 22px;
   }
 }
