@@ -17,3 +17,14 @@ function uclalib_resources_ctools_plugin_directory($owner, $plugin_type) {
 
   return NULL;
 }
+
+/**
+ * Implements hook_form_ID_alter().
+ */
+function uclalib_resources_form_views_exposed_form_alter(&$form, &$form_state) {
+  // Move search field label to html5 placeholder.
+  if ($form['submit']['#id'] == 'edit-submit-find-resources') {
+    $form['title']['#attributes']['placeholder'] = $form['#info']['filter-title']['label'];
+    $form['#info']['filter-title']['label'] = '';
+  }
+}

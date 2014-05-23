@@ -192,10 +192,13 @@ function _uclalib_location_create_subpage($location_node, $title, $menu_title, $
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_ID_alter().
  */
-function uclalib_location_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'views_exposed_form') {
-    $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search');
+function uclalib_location_form_views_exposed_form_alter(&$form, &$form_state) {
+
+  // Move search field title to html5 placeholder.
+  if ($form['submit']['#id'] == 'edit-submit-location-search') {
+    $form['search_api_views_fulltext']['#attributes']['placeholder'] = $form['#info']['filter-search_api_views_fulltext']['label'];
+    $form['#info']['filter-search_api_views_fulltext']['label'] = '';
   }
 }
