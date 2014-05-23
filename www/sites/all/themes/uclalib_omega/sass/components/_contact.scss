@@ -16,7 +16,7 @@
       margin-top: 8px;
     }
   }
-  
+
   .pane-ask-librarian,
   .pane-bean-other-research-support-options {
     margin-bottom: 47px;
@@ -68,6 +68,7 @@
         width: 60%;
         & + .views-field {
           text-align: center;
+          width: 40%;
         }
       }
     }

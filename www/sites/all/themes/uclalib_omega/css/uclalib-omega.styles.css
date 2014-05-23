@@ -528,6 +528,7 @@ a[href="#main-content"] {
 }
 .page-contact .pane-contact-location-list + .pane-todays-hours .view-content .views-field-title + .views-field {
   text-align: center;
+  width: 40%;
 }
 .page-contact .l-region--sidebar-right {
   margin-top: 28px;
