@@ -1,3 +1,7 @@
+.pane-ask-librarian {
+  margin-bottom: 47px;
+}
+
 .pane-staff-search-pane {
   margin-bottom: 2.7em;
   .form-item {
@@ -17,5 +21,12 @@
   }
   & + .panel-pane {
     margin-bottom: 2em;
+  }
+}
+
+.pane-contact-location-list {
+  .more-link {
+    margin-bottom: 1em;
+    text-align: left;
   }
 }
