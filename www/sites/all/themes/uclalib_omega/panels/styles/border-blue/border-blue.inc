@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Definition of the 'boxed aside' pane style.
+ * Definition of the border blue pane style.
  */
 
 // Plugin definition

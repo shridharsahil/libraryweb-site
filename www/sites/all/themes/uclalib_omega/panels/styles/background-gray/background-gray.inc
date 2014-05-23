@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Definition of the 'boxed aside' pane style.
+ * Definition of the background gray pane style.
  */
 
 // Plugin definition

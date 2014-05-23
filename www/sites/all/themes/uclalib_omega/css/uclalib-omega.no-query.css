@@ -963,7 +963,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399452290');
+  background-image: url('../images/logo-colophon.png?1399382991');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1019,6 +1019,9 @@ a.more-link,
 }
 .pane-bean-link-list.pane-style-background-gray .field--name-field-link-description {
   background-color: #eff3f4;
+}
+.pane-bean-link-list.pane-style-background-blue .field--name-field-link-description {
+  background-color: #c1daeb;
 }
 
 .pane-bean-living-library-gallery {
@@ -1469,6 +1472,23 @@ a.more-link,
 }
 .l-region--main .facetapi-facet-field-staff-glossary-index li:last-child {
   border-right: none;
+}
+
+.pane-style-background-blue {
+  background: #c1daeb;
+  padding: 22px 15px;
+  margin: 0 0 1em;
+}
+.pane-style-background-blue p {
+  margin: 0;
+}
+.pane-style-background-blue p + p {
+  margin-top: 15px;
+}
+.pane-style-background-blue .pane-title {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .pane-style-background-gray {

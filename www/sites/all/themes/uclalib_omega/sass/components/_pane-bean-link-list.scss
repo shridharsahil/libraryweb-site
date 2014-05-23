@@ -10,6 +10,8 @@
     }
   }
   // 1. sneaky way to hide the triangle when there is a description
+  // 2. Fix the background color assigned from 1. above, when the
+  // link list has the "gray background" pane style.
   .field--name-field-link-link a {
     @extend .more-link-triangle-after;
     color: $ucla-blue;
@@ -20,9 +22,10 @@
   .field--name-field-link-description {
     background-color: white; // 1.
   }
-  // 2. Fix the background color assigned from 1. above, when the
-  // link list has the "gray background" pane style.
   &.pane-style-background-gray .field--name-field-link-description {
-    background-color: $highlighted-bg-color;
+    background-color: $content-background-gray; // 2.
+  }
+  &.pane-style-background-blue .field--name-field-link-description {
+    background-color: $sidebar-bg-lt-blue; // 2.
   }
 }
