@@ -24,6 +24,27 @@
     .l-main {
       background: white;
     }
+
+    .pane-1 {
+      /**
+       * PLACEHOLDER.
+       */
+      .pane-content {
+        background: url(../images/placeholder-start-your-research.png) no-repeat 0 0;
+        height: 350px;
+        margin-bottom: 20px;
+      }
+    }
+    .pane-2 {
+      /**
+       * PLACEHOLDER.
+       */
+      .pane-content {
+        background: url(../images/placeholder-project-highlights.png) no-repeat 0 0;
+        height: 780px;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 

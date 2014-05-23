@@ -773,6 +773,26 @@ a[href="#main-content"] {
   .front .l-main {
     background: white;
   }
+  .front .pane-1 {
+    /**
+     * PLACEHOLDER.
+     */
+  }
+  .front .pane-1 .pane-content {
+    background: url(../images/placeholder-start-your-research.png) no-repeat 0 0;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  .front .pane-2 {
+    /**
+     * PLACEHOLDER.
+     */
+  }
+  .front .pane-2 .pane-content {
+    background: url(../images/placeholder-project-highlights.png) no-repeat 0 0;
+    height: 780px;
+    margin-bottom: 20px;
+  }
 }
 /**
  * Override jQuery UI widget default font sizes.
