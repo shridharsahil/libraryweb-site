@@ -582,6 +582,14 @@ a[href="#main-content"] {
 .node-type-news .l-region--top-right-sidebar {
   padding-top: 65px;
 }
+.node-type-uclalib-event .l-region--sidebar-right .pane-recent-news-panel-pane-1,
+.node-type-uclalib-event .l-region--top-right-sidebar .pane-recent-news-panel-pane-1,
+.node-type-exhibition .l-region--sidebar-right .pane-recent-news-panel-pane-1,
+.node-type-exhibition .l-region--top-right-sidebar .pane-recent-news-panel-pane-1,
+.node-type-news .l-region--sidebar-right .pane-recent-news-panel-pane-1,
+.node-type-news .l-region--top-right-sidebar .pane-recent-news-panel-pane-1 {
+  padding-top: 28px;
+}
 
 .pane-events-breadcrumb + .pane-node-title h1,
 .pane-exhibition-breadcrumb + .pane-node-title h1,
