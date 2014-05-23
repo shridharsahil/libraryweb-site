@@ -915,7 +915,7 @@ a.more-link,
 }
 .pane-ask-a-librarian a {
   color: white;
-  text-shadow: 0 1px 1px #2d2f35;
+  text-shadow: 0 .04em .02em #8d6e2d;
 }
 .pane-ask-a-librarian a, .pane-ask-a-librarian a:hover, .pane-ask-a-librarian a:active, .pane-ask-a-librarian a:focus {
   text-decoration: none;

@@ -9,7 +9,7 @@
   }
   a {
     @include link-colors(#fff);
-    text-shadow: 0 1px 1px $ucla-gray;
+    text-shadow: 0 .04em .02em #8d6e2d;
     &, &:hover, &:active, &:focus {
       text-decoration: none;
     }
