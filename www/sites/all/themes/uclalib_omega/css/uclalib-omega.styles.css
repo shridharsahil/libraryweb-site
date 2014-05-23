@@ -748,6 +748,32 @@ a[href="#main-content"] {
   padding: 14px 0 0 !important;
 }
 
+@media all and (min-width: 1300px) {
+  .front .l-main-wrapper {
+    position: relative;
+  }
+  .front .l-main-wrapper:before {
+    background: url(../images/home-bg-left.jpg) no-repeat 0 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 292px;
+    height: 482px;
+    z-index: -1;
+  }
+  .front .l-main:before {
+    background: url(../images/home-bg-right.jpg) no-repeat 0 0;
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 292px;
+    height: 482px;
+    z-index: -1;
+  }
+  .front .l-main {
+    background: white;
+  }
+}
 /**
  * Override jQuery UI widget default font sizes.
  */

@@ -1,0 +1,29 @@
+@media all and (min-width:1300px) {
+  .front {
+    .l-main-wrapper {
+      position: relative;
+    }
+    .l-main-wrapper:before {
+      background: url(../images/home-bg-left.jpg) no-repeat 0 0;
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 292px;
+      height: 482px;
+      z-index: -1;
+    }
+    .l-main:before {
+      background: url(../images/home-bg-right.jpg) no-repeat 0 0;
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 292px;
+      height: 482px;
+      z-index: -1;
+    }
+    .l-main {
+      background: white;
+    }
+  }
+}
+
