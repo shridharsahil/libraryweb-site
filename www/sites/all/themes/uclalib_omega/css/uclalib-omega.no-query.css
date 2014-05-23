@@ -2034,3 +2034,9 @@ a.more-link,
   top: 0;
   right: 0;
 }
+.view-find-resources .pane-node-body {
+  margin-top: 0.8em;
+}
+.view-find-resources .pane-node-body p {
+  margin: 0;
+}
