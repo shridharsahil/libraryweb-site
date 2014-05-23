@@ -20,6 +20,9 @@ $gutter-styles: 'split'; // gitter is split between left and right of each col.
     position: relative; // Needed for faux-column.
   }
 
+  .homepage-top {
+    padding-top: 25px;
+  }
   .homepage-top, .homepage-bottom {
     clear: both;
   }

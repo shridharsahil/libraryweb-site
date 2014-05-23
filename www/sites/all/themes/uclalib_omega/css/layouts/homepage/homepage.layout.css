@@ -16,6 +16,10 @@
   clear: both;
 }
 
+.homepage-top {
+  padding-top: 25px;
+}
+
 .homepage-top, .homepage-bottom {
   clear: both;
 }
