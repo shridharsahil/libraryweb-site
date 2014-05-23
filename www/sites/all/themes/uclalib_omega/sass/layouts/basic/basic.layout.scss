@@ -9,6 +9,8 @@
 .l-colophon,
 .l-footer {
   @include container;
+  max-width: 1004px; // Override default width calculations.
+  _width: 1004px; // Override default width calculations.
 }
 
 .l-region--branding {
