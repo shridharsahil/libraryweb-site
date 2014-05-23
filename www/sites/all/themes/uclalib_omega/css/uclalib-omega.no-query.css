@@ -374,10 +374,10 @@ a[href="#main-content"] {
 .l-navigation ul.primary-links > li.first a:after {
   font-family: icomoon;
   content: "\e60b";
-  font-size: 17px;
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
-  text-indent: 909px;
+  text-indent: 954px;
   display: inline-block;
   line-height: 1em;
   vertical-align: middle;
