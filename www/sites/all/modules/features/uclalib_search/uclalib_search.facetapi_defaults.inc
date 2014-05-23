@@ -2563,7 +2563,12 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'display' => 'display',
