@@ -903,6 +903,11 @@ a.more-link,
   padding-right: 6px;
 }
 
+.node-teaser .pane-node-title h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
 .pane-ask-a-librarian {
   border-radius: 3px;
   background: #fdb930;
@@ -1347,6 +1352,23 @@ a.more-link,
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.pane-node-field-icon .field__item {
+  display: inline;
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+.pane-node-field-resource-type .field__item {
+  display: inline;
+  font-style: italic;
+}
+.pane-node-field-resource-type .field__item:after {
+  content: ", ";
+}
+.pane-node-field-resource-type .field__item:last-child:after {
+  content: "";
 }
 
 .pane-open-now .location-open-now,
@@ -1962,4 +1984,25 @@ a.more-link,
 .not-front .view-upcoming-events-display .views-field-field-event-image,
 .not-front .view-upcoming-events-display .views-field-field-exhibition-image {
   display: none !important;
+}
+
+.view-find-resources .views-row {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #adcde5;
+  position: relative;
+}
+.view-find-resources .pane-node-body,
+.view-find-resources .pane-node-title,
+.view-find-resources .pane-node-field-resource-type {
+  float: left;
+  width: 80%;
+}
+.view-find-resources .pane-node-field-icon {
+  float: right;
+  width: 19%;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

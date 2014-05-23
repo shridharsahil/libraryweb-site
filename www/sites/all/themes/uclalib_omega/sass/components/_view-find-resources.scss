@@ -1,0 +1,22 @@
+.view-find-resources {
+  .views-row {
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+  }
+  .pane-node-body,
+  .pane-node-title,
+  .pane-node-field-resource-type {
+    float: left;
+    width: 80%;
+  }
+  .pane-node-field-icon {
+    float: right;
+    width: 19%;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

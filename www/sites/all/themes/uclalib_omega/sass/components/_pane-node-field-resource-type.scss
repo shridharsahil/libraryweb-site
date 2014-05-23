@@ -1,0 +1,12 @@
+.pane-node-field-resource-type {
+  .field__item {
+    display: inline;
+    font-style: italic;
+    &:after {
+      content: ", "
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
