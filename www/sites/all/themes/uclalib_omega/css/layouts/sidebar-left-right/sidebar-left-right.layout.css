@@ -39,6 +39,7 @@
 }
 
 .with-both-sidebars .l-region--main-column {
+  max-width: none;
   width: 52.17391%;
   float: left;
   margin-right: -100%;
@@ -60,6 +61,7 @@
 }
 
 .with-sidebar-left .l-region--main-column {
+  max-width: none;
   width: 78.26087%;
   float: right;
   margin-left: 0;
@@ -81,6 +83,7 @@
 }
 
 .with-sidebar-right .l-region--main-column {
+  max-width: none;
   width: 73.91304%;
   float: left;
   margin-right: -100%;

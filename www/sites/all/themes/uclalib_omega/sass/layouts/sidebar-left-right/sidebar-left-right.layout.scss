@@ -34,6 +34,7 @@ $gutter-styles: 'split'; // gutter is split between left and right of each col.
 
   // Span 2 columns, starting at the 2nd column
   .with-both-sidebars .l-region--main-column {
+    max-width: none;
     @include grid-span(2, 2);
     padding-right: 0; // kill middle column right padding.
 
@@ -45,6 +46,7 @@ $gutter-styles: 'split'; // gutter is split between left and right of each col.
 
   // Span 3 columns, starting at the 2nd column
   .with-sidebar-left .l-region--main-column {
+    max-width: none;
     @include grid-span(3, 2);
     padding-right: 0; // kill middle column right padding.
 
@@ -56,6 +58,7 @@ $gutter-styles: 'split'; // gutter is split between left and right of each col.
 
   // Span 3 columns, starting at the 1st column
   .with-sidebar-right .l-region--main-column {
+    max-width: none;
     @include grid-span(3, 1);
     padding-left: 0; // kill left padding.
     padding-right: 0; // kill right padding.

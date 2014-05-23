@@ -38,7 +38,7 @@ $gutter-styles: 'split'; // gitter is split between left and right of each col.
 
   // Span 2 columns, starting at the 2nd column
   .with-sidebar-left .l-region--main-column {
-    max-width: auto;
+    max-width: none;
     @include grid-span(2, 2);
     padding-right: 0; // kill right rail gutter.
 

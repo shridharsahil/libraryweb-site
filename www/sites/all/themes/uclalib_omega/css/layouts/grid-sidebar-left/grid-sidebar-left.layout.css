@@ -43,7 +43,7 @@
 }
 
 .with-sidebar-left .l-region--main-column {
-  max-width: auto;
+  max-width: none;
   width: 76.19048%;
   float: right;
   margin-left: 0;
