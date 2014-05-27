@@ -47,6 +47,67 @@ function uclalib_showcase_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_showcase-field_showcase_caption'
+  $field_instances['field_collection_item-field_showcase-field_showcase_caption'] = array(
+    'bundle' => 'field_showcase',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Optional: add a short caption to be displayed beneath the link.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_showcase_caption',
+    'label' => 'Showcase Caption',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 80,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_showcase-field_showcase_image'
   $field_instances['field_collection_item-field_showcase-field_showcase_image'] = array(
     'bundle' => 'field_showcase',
@@ -187,7 +248,9 @@ function uclalib_showcase_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Optional: add a short caption to be displayed beneath the link.');
   t('Showcase');
+  t('Showcase Caption');
   t('Showcase Image');
   t('Showcase Link');
   t('There are 8 allowed values for a showcase, with drag n drop reordering.  Be aware that having any number of items except 4 and 8 will look odd, as the images will not resize to fit the space.');
