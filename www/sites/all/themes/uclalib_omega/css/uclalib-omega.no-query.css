@@ -792,25 +792,6 @@ a[href="#main-content"] {
     color: white;
     text-shadow: 0 0 10px #2d2f35;
   }
-  .front .pane-2 {
-    /**
-     * PLACEHOLDER.
-     */
-  }
-  .front .pane-2 .pane-content {
-    background: url(../images/placeholder-project-highlights.png) no-repeat 0 0;
-    height: 780px;
-    margin-bottom: 20px;
-  }
-  .front .pane-2 .pane-content p {
-    padding: 100px 0;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0 0 10px #2d2f35;
-  }
 }
 /**
  * Override jQuery UI widget default font sizes.
