@@ -1509,15 +1509,10 @@ a.more-link,
   background: #fdb930;
 }
 
-/* .pane-page-content {
-  > .contextual-links-region {
-    > .contextual-links-wrapper {
-      // Add some padding so the "Edit panel" contextual link doesn't sit
-      // on top of other contextual links from panes inside the panel.
-      margin-right: 25px;
-    }
-  }
-} */
+.pane-page-content > .contextual-links-region > .contextual-links-wrapper {
+  margin-right: 25px;
+}
+
 .pane-page-messages {
   padding: 1em 0;
 }
