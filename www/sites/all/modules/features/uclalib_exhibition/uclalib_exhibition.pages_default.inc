@@ -510,9 +510,9 @@ function uclalib_exhibition_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'UCLA Library Exhibitions';
   $display->uuid = '52bc2351-3a8b-43da-8241-295472c5fa2d';
-  $display->window_title = '';
+  $display->window_title = 'Search for UCLA Library Exhibitions';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
