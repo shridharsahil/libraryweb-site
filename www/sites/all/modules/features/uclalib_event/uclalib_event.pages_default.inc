@@ -565,12 +565,15 @@ function uclalib_event_default_page_manager_pages() {
       'below_main_left' => NULL,
       'below_main_right' => NULL,
       'sidebar_right' => NULL,
+      'secondary' => NULL,
+      'below_secondary_left' => NULL,
+      'below_secondary_right' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'UCLA Library Events';
   $display->uuid = '5aa2c6a2-4403-4d34-b5cf-161696c805ce';
-  $display->window_title = '';
+  $display->window_title = 'Search for UCLA Library Events & Exhibitions';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
