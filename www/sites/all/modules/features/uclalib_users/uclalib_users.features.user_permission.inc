@@ -495,13 +495,6 @@ function uclalib_users_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: 'administer panelizer bean ucla_showcase defaults'.
-  $permissions['administer panelizer bean ucla_showcase defaults'] = array(
-    'name' => 'administer panelizer bean ucla_showcase defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'administer panelizer bean upcoming_events defaults'.
   $permissions['administer panelizer bean upcoming_events defaults'] = array(
     'name' => 'administer panelizer bean upcoming_events defaults',
@@ -979,16 +972,6 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
-  // Exported permission: 'create any ucla_showcase bean'.
-  $permissions['create any ucla_showcase bean'] = array(
-    'name' => 'create any ucla_showcase bean',
-    'roles' => array(
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
-    ),
-    'module' => 'bean',
-  );
-
   // Exported permission: 'create any upcoming_events bean'.
   $permissions['create any upcoming_events bean'] = array(
     'name' => 'create any upcoming_events bean',
@@ -1223,16 +1206,6 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'delete any text_block bean'.
   $permissions['delete any text_block bean'] = array(
     'name' => 'delete any text_block bean',
-    'roles' => array(
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
-    ),
-    'module' => 'bean',
-  );
-
-  // Exported permission: 'delete any ucla_showcase bean'.
-  $permissions['delete any ucla_showcase bean'] = array(
-    'name' => 'delete any ucla_showcase bean',
     'roles' => array(
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2151,16 +2124,6 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'view any text_block bean'.
   $permissions['view any text_block bean'] = array(
     'name' => 'view any text_block bean',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'bean',
-  );
-
-  // Exported permission: 'view any ucla_showcase bean'.
-  $permissions['view any ucla_showcase bean'] = array(
-    'name' => 'view any ucla_showcase bean',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
