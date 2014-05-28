@@ -228,18 +228,15 @@ function uclalib_homepage_default_page_manager_pages() {
     $display->content['new-50719f8e-efd1-40c9-8b30-048e9c373c27'] = $pane;
     $display->panels['top_left_main'][0] = 'new-50719f8e-efd1-40c9-8b30-048e9c373c27';
     $pane = new stdClass();
-    $pane->pid = 'new-e080e2cb-f504-4491-9f25-10b1dab5273d';
+    $pane->pid = 'new-8e8a6115-4373-407e-acf1-8446ecca3ad9';
     $pane->panel = 'top_right_sidebar';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-homepage-project-highlights';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Project Highlights',
-      'title' => 'Project Highlights',
-      'body' => 'Project Highlights goes here',
-      'format' => 'full_html',
-      'substitute' => TRUE,
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -250,9 +247,9 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'e080e2cb-f504-4491-9f25-10b1dab5273d';
-    $display->content['new-e080e2cb-f504-4491-9f25-10b1dab5273d'] = $pane;
-    $display->panels['top_right_sidebar'][0] = 'new-e080e2cb-f504-4491-9f25-10b1dab5273d';
+    $pane->uuid = '8e8a6115-4373-407e-acf1-8446ecca3ad9';
+    $display->content['new-8e8a6115-4373-407e-acf1-8446ecca3ad9'] = $pane;
+    $display->panels['top_right_sidebar'][0] = 'new-8e8a6115-4373-407e-acf1-8446ecca3ad9';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
