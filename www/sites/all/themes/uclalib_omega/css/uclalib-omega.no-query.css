@@ -396,17 +396,24 @@ a[href="#main-content"] {
   margin: 0;
   padding: 0;
   position: relative;
+  float: left;
+  width: 100%;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
+  *zoom: 1;
+}
+.l-region--top:before, .l-region--top:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.l-region--top:after {
+  clear: both;
 }
 .l-region--top .panel-pane {
   margin: 24px 0;
-}
-.l-region--top .panel-pane:first-child {
-  margin-top: 0;
-  padding-top: 24px;
-}
-.l-region--top .panel-pane:last-child {
-  margin-bottom: 0;
-  padding-bottom: 24px;
 }
 
 .l-region--top:before {
@@ -1555,7 +1562,7 @@ a.more-link,
   font-size: 30px;
   font-weight: 100;
   color: #3283be;
-  margin: 0.9em 0;
+  margin: 27px 0;
 }
 
 .header-search-form-wrapper .form-type-textfield {
