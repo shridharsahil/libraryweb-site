@@ -24,6 +24,6 @@ var addWeekPager = function (element) {
 	table.load(tableCallback, function() {
 		Drupal.attachBehaviors($(this));
 	});
-}
+};
 
 })(jQuery);
