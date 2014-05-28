@@ -12,15 +12,11 @@ include_once 'uclalib_text_block_bean.features.inc';
  */
 function uclalib_text_block_bean_form_bean_form_alter(&$form, &$form_state, $form_id) {
 
-  // Hide the view mode selector if there is only one to choose from.
-  // This really should be built into the Bean module itself. ;)
-  if(count($form['view_mode']['#options']) == 1) {
-    $form['view_mode']['#type'] = 'hidden';
-  }
-
+  // Note: other common alterations found in uclalib_arch_form_bean_form_alter().
   if ($form['#bundle'] == 'text_block') {
     // The basic text block doesn't need a title.
     $form['title']['#type'] = 'hidden';
+
     // The basic text block uses only the "default" view mode.
     $form['view_mode']['#type'] = 'hidden';
 
@@ -28,15 +24,8 @@ function uclalib_text_block_bean_form_bean_form_alter(&$form, &$form_state, $for
     // of this edit form retain the more logical default label "Text Block".
     $form['field_text_block']['und'][0]['#title'] = t('Content');
 
-    // Space is cheap; default to new revision and simplify the log message.
+    // Ensure text field appears below revisions.
     if (isset($form['revision'])) {
-      $form['revision']['is_new_revision']['#default_value'] = true;
-      $form['revision']['is_new_revision']['#type'] = 'hidden';
-      $form['revision']['default_revision']['#default_value'] = true;
-      $form['revision']['default_revision']['#type'] = 'hidden';
-      $form['revision']['log']['#type'] = 'textfield';
-      unset($form['revision']['log']['#dependency']);
-      $form['revision']['log']['#title'] = t('What changed?');
       $form['field_text_block']['#weight'] = $form['revision']['#weight'] - 1;
     }
   }

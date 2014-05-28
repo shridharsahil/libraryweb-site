@@ -152,3 +152,70 @@ function uclalib_arch_icon_bundles() {
 
   return $bundles;
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function uclalib_arch_form_bean_form_alter(&$form, &$form_state, $form_id) {
+
+  // Hide the view mode selector if there is only one to choose from.
+  // This really should be built into the Bean module itself. ;)
+  if(count($form['view_mode']['#options']) == 1) {
+    $form['view_mode']['#type'] = 'hidden';
+  }
+
+  // Simplify the log message field.
+  if (isset($form['revision'])) {
+    $form['revision']['log']['#type'] = 'textfield';
+    $form['revision']['log']['#size'] = 100;
+    $form['revision']['log']['#title'] = t('What did you change?');
+  }
+
+  // Space is cheap; default to new revision and require a log message.
+  $bean_types_that_require_revisions = array(
+    'featured_content',
+    'link_list',
+    'living_library_gallery',
+    'news_and_events_bean',
+    'quick_find',
+    'showcase',
+    'text_block',
+    'upcoming_events',
+  );
+  if (in_array($form['#bundle'], $bean_types_that_require_revisions)) {
+    if (isset($form['revision'])) {
+      // Default to new revision.
+      $form['revision']['is_new_revision']['#default_value'] = true;
+      $form['revision']['is_new_revision']['#type'] = 'hidden';
+
+      // This dependency is not needed when the is_new_revision field is hidden.
+      unset($form['revision']['log']['#dependency']);
+
+      // Always make the current edit the live version.
+      $form['revision']['default_revision']['#default_value'] = true;
+      $form['revision']['default_revision']['#type'] = 'hidden';
+
+      // Require a log message.
+      $form['revision']['log']['#required'] = TRUE;
+    }
+  }
+
+  // Most beans don't use "View modes" so remove it from the edit form.
+  $bean_types_that_dont_need_view_modes = array(
+    'featured_content',
+    'link_list',
+    'living_library_gallery',
+    'news_and_events_bean',
+    'quick_find',
+    'showcase',
+    'text_block',
+    'upcoming_events',
+  );
+  if (in_array($form['#bundle'], $bean_types_that_dont_need_view_modes)) {
+    if (isset($form['revision'])) {
+      // The view mode is hidden and left as the "default".
+      $form['view_mode']['#type'] = 'hidden';
+    }
+  }
+
+}
