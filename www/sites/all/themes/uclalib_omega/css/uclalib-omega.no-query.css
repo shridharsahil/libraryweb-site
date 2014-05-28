@@ -724,6 +724,19 @@ a[href="#main-content"] {
   font-size: 1.143em;
 }
 
+.pane-node-field-event-location .field__items > .field__item,
+.pane-node-field-exhibition-location .field__items > .field__item {
+  display: inline;
+}
+.pane-node-field-event-location .field__items > .field__item:after,
+.pane-node-field-exhibition-location .field__items > .field__item:after {
+  content: ", ";
+}
+.pane-node-field-event-location .field__items > .field__item:last-child:after,
+.pane-node-field-exhibition-location .field__items > .field__item:last-child:after {
+  content: "";
+}
+
 .pane-node-field-event-date,
 .pane-exhibition-date-range {
   font-style: italic;
