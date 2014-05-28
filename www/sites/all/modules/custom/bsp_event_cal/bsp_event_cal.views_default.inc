@@ -76,7 +76,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Open/Closing Date */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -160,7 +160,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'node-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Content: Open/Closing Date */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
@@ -183,7 +183,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Sort criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Sort criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -201,7 +201,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -259,7 +259,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  /* Field: Content: Open/Closing Date */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -297,7 +297,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'node-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Content: Open/Closing Date */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
@@ -322,7 +322,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Sort criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Sort criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -561,7 +561,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -636,7 +636,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'node-title';
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Content: Open/Closing Date */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -652,7 +652,7 @@ function bsp_event_cal_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Field: Broken/missing handler */
+  /* Field: Content: Event Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
@@ -678,7 +678,7 @@ function bsp_event_cal_views_default_views() {
   );
   $handler->display->display_options['fields']['field_onsite_exhibit_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_onsite_exhibit_images']['delta_offset'] = '0';
-  /* Sort criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Sort criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -734,7 +734,7 @@ function bsp_event_cal_views_default_views() {
     'image_style' => 'event_photo',
     'image_link' => 'content',
   );
-  /* Field: Content: Open/Closing Date */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -767,7 +767,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['label'] = '';
   $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Content: Event Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
@@ -815,7 +815,7 @@ function bsp_event_cal_views_default_views() {
     'onsite_exhibit' => 'onsite_exhibit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -910,7 +910,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -940,7 +940,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['filters']['status_1']['field'] = 'status';
   $handler->display->display_options['filters']['status_1']['value'] = '1';
   $handler->display->display_options['filters']['status_1']['group'] = 2;
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value_1']['id'] = 'field_event_date_value_1';
   $handler->display->display_options['filters']['field_event_date_value_1']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value_1']['field'] = 'field_event_date_value';
@@ -1030,7 +1030,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -1126,7 +1126,7 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -1156,14 +1156,14 @@ function bsp_event_cal_views_default_views() {
   $handler->display->display_options['filters']['status_1']['field'] = 'status';
   $handler->display->display_options['filters']['status_1']['value'] = '1';
   $handler->display->display_options['filters']['status_1']['group'] = 2;
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value_1']['id'] = 'field_event_date_value_1';
   $handler->display->display_options['filters']['field_event_date_value_1']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value_1']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value_1']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value_1']['group'] = 2;
   $handler->display->display_options['filters']['field_event_date_value_1']['default_date'] = 'today';
-  /* Filter criterion: Content: Open/Closing Date -  start date (field_event_date) */
+  /* Filter criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value_2']['id'] = 'field_event_date_value_2';
   $handler->display->display_options['filters']['field_event_date_value_2']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['field_event_date_value_2']['field'] = 'field_event_date_value';

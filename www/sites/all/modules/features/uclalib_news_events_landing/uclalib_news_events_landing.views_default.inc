@@ -233,7 +233,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['bid']['separator'] = '';
-  /* Field: Content: News Image */
+  /* Field: Content: News Images */
   $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
   $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
   $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';

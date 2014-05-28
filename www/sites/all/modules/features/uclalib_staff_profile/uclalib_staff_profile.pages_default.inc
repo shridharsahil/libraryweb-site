@@ -16,7 +16,10 @@ function uclalib_staff_profile_default_page_manager_pages() {
   $page->admin_title = 'Ask a Librarian';
   $page->admin_description = '';
   $page->path = 'contact/ask-librarian';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Ask a Librarian',
@@ -159,7 +162,10 @@ function uclalib_staff_profile_default_page_manager_pages() {
   $page->admin_title = 'Contact';
   $page->admin_description = '';
   $page->path = 'contact';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Contact',
