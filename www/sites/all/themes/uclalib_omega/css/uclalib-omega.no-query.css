@@ -488,6 +488,7 @@ a[href="#main-content"] {
 .page-locations .l-region--sidebar-left:before,
 .page-news .l-region--sidebar-left:before,
 .page-staff .l-region--sidebar-left:before,
+.page-news-events .l-region--sidebar-left:before,
 .page-search-research-find-resources .l-region--sidebar-left:before {
   background: #c1daeb !important;
 }
