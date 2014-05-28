@@ -40,7 +40,7 @@ function uclalib_text_block_bean_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 2,
     ),
   );
 

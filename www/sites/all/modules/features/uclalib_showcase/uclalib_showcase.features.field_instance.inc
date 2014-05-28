@@ -43,7 +43,7 @@ function uclalib_showcase_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 11,
+      'weight' => 2,
     ),
   );
 
