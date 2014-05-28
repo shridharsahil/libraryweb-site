@@ -154,15 +154,9 @@ function uclalib_arch_icon_bundles() {
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_ID_alter().
  */
 function uclalib_arch_form_bean_form_alter(&$form, &$form_state, $form_id) {
-
-  // Hide the view mode selector if there is only one to choose from.
-  // This really should be built into the Bean module itself. ;)
-  if(count($form['view_mode']['#options']) == 1) {
-    $form['view_mode']['#type'] = 'hidden';
-  }
 
   // Simplify the log message field.
   if (isset($form['revision'])) {
@@ -200,7 +194,14 @@ function uclalib_arch_form_bean_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 
-  // Most beans don't use "View modes" so remove it from the edit form.
+  // Hide the view mode selector if there is only one to choose from.
+  // This really should be built into the Bean module itself. ;)
+  if(count($form['view_mode']['#options']) == 1) {
+    $form['view_mode']['#type'] = 'hidden';
+  }
+
+  // In fact, most beans don't use "View modes" at all so remove it
+  // entirely from the edit form for the following bean types.
   $bean_types_that_dont_need_view_modes = array(
     'featured_content',
     'link_list',
@@ -212,10 +213,8 @@ function uclalib_arch_form_bean_form_alter(&$form, &$form_state, $form_id) {
     'upcoming_events',
   );
   if (in_array($form['#bundle'], $bean_types_that_dont_need_view_modes)) {
-    if (isset($form['revision'])) {
-      // The view mode is hidden and left as the "default".
+    if (isset($form['view_mode'])) {
       $form['view_mode']['#type'] = 'hidden';
     }
   }
-
 }
