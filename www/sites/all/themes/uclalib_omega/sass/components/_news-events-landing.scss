@@ -1,4 +1,4 @@
-.pane-bean-news-events-landing-page {
+.bean-news-and-events-bean {
   .grid-item:first-child {
       margin: 1em 0;
       width: 50%;
@@ -35,45 +35,42 @@
       font-size: 0.857em;
     }
   }
-  .pane-news-events-landing-display-panel-pane-1 {
-    .views-row {
-      clear: both;
-      overflow: hidden;
-      &:hover {
-        background: $ucla-lt-gray;
-      }
-    }
-    .views-field {
-      padding: 15px 11px;
-      display: table-cell;
-      vertical-align: middle;
-      p {
-        font-size: 0.857em;
-        font-style: italic;
-        margin: 0;
-      }
-    }
-    .views-field-nothing {
-      padding: 15px 0;
-    }
-    .views-field-field-exhibition-end {
-      margin-right: 10px;
-      min-width: 125px;
-    }
-    .views-field-field-event-date {
-      margin-right: 14px;
+  .views-row {
+    clear: both;
+    overflow: hidden;
+    &:hover {
+      background: $ucla-lt-gray;
     }
   }
-  .pane-news-events-landing-display-panel-pane-2 {
-    .views-row {
-      margin: 0 -12px 12px;
-      padding: 12px;
-      &:hover {
-        background: $ucla-lt-gray;
-      }
-      .views-field-body {
-        padding-right: 6px;
-      }
+}
+.pane-news-events-landing-display-panel-pane-1 {
+  .views-field {
+    padding: 15px 11px;
+    display: table-cell;
+    vertical-align: middle;
+    p {
+      font-size: 0.857em;
+      font-style: italic;
+      margin: 0;
+    }
+  }
+  .views-field-nothing {
+    padding: 15px 0;
+  }
+  .views-field-field-exhibition-end {
+    margin-right: 10px;
+    min-width: 125px;
+  }
+  .views-field-field-event-date {
+    margin-right: 14px;
+  }
+}
+.pane-news-events-landing-display-panel-pane-2 {
+  .views-row {
+    margin: 0 -12px 12px;
+    padding: 12px;
+    .views-field-body {
+      padding-right: 6px;
     }
   }
 }
