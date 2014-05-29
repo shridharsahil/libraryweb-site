@@ -44,7 +44,8 @@
         vertical-align: middle;
       }
       .views-field-field-event-image,
-      .views-field-field-exhibition-image {
+      .views-field-field-exhibition-image,
+      .views-field-field-event-thumbnail {
         padding: 4px 0 4px 11px;
         min-width: 170px;
         img {
@@ -86,6 +87,7 @@
 }
 /* Images only shown on homepage */
 .not-front .view-upcoming-events-display .views-field-field-event-image,
+.not-front .view-upcoming-events-display .views-field-field-event-thumbnail,
 .not-front .view-upcoming-events-display .views-field-field-exhibition-image {
   display: none !important;
 }
