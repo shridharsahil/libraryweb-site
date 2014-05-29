@@ -6,13 +6,15 @@
     margin-bottom: 30px;
     padding-bottom: 27px;
     width: 100%;
-    .views-field-field-news-image,
-    .views-field-nothing {
+    .views-field-field-event-thumbnail {
+      width: 80px;
       display: table-cell;
       vertical-align: middle;
     }
-    .views-field-field-news-image {
-      width: 18%;
+    .views-field-field-event-thumbnail + .views-field {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 4px 1em;
     }
     h3 {
       margin: 0 0 0.4em;

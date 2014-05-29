@@ -1037,6 +1037,7 @@ a.more-link,
 .bean-news-and-events-bean .view-content {
   margin-top: 40px;
 }
+.bean-news-and-events-bean .view-content .views-field-field-event-thumbnail,
 .bean-news-and-events-bean .view-content .views-field-field-news-image {
   float: left;
   margin-right: 18px;
@@ -1544,17 +1545,15 @@ a.more-link,
   padding-bottom: 27px;
   width: 100%;
 }
-.pane-news-search-news-search .views-row .views-field-field-news-image,
-.pane-news-search-news-search .views-row .views-field-nothing,
-.pane-news-search-news-search .pane-daterangepicker-results .views-row .views-field-field-event-date-3,
-.pane-daterangepicker-results .pane-news-search-news-search .views-row .views-field-field-event-date-3,
-.pane-news-search-news-search .pane-daterangepicker-results .views-row .views-field-field-exhibition-end,
-.pane-daterangepicker-results .pane-news-search-news-search .views-row .views-field-field-exhibition-end {
+.pane-news-search-news-search .views-row .views-field-field-event-thumbnail {
+  width: 80px;
   display: table-cell;
   vertical-align: middle;
 }
-.pane-news-search-news-search .views-row .views-field-field-news-image {
-  width: 18%;
+.pane-news-search-news-search .views-row .views-field-field-event-thumbnail + .views-field {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 4px 1em;
 }
 .pane-news-search-news-search .views-row h3 {
   margin: 0 0 0.4em;
