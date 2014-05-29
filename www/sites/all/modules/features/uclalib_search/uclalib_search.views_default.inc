@@ -296,7 +296,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: News Thumbnail */
+  /* Field: Indexed Node: Exhibition Thumbnail */
   $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
   $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
