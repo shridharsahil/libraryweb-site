@@ -1549,16 +1549,6 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
-  // Exported permission: 'edit any ucla_showcase bean'.
-  $permissions['edit any ucla_showcase bean'] = array(
-    'name' => 'edit any ucla_showcase bean',
-    'roles' => array(
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
-    ),
-    'module' => 'bean',
-  );
-
   // Exported permission: 'edit any uclalib_event content'.
   $permissions['edit any uclalib_event content'] = array(
     'name' => 'edit any uclalib_event content',
