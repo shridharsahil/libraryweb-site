@@ -69,8 +69,29 @@
   .views-row {
     margin: 0 -12px 12px;
     padding: 12px;
-    .views-field-body {
-      padding-right: 6px;
+
+  }
+  .views-field {
+    display: block;
+    padding: 2px 4px;
+  }
+  .views-field-field-event-thumbnail {
+    padding: 4px 0 4px 4px;
+    width: auto;
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 80px;
+    a, img {
+      display: block
     }
+  }
+  .views-field-field-event-thumbnail + .views-field {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 0 10px 22px;
+    width: auto;
+  }
+  p {
+    margin: 0;
   }
 }
