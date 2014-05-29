@@ -1037,13 +1037,10 @@ a.more-link,
 .bean-news-and-events-bean .view-content {
   margin-top: 40px;
 }
-.bean-news-and-events-bean .view-content .views-field-field-event-thumbnail,
-.bean-news-and-events-bean .view-content .views-field-field-news-image {
-  float: left;
-  margin-right: 18px;
-}
-.bean-news-and-events-bean .view-content .views-field-body {
+.bean-news-and-events-bean p {
   font-size: 0.857em;
+  font-style: italic;
+  margin: 0;
 }
 .bean-news-and-events-bean .views-row {
   clear: both;
@@ -1057,11 +1054,6 @@ a.more-link,
   padding: 15px 11px;
   display: table-cell;
   vertical-align: middle;
-}
-.pane-news-events-landing-display-panel-pane-1 .views-field p {
-  font-size: 0.857em;
-  font-style: italic;
-  margin: 0;
 }
 .pane-news-events-landing-display-panel-pane-1 .views-field-nothing, .pane-news-events-landing-display-panel-pane-1 .pane-daterangepicker-results .views-row .views-field-field-event-date-3, .pane-daterangepicker-results .views-row .pane-news-events-landing-display-panel-pane-1 .views-field-field-event-date-3,
 .pane-news-events-landing-display-panel-pane-1 .pane-daterangepicker-results .views-row .views-field-field-exhibition-end,
@@ -1099,9 +1091,6 @@ a.more-link,
   vertical-align: middle;
   padding: 10px 0 10px 22px;
   width: auto;
-}
-.pane-news-events-landing-display-panel-pane-2 p {
-  margin: 0;
 }
 
 .node-teaser .pane-node-title h2 {
