@@ -1447,6 +1447,9 @@ a.more-link,
 .pane-location-header {
   position: relative;
 }
+.pane-location-header .pane-node-title {
+  margin: 0;
+}
 .pane-location-header .pane-node-title h1 {
   margin-bottom: 0;
 }
