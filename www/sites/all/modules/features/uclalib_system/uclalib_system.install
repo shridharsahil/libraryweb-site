@@ -33,3 +33,22 @@ function uclalib_system_update_7006(&$sandbox) {
     field_purge_field($field);
   }
 }
+
+/**
+ * Delete removed fields.
+ */
+function uclalib_system_update_7007(&$sandbox) {
+  // We have moved to sharing these fields between content types
+  // so we delete the old per-ct fields.
+  $fields = array(
+    'field_exhibition_location',
+    'field_exhibition_category',
+    'field_exhibition_series',
+    'field_exhibition_audience',
+  );
+  foreach ($fields as $field_name) {
+    $field = field_info_field($field_name);
+    field_delete_field($field_name);
+    field_purge_field($field);
+  }
+}
