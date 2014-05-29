@@ -65,4 +65,11 @@
     }
   };
 
+  // Expand facet blocks with checked elements.
+  Drupal.behaviors.uclalibFacetHeader = {
+    attach: function () {
+      $('.ctools-collapsible-container ul input[type="checkbox"]:checked').parents('.ctools-collapsible-content').siblings('h2').click();
+    }
+  };
+
 })(jQuery);
