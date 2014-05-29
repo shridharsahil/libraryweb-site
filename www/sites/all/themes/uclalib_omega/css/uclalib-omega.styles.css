@@ -2024,6 +2024,10 @@ a.more-link,
   margin-bottom: 1em;
 }
 
+.cal-exhibition-date {
+  min-width: 7em;
+}
+
 .cal-date {
   display: inline-block;
   margin: 0;

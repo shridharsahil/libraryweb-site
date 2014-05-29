@@ -176,7 +176,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_start_2']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_start_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start_2']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_start_2']['alter']['text'] = '<div class="cal-exhibition-date"><div class="cal-month">[field_exhibition_start]</div><div class="cal-day">[field_exhibition_start_1]</div>to<div class="cal-month">[field_exhibition_end_1]</div><div class="cal-day">[field_exhibition_end_2]</div></div>';
+  $handler->display->display_options['fields']['field_exhibition_start_2']['alter']['text'] = '<div class="cal-exhibition-date cal-date-range"><div class="cal-date"><div class="cal-month">[field_exhibition_start]</div><div class="cal-day">[field_exhibition_start_1]</div></div> <span class="date-range-separator">to</span>  <div class="cal-date"><div class="cal-month">[field_exhibition_end_1]</div><div class="cal-day">[field_exhibition_end_2]</div></div></div>';
   $handler->display->display_options['fields']['field_exhibition_start_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_start_2']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start_2']['settings'] = array(
