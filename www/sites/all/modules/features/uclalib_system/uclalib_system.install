@@ -47,8 +47,16 @@ function uclalib_system_update_7007(&$sandbox) {
     'field_exhibition_audience',
   );
   foreach ($fields as $field_name) {
+    field_delete_instance($field_name);
     $field = field_info_field($field_name);
     field_delete_field($field_name);
     field_purge_field($field);
   }
+}
+
+/**
+ * Disable comment module.
+ */
+function uclalib_system_update_7008(&$sandbox) {
+  module_disable(array('comment'));
 }
