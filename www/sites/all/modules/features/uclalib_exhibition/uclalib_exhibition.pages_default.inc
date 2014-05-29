@@ -572,7 +572,10 @@ function uclalib_exhibition_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_collapsed' => 1,
+      ),
+      'style' => 'collapsible',
     );
     $pane->css = array(
       'css_id' => '',
@@ -597,7 +600,10 @@ function uclalib_exhibition_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_collapsed' => 1,
+      ),
+      'style' => 'collapsible',
     );
     $pane->css = array(
       'css_id' => '',
@@ -622,7 +628,10 @@ function uclalib_exhibition_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_collapsed' => 1,
+      ),
+      'style' => 'collapsible',
     );
     $pane->css = array(
       'css_id' => '',
