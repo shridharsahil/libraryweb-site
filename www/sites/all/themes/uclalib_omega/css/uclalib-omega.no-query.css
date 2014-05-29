@@ -900,6 +900,13 @@ a[href="#main-content"] {
 }
 
 /**
+ * Use the site-wide content color in jquery ui widgets.
+ */
+.ui-widget-content {
+  color: #666666;
+}
+
+/**
  * Override jQuery UI tabs default styles.
  */
 .ui-tabs {
@@ -2095,21 +2102,23 @@ a.more-link,
 .pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .text-news .views-field,
 .pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .text-news .views-field {
   display: block;
-  padding: 2px 0;
+  padding: 2px 4px;
 }
-.ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .text-news .views-field-field-news-image,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .text-news .views-field-field-news-image,
-.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .text-news .views-field-field-news-image,
-.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .text-news .views-field-field-news-image {
+.ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .text-news .views-field-field-event-thumbnail,
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .text-news .views-field-field-event-thumbnail,
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .text-news .views-field-field-event-thumbnail,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .text-news .views-field-field-event-thumbnail {
   display: table-cell;
-  padding: 4px 0 4px 11px;
+  padding: 4px 0 4px 4px;
+  width: auto;
 }
-.ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .text-news .views-field-field-news-image + .views-field,
-.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .text-news .views-field-field-news-image + .views-field,
-.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .text-news .views-field-field-news-image + .views-field,
-.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .text-news .views-field-field-news-image + .views-field {
+.ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .text-news .views-field-field-event-thumbnail + .views-field,
+.ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .text-news .views-field-field-event-thumbnail + .views-field,
+.pane-bean-upcoming-events h2 + .pane-content .view-recent-news-highlight .view-content .text-news .views-field-field-event-thumbnail + .views-field,
+.pane-bean-upcoming-events h2 + .pane-content .view-upcoming-events-display .view-content .text-news .views-field-field-event-thumbnail + .views-field {
   display: table-cell;
   padding: 10px 0 10px 22px;
+  width: auto;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight a,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display a,

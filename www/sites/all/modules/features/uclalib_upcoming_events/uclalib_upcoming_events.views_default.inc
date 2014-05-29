@@ -55,6 +55,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
   $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
   $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
     'image_style' => 'thumbnail_small',

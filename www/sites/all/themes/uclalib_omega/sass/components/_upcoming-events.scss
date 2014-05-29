@@ -61,15 +61,17 @@
         padding: 8px;
         .views-field {
           display: block;
-          padding: 2px 0;
+          padding: 2px 4px;
         }
-        .views-field-field-news-image {
+        .views-field-field-event-thumbnail {
           display: table-cell;
-          padding: 4px 0 4px 11px;
+          padding: 4px 0 4px 4px;
+          width: auto;
         }
-        .views-field-field-news-image + .views-field {
+        .views-field-field-event-thumbnail + .views-field {
           display: table-cell;
           padding: 10px 0 10px 22px;
+          width: auto;
         }
       }
     }
@@ -80,7 +82,7 @@
       padding-right: 14px;
       text-align: right;
     }
-  }    
+  }
 }
 /* Images only shown on homepage */
 .not-front .view-upcoming-events-display .views-field-field-event-image,
