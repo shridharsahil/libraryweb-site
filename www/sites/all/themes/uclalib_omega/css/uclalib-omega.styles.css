@@ -2183,6 +2183,10 @@ a.more-link,
   display: none !important;
 }
 
+.view-exhibitions-main-view .view-filters {
+  display: none;
+}
+
 .view-find-resources .views-row {
   margin: 20px 0;
   padding-bottom: 20px;
