@@ -228,21 +228,21 @@ a:hover {
 .l-header .menu li.last {
   padding-right: 0;
 }
-.l-header .menu .leaf {
+.l-header .menu li {
   margin: 0;
   list-style-image: none;
   list-style-type: none;
 }
-.l-header .menu .leaf a {
+.l-header .menu li a {
   padding-right: 4px;
 }
-.l-header .menu .leaf:after {
+.l-header .menu li:after {
   content: " | ";
 }
-.l-header .menu .leaf.last:after {
+.l-header .menu li.last:after {
   content: "";
 }
-.l-header .menu .leaf.last:after a {
+.l-header .menu li.last:after a {
   padding-right: 0;
 }
 .l-header .menu .expanded .menu {
