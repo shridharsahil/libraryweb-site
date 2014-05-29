@@ -671,24 +671,33 @@ a[href="#main-content"] {
   font-weight: bold;
   margin: 0;
 }
+.node-type-uclalib-event .pane-node-field-event-thumbnail,
 .node-type-uclalib-event .pane-node-field-event-image,
 .node-type-uclalib-event .pane-body-summary-pane,
+.node-type-exhibition .pane-node-field-event-thumbnail,
 .node-type-exhibition .pane-node-field-event-image,
 .node-type-exhibition .pane-body-summary-pane,
+.node-type-news .pane-node-field-event-thumbnail,
 .node-type-news .pane-node-field-event-image,
 .node-type-news .pane-body-summary-pane {
   margin-top: 25px;
   margin-bottom: 35px;
 }
+.node-type-uclalib-event .pane-node-field-event-thumbnail,
 .node-type-uclalib-event .pane-node-field-event-image,
+.node-type-exhibition .pane-node-field-event-thumbnail,
 .node-type-exhibition .pane-node-field-event-image,
+.node-type-news .pane-node-field-event-thumbnail,
 .node-type-news .pane-node-field-event-image {
   float: left;
   width: 25%;
   margin-right: 5%;
 }
+.node-type-uclalib-event .pane-node-field-event-thumbnail + .pane-body-summary-pane,
 .node-type-uclalib-event .pane-node-field-event-image + .pane-body-summary-pane,
+.node-type-exhibition .pane-node-field-event-thumbnail + .pane-body-summary-pane,
 .node-type-exhibition .pane-node-field-event-image + .pane-body-summary-pane,
+.node-type-news .pane-node-field-event-thumbnail + .pane-body-summary-pane,
 .node-type-news .pane-node-field-event-image + .pane-body-summary-pane {
   float: left;
   width: 70%;
