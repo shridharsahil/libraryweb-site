@@ -2128,6 +2128,7 @@ a.more-link,
   display: table-cell;
   padding: 4px 0 4px 4px;
   width: auto;
+  max-width: auto;
 }
 .ui-tabs .ui-tabs-panel .view-recent-news-highlight .view-content .text-news .views-field-field-event-thumbnail + .views-field,
 .ui-tabs .ui-tabs-panel .view-upcoming-events-display .view-content .text-news .views-field-field-event-thumbnail + .views-field,
