@@ -840,6 +840,15 @@ a[href="#main-content"] {
   text-align: center;
 }
 
+.fancybox-skin {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  padding: 0 !important;
+}
+
 @media all and (min-width: 1300px) {
   .front .l-main-wrapper {
     position: relative;

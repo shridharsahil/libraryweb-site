@@ -1,0 +1,4 @@
+.fancybox-skin {
+  @include border-radius(0); // override default rounded corners.
+  padding: 0 !important; // override inline styles.
+}
