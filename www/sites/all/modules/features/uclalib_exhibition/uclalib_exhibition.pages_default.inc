@@ -560,10 +560,10 @@ function uclalib_exhibition_default_page_manager_pages() {
     $display->content['new-09990d34-d987-454c-ae33-a6185b7448f3'] = $pane;
     $display->panels['main'][1] = 'new-09990d34-d987-454c-ae33-a6185b7448f3';
     $pane = new stdClass();
-    $pane->pid = 'new-9f7b5a6c-2243-4569-aa1e-f1b41887b841';
+    $pane->pid = 'new-17e2efab-edb7-4881-83cd-d658128f4b58';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-kMqWyKrKuWzTo16rRLs1Z4nGrEbOYzCa';
+    $pane->subtype = 'facetapi-zItRqA5RFuDfSs4G2t7RRpoLl2i48MIl';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -572,10 +572,7 @@ function uclalib_exhibition_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => array(
-        'pane_collapsed' => 1,
-      ),
-      'style' => 'collapsible',
+      'settings' => NULL,
     );
     $pane->css = array(
       'css_id' => '',
@@ -584,42 +581,14 @@ function uclalib_exhibition_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '9f7b5a6c-2243-4569-aa1e-f1b41887b841';
-    $display->content['new-9f7b5a6c-2243-4569-aa1e-f1b41887b841'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-9f7b5a6c-2243-4569-aa1e-f1b41887b841';
+    $pane->uuid = '17e2efab-edb7-4881-83cd-d658128f4b58';
+    $display->content['new-17e2efab-edb7-4881-83cd-d658128f4b58'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-17e2efab-edb7-4881-83cd-d658128f4b58';
     $pane = new stdClass();
-    $pane->pid = 'new-4df032b6-7ea6-4c7a-85db-91d2077f82bf';
+    $pane->pid = 'new-d4b1dcea-2dce-4988-a8dc-ad819d052925';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-1q9bDWYoegoCEqbaLauoGm0YBkHSpKKf';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Series',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => array(
-        'pane_collapsed' => 1,
-      ),
-      'style' => 'collapsible',
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-options',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '4df032b6-7ea6-4c7a-85db-91d2077f82bf';
-    $display->content['new-4df032b6-7ea6-4c7a-85db-91d2077f82bf'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-4df032b6-7ea6-4c7a-85db-91d2077f82bf';
-    $pane = new stdClass();
-    $pane->pid = 'new-2532ccef-31b2-49dd-a621-8ca35b10dd3c';
-    $pane->panel = 'sidebar_left';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-ly1J8SSCdGwj0cMhWyVBGEdkbbXCocxH';
+    $pane->subtype = 'facetapi-dS9NrtY8lix1Z1JilcWmN5XY52FtPcSK';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -628,10 +597,32 @@ function uclalib_exhibition_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => array(
-        'pane_collapsed' => 1,
-      ),
-      'style' => 'collapsible',
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-options',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'd4b1dcea-2dce-4988-a8dc-ad819d052925';
+    $display->content['new-d4b1dcea-2dce-4988-a8dc-ad819d052925'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-d4b1dcea-2dce-4988-a8dc-ad819d052925';
+    $pane = new stdClass();
+    $pane->pid = 'new-b9f6a481-f283-4cd0-9c58-5690db66fc22';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-Y1SOi2G1SWX1CoJJcGmI4kExO4iaw9cV';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Subject Areas',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
     );
     $pane->css = array(
       'css_id' => '',
@@ -640,9 +631,9 @@ function uclalib_exhibition_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '2532ccef-31b2-49dd-a621-8ca35b10dd3c';
-    $display->content['new-2532ccef-31b2-49dd-a621-8ca35b10dd3c'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-2532ccef-31b2-49dd-a621-8ca35b10dd3c';
+    $pane->uuid = 'b9f6a481-f283-4cd0-9c58-5690db66fc22';
+    $display->content['new-b9f6a481-f283-4cd0-9c58-5690db66fc22'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-b9f6a481-f283-4cd0-9c58-5690db66fc22';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
