@@ -20,9 +20,10 @@
     margin: 0;
     padding: 0 8px 0 28px;
     .leaf {
-      line-height: 2.643em;
-      list-style: none;
       color: $ucla-blue;
+      line-height: 1.429em;
+      list-style: none;
+      margin: 0.643em 0 1.143em;
     }
   }
 }
@@ -36,7 +37,7 @@
 
 .sidebar-tier-2 {
   background: $ucla-lt-gray;
-  line-height: 2.143em;
+  line-height: 1.429em;
   margin: 0 -25px;
   padding: 10px 28px 11px;
   font-weight: bold;
@@ -47,13 +48,14 @@
   .pane-title {
     font-size: 14px;
     font-weight: bold;
-    margin: 0;
+    margin: 4px 0 0;
   }
   ul {
     margin: 0;
     padding: 0;
     li {
       list-style: none;
+      margin: 20px 0 14px !important;
       a {
         color: $ucla-blue;
       }
