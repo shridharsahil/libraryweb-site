@@ -40,7 +40,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="more-link"> <a href="news?f[0]=field_news_categories%3A!1&f[1]=field_news_location%3A!2">More</a></div>';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="more-link"> <a href="/news?f[0]=field_news_categories%3A!1&f[1]=field_news_location%3A!2">More</a></div>';
   $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -55,6 +55,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
   $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
   $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
     'image_style' => 'thumbnail_small',
@@ -356,18 +357,18 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
     'image_style' => 'widescreen_small',
     'image_link' => '',
   );
-  /* Field: Content: Exhibition Image */
-  $handler->display->display_options['fields']['field_exhibition_image']['id'] = 'field_exhibition_image';
-  $handler->display->display_options['fields']['field_exhibition_image']['table'] = 'field_data_field_exhibition_image';
-  $handler->display->display_options['fields']['field_exhibition_image']['field'] = 'field_exhibition_image';
-  $handler->display->display_options['fields']['field_exhibition_image']['relationship'] = 'field_upcoming_events_events_target_id';
-  $handler->display->display_options['fields']['field_exhibition_image']['label'] = '';
-  $handler->display->display_options['fields']['field_exhibition_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exhibition_image']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_exhibition_image']['settings'] = array(
+  /* Field: Content: News Thumbnail */
+  $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'field_data_field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['relationship'] = 'field_upcoming_events_events_target_id';
+  $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
     'image_style' => 'widescreen_small',
-    'image_link' => '',
+    'image_link' => 'content',
   );
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
@@ -460,20 +461,6 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
   $handler->display->display_options['fields']['field_event_location']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Exhibition Location */
-  $handler->display->display_options['fields']['field_exhibition_location']['id'] = 'field_exhibition_location';
-  $handler->display->display_options['fields']['field_exhibition_location']['table'] = 'field_data_field_exhibition_location';
-  $handler->display->display_options['fields']['field_exhibition_location']['field'] = 'field_exhibition_location';
-  $handler->display->display_options['fields']['field_exhibition_location']['relationship'] = 'field_upcoming_events_events_target_id';
-  $handler->display->display_options['fields']['field_exhibition_location']['label'] = '';
-  $handler->display->display_options['fields']['field_exhibition_location']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_location']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_location']['alter']['text'] = '[field_exhibition_location] - ';
-  $handler->display->display_options['fields']['field_exhibition_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exhibition_location']['settings'] = array(
-    'link' => 0,
-  );
-  $handler->display->display_options['fields']['field_exhibition_location']['delta_offset'] = '0';
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date_2']['id'] = 'field_event_date_2';
   $handler->display->display_options['fields']['field_event_date_2']['table'] = 'field_data_field_event_date';
@@ -496,7 +483,7 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[field_exhibition_end_1]</div>
 <div>[title]</div>
-<div><i>[field_event_location][field_exhibition_location][field_event_date_2]</i></div>';
+<div><i>[field_event_location][field_event_date_2]</i></div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Contextual filter: Block: Internal, numeric block ID */

@@ -112,6 +112,39 @@ function uclalib_arch_icon_bundles() {
       'calendar' => 'calendar',
       'address' => 'address',
       'web' => 'web',
+      'misc' => 'misc',
+      'printer-ucla-only' => 'printer-ucla-only',
+      'cafe' => 'cafe',
+      'collaboration-pod' => 'collaboration-pod',
+      'collaborative-study' => 'collaborative-study',
+      'conference-room' => 'conference-room',
+      'inquiry-assistance' => 'inquiry-assistance',
+      'lounge' => 'lounge',
+      'media-room' => 'media-room',
+      'presentation-space' => 'presentation-space',
+      'classroom' => 'classroom',
+      'technology-help' => 'technology-help',
+      'scanner' => 'scanner',
+      'reading-room' => 'reading-room',
+      'circulation-desk' => 'circulation-desk',
+      'self-checkout' => 'self-checkout',
+      'pdf-sender' => 'pdf-sender',
+      'bruin-card-machine' => 'bruin-card-machine',
+      'hours' => 'hours',
+      'ada-compliant' => 'ada-compliant',
+      'laptop' => 'laptop',
+      'monitor' => 'monitor',
+      'computer-ucla-only' => 'computer-ucla-only',
+      'computer' => 'computer',
+      'projector' => 'projector',
+      'study-room' => 'study-room',
+      'laptop-ucla-only' => 'laptop-ucla-only',
+      'clicc-computer' => 'clicc-computer',
+      'quiet-area' => 'quiet-area',
+      'laptop-ucla-only2' => 'laptop-ucla-only2',
+      'quiet-area-2' => 'quiet-area-2',
+      'copy-color' => 'copy-color',
+      'hours2' => 'hours2',
     ),
     'name' => 'uclalib',
     'provider' => 'icomoon',
@@ -151,4 +184,70 @@ function uclalib_arch_icon_bundles() {
   );
 
   return $bundles;
+}
+
+/**
+ * Implements hook_form_ID_alter().
+ */
+function uclalib_arch_form_bean_form_alter(&$form, &$form_state, $form_id) {
+
+  // Simplify the log message field.
+  if (isset($form['revision'])) {
+    $form['revision']['log']['#type'] = 'textfield';
+    $form['revision']['log']['#size'] = 100;
+    $form['revision']['log']['#title'] = t('What did you change?');
+  }
+
+  // Space is cheap; default to new revision and require a log message.
+  $bean_types_that_require_revisions = array(
+    'featured_content',
+    'link_list',
+    'living_library_gallery',
+    'news_and_events_bean',
+    'quick_find',
+    'showcase',
+    'text_block',
+    'upcoming_events',
+  );
+  if (in_array($form['#bundle'], $bean_types_that_require_revisions)) {
+    if (isset($form['revision'])) {
+      // Default to new revision.
+      $form['revision']['is_new_revision']['#default_value'] = true;
+      $form['revision']['is_new_revision']['#type'] = 'hidden';
+
+      // This dependency is not needed when the is_new_revision field is hidden.
+      unset($form['revision']['log']['#dependency']);
+
+      // Always make the current edit the live version.
+      $form['revision']['default_revision']['#default_value'] = true;
+      $form['revision']['default_revision']['#type'] = 'hidden';
+
+      // Require a log message.
+      $form['revision']['log']['#required'] = TRUE;
+    }
+  }
+
+  // Hide the view mode selector if there is only one to choose from.
+  // This really should be built into the Bean module itself. ;)
+  if(count($form['view_mode']['#options']) == 1) {
+    $form['view_mode']['#type'] = 'hidden';
+  }
+
+  // In fact, most beans don't use "View modes" at all so remove it
+  // entirely from the edit form for the following bean types.
+  $bean_types_that_dont_need_view_modes = array(
+    'featured_content',
+    'link_list',
+    'living_library_gallery',
+    'news_and_events_bean',
+    'quick_find',
+    'showcase',
+    'text_block',
+    'upcoming_events',
+  );
+  if (in_array($form['#bundle'], $bean_types_that_dont_need_view_modes)) {
+    if (isset($form['view_mode'])) {
+      $form['view_mode']['#type'] = 'hidden';
+    }
+  }
 }

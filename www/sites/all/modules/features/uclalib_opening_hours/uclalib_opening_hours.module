@@ -173,7 +173,7 @@ function uclalib_opening_hours_generate_table_rows($nodes, $day) {
       );
 
       // If current day add a class.
-      if ($this_day->format('d') == date_create()->format('d')) {
+      if ($this_day->format('dmY') == date_create()->format('dmY')) {
         $row_cell['class'][] = 'current-day';
       }
 

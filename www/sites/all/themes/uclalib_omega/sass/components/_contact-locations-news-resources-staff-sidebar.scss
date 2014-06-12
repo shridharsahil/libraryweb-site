@@ -3,6 +3,7 @@
 .page-locations,
 .page-news,
 .page-staff,
+.page-news-events,
 .page-search-research-find-resources {
   .l-region--sidebar-left {
     &:before {
@@ -18,7 +19,7 @@
     margin-right: 17px;
   }
   .form-text {
-    background: #fff ; //url(../images/icon-search.png) 96% 55% no-repeat;
+    background: #fff ;
     border: none;
     padding: 6px 3px;
     width: 100%;

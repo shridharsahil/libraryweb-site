@@ -129,6 +129,7 @@ function uclalib_navigation_strongarm() {
   $strongarm->value = array(
     0 => 1,
     1 => 2,
+    2 => 3,
   );
   $export['menu_block_ids'] = $strongarm;
 

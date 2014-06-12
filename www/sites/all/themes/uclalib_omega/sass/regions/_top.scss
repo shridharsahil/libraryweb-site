@@ -1,8 +1,11 @@
 .l-region--top {
   background: $content-background-gray;
   margin: 0;
-  padding: 1px 0;
+  padding: 0;
   position: relative;
+  float: left;
+  width: 100%;
+  @include clearfix;
   .panel-pane {
     margin: 24px 0;
   }

@@ -306,7 +306,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -334,6 +367,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@location_search:block:field_equipment'] = $facet;
 
@@ -531,7 +567,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -559,6 +628,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@location_search:block:field_study_areas'] = $facet;
 
@@ -700,6 +772,10 @@ function uclalib_search_facetapi_default_facet_settings() {
         'status' => 0,
         'weight' => '-45',
       ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
     ),
     'active_sorts' => array(
       'display' => 'display',
@@ -801,12 +877,16 @@ function uclalib_search_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
+      'facets' => array(),
+      'force_deactivation' => TRUE,
+      'regex' => FALSE,
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
     'flatten' => 0,
     'query_type' => 'term',
-    'default_true' => TRUE,
+    'default_true' => '1',
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -1546,7 +1626,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -1574,6 +1687,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_event_audience'] = $facet;
 
@@ -1588,7 +1704,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -1616,6 +1765,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_event_category'] = $facet;
 
@@ -1629,27 +1781,38 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->enabled = FALSE;
   $facet->settings = array(
     'weight' => 0,
-    'widget' => 'facetapi_links',
+    'widget' => 'facetapi_checkbox_links',
     'filters' => array(),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
       'display' => 'display',
+      'natural' => 0,
+      'indexed' => 0,
     ),
     'sort_weight' => array(
-      'active' => -50,
-      'count' => -49,
-      'display' => -48,
+      'active' => '-50',
+      'count' => '-49',
+      'display' => '-48',
+      'natural' => '0',
+      'indexed' => '0',
     ),
     'sort_order' => array(
-      'active' => 3,
-      'count' => 3,
-      'display' => 4,
+      'active' => '3',
+      'count' => '3',
+      'display' => '4',
+      'natural' => '4',
+      'indexed' => '4',
     ),
     'empty_behavior' => 'none',
-    'soft_limit' => 20,
+    'soft_limit' => '30',
     'nofollow' => 1,
     'show_expanded' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'full_html',
+    ),
+    'submit_realm' => 'Save and go back to realm settings',
   );
   $export['search_api@site_general_search:block:field_event_date'] = $facet;
 
@@ -1663,24 +1826,56 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->enabled = TRUE;
   $facet->settings = array(
     'weight' => 0,
-    'widget' => 'facetapi_links',
-    'filters' => array(),
+    'widget' => 'facetapi_checkbox_links',
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-44',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
       'display' => 'display',
+      'natural' => 0,
       'indexed' => 0,
     ),
     'sort_weight' => array(
       'active' => '-50',
       'count' => '-49',
       'display' => '-48',
+      'natural' => '0',
       'indexed' => '0',
     ),
     'sort_order' => array(
       'active' => '3',
       'count' => '3',
       'display' => '4',
+      'natural' => '4',
       'indexed' => '4',
     ),
     'empty_behavior' => 'none',
@@ -1692,6 +1887,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_event_location'] = $facet;
 
@@ -1740,7 +1938,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -1768,6 +1999,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_event_series'] = $facet;
 
@@ -2327,7 +2561,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -2355,6 +2622,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_news_audience'] = $facet;
 
@@ -2369,7 +2639,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -2397,6 +2700,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_news_categories'] = $facet;
 
@@ -2487,7 +2793,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -2515,6 +2854,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_news_series'] = $facet;
 
@@ -2610,7 +2952,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -2641,6 +3016,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_staff_departments'] = $facet;
 
@@ -2900,7 +3278,36 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-45',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-44',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -2928,6 +3335,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_staff_location'] = $facet;
 
@@ -3010,7 +3420,40 @@ function uclalib_search_facetapi_default_facet_settings() {
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'current_depth' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-48',
+      ),
+      'rewrite_items' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+      'hide_count' => array(
+        'status' => 1,
+        'weight' => '-44',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-43',
+      ),
+    ),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
@@ -3038,6 +3481,9 @@ function uclalib_search_facetapi_default_facet_settings() {
       'format' => 'full_html',
     ),
     'submit_realm' => 'Save and go back to realm settings',
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
   );
   $export['search_api@site_general_search:block:field_staff_subject_areas'] = $facet;
 

@@ -1,0 +1,9 @@
+.pane-page-content {
+  > .contextual-links-region {
+    > .contextual-links-wrapper {
+      // Ensure the "Edit panel" contextual link doesn't hide other contextual
+      // links from panes inside the panel.
+      margin-right: 25px;
+    }
+  }
+}

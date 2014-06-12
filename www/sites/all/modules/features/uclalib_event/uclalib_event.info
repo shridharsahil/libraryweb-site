@@ -55,6 +55,7 @@ features[variable][] = menu_parent_uclalib_event
 features[variable][] = node_options_uclalib_event
 features[variable][] = node_preview_uclalib_event
 features[variable][] = node_submitted_uclalib_event
+features[views_view][] = body_summary
 features[views_view][] = events_agenda
 features[views_view][] = exhibitions_highlight
 features[views_view][] = other_events

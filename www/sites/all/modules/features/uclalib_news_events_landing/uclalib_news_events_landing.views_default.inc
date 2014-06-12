@@ -233,16 +233,17 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['bid']['separator'] = '';
-  /* Field: Content: News Image */
-  $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
-  $handler->display->display_options['fields']['field_news_image']['relationship'] = 'field_news_target_id';
-  $handler->display->display_options['fields']['field_news_image']['label'] = '';
-  $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+  /* Field: Content: News Thumbnail */
+  $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'field_data_field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['relationship'] = 'field_news_target_id';
+  $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
+    'image_style' => 'thumbnail_small',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -251,6 +252,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_news_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
@@ -258,6 +260,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['relationship'] = 'field_news_target_id';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['text'] = '[body-summary]';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '128';
@@ -267,6 +270,14 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]
+[body]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;

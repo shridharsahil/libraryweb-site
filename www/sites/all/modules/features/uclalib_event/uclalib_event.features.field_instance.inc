@@ -101,7 +101,7 @@ function uclalib_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_audience',
-    'label' => 'Event Audience',
+    'label' => 'Audience',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -150,7 +150,7 @@ function uclalib_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_category',
-    'label' => 'Event Category',
+    'label' => 'Category',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -484,7 +484,7 @@ function uclalib_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_series',
-    'label' => 'Event Series',
+    'label' => 'Series',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -577,15 +577,15 @@ function uclalib_event_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Audience');
   t('Body');
-  t('Event Audience');
-  t('Event Category');
+  t('Category');
   t('Event Date');
   t('Event Image');
   t('Event Location');
   t('Event Related Content');
-  t('Event Series');
   t('Event Subtitle');
+  t('Series');
 
   return $field_instances;
 }

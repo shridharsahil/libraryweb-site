@@ -17,6 +17,13 @@
 }
 
 /**
+ * Use the site-wide content color in jquery ui widgets.
+ */
+.ui-widget-content {
+  color: $text-color;
+}
+
+/**
  * Override jQuery UI tabs default styles.
  */
 .ui-tabs {

@@ -1,73 +1,95 @@
 .node-type-uclalib-event,
 .node-type-exhibition,
 .node-type-news {
-  .pane-node-title ~ .panel-pane {
+  .l-region--bottom-left {
+    padding-right: 35px;
     border-right: 1px solid $border-color;
-    padding-right: 2em;
   }
-  .pane-horizontal-rule {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 35px;
-    .pane-content {
-      border-top: 1px solid $border-color;
+  .l-region--bottom-right {
+    padding-left: 35px;
+  }
+  .pane-node-title h1 {
+    color: $ucla-dark-gray;
+    font-size: 2.286em;
+    font-weight: bold;
+    margin: 0;
+  }
+  .pane-node-field-event-thumbnail,
+  .pane-node-field-event-image,
+  .pane-body-summary-pane {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+  .pane-node-field-event-thumbnail,
+  .pane-node-field-event-image {
+    float: left;
+    width: 25%;
+    margin-right: 5%;
+    + .pane-body-summary-pane { // Float summary next to image
+      float: left;
+      width: 70%;
     }
   }
-  .pane-node-field-event-image {
-    padding-bottom: 38px;
+  .pane-body-summary-pane {
+    font-size: 1.286em;
+    font-weight: 100;
   }
   .pane-node-body {
-    padding-bottom: 23px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     p {
       margin: 0 0 1em !important;
     }
   }
-  .l-region--sidebar-right,
-  .l-region--top-right-sidebar {
-    padding-top: 65px;
-    .pane-recent-news-panel-pane-1 {
-      padding-top: 28px;
-    }
+  .pane-body-summary-pane + .pane-node-body { // Separate summary from body.
+    border-top: 1px solid $border-color;
+    clear: both;
+    padding-top: 35px
   }
-}
-
-.pane-events-breadcrumb + .pane-node-title h1,
-.pane-exhibition-breadcrumb + .pane-node-title h1,
-.news-entry-title .pane-content {
-  color: $ucla-dark-gray;
-  font-size: 2.286em;
-  font-weight: bold;
-  margin: 18px 0 0;
 }
 .pane-node-field-event-subtitle,
 .pane-node-field-exhibition-subtitle {
   font-size: 1.286em;
   padding-bottom: 16px;
 }
-.news-entry-author {
-  font-size: 1.143em;
-  p {
-    margin-bottom: 0;
-    padding-bottom: 1em;
-  }
-}
 .pane-node-field-event-date,
 .pane-exhibition-date-range,
-.news-entry-date {
-  font-size: 1.143em;
-  font-style: italic;
-  p {
-    margin: 0;
-    padding-bottom: 1em;
-  }
-}
+.pane-news-byline,
 .pane-node-field-event-location,
 .pane-node-field-exhibition-location {
   font-size: 1.143em;
-  padding-bottom: 25px;
 }
+
+.pane-node-field-event-location,
+.pane-node-field-exhibition-location {
+  .field__items {
+    > .field__item {
+      display: inline;
+      &:after {
+        content: ", ";
+      }
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}
+
+.pane-node-field-event-date,
+.pane-exhibition-date-range {
+  font-style: italic;
+}
+.pane-exhibition-date-range,
+.pane-news-byline {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+.pane-node-field-news-related-content,
 .pane-node-field-event-related-content,
 .pane-node-field-exhibition-related-content {
+  margin-top: 0;
   margin-bottom: 40px;
   h2 {
     border-top: 1px solid $border-color;
@@ -104,20 +126,25 @@
     font-weight: bold;
     margin-bottom: 26px;
   }
+  .view-content {
+    display: table;
+    width: 100%;
+  }
   .views-row {
     display: table-row;
+    clear: both;
+    overflow: hidden;
+    width: 100%;
     & > div {
       display: table-cell;
-      padding: 14px 0;
+      padding: 10px 0;
       vertical-align: middle;
     }
-    .views-field-field-event-date {
-      padding-right: 15px;
+    &:hover {
+      background: $ucla-lt-gray;
     }
   }
-  .views-row-last {
-    & > div {
-      padding: 14px 0 0 !important;
-    }
+  .views-field-field-event-date {
+    text-align: center;
   }
 }

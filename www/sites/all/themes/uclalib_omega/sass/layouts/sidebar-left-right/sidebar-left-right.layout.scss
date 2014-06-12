@@ -21,6 +21,7 @@ $gutter-styles: 'split'; // gutter is split between left and right of each col.
   .l-region--sidebar-left {
     @include grid-span(1, 1);
     padding-left: 0; // kill left rail gutter.
+    clear: left;
 
     // Full-height faux-column for adding a background color in the theme.
     $left: column-span(0, 1); // Span 0 columns, starting from 1st column.

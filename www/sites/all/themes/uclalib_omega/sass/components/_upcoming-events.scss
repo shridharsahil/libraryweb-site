@@ -1,9 +1,12 @@
+.cal-exhibition-date {
+  min-width: 7em;
+}
 .cal-date {
   display: inline-block;
   margin: 0;
   padding: 2px;
   text-align: center;
-  min-width: 2.3em;
+  min-width: 2.7em;
   vertical-align: middle;
 }
 .cal-month {
@@ -44,7 +47,8 @@
         vertical-align: middle;
       }
       .views-field-field-event-image,
-      .views-field-field-exhibition-image {
+      .views-field-field-exhibition-image,
+      .views-field-field-event-thumbnail {
         padding: 4px 0 4px 11px;
         min-width: 170px;
         img {
@@ -61,15 +65,18 @@
         padding: 8px;
         .views-field {
           display: block;
-          padding: 2px 0;
+          padding: 2px 4px;
         }
-        .views-field-field-news-image {
+        .views-field-field-event-thumbnail {
           display: table-cell;
-          padding: 4px 0 4px 11px;
+          padding: 4px 0 4px 4px;
+          width: auto;
+          max-width: auto;
         }
-        .views-field-field-news-image + .views-field {
+        .views-field-field-event-thumbnail + .views-field {
           display: table-cell;
           padding: 10px 0 10px 22px;
+          width: auto;
         }
       }
     }
@@ -80,10 +87,11 @@
       padding-right: 14px;
       text-align: right;
     }
-  }    
+  }
 }
 /* Images only shown on homepage */
 .not-front .view-upcoming-events-display .views-field-field-event-image,
+.not-front .view-upcoming-events-display .views-field-field-event-thumbnail,
 .not-front .view-upcoming-events-display .views-field-field-exhibition-image {
   display: none !important;
 }

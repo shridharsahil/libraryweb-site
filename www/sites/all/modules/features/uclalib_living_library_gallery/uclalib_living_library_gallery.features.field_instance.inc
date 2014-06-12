@@ -108,7 +108,7 @@ function uclalib_living_library_gallery_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 11,
+      'weight' => 2,
     ),
   );
 

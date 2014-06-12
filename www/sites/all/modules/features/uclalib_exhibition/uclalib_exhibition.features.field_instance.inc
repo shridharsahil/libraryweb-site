@@ -67,8 +67,8 @@ function uclalib_exhibition_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-exhibition-field_exhibition_audience'
-  $field_instances['node-exhibition-field_exhibition_audience'] = array(
+  // Exported field_instance: 'node-exhibition-field_event_audience'
+  $field_instances['node-exhibition-field_event_audience'] = array(
     'bundle' => 'exhibition',
     'default_value' => NULL,
     'deleted' => 0,
@@ -79,7 +79,7 @@ function uclalib_exhibition_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 16,
       ),
       'hours_page' => array(
         'label' => 'above',
@@ -95,15 +95,14 @@ function uclalib_exhibition_field_default_field_instances() {
       ),
       'token' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_exhibition_audience',
-    'label' => 'Exhibition Audience',
+    'field_name' => 'field_event_audience',
+    'label' => 'Audience',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -112,13 +111,13 @@ function uclalib_exhibition_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 13,
+      'type' => 'options_buttons',
+      'weight' => 15,
     ),
   );
 
-  // Exported field_instance: 'node-exhibition-field_exhibition_category'
-  $field_instances['node-exhibition-field_exhibition_category'] = array(
+  // Exported field_instance: 'node-exhibition-field_event_category'
+  $field_instances['node-exhibition-field_event_category'] = array(
     'bundle' => 'exhibition',
     'default_value' => NULL,
     'deleted' => 0,
@@ -129,7 +128,7 @@ function uclalib_exhibition_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 14,
       ),
       'hours_page' => array(
         'label' => 'above',
@@ -145,15 +144,14 @@ function uclalib_exhibition_field_default_field_instances() {
       ),
       'token' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_exhibition_category',
-    'label' => 'Exhibition Category',
+    'field_name' => 'field_event_category',
+    'label' => 'Category',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -164,6 +162,117 @@ function uclalib_exhibition_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_event_location'
+  $field_instances['node-exhibition-field_event_location'] = array(
+    'bundle' => 'exhibition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 13,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_location',
+    'label' => 'Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_event_series'
+  $field_instances['node-exhibition-field_event_series'] = array(
+    'bundle' => 'exhibition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 15,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_series',
+    'label' => 'Series',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 12,
     ),
   );
 
@@ -357,69 +466,7 @@ function uclalib_exhibition_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-exhibition-field_exhibition_location'
-  $field_instances['node-exhibition-field_exhibition_location'] = array(
-    'bundle' => 'exhibition',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
-      ),
-      'hours_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_exhibition_location',
-    'label' => 'Exhibition Location',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -482,59 +529,6 @@ function uclalib_exhibition_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-exhibition-field_exhibition_series'
-  $field_instances['node-exhibition-field_exhibition_series'] = array(
-    'bundle' => 'exhibition',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
-      ),
-      'hours_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_exhibition_series',
-    'label' => 'Exhibition Series',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 12,
     ),
   );
 
@@ -687,16 +681,16 @@ function uclalib_exhibition_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Audience');
   t('Body');
-  t('Exhibition Audience');
-  t('Exhibition Category');
+  t('Category');
   t('Exhibition End Date');
   t('Exhibition Image');
-  t('Exhibition Location');
   t('Exhibition Related Content');
-  t('Exhibition Series');
   t('Exhibition Start Date');
   t('Exhibition Subtitle');
+  t('Location');
+  t('Series');
 
   return $field_instances;
 }

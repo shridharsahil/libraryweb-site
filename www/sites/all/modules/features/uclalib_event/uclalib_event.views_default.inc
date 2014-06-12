@@ -11,6 +11,78 @@ function uclalib_event_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'body_summary';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Body Summary';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '2',
+  );
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Body (body:summary) */
+  $handler->display->display_options['filters']['body_summary']['id'] = 'body_summary';
+  $handler->display->display_options['filters']['body_summary']['table'] = 'field_data_body';
+  $handler->display->display_options['filters']['body_summary']['field'] = 'body_summary';
+  $handler->display->display_options['filters']['body_summary']['operator'] = 'not empty';
+  /* Filter criterion: Content: Body (body:summary) */
+  $handler->display->display_options['filters']['body_summary_1']['id'] = 'body_summary_1';
+  $handler->display->display_options['filters']['body_summary_1']['table'] = 'field_data_body';
+  $handler->display->display_options['filters']['body_summary_1']['field'] = 'body_summary';
+  $handler->display->display_options['filters']['body_summary_1']['operator'] = '!=';
+
+  /* Display: Pane */
+  $handler = $view->new_display('panel_pane', 'Pane', 'pane');
+  $handler->display->display_options['pane_category']['name'] = 'Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Node ID',
+    ),
+  );
+  $export['body_summary'] = $view;
+
+  $view = new view();
   $view->name = 'events_agenda';
   $view->description = '';
   $view->tag = 'default';
@@ -104,7 +176,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_start_2']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_start_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start_2']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_start_2']['alter']['text'] = '<div class="cal-exhibition-date"><div class="cal-month">[field_exhibition_start]</div><div class="cal-day">[field_exhibition_start_1]</div>to<div class="cal-month">[field_exhibition_end_1]</div><div class="cal-day">[field_exhibition_end_2]</div></div>';
+  $handler->display->display_options['fields']['field_exhibition_start_2']['alter']['text'] = '<div class="cal-exhibition-date cal-date-range"><div class="cal-date"><div class="cal-month">[field_exhibition_start]</div><div class="cal-day">[field_exhibition_start_1]</div></div> <span class="date-range-separator">to</span>  <div class="cal-date"><div class="cal-month">[field_exhibition_end_1]</div><div class="cal-day">[field_exhibition_end_2]</div></div></div>';
   $handler->display->display_options['fields']['field_exhibition_start_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_start_2']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_start_2']['settings'] = array(
@@ -435,7 +507,7 @@ function uclalib_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Event Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
@@ -569,7 +641,7 @@ function uclalib_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Event Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
