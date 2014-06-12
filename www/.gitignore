@@ -3,6 +3,7 @@ sites/*/settings*.php
 # UCLA-specific settings files - no credentials in repo
 # Note that pattern above does not exclude Bluespark settings files
 sites/*/new-test.settings.php
+sites/default/new-stage.settings.php
 
 # Ignore paths that contain user-generated content.
 sites/*/files
