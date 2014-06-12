@@ -560,6 +560,9 @@ $env_include = array(
   'new-test.library.ucla.edu' => 'new-test.settings.php',
   'new-test1.library.ucla.edu' => 'new-test.settings.php',
   'new-test2.library.ucla.edu' => 'new-test.settings.php',
+  'new-stage.library.ucla.edu' => 'new-stage.settings.php',
+  'new-stage1.library.ucla.edu' => 'new-stage.settings.php',
+  'new-stage2.library.ucla.edu' => 'new-stage.settings.php',
   //'www.project.com' => 'prod.settings.php',
 );
 
