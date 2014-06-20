@@ -24,3 +24,14 @@ $conf['search_api_solr_overrides'] = array(
   ),
 );
 
+// Shibboleth settings
+$conf['shib_auth_account_linking'] = 1;
+$conf['shib_auth_account_linking_text'] = 'Link this account with another identity';
+$conf['shib_auth_auto_destroy_session'] = 1;
+$conf['shib_auth_email_variable'] = 'HTTP_SHIBMAIL';
+$conf['shib_auth_full_handler_url'] = 'https://new-test.library.ucla.edu/Shibboleth.sso/Login';
+$conf['shib_auth_full_logout_url'] = 'https://new-test.library.ucla.edu/Shibboleth.sso/Logout?return=https://shb.ais.ucla.edu/shibboleth-idp/Logout';
+$conf['shib_auth_link_text'] = 'Shibboleth Login';
+$conf['shib_auth_logout_url'] = 'https://shb.ais.ucla.edu/shibboleth-idp/Logout';
+$conf['shib_auth_username_variable'] = 'HTTP_SHIBUCLAUNIVERSITYID';
+
