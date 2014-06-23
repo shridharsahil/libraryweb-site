@@ -308,6 +308,13 @@ function fancybox_admin_settings_form($form, &$form_state) {
     '#default_value' => $settings['options']['modal'],
   );
 
+  $form['options']['advanced']['loop'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('loop'),
+    '#description' => t('If checked, enables cyclic navigation. This means, if you click "next" after you reach the last element, first element will be displayed (and vice versa).'),
+    '#default_value' => $settings['options']['loop'],
+  );
+
   $form['options']['advanced']['effects'] = array(
     '#type' => 'fieldset',
     '#title' => t('Effects'),
