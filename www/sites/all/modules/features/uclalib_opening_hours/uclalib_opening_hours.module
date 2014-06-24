@@ -154,18 +154,25 @@ function uclalib_opening_hours_generate_table_rows($nodes, $day) {
     // Add the title to the first column.
     $row = array(array('data' => $title, 'class' => array('title')));
 
+    $blocked_days = variable_get('opening_hours_blocked_days', array());
     // Fetch opening hours for each day.
     for ($i = 0; $i < 7; $i++) {
       $date = $this_day->format('Y-m-d');
-      $oh = db_select('opening_hours', 'oh')
-        ->fields('oh', array('start_time', 'end_time'))
-        ->condition('nid', $nid)
-        ->condition('date', $date)
-        ->execute()
-        ->fetchAssoc();
+      if (array_search($date, $blocked_days) !== FALSE) {
+        $start_time = NULL;
+        $end_time = NULL;
+      }
+      else {
+        $oh = db_select('opening_hours', 'oh')
+          ->fields('oh', array('start_time', 'end_time'))
+          ->condition('nid', $nid)
+          ->condition('date', $date)
+          ->execute()
+          ->fetchAssoc();
 
-      $start_time = _uclalib_opening_hours_short_time($oh['start_time']);
-      $end_time = _uclalib_opening_hours_short_time($oh['end_time']);
+        $start_time = _uclalib_opening_hours_short_time($oh['start_time']);
+        $end_time = _uclalib_opening_hours_short_time($oh['end_time']);
+      }
       $class = (empty($start_time) && empty($end_time)) ? 'closed' : 'open';
       $row_cell = array(
         'data' => $start_time . '-' . $end_time,
