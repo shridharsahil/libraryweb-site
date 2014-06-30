@@ -145,6 +145,7 @@ function uclalib_arch_icon_bundles() {
       'quiet-area-2' => 'quiet-area-2',
       'copy-color' => 'copy-color',
       'hours2' => 'hours2',
+      'mappin' => 'mappin',
     ),
     'name' => 'uclalib',
     'provider' => 'icomoon',
