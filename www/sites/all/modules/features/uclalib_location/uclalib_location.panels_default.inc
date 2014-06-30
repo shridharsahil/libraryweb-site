@@ -71,6 +71,29 @@ function uclalib_location_default_panels_mini() {
     $display->content['new-0677b681-c039-44da-9280-48e419ae6b64'] = $pane;
     $display->panels['middle'][0] = 'new-0677b681-c039-44da-9280-48e419ae6b64';
     $pane = new stdClass();
+    $pane->pid = 'new-c5270868-4fdd-4890-95ed-e7670d051a8e';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'location_map_pin-map_pin_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '%node:nid',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'c5270868-4fdd-4890-95ed-e7670d051a8e';
+    $display->content['new-c5270868-4fdd-4890-95ed-e7670d051a8e'] = $pane;
+    $display->panels['middle'][1] = 'new-c5270868-4fdd-4890-95ed-e7670d051a8e';
+    $pane = new stdClass();
     $pane->pid = 'new-4d59437d-ecb7-41cd-93d7-8ecaeb3fa590';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
@@ -94,11 +117,11 @@ function uclalib_location_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '4d59437d-ecb7-41cd-93d7-8ecaeb3fa590';
     $display->content['new-4d59437d-ecb7-41cd-93d7-8ecaeb3fa590'] = $pane;
-    $display->panels['middle'][1] = 'new-4d59437d-ecb7-41cd-93d7-8ecaeb3fa590';
+    $display->panels['middle'][2] = 'new-4d59437d-ecb7-41cd-93d7-8ecaeb3fa590';
     $pane = new stdClass();
     $pane->pid = 'new-585e4e8b-496e-443c-b53e-e427b1b53b5d';
     $pane->panel = 'middle';
@@ -123,11 +146,11 @@ function uclalib_location_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '585e4e8b-496e-443c-b53e-e427b1b53b5d';
     $display->content['new-585e4e8b-496e-443c-b53e-e427b1b53b5d'] = $pane;
-    $display->panels['middle'][2] = 'new-585e4e8b-496e-443c-b53e-e427b1b53b5d';
+    $display->panels['middle'][3] = 'new-585e4e8b-496e-443c-b53e-e427b1b53b5d';
     $pane = new stdClass();
     $pane->pid = 'new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
     $pane->panel = 'middle';
@@ -154,11 +177,11 @@ function uclalib_location_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
     $display->content['new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c'] = $pane;
-    $display->panels['middle'][3] = 'new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
+    $display->panels['middle'][4] = 'new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-0677b681-c039-44da-9280-48e419ae6b64';
   $mini->display = $display;

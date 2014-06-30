@@ -1158,7 +1158,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399407339');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1460,11 +1460,17 @@ a.more-link,
 .pane-location-header .pane-node-title h1 {
   margin-bottom: 0;
 }
+.pane-location-header .pane-location-map-pin-map-pin-pane .icon-mappin {
+  color: #666666;
+}
+.pane-location-header .pane-location-map-pin-map-pin-pane,
 .pane-location-header .pane-node-field-address,
 .pane-location-header .pane-node-field-location-phone {
   font-size: 13px;
 }
-.pane-location-header .pane-node-field-address, .pane-location-header .pane-node-field-address div,
+.pane-location-header .pane-location-map-pin-map-pin-pane, .pane-location-header .pane-location-map-pin-map-pin-pane div,
+.pane-location-header .pane-node-field-address,
+.pane-location-header .pane-node-field-address div,
 .pane-location-header .pane-node-field-location-phone,
 .pane-location-header .pane-node-field-location-phone div {
   display: inline;
