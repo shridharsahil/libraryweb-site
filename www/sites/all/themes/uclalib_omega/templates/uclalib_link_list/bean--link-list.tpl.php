@@ -15,7 +15,17 @@
     <?php
       $items = array();
       foreach(element_children($content['field_linklist_links']) as $link) {
-        $items[] = render($content['field_linklist_links'][$link]);
+        //dpm($link);
+        //
+        $class = 'no-description';
+        if (isset($content['field_linklist_links'][$link]['field_link_description'])) {
+          $class = 'with-description';
+        }
+        //dpm($content['field_linklist_links'][$link]);
+        $items[] = array(
+          'data' => render($content['field_linklist_links'][$link]),
+          'class' => $class,
+        );
       }
       print theme('item_list', array('items' => $items, 'attributes' => array('class' => 'menu')));
     ?>
