@@ -854,7 +854,7 @@ a[href="#main-content"] {
     position: relative;
   }
   .front .l-main-wrapper:before {
-    background: url(../images/home-bg-left.jpg) no-repeat 0 0;
+    background: url(../images/home-bg-left2.jpg) no-repeat 0 0;
     content: "";
     position: absolute;
     left: 0;
@@ -863,7 +863,7 @@ a[href="#main-content"] {
     z-index: -1;
   }
   .front .l-main:before {
-    background: url(../images/home-bg-right.jpg) no-repeat 0 0;
+    background: url(../images/home-bg-right2.jpg) no-repeat 0 0;
     content: "";
     position: absolute;
     right: 0;
@@ -1158,7 +1158,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399407339');
+  background-image: url('../images/logo-colophon.png?1399401717');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
