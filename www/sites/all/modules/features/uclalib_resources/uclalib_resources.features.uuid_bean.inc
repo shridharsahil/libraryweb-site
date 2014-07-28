@@ -11,9 +11,9 @@ function uclalib_resources_uuid_features_default_beans() {
   $beans = array();
 
   $beans[] = array(
-    'label' => 'Articles',
+    'label' => 'Databases',
     'description' => NULL,
-    'title' => 'Articles',
+    'title' => 'Databases',
     'type' => 'link_list',
     'data' => array(
       'view_mode' => 'default',
@@ -21,8 +21,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'articles',
     'view_mode' => 'default',
     'created' => 1398722666,
-    'log' => '',
-    'uid' => 0,
+    'log' => 'Updated everything based on today\'s meeting',
+    'uid' => 59,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '86058cc9-4263-447c-ac03-f4647cbda15c',
@@ -31,19 +31,13 @@ function uclalib_resources_uuid_features_default_beans() {
       'und' => array(
         0 => array(
           'field_link_description' => array(
-            'und' => array(
-              0 => array(
-                'value' => 'searches several databases simultaneously',
-                'format' => NULL,
-                'safe_value' => 'searches several databases simultaneously',
-              ),
-            ),
+            'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Article Quick Search',
+                'url' => 'new database tool',
+                'title' => 'Search for a Database by Title',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -62,8 +56,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Locate an article by citation',
+                'url' => 'new database tool',
+                'title' => 'Browse Databases by Subject',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -74,6 +68,86 @@ function uclalib_resources_uuid_features_default_beans() {
             'und' => array(),
           ),
           'id' => 20,
+        ),
+        2 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'new database tool',
+                'title' => 'A-Z List of Databases',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 110,
+        ),
+        3 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'link to cannedd search by resource type in new database tool',
+                'title' => 'Data and Statistics',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 111,
+        ),
+        4 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'https://escholarship.org/',
+                'title' => 'UC eScholarship Repository',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 112,
+        ),
+        5 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'http://guides.library.ucla.edu/content.php?pid=224004',
+                'title' => 'Searching a Database',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 113,
         ),
       ),
     ),
@@ -201,9 +275,9 @@ function uclalib_resources_uuid_features_default_beans() {
     ),
   );
   $beans[] = array(
-    'label' => 'Popular Databases',
+    'label' => 'Research Tools',
     'description' => NULL,
-    'title' => 'Popular Databases',
+    'title' => 'Research Tools',
     'type' => 'link_list',
     'data' => array(
       'view_mode' => 'default',
@@ -211,8 +285,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'popular-databases',
     'view_mode' => 'default',
     'created' => 1398722734,
-    'log' => '',
-    'uid' => 0,
+    'log' => 'Link to citation guides',
+    'uid' => 59,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '1087b58c-f0a8-46dc-9806-0c424bd1ac5f',
@@ -226,8 +300,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 1',
+                'url' => 'http://guides.library.ucla.edu',
+                'title' => 'UCLA Library Research Guides',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -246,8 +320,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 2',
+                'url' => 'http://guides.library.ucla.edu/searchtags.php?iid=261&gid=0&tag=citation',
+                'title' => 'Citing and Citation Management',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -266,8 +340,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 3',
+                'url' => '/support/data-management',
+                'title' => 'Data Management and Curation',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -286,8 +360,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 4',
+                'url' => 'http://guides.library.ucla.edu/impact',
+                'title' => 'Impact Metrics',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -306,8 +380,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 5',
+                'url' => 'http://guides.library.ucla.edu/advice-guides',
+                'title' => 'More Research Advice and Tools',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -323,9 +397,9 @@ function uclalib_resources_uuid_features_default_beans() {
     ),
   );
   $beans[] = array(
-    'label' => 'Databases',
+    'label' => 'Images, Audio, & Video',
     'description' => NULL,
-    'title' => 'Databases',
+    'title' => 'Images, Audio, & Video',
     'type' => 'link_list',
     'data' => array(
       'view_mode' => 'default',
@@ -333,8 +407,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'databases',
     'view_mode' => 'default',
     'created' => 1398722354,
-    'log' => '',
-    'uid' => 0,
+    'log' => 'Updated everything based on today\'s meeting',
+    'uid' => 59,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '6af3ea98-f8b9-4531-be52-394394cc5553',
@@ -348,8 +422,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Browse Databases by Subject',
+                'url' => 'http://guides.library.ucla.edu/images',
+                'title' => 'Images',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -368,8 +442,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Search Databases by Title',
+                'url' => 'http://guides.library.ucla.edu/recordings',
+                'title' => 'Audio (Music Recordings)',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -388,8 +462,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'A-Z list of Databases',
+                'url' => 'http://media2.oid.ucla.edu/htbin/wwform/214/wwk770/',
+                'title' => 'Instructional Media Library',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -401,37 +475,15 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 7,
         ),
-      ),
-    ),
-  );
-  $beans[] = array(
-    'label' => 'Books & More',
-    'description' => NULL,
-    'title' => 'Books & More',
-    'type' => 'link_list',
-    'data' => array(
-      'view_mode' => 'default',
-    ),
-    'delta' => 'books--more',
-    'view_mode' => 'default',
-    'created' => 1398722227,
-    'log' => '',
-    'uid' => 0,
-    'default_revision' => 1,
-    'revisions' => array(),
-    'vuuid' => '874ead3d-654f-41b6-8500-0f6ca7be6009',
-    'uuid' => '99b33c31-6c86-4884-82b3-40b9acddc42d',
-    'field_linklist_links' => array(
-      'und' => array(
-        0 => array(
+        3 => array(
           'field_link_description' => array(
             'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://ucla.worldcat.org',
-                'title' => 'Melvyl',
+                'url' => 'http://cinema.library.ucla.edu/',
+                'title' => 'Film and Television Archive',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -441,11 +493,59 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_icon' => array(
             'und' => array(),
           ),
-          'id' => 1,
+          'id' => 114,
         ),
-        1 => array(
+        4 => array(
           'field_link_description' => array(
             'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'new guide by Diana',
+                'title' => 'More Video Collections',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 115,
+        ),
+      ),
+    ),
+  );
+  $beans[] = array(
+    'label' => 'Books & Journals',
+    'description' => NULL,
+    'title' => 'Books & Journals',
+    'type' => 'link_list',
+    'data' => array(
+      'view_mode' => 'default',
+    ),
+    'delta' => 'books--more',
+    'view_mode' => 'default',
+    'created' => 1398722227,
+    'log' => 'uc elinks name style correction',
+    'uid' => 60,
+    'default_revision' => 1,
+    'revisions' => array(),
+    'vuuid' => '874ead3d-654f-41b6-8500-0f6ca7be6009',
+    'uuid' => '99b33c31-6c86-4884-82b3-40b9acddc42d',
+    'field_linklist_links' => array(
+      'und' => array(
+        0 => array(
+          'field_link_description' => array(
+            'und' => array(
+              0 => array(
+                'value' => '– both print and e-books/journals',
+                'format' => NULL,
+                'safe_value' => '– both print and e-books/journals',
+              ),
+            ),
           ),
           'field_link_link' => array(
             'und' => array(
@@ -463,15 +563,47 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 2,
         ),
-        2 => array(
+        1 => array(
           'field_link_description' => array(
-            'und' => array(),
+            'und' => array(
+              0 => array(
+                'value' => '– UC’s joint catalog',
+                'format' => NULL,
+                'safe_value' => '– UC’s joint catalog',
+              ),
+            ),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
                 'url' => 'http://ucla.worldcat.org',
-                'title' => 'Worldcat (same as Melvyl........?)',
+                'title' => 'Melvyl',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 1,
+        ),
+        2 => array(
+          'field_link_description' => array(
+            'und' => array(
+              0 => array(
+                'value' => '– libraries across the world',
+                'format' => NULL,
+                'safe_value' => '– libraries across the world',
+              ),
+            ),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'http://ucla.worldcat.org',
+                'title' => 'Worldcat',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -490,8 +622,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.hathitrust.org/',
-                'title' => 'HathiTrust',
+                'url' => 'http://www.cdlib.org/services/d2d/ucelinks/',
+                'title' => 'UC-eLinks: Find e-journals',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -503,13 +635,53 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 4,
         ),
+        4 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'http://guides.library.ucla.edu/ebooks',
+                'title' => 'E-books',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 106,
+        ),
+        5 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'node/001',
+                'title' => 'New Book Feeds',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 107,
+        ),
       ),
     ),
   );
   $beans[] = array(
-    'label' => 'Images, Audio, Video',
+    'label' => 'Archives & Primary Resources',
     'description' => NULL,
-    'title' => 'Images, Audio, Video',
+    'title' => 'Archives & Primary Resources',
     'type' => 'link_list',
     'data' => array(
       'view_mode' => 'default',
@@ -517,8 +689,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'images-audio-video',
     'view_mode' => 'default',
     'created' => 1398722604,
-    'log' => '',
-    'uid' => 0,
+    'log' => 'normalized capitalization',
+    'uid' => 59,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '2afc053b-5a2b-4353-aab8-c794ed39fb37',
@@ -532,8 +704,28 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 1',
+                'url' => 'under construction',
+                'title' => 'UCLA Library Special Collections Guides',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 116,
+        ),
+        1 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'http://www.oac.cdlib.org/about/',
+                'title' => 'Online Archive of California',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -545,15 +737,15 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 14,
         ),
-        1 => array(
+        2 => array(
           'field_link_description' => array(
             'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 2',
+                'url' => 'http://digital2.library.ucla.edu/',
+                'title' => 'UCLA Library Digital Collections',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -565,15 +757,15 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 15,
         ),
-        2 => array(
+        3 => array(
           'field_link_description' => array(
             'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 3',
+                'url' => 'linked to canned search in new database tool',
+                'title' => 'Other Digital Collections',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -585,15 +777,15 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 16,
         ),
-        3 => array(
+        4 => array(
           'field_link_description' => array(
             'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 4',
+                'url' => 'http://oralhistory.library.ucla.edu/',
+                'title' => 'UCLA Center for Oral History Research',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -605,15 +797,15 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 17,
         ),
-        4 => array(
+        5 => array(
           'field_link_description' => array(
             'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Popular database 5',
+                'url' => 'linked to canned search in new database tool',
+                'title' => 'Data and Statistics',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -629,9 +821,9 @@ function uclalib_resources_uuid_features_default_beans() {
     ),
   );
   $beans[] = array(
-    'label' => 'Journals',
+    'label' => 'Articles',
     'description' => NULL,
-    'title' => 'Journals',
+    'title' => 'Articles',
     'type' => 'link_list',
     'data' => array(
       'view_mode' => 'default',
@@ -639,8 +831,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'journals',
     'view_mode' => 'default',
     'created' => 1398722406,
-    'log' => '',
-    'uid' => 0,
+    'log' => 'normalized capitalization',
+    'uid' => 59,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '106e9ea0-ca4e-4c3c-9350-1e6bf3691027',
@@ -651,17 +843,17 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_description' => array(
             'und' => array(
               0 => array(
-                'value' => 'for print journals',
+                'value' => 'Use one of these to start, or see Databases for more options.',
                 'format' => NULL,
-                'safe_value' => 'for print journals',
+                'safe_value' => 'Use one of these to start, or see Databases for more options.',
               ),
             ),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'UCLA Library Catalog',
+                'url' => '',
+                'title' => 'Articles are indexed in many databases. No single database covers all journals.',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -680,8 +872,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'A-Z journal titles',
+                'url' => 'http://search.ebscohost.com/login.aspx?authtype=ip,uid&profile=ehost&defaultdb=a9h',
+                'title' => 'Academic Search Complete',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -700,8 +892,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'E-journals by subject',
+                'url' => 'http://www.jstor.org/',
+                'title' => 'JSTOR',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -720,8 +912,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Directory of Open Access Journals',
+                'url' => 'http://apps.webofknowledge.com/WOS_GeneralSearch_input.do?last_prod=WOS&product=WOS&highlighted_tab=WOS&search_mode=GeneralSearch',
+                'title' => 'Web of Science',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -735,19 +927,13 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
         4 => array(
           'field_link_description' => array(
-            'und' => array(
-              0 => array(
-                'value' => 'to see where a journal is indexed',
-                'format' => NULL,
-                'safe_value' => 'to see where a journal is indexed',
-              ),
-            ),
+            'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Search Ulrichsweb',
+                'url' => 'http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi',
+                'title' => 'UC-eLinks: Citation Linker',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -766,8 +952,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.library.ucla.edu',
-                'title' => 'Journal impact factor',
+                'url' => 'http://guides.library.ucla.edu/news',
+                'title' => 'Newspaper Articles',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -778,6 +964,26 @@ function uclalib_resources_uuid_features_default_beans() {
             'und' => array(),
           ),
           'id' => 13,
+        ),
+        6 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'sub-page to be built',
+                'title' => 'Search Multiple Databases at Once',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 109,
         ),
       ),
     ),
