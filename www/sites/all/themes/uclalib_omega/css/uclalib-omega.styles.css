@@ -854,7 +854,7 @@ a[href="#main-content"] {
     position: relative;
   }
   .front .l-main-wrapper:before {
-    background: url(../images/home-bg-left.jpg) no-repeat 0 0;
+    background: url(../images/home-bg-left2.jpg) no-repeat 0 0;
     content: "";
     position: absolute;
     left: 0;
@@ -863,7 +863,7 @@ a[href="#main-content"] {
     z-index: -1;
   }
   .front .l-main:before {
-    background: url(../images/home-bg-right.jpg) no-repeat 0 0;
+    background: url(../images/home-bg-right2.jpg) no-repeat 0 0;
     content: "";
     position: absolute;
     right: 0;
@@ -968,7 +968,7 @@ a[href="#main-content"] {
 .more-link-triangle-after:after, table a.next-week:after, div.more-link > a:after,
 a.more-link:after,
 .more-link-block a:after, .pane-bean-featured-content .field--name-field-featured-thumbnail-image a:after,
-.pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
+.pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .no-description .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -1158,7 +1158,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399452290');
+  background-image: url('../images/logo-colophon.png?1399401717');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1196,7 +1196,7 @@ a.more-link,
 }
 .pane-bean-link-list .field--name-field-link-description,
 .pane-bean-link-list .field--name-field-link-link {
-  margin-right: 4px;
+  margin-right: .4em;
 }
 .pane-bean-link-list .field--name-field-link-description, .pane-bean-link-list .field--name-field-link-description div,
 .pane-bean-link-list .field--name-field-link-link,
@@ -1205,18 +1205,6 @@ a.more-link,
 }
 .pane-bean-link-list .field--name-field-link-link a {
   color: #3283be;
-}
-.pane-bean-link-list .field--name-field-link-link a:after {
-  z-index: -1;
-}
-.pane-bean-link-list .field--name-field-link-description {
-  background-color: white;
-}
-.pane-bean-link-list.pane-style-background-gray .field--name-field-link-description {
-  background-color: #eff3f4;
-}
-.pane-bean-link-list.pane-style-background-blue .field--name-field-link-description {
-  background-color: #c1daeb;
 }
 
 .pane-bean-living-library-gallery {
@@ -1472,11 +1460,17 @@ a.more-link,
 .pane-location-header .pane-node-title h1 {
   margin-bottom: 0;
 }
+.pane-location-header .pane-location-map-pin-map-pin-pane .icon-mappin {
+  color: #666666;
+}
+.pane-location-header .pane-location-map-pin-map-pin-pane,
 .pane-location-header .pane-node-field-address,
 .pane-location-header .pane-node-field-location-phone {
   font-size: 13px;
 }
-.pane-location-header .pane-node-field-address, .pane-location-header .pane-node-field-address div,
+.pane-location-header .pane-location-map-pin-map-pin-pane, .pane-location-header .pane-location-map-pin-map-pin-pane div,
+.pane-location-header .pane-node-field-address,
+.pane-location-header .pane-node-field-address div,
 .pane-location-header .pane-node-field-location-phone,
 .pane-location-header .pane-node-field-location-phone div {
   display: inline;
@@ -1681,6 +1675,7 @@ a.more-link,
 
 .pane-style-background-blue {
   background: #c1daeb;
+  color: #333;
   padding: 22px 15px;
   margin: 0 0 1em;
 }
@@ -1989,20 +1984,11 @@ a.more-link,
 }
 .page-search-research .l-region--below-main-left > div,
 .page-search-research .l-region--below-main-right > div {
-  background: #c1daeb;
-  color: #333;
   min-height: 277px;
   margin-top: 1.8em;
-  padding: 0 20px;
-}
-.page-search-research .l-region--below-main-left > div h2,
-.page-search-research .l-region--below-main-right > div h2 {
-  margin-top: 0;
-  padding: 17px 0 0;
-}
-.page-search-research .l-region--below-main-left > div div,
-.page-search-research .l-region--below-main-right > div div {
-  background: #c1daeb;
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .page-search .view-id-content_search .views-exposed-widgets {

@@ -14,6 +14,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['access advanced_link autocomplete'] = array(
     'name' => 'access advanced_link autocomplete',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -23,7 +24,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'access all views'.
   $permissions['access all views'] = array(
     'name' => 'access all views',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'views',
   );
 
@@ -60,6 +63,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['access comments'] = array(
     'name' => 'access comments',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -81,6 +85,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -91,6 +96,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -101,6 +107,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['access navbar'] = array(
     'name' => 'access navbar',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -111,6 +118,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -120,7 +128,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer advanced pane settings'.
   $permissions['administer advanced pane settings'] = array(
     'name' => 'administer advanced pane settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels',
   );
 
@@ -193,7 +203,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer ckeditor'.
   $permissions['administer ckeditor'] = array(
     'name' => 'administer ckeditor',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'ckeditor',
   );
 
@@ -201,6 +213,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer comments'] = array(
     'name' => 'administer comments',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -210,7 +223,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer content types'.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -237,7 +252,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer facets'.
   $permissions['administer facets'] = array(
     'name' => 'administer facets',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'facetapi',
   );
 
@@ -253,49 +270,63 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'features',
   );
 
   // Exported permission: 'administer field collections'.
   $permissions['administer field collections'] = array(
     'name' => 'administer field collections',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'field_collection',
   );
 
   // Exported permission: 'administer fieldgroups'.
   $permissions['administer fieldgroups'] = array(
     'name' => 'administer fieldgroups',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'field_group',
   );
 
   // Exported permission: 'administer filters'.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'filter',
   );
 
   // Exported permission: 'administer icons'.
   $permissions['administer icons'] = array(
     'name' => 'administer icons',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'icon',
   );
 
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'image',
   );
 
   // Exported permission: 'administer linkit'.
   $permissions['administer linkit'] = array(
     'name' => 'administer linkit',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'linkit',
   );
 
@@ -312,6 +343,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -321,28 +353,36 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer mini panels'.
   $permissions['administer mini panels'] = array(
     'name' => 'administer mini panels',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels_mini',
   );
 
   // Exported permission: 'administer multifield'.
   $permissions['administer multifield'] = array(
     'name' => 'administer multifield',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'multifield',
   );
 
   // Exported permission: 'administer nodequeue'.
   $permissions['administer nodequeue'] = array(
     'name' => 'administer nodequeue',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'nodequeue',
   );
 
   // Exported permission: 'administer nodes'.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -358,252 +398,328 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer page manager'.
   $permissions['administer page manager'] = array(
     'name' => 'administer page manager',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'page_manager',
   );
 
   // Exported permission: 'administer pane access'.
   $permissions['administer pane access'] = array(
     'name' => 'administer pane access',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels',
   );
 
   // Exported permission: 'administer panelizer'.
   $permissions['administer panelizer'] = array(
     'name' => 'administer panelizer',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean featured_content defaults'.
   $permissions['administer panelizer bean featured_content defaults'] = array(
     'name' => 'administer panelizer bean featured_content defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean link_list defaults'.
   $permissions['administer panelizer bean link_list defaults'] = array(
     'name' => 'administer panelizer bean link_list defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean living_library_gallery defaults'.
   $permissions['administer panelizer bean living_library_gallery defaults'] = array(
     'name' => 'administer panelizer bean living_library_gallery defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean news_and_events_bean content'.
   $permissions['administer panelizer bean news_and_events_bean content'] = array(
     'name' => 'administer panelizer bean news_and_events_bean content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean news_and_events_bean context'.
   $permissions['administer panelizer bean news_and_events_bean context'] = array(
     'name' => 'administer panelizer bean news_and_events_bean context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean news_and_events_bean defaults'.
   $permissions['administer panelizer bean news_and_events_bean defaults'] = array(
     'name' => 'administer panelizer bean news_and_events_bean defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean news_and_events_bean layout'.
   $permissions['administer panelizer bean news_and_events_bean layout'] = array(
     'name' => 'administer panelizer bean news_and_events_bean layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean news_and_events_bean overview'.
   $permissions['administer panelizer bean news_and_events_bean overview'] = array(
     'name' => 'administer panelizer bean news_and_events_bean overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean news_and_events_bean settings'.
   $permissions['administer panelizer bean news_and_events_bean settings'] = array(
     'name' => 'administer panelizer bean news_and_events_bean settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean quick_find defaults'.
   $permissions['administer panelizer bean quick_find defaults'] = array(
     'name' => 'administer panelizer bean quick_find defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean showcase content'.
   $permissions['administer panelizer bean showcase content'] = array(
     'name' => 'administer panelizer bean showcase content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean showcase context'.
   $permissions['administer panelizer bean showcase context'] = array(
     'name' => 'administer panelizer bean showcase context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean showcase defaults'.
   $permissions['administer panelizer bean showcase defaults'] = array(
     'name' => 'administer panelizer bean showcase defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean showcase layout'.
   $permissions['administer panelizer bean showcase layout'] = array(
     'name' => 'administer panelizer bean showcase layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean showcase overview'.
   $permissions['administer panelizer bean showcase overview'] = array(
     'name' => 'administer panelizer bean showcase overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean showcase settings'.
   $permissions['administer panelizer bean showcase settings'] = array(
     'name' => 'administer panelizer bean showcase settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean text_block defaults'.
   $permissions['administer panelizer bean text_block defaults'] = array(
     'name' => 'administer panelizer bean text_block defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer bean upcoming_events defaults'.
   $permissions['administer panelizer bean upcoming_events defaults'] = array(
     'name' => 'administer panelizer bean upcoming_events defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node destination content'.
   $permissions['administer panelizer node destination content'] = array(
     'name' => 'administer panelizer node destination content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node destination context'.
   $permissions['administer panelizer node destination context'] = array(
     'name' => 'administer panelizer node destination context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node destination defaults'.
   $permissions['administer panelizer node destination defaults'] = array(
     'name' => 'administer panelizer node destination defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node destination layout'.
   $permissions['administer panelizer node destination layout'] = array(
     'name' => 'administer panelizer node destination layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node destination overview'.
   $permissions['administer panelizer node destination overview'] = array(
     'name' => 'administer panelizer node destination overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node destination settings'.
   $permissions['administer panelizer node destination settings'] = array(
     'name' => 'administer panelizer node destination settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node exhibition defaults'.
   $permissions['administer panelizer node exhibition defaults'] = array(
     'name' => 'administer panelizer node exhibition defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node location content'.
   $permissions['administer panelizer node location content'] = array(
     'name' => 'administer panelizer node location content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node location context'.
   $permissions['administer panelizer node location context'] = array(
     'name' => 'administer panelizer node location context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node location defaults'.
   $permissions['administer panelizer node location defaults'] = array(
     'name' => 'administer panelizer node location defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node location layout'.
   $permissions['administer panelizer node location layout'] = array(
     'name' => 'administer panelizer node location layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node location overview'.
   $permissions['administer panelizer node location overview'] = array(
     'name' => 'administer panelizer node location overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node location settings'.
   $permissions['administer panelizer node location settings'] = array(
     'name' => 'administer panelizer node location settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node news defaults'.
   $permissions['administer panelizer node news defaults'] = array(
     'name' => 'administer panelizer node news defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node staff_profile defaults'.
   $permissions['administer panelizer node staff_profile defaults'] = array(
     'name' => 'administer panelizer node staff_profile defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
@@ -611,6 +727,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer panelizer node static content'] = array(
     'name' => 'administer panelizer node static content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -620,21 +737,27 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer panelizer node static context'.
   $permissions['administer panelizer node static context'] = array(
     'name' => 'administer panelizer node static context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node static defaults'.
   $permissions['administer panelizer node static defaults'] = array(
     'name' => 'administer panelizer node static defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node static layout'.
   $permissions['administer panelizer node static layout'] = array(
     'name' => 'administer panelizer node static layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
@@ -642,6 +765,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer panelizer node static overview'] = array(
     'name' => 'administer panelizer node static overview',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -651,140 +775,180 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer panelizer node static settings'.
   $permissions['administer panelizer node static settings'] = array(
     'name' => 'administer panelizer node static settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node uclalib_event defaults'.
   $permissions['administer panelizer node uclalib_event defaults'] = array(
     'name' => 'administer panelizer node uclalib_event defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node uclalib_resources content'.
   $permissions['administer panelizer node uclalib_resources content'] = array(
     'name' => 'administer panelizer node uclalib_resources content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node uclalib_resources context'.
   $permissions['administer panelizer node uclalib_resources context'] = array(
     'name' => 'administer panelizer node uclalib_resources context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node uclalib_resources defaults'.
   $permissions['administer panelizer node uclalib_resources defaults'] = array(
     'name' => 'administer panelizer node uclalib_resources defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node uclalib_resources layout'.
   $permissions['administer panelizer node uclalib_resources layout'] = array(
     'name' => 'administer panelizer node uclalib_resources layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node uclalib_resources overview'.
   $permissions['administer panelizer node uclalib_resources overview'] = array(
     'name' => 'administer panelizer node uclalib_resources overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node uclalib_resources settings'.
   $permissions['administer panelizer node uclalib_resources settings'] = array(
     'name' => 'administer panelizer node uclalib_resources settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term audience defaults'.
   $permissions['administer panelizer taxonomy_term audience defaults'] = array(
     'name' => 'administer panelizer taxonomy_term audience defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term events_and_exhibitions_series defaults'.
   $permissions['administer panelizer taxonomy_term events_and_exhibitions_series defaults'] = array(
     'name' => 'administer panelizer taxonomy_term events_and_exhibitions_series defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term events_categories defaults'.
   $permissions['administer panelizer taxonomy_term events_categories defaults'] = array(
     'name' => 'administer panelizer taxonomy_term events_categories defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term location_amenities defaults'.
   $permissions['administer panelizer taxonomy_term location_amenities defaults'] = array(
     'name' => 'administer panelizer taxonomy_term location_amenities defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term location_equipment defaults'.
   $permissions['administer panelizer taxonomy_term location_equipment defaults'] = array(
     'name' => 'administer panelizer taxonomy_term location_equipment defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term location_study_areas defaults'.
   $permissions['administer panelizer taxonomy_term location_study_areas defaults'] = array(
     'name' => 'administer panelizer taxonomy_term location_study_areas defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term news_categories defaults'.
   $permissions['administer panelizer taxonomy_term news_categories defaults'] = array(
     'name' => 'administer panelizer taxonomy_term news_categories defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term resource_categories defaults'.
   $permissions['administer panelizer taxonomy_term resource_categories defaults'] = array(
     'name' => 'administer panelizer taxonomy_term resource_categories defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term staff_departments defaults'.
   $permissions['administer panelizer taxonomy_term staff_departments defaults'] = array(
     'name' => 'administer panelizer taxonomy_term staff_departments defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer taxonomy_term staff_subject_areas defaults'.
   $permissions['administer panelizer taxonomy_term staff_subject_areas defaults'] = array(
     'name' => 'administer panelizer taxonomy_term staff_subject_areas defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer user user defaults'.
   $permissions['administer panelizer user user defaults'] = array(
     'name' => 'administer panelizer user user defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels',
   );
 
@@ -792,6 +956,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer panels styles'] = array(
     'name' => 'administer panels styles',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -801,14 +966,18 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer pathauto'.
   $permissions['administer pathauto'] = array(
     'name' => 'administer pathauto',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'pathauto',
   );
 
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
@@ -824,14 +993,18 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer shortcuts'.
   $permissions['administer shortcuts'] = array(
     'name' => 'administer shortcuts',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'shortcut',
   );
 
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -847,14 +1020,18 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer url aliases'.
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'path',
   );
 
   // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
@@ -870,35 +1047,45 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer views'.
   $permissions['administer views'] = array(
     'name' => 'administer views',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'views',
   );
 
   // Exported permission: 'bypass node access'.
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
   // Exported permission: 'change layouts in place editing'.
   $permissions['change layouts in place editing'] = array(
     'name' => 'change layouts in place editing',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels',
   );
 
   // Exported permission: 'change own username'.
   $permissions['change own username'] = array(
     'name' => 'change own username',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
@@ -906,6 +1093,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any featured_content bean'] = array(
     'name' => 'create any featured_content bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -916,6 +1104,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any link_list bean'] = array(
     'name' => 'create any link_list bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -926,6 +1115,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any living_library_gallery bean'] = array(
     'name' => 'create any living_library_gallery bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -936,6 +1126,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any news_and_events_bean bean'] = array(
     'name' => 'create any news_and_events_bean bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -946,6 +1137,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any quick_find bean'] = array(
     'name' => 'create any quick_find bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -956,6 +1148,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any showcase bean'] = array(
     'name' => 'create any showcase bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -966,6 +1159,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any text_block bean'] = array(
     'name' => 'create any text_block bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -976,6 +1170,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any upcoming_events bean'] = array(
     'name' => 'create any upcoming_events bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -986,6 +1181,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create destination content'] = array(
     'name' => 'create destination content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -995,6 +1191,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create exhibition content'] = array(
     'name' => 'create exhibition content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1004,6 +1201,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create location content'] = array(
     'name' => 'create location content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1012,7 +1210,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'create mini panels'.
   $permissions['create mini panels'] = array(
     'name' => 'create mini panels',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels_mini',
   );
 
@@ -1020,6 +1220,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create news content'] = array(
     'name' => 'create news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1029,6 +1230,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create staff_profile content'] = array(
     'name' => 'create staff_profile content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1038,7 +1240,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['create static content'] = array(
     'name' => 'create static content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -1047,6 +1251,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create uclalib_event content'] = array(
     'name' => 'create uclalib_event content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1056,6 +1261,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create uclalib_resources content'] = array(
     'name' => 'create uclalib_resources content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1066,6 +1272,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1076,6 +1283,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['customize ckeditor'] = array(
     'name' => 'customize ckeditor',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1085,7 +1293,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'customize shortcut links'.
   $permissions['customize shortcut links'] = array(
     'name' => 'customize shortcut links',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'shortcut',
   );
 
@@ -1093,6 +1303,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any destination content'] = array(
     'name' => 'delete any destination content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1102,6 +1313,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any exhibition content'] = array(
     'name' => 'delete any exhibition content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1111,6 +1323,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any featured_content bean'] = array(
     'name' => 'delete any featured_content bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1121,6 +1334,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any link_list bean'] = array(
     'name' => 'delete any link_list bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1131,6 +1345,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any living_library_gallery bean'] = array(
     'name' => 'delete any living_library_gallery bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1141,6 +1356,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any location content'] = array(
     'name' => 'delete any location content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1150,6 +1366,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any news content'] = array(
     'name' => 'delete any news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1159,6 +1376,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any news_and_events_bean bean'] = array(
     'name' => 'delete any news_and_events_bean bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1169,6 +1387,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any quick_find bean'] = array(
     'name' => 'delete any quick_find bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1179,6 +1398,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any showcase bean'] = array(
     'name' => 'delete any showcase bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1189,6 +1409,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any staff_profile content'] = array(
     'name' => 'delete any staff_profile content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1198,7 +1419,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any static content'] = array(
     'name' => 'delete any static content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -1207,6 +1430,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any text_block bean'] = array(
     'name' => 'delete any text_block bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1217,6 +1441,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any uclalib_event content'] = array(
     'name' => 'delete any uclalib_event content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1226,6 +1451,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any uclalib_resources content'] = array(
     'name' => 'delete any uclalib_resources content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1236,6 +1462,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any upcoming_events bean'] = array(
     'name' => 'delete any upcoming_events bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1255,6 +1482,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own destination content'] = array(
     'name' => 'delete own destination content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1264,6 +1492,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own exhibition content'] = array(
     'name' => 'delete own exhibition content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1273,6 +1502,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own location content'] = array(
     'name' => 'delete own location content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1282,6 +1512,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own news content'] = array(
     'name' => 'delete own news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1291,6 +1522,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own staff_profile content'] = array(
     'name' => 'delete own staff_profile content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1300,7 +1532,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own static content'] = array(
     'name' => 'delete own static content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -1309,6 +1543,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own uclalib_event content'] = array(
     'name' => 'delete own uclalib_event content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1318,6 +1553,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own uclalib_resources content'] = array(
     'name' => 'delete own uclalib_resources content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1328,6 +1564,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1338,6 +1575,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in audience'] = array(
     'name' => 'delete terms in audience',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1347,6 +1585,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in events_and_exhibitions_series'] = array(
     'name' => 'delete terms in events_and_exhibitions_series',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1356,6 +1595,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in events_categories'] = array(
     'name' => 'delete terms in events_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1365,6 +1605,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in location_amenities'] = array(
     'name' => 'delete terms in location_amenities',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1374,6 +1615,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in location_equipment'] = array(
     'name' => 'delete terms in location_equipment',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1383,6 +1625,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in location_study_areas'] = array(
     'name' => 'delete terms in location_study_areas',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1392,6 +1635,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in news_categories'] = array(
     'name' => 'delete terms in news_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1401,6 +1645,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in resource_categories'] = array(
     'name' => 'delete terms in resource_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1411,6 +1656,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in staff_departments'] = array(
     'name' => 'delete terms in staff_departments',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1420,6 +1666,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete terms in staff_subject_areas'] = array(
     'name' => 'delete terms in staff_subject_areas',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1429,6 +1676,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any destination content'] = array(
     'name' => 'edit any destination content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1438,6 +1686,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any exhibition content'] = array(
     'name' => 'edit any exhibition content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1447,6 +1696,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any featured_content bean'] = array(
     'name' => 'edit any featured_content bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1457,6 +1707,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any link_list bean'] = array(
     'name' => 'edit any link_list bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1467,6 +1718,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any living_library_gallery bean'] = array(
     'name' => 'edit any living_library_gallery bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1477,6 +1729,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any location content'] = array(
     'name' => 'edit any location content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1486,6 +1739,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any news content'] = array(
     'name' => 'edit any news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1495,6 +1749,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any news_and_events_bean bean'] = array(
     'name' => 'edit any news_and_events_bean bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1505,6 +1760,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any quick_find bean'] = array(
     'name' => 'edit any quick_find bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1515,6 +1771,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any showcase bean'] = array(
     'name' => 'edit any showcase bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1525,6 +1782,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any staff_profile content'] = array(
     'name' => 'edit any staff_profile content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1534,7 +1792,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any static content'] = array(
     'name' => 'edit any static content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -1543,6 +1803,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any text_block bean'] = array(
     'name' => 'edit any text_block bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1553,6 +1814,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any uclalib_event content'] = array(
     'name' => 'edit any uclalib_event content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1562,6 +1824,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any uclalib_resources content'] = array(
     'name' => 'edit any uclalib_resources content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1572,6 +1835,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any upcoming_events bean'] = array(
     'name' => 'edit any upcoming_events bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1602,6 +1866,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own comments'] = array(
     'name' => 'edit own comments',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1612,6 +1877,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own destination content'] = array(
     'name' => 'edit own destination content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1621,6 +1887,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own exhibition content'] = array(
     'name' => 'edit own exhibition content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1630,6 +1897,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own location content'] = array(
     'name' => 'edit own location content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1639,6 +1907,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own news content'] = array(
     'name' => 'edit own news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1648,6 +1917,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own staff_profile content'] = array(
     'name' => 'edit own staff_profile content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1657,7 +1927,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own static content'] = array(
     'name' => 'edit own static content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -1666,6 +1938,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own uclalib_event content'] = array(
     'name' => 'edit own uclalib_event content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'node',
@@ -1675,6 +1948,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own uclalib_resources content'] = array(
     'name' => 'edit own uclalib_resources content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1685,6 +1959,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in audience'] = array(
     'name' => 'edit terms in audience',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1694,6 +1969,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in events_and_exhibitions_series'] = array(
     'name' => 'edit terms in events_and_exhibitions_series',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1703,6 +1979,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in events_categories'] = array(
     'name' => 'edit terms in events_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1712,6 +1989,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in location_amenities'] = array(
     'name' => 'edit terms in location_amenities',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1721,6 +1999,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in location_equipment'] = array(
     'name' => 'edit terms in location_equipment',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1730,6 +2009,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in location_study_areas'] = array(
     'name' => 'edit terms in location_study_areas',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1739,6 +2019,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in news_categories'] = array(
     'name' => 'edit terms in news_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1748,6 +2029,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in resource_categories'] = array(
     'name' => 'edit terms in resource_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1758,6 +2040,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in staff_departments'] = array(
     'name' => 'edit terms in staff_departments',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1767,6 +2050,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit terms in staff_subject_areas'] = array(
     'name' => 'edit terms in staff_subject_areas',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
@@ -1775,14 +2059,18 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'generate features'.
   $permissions['generate features'] = array(
     'name' => 'generate features',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'features',
   );
 
   // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'features',
   );
 
@@ -1790,6 +2078,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['manipulate all queues'] = array(
     'name' => 'manipulate all queues',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1800,6 +2089,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['manipulate queues'] = array(
     'name' => 'manipulate queues',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1809,7 +2099,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'notify of path changes'.
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'pathauto',
   );
 
@@ -1826,6 +2118,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['post comments'] = array(
     'name' => 'post comments',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1845,6 +2138,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1854,7 +2148,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
@@ -1862,6 +2158,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for bean'] = array(
     'name' => 'show format selection for bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1872,6 +2169,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for comment'] = array(
     'name' => 'show format selection for comment',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1882,6 +2180,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for field_collection_item'] = array(
     'name' => 'show format selection for field_collection_item',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1892,6 +2191,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for multifield'] = array(
     'name' => 'show format selection for multifield',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1902,6 +2202,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1912,6 +2213,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for taxonomy_term'] = array(
     'name' => 'show format selection for taxonomy_term',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1922,6 +2224,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for user'] = array(
     'name' => 'show format selection for user',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1932,6 +2235,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format tips'] = array(
     'name' => 'show format tips',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1942,6 +2246,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['show more format tips link'] = array(
     'name' => 'show more format tips link',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1952,6 +2257,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['skip comment approval'] = array(
     'name' => 'skip comment approval',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1961,21 +2267,27 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'switch shortcut sets'.
   $permissions['switch shortcut sets'] = array(
     'name' => 'switch shortcut sets',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'shortcut',
   );
 
   // Exported permission: 'use PHP for settings'.
   $permissions['use PHP for settings'] = array(
     'name' => 'use PHP for settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'php',
   );
 
   // Exported permission: 'use ipe with page manager'.
   $permissions['use ipe with page manager'] = array(
     'name' => 'use ipe with page manager',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels',
   );
 
@@ -1994,6 +2306,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2003,7 +2316,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'use panels caching features'.
   $permissions['use panels caching features'] = array(
     'name' => 'use panels caching features',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels',
   );
 
@@ -2011,6 +2326,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['use panels dashboard'] = array(
     'name' => 'use panels dashboard',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2021,6 +2337,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['use panels in place editing'] = array(
     'name' => 'use panels in place editing',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2030,7 +2347,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'use panels locks'.
   $permissions['use panels locks'] = array(
     'name' => 'use panels locks',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panels',
   );
 
@@ -2038,6 +2357,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2047,7 +2367,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'use text format php_code'.
   $permissions['use text format php_code'] = array(
     'name' => 'use text format php_code',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'filter',
   );
 
@@ -2157,6 +2479,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['view icons'] = array(
     'name' => 'view icons',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2167,6 +2490,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2177,6 +2501,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['view pane admin links'] = array(
     'name' => 'view pane admin links',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2187,6 +2512,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),

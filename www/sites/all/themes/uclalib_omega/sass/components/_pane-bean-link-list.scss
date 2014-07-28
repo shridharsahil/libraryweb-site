@@ -4,28 +4,15 @@
   }
   .field--name-field-link-description,
   .field--name-field-link-link {
-    margin-right: 4px;
+    margin-right: .4em;
     &, div {
       display: inline;
     }
   }
-  // 1. sneaky way to hide the triangle when there is a description
-  // 2. Fix the background color assigned from 1. above, when the
-  // link list has the "gray background" pane style.
   .field--name-field-link-link a {
-    @extend .more-link-triangle-after;
     color: $ucla-blue;
-    &:after {
-      z-index: -1; // 1.
-    }
   }
-  .field--name-field-link-description {
-    background-color: white; // 1.
-  }
-  &.pane-style-background-gray .field--name-field-link-description {
-    background-color: $content-background-gray; // 2.
-  }
-  &.pane-style-background-blue .field--name-field-link-description {
-    background-color: $sidebar-bg-lt-blue; // 2.
+  .no-description .field--name-field-link-link a {
+    @extend .more-link-triangle-after;
   }
 }
