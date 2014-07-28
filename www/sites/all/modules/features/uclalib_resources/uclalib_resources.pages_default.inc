@@ -589,7 +589,6 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'background-blue',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -612,7 +611,6 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'background-blue',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -635,7 +633,6 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'background-blue',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -658,7 +655,6 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'background-blue',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -681,7 +677,6 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'background-blue',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -704,7 +699,6 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'background-blue',
     );
     $pane->css = array();
     $pane->extras = array();
