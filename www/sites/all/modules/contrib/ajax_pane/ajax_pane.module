@@ -46,7 +46,9 @@ function ajax_pane_ctools_plugin_directory($module, $plugin) {
  * If the pane uses context, the task_name, context_string and q variables will
  * be set.
  */
-function ajax_pane_panels_pane_handler($display_id, $pane_id, $task_name = NULL, $context_string = NULL, $request_q = '', $display_args) {
+function ajax_pane_panels_pane_handler($display_key, $pane_id, $task_name = NULL, $context_string = NULL, $request_q = '', $display_args) {
+
+  list($context, $task_name, $handler_name) = explode(':', $display_key);
 
   ctools_include('plugins', 'panels');
   ctools_include('content');
@@ -56,7 +58,21 @@ function ajax_pane_panels_pane_handler($display_id, $pane_id, $task_name = NULL,
     $context_args = ajax_pane_decode_query($request_q);
   }
 
-  $display = panels_load_display($display_id);
+  $task = page_manager_get_task($task_name);
+
+  $handlers = page_manager_load_sorted_handlers($task, '', TRUE);
+  $handler = $handlers[$handler_name];
+  if (isset($handler->conf['display'])) {
+
+    // This display was loaded from code.
+    $display = $handler->conf['display'];
+  }
+  else {
+
+    // The handler is in the database, load the display.
+    $display = panels_load_display($handler->conf['did']);
+  }
+
   // This is display arguments, that must be passed to the view.
   $args = ajax_pane_decode_query($display_args);
   if (!is_null($task_name)) {
@@ -136,7 +152,7 @@ function ajax_pane_panels_pane_content_alter($content, $pane, $args, $context) {
   list($context, $task_name, $handler_name) = explode(':', $display->cache_key);
 
   // Build the esi tag.
-  $url = "ajax-pane/get-pane/{$pane->did}/{$pane->pid}";
+  $url = "ajax-pane/get-pane/{$display->cache_key}/{$pane->pid}";
 
   if (array_key_exists('context', $pane->configuration)) {
     // Add the page-manager task name.
