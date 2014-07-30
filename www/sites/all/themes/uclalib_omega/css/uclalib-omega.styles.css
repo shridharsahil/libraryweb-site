@@ -1158,7 +1158,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399401717');
+  background-image: url('../images/logo-colophon.png?1399407339');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1779,17 +1779,17 @@ a.more-link,
   color: #3283be;
 }
 
-.sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .pane-sub-content {
+.sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .pane-sub-content, .l-region--sidebar-left .pane-uclalib-nav {
   background: #c1daeb;
   margin: 0 -25px;
   padding: 24px 0 15px;
   font-weight: bold;
   font-size: 15px;
 }
-.no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content, .no-gray-sidebar-left .l-region--sidebar-left .pane-sub-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sub-content {
+.no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content, .no-gray-sidebar-left .l-region--sidebar-left .pane-sub-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sub-content, .no-gray-sidebar-left .l-region--sidebar-left .pane-uclalib-nav, .l-region--sidebar-left .no-gray-sidebar-left .pane-uclalib-nav {
   margin: 0;
 }
-.sidebar-tier-1 .pane-title, .l-region--sidebar-left .pane-sibling-content .pane-title, .l-region--sidebar-left .pane-sub-content .pane-title {
+.sidebar-tier-1 .pane-title, .l-region--sidebar-left .pane-sibling-content .pane-title, .l-region--sidebar-left .pane-sub-content .pane-title, .l-region--sidebar-left .pane-uclalib-nav .pane-title {
   background: #3283be;
   color: #fff;
   font-size: 15px;
@@ -1797,18 +1797,18 @@ a.more-link,
   margin: 0;
   padding: 10px 8px 10px 28px;
 }
-.sidebar-tier-1 ul, .l-region--sidebar-left .pane-sibling-content ul, .l-region--sidebar-left .pane-sub-content ul {
+.sidebar-tier-1 ul, .l-region--sidebar-left .pane-sibling-content ul, .l-region--sidebar-left .pane-sub-content ul, .l-region--sidebar-left .pane-uclalib-nav ul {
   margin: 0;
   padding: 0 8px 0 28px;
 }
-.sidebar-tier-1 ul .leaf, .l-region--sidebar-left .pane-sibling-content ul .leaf, .l-region--sidebar-left .pane-sub-content ul .leaf {
+.sidebar-tier-1 ul .leaf, .l-region--sidebar-left .pane-sibling-content ul .leaf, .l-region--sidebar-left .pane-sub-content ul .leaf, .l-region--sidebar-left .pane-uclalib-nav ul .leaf {
   color: #3283be;
   line-height: 1.429em;
   list-style: none;
   margin: 0.643em 0 1.143em;
 }
 
-.sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .pane-sub-content + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content, .l-region--sidebar-left .pane-sub-content + .pane-sibling-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-sub-content, .l-region--sidebar-left .pane-sibling-content + .pane-sub-content, .l-region--sidebar-left .pane-sub-content + .pane-sub-content {
+.sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .pane-sub-content + .sidebar-tier-1, .l-region--sidebar-left .pane-uclalib-nav + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content, .l-region--sidebar-left .pane-sub-content + .pane-sibling-content, .l-region--sidebar-left .pane-uclalib-nav + .pane-sibling-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-sub-content, .l-region--sidebar-left .pane-sibling-content + .pane-sub-content, .l-region--sidebar-left .pane-sub-content + .pane-sub-content, .l-region--sidebar-left .pane-uclalib-nav + .pane-sub-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-uclalib-nav, .l-region--sidebar-left .pane-sibling-content + .pane-uclalib-nav, .l-region--sidebar-left .pane-sub-content + .pane-uclalib-nav, .l-region--sidebar-left .pane-uclalib-nav + .pane-uclalib-nav {
   margin-top: -15px;
   padding-top: 0;
 }
