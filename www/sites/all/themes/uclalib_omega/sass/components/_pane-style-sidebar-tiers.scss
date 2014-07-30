@@ -8,22 +8,33 @@
   .no-gray-sidebar-left & {
     margin: 0;
   }
+   li,
   .pane-title {
-    background: $ucla-blue;
-    color: #fff;
     font-size: 15px;
     font-weight: bold;
+    line-height: 1.429em;
+    //margin: 0.643em 0 1.143em;
     margin: 0;
     padding: 10px 8px 10px 28px;
+    a {
+      color: $ucla-blue;
+      margin: -10px -8px -10px -28px;
+      padding: 10px 8px 10px 28px;
+      display: block;
+    }
+    a.active {
+      background: $ucla-blue;
+      color: #000;
+    }
+    a.active:hover {
+      text-decoration: none;
+    }
   }
   ul {
     margin: 0;
-    padding: 0 8px 0 28px;
+    padding: 0;
     li {
-      color: $ucla-blue;
-      line-height: 1.429em;
-      list-style: none;
-      margin: 0.643em 0 1.143em;
+      list-style: none !important;
     }
   }
 }
