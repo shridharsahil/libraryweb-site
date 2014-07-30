@@ -1284,6 +1284,10 @@ a.more-link,
   margin: 0;
 }
 
+.uclalib-nav-breadcrumb + h1 {
+  margin-top: 0;
+}
+
 .pane-daterangepicker-results .view-filters {
   margin-bottom: 2em;
 }
