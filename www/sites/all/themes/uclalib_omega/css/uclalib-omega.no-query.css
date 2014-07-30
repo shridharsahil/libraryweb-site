@@ -1826,7 +1826,7 @@ a.more-link,
   text-decoration: none;
 }
 .sidebar-tier-1 .pane-title a, .l-region--sidebar-left .pane-sibling-content .pane-title a, .l-region--sidebar-left .pane-sub-content .pane-title a, .l-region--sidebar-left .pane-uclalib-nav .pane-title a {
-  padding-left: 10px;
+  padding-left: 18px;
 }
 .sidebar-tier-1 .pane-title a .active, .l-region--sidebar-left .pane-sibling-content .pane-title a .active, .l-region--sidebar-left .pane-sub-content .pane-title a .active, .l-region--sidebar-left .pane-uclalib-nav .pane-title a .active {
   padding-left: 28px;
