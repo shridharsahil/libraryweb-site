@@ -1284,6 +1284,10 @@ a.more-link,
   margin: 0;
 }
 
+.uclalib-nav-breadcrumb, .uclalib-nav-breadcrumb a {
+  color: #d7d9da;
+}
+
 .uclalib-nav-breadcrumb + h1 {
   margin-top: 0;
 }
