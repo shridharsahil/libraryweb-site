@@ -50,14 +50,6 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
   $parent = $menu_trail[count($menu_trail) - 2];
   $current = $menu_trail[count($menu_trail) - 1];
 
-  // This is a sub-section or below, the title should link to the parent.
-  if (count($menu_trail) > 2) {
-    $block->content = '<h2 class="pane-title">' . l(t('At a glance'), $parent['link_path']) . '</h2>';
-  }
-  else {
-    $block->content = '<h2 class="pane-title">' . l(t('At a glance'), $current['link_path']) . '</h2>';
-  }
-
   // Use menu_block module to generate the tree.
   // We fake a configuration for the module.
   $config = array(
@@ -80,7 +72,9 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
   $data = menu_tree_build($config);
 
   // Find out if this item has children.
+  $has_children = FALSE;
   if (isset($data['content']['#content'][$current['mlid']]['#below']) && $data['content']['#content'][$current['mlid']]['#below']) {
+    $has_children = TRUE;
     // This item has children, re-generate the menu tree.
     $config['parent_mlid'] = $current['mlid'];
     $data = menu_tree_build($config);
@@ -97,6 +91,19 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
 
   // Render the result.
   $output = render($data['content']);
+
+  // This is a sub-section or below, the title should link to the parent.
+  if (count($menu_trail) > 2) {
+    if ($has_children) {
+      $block->content = '<h2 class="pane-title">' . l(t('At a glance'), $current['link_path']) . '</h2>';
+    } else {
+      $block->content = '<h2 class="pane-title">' . l(t('At a glance'), $parent['link_path']) . '</h2>';
+    }
+  }
+  else {
+    $block->content = '<h2 class="pane-title">' . l(t('At a glance'), $current['link_path']) . '</h2>';
+  }
+
 
   $block->module = 'uclalib_navigation';
   $block->delta = $subtype;
