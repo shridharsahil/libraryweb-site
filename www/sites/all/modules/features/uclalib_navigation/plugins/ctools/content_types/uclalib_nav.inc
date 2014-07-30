@@ -62,7 +62,6 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
   // We fake a configuration for the module.
   $config = array(
     'menu_name' => 'main-menu',
-    'parent_mlid' => $parent['mlid'],
     'level' => 0,
     'follow' => 0,
     'depth' => 5,
@@ -71,11 +70,17 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
     'sort' => FALSE,
     'title_link' => '',
   );
+  if (isset($parent['mlid'])) {
+    $config['parent_mlid'] = $parent['mlid'];
+  } else {
+    $config['parent_mlid'] = $current['mlid'];
+  }
+
   // menu_tree_build is actually a menu_block.module function.
   $data = menu_tree_build($config);
 
   // Find out if this item has children.
-  if ($data['content']['#content'][$current['mlid']]['#below']) {
+  if (isset($data['content']['#content'][$current['mlid']]['#below']) && $data['content']['#content'][$current['mlid']]['#below']) {
     // This item has children, re-generate the menu tree.
     $config['parent_mlid'] = $current['mlid'];
     $data = menu_tree_build($config);
