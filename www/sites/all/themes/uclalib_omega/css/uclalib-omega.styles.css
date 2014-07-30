@@ -1825,6 +1825,12 @@ a.more-link,
 .l-region--sidebar-left .pane-uclalib-nav .pane-title a.active:hover {
   text-decoration: none;
 }
+.sidebar-tier-1 .pane-title a, .l-region--sidebar-left .pane-sibling-content .pane-title a, .l-region--sidebar-left .pane-sub-content .pane-title a, .l-region--sidebar-left .pane-uclalib-nav .pane-title a {
+  padding-left: 10px;
+}
+.sidebar-tier-1 .pane-title a .active, .l-region--sidebar-left .pane-sibling-content .pane-title a .active, .l-region--sidebar-left .pane-sub-content .pane-title a .active, .l-region--sidebar-left .pane-uclalib-nav .pane-title a .active {
+  padding-left: 28px;
+}
 .sidebar-tier-1 ul, .l-region--sidebar-left .pane-sibling-content ul, .l-region--sidebar-left .pane-sub-content ul, .l-region--sidebar-left .pane-uclalib-nav ul {
   margin: 0;
   padding: 0;

@@ -30,6 +30,16 @@
       text-decoration: none;
     }
   }
+  // Outdent inactive pane title,
+  // to insinuate hierarchy.
+  .pane-title {
+    a {
+      padding-left: 10px;
+      .active {
+        padding-left: 28px;
+      }
+    }
+  }
   ul {
     margin: 0;
     padding: 0;
