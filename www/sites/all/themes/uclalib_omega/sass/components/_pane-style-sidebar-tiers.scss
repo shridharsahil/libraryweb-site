@@ -35,6 +35,19 @@
     padding: 0;
     li {
       list-style: none !important;
+      li {
+        padding-right: 0;
+        padding-left: 18px;
+        a {
+          margin-right: 0;
+          margin-left: -18px;
+          padding-right: 0;
+          padding-left: 18px;
+        }
+      }
+    }
+    ul {
+      margin-top: 10px;
     }
   }
 }

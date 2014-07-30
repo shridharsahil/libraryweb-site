@@ -1832,6 +1832,19 @@ a.more-link,
 .sidebar-tier-1 ul li, .l-region--sidebar-left .pane-sibling-content ul li, .l-region--sidebar-left .pane-sub-content ul li, .l-region--sidebar-left .pane-uclalib-nav ul li {
   list-style: none !important;
 }
+.sidebar-tier-1 ul li li, .l-region--sidebar-left .pane-sibling-content ul li li, .l-region--sidebar-left .pane-sub-content ul li li, .l-region--sidebar-left .pane-uclalib-nav ul li li {
+  padding-right: 0;
+  padding-left: 18px;
+}
+.sidebar-tier-1 ul li li a, .l-region--sidebar-left .pane-sibling-content ul li li a, .l-region--sidebar-left .pane-sub-content ul li li a, .l-region--sidebar-left .pane-uclalib-nav ul li li a {
+  margin-right: 0;
+  margin-left: -18px;
+  padding-right: 0;
+  padding-left: 18px;
+}
+.sidebar-tier-1 ul ul, .l-region--sidebar-left .pane-sibling-content ul ul, .l-region--sidebar-left .pane-sub-content ul ul, .l-region--sidebar-left .pane-uclalib-nav ul ul {
+  margin-top: 10px;
+}
 
 .sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .pane-sub-content + .sidebar-tier-1, .l-region--sidebar-left .pane-uclalib-nav + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content, .l-region--sidebar-left .pane-sub-content + .pane-sibling-content, .l-region--sidebar-left .pane-uclalib-nav + .pane-sibling-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-sub-content, .l-region--sidebar-left .pane-sibling-content + .pane-sub-content, .l-region--sidebar-left .pane-sub-content + .pane-sub-content, .l-region--sidebar-left .pane-uclalib-nav + .pane-sub-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-uclalib-nav, .l-region--sidebar-left .pane-sibling-content + .pane-uclalib-nav, .l-region--sidebar-left .pane-sub-content + .pane-uclalib-nav, .l-region--sidebar-left .pane-uclalib-nav + .pane-uclalib-nav {
   margin-top: -15px;
