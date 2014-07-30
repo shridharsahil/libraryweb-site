@@ -81,9 +81,12 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
 
   // Find out if this item has children.
   if (isset($data['content']['#content'][$current['mlid']]['#below']) && $data['content']['#content'][$current['mlid']]['#below']) {
-    // This item has children, re-generate the menu tree.
-    $config['parent_mlid'] = $current['mlid'];
-    $data = menu_tree_build($config);
+    // This item has children, remove any siblings.
+    foreach ($data['content']['#content'] as $key => $item) {
+      if (is_numeric($key) && ($key != $current['mlid'])) {
+        unset($data['content']['#content'][$key]);
+      }
+    }
   }
 
   // Render the result.
