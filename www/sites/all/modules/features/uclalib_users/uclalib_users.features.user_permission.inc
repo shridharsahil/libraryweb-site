@@ -1004,6 +1004,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
