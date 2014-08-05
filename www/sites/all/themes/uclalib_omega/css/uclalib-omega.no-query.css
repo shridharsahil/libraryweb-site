@@ -727,6 +727,10 @@ a[href="#main-content"] {
   padding-top: 35px;
 }
 
+.node-type-uclalib-event .pane-meta-social {
+  float: right;
+}
+
 .pane-node-field-event-subtitle,
 .pane-node-field-exhibition-subtitle {
   font-size: 1.286em;

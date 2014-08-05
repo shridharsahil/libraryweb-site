@@ -487,6 +487,28 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->uuid = '6d036f90-9c87-43c0-a4a6-a3c93b58bace';
     $display->content['new-6d036f90-9c87-43c0-a4a6-a3c93b58bace'] = $pane;
     $display->panels['top_left_main'][2] = 'new-6d036f90-9c87-43c0-a4a6-a3c93b58bace';
+    $pane = new stdClass();
+    $pane->pid = 'new-37b48279-dbbf-4550-9757-41088bed7f64';
+    $pane->panel = 'top_right_sidebar';
+    $pane->type = 'meta_social';
+    $pane->subtype = 'meta_social';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '37b48279-dbbf-4550-9757-41088bed7f64';
+    $display->content['new-37b48279-dbbf-4550-9757-41088bed7f64'] = $pane;
+    $display->panels['top_right_sidebar'][0] = 'new-37b48279-dbbf-4550-9757-41088bed7f64';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-8a8f197c-f09b-4ca9-8c8a-5ec0639c74f7';
   $handler->conf['display'] = $display;
