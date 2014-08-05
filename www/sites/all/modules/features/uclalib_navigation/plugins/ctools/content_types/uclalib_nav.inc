@@ -78,7 +78,7 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
 
   // Find out if this item has children.
   $has_children = FALSE;
-  if (isset($data['content']['#content'][$current['mlid']]['#below']) && $data['content']['#content'][$current['mlid']]['#below']) {
+  if (is_array($data['content']) && isset($data['content']['#content'][$current['mlid']]['#below']) && $data['content']['#content'][$current['mlid']]['#below']) {
     $has_children = TRUE;
     // This item has children, re-generate the menu tree.
     $config['parent_mlid'] = $current['mlid'];
