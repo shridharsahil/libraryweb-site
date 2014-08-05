@@ -143,7 +143,7 @@ function uclalib_opening_hours_generate_table_header($day, $nid) {
   return $header;
 }
 
-function uclalib_opening_hours_generate_table_rows($nodes, $day) {
+function uclalib_opening_hours_generate_table_rows($this_nid, $nodes, $day) {
   $rows = array();
 
   // Create an interval of 1 day to add to the date for each week day.
@@ -152,6 +152,11 @@ function uclalib_opening_hours_generate_table_rows($nodes, $day) {
   foreach ($nodes as $nid => $title) {
     $this_day = clone($day);
     // Add the title to the first column.
+    // Link destinations (all titles except the first) to their respective pages.
+    if ($this_nid != $nid) {
+      $url = url('node/' . $nid);
+      $title = "<a href='$url'>$title</a>";
+    }
     $row = array(array('data' => $title, 'class' => array('title')));
 
     $blocked_days = variable_get('opening_hours_blocked_days', array());
@@ -230,7 +235,9 @@ function uclalib_opening_hours_generate_table($node, $start = NULL) {
     }
   }
 
-  $rows = uclalib_opening_hours_generate_table_rows($nodes, $day);
+  // Pass the current node id as we treat it differently from other nodes when making table rows
+  $this_nid = $node->nid;
+  $rows = uclalib_opening_hours_generate_table_rows($this_nid, $nodes, $day);
 
   $output = theme('table', array(
     'header' => $header,
