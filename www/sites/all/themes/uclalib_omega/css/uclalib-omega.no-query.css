@@ -801,6 +801,11 @@ a[href="#main-content"] {
   margin-top: 8px;
 }
 
+.pane-exhibitions-highlight-exhibition-highlight-pane .more-link, .pane-exhibitions-highlight-exhibition-highlight-pane .more-link-block a, .more-link-block .pane-exhibitions-highlight-exhibition-highlight-pane a {
+  text-align: left;
+  margin-top: 10px;
+}
+
 .pane-other-events-panel-pane-1,
 .pane-related-events-panel-pane-1 {
   border-top: 1px solid #adcde5;
