@@ -8,22 +8,56 @@
   .no-gray-sidebar-left & {
     margin: 0;
   }
+   li,
   .pane-title {
-    background: $ucla-blue;
-    color: #fff;
     font-size: 15px;
     font-weight: bold;
+    line-height: 1.429em;
+    //margin: 0.643em 0 1.143em;
     margin: 0;
     padding: 10px 8px 10px 28px;
+    a {
+      color: $ucla-blue;
+      margin: -10px -8px -10px -28px;
+      padding: 10px 8px 10px 28px;
+      display: block;
+    }
+    a.active {
+      background: $ucla-blue;
+      color: #000;
+    }
+    a.active:hover {
+      text-decoration: none;
+    }
+  }
+  // Outdent inactive pane title,
+  // to insinuate hierarchy.
+  .pane-title {
+    a {
+      padding-left: 18px;
+      .active {
+        padding-left: 28px;
+      }
+    }
   }
   ul {
     margin: 0;
-    padding: 0 8px 0 28px;
-    .leaf {
-      color: $ucla-blue;
-      line-height: 1.429em;
-      list-style: none;
-      margin: 0.643em 0 1.143em;
+    padding: 0;
+    li {
+      list-style: none !important;
+      li {
+        padding-right: 0;
+        padding-left: 18px;
+        a {
+          margin-right: 0;
+          margin-left: -18px;
+          padding-right: 0;
+          padding-left: 18px;
+        }
+      }
+    }
+    ul {
+      margin-top: 10px;
     }
   }
 }

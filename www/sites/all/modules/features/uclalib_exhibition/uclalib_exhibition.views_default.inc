@@ -211,6 +211,21 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Exhibition End Date */
+  $handler->display->display_options['fields']['field_exhibition_end']['id'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
+  $handler->display->display_options['fields']['field_exhibition_end']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = 'Through [field_exhibition_end]';
+  $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
+    'format_type' => 'month_with_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -245,17 +260,6 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'exhibition' => 'exhibition',
-  );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_exhibition_dates_value2']['id'] = 'field_exhibition_dates_value2';
-  $handler->display->display_options['filters']['field_exhibition_dates_value2']['table'] = 'field_data_field_exhibition_dates';
-  $handler->display->display_options['filters']['field_exhibition_dates_value2']['field'] = 'field_exhibition_dates_value2';
-  $handler->display->display_options['filters']['field_exhibition_dates_value2']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_exhibition_dates_value2']['value'] = array(
-    'min' => NULL,
-    'max' => NULL,
-    'value' => NULL,
-    'type' => 'date',
   );
 
   /* Display: Content pane */

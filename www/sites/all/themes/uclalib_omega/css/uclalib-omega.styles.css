@@ -727,6 +727,10 @@ a[href="#main-content"] {
   padding-top: 35px;
 }
 
+.node-type-uclalib-event .pane-meta-social {
+  float: right;
+}
+
 .pane-node-field-event-subtitle,
 .pane-node-field-exhibition-subtitle {
   font-size: 1.286em;
@@ -799,6 +803,11 @@ a[href="#main-content"] {
 .pane-exhibitions-highlight-exhibition-highlight-pane .views-field-field-exhibition-end {
   font-style: italic;
   margin-top: 8px;
+}
+
+.pane-exhibitions-highlight-exhibition-highlight-pane .more-link, .pane-exhibitions-highlight-exhibition-highlight-pane .more-link-block a, .more-link-block .pane-exhibitions-highlight-exhibition-highlight-pane a {
+  text-align: left;
+  margin-top: 10px;
 }
 
 .pane-other-events-panel-pane-1,
@@ -1158,7 +1167,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399401717');
+  background-image: url('../images/logo-colophon.png?1399382991');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1282,6 +1291,14 @@ a.more-link,
 }
 .pane-custom-breadcrumb p {
   margin: 0;
+}
+
+.uclalib-nav-breadcrumb, .uclalib-nav-breadcrumb a {
+  color: #666666;
+}
+
+.uclalib-nav-breadcrumb + h1 {
+  margin-top: 0;
 }
 
 .pane-daterangepicker-results .view-filters {
@@ -1779,36 +1796,80 @@ a.more-link,
   color: #3283be;
 }
 
-.sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .pane-sub-content {
+.sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .pane-sub-content, .l-region--sidebar-left .pane-uclalib-nav {
   background: #c1daeb;
   margin: 0 -25px;
   padding: 24px 0 15px;
   font-weight: bold;
   font-size: 15px;
 }
-.no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content, .no-gray-sidebar-left .l-region--sidebar-left .pane-sub-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sub-content {
+.no-gray-sidebar-left .sidebar-tier-1, .no-gray-sidebar-left .l-region--sidebar-left .pane-sibling-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sibling-content, .no-gray-sidebar-left .l-region--sidebar-left .pane-sub-content, .l-region--sidebar-left .no-gray-sidebar-left .pane-sub-content, .no-gray-sidebar-left .l-region--sidebar-left .pane-uclalib-nav, .l-region--sidebar-left .no-gray-sidebar-left .pane-uclalib-nav {
   margin: 0;
 }
-.sidebar-tier-1 .pane-title, .l-region--sidebar-left .pane-sibling-content .pane-title, .l-region--sidebar-left .pane-sub-content .pane-title {
-  background: #3283be;
-  color: #fff;
+.sidebar-tier-1 li, .l-region--sidebar-left .pane-sibling-content li, .l-region--sidebar-left .pane-sub-content li, .l-region--sidebar-left .pane-uclalib-nav li,
+.sidebar-tier-1 .pane-title,
+.l-region--sidebar-left .pane-sibling-content .pane-title,
+.l-region--sidebar-left .pane-sub-content .pane-title,
+.l-region--sidebar-left .pane-uclalib-nav .pane-title {
   font-size: 15px;
   font-weight: bold;
+  line-height: 1.429em;
   margin: 0;
   padding: 10px 8px 10px 28px;
 }
-.sidebar-tier-1 ul, .l-region--sidebar-left .pane-sibling-content ul, .l-region--sidebar-left .pane-sub-content ul {
-  margin: 0;
-  padding: 0 8px 0 28px;
-}
-.sidebar-tier-1 ul .leaf, .l-region--sidebar-left .pane-sibling-content ul .leaf, .l-region--sidebar-left .pane-sub-content ul .leaf {
+.sidebar-tier-1 li a, .l-region--sidebar-left .pane-sibling-content li a, .l-region--sidebar-left .pane-sub-content li a, .l-region--sidebar-left .pane-uclalib-nav li a,
+.sidebar-tier-1 .pane-title a,
+.l-region--sidebar-left .pane-sibling-content .pane-title a,
+.l-region--sidebar-left .pane-sub-content .pane-title a,
+.l-region--sidebar-left .pane-uclalib-nav .pane-title a {
   color: #3283be;
-  line-height: 1.429em;
-  list-style: none;
-  margin: 0.643em 0 1.143em;
+  margin: -10px -8px -10px -28px;
+  padding: 10px 8px 10px 28px;
+  display: block;
+}
+.sidebar-tier-1 li a.active, .l-region--sidebar-left .pane-sibling-content li a.active, .l-region--sidebar-left .pane-sub-content li a.active, .l-region--sidebar-left .pane-uclalib-nav li a.active,
+.sidebar-tier-1 .pane-title a.active,
+.l-region--sidebar-left .pane-sibling-content .pane-title a.active,
+.l-region--sidebar-left .pane-sub-content .pane-title a.active,
+.l-region--sidebar-left .pane-uclalib-nav .pane-title a.active {
+  background: #3283be;
+  color: #000;
+}
+.sidebar-tier-1 li a.active:hover, .l-region--sidebar-left .pane-sibling-content li a.active:hover, .l-region--sidebar-left .pane-sub-content li a.active:hover, .l-region--sidebar-left .pane-uclalib-nav li a.active:hover,
+.sidebar-tier-1 .pane-title a.active:hover,
+.l-region--sidebar-left .pane-sibling-content .pane-title a.active:hover,
+.l-region--sidebar-left .pane-sub-content .pane-title a.active:hover,
+.l-region--sidebar-left .pane-uclalib-nav .pane-title a.active:hover {
+  text-decoration: none;
+}
+.sidebar-tier-1 .pane-title a, .l-region--sidebar-left .pane-sibling-content .pane-title a, .l-region--sidebar-left .pane-sub-content .pane-title a, .l-region--sidebar-left .pane-uclalib-nav .pane-title a {
+  padding-left: 18px;
+}
+.sidebar-tier-1 .pane-title a .active, .l-region--sidebar-left .pane-sibling-content .pane-title a .active, .l-region--sidebar-left .pane-sub-content .pane-title a .active, .l-region--sidebar-left .pane-uclalib-nav .pane-title a .active {
+  padding-left: 28px;
+}
+.sidebar-tier-1 ul, .l-region--sidebar-left .pane-sibling-content ul, .l-region--sidebar-left .pane-sub-content ul, .l-region--sidebar-left .pane-uclalib-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar-tier-1 ul li, .l-region--sidebar-left .pane-sibling-content ul li, .l-region--sidebar-left .pane-sub-content ul li, .l-region--sidebar-left .pane-uclalib-nav ul li {
+  list-style: none !important;
+}
+.sidebar-tier-1 ul li li, .l-region--sidebar-left .pane-sibling-content ul li li, .l-region--sidebar-left .pane-sub-content ul li li, .l-region--sidebar-left .pane-uclalib-nav ul li li {
+  padding-right: 0;
+  padding-left: 18px;
+}
+.sidebar-tier-1 ul li li a, .l-region--sidebar-left .pane-sibling-content ul li li a, .l-region--sidebar-left .pane-sub-content ul li li a, .l-region--sidebar-left .pane-uclalib-nav ul li li a {
+  margin-right: 0;
+  margin-left: -18px;
+  padding-right: 0;
+  padding-left: 18px;
+}
+.sidebar-tier-1 ul ul, .l-region--sidebar-left .pane-sibling-content ul ul, .l-region--sidebar-left .pane-sub-content ul ul, .l-region--sidebar-left .pane-uclalib-nav ul ul {
+  margin-top: 10px;
 }
 
-.sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .pane-sub-content + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content, .l-region--sidebar-left .pane-sub-content + .pane-sibling-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-sub-content, .l-region--sidebar-left .pane-sibling-content + .pane-sub-content, .l-region--sidebar-left .pane-sub-content + .pane-sub-content {
+.sidebar-tier-1 + .sidebar-tier-1, .l-region--sidebar-left .pane-sibling-content + .sidebar-tier-1, .l-region--sidebar-left .pane-sub-content + .sidebar-tier-1, .l-region--sidebar-left .pane-uclalib-nav + .sidebar-tier-1, .l-region--sidebar-left .sidebar-tier-1 + .pane-sibling-content, .l-region--sidebar-left .pane-sibling-content + .pane-sibling-content, .l-region--sidebar-left .pane-sub-content + .pane-sibling-content, .l-region--sidebar-left .pane-uclalib-nav + .pane-sibling-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-sub-content, .l-region--sidebar-left .pane-sibling-content + .pane-sub-content, .l-region--sidebar-left .pane-sub-content + .pane-sub-content, .l-region--sidebar-left .pane-uclalib-nav + .pane-sub-content, .l-region--sidebar-left .sidebar-tier-1 + .pane-uclalib-nav, .l-region--sidebar-left .pane-sibling-content + .pane-uclalib-nav, .l-region--sidebar-left .pane-sub-content + .pane-uclalib-nav, .l-region--sidebar-left .pane-uclalib-nav + .pane-uclalib-nav {
   margin-top: -15px;
   padding-top: 0;
 }

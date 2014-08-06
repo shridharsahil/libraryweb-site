@@ -134,7 +134,6 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['fields']['field_icon']['label'] = '';
   $handler->display->display_options['fields']['field_icon']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_icon']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_icon']['empty'] = '[name]';
   $handler->display->display_options['fields']['field_icon']['click_sort_column'] = 'bundle';
   $handler->display->display_options['fields']['field_icon']['settings'] = array(
     'link_to_content' => 0,
@@ -145,7 +144,7 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['fields']['tooltip']['table'] = 'views';
   $handler->display->display_options['fields']['tooltip']['field'] = 'tooltip';
   $handler->display->display_options['fields']['tooltip']['label'] = '';
-  $handler->display->display_options['fields']['tooltip']['alter']['text'] = '[field_icon]';
+  $handler->display->display_options['fields']['tooltip']['alter']['text'] = '[field_icon] [name]';
   $handler->display->display_options['fields']['tooltip']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['tooltip']['tooltip_text'] = '[name]';
   $handler->display->display_options['fields']['tooltip']['tooltip_hide_if_equal'] = 1;

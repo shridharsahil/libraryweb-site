@@ -53,12 +53,15 @@ function uclalib_navigation_ctools_content_types_sibling_content_render($subtype
     return;
   }
 
-  menu_node_prepare($node);
-  if (!isset($node->menu['mlid']) || empty($node->menu['mlid'])) {
+  // We need to clone the node as menu_node_prepare() may cause data loss.
+  // @see http://drupal.org/node/1317926
+  $menu_node = clone $node;
+  menu_node_prepare($menu_node);
+  if (!isset($menu_node->menu['mlid']) || empty($menu_node->menu['mlid'])) {
     return;
   }
 
-  $link = $node->menu;
+  $link = $menu_node->menu;
 
   // Use menu_block module to generate the tree.
   // We fake a configuration for the module.

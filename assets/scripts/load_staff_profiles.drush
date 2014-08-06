@@ -1,0 +1,113 @@
+<?php
+  // clean up input data
+  // create staff profile node
+
+  // drush doesn't recognize php argc/argv
+  // Get first (and only) needed command-line parameter
+  $datafile = drush_shift();
+  if (is_null($datafile)) {
+    print "Usage: drush @bs scr load_staff_profiles.drush datafile\n";
+    print "where datafile is a tab-delimited file with the appropriate staff data.\n";
+    exit(1);
+  }
+
+  // PHP (or drush?) needs full absolute path to file - relative path doesn't work
+  // PHP realpath and dirname don't help because drush has already switched to its own context.
+  // Either provide full absolute path to datafile on commandline, or use wrapper script.
+  print "Processing $datafile...\n";
+
+  // Open file and process each line
+  $handle = fopen($datafile, "r");
+  if ($handle) {
+    while (($line = fgets($handle)) !== false) {
+      // Strip CR/LF from line
+      $line = str_replace(array("\r", "\n"), "", $line);
+      // Tab-delimited text file, one header row, with fields:
+      // LAST_NAME / FIRST_NAME / TITLE / WORK_UNIT / DEPT_CODE / WORK_LOCATION / MAILCODE / PHONE / EMAIL
+      $parts = explode("\t", $line);
+      // Ignore header row, process the rest
+      if ($parts[0] != "LAST_NAME") {
+	// Only selected fields are wanted, for now
+	// Bundle data into array for later processing
+	$data = array(
+          'last_name' => $parts[0],
+          'first_name' => $parts[1],
+          'job_title' => $parts[2],
+          'email' => $parts[8],
+        );
+
+	// Add calculated elements
+	$data['title'] = $data['first_name'] . ' ' . $data['last_name'];
+	$data['phone'] = get_full_phone_number($parts[7]);
+
+	// var_dump($data);
+
+        add_staff_profile ($data);
+
+      } // end of $parts handling
+    } // end of while
+  } else {
+    // Error opening file
+    print "ERROR: Unable to open file: $datafile\n";
+    exit(1);
+  } // end of if($handle)
+  
+  fclose($handle);
+
+  // end of main program - supporting functions below
+
+  function add_staff_profile ($data) {
+    print_r($data);
+    $node = new stdClass();
+    // The constant values
+    $node->language = LANGUAGE_NONE;
+    $node->status = NODE_PUBLISHED;
+    $node->promote = NODE_NOT_PROMOTED;
+    $node->comment = COMMENT_NODE_HIDDEN;
+    $node->type = 'staff_profile';
+
+    node_object_prepare($node);
+    $node->uid = 1; // Admin user, unless someone says otherwise
+
+    // The variable values
+    $node->title = $data['title'];
+    $node->field_staff_first_name[$node->language][0]['value'] = $data['first_name'];
+    $node->field_staff_last_name[$node->language][0]['value'] = $data['last_name'];
+    // Email field uses 'email' instead of 'value' like Text fields
+    $node->field_staff_email[$node->language][0]['email'] = $data['email'];
+    $node->field_staff_job_title[$node->language][0]['value'] = $data['job_title'];
+    $node->field_staff_phone[$node->language][0]['value'] = $data['phone'];
+
+    // Save it
+    $node = node_submit($node);
+    node_save($node);
+    echo "Node with nid " . $node->nid . " saved!\n";
+  }
+
+  function get_full_phone_number ($extension) {
+    // Source data has 5-digit extensions, like 68312
+    // Convert to full 10-digit US phone numbers, based on first digit of extension.
+    // Use format Drupal expects: nnn.nnn.nnnn, e.g.:
+    // $area_code.$prefix.$last_digits
+    // Input data may have multiple extensions, like 12345, 23456; handle only the first one.
+
+    $area_code = "310";
+    $first_digit = substr($extension, 0, 1);
+    $last_digits = substr($extension, 1, 4);
+
+    // Prefixes: https://kb.ucla.edu/articles/ucla-campus-telephone-prefixes
+    switch ($first_digit) {
+      case "2": $prefix = "312"; break;
+      case "3": $prefix = "983"; break;
+      case "4": $prefix = "794"; break;
+      case "5": $prefix = "825"; break;
+      case "6": $prefix = "206"; break;
+      case "7": $prefix = "267"; break;
+      case "9": $prefix = "319"; break;
+      default: $prefix = "";
+    }
+    $full_phone = $area_code . '.' . $prefix . '.' . $last_digits;
+    return $full_phone;
+  }
+?>
+

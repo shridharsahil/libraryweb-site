@@ -60,3 +60,10 @@ function uclalib_system_update_7007(&$sandbox) {
 function uclalib_system_update_7008(&$sandbox) {
   module_disable(array('comment'));
 }
+
+/**
+ * Enable Autocomplete Deluxe module.
+ */
+function uclalib_system_update_7009(&$sandbox) {
+  module_enable(array('autocomplete_deluxe'));
+}

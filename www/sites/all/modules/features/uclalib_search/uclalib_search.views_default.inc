@@ -429,7 +429,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_last_name']['field'] = 'field_staff_last_name';
   $handler->display->display_options['fields']['field_staff_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_staff_last_name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_staff_last_name']['alter']['text'] = '<a href="node/[nid]">[field_staff_first_name] [field_staff_last_name]</a>';
+  $handler->display->display_options['fields']['field_staff_last_name']['alter']['text'] = '[field_staff_first_name] [field_staff_last_name]';
   $handler->display->display_options['fields']['field_staff_last_name']['element_label_colon'] = FALSE;
   /* Field: Indexed Node: Staff Job Title */
   $handler->display->display_options['fields']['field_staff_job_title']['id'] = 'field_staff_job_title';

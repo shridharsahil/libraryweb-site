@@ -26,9 +26,13 @@ function uclalib_navigation_ctools_plugin_directory($owner, $plugin_type) {
  * @return bool|mixed
  */
 function uclalib_navigation_menu_get_parent($node) {
-  menu_node_prepare($node);
-  if (isset($node->menu['plid'])) {
-    $pitem = menu_link_load($node->menu['plid']);
+
+  // We need to clone the node as menu_node_prepare() may cause data loss.
+  // @see http://drupal.org/node/1317926
+  $menu_node = clone $node;
+  menu_node_prepare($menu_node);
+  if (isset($menu_node->menu['plid'])) {
+    $pitem = menu_link_load($menu_node->menu['plid']);
     if ($pitem['router_path'] == 'node/%') {
       $matches = array();
       if (preg_match('/^node\/([0-9]+)$/', $pitem['link_path'], $matches)) {
@@ -47,11 +51,15 @@ function uclalib_navigation_menu_get_parent($node) {
  * @return bool|mixed
  */
 function uclalib_navigation_menu_get_about($node) {
-  menu_node_prepare($node);
-  if (isset($node->menu['mlid'])) {
-    $full_menu_items = menu_tree_all_data($node->menu['menu_name']);
+
+  // We need to clone the node as menu_node_prepare() may cause data loss.
+  // @see http://drupal.org/node/1317926
+  $menu_node = clone $node;
+  menu_node_prepare($menu_node);
+  if (isset($menu_node->menu['mlid'])) {
+    $full_menu_items = menu_tree_all_data($menu_node->menu['menu_name']);
     foreach ($full_menu_items as $menu_item) {
-      if ($menu_item['link']['mlid'] == $node->menu['mlid']) {
+      if ($menu_item['link']['mlid'] == $menu_node->menu['mlid']) {
         $links = $menu_item['below'];
         break;
       }
@@ -60,7 +68,7 @@ function uclalib_navigation_menu_get_about($node) {
         // Also check sub-items.
         if (count($menu_item['below'])) {
           foreach ($menu_item['below'] as $menu_item) {
-            if ($menu_item['link']['mlid'] == $node->menu['mlid']) {
+            if ($menu_item['link']['mlid'] == $menu_node->menu['mlid']) {
               $links = $menu_item['below'];
               break 2;
             }

@@ -4,6 +4,7 @@ core = 7.x
 package = UCLALIB
 version = 7.x-1.0
 project = uclalib_resources
+dependencies[] = autocomplete_deluxe
 dependencies[] = bean_admin_ui
 dependencies[] = bean_uuid
 dependencies[] = icon_field
