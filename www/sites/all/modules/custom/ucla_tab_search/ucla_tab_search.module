@@ -504,14 +504,9 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
       continue;
     }
     if (is_array($maps)) {
-//print_r($form_state['values']);
-//exit;
-		$search_form = $form_state['values'][tabs__active_tab];
-		switch ($form_state['values'][tabs__active_tab]) {
+	$search_form = $form_state['values']['tabs__active_tab'];
+	switch ($form_state['values']['tabs__active_tab']) {
         case 'edit-books':
-
-//print_r($form_state['values'][tabs__active_tab]);
-//exit;
         
         $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['books']['catalog']];
 	    switch ( $maps[$form_state['values']['books']['catalog']] ) {
