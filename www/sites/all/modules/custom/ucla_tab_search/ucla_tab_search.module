@@ -164,7 +164,7 @@ curl_close ($ch);
 $form['books']['ucla_catalog_search_index'] = array(
     '#type' => 'select',
     '#options' => array(
-        'GKEY^' => t('Keyword'),
+        'GKEY^*' => t('Keyword'),
         'TKEY^' => t('Title'),
         'TAL2' => t('Title - start of'),
         'TKEY' => t('Title phrase'),
@@ -185,10 +185,6 @@ $form['books']['ucla_catalog_search_index'] = array(
     ),
   );
 // end moving keyword block
-
-
-
-
 
   $form['books']['catalog'] = array(
     '#type' => 'radios',
