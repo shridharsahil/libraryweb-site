@@ -24,9 +24,12 @@ img {
 
 table {
   border: 1px solid #adcde5;
-  display: inline-block;
+  border-collapse: separate;
+  border-spacing: 2px;
+  display: table;
   margin-bottom: 1em;
   padding-left: 1px;
+  width: 100%;
 }
 table th, table tr.even {
   background: #fff;
@@ -39,7 +42,6 @@ table tr.odd .current-day {
 }
 table th,
 table td {
-  border: 2px solid #fff;
   padding: 2px 5px;
 }
 table th + th,
