@@ -566,6 +566,7 @@ a[href="#main-content"] {
   width: auto;
   float: right;
   margin: 0;
+  text-indent: 0;
 }
 
 .sidebar-options .ctools-toggle {
