@@ -555,18 +555,7 @@ a[href="#main-content"] {
   line-height: normal;
 }
 .sidebar-search .views-reset-button {
-  margin: 0;
-  padding: 0;
-  margin: 0 -15px 0 0;
-  padding: 0;
-  float: right;
-}
-.sidebar-search .views-reset-button .form-submit {
-  background: none;
-  width: auto;
-  float: right;
-  margin: 0;
-  text-indent: 0;
+  display: none;
 }
 
 .sidebar-options .ctools-toggle {
