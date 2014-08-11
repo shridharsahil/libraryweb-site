@@ -41,7 +41,6 @@ table th,
 table td {
   border: 2px solid #fff;
   padding: 2px 5px;
-  white-space: nowrap;
 }
 table th + th,
 table td + td {
@@ -1167,7 +1166,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
