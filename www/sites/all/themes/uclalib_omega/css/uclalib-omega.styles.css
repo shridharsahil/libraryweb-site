@@ -295,7 +295,7 @@ a[href="#main-content"] {
 }
 
 .l-navigation .l-region {
-  padding: 16px 0;
+  padding: 14px 0 15px;
 }
 .l-navigation ul.primary-links {
   margin: 0;
@@ -307,6 +307,8 @@ a[href="#main-content"] {
   *zoom: 1;
   list-style: none;
   list-style-image: none;
+  display: table;
+  width: 100%;
 }
 .l-navigation ul.primary-links:before, .l-navigation ul.primary-links:after {
   content: ".";
@@ -337,13 +339,16 @@ a[href="#main-content"] {
   padding-right: 0;
 }
 .l-navigation ul.primary-links > li {
+  display: table-cell;
+  float: none;
   padding: 0;
   margin: 0 1px 0 0;
   list-style-image: none;
   list-style-type: none;
+  text-align: center;
 }
 .l-navigation ul.primary-links > li a {
-  padding: 16px 25px;
+  padding: 15px 20px 15px;
   line-height: 1.2em;
 }
 .l-navigation ul.primary-links > li a,
@@ -369,8 +374,9 @@ a[href="#main-content"] {
   width: 0;
   display: inline-block;
   float: left;
+  margin-bottom: -4px;
   overflow: hidden;
-  padding: 0 45px 0 0;
+  padding: 0 40px 0 0;
 }
 .l-navigation ul.primary-links > li.first a:after {
   font-family: icomoon;

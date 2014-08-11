@@ -1,5 +1,5 @@
-$nav-vert-space: 16px;
-$nav-horiz-space: 25px;
+$nav-vert-space: 15px;
+$nav-horiz-space: 20px;
 
 .l-navigation-wrapper {
   background: $nav-bg-color;
@@ -8,19 +8,24 @@ $nav-horiz-space: 25px;
 
 .l-navigation {
   .l-region {
-    padding: $nav-vert-space 0;
+    padding: 14px 0 15px;
   }
   ul.primary-links {
     @include horizontal-list;
     list-style: none;
     list-style-image: none;
+    display: table;
+    width: 100%;
     > li {
+      display: table-cell;
+      float: none;
       padding: 0;
       margin: 0 1px 0 0;
       list-style-image: none;
       list-style-type: none;
+      text-align: center;
       a {
-        padding: $nav-vert-space $nav-horiz-space;
+        padding: $nav-vert-space $nav-horiz-space $nav-vert-space;
         line-height: 1.2em;
       }
       a,
@@ -50,6 +55,7 @@ $nav-horiz-space: 25px;
           width: 0;
           display: inline-block;
           float: left;
+          margin-bottom: -4px;
           overflow: hidden;
           padding: 0 $nav-horiz-space+20px 0 0;
           &:after {
