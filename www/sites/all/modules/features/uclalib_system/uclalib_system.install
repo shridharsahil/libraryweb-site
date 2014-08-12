@@ -67,3 +67,15 @@ function uclalib_system_update_7008(&$sandbox) {
 function uclalib_system_update_7009(&$sandbox) {
   module_enable(array('autocomplete_deluxe'));
 }
+
+/**
+ * Set Fancybox callbacks.
+ */
+function uclalib_system_update_7010(&$sandbox) {
+  $fancybox_settings = variable_get('fancybox_settings', array());
+
+  $fancybox_settings['callbacks']['beforeShow'] = 'fancybox_beforeshow';
+  $fancybox_settings['callbacks']['afterShow'] = 'fancybox_aftershow';
+
+  variable_set('fancybox_settings', $fancybox_settings);
+}

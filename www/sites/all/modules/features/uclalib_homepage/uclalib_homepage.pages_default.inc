@@ -203,6 +203,29 @@ function uclalib_homepage_default_page_manager_pages() {
     $display->content['new-04d8e4c9-2b4d-4ff7-a61a-d692dab1def3'] = $pane;
     $display->panels['top_left_bottom_right'][0] = 'new-04d8e4c9-2b4d-4ff7-a61a-d692dab1def3';
     $pane = new stdClass();
+    $pane->pid = 'new-768d72ca-cc3f-49d5-9995-d55c357ef337';
+    $pane->panel = 'top_left_main';
+    $pane->type = 'block';
+    $pane->subtype = 'ucla_tab_search-ucla_tab_search_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Start your research',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'important-column-heading',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '768d72ca-cc3f-49d5-9995-d55c357ef337';
+    $display->content['new-768d72ca-cc3f-49d5-9995-d55c357ef337'] = $pane;
+    $display->panels['top_left_main'][0] = 'new-768d72ca-cc3f-49d5-9995-d55c357ef337';
+    $pane = new stdClass();
     $pane->pid = 'new-50719f8e-efd1-40c9-8b30-048e9c373c27';
     $pane->panel = 'top_left_main';
     $pane->type = 'custom';
@@ -224,11 +247,11 @@ function uclalib_homepage_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '50719f8e-efd1-40c9-8b30-048e9c373c27';
     $display->content['new-50719f8e-efd1-40c9-8b30-048e9c373c27'] = $pane;
-    $display->panels['top_left_main'][0] = 'new-50719f8e-efd1-40c9-8b30-048e9c373c27';
+    $display->panels['top_left_main'][1] = 'new-50719f8e-efd1-40c9-8b30-048e9c373c27';
     $pane = new stdClass();
     $pane->pid = 'new-8e8a6115-4373-407e-acf1-8446ecca3ad9';
     $pane->panel = 'top_right_sidebar';

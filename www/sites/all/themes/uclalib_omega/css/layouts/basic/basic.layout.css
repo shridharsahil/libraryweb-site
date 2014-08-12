@@ -1,3 +1,7 @@
+.l-page {
+  min-width: 768px;
+}
+
 .l-header,
 .l-navigation,
 .l-main,
