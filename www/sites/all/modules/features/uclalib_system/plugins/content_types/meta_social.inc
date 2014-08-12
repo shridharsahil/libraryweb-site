@@ -29,6 +29,7 @@ $plugin = array(
  *   An object with at least title and content members.
  */
 function meta_social_content_type_render($subtype, $conf, $args, $context) {
+  $share_this_text = NULL;
   $block = new stdClass();
   $block->content = '';
 
