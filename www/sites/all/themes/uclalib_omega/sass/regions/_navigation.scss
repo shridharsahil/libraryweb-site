@@ -7,9 +7,6 @@ $nav-horiz-space: 8px;
 }
 
 .l-navigation {
-  .l-region {
-    padding: 14px 0 15px;
-  }
   ul.primary-links {
     @include horizontal-list;
     list-style: none;
@@ -19,21 +16,20 @@ $nav-horiz-space: 8px;
     > li {
       display: table-cell;
       float: none;
-      padding: 0;
+      padding: $nav-vert-space $nav-horiz-space $nav-vert-space;
       margin: 0 1px 0 0;
       list-style-image: none;
       list-style-type: none;
       text-align: center;
       a {
-        padding: $nav-vert-space $nav-horiz-space $nav-vert-space;
         line-height: 1.2em;
       }
       a,
       a:visited {
         color: $nav-link-color;
       }
-      &.active-trail > a,
-      &.active-trail > a:hover {
+      &.active-trail,
+      &.active-trail:hover {
         background: $nav-bg-active-color;
         color: $nav-link-active-color;
         text-decoration: none;

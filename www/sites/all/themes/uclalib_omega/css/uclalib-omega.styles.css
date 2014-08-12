@@ -294,9 +294,6 @@ a[href="#main-content"] {
   font-size: 18px;
 }
 
-.l-navigation .l-region {
-  padding: 14px 0 15px;
-}
 .l-navigation ul.primary-links {
   margin: 0;
   padding: 0;
@@ -341,21 +338,20 @@ a[href="#main-content"] {
 .l-navigation ul.primary-links > li {
   display: table-cell;
   float: none;
-  padding: 0;
+  padding: 15px 8px 15px;
   margin: 0 1px 0 0;
   list-style-image: none;
   list-style-type: none;
   text-align: center;
 }
 .l-navigation ul.primary-links > li a {
-  padding: 15px 8px 15px;
   line-height: 1.2em;
 }
 .l-navigation ul.primary-links > li a,
 .l-navigation ul.primary-links > li a:visited {
   color: #333333;
 }
-.l-navigation ul.primary-links > li.active-trail > a, .l-navigation ul.primary-links > li.active-trail > a:hover {
+.l-navigation ul.primary-links > li.active-trail, .l-navigation ul.primary-links > li.active-trail:hover {
   background: #eff3f4;
   color: #3283be;
   text-decoration: none;
