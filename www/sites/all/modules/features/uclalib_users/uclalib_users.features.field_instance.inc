@@ -125,7 +125,7 @@ function uclalib_users_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 20,
       ),
       'type' => 'text_textfield',
       'weight' => 2,
