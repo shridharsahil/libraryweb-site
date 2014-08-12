@@ -260,20 +260,17 @@ function uclalib_event_default_page_manager_handlers() {
     $display->content['new-3e389010-3edd-40d3-9206-95d04b9e15c2'] = $pane;
     $display->panels['bottom_left'][5] = 'new-3e389010-3edd-40d3-9206-95d04b9e15c2';
     $pane = new stdClass();
-    $pane->pid = 'new-a2113e1b-6210-476d-b671-c4fea1780d48';
+    $pane->pid = 'new-cce5d0e2-95fa-4c32-81cc-a12e7031d237';
     $pane->panel = 'bottom_right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_event_category';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'taxonomy_term_listing-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
+      'arguments' => array(
+        'machine_name' => 'events_categories',
+        'null' => 'field_event_category',
+      ),
       'override_title' => 1,
       'override_title_text' => 'Category',
     );
@@ -281,16 +278,13 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-links',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'a2113e1b-6210-476d-b671-c4fea1780d48';
-    $display->content['new-a2113e1b-6210-476d-b671-c4fea1780d48'] = $pane;
-    $display->panels['bottom_right'][0] = 'new-a2113e1b-6210-476d-b671-c4fea1780d48';
+    $pane->uuid = 'cce5d0e2-95fa-4c32-81cc-a12e7031d237';
+    $display->content['new-cce5d0e2-95fa-4c32-81cc-a12e7031d237'] = $pane;
+    $display->panels['bottom_right'][0] = 'new-cce5d0e2-95fa-4c32-81cc-a12e7031d237';
     $pane = new stdClass();
     $pane->pid = 'new-8e103b62-af70-4793-8734-5b73945a0a4e';
     $pane->panel = 'bottom_right';
