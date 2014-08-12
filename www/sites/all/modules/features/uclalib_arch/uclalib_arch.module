@@ -59,6 +59,11 @@ function uclalib_arch_date_formats() {
       'format' => 'Y',
       'locales' => array(),
     ),
+    array(
+      'type' => 'uclalib_event_date_time',
+      'format' => 'l, M d, Y - g:ia',
+      'locales' => array(),
+    ),
   );
 }
 
@@ -68,18 +73,11 @@ function uclalib_arch_date_formats() {
 function uclalib_arch_date_format_types() {
   return array(
     'month_with_date' => t('Month with date'),
-  );
-  return array(
     'month' => t('Month'),
-  );
-  return array(
     'day' => t('Day'),
-  );
-  return array(
     'time' => t('Time'),
-  );
-  return array(
     'year' => t('Year'),
+    'uclalib_event_date_time' => t('UCLALIB event date/time'),
   );
 }
 

@@ -94,7 +94,7 @@ function uclalib_event_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'format_type' => 'long',
+        'format_type' => 'uclalib_event_date_time',
         'multiple_number' => '',
         'multiple_from' => '',
         'multiple_to' => '',
