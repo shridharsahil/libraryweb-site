@@ -348,7 +348,7 @@ a[href="#main-content"] {
   text-align: center;
 }
 .l-navigation ul.primary-links > li a {
-  padding: 15px 20px 15px;
+  padding: 15px 8px 15px;
   line-height: 1.2em;
 }
 .l-navigation ul.primary-links > li a,
@@ -376,7 +376,7 @@ a[href="#main-content"] {
   float: left;
   margin-bottom: -4px;
   overflow: hidden;
-  padding: 0 40px 0 0;
+  padding: 0 28px 0 0;
 }
 .l-navigation ul.primary-links > li.first a:after {
   font-family: icomoon;
@@ -1178,7 +1178,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
