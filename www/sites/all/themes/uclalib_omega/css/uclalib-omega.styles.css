@@ -580,6 +580,9 @@ a[href="#main-content"] {
   padding-left: 22px;
 }
 
+.page-contact {
+  /*Shift content on narrow screens to avoid overlapping iFrame*/
+}
 .page-contact .pane-content > h2 {
   color: #2d2f35;
   font-size: 2.286em;
@@ -602,6 +605,12 @@ a[href="#main-content"] {
 .page-contact .pane-ask-librarian h2,
 .page-contact .pane-bean-other-research-support-options h2 {
   font-weight: bold;
+}
+@media (max-width: 816px) {
+  .page-contact .l-region--main-column .l-region--below-main-right {
+    clear: left;
+    float: left;
+  }
 }
 .page-contact .pane-staff-search-pane {
   margin-bottom: 2.7em;

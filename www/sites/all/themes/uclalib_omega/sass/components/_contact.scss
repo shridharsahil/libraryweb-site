@@ -25,6 +25,14 @@
     }
   }
 
+  /*Shift content on narrow screens to avoid overlapping iFrame*/
+  @media (max-width: 816px) {
+    .l-region--main-column .l-region--below-main-right {
+      clear: left;
+      float: left;
+    }
+  }
+
   .pane-staff-search-pane {
     margin-bottom: 2.7em;
     h2 {
