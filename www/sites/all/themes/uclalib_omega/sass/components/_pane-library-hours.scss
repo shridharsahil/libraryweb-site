@@ -8,9 +8,11 @@
       font-weight: 100;
       margin-top: 0;
     }
-    .pane-linked-map {
-      float: left;
-      margin-right: 22px;
+    @media (min-width: 900px) {
+      .pane-linked-map {
+        float: left;
+        margin-right: 16px;
+      }
     }
     .pane-node-field-location-building {
       padding-top: 26px;

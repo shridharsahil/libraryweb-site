@@ -1394,9 +1394,11 @@ a.more-link,
   font-weight: 100;
   margin-top: 0;
 }
-.pane-library-hours-panel-pane-1 .views-row .pane-linked-map {
-  float: left;
-  margin-right: 22px;
+@media (min-width: 900px) {
+  .pane-library-hours-panel-pane-1 .views-row .pane-linked-map {
+    float: left;
+    margin-right: 16px;
+  }
 }
 .pane-library-hours-panel-pane-1 .views-row .pane-node-field-location-building {
   padding-top: 26px;
