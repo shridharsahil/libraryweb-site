@@ -976,6 +976,16 @@ a[href="#main-content"] {
   border-color: #adcde5;
 }
 
+@media (max-width: 840px) {
+  .page-library .ui-tabs .ui-tabs-nav li:first-child {
+    margin: 0 0.5% 0 0;
+    width: 68%;
+  }
+  .page-library .ui-tabs .ui-tabs-nav li:last-child {
+    margin-right: 0;
+    width: 31.5%;
+  }
+}
 /* Hide more than 4 Living Library thumbnails */
 .field--name-field-gallery-images .field__item:nth-child(n+5) {
   display: none;
