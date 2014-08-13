@@ -1236,12 +1236,12 @@ a.more-link,
 }
 
 .pane-bean-quick-find h2 {
-  padding: 0 3.5em;
+  padding: 0 0.5em 0 2.5em;
   font-size: 1em;
   font-weight: bold;
 }
 .pane-bean-quick-find .pane-content {
-  padding: 1em 3.5em;
+  padding: 1em 0.5em 1em 2.5em;
   font-size: 14px;
   font-weight: 100;
 }
