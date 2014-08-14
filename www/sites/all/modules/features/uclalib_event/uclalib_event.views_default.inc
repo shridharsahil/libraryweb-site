@@ -652,18 +652,27 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['label'] = '';
+  $handler->display->display_options['fields']['field_event_location']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_event_location']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '<div>[title]</div>
-<div><i>[field_event_location] - [field_event_date_1]</i></div>';
+  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '[field_event_location] - ';
   $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_location']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_event_location']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_event_location']['settings'] = array(
     'link' => 0,
   );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['field_event_location']['delta_offset'] = '0';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
+<div><i>[field_event_location][field_event_date_1]</i></div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Event Date (field_event_date) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
@@ -681,6 +690,8 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = TRUE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
