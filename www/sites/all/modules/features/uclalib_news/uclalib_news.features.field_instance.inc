@@ -10,6 +10,48 @@
 function uclalib_news_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'bean-upcoming_news-field_news'
+  $field_instances['bean-upcoming_news-field_news'] = array(
+    'bundle' => 'upcoming_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select news items to be displayed.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference_views_formatter',
+        'settings' => array(
+          'view_display' => 'panel_pane_3',
+          'view_name' => 'recent_news_highlight',
+        ),
+        'type' => 'entityreference_views_formatter',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_news',
+    'label' => 'News',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 1,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-news-body'
   $field_instances['node-news-body'] = array(
     'bundle' => 'news',
@@ -544,6 +586,7 @@ function uclalib_news_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('News');
   t('News Audience');
   t('News Categories');
   t('News Images');
@@ -551,6 +594,7 @@ function uclalib_news_field_default_field_instances() {
   t('News Related Content');
   t('News Series');
   t('News Thumbnail');
+  t('Select news items to be displayed.');
   t('Upload images here. Once uploaded, they may be cropped and inserted into the body text.');
 
   return $field_instances;
