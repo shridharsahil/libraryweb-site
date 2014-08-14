@@ -370,6 +370,9 @@ a[href="#main-content"] {
 .l-navigation ul.primary-links > li.active-trail > a:hover {
   cursor: normal;
 }
+.l-navigation ul.primary-links > li.first {
+  padding-right: 3px;
+}
 .l-navigation ul.primary-links > li.first a {
   text-indent: -999px;
   width: 0;
@@ -397,6 +400,9 @@ a[href="#main-content"] {
 .l-navigation ul.primary-links > li.first a:focus {
   background: transparent;
   color: #3283be;
+}
+.l-navigation ul.primary-links > li.last {
+  padding-right: 6px;
 }
 
 .l-region--top {

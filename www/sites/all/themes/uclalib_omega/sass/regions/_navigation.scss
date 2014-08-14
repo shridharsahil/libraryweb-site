@@ -46,6 +46,7 @@ $nav-horiz-space: 8px;
 
       // Special case for first link.
       &.first {
+        padding-right: 3px;
         a {
           text-indent: -999px;
           width: 0;
@@ -75,6 +76,9 @@ $nav-horiz-space: 8px;
           background: transparent;
           color: $nav-link-active-color;
         }
+      }
+      &.last {
+        padding-right: 6px;
       }
     }
   }
