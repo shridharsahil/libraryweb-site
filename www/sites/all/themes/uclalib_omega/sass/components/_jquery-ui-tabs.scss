@@ -60,14 +60,17 @@
 }
 
 @media (max-width: 840px) {
-  .page-library .ui-tabs .ui-tabs-nav {
-    li:first-child {
-      margin: 0 0.5% 0 0;
-      width: 68%;
-    }
-    li:last-child {
-      margin-right: 0;
-      width: 31.5%;
+  .page-library,
+  .section-location {
+    .ui-tabs .ui-tabs-nav {
+      li:first-child {
+        margin: 0 0.5% 0 0;
+        width: 68%;
+      }
+      li:last-child {
+        margin-right: 0;
+        width: 31.5%;
+      }
     }
   }
 }
