@@ -14,10 +14,13 @@ include_once 'uclalib_upcoming_events.features.inc';
 function uclalib_upcoming_events_form_alter(&$form, $form_state, $form_id) {
   if (isset($form_state['pane'])) {
     if (in_array($form_state['pane']->subtype, array("recent_news_highlight-panel_pane_1", "recent_news_highlight-panel_pane_2"))) {
-    // filtered_entities is the view name, block_input_category is the display name
-      $form["arguments"]["field_news_categories_tid"]["#type"] = "select";
+      // filtered_entities is the view name, block_input_category is the display name
+
       // get News Categories vocabulary
+      $form["arguments"]["field_news_categories_tid"]["#type"] = "select";
+      $form["arguments"]["field_news_categories_tid"]["#multiple"] = TRUE;
       $form["arguments"]["field_news_categories_tid"]["#options"] = _uclalib_upcoming_events_taxonomy_select('news_categories', 0, 1);
+
       // get Staff Subject Areas vocabulary
       $form["arguments"]["field_staff_subject_areas_tid"]["#type"] = "select";
       $form["arguments"]["field_staff_subject_areas_tid"]["#options"] = _uclalib_upcoming_events_taxonomy_select('staff_subject_areas', 0, 1);
@@ -25,8 +28,17 @@ function uclalib_upcoming_events_form_alter(&$form, $form_state, $form_id) {
       // Location.
       $form["arguments"]["field_news_location_target_id"]["#type"] = "select";
       $form["arguments"]["field_news_location_target_id"]["#options"] = uclalib_upcoming_events_content_type_select($output);
+
+      $form['#validate'][] = 'uclalib_upcoming_events_news_widget_validate';
     }
   }
+}
+
+/**
+ * Custom validation handler for news highlight.
+ */
+function uclalib_upcoming_events_news_widget_validate($form, &$form_state) {
+  $form_state['values']['arguments']['field_news_categories_tid'] = implode('+', $form_state['values']['arguments']['field_news_categories_tid']);
 }
 
 /**
@@ -38,6 +50,7 @@ function uclalib_upcoming_events_form_alter(&$form, $form_state, $form_id) {
 function _uclalib_upcoming_events_taxonomy_select($machine_name, $parent = 0, $depth = NULL) {
   $vocab = taxonomy_vocabulary_machine_name_load($machine_name);
   $terms = taxonomy_get_tree($vocab->vid, $parent, $depth);
+  $output = array('' => 'None');
   foreach ($terms as $data) {
     $output[$data->tid] = $data->name;
   }
@@ -56,7 +69,7 @@ function uclalib_upcoming_events_content_type_select($node_type) {
     $location_items = entity_load('node', $location_nids);
   }
 
-  $output = array();
+  $output = array('' => 'None');
   foreach ($location_items as $data) {
     $output[$data->nid] = $data->title;
   }
