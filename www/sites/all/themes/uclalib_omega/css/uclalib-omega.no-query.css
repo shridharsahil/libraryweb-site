@@ -474,7 +474,7 @@ a[href="#main-content"] {
 .l-region--top .bean-showcase .field--name-field-showcase > .field__items > .field__item {
   float: left;
   line-height: 1.1em;
-  margin: 24px 10px 0 0;
+  margin: 24px 1.12% 0 0;
   text-align: center;
   width: 24.16%;
 }
@@ -2248,7 +2248,6 @@ a.more-link,
   .ui-tabs .ui-tabs-panel .views-field,
   .pane-bean-upcoming-events .views-field-field-event-thumbnail + .views-field,
   .pane-bean-upcoming-events .views-field {
-    border: 1px solid red;
     padding: 10px 0 10px 7px !important;
   }
   .ui-tabs .ui-tabs-panel .views-field-field-event-image,
@@ -2257,7 +2256,6 @@ a.more-link,
   .pane-bean-upcoming-events .views-field-field-event-image,
   .pane-bean-upcoming-events .views-field-field-exhibition-image,
   .pane-bean-upcoming-events .views-field-field-event-thumbnail {
-    border: 1px solid green;
     padding: 4px 0 4px 7px !important;
   }
 }
