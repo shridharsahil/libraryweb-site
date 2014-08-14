@@ -896,25 +896,6 @@ a[href="#main-content"] {
   .front .l-main {
     background: white;
   }
-  .front .pane-1 {
-    /**
-     * PLACEHOLDER.
-     */
-  }
-  .front .pane-1 .pane-content {
-    background: url(../images/placeholder-start-your-research.png) no-repeat 0 0;
-    height: 350px;
-    margin-bottom: 20px;
-  }
-  .front .pane-1 .pane-content p {
-    padding: 100px 0;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0 0 10px #2d2f35;
-  }
 }
 /**
  * Override jQuery UI widget default font sizes.
@@ -1189,7 +1170,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399407339');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
