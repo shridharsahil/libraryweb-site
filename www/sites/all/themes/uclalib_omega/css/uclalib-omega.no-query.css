@@ -103,7 +103,7 @@ a:hover {
 
 /* UCLA Library custom Iconfont */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  vertical-align: middle;
+  vertical-align: -17%;
 }
 
 .icon-copy-color:before,
