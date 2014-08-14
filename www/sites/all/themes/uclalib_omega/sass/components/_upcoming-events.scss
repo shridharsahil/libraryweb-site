@@ -102,13 +102,11 @@
   .pane-bean-upcoming-events {
     .views-field-field-event-thumbnail + .views-field, 
     .views-field {
-      border: 1px solid red;
       padding: 10px 0 10px 7px !important;
     }
     .views-field-field-event-image,
     .views-field-field-exhibition-image,
     .views-field-field-event-thumbnail {
-      border: 1px solid green;
       padding: 4px 0 4px 7px !important;
     }
   }
