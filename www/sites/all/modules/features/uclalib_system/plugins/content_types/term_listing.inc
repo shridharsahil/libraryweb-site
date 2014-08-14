@@ -98,9 +98,7 @@ function uclalib_term_listing_render($subtype, $conf, $args, $pane_context, $inc
   );
 
   $block = new stdClass();
-  $block->module = 'uclalib_navigation';
-  $block->delta = $subtype;
-  $block->title = t('Quick Links');
+  $block->title = t('Term listing');
   $block->content = theme_item_list($variables);
 
   return $block;
