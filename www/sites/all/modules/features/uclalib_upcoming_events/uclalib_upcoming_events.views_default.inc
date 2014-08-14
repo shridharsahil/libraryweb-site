@@ -196,7 +196,7 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'News items by location',
+      'label' => 'Content: News Location (field_news_location)',
     ),
     'field_staff_subject_areas_tid' => array(
       'type' => 'user',
@@ -255,7 +255,7 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'News items by location',
+      'label' => 'Content: News Location (field_news_location)',
     ),
     'field_staff_subject_areas_tid' => array(
       'type' => 'user',
@@ -264,6 +264,60 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
       'panel' => '0',
       'fixed' => '',
       'label' => 'News items by subject area',
+    ),
+  );
+
+  /* Display: Recent News bean display */
+  $handler = $view->new_display('panel_pane', 'Recent News bean display', 'panel_pane_3');
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="more-link"> <a href="/news">More</a></div>';
+  $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_news_bean']['id'] = 'reverse_field_news_bean';
+  $handler->display->display_options['relationships']['reverse_field_news_bean']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_news_bean']['field'] = 'reverse_field_news_bean';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Block: Internal, numeric block ID */
+  $handler->display->display_options['arguments']['bid']['id'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['table'] = 'bean';
+  $handler->display->display_options['arguments']['bid']['field'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['relationship'] = 'reverse_field_news_bean';
+  $handler->display->display_options['arguments']['bid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['bid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['bid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['bid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['bid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_description'] = 'Display news categories by selected cateories';
+  $handler->display->display_options['argument_input'] = array(
+    'field_news_categories_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by category',
+    ),
+    'field_news_location_target_id' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: News Location (field_news_location)',
+    ),
+    'field_staff_subject_areas_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by Subject Area',
     ),
   );
   $export['recent_news_highlight'] = $view;
