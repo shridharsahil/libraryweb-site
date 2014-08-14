@@ -80,6 +80,11 @@ function uclalib_term_listing_render($subtype, $conf, $args, $pane_context, $inc
     return;
   }
 
+  // Bail if there are no terms referenced.
+  if (!isset($node->{$conf['field']}[LANGUAGE_NONE]) || !count($node->{$conf['field']}[LANGUAGE_NONE])) {
+    return;
+  }
+
   $terms = array();
   foreach ($node->{$conf['field']}[LANGUAGE_NONE] as $item) {
     $term = taxonomy_term_load($item['tid']);
