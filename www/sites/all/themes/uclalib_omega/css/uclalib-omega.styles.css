@@ -511,9 +511,6 @@ a[href="#main-content"] {
   margin-left: -13px;
   margin-right: 17px;
 }
-.sidebar-search label {
-  display: none;
-}
 .sidebar-search .form-text {
   background: white;
   border: none;
@@ -1190,7 +1187,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399452290');
+  background-image: url('../images/logo-colophon.png?1399407339');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
