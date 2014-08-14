@@ -2242,6 +2242,25 @@ a.more-link,
   display: none !important;
 }
 
+/* Reduce padding in narrow views */
+@media (max-width: 816px) {
+  .ui-tabs .ui-tabs-panel .views-field-field-event-thumbnail + .views-field,
+  .ui-tabs .ui-tabs-panel .views-field,
+  .pane-bean-upcoming-events .views-field-field-event-thumbnail + .views-field,
+  .pane-bean-upcoming-events .views-field {
+    border: 1px solid red;
+    padding: 10px 0 10px 7px !important;
+  }
+  .ui-tabs .ui-tabs-panel .views-field-field-event-image,
+  .ui-tabs .ui-tabs-panel .views-field-field-exhibition-image,
+  .ui-tabs .ui-tabs-panel .views-field-field-event-thumbnail,
+  .pane-bean-upcoming-events .views-field-field-event-image,
+  .pane-bean-upcoming-events .views-field-field-exhibition-image,
+  .pane-bean-upcoming-events .views-field-field-event-thumbnail {
+    border: 1px solid green;
+    padding: 4px 0 4px 7px !important;
+  }
+}
 .view-exhibitions-main-view .view-filters {
   display: none;
 }
