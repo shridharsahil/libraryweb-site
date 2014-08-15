@@ -1982,38 +1982,52 @@ a.more-link,
   margin-bottom: 1em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs {
-  border-color: #adcde5;
-  margin: 1em 0 1em 12em;
+  border: none;
+  margin: 1em 0 1em 13em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list {
-  border-color: #adcde5;
-  margin: -1px 0 -1px -12em;
-  width: 12em;
+  border: none;
+  margin: -1px 0 -1px -13em;
+  width: 14em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li {
-  background: #eff3f4;
-  border-color: #adcde5;
+  background: #eff3f4 url(../images/arr-right-yell.png) 100% 0 no-repeat;
+  border: none;
+  border-right: 7px solid #fff;
+  margin: 4px 0;
+  text-align: center;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a {
-  padding: 0.9em 0.9em;
+  font-size: 1.143em;
+  padding: 0.9em 0.2em 0.9em 0;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li strong {
-  font-weight: 100;
-}
-.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected a strong {
-  color: #666666;
   font-weight: normal;
 }
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected {
+  background: #fdb930 url(../images/arr-right-yell.png) 100% 50% no-repeat;
+  border-right: 7px solid #fff;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected a strong {
+  color: #2d2f35;
+}
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes {
-  padding: 1.4em 0.5em 1.3em;
+  padding: 0 1em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes .pane-description {
-  margin: 1em 0 0.6em;
+  background: url(../images/question-icon.png) 100% 0 no-repeat;
+  margin: 0.4em 0 0.6em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes .pane-description strong:first-child {
+  display: block;
+  margin-bottom: 2px;
+  padding-top: 0.4em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes input[type="submit"] {
-  background: #3283be;
+  background: #000;
   border: 0 none;
   color: #fff;
+  font-weight: bold;
   padding: 4px 10px;
 }
 

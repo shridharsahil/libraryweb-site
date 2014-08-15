@@ -1,36 +1,50 @@
 .pane-ucla-tab-search-ucla-tab-search-tabs {
   margin-bottom: 1em;
   .vertical-tabs {
-    border-color: $border-color;
-    margin: 1em 0 1em 12em;
+    border: none;
+    margin: 1em 0 1em 13em;
     .vertical-tabs-list {
-      border-color: $border-color;
-      margin: -1px 0 -1px -12em;
-      width: 12em;
+      border: none;
+      margin: -1px 0 -1px -13em;
+      width: 14em;
       li {
-        background: $ucla-lt-gray;
-        border-color: $border-color;
+        background: $ucla-lt-gray url(../images/arr-right-yell.png) 100% 0 no-repeat;
+        border: none;
+        border-right: 7px solid #fff;
+        margin: 4px 0;
+        text-align: center;
         a {
-          padding: 0.9em 0.9em;
+          font-size: 1.143em;
+          padding: 0.9em 0.2em 0.9em 0;
         }
         strong {
-          font-weight: 100;
-        }
-        &.selected a strong {
-          color: $text-color;
           font-weight: normal;
+        }
+        &.selected {
+          background: $ucla-yellow url(../images/arr-right-yell.png) 100% 50% no-repeat;
+          border-right: 7px solid #fff;
+          a strong {
+            color: $ucla-dark-gray;
+          }
         }
       }
     }
     .vertical-tabs-panes {
-      padding: 1.4em 0.5em 1.3em;
+      padding: 0 1em;
       .pane-description {
-        margin: 1em 0 0.6em;
+        background: url(../images/question-icon.png) 100% 0 no-repeat;
+        margin: 0.4em 0 0.6em;
+        strong:first-child {
+          display: block;
+          margin-bottom: 2px;
+          padding-top: 0.4em;
+        }
       }
       input[type="submit"] {
-        background: $ucla-blue;
+        background: #000;
         border: 0 none;
         color: #fff;
+        font-weight: bold;
         padding: 4px 10px;
       }
     }
