@@ -1991,16 +1991,19 @@ a.more-link,
   width: 14em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li {
-  background: #eff3f4 url(../images/arr-right-yell.png) 100% 0 no-repeat;
+  background: url(../images/arr-right-yell.png) 100% 0 no-repeat;
   border: none;
-  -webkit-box-sizing: border-box;
   margin: 4px 0;
+  padding-right: 7px;
   text-align: center;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a {
+  background-color: #eff3f4;
+  height: 46px;
   font-size: 1.143em;
+  line-height: 46px;
   outline: 0 !important;
-  padding: 0.9em 0.2em 0.9em 0;
+  padding: 0;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a:focus {
   outline: 0;
@@ -2009,11 +2012,14 @@ a.more-link,
   font-weight: normal;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected {
-  background: #fdb930 url(../images/arr-right-yell.png) 100% 50% no-repeat;
+  background: url(../images/arr-right-yell.png) 100% 50% no-repeat;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected a {
+  background-color: #fdb930;
+  outline: 0 !important;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected a strong {
   color: #2d2f35;
-  outline: 0 !important;
   text-decoration: none;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li:focus {
