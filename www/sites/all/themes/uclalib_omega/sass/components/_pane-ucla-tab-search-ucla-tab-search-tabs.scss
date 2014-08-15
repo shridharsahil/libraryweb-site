@@ -1,5 +1,5 @@
 .pane-ucla-tab-search-ucla-tab-search-tabs {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   .vertical-tabs {
     border: none;
     margin: 1em 0 1em 13em;
@@ -15,6 +15,7 @@
         text-align: center;
         a {
           font-size: 1.143em;
+          outline: 0 !important;
           padding: 0.9em 0.2em 0.9em 0;
         }
         strong {
@@ -25,12 +26,13 @@
           border-right: 7px solid #fff;
           a strong {
             color: $ucla-dark-gray;
+            text-decoration: none;
           }
         }
       }
     }
     .vertical-tabs-panes {
-      padding: 0 1em;
+      padding: 1em 0;
       .pane-description {
         background: url(../images/question-icon.png) 100% 0 no-repeat;
         margin: 0.4em 0 0.6em;
