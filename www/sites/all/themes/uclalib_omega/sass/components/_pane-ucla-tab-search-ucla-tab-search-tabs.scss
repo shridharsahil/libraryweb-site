@@ -9,7 +9,8 @@
       width: 14em;
       li {
         background: $ucla-lt-gray url(../images/arr-right-yell.png) 100% 0 no-repeat;
-        border: 1px solid #fff !important;
+        border: none;
+        -webkit-box-sizing: border-box;
         margin: 4px 0;
         text-align: center;
         a {
@@ -17,17 +18,23 @@
           outline: 0 !important;
           padding: 0.9em 0.2em 0.9em 0;
         }
+        a:focus {
+          outline: 0;
+        }
         strong {
           font-weight: normal;
         }
         &.selected {
           background: $ucla-yellow url(../images/arr-right-yell.png) 100% 50% no-repeat;
-          border-right: 7px solid #fff;
           a strong {
             color: $ucla-dark-gray;
+            outline: 0 !important;
             text-decoration: none;
           }
         }
+      }
+      li:focus {
+        outline: 0;
       }
     }
     .vertical-tabs-panes {
