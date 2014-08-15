@@ -1,0 +1,37 @@
+.pane-ucla-tab-search-ucla-tab-search-tabs {
+  margin-bottom: 1em;
+  .vertical-tabs {
+    margin: 1em 0 1em 12em;
+    .vertical-tabs-list {
+      border-color: $border-color;
+      margin: -1px 0 -1px -12em;
+      width: 12em;
+      li {
+        background: $ucla-lt-gray;
+        border-color: $border-color;
+        a {
+          padding: 0.9em 0.9em;
+        }
+        strong {
+          font-weight: 100;
+        }
+        &.selected a strong {
+          color: $text-color;
+          font-weight: normal;
+        }
+      }
+    }
+    .vertical-tabs-panes {
+      padding: 1.4em 0.5em 1.3em;
+      .pane-description {
+        margin: 1em 0 0.6em;
+      }
+      input[type="submit"] {
+        background: $ucla-blue;
+        border: 0 none;
+        color: #fff;
+        padding: 4px 10px;
+      }
+    }
+  }
+}

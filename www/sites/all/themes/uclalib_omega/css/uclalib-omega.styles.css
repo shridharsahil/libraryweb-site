@@ -1978,6 +1978,44 @@ a.more-link,
   width: 60%;
 }
 
+.pane-ucla-tab-search-ucla-tab-search-tabs {
+  margin-bottom: 1em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs {
+  margin: 1em 0 1em 12em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list {
+  border-color: #adcde5;
+  margin: -1px 0 -1px -12em;
+  width: 12em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li {
+  background: #eff3f4;
+  border-color: #adcde5;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a {
+  padding: 0.9em 0.9em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li strong {
+  font-weight: 100;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected a strong {
+  color: #666666;
+  font-weight: normal;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes {
+  padding: 1.4em 0.5em 1.3em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes .pane-description {
+  margin: 1em 0 0.6em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes input[type="submit"] {
+  background: #3283be;
+  border: 0 none;
+  color: #fff;
+  padding: 4px 10px;
+}
+
 .pane-node-field-resource-link h2, .pane-node-field-resource-other-links h2 {
   color: #2d2f35;
   font-size: 1.429em;
