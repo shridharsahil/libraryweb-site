@@ -1992,10 +1992,10 @@ a.more-link,
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li {
   background: #eff3f4 url(../images/arr-right-yell.png) 100% 0 no-repeat;
+  background-clip: content-box;
   border: none;
   border-right: 7px solid #fff;
   margin: 4px 0;
-  outline: 0 !important;
   text-align: center;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a {
