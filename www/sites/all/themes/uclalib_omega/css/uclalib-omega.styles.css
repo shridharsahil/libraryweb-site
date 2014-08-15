@@ -1995,6 +1995,7 @@ a.more-link,
   border: none;
   border-right: 7px solid #fff;
   margin: 4px 0;
+  outline: 0 !important;
   text-align: center;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a {
