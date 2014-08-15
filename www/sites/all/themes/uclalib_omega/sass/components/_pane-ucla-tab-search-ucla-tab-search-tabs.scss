@@ -9,11 +9,8 @@
       width: 14em;
       li {
         background: $ucla-lt-gray url(../images/arr-right-yell.png) 100% 0 no-repeat;
-        background-clip: content-box;
-        border: none;
-        border-right: 7px solid #fff;
+        border: 1px solid #fff !important;
         margin: 4px 0;
-
         text-align: center;
         a {
           font-size: 1.143em;
