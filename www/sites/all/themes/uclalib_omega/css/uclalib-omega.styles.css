@@ -1229,6 +1229,17 @@ a.more-link,
 .pane-bean-link-list .field--name-field-link-link a {
   color: #3283be;
 }
+.pane-bean-link-list .no-description .field--name-field-link-link {
+  -ms-word-break: break-all;
+}
+.pane-bean-link-list .no-description .field--name-field-link-link a {
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 
 .pane-bean-living-library-gallery {
   margin-bottom: 10px !important;
