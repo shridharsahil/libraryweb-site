@@ -705,7 +705,7 @@ a[href="#main-content"] {
 .node-type-news .pane-node-field-event-image,
 .node-type-news .pane-body-summary-pane {
   margin-top: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 .node-type-uclalib-event .pane-node-field-event-thumbnail,
 .node-type-uclalib-event .pane-node-field-event-image,
@@ -735,7 +735,7 @@ a[href="#main-content"] {
 .node-type-uclalib-event .pane-node-body,
 .node-type-exhibition .pane-node-body,
 .node-type-news .pane-node-body {
-  margin-top: 35px;
+  margin-top: 25px;
   margin-bottom: 35px;
 }
 .node-type-uclalib-event .pane-node-body p,
@@ -1936,6 +1936,11 @@ a.more-link,
 .sidebar-tier-3 .pane-title {
   font-size: 14px;
   font-weight: bold;
+}
+
+.l-region--bottom-right .pane-term-listing ul {
+  list-style: none;
+  padding: 0;
 }
 
 .pane-todays-hours.pane-style-border-blue .pane-content {
