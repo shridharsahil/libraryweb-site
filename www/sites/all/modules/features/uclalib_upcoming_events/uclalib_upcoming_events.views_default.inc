@@ -269,6 +269,8 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
 
   /* Display: Recent News bean display */
   $handler = $view->new_display('panel_pane', 'Recent News bean display', 'panel_pane_3');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Unfiltered text */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
