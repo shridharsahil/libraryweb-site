@@ -20,10 +20,13 @@ function uclalib_upcoming_events_form_alter(&$form, $form_state, $form_id) {
       $form["arguments"]["field_news_categories_tid"]["#type"] = "select";
       $form["arguments"]["field_news_categories_tid"]["#multiple"] = TRUE;
       $form["arguments"]["field_news_categories_tid"]["#options"] = _uclalib_upcoming_events_taxonomy_select('news_categories', 0, 1);
+      $form["arguments"]["field_news_categories_tid"]["#default_value"] = explode('+', $form["arguments"]["field_news_categories_tid"]["#default_value"]);
 
       // get Staff Subject Areas vocabulary
       $form["arguments"]["field_staff_subject_areas_tid"]["#type"] = "select";
+      $form["arguments"]["field_staff_subject_areas_tid"]["#multiple"] = TRUE;
       $form["arguments"]["field_staff_subject_areas_tid"]["#options"] = _uclalib_upcoming_events_taxonomy_select('staff_subject_areas', 0, 1);
+      $form["arguments"]["field_staff_subject_areas_tid"]["#default_value"] = explode('+', $form["arguments"]["field_staff_subject_areas_tid"]["#default_value"]);
 
       // Location.
       $form["arguments"]["field_news_location_target_id"]["#type"] = "select";
@@ -39,6 +42,7 @@ function uclalib_upcoming_events_form_alter(&$form, $form_state, $form_id) {
  */
 function uclalib_upcoming_events_news_widget_validate($form, &$form_state) {
   $form_state['values']['arguments']['field_news_categories_tid'] = implode('+', $form_state['values']['arguments']['field_news_categories_tid']);
+  $form_state['values']['arguments']['field_staff_subject_areas_tid'] = implode('+', $form_state['values']['arguments']['field_staff_subject_areas_tid']);
 }
 
 /**
