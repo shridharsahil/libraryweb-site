@@ -106,30 +106,6 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['arguments']['field_news_categories_tid']['field'] = 'field_news_categories_tid';
   $handler->display->display_options['arguments']['field_news_categories_tid']['ui_name'] = 'News items by categories';
   $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_options']['code'] = 'function uclalib-omega_form_alter(&$form, $form_state, $form_id) {
-    if(isset($form_state[\'pane\'])) {        
-      // You have to test if the field exists
-        if(in_array($form_state[\'pane\']->subtype, array("filtered_entities-block_input_category"))) { // filtered_entities is the view name, block_input_category is the display name
-            // field_type_activity_tid is the id of the field you want to replace by a select input
-            // You can find this id by inspecting the input field, get the id (should look like edit-arguments-field-type-activity-tid), remove "edit-arguments" and transform dashes to underscores. You have your id.
-            $form["arguments"]["field_type_activity_tid"]["#type"] = "select";
-            $form["arguments"]["field_type_activity_tid"]["#options"] = _uclalib-omega_taxonomy_select(3, 0, 1);
-        }
-    }
-}
-
-// The first argument (3) is the vocabulary id. You can find it in the taxonomy_vocabulary table
-// The second argument is the depth
-function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $depth = NULL) {
-    $terms = taxonomy_get_tree($vid, $parent, $depth);
-
-    foreach ($terms as $data) {
-        $output[$data->tid] = $data->name;
-    }
-
-    return $output;
-}
-';
   $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_news_categories_tid']['summary_options']['items_per_page'] = '25';
@@ -139,6 +115,7 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
     'news_categories' => 'news_categories',
   );
   $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['type'] = 'tids';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['break_phrase'] = TRUE;
   /* Contextual filter: Content: News Location (field_news_location) */
   $handler->display->display_options['arguments']['field_news_location_target_id']['id'] = 'field_news_location_target_id';
   $handler->display->display_options['arguments']['field_news_location_target_id']['table'] = 'field_data_field_news_location';
@@ -163,6 +140,7 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
     'staff_subject_areas' => 'staff_subject_areas',
   );
   $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['validate_options']['type'] = 'tids';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['break_phrase'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
