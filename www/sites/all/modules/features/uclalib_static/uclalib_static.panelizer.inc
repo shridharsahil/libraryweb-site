@@ -151,6 +151,32 @@ function uclalib_static_panelizer_defaults() {
     $display->content['new-7bf9a9c8-2e4d-44a3-bba1-2db5902b2e15'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-7bf9a9c8-2e4d-44a3-bba1-2db5902b2e15';
     $pane = new stdClass();
+    $pane->pid = 'new-1727e7a0-aac1-4c9c-92c5-d6bfaccf9c90';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'quick_links';
+    $pane->subtype = 'quick_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+        1 => 'panelizer',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '1727e7a0-aac1-4c9c-92c5-d6bfaccf9c90';
+    $display->content['new-1727e7a0-aac1-4c9c-92c5-d6bfaccf9c90'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-1727e7a0-aac1-4c9c-92c5-d6bfaccf9c90';
+    $pane = new stdClass();
     $pane->pid = 'new-75879fd5-ef84-4b88-8766-11a355d2e598';
     $pane->panel = 'top';
     $pane->type = 'uclalib_title';
