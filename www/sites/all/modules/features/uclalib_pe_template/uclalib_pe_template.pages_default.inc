@@ -220,7 +220,7 @@ function uclalib_pe_template_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Ask A Librarian [PLACEHOLDER]',
       'title' => '',
-      'body' => '<a class="btn-ask" href="#"><span class="icon-help"></span> Ask A Librarian</a>',
+      'body' => '<a class="btn-ask" href="node/425"><span class="icon-help"></span> Ask A Librarian</a>',
       'format' => 'full_html',
       'substitute' => 1,
     );
