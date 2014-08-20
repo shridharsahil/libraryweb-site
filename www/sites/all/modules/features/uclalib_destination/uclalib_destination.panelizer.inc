@@ -236,7 +236,7 @@ function uclalib_destination_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<p>%node:field_room_number %node:field_destination_phone &nbsp;%node:field_destination_email</p>
+      'body' => '%node:field_destination_room_number %node:field_destination_phone &nbsp;%node:field_destination_email</p>
 ',
       'format' => 'full_html',
       'substitute' => 1,

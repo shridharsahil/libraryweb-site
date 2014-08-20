@@ -85,7 +85,7 @@ function uclalib_destination_field_group_info() {
       2 => 'field_destination_location',
       3 => 'field_destination_phone',
       4 => 'field_destination_sched_link',
-      5 => 'field_room_number',
+      5 => 'field_destination_room_number',
       6 => 'title',
     ),
     'format_type' => 'tab',
