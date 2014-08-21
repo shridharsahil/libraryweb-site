@@ -106,30 +106,6 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['arguments']['field_news_categories_tid']['field'] = 'field_news_categories_tid';
   $handler->display->display_options['arguments']['field_news_categories_tid']['ui_name'] = 'News items by categories';
   $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_options']['code'] = 'function uclalib-omega_form_alter(&$form, $form_state, $form_id) {
-    if(isset($form_state[\'pane\'])) {        
-      // You have to test if the field exists
-        if(in_array($form_state[\'pane\']->subtype, array("filtered_entities-block_input_category"))) { // filtered_entities is the view name, block_input_category is the display name
-            // field_type_activity_tid is the id of the field you want to replace by a select input
-            // You can find this id by inspecting the input field, get the id (should look like edit-arguments-field-type-activity-tid), remove "edit-arguments" and transform dashes to underscores. You have your id.
-            $form["arguments"]["field_type_activity_tid"]["#type"] = "select";
-            $form["arguments"]["field_type_activity_tid"]["#options"] = _uclalib-omega_taxonomy_select(3, 0, 1);
-        }
-    }
-}
-
-// The first argument (3) is the vocabulary id. You can find it in the taxonomy_vocabulary table
-// The second argument is the depth
-function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $depth = NULL) {
-    $terms = taxonomy_get_tree($vid, $parent, $depth);
-
-    foreach ($terms as $data) {
-        $output[$data->tid] = $data->name;
-    }
-
-    return $output;
-}
-';
   $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_news_categories_tid']['summary_options']['items_per_page'] = '25';
@@ -139,6 +115,7 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
     'news_categories' => 'news_categories',
   );
   $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['type'] = 'tids';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['break_phrase'] = TRUE;
   /* Contextual filter: Content: News Location (field_news_location) */
   $handler->display->display_options['arguments']['field_news_location_target_id']['id'] = 'field_news_location_target_id';
   $handler->display->display_options['arguments']['field_news_location_target_id']['table'] = 'field_data_field_news_location';
@@ -149,6 +126,21 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
   $handler->display->display_options['arguments']['field_news_location_target_id']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_news_location_target_id']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['field_news_location_target_id']['validate']['fail'] = 'ignore';
+  /* Contextual filter: Content: Staff Subject Areas (field_staff_subject_areas) */
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['id'] = 'field_staff_subject_areas_tid';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['table'] = 'field_data_field_staff_subject_areas';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['field'] = 'field_staff_subject_areas_tid';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['validate_options']['vocabularies'] = array(
+    'staff_subject_areas' => 'staff_subject_areas',
+  );
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['validate_options']['type'] = 'tids';
+  $handler->display->display_options['arguments']['field_staff_subject_areas_tid']['break_phrase'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -166,57 +158,6 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
 
   /* Display: Recent News with Images */
   $handler = $view->new_display('panel_pane', 'Recent News with Images', 'panel_pane_1');
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: News items by categories */
-  $handler->display->display_options['arguments']['field_news_categories_tid']['id'] = 'field_news_categories_tid';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['table'] = 'field_data_field_news_categories';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['field'] = 'field_news_categories_tid';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['ui_name'] = 'News items by categories';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_options']['code'] = 'function uclalib-omega_form_alter(&$form, $form_state, $form_id) {
-    if(isset($form_state[\'pane\'])) {        
-      // You have to test if the field exists
-        if(in_array($form_state[\'pane\']->subtype, array("filtered_entities-block_input_category"))) { // filtered_entities is the view name, block_input_category is the display name
-            // field_type_activity_tid is the id of the field you want to replace by a select input
-            // You can find this id by inspecting the input field, get the id (should look like edit-arguments-field-type-activity-tid), remove "edit-arguments" and transform dashes to underscores. You have your id.
-            $form["arguments"]["field_type_activity_tid"]["#type"] = "select";
-            $form["arguments"]["field_type_activity_tid"]["#options"] = _uclalib-omega_taxonomy_select(3, 0, 1);
-        }
-    }
-}
-
-// The first argument (3) is the vocabulary id. You can find it in the taxonomy_vocabulary table
-// The second argument is the depth
-function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $depth = NULL) {
-    $terms = taxonomy_get_tree($vid, $parent, $depth);
-
-    foreach ($terms as $data) {
-        $output[$data->tid] = $data->name;
-    }
-
-    return $output;
-}
-';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_news_categories_tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['vocabularies'] = array(
-    'news_categories' => 'news_categories',
-  );
-  $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['type'] = 'tids';
-  /* Contextual filter: Content: News Location (field_news_location) */
-  $handler->display->display_options['arguments']['field_news_location_target_id']['id'] = 'field_news_location_target_id';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['table'] = 'field_data_field_news_location';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['field'] = 'field_news_location_target_id';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_news_location_target_id']['validate']['fail'] = 'ignore';
-  $handler->display->display_options['arguments']['field_news_location_target_id']['break_phrase'] = TRUE;
   $handler->display->display_options['pane_description'] = 'Display news categories by selected cateories';
   $handler->display->display_options['argument_input'] = array(
     'field_news_categories_tid' => array(
@@ -227,13 +168,13 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
       'fixed' => '',
       'label' => 'News items by category',
     ),
-    'field_destination_location_target_id' => array(
+    'field_news_location_target_id' => array(
       'type' => 'user',
       'context' => 'entity:comment.author',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'News items by Location',
+      'label' => 'Content: News Location (field_news_location)',
     ),
     'field_staff_subject_areas_tid' => array(
       'type' => 'user',
@@ -242,14 +183,6 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
       'panel' => '0',
       'fixed' => '',
       'label' => 'News items by Subject Area',
-    ),
-    'field_news_location_target_id' => array(
-      'type' => 'user',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Content: News Location (field_news_location)',
     ),
   );
 
@@ -301,6 +234,70 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: News Location (field_news_location)',
+    ),
+    'field_staff_subject_areas_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by subject area',
+    ),
+  );
+
+  /* Display: Recent News bean display */
+  $handler = $view->new_display('panel_pane', 'Recent News bean display', 'panel_pane_3');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="more-link"> <a href="/news">More</a></div>';
+  $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_news_bean']['id'] = 'reverse_field_news_bean';
+  $handler->display->display_options['relationships']['reverse_field_news_bean']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_news_bean']['field'] = 'reverse_field_news_bean';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Block: Internal, numeric block ID */
+  $handler->display->display_options['arguments']['bid']['id'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['table'] = 'bean';
+  $handler->display->display_options['arguments']['bid']['field'] = 'bid';
+  $handler->display->display_options['arguments']['bid']['relationship'] = 'reverse_field_news_bean';
+  $handler->display->display_options['arguments']['bid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['bid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['bid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['bid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['bid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_description'] = 'Display news categories by selected cateories';
+  $handler->display->display_options['argument_input'] = array(
+    'field_news_categories_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by category',
+    ),
+    'field_news_location_target_id' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: News Location (field_news_location)',
+    ),
+    'field_staff_subject_areas_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News items by Subject Area',
     ),
   );
   $export['recent_news_highlight'] = $view;
@@ -448,7 +445,7 @@ function __uclalib-omega_taxonomy_select_taxonomy_select($vid, $parent = 0, $dep
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Event Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';

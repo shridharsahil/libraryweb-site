@@ -5,3 +5,15 @@
  */
 
 include_once 'uclalib_news.features.inc';
+
+
+/**
+ * Implements hook_FORMID_alter()
+ *
+ * Remove search label on news page.
+ */
+function uclalib_news_form_views_exposed_form_alter(&$form, &$form_state) {
+  if ($form['#id'] == 'views-exposed-form-news-search-news-search') {
+    $form['#info']['filter-search_api_views_fulltext']['label'] = '';
+  }
+}

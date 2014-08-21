@@ -95,3 +95,19 @@
 .not-front .view-upcoming-events-display .views-field-field-exhibition-image {
   display: none !important;
 }
+
+/* Reduce padding in narrow views */
+@media (max-width: 816px) {
+  .ui-tabs .ui-tabs-panel,
+  .pane-bean-upcoming-events {
+    .views-field-field-event-thumbnail + .views-field, 
+    .views-field {
+      padding: 10px 0 10px 7px !important;
+    }
+    .views-field-field-event-image,
+    .views-field-field-exhibition-image,
+    .views-field-field-event-thumbnail {
+      padding: 4px 0 4px 7px !important;
+    }
+  }
+}

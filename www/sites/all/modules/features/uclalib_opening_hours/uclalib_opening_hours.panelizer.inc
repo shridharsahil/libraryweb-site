@@ -69,14 +69,14 @@ function uclalib_opening_hours_panelizer_defaults() {
       'center' => array(
         'type' => 'region',
         'title' => 'Center',
-        'width' => '31.652147001845755',
+        'width' => '33.5',
         'width_type' => '%',
         'parent' => 'main-row',
       ),
       'left' => array(
         'type' => 'region',
         'title' => 'Left',
-        'width' => '18.347852998154245',
+        'width' => '16.5',
         'width_type' => '%',
         'parent' => 'main-row',
         'class' => '',

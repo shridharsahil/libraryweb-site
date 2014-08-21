@@ -1,8 +1,11 @@
 table {
   border: 1px solid $border-color;
-  display: inline-block;
+  border-collapse: separate;
+  border-spacing: 2px; 
+  display: table;
   margin-bottom: 1em;
   padding-left: 1px;
+  width: 100%;
   th, tr.even {
     background: #fff;
   }
@@ -14,9 +17,7 @@ table {
   }
   th,
   td {
-    border: 2px solid #fff;
     padding: 2px 5px;
-    white-space: nowrap;
   }
   th + th,
   td + td {

@@ -106,7 +106,7 @@ function uclalib_destination_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -337,6 +337,73 @@ function uclalib_destination_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-destination-field_destination_room_number'
+  $field_instances['node-destination-field_destination_room_number'] = array(
+    'bundle' => 'destination',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Specify the destination\'s specific location in the building: for example, "Room 22484" "A-level" "First Floor"',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_destination_room_number',
+    'label' => 'Room Number',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-destination-field_destination_sched_link'
   $field_instances['node-destination-field_destination_sched_link'] = array(
     'bundle' => 'destination',
@@ -475,7 +542,9 @@ function uclalib_destination_field_default_field_instances() {
   t('Location');
   t('Opening Hours alternate short name');
   t('Phone number');
+  t('Room Number');
   t('Schedule appointment link');
+  t('Specify the destination\'s specific location in the building: for example, "Room 22484" "A-level" "First Floor"');
   t('Study areas');
   t('This is the name that will be used in the tables that display these opening hours.');
 

@@ -94,7 +94,7 @@ function uclalib_event_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'format_type' => 'long',
+        'format_type' => 'uclalib_event_date_time',
         'multiple_number' => '',
         'multiple_from' => '',
         'multiple_to' => '',
@@ -260,84 +260,81 @@ function uclalib_event_default_page_manager_handlers() {
     $display->content['new-3e389010-3edd-40d3-9206-95d04b9e15c2'] = $pane;
     $display->panels['bottom_left'][5] = 'new-3e389010-3edd-40d3-9206-95d04b9e15c2';
     $pane = new stdClass();
-    $pane->pid = 'new-a2113e1b-6210-476d-b671-c4fea1780d48';
+    $pane->pid = 'new-53da1621-557b-4378-bb09-c44d0d8fad19';
     $pane->panel = 'bottom_right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_event_category';
+    $pane->type = 'term_listing';
+    $pane->subtype = 'term_listing';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+      ),
       'override_title' => 1,
       'override_title_text' => 'Category',
+      'field' => 'field_event_category',
+      'view_path' => 'news-events/events-agenda',
+      'form_build_id' => 'form-mkrH3hPbtOI34Lp7mXweme3hy7fpPEsfJ-H2OimjVBE',
+      'form_token' => 'H2rMGKRm4KkmnhSElCBrgP6wycwz9NfYQlpnd0pPf2w',
+      'form_id' => 'uclalib_term_listing_edit_form',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-links',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'a2113e1b-6210-476d-b671-c4fea1780d48';
-    $display->content['new-a2113e1b-6210-476d-b671-c4fea1780d48'] = $pane;
-    $display->panels['bottom_right'][0] = 'new-a2113e1b-6210-476d-b671-c4fea1780d48';
+    $pane->uuid = '53da1621-557b-4378-bb09-c44d0d8fad19';
+    $display->content['new-53da1621-557b-4378-bb09-c44d0d8fad19'] = $pane;
+    $display->panels['bottom_right'][0] = 'new-53da1621-557b-4378-bb09-c44d0d8fad19';
     $pane = new stdClass();
-    $pane->pid = 'new-8e103b62-af70-4793-8734-5b73945a0a4e';
+    $pane->pid = 'new-11cffef0-f174-46e8-a80a-bed23ae9948a';
     $pane->panel = 'bottom_right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_event_series';
+    $pane->type = 'term_listing';
+    $pane->subtype = 'term_listing';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+      ),
       'override_title' => 1,
       'override_title_text' => 'Series',
+      'field' => 'field_event_series',
+      'view_path' => 'news-events/events-agenda',
+      'form_build_id' => 'form-IqawRrqB3EV1D96LLMdEIjDyB_V_Jl43xEF9DBI2lDo',
+      'form_token' => 'H2rMGKRm4KkmnhSElCBrgP6wycwz9NfYQlpnd0pPf2w',
+      'form_id' => 'uclalib_term_listing_edit_form',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-links',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '8e103b62-af70-4793-8734-5b73945a0a4e';
-    $display->content['new-8e103b62-af70-4793-8734-5b73945a0a4e'] = $pane;
-    $display->panels['bottom_right'][1] = 'new-8e103b62-af70-4793-8734-5b73945a0a4e';
+    $pane->uuid = '11cffef0-f174-46e8-a80a-bed23ae9948a';
+    $display->content['new-11cffef0-f174-46e8-a80a-bed23ae9948a'] = $pane;
+    $display->panels['bottom_right'][1] = 'new-11cffef0-f174-46e8-a80a-bed23ae9948a';
     $pane = new stdClass();
-    $pane->pid = 'new-82b56761-e3c4-402b-a2b5-010e1f8036bc';
+    $pane->pid = 'new-086753f4-aaef-4e8a-93f4-04e4aac6c348';
     $pane->panel = 'bottom_right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_event_audience';
+    $pane->type = 'term_listing';
+    $pane->subtype = 'term_listing';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+      ),
+      'field' => 'field_event_audience',
+      'view_path' => 'news-events/events-agenda',
+      'form_build_id' => 'form-Tf8cxKadMGHA3DewOSO9Krq1hFi11q7pYdgjiO32f1w',
+      'form_token' => 'H2rMGKRm4KkmnhSElCBrgP6wycwz9NfYQlpnd0pPf2w',
+      'form_id' => 'uclalib_term_listing_edit_form',
       'override_title' => 1,
       'override_title_text' => 'Audience',
     );
@@ -345,16 +342,13 @@ function uclalib_event_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-links',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '82b56761-e3c4-402b-a2b5-010e1f8036bc';
-    $display->content['new-82b56761-e3c4-402b-a2b5-010e1f8036bc'] = $pane;
-    $display->panels['bottom_right'][2] = 'new-82b56761-e3c4-402b-a2b5-010e1f8036bc';
+    $pane->uuid = '086753f4-aaef-4e8a-93f4-04e4aac6c348';
+    $display->content['new-086753f4-aaef-4e8a-93f4-04e4aac6c348'] = $pane;
+    $display->panels['bottom_right'][2] = 'new-086753f4-aaef-4e8a-93f4-04e4aac6c348';
     $pane = new stdClass();
     $pane->pid = 'new-93073ac0-609c-49c8-967b-f9e6eee6e864';
     $pane->panel = 'bottom_right';
@@ -699,6 +693,34 @@ function uclalib_event_default_page_manager_pages() {
     $display->content['new-0ab86fd1-08ad-48c7-9cc2-de539527c9b9'] = $pane;
     $display->panels['sidebar_left'][1] = 'new-0ab86fd1-08ad-48c7-9cc2-de539527c9b9';
     $pane = new stdClass();
+    $pane->pid = 'new-d642e0ae-b2ec-4b35-98b1-3046e261f25e';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-dPTRrvJVywvmbk8IrApIgbk8EveZIybL';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Audience',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'pane_collapsed' => 1,
+      ),
+      'style' => 'collapsible',
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-options',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'd642e0ae-b2ec-4b35-98b1-3046e261f25e';
+    $display->content['new-d642e0ae-b2ec-4b35-98b1-3046e261f25e'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-d642e0ae-b2ec-4b35-98b1-3046e261f25e';
+    $pane = new stdClass();
     $pane->pid = 'new-aa0b5038-869a-4c78-ba1b-12b3d9b7ce06';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
@@ -721,11 +743,11 @@ function uclalib_event_default_page_manager_pages() {
       'css_class' => 'sidebar-options',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'aa0b5038-869a-4c78-ba1b-12b3d9b7ce06';
     $display->content['new-aa0b5038-869a-4c78-ba1b-12b3d9b7ce06'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-aa0b5038-869a-4c78-ba1b-12b3d9b7ce06';
+    $display->panels['sidebar_left'][3] = 'new-aa0b5038-869a-4c78-ba1b-12b3d9b7ce06';
     $pane = new stdClass();
     $pane->pid = 'new-a4399752-ad49-43ab-9991-5de9887e7083';
     $pane->panel = 'sidebar_right';

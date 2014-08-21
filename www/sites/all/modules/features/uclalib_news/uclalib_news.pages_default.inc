@@ -370,7 +370,7 @@ function uclalib_news_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'News Byline',
       'title' => '',
-      'body' => '<p>By %user:name on %node:created:month %node:created:day, %node:created:year</p>
+      'body' => '<p>By %user:field_first_name %user:field_last_name on %node:created:month %node:created:day, %node:created:year</p>
 ',
       'format' => 'full_html',
       'substitute' => 1,

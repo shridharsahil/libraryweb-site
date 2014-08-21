@@ -35,18 +35,16 @@
   }
   .views-submit-button {
     margin-left: 18px;
+    position: absolute;
+    right: -13px;
+    margin: 0;
+    padding: 0;
     input {
       margin: 0 !important;
     }
   }
   .views-widget-filter-field_staff_is_subject_librarian {
     display: none;
-  }
-  .views-submit-button {
-    position: absolute;
-    right: -13px;
-    margin: 0;
-    padding: 0;
   }
   .form-submit {
     background: #fff url(../images/icon-search.png) 50% 55% no-repeat;
@@ -55,6 +53,9 @@
     border: none;
     padding: 6px 6px;
     line-height: normal;
+  }
+  .views-reset-button {
+    display: none;
   }
 }
 .sidebar-options {

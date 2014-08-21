@@ -81,13 +81,13 @@ function uclalib_event_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'default_opening_hours' => array(
-          'weight' => '5',
+          'weight' => '12',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '13',
         ),
       ),
       'display' => array(

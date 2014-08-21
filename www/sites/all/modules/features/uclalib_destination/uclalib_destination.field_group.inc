@@ -23,12 +23,9 @@ function uclalib_destination_field_group_info() {
     'label' => 'At this destination',
     'weight' => '1',
     'children' => array(
-      0 => 'field_destination_amenities',
-      1 => 'field_destination_study_areas',
-      2 => 'field_destination_equipment',
-      3 => 'field_amenities',
-      4 => 'field_study_areas',
-      5 => 'field_equipment',
+      0 => 'field_amenities',
+      1 => 'field_equipment',
+      2 => 'field_study_areas',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -84,11 +81,12 @@ function uclalib_destination_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'body',
-      1 => 'field_destination_phone',
-      2 => 'field_destination_email',
-      3 => 'field_destination_sched_link',
-      4 => 'field_destination_location',
-      5 => 'title',
+      1 => 'field_destination_email',
+      2 => 'field_destination_location',
+      3 => 'field_destination_phone',
+      4 => 'field_destination_sched_link',
+      5 => 'field_destination_room_number',
+      6 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

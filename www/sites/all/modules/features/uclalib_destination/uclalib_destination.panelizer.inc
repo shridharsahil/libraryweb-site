@@ -53,7 +53,7 @@ function uclalib_destination_panelizer_defaults() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node:title <br><h3>Room 1234, Phone 310.206.1234</h3>';
+  $display->title = '';
   $display->uuid = '16ff1bbd-61f5-4b3b-bb66-909af770948a';
   $display->window_title = '';
   $display->content = array();
@@ -204,7 +204,55 @@ function uclalib_destination_panelizer_defaults() {
     $pane->uuid = '536b276f-490f-4d2a-a1df-dab4d0b03800';
     $display->content['new-536b276f-490f-4d2a-a1df-dab4d0b03800'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-536b276f-490f-4d2a-a1df-dab4d0b03800';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane = new stdClass();
+    $pane->pid = 'new-f376cb6e-e699-4136-ba94-ee5e62d833d8';
+    $pane->panel = 'top';
+    $pane->type = 'uclalib_title';
+    $pane->subtype = 'uclalib_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f376cb6e-e699-4136-ba94-ee5e62d833d8';
+    $display->content['new-f376cb6e-e699-4136-ba94-ee5e62d833d8'] = $pane;
+    $display->panels['top'][0] = 'new-f376cb6e-e699-4136-ba94-ee5e62d833d8';
+    $pane = new stdClass();
+    $pane->pid = 'new-d5e71510-0977-49bc-9ba1-9470fb15135a';
+    $pane->panel = 'top';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '%node:field_destination_room_number %node:field_destination_phone &nbsp;%node:field_destination_email</p>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'd5e71510-0977-49bc-9ba1-9470fb15135a';
+    $display->content['new-d5e71510-0977-49bc-9ba1-9470fb15135a'] = $pane;
+    $display->panels['top'][1] = 'new-d5e71510-0977-49bc-9ba1-9470fb15135a';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-f2da3970-dd7e-4c20-84fb-d49f48c32084';
   $panelizer->display = $display;
   $export['node:destination:default'] = $panelizer;

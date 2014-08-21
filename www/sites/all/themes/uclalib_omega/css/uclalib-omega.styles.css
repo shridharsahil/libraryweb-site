@@ -1,3 +1,8 @@
+input[type=submit],
+input[type=text] {
+  -webkit-border-radius: 0px;
+}
+
 /* Responsive images */
 img {
   max-width: 100%;
@@ -24,9 +29,12 @@ img {
 
 table {
   border: 1px solid #adcde5;
-  display: inline-block;
+  border-collapse: separate;
+  border-spacing: 2px;
+  display: table;
   margin-bottom: 1em;
   padding-left: 1px;
+  width: 100%;
 }
 table th, table tr.even {
   background: #fff;
@@ -39,9 +47,7 @@ table tr.odd .current-day {
 }
 table th,
 table td {
-  border: 2px solid #fff;
   padding: 2px 5px;
-  white-space: nowrap;
 }
 table th + th,
 table td + td {
@@ -102,7 +108,7 @@ a:hover {
 
 /* UCLA Library custom Iconfont */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  vertical-align: middle;
+  vertical-align: -17%;
 }
 
 .icon-copy-color:before,
@@ -293,9 +299,6 @@ a[href="#main-content"] {
   font-size: 18px;
 }
 
-.l-navigation .l-region {
-  padding: 16px 0;
-}
 .l-navigation ul.primary-links {
   margin: 0;
   padding: 0;
@@ -306,6 +309,8 @@ a[href="#main-content"] {
   *zoom: 1;
   list-style: none;
   list-style-image: none;
+  display: table;
+  width: 100%;
 }
 .l-navigation ul.primary-links:before, .l-navigation ul.primary-links:after {
   content: ".";
@@ -336,20 +341,22 @@ a[href="#main-content"] {
   padding-right: 0;
 }
 .l-navigation ul.primary-links > li {
-  padding: 0;
+  display: table-cell;
+  float: none;
+  padding: 15px 8px 15px;
   margin: 0 1px 0 0;
   list-style-image: none;
   list-style-type: none;
+  text-align: center;
 }
 .l-navigation ul.primary-links > li a {
-  padding: 16px 25px;
   line-height: 1.2em;
 }
 .l-navigation ul.primary-links > li a,
 .l-navigation ul.primary-links > li a:visited {
   color: #333333;
 }
-.l-navigation ul.primary-links > li.active-trail > a, .l-navigation ul.primary-links > li.active-trail > a:hover {
+.l-navigation ul.primary-links > li.active-trail, .l-navigation ul.primary-links > li.active-trail:hover {
   background: #eff3f4;
   color: #3283be;
   text-decoration: none;
@@ -363,13 +370,17 @@ a[href="#main-content"] {
 .l-navigation ul.primary-links > li.active-trail > a:hover {
   cursor: normal;
 }
+.l-navigation ul.primary-links > li.first {
+  padding-right: 3px;
+}
 .l-navigation ul.primary-links > li.first a {
   text-indent: -999px;
   width: 0;
   display: inline-block;
   float: left;
+  margin-bottom: -4px;
   overflow: hidden;
-  padding: 0 45px 0 0;
+  padding: 0 28px 0 0;
 }
 .l-navigation ul.primary-links > li.first a:after {
   font-family: icomoon;
@@ -389,6 +400,9 @@ a[href="#main-content"] {
 .l-navigation ul.primary-links > li.first a:focus {
   background: transparent;
   color: #3283be;
+}
+.l-navigation ul.primary-links > li.last {
+  padding-right: 6px;
 }
 
 .l-region--top {
@@ -466,7 +480,7 @@ a[href="#main-content"] {
 .l-region--top .bean-showcase .field--name-field-showcase > .field__items > .field__item {
   float: left;
   line-height: 1.1em;
-  margin: 24px 10px 0 0;
+  margin: 24px 1.12% 0 0;
   text-align: center;
   width: 24.16%;
 }
@@ -525,18 +539,16 @@ a[href="#main-content"] {
 }
 .sidebar-search .views-submit-button {
   margin-left: 18px;
+  position: absolute;
+  right: -13px;
+  margin: 0;
+  padding: 0;
 }
 .sidebar-search .views-submit-button input {
   margin: 0 !important;
 }
 .sidebar-search .views-widget-filter-field_staff_is_subject_librarian {
   display: none;
-}
-.sidebar-search .views-submit-button {
-  position: absolute;
-  right: -13px;
-  margin: 0;
-  padding: 0;
 }
 .sidebar-search .form-submit {
   background: white url(../images/icon-search.png) 50% 55% no-repeat;
@@ -545,6 +557,9 @@ a[href="#main-content"] {
   border: none;
   padding: 6px 6px;
   line-height: normal;
+}
+.sidebar-search .views-reset-button {
+  display: none;
 }
 
 .sidebar-options .ctools-toggle {
@@ -573,6 +588,9 @@ a[href="#main-content"] {
   padding-left: 22px;
 }
 
+.page-contact {
+  /*Shift content on narrow screens to avoid overlapping iFrame*/
+}
 .page-contact .pane-content > h2 {
   color: #2d2f35;
   font-size: 2.286em;
@@ -595,6 +613,12 @@ a[href="#main-content"] {
 .page-contact .pane-ask-librarian h2,
 .page-contact .pane-bean-other-research-support-options h2 {
   font-weight: bold;
+}
+@media (max-width: 816px) {
+  .page-contact .l-region--main-column .l-region--below-main-right {
+    clear: left;
+    float: left;
+  }
 }
 .page-contact .pane-staff-search-pane {
   margin-bottom: 2.7em;
@@ -681,7 +705,7 @@ a[href="#main-content"] {
 .node-type-news .pane-node-field-event-image,
 .node-type-news .pane-body-summary-pane {
   margin-top: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 .node-type-uclalib-event .pane-node-field-event-thumbnail,
 .node-type-uclalib-event .pane-node-field-event-image,
@@ -711,7 +735,7 @@ a[href="#main-content"] {
 .node-type-uclalib-event .pane-node-body,
 .node-type-exhibition .pane-node-body,
 .node-type-news .pane-node-body {
-  margin-top: 35px;
+  margin-top: 25px;
   margin-bottom: 35px;
 }
 .node-type-uclalib-event .pane-node-body p,
@@ -883,25 +907,6 @@ a[href="#main-content"] {
   .front .l-main {
     background: white;
   }
-  .front .pane-1 {
-    /**
-     * PLACEHOLDER.
-     */
-  }
-  .front .pane-1 .pane-content {
-    background: url(../images/placeholder-start-your-research.png) no-repeat 0 0;
-    height: 350px;
-    margin-bottom: 20px;
-  }
-  .front .pane-1 .pane-content p {
-    padding: 100px 0;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0 0 10px #2d2f35;
-  }
 }
 /**
  * Override jQuery UI widget default font sizes.
@@ -969,6 +974,18 @@ a[href="#main-content"] {
   border-color: #adcde5;
 }
 
+@media (max-width: 840px) {
+  .page-library .ui-tabs .ui-tabs-nav li:first-child,
+  .section-location .ui-tabs .ui-tabs-nav li:first-child {
+    margin: 0 0.5% 0 0;
+    width: 68%;
+  }
+  .page-library .ui-tabs .ui-tabs-nav li:last-child,
+  .section-location .ui-tabs .ui-tabs-nav li:last-child {
+    margin-right: 0;
+    width: 31.5%;
+  }
+}
 /* Hide more than 4 Living Library thumbnails */
 .field--name-field-gallery-images .field__item:nth-child(n+5) {
   display: none;
@@ -1140,9 +1157,6 @@ a.more-link,
   border-width: 0 .7em .7em 0;
 }
 
-.pane-at-this-location-block-panel-pane-1 {
-  padding-left: 24px;
-}
 .pane-at-this-location-block-panel-pane-1 h2 {
   font-size: 1em;
   font-weight: bold;
@@ -1167,7 +1181,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1215,6 +1229,17 @@ a.more-link,
 .pane-bean-link-list .field--name-field-link-link a {
   color: #3283be;
 }
+.pane-bean-link-list .no-description .field--name-field-link-link {
+  -ms-word-break: break-all;
+}
+.pane-bean-link-list .no-description .field--name-field-link-link a {
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 
 .pane-bean-living-library-gallery {
   margin-bottom: 10px !important;
@@ -1229,12 +1254,12 @@ a.more-link,
 }
 
 .pane-bean-quick-find h2 {
-  padding: 0 3.5em;
+  padding: 0 0.5em 0 2.5em;
   font-size: 1em;
   font-weight: bold;
 }
 .pane-bean-quick-find .pane-content {
-  padding: 1em 3.5em;
+  padding: 1em 0.5em 1em 2.5em;
   font-size: 14px;
   font-weight: 100;
 }
@@ -1380,9 +1405,11 @@ a.more-link,
   font-weight: 100;
   margin-top: 0;
 }
-.pane-library-hours-panel-pane-1 .views-row .pane-linked-map {
-  float: left;
-  margin-right: 22px;
+@media (min-width: 900px) {
+  .pane-library-hours-panel-pane-1 .views-row .pane-linked-map {
+    float: left;
+    margin-right: 16px;
+  }
 }
 .pane-library-hours-panel-pane-1 .views-row .pane-node-field-location-building {
   padding-top: 26px;
@@ -1911,6 +1938,11 @@ a.more-link,
   font-weight: bold;
 }
 
+.l-region--bottom-right .pane-term-listing ul {
+  list-style: none;
+  padding: 0;
+}
+
 .pane-todays-hours.pane-style-border-blue .pane-content {
   padding: 3px;
 }
@@ -1944,6 +1976,73 @@ a.more-link,
 }
 .pane-todays-hours span.views-field-title {
   width: 60%;
+}
+
+.pane-ucla-tab-search-ucla-tab-search-tabs {
+  margin-bottom: 2em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs {
+  border: none;
+  margin: 1em 0 1em 13em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list {
+  border: none;
+  margin: -1px 0 -1px -13em;
+  width: 14em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li {
+  background: url(../images/arr-right-yell.png) 100% 0 no-repeat;
+  border: none;
+  margin: 4px 0;
+  padding-right: 7px;
+  text-align: center;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a {
+  background-color: #eff3f4;
+  height: 46px;
+  font-size: 1.143em;
+  line-height: 46px;
+  outline: 0 !important;
+  padding: 0;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a:focus {
+  outline: 0;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li strong {
+  font-weight: normal;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected {
+  background: url(../images/arr-right-yell.png) 100% 50% no-repeat;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected a {
+  background-color: #fdb930;
+  outline: 0 !important;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li.selected a strong {
+  color: #2d2f35;
+  text-decoration: none;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li:focus {
+  outline: 0;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes {
+  padding: 1em 0;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes .pane-description {
+  background: url(../images/question-icon.png) 100% 0 no-repeat;
+  margin: 0.4em 0 0.6em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes .pane-description strong:first-child {
+  display: block;
+  margin-bottom: 2px;
+  padding-top: 0.4em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-panes input[type="submit"] {
+  background: #000;
+  border: 0 none;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px 10px;
 }
 
 .pane-node-field-resource-link h2, .pane-node-field-resource-other-links h2 {
@@ -2013,7 +2112,7 @@ a.more-link,
   margin: 0;
 }
 .page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-item {
-  width: 82%;
+  width: 78%;
 }
 .page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-item .form-text {
   border: 1px solid #d9d9d9;
@@ -2021,7 +2120,7 @@ a.more-link,
 }
 .page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-actions {
   margin-left: -4px;
-  width: 18%;
+  width: 22%;
 }
 .page-search-research .l-region--top .pane-resources-search-pane .pane-content .header-search-form-wrapper .form-actions .form-submit {
   background: #000;
@@ -2029,7 +2128,7 @@ a.more-link,
   color: #fff;
   font-weight: bold;
   margin: 0;
-  padding: 0.5em 0.6em 0.5em;
+  padding: 0.5em 0 0.5em;
   text-decoration: none;
   text-indent: 0;
   text-transform: uppercase;
@@ -2232,6 +2331,23 @@ a.more-link,
   display: none !important;
 }
 
+/* Reduce padding in narrow views */
+@media (max-width: 816px) {
+  .ui-tabs .ui-tabs-panel .views-field-field-event-thumbnail + .views-field,
+  .ui-tabs .ui-tabs-panel .views-field,
+  .pane-bean-upcoming-events .views-field-field-event-thumbnail + .views-field,
+  .pane-bean-upcoming-events .views-field {
+    padding: 10px 0 10px 7px !important;
+  }
+  .ui-tabs .ui-tabs-panel .views-field-field-event-image,
+  .ui-tabs .ui-tabs-panel .views-field-field-exhibition-image,
+  .ui-tabs .ui-tabs-panel .views-field-field-event-thumbnail,
+  .pane-bean-upcoming-events .views-field-field-event-image,
+  .pane-bean-upcoming-events .views-field-field-exhibition-image,
+  .pane-bean-upcoming-events .views-field-field-event-thumbnail {
+    padding: 4px 0 4px 7px !important;
+  }
+}
 .view-exhibitions-main-view .view-filters {
   display: none;
 }

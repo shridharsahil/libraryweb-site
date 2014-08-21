@@ -1,5 +1,5 @@
-$nav-vert-space: 16px;
-$nav-horiz-space: 25px;
+$nav-vert-space: 15px;
+$nav-horiz-space: 8px;
 
 .l-navigation-wrapper {
   background: $nav-bg-color;
@@ -7,28 +7,29 @@ $nav-horiz-space: 25px;
 }
 
 .l-navigation {
-  .l-region {
-    padding: $nav-vert-space 0;
-  }
   ul.primary-links {
     @include horizontal-list;
     list-style: none;
     list-style-image: none;
+    display: table;
+    width: 100%;
     > li {
-      padding: 0;
+      display: table-cell;
+      float: none;
+      padding: $nav-vert-space $nav-horiz-space $nav-vert-space;
       margin: 0 1px 0 0;
       list-style-image: none;
       list-style-type: none;
+      text-align: center;
       a {
-        padding: $nav-vert-space $nav-horiz-space;
         line-height: 1.2em;
       }
       a,
       a:visited {
         color: $nav-link-color;
       }
-      &.active-trail > a,
-      &.active-trail > a:hover {
+      &.active-trail,
+      &.active-trail:hover {
         background: $nav-bg-active-color;
         color: $nav-link-active-color;
         text-decoration: none;
@@ -45,11 +46,13 @@ $nav-horiz-space: 25px;
 
       // Special case for first link.
       &.first {
+        padding-right: 3px;
         a {
           text-indent: -999px;
           width: 0;
           display: inline-block;
           float: left;
+          margin-bottom: -4px;
           overflow: hidden;
           padding: 0 $nav-horiz-space+20px 0 0;
           &:after {
@@ -73,6 +76,9 @@ $nav-horiz-space: 25px;
           background: transparent;
           color: $nav-link-active-color;
         }
+      }
+      &.last {
+        padding-right: 6px;
       }
     }
   }

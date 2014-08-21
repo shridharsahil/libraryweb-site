@@ -78,34 +78,30 @@ function uclalib_exhibition_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-5841e3fa-8f31-4f44-86c9-86e3063f272d';
+    $pane->pid = 'new-614a6c7c-a742-42f6-9922-ba75a56e6973';
     $pane->panel = 'bottom_left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'exhibition_dates';
+    $pane->subtype = 'exhibition_dates';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Exhibition Date Range',
-      'title' => '',
-      'body' => '<p>%node:field_exhibition_start to %node:field_exhibition_end</p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane-exhibition-date-range',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '5841e3fa-8f31-4f44-86c9-86e3063f272d';
-    $display->content['new-5841e3fa-8f31-4f44-86c9-86e3063f272d'] = $pane;
-    $display->panels['bottom_left'][0] = 'new-5841e3fa-8f31-4f44-86c9-86e3063f272d';
+    $pane->uuid = '614a6c7c-a742-42f6-9922-ba75a56e6973';
+    $display->content['new-614a6c7c-a742-42f6-9922-ba75a56e6973'] = $pane;
+    $display->panels['bottom_left'][0] = 'new-614a6c7c-a742-42f6-9922-ba75a56e6973';
     $pane = new stdClass();
     $pane->pid = 'new-22a3203e-e593-43b1-9ab6-f2bf5bcadab3';
     $pane->panel = 'bottom_left';
