@@ -22,7 +22,7 @@ function uclalib_search_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Content Search';
+  $handler->display->display_options['title'] = 'Site Search';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -79,7 +79,7 @@ function uclalib_search_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'search';
+  $handler->display->display_options['path'] = 'site-search';
   $export['content_search'] = $view;
 
   $view = new view();
