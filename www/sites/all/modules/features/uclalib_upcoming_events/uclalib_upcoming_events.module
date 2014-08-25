@@ -54,7 +54,7 @@ function uclalib_upcoming_events_news_widget_validate($form, &$form_state) {
 function _uclalib_upcoming_events_taxonomy_select($machine_name, $parent = 0, $depth = NULL) {
   $vocab = taxonomy_vocabulary_machine_name_load($machine_name);
   $terms = taxonomy_get_tree($vocab->vid, $parent, $depth);
-  $output = array('' => 'None');
+  $output = array('all' => '(All Categories)');
   foreach ($terms as $data) {
     $output[$data->tid] = $data->name;
   }
@@ -73,7 +73,7 @@ function uclalib_upcoming_events_content_type_select($node_type) {
     $location_items = entity_load('node', $location_nids);
   }
 
-  $output = array('' => 'None');
+  $output = array('all' => '(All Locations)');
   foreach ($location_items as $data) {
     $output[$data->nid] = $data->title;
   }
