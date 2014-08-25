@@ -10,6 +10,7 @@ dependencies[] = date
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = image
+dependencies[] = link
 dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = strongarm
