@@ -81,24 +81,15 @@ function uclalib_using_library_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-681caf72-da10-4020-9c99-20931abb85b8';
+    $pane->pid = 'new-bd47704a-7b2b-47af-baa7-81ffab6701e9';
     $pane->panel = 'below_main_left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-access--privileges-landing-page';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Using the Library FAQ block',
-      'title' => 'Frequently Asked Questions',
-      'body' => '<p>This is a question we are often asked.</p>
-<p>&nbsp;</p>
-<p>This another question that comes up a lot.</p>
-<p>&nbsp;</p>
-<p>More &gt;&nbsp;</p>
-<p>PLACEHOLDER TEXT, DIY links go above.</p>
-',
-      'format' => 'full_html',
-      'substitute' => TRUE,
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -108,9 +99,31 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '681caf72-da10-4020-9c99-20931abb85b8';
-    $display->content['new-681caf72-da10-4020-9c99-20931abb85b8'] = $pane;
-    $display->panels['below_main_left'][0] = 'new-681caf72-da10-4020-9c99-20931abb85b8';
+    $pane->uuid = 'bd47704a-7b2b-47af-baa7-81ffab6701e9';
+    $display->content['new-bd47704a-7b2b-47af-baa7-81ffab6701e9'] = $pane;
+    $display->panels['below_main_left'][0] = 'new-bd47704a-7b2b-47af-baa7-81ffab6701e9';
+    $pane = new stdClass();
+    $pane->pid = 'new-bc2c3ee8-fa7b-4634-a201-4e64b3d0299d';
+    $pane->panel = 'below_main_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-borrow-renew-return-landing-page';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'bc2c3ee8-fa7b-4634-a201-4e64b3d0299d';
+    $display->content['new-bc2c3ee8-fa7b-4634-a201-4e64b3d0299d'] = $pane;
+    $display->panels['below_main_left'][1] = 'new-bc2c3ee8-fa7b-4634-a201-4e64b3d0299d';
     $pane = new stdClass();
     $pane->pid = 'new-f598a504-1f02-41f8-a340-2744a302258c';
     $pane->panel = 'below_main_right';
@@ -133,6 +146,28 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->uuid = 'f598a504-1f02-41f8-a340-2744a302258c';
     $display->content['new-f598a504-1f02-41f8-a340-2744a302258c'] = $pane;
     $display->panels['below_main_right'][0] = 'new-f598a504-1f02-41f8-a340-2744a302258c';
+    $pane = new stdClass();
+    $pane->pid = 'new-289dbe0e-c789-4876-8518-430436dc1092';
+    $pane->panel = 'below_main_right';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-connecting-from-off-campus-landi';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '289dbe0e-c789-4876-8518-430436dc1092';
+    $display->content['new-289dbe0e-c789-4876-8518-430436dc1092'] = $pane;
+    $display->panels['below_main_right'][1] = 'new-289dbe0e-c789-4876-8518-430436dc1092';
     $pane = new stdClass();
     $pane->pid = 'new-73dfa6f7-3a29-4f93-a37a-177927e73bc8';
     $pane->panel = 'below_secondary_left';
@@ -164,8 +199,9 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_news_categories_tid' => '63',
-        'field_news_location_target_id' => '1',
+        'field_news_categories_tid' => 'all',
+        'field_news_location_target_id' => 'all',
+        'field_staff_subject_areas_tid' => 'all',
       ),
     );
     $pane->cache = array();
@@ -179,36 +215,6 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->uuid = '44809691-c744-4a8b-8e7a-38982ffcac6c';
     $display->content['new-44809691-c744-4a8b-8e7a-38982ffcac6c'] = $pane;
     $display->panels['below_secondary_left'][1] = 'new-44809691-c744-4a8b-8e7a-38982ffcac6c';
-    $pane = new stdClass();
-    $pane->pid = 'new-85649857-96d9-45cf-894d-a16c0d721d87';
-    $pane->panel = 'below_secondary_right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Using the Library Link Highlight',
-      'title' => '',
-      'body' => '<p><a href="course-reserves">Course Reserves</a></p>
-',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'background-gray',
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'more-link-block',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '85649857-96d9-45cf-894d-a16c0d721d87';
-    $display->content['new-85649857-96d9-45cf-894d-a16c0d721d87'] = $pane;
-    $display->panels['below_secondary_right'][0] = 'new-85649857-96d9-45cf-894d-a16c0d721d87';
     $pane = new stdClass();
     $pane->pid = 'new-558390d6-b2aa-4855-a1e0-39cf8d8363b9';
     $pane->panel = 'below_secondary_right';
@@ -226,11 +232,11 @@ function uclalib_using_library_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '558390d6-b2aa-4855-a1e0-39cf8d8363b9';
     $display->content['new-558390d6-b2aa-4855-a1e0-39cf8d8363b9'] = $pane;
-    $display->panels['below_secondary_right'][1] = 'new-558390d6-b2aa-4855-a1e0-39cf8d8363b9';
+    $display->panels['below_secondary_right'][0] = 'new-558390d6-b2aa-4855-a1e0-39cf8d8363b9';
     $pane = new stdClass();
     $pane->pid = 'new-eb6812a7-5ada-47bd-b1a8-b1d590ce24e3';
     $pane->panel = 'main';
@@ -261,39 +267,27 @@ function uclalib_using_library_default_page_manager_pages() {
     $display->content['new-eb6812a7-5ada-47bd-b1a8-b1d590ce24e3'] = $pane;
     $display->panels['main'][0] = 'new-eb6812a7-5ada-47bd-b1a8-b1d590ce24e3';
     $pane = new stdClass();
-    $pane->pid = 'new-724b5ef1-79a3-4746-9ae5-95b01379a413';
+    $pane->pid = 'new-55664e1c-97b6-4ef4-a2e0-fc8f91092299';
     $pane->panel = 'sidebar_left';
-    $pane->type = 'menu_tree';
-    $pane->subtype = 'main-menu';
+    $pane->type = 'uclalib_nav';
+    $pane->subtype = 'uclalib_nav';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'menu_name' => 'main-menu',
-      'parent_mlid' => 'main-menu:0',
-      'title_link' => 0,
-      'admin_title' => '',
-      'level' => '2',
-      'follow' => 0,
-      'depth' => '1',
-      'expanded' => 0,
-      'sort' => 0,
-      'override_title' => 1,
-      'override_title_text' => 'At a glance',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-tier-1',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '724b5ef1-79a3-4746-9ae5-95b01379a413';
-    $display->content['new-724b5ef1-79a3-4746-9ae5-95b01379a413'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-724b5ef1-79a3-4746-9ae5-95b01379a413';
+    $pane->uuid = '55664e1c-97b6-4ef4-a2e0-fc8f91092299';
+    $display->content['new-55664e1c-97b6-4ef4-a2e0-fc8f91092299'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-55664e1c-97b6-4ef4-a2e0-fc8f91092299';
     $pane = new stdClass();
     $pane->pid = 'new-b0d737de-b8a9-4568-a62b-0a94fc20f3f6';
     $pane->panel = 'sidebar_left';
