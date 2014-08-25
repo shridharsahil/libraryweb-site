@@ -28,7 +28,7 @@ $plugin = array(
  */
 function search_form_content_type_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
-  $url = url('search');
+  $url = url('site-search');
   $placeholder = t('Search');
   $submit = t('Go');
   $block->content = <<<EOD

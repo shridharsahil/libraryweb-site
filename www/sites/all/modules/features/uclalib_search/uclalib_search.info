@@ -133,3 +133,4 @@ features[views_view][] = content_search
 features[views_view][] = location_search
 features[views_view][] = news_search
 features[views_view][] = staff_directory
+project path = /tmp
