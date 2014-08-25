@@ -378,7 +378,7 @@ function uclalib_event_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Exhibitions';
+  $handler->display->display_options['title'] = 'Exhibits';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'See all Exhibitions';
