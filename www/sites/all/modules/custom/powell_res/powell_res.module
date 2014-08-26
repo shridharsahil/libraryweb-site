@@ -192,8 +192,13 @@ function powell_res_form_page_one($form, &$form_state) {
       session_variable_set('powell-res','name_last', $names[0]);
       session_variable_set('powell-res','name_first', $names[1]);
     }
+  }elseif(!empty($powell_user->user_first_name['und'][0]['value'])) {
+    session_variable_set('powell-res','name_first', $powell_user->user_first_name['und'][0]['value']);
+    if(!empty($powell_user->user_last_name['und'][0]['value'])) {
+      session_variable_set('powell-res','name_last', $powell_user->user_last_name['und'][0]['value']);
+    }
   }else{
-    $names = explode("|||", "Name|||unavailable");
+    $names = explode("|||", "Anonymous|||User");
     session_variable_set('powell-res','name_first', $names[0]);
     session_variable_set('powell-res','name_last', $names[1]);
   }
