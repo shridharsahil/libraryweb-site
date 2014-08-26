@@ -570,7 +570,7 @@ function uclalib_resources_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Search & Research';
+  $display->title = 'Search';
   $display->uuid = '82948aaa-79af-4cbf-9193-5d2281e060f0';
   $display->window_title = '';
   $display->content = array();
@@ -740,30 +740,27 @@ function uclalib_resources_default_page_manager_pages() {
     $display->content['new-edeb57f4-5fd0-474f-8625-96e2842893c5'] = $pane;
     $display->panels['main'][0] = 'new-edeb57f4-5fd0-474f-8625-96e2842893c5';
     $pane = new stdClass();
-    $pane->pid = 'new-9e0adf7a-05af-4bcd-91bf-59f33b170a1d';
+    $pane->pid = 'new-9e0535de-ad85-48c3-8a56-400471e6bc33';
     $pane->panel = 'sidebar_left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-2';
+    $pane->type = 'uclalib_nav';
+    $pane->subtype = 'uclalib_nav';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'At a Glance',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-tier-1',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '9e0adf7a-05af-4bcd-91bf-59f33b170a1d';
-    $display->content['new-9e0adf7a-05af-4bcd-91bf-59f33b170a1d'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-9e0adf7a-05af-4bcd-91bf-59f33b170a1d';
+    $pane->uuid = '9e0535de-ad85-48c3-8a56-400471e6bc33';
+    $display->content['new-9e0535de-ad85-48c3-8a56-400471e6bc33'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-9e0535de-ad85-48c3-8a56-400471e6bc33';
     $pane = new stdClass();
     $pane->pid = 'new-5496c18e-3154-490a-894d-cd03b4a3d048';
     $pane->panel = 'sidebar_left';

@@ -109,7 +109,10 @@ function uclalib_event_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'size' => 60,
+      ),
       'type' => 'options_buttons',
       'weight' => 10,
     ),
@@ -157,9 +160,12 @@ function uclalib_event_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
       'weight' => 11,
     ),
   );

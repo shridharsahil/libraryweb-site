@@ -277,6 +277,98 @@ function uclalib_exhibition_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-exhibition-field_event_thumbnail'
+  $field_instances['node-exhibition-field_event_thumbnail'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 17,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_thumbnail',
+    'label' => 'Exhibition Thumbnail',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'image',
+        'insert_styles' => array(
+          'image' => 0,
+          'image_custom_crop' => 0,
+          'image_thumbnail_crop' => 0,
+          'image_widescreen_crop' => 0,
+        ),
+        'insert_width' => '',
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_filter_insert' => 1,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(
+          'thumbnail_crop' => 'thumbnail_crop',
+          'widescreen_crop' => 'widescreen_crop',
+        ),
+        'manualcrop_styles_list' => array(
+          'thumbnail_crop' => 'thumbnail_crop',
+          'widescreen_crop' => 'widescreen_crop',
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-exhibition-field_exhibition_end'
   $field_instances['node-exhibition-field_exhibition_end'] = array(
     'bundle' => 'exhibition',
@@ -745,6 +837,7 @@ function uclalib_exhibition_field_default_field_instances() {
   t('Exhibition Related Content');
   t('Exhibition Start Date');
   t('Exhibition Subtitle');
+  t('Exhibition Thumbnail');
   t('Location');
   t('Series');
   t('Staff Subject Areas');
