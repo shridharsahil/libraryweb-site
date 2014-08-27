@@ -599,7 +599,7 @@ function uclalib_event_field_default_field_instances() {
     'bundle' => 'uclalib_event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'field to add a additional information on the location of the event ',
+    'description' => 'ex: Parking on campus is $12; Admission is Free; Reservation Required',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -629,7 +629,7 @@ function uclalib_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_room_info',
-    'label' => 'Room Info',
+    'label' => 'Additional Information',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1034,6 +1034,7 @@ function uclalib_event_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Add related links related to Events information');
+  t('Additional Information');
   t('Audience');
   t('Body');
   t('Category');
@@ -1047,11 +1048,10 @@ function uclalib_event_field_default_field_instances() {
   t('Images');
   t('RSVP');
   t('Related Links');
-  t('Room Info');
   t('Series');
   t('Sponsors');
   t('This field is used to add the name of the sponsor and a link ');
-  t('field to add a additional information on the location of the event ');
+  t('ex: Parking on campus is $12; Admission is Free; Reservation Required');
 
   return $field_instances;
 }
