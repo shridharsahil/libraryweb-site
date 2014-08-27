@@ -174,7 +174,7 @@ function uclalib_location_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -392,7 +392,7 @@ function uclalib_location_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -494,7 +494,7 @@ function uclalib_location_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -553,6 +553,112 @@ function uclalib_location_field_default_field_instances() {
       ),
       'type' => 'file_generic',
       'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-location-field_location_image'
+  $field_instances['node-location-field_location_image'] = array(
+    'bundle' => 'location',
+    'deleted' => 0,
+    'description' => 'Upload an image which represents the location.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 22,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location_image',
+    'label' => 'Location image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'fancybox__category_icon' => 0,
+          'fancybox__custom_crop' => 0,
+          'fancybox__large' => 0,
+          'fancybox__linkit_thumb' => 0,
+          'fancybox__medium' => 0,
+          'fancybox__thumbnail' => 0,
+          'fancybox__thumbnail_crop' => 0,
+          'fancybox__thumbnail_large' => 0,
+          'fancybox__thumbnail_small' => 0,
+          'fancybox__widescreen_crop' => 0,
+          'fancybox__widescreen_large' => 0,
+          'fancybox__widescreen_medium' => 0,
+          'fancybox__widescreen_small' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_category_icon' => 0,
+          'image_custom_crop' => 0,
+          'image_large' => 0,
+          'image_linkit_thumb' => 0,
+          'image_medium' => 0,
+          'image_thumbnail' => 0,
+          'image_thumbnail_crop' => 0,
+          'image_thumbnail_large' => 0,
+          'image_thumbnail_small' => 0,
+          'image_widescreen_crop' => 0,
+          'image_widescreen_large' => 0,
+          'image_widescreen_medium' => 0,
+          'image_widescreen_small' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_filter_insert' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 4,
     ),
   );
 
@@ -942,7 +1048,7 @@ function uclalib_location_field_default_field_instances() {
       'module' => 'phone',
       'settings' => array(),
       'type' => 'phone_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -1113,6 +1219,7 @@ function uclalib_location_field_default_field_instances() {
   t('Equipment');
   t('Floor Plan');
   t('Location Map');
+  t('Location image');
   t('Map Link');
   t('Map thumbnail image');
   t('Nickname');
@@ -1122,6 +1229,7 @@ function uclalib_location_field_default_field_instances() {
   t('Social Links');
   t('Study areas');
   t('This is the name that will be used in the tables that display these opening hours.');
+  t('Upload an image which represents the location.');
 
   return $field_instances;
 }
