@@ -209,10 +209,10 @@ krumo($rc_user);
       rc_session_variable_set('rc-res','name_last', $names[0]);
       rc_session_variable_set('rc-res','name_first', $names[1]);
     }
-  }elseif(!empty($rc_user->user_first_name['und'][0]['value'])){
-    rc_session_variable_set('rc-res','name_first', $rc_user->user_first_name['und'][0]['value']);
-    if(!empty($rc_user->user_last_name['und'][0]['value'])){
-      rc_session_variable_set('rc-res','name_last', $rc_user->user_last_name['und'][0]['value']);
+  }elseif(!empty($rc_user->field_first_name['und'][0]['value'])){
+    rc_session_variable_set('rc-res','name_first', $rc_user->field_first_name['und'][0]['value']);
+    if(!empty($rc_user->field_last_name['und'][0]['value'])){
+      rc_session_variable_set('rc-res','name_last', $rc_user->field_last_name['und'][0]['value']);
     }
   }else{
     $names = explode("|||", "Anonymous|||User");
