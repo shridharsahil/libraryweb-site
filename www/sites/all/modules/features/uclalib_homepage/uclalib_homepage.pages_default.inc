@@ -92,17 +92,15 @@ function uclalib_homepage_default_page_manager_pages() {
     $display->content['new-dc43767f-7c38-4a35-b6ab-cdf65357a2d6'] = $pane;
     $display->panels['bottom_left'][0] = 'new-dc43767f-7c38-4a35-b6ab-cdf65357a2d6';
     $pane = new stdClass();
-    $pane->pid = 'new-2f6d0bc2-3d84-4d36-a352-062a8cc194aa';
+    $pane->pid = 'new-ec681041-0a57-47c4-80dd-9b52a8f3acd4';
     $pane->panel = 'bottom_left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'recent_news_highlight-panel_pane_1';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-homepage-news';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'arguments' => array(
-        'field_news_categories_tid' => '63',
-        'field_news_location_target_id' => '1',
-      ),
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -112,9 +110,9 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '2f6d0bc2-3d84-4d36-a352-062a8cc194aa';
-    $display->content['new-2f6d0bc2-3d84-4d36-a352-062a8cc194aa'] = $pane;
-    $display->panels['bottom_left'][1] = 'new-2f6d0bc2-3d84-4d36-a352-062a8cc194aa';
+    $pane->uuid = 'ec681041-0a57-47c4-80dd-9b52a8f3acd4';
+    $display->content['new-ec681041-0a57-47c4-80dd-9b52a8f3acd4'] = $pane;
+    $display->panels['bottom_left'][1] = 'new-ec681041-0a57-47c4-80dd-9b52a8f3acd4';
     $pane = new stdClass();
     $pane->pid = 'new-6c94d951-6cfe-47a7-b021-d603823cd012';
     $pane->panel = 'bottom_right';
