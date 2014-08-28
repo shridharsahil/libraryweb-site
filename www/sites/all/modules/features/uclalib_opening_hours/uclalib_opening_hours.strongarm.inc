@@ -25,6 +25,20 @@ function uclalib_opening_hours_strongarm() {
         'custom settings' => 1,
       ),
     ),
+    'file' => array(
+      'thumbnail' => array(
+        'label' => 'Thumbnail',
+        'custom settings' => 1,
+      ),
+      'custom_crop' => array(
+        'label' => 'Custom Crop',
+        'custom settings' => 1,
+      ),
+      'widescreen' => array(
+        'label' => 'Widescreen',
+        'custom settings' => 1,
+      ),
+    ),
   );
   $export['entity_view_modes'] = $strongarm;
 
