@@ -15,7 +15,7 @@ function uclalib_using_library_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Using the Library Landing Page';
   $page->admin_description = '';
-  $page->path = 'library';
+  $page->path = 'use';
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
@@ -30,7 +30,9 @@ function uclalib_using_library_default_page_manager_pages() {
     ),
   );
   $page->arguments = array();
-  $page->conf = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
   $page->default_handlers = array();
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
