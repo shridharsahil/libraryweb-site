@@ -196,7 +196,7 @@ function rc_res_form_page_one($form, &$form_state) {
   rc_session_variable_set('rc-res','no_res_available',0);
   rc_session_variable_set('rc-res','reservation_was_deleted', 0); // this is used in page 3 and set in the page 3 delete handler
 
-krumo($rc_user);  
+krumo($rc_user);
   
   //retrieve user first and last name from the $user->field_user_full_name that was set on Shibboleth login
   if (!empty($rc_user->field_user_full_name['und'][0]['value'])){
