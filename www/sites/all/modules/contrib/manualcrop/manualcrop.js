@@ -36,25 +36,29 @@ ManualCrop.init = function(context) {
     });
   });
 
-  // Open, if enabled in the settings, the crop tool when a new file is uploaded.
-  $('.ajax-new-content', context).once('manualcrop-init', function() {
-    var content = $(this);
+  // If the user isn't using a mobile device (screen width should be > 767), the
+  // crop tool should be opened when a new file gets uploaded and "crop after upload"
+  // has been enabled in the settings.
+  if (screen.width > 767) {
+    $('.ajax-new-content', context).once('manualcrop-init', function() {
+      var content = $(this);
 
-    if (!content.html().length) {
-      // If the $form['#file_upload_delta'] is not set or invalid the file module
-      // will add an empty <span> as .ajax-new-content element, so we need the
-      // previous element to execute the after upload function.
-      content = content.prev();
-    }
+      if (!content.html().length) {
+        // If the $form['#file_upload_delta'] is not set or invalid the file module
+        // will add an empty <span> as .ajax-new-content element, so we need the
+        // previous element to execute the after upload function.
+        content = content.prev();
+      }
 
-    if ($('.manualcrop-cropdata', content).length == 1) {
-      for (var identifier in elements) {
-        if (elements[identifier].instantCrop) {
-          $('.manualcrop-style-button, .manualcrop-style-thumb', content).trigger('mousedown');
+      if ($('.manualcrop-cropdata', content).length == 1) {
+        for (var identifier in elements) {
+          if (elements[identifier].instantCrop) {
+            $('.manualcrop-style-button, .manualcrop-style-thumb', content).trigger('mousedown');
+          }
         }
       }
-    }
-  });
+    });
+  }
 
   // Trigger the init handler if a Media modal was opened.
   $('.modal-content', context).once('manualcrop-init', function() {
@@ -232,7 +236,7 @@ ManualCrop.showCroptool = function(identifier, style, fid) {
 
       // IE seems to have some issues with the imgAreaSelect $parent variable,
       // so we set the options again to initialize it correctly.
-      if ($.browser.msie) {
+      if (navigator.userAgent.toLowerCase().indexOf('msie ') != -1) {
         ManualCrop.widget.setOptions(options);
       }
 
@@ -889,11 +893,13 @@ Drupal.behaviors.manualcrop = {
       context = context.get(0);
     }
 
-    // Only continue if context equals the javascript document object, which is
-    // the case on the inital page load, or if context was already added to the
-    // document body.
-    if (context && (context == document || $.contains(document.body, context))) {
-      ManualCrop.init(context);
+    if (context && typeof context == 'object' && typeof context.nodeName != 'undefined') {
+      // Only continue if context equals the javascript document object, which is
+      // the case on the inital page load, or if context was already added to the
+      // document body.
+      if (context == document || $.contains(document.body, context)) {
+        ManualCrop.init(context);
+      }
     }
   }
 };

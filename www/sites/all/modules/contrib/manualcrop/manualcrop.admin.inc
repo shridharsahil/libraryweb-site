@@ -295,9 +295,15 @@ function manualcrop_auto_reuse_form($data) {
     ),
   );
 
-  // Get the styles in their correct order.
-  $styles = array_merge(array_fill_keys($data['style_priority'], 0), $styles);
-  $styles = array_filter($styles);
+  if (empty($data['style_priority'])) {
+    // Make sure the style_priority key exists.
+    $data['style_priority'] = array();
+  }
+  else {
+    // Put the styles in their correct order.
+    $styles = array_merge(array_fill_keys($data['style_priority'], 0), $styles);
+    $styles = array_filter($styles);
+  }
 
   // Add each crop image style as row with a weight (priority) element.
   $maxweight = count($data['style_priority']);
@@ -568,6 +574,32 @@ function manualcrop_form_field_ui_field_edit_form_alter(&$form, $form_state) {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function manualcrop_form_file_entity_file_type_form_alter(&$form, &$form_state) {
+  if (isset($form['#file_type']) && $form['#file_type']->type == 'image') {
+    // Get the previously saved or default settings.
+    $settings = variable_get('manualcrop_file_entity_settings_' . $form['#file_type']->type, manualcrop_default_widget_settings());
+
+    // Add the settings form elements.
+    $form += manualcrop_field_widget_settings_form('image_image', $settings);
+    $form['manualcrop']['#tree'] = TRUE;
+    unset($form['manualcrop']['#parents']);
+
+    $form['#submit'][] = 'manualcrop_form_file_entity_file_type_form_submit';
+  }
+}
+
+/**
+ * Form submit handler; Saves the Manual Crop settings of a File Entity type.
+ */
+function manualcrop_form_file_entity_file_type_form_submit($form, &$form_state) {
+  if (!empty($form_state['values']['manualcrop'])) {
+    variable_set('manualcrop_file_entity_settings_' . $form['#file_type']->type, $form_state['values']['manualcrop']);
+  }
+}
+
+/**
  * Add the Manual Crop field widget settings.
  *
  * @param $widget_type
@@ -646,7 +678,7 @@ function manualcrop_field_widget_settings_form($widget_type, $settings) {
     $form['manualcrop']['manualcrop_instant_crop'] = array(
       '#type' => 'checkbox',
       '#title' => t('Crop after upload'),
-      '#description' => t('Open the cropping tool direct after the file upload. Note that this will only work if you <strong>enable only one image style</strong>.'),
+      '#description' => t('Open the cropping tool immediatly after a file upload. Please note that this feature requires a single image style to be enabled. Also it will only be applied for screens of at least 768px width.'),
       '#default_value' => $settings['manualcrop_instant_crop'],
     );
   }
