@@ -105,28 +105,6 @@ function uclalib_using_library_default_page_manager_pages() {
     $display->content['new-bd47704a-7b2b-47af-baa7-81ffab6701e9'] = $pane;
     $display->panels['below_main_left'][0] = 'new-bd47704a-7b2b-47af-baa7-81ffab6701e9';
     $pane = new stdClass();
-    $pane->pid = 'new-bc2c3ee8-fa7b-4634-a201-4e64b3d0299d';
-    $pane->panel = 'below_main_left';
-    $pane->type = 'block';
-    $pane->subtype = 'bean-borrow-renew-return-landing-page';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = 'bc2c3ee8-fa7b-4634-a201-4e64b3d0299d';
-    $display->content['new-bc2c3ee8-fa7b-4634-a201-4e64b3d0299d'] = $pane;
-    $display->panels['below_main_left'][1] = 'new-bc2c3ee8-fa7b-4634-a201-4e64b3d0299d';
-    $pane = new stdClass();
     $pane->pid = 'new-f598a504-1f02-41f8-a340-2744a302258c';
     $pane->panel = 'below_main_right';
     $pane->type = 'block';
@@ -135,7 +113,7 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Getting Started at the Library',
+      'override_title_text' => 'Borrow, Renew, Return',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -148,28 +126,6 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->uuid = 'f598a504-1f02-41f8-a340-2744a302258c';
     $display->content['new-f598a504-1f02-41f8-a340-2744a302258c'] = $pane;
     $display->panels['below_main_right'][0] = 'new-f598a504-1f02-41f8-a340-2744a302258c';
-    $pane = new stdClass();
-    $pane->pid = 'new-289dbe0e-c789-4876-8518-430436dc1092';
-    $pane->panel = 'below_main_right';
-    $pane->type = 'block';
-    $pane->subtype = 'bean-connecting-from-off-campus-landi';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '289dbe0e-c789-4876-8518-430436dc1092';
-    $display->content['new-289dbe0e-c789-4876-8518-430436dc1092'] = $pane;
-    $display->panels['below_main_right'][1] = 'new-289dbe0e-c789-4876-8518-430436dc1092';
     $pane = new stdClass();
     $pane->pid = 'new-73dfa6f7-3a29-4f93-a37a-177927e73bc8';
     $pane->panel = 'below_secondary_left';
