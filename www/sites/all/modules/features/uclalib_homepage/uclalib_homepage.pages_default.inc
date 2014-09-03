@@ -70,10 +70,10 @@ function uclalib_homepage_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-dc43767f-7c38-4a35-b6ab-cdf65357a2d6';
+    $pane->pid = 'new-97526c73-2b2d-4c6e-b996-4400d4747414';
     $pane->panel = 'bottom_left';
     $pane->type = 'block';
-    $pane->subtype = 'bean-upcoming-events';
+    $pane->subtype = 'bean-upcoming-events-homepage';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -88,9 +88,9 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'dc43767f-7c38-4a35-b6ab-cdf65357a2d6';
-    $display->content['new-dc43767f-7c38-4a35-b6ab-cdf65357a2d6'] = $pane;
-    $display->panels['bottom_left'][0] = 'new-dc43767f-7c38-4a35-b6ab-cdf65357a2d6';
+    $pane->uuid = '97526c73-2b2d-4c6e-b996-4400d4747414';
+    $display->content['new-97526c73-2b2d-4c6e-b996-4400d4747414'] = $pane;
+    $display->panels['bottom_left'][0] = 'new-97526c73-2b2d-4c6e-b996-4400d4747414';
     $pane = new stdClass();
     $pane->pid = 'new-ec681041-0a57-47c4-80dd-9b52a8f3acd4';
     $pane->panel = 'bottom_left';
