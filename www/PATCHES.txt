@@ -24,6 +24,10 @@ Bean - Panelizer support for Bean
 https://drupal.org/node/2161535
 https://drupal.org/files/issues/bean-panelizer_support-2161535-9.patch
 
+CKeditor - Make CKEditor plugin system modular and clean
+https://www.drupal.org/node/2159403
+https://www.drupal.org/files/issues/make_ckeditor_plugin-2159403-90.patch
+
 Ctools - hide empty page title pane when wrapper tag is used
 https://drupal.org/node/2265451
 https://drupal.org/files/issues/ctools-hide-empty-page-title-with-wrapper-tag-2265451.patch
