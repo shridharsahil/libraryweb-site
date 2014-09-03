@@ -12,6 +12,7 @@
      * Execute the button.
      */
     invoke: function (data, settings, instanceId) {
+			alert('asdfsdf');
       if (data.format == 'html') {
         if (jQuery(data.node).is('.media-element')) {
           // Change the view mode for already-inserted media.

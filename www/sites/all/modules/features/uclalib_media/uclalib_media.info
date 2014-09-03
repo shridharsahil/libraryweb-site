@@ -13,7 +13,6 @@ dependencies[] = file_entity
 dependencies[] = manualcrop_media_wysiwyg
 dependencies[] = media
 dependencies[] = media_wysiwyg
-dependencies[] = media_wysiwyg_view_mode
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
