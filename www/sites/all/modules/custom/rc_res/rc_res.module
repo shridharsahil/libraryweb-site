@@ -157,7 +157,7 @@ function rc_res_form_page_one($form, &$form_state) {
 //} else{
 //  print_r(': >>>EMPTY $_SERVER[SHIBUCLAUNIVERSITYID]<<<');
 //}
-krumo($_SERVER);
+//krumo($_SERVER);
 
 
   // Jump to appropriate page if necessary
