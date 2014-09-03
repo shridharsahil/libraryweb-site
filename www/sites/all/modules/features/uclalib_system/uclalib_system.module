@@ -48,6 +48,10 @@ function uclalib_system_required_modules() {
     'uclalib_homepage',
     'daterangepicker',
     'uclalib_living_library_gallery',
+    'uclalib_media',
+    'manualcrop_media_wysiwyg',
+    'media_wysiwyg',
+    'media_wysiwyg_view_mode',
   );
 }
 

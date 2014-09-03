@@ -29,7 +29,7 @@ $plugin = array(
 function search_form_content_type_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
   $url = url('site-search');
-  $placeholder = t('Search');
+  $placeholder = t('Site Search');
   $submit = t('Go');
   $block->content = <<<EOD
     <div class="header-search-form-wrapper">

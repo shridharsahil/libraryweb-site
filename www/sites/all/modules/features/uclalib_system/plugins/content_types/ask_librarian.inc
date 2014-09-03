@@ -34,12 +34,15 @@ function ask_librarian_content_type_render($subtype, $conf, $args, $context) {
 
   $block->title = '';
 
+  // Use HTML snippet provided by OCLC for embedding the widget.
+  // 2014-08-27 akohler: removed scheme (http) so this will work when
+  // parent page is served via http or https.
   $block->content .= <<<EOL
-<div id="qpchatwidget" style="width: 190px; height: 275px;">
-<iframe width="100%" height="100%" frameborder="0" src="http://www.questionpoint.org/crs/qwidget/qwidget.jsp?langcode=1&instid=11069&skin=blue&size=standard"
-allowtransparency="true" marginheight="0" marginwidth="0" border="0" style="background:transparent;overflow:hidden;border:0px;height:100%;width:100%">
-</iframe>
-</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript" ></script>
+<div id="questionpoint.chatwidget" qwidgetno="1" ></div>
+<script id="questionpoint.bootstrap" qwidgetno="1" type="text/javascript" src="//www.questionpoint.org/crs/qwidgetV4/js/qwidget.bootstrap.js?langcode=1&instid=11069&skin=gray&size=standard" charset="utf-8">
+<noscript>Please enable javascript to chat with librarians online</noscript>
+</script>
 EOL;
 
   return $block;

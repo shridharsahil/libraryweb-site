@@ -128,7 +128,7 @@ function manualcrop_instance_required_styles($settings) {
  * Add a croptool to the form element. This extends the FAPI widget or simply adds
  * a new form item to enable cropping in a regular form.
  *
- * @param $form_state
+ * @param $form
  *   The form array.
  * @param $form_state
  *   The form state array.
@@ -148,7 +148,7 @@ function manualcrop_instance_required_styles($settings) {
  * @return
  *    Returns TRUE if a croptool has been added, FALSE otherwise.
  */
-function manualcrop_croptool_process($form, &$form_state, &$element, $file, $settings = array(), $instance = NULL, $preview = 'preview') {
+function manualcrop_croptool_process(&$form, &$form_state, &$element, $file, $settings = array(), $instance = NULL, $preview = 'preview') {
   static $processed_forms;
 
   if (user_access('use manualcrop') && (!empty($_COOKIE['has_js']) || variable_get('manualcrop_skip_js_check', FALSE))) {
@@ -180,6 +180,11 @@ function manualcrop_croptool_process($form, &$form_state, &$element, $file, $set
 
       // Required image styles.
       $required = manualcrop_instance_required_styles($settings);
+
+      // Make sure the build id exists.
+      if (!isset($form['#build_id'])) {
+        $form['#build_id'] = 'form-' . drupal_random_key();
+      }
 
       // Reset the images array.
       if (!isset($processed_forms[$form['#build_id']])) {
@@ -255,6 +260,24 @@ function manualcrop_croptool_process($form, &$form_state, &$element, $file, $set
 
       return TRUE;
     }
+  }
+
+  return FALSE;
+}
+
+/**
+ * Adds the #after_build entry to a media element.
+ *
+ * @param $element
+ *   The element to alter.
+ *
+ * @return
+ *   TRUE if the element was altered, FALSE otherwise.
+ */
+function _manualcrop_media_element_add_after_build(&$element) {
+  if (isset($element['#media_options']['global'])) {
+    $element['#after_build'][] = 'manualcrop_media_element_process';
+    return TRUE;
   }
 
   return FALSE;
@@ -543,28 +566,66 @@ function _manualcrop_add_croptool(&$element, $value, &$form_state, $fid, $js_ide
  *   and field_name.
  */
 function _manualcrop_process_file_entity_form(&$form, &$form_state, $instance_info) {
-  // Get the field instance settings.
-  $settings = array();
+  // Check if a field instance was specified and get its settings.
   if (!empty($instance_info['entity_type']) && !empty($instance_info['bundle']) && !empty($instance_info['field_name'])) {
-    // Get the field instance.
     $instance = field_info_instance($instance_info['entity_type'], $instance_info['field_name'], $instance_info['bundle']);
 
     if (!empty($instance)) {
-      // A field instance was found, use its settings.
       $settings = $instance['widget']['settings'];
-
-      if (empty($settings['manualcrop_enable'])) {
-        // Manual Crop isn't enabled.
-        return;
-      }
     }
   }
 
-  // Add the croptool.
-  manualcrop_croptool_process($form, $form_state, $form, $form['#entity'], $settings);
+  // No valid fields instance specified, use the File Entity settings.
+  if (!isset($settings)) {
+    $settings = variable_get('manualcrop_file_entity_settings_' . $form['#entity']->type, manualcrop_default_widget_settings());
+  }
 
-  // Add the submit handler.
-  $form['#submit'][] = 'manualcrop_croptool_submit';
+  // Add the croptool if Manual Crop has been enabled.
+  if (!empty($settings['manualcrop_enable'])) {
+    manualcrop_croptool_process($form, $form_state, $form, $form['#entity'], $settings);
+
+    // Add the submit handler. Sometimes we have to add it to the action button
+    // and sometimes we have to add it to the general #submit, based on whether
+    // or not the submit button already has a handler.
+    if (!empty($form['actions']['submit']['#submit'])) {
+      $form['actions']['submit']['#submit'][] = 'manualcrop_croptool_submit';
+    }
+    else {
+      $form['#submit'][] = 'manualcrop_croptool_submit';
+    }
+  }
+}
+
+/**
+ * Save the Manual Crop data for a file.
+ *
+ * @param $file
+ *   The file entity being saved for.
+ * @param $data
+ *   The data as it is to be written, keyed by style name.
+ */
+function manualcrop_save_crop_data($file, $data) {
+  // If file_entity_revisions isn't enabled, use 0.
+  $vid = (isset($file->vid) ? $file->vid : 0);
+
+  // Delete the existing data.
+  db_delete('manualcrop')
+    ->condition('fid', $file->fid)
+    ->condition('vid', $vid)
+    ->condition('style_name', array_keys($data))
+    ->execute();
+
+  // Save the new crop selections.
+  foreach ($data as $style_name => $selection) {
+    if ($selection) {
+      $record = array_merge($selection, array(
+        'fid' => $file->fid,
+        'vid' => $vid,
+        'style_name' => $style_name
+      ));
+      drupal_write_record('manualcrop', $record);
+    }
+  }
 }
 
 /**
@@ -586,8 +647,18 @@ function _manualcrop_process_file_entity_form(&$form, &$form_state, $instance_in
  *   - "height": An integer representing the height in pixels.
  */
 function manualcrop_load_crop_selection($file, $style_name = NULL) {
+  // Choose which table to use based on whether or not file_entity_revisions module is enabled.
+  if (module_exists('file_entity_revisions')) {
+    $table = 'file_managed_revisions';
+    $key = 'vid';
+  }
+  else {
+    $table = 'file_managed';
+    $key = 'fid';
+  }
+
   if (isset($style_name)) {
-    $result = db_query('SELECT c.x, c.y, c.width, c.height FROM {manualcrop} c INNER JOIN {file_managed} f ON c.fid = f.fid WHERE c.style_name = :name AND f.uri = :uri', array(
+    $result = db_query('SELECT c.x, c.y, c.width, c.height FROM {manualcrop} c INNER JOIN {' . $table . '} f ON c.' . $key . ' = f.' . $key . ' WHERE c.style_name = :name AND f.uri = :uri', array(
       ':name' => $style_name,
       ':uri' => $file,
     ));
@@ -595,7 +666,7 @@ function manualcrop_load_crop_selection($file, $style_name = NULL) {
     return $result->fetchObject();
   }
   else {
-    $result = db_query('SELECT c.style_name, c.x, c.y, c.width, c.height FROM {manualcrop} c INNER JOIN {file_managed} f ON c.fid = f.fid WHERE f.uri = :uri', array(
+    $result = db_query('SELECT c.style_name, c.x, c.y, c.width, c.height FROM {manualcrop} c INNER JOIN {' . $table . '} f ON c.' . $key . ' = f.' . $key . ' WHERE f.uri = :uri', array(
       ':uri' => $file,
     ));
 

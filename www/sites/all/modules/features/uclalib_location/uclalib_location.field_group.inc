@@ -50,15 +50,15 @@ function uclalib_location_field_group_info() {
     'label' => 'Basic Info',
     'weight' => '0',
     'children' => array(
-      0 => 'field_location_nickname',
+      0 => 'field_address',
       1 => 'field_location_alt_names',
-      2 => 'field_location_email',
-      3 => 'field_location_building',
-      4 => 'field_address',
+      2 => 'field_location_building',
+      3 => 'field_location_email',
+      4 => 'field_location_nickname',
       5 => 'field_location_phone',
-      6 => 'field_location_social',
-      7 => 'title',
-      8 => 'field_location_social_links',
+      6 => 'field_location_social_links',
+      7 => 'field_location_image',
+      8 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -84,11 +84,7 @@ function uclalib_location_field_group_info() {
   $field_group->data = array(
     'label' => 'Categories',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_location_amenities',
-      1 => 'field_location_study_areas',
-      2 => 'field_location_equipment',
-    ),
+    'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -142,8 +138,8 @@ function uclalib_location_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_amenities',
-      1 => 'field_study_areas',
-      2 => 'field_equipment',
+      1 => 'field_equipment',
+      2 => 'field_study_areas',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

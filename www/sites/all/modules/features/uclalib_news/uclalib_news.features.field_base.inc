@@ -172,6 +172,7 @@ function uclalib_news_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
+          'destination' => 'destination',
           'location' => 'location',
         ),
       ),
