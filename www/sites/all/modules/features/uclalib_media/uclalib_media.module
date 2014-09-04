@@ -37,9 +37,10 @@ function uclalib_media_views_default_views_alter(&$views) {
     );
     $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
     $handler->display->display_options['pager']['type'] = 'full';
-    $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+    $handler->display->display_options['pager']['options']['items_per_page'] = '18';
     $handler->display->display_options['pager']['options']['offset'] = '0';
     $handler->display->display_options['pager']['options']['id'] = '0';
+    $handler->display->display_options['pager']['options']['quantity'] = '9';
     $handler->display->display_options['style_plugin'] = 'media_browser';
     /* No results behavior: Global: Text area */
     $handler->display->display_options['empty']['area']['id'] = 'area';
