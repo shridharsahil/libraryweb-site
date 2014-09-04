@@ -35,3 +35,11 @@ $conf['shib_auth_link_text'] = 'Shibboleth Login';
 $conf['shib_auth_logout_url'] = 'https://shb.ais.ucla.edu/shibboleth-idp/Logout';
 $conf['shib_auth_username_variable'] = 'HTTP_SHIBUCLAUNIVERSITYID';
 
+// Memcache settings
+$conf['cache_backends'][] = 'sites/all/modules/memcache/memcache.inc';
+$conf['cache_default_class'] = 'MemCacheDrupal';
+
+$conf['memcache_servers'] = array(
+  'memcache-new-test.library.ucla.edu:11211' => 'default',
+);
+
