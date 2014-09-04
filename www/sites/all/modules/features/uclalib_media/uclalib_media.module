@@ -35,7 +35,7 @@ function uclalib_media_views_default_views_alter(&$views) {
     $handler->display->display_options['query']['options']['query_tags'] = array(
       0 => 'media_browser',
     );
-    $handler->display->display_options['exposed_form']['type'] = 'basic';
+    $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
     $handler->display->display_options['pager']['type'] = 'full';
     $handler->display->display_options['pager']['options']['items_per_page'] = '25';
     $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -159,6 +159,42 @@ function uclalib_media_views_default_views_alter(&$views) {
       3 => 0,
       4 => 0,
       5 => 0,
+    );
+    /* Filter criterion: File: Mime type */
+    $handler->display->display_options['filters']['filemime']['id'] = 'filemime';
+    $handler->display->display_options['filters']['filemime']['table'] = 'file_managed';
+    $handler->display->display_options['filters']['filemime']['field'] = 'filemime';
+    $handler->display->display_options['filters']['filemime']['operator'] = '!=';
+    $handler->display->display_options['filters']['filemime']['value'] = 'application/pdf';
+    $handler->display->display_options['filters']['filemime']['exposed'] = TRUE;
+    $handler->display->display_options['filters']['filemime']['expose']['operator_id'] = 'filemime_op';
+    $handler->display->display_options['filters']['filemime']['expose']['label'] = 'Mime type';
+    $handler->display->display_options['filters']['filemime']['expose']['operator'] = 'filemime_op';
+    $handler->display->display_options['filters']['filemime']['expose']['identifier'] = 'filemime';
+    $handler->display->display_options['filters']['filemime']['expose']['remember_roles'] = array(
+      2 => '2',
+      1 => 0,
+      3 => 0,
+      4 => 0,
+      5 => 0,
+    );
+    $handler->display->display_options['filters']['filemime']['is_grouped'] = TRUE;
+    $handler->display->display_options['filters']['filemime']['group_info']['label'] = 'File Type';
+    $handler->display->display_options['filters']['filemime']['group_info']['identifier'] = 'filemime';
+    $handler->display->display_options['filters']['filemime']['group_info']['optional'] = FALSE;
+    $handler->display->display_options['filters']['filemime']['group_info']['widget'] = 'radios';
+    $handler->display->display_options['filters']['filemime']['group_info']['default_group'] = '1';
+    $handler->display->display_options['filters']['filemime']['group_info']['group_items'] = array(
+      1 => array(
+        'title' => 'Images',
+        'operator' => '!=',
+        'value' => 'application/pdf',
+      ),
+      2 => array(
+        'title' => 'PDFs',
+        'operator' => '=',
+        'value' => 'application/pdf',
+      ),
     );
 
     /* Display: Media browser */

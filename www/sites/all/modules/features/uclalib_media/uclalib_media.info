@@ -5,6 +5,7 @@ package = UCLALIB
 version = 7.x-1.0
 project = uclalib_media
 dependencies[] = autocomplete_deluxe
+dependencies[] = better_exposed_filters
 dependencies[] = ctools
 dependencies[] = entity_view_mode
 dependencies[] = entityreference
