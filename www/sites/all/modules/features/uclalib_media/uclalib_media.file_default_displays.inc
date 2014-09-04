@@ -14,7 +14,7 @@ function uclalib_media_file_default_displays() {
   $file_display->api_version = 1;
   $file_display->name = 'document__default__file_field_file_download_link';
   $file_display->weight = -46;
-  $file_display->status = TRUE;
+  $file_display->status = FALSE;
   $file_display->settings = array(
     'text' => 'Download [file:name]',
   );
