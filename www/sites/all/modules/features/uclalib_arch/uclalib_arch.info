@@ -19,6 +19,7 @@ dependencies[] = globalredirect
 dependencies[] = icomoon
 dependencies[] = icon
 dependencies[] = link
+dependencies[] = media_wysiwyg
 dependencies[] = navbar
 dependencies[] = page_manager
 dependencies[] = panelizer
