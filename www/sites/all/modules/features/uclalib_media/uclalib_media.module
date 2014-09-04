@@ -7,6 +7,16 @@
 include_once 'uclalib_media.features.inc';
 
 /**
+ * Implements hook_views_pre_view().
+ */
+function uclalib_media_views_pre_view(&$view, $display_id, $args) {
+  if ($view->name == 'media_default') {
+    // Add modified CSS.
+    drupal_add_css(drupal_get_path('module', 'uclalib_media') . '/css/uclalib_media.theme.css', array('group' => CSS_THEME));
+  }
+}
+
+/**
  * Implements hook_views_default_views_alter().
  *
  * Override the default media browser.
