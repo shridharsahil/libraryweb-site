@@ -1,6 +1,5 @@
-
 /**
- * @file ct_topic_landing_page.js
+ * @file uclalib_location.js
  */
 (function ($) {
 
