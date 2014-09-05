@@ -177,6 +177,31 @@ function uclalib_static_panelizer_defaults() {
     $display->content['new-1727e7a0-aac1-4c9c-92c5-d6bfaccf9c90'] = $pane;
     $display->panels['sidebar_left'][1] = 'new-1727e7a0-aac1-4c9c-92c5-d6bfaccf9c90';
     $pane = new stdClass();
+    $pane->pid = 'new-3fead003-1efd-43c4-b725-bffa5e6c151e';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'custom';
+    $pane->subtype = 'questions_highlight';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '3fead003-1efd-43c4-b725-bffa5e6c151e';
+    $display->content['new-3fead003-1efd-43c4-b725-bffa5e6c151e'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-3fead003-1efd-43c4-b725-bffa5e6c151e';
+    $pane = new stdClass();
     $pane->pid = 'new-75879fd5-ef84-4b88-8766-11a355d2e598';
     $pane->panel = 'top';
     $pane->type = 'uclalib_title';
