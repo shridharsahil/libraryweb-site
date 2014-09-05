@@ -511,7 +511,7 @@ function uclalib_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
@@ -647,7 +647,7 @@ function uclalib_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
@@ -744,69 +744,43 @@ function uclalib_event_views_default_views() {
     ),
   );
 
-  /* Display: Teaching & Learning Events */
-  $handler = $view->new_display('panel_pane', 'Teaching & Learning Events', 'panel_pane_2');
-  $handler->display->display_options['display_description'] = 'Teaching & Learning Events content pane';
+  /* Display: Events by Series */
+  $handler = $view->new_display('panel_pane', 'Events by Series', 'panel_pane_4');
+  $handler->display->display_options['display_description'] = 'Events by Series';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'No results text';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There are no upcoming events at this time.
+';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
-  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid_1']['default_argument_options']['argument'] = '134';
-  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['argument_input'] = array(
-    'tid' => array(
-      'type' => 'none',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Content: Has taxonomy term ID',
-    ),
-    'nid' => array(
-      'type' => 'user',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Content: Nid',
-    ),
+  /* Contextual filter: Event series */
+  $handler->display->display_options['arguments']['field_event_series_tid']['id'] = 'field_event_series_tid';
+  $handler->display->display_options['arguments']['field_event_series_tid']['table'] = 'field_data_field_event_series';
+  $handler->display->display_options['arguments']['field_event_series_tid']['field'] = 'field_event_series_tid';
+  $handler->display->display_options['arguments']['field_event_series_tid']['ui_name'] = 'Event series';
+  $handler->display->display_options['arguments']['field_event_series_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_event_series_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_event_series_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_event_series_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_event_series_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_event_series_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_event_series_tid']['validate_options']['vocabularies'] = array(
+    'events_and_exhibitions_series' => 'events_and_exhibitions_series',
   );
-
-  /* Display: Research Workshops Events */
-  $handler = $view->new_display('panel_pane', 'Research Workshops Events', 'panel_pane_3');
-  $handler->display->display_options['display_description'] = 'Research Workshops Events content pane';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
-  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid_1']['default_argument_options']['argument'] = '139';
-  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_event_series_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['argument_input'] = array(
-    'tid' => array(
-      'type' => 'none',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Content: Has taxonomy term ID',
-    ),
-    'nid' => array(
+    'field_event_series_tid' => array(
       'type' => 'user',
       'context' => 'entity:comment.author',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Content: Nid',
+      'label' => 'Event series',
     ),
   );
   $export['related_events'] = $view;

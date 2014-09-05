@@ -164,7 +164,7 @@ function uclalib_event_field_default_field_instances() {
       'settings' => array(
         'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
         'delimiter' => '',
-        'limit' => 10,
+        'limit' => 0,
         'min_length' => 0,
         'size' => 60,
       ),
@@ -790,7 +790,7 @@ function uclalib_event_field_default_field_instances() {
       'settings' => array(
         'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
         'delimiter' => '',
-        'limit' => 10,
+        'limit' => 0,
         'min_length' => 0,
         'size' => 60,
       ),

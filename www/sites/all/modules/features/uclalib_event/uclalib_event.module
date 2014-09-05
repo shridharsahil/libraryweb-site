@@ -43,3 +43,45 @@ function uclalib_event_views_pre_view(&$view) {
     }
   }
 }
+
+/**
+ * Implements hook_form_alter
+ * Override view pane edit form (input on pane config)
+ * Based on code from: https://maslow.snipt.net/drupal-7-override-view-pane-edit-form-input-on-pane-config/
+ */
+function uclalib_event_form_alter(&$form, $form_state, $form_id) {
+  if (isset($form_state['pane'])) {
+    // Check for correct form: view_name-panel_display_name
+    if (in_array($form_state['pane']->subtype, array("related_events-panel_pane_4"))) {
+
+      // get Events and Exhibitions Series vocabulary
+      $form["arguments"]["field_event_series_tid"]["#type"] = "select";
+      $form["arguments"]["field_event_series_tid"]["#multiple"] = TRUE;
+      $form["arguments"]["field_event_series_tid"]["#options"] = _uclalib_event_taxonomy_select('events_and_exhibitions_series', 0, 1);
+      $form["arguments"]["field_event_series_tid"]["#default_value"] = explode('+', $form["arguments"]["field_event_series_tid"]["#default_value"]);
+
+      $form['#validate'][] = 'uclalib_event_widget_validate';
+    }
+  }
+}
+
+/**
+ * Custom validation handler for Event Series widget
+ */
+function uclalib_event_widget_validate($form, &$form_state) {
+  $form_state['values']['arguments']['field_event_series_tid'] = implode('+', $form_state['values']['arguments']['field_event_series_tid']);
+}
+
+/**
+ * Gets terms for given vocabulary
+ * The second argument is the depth
+ */
+function _uclalib_event_taxonomy_select($machine_name, $parent = 0, $depth = NULL) {
+  $vocab = taxonomy_vocabulary_machine_name_load($machine_name);
+  $terms = taxonomy_get_tree($vocab->vid, $parent, $depth);
+  $output = array('all' => '(All Series)');
+  foreach ($terms as $data) {
+    $output[$data->tid] = $data->name;
+  }
+  return $output;
+}

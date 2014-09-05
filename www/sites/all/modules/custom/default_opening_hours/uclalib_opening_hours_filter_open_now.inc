@@ -9,8 +9,22 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
    * Add this filter to the query.
    */
   public function query() {
-    if (isset($this->view->exposed_input['open_now']) && $this->view->exposed_input['open_now']) {
 
+    // See if the "open now filter" exists on this view.
+    if (isset($this->view->filter['open_now']) && $this->view->filter['open_now']->value) {
+
+      // The "open now" filter exists, if it's exposed, we also need to check if the exposed checkbox is checked.
+      if ($this->view->filter['open_now']->options['exposed']) {
+
+        // The filter is exposed, check if it has been checked.
+        if (!isset($this->view->exposed_input['open_now']) || (isset($this->view->exposed_input['open_now']) && !$this->view->exposed_input['open_now'])) {
+
+          // The filter checkbox is not checked, don't add our filtering.
+          return;
+        }
+      }
+
+      // We got this far, so it's time to limit the query results to items that are open now.
       $this->get_opening_results();
 
       // Add the list of nids as condition to the query.

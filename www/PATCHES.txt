@@ -24,6 +24,10 @@ Bean - Panelizer support for Bean
 https://drupal.org/node/2161535
 https://drupal.org/files/issues/bean-panelizer_support-2161535-9.patch
 
+CKeditor - Make CKEditor plugin system modular and clean
+https://www.drupal.org/node/2159403
+https://www.drupal.org/files/issues/make_ckeditor_plugin-2159403-90.patch
+
 Ctools - hide empty page title pane when wrapper tag is used
 https://drupal.org/node/2265451
 https://drupal.org/files/issues/ctools-hide-empty-page-title-with-wrapper-tag-2265451.patch
@@ -31,6 +35,14 @@ https://drupal.org/files/issues/ctools-hide-empty-page-title-with-wrapper-tag-22
 Facetapi_bonus - add plugin filter to hide facet count.
 https://drupal.org/node/2266717
 https://drupal.org/files/issues/facetapi-bonus-hide-count-2266717-1.patch
+
+Media - Allow custom file view modes for WYSIWYG display
+https://www.drupal.org/node/1792738
+https://www.drupal.org/files/issues/media-custom_view_modes_for_wysiwyg-1792738-139.patch
+
+Media - Custom wrapper breaks tokens with CKEditor >=4.0 without widget plugin
+https://www.drupal.org/node/2177893
+https://www.drupal.org/files/issues/media-ckeditor4-media-plugin-2177893-13.patch
 
 Panels - Allow users to manually control window title.
 https://drupal.org/node/2262173
