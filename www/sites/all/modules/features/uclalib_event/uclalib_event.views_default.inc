@@ -747,6 +747,9 @@ function uclalib_event_views_default_views() {
   /* Display: Events by Series */
   $handler = $view->new_display('panel_pane', 'Events by Series', 'panel_pane_4');
   $handler->display->display_options['display_description'] = 'Events by Series';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
