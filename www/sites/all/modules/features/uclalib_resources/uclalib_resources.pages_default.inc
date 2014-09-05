@@ -315,7 +315,7 @@ function uclalib_resources_default_page_manager_pages() {
     'settings' => NULL,
   );
   $page->menu = array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'Find Resources',
     'name' => 'main-menu',
     'weight' => '0',
@@ -377,7 +377,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Find Resources help text',
@@ -405,7 +405,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'main';
     $pane->type = 'views_panes';
     $pane->subtype = 'find_resources-panel_pane_1';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
@@ -424,7 +424,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'views-5c1ce6982df22f97f7bbd1528ab7941e';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'inherit_path' => 1,
@@ -450,7 +450,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-yGCiWGt1LRTtDT1KHYCJM0SxGO16YGtV';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
@@ -475,7 +475,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Find Resources Horizontal Tab Navigation',
@@ -847,7 +847,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'top';
     $pane->type = 'resources_search_pane';
     $pane->subtype = 'resources_search_pane';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 0,
