@@ -103,6 +103,24 @@ function uclalib_media_strongarm() {
       'widescreen' => array(
         'custom_settings' => TRUE,
       ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'preview' => array(
+        'custom_settings' => TRUE,
+      ),
+      'wysiwyg' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -113,7 +131,26 @@ function uclalib_media_strongarm() {
           'weight' => '1',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'file' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'thumbnail' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'custom_crop' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'widescreen' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_file__image'] = $strongarm;
