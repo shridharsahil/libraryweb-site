@@ -46,6 +46,7 @@ features[field_instance][] = node-destination-field_destination_phone
 features[field_instance][] = node-destination-field_destination_room_number
 features[field_instance][] = node-destination-field_destination_sched_link
 features[field_instance][] = node-destination-field_equipment
+features[field_instance][] = node-destination-field_location_building
 features[field_instance][] = node-destination-field_study_areas
 features[node][] = destination
 features[panelizer_defaults][] = node:destination:default

@@ -700,7 +700,7 @@ function uclalib_location_panelizer_defaults() {
     $pane->panel = 'center_';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_location_building';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',

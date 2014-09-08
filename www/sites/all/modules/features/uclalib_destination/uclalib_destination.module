@@ -38,3 +38,13 @@ function uclalib_destination_fetch_facilities_tids($node, $fields) {
 
   return $tids;
 }
+
+/**
+ * Implements hook_form_FORMID_alter.
+ *
+ * Hide building name on destination node form since it is inherited from the
+ * parent location.
+ */
+function uclalib_destination_form_destination_node_form_alter(&$form, &$form_state) {
+  $form['field_location_building']['#access'] = FALSE;
+}
