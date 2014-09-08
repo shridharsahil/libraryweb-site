@@ -118,7 +118,7 @@ function uclalib_location_field_default_field_instances() {
     'bundle' => 'location',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Addresses will display in a single line in most views, so include commas where necessary.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -148,6 +148,7 @@ function uclalib_location_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'full_html' => 0,
           'php_code' => 'php_code',
           'plain_text' => 'plain_text',
         ),
@@ -155,6 +156,9 @@ function uclalib_location_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
             'php_code' => array(
               'weight' => 11,
             ),
@@ -163,6 +167,11 @@ function uclalib_location_field_default_field_instances() {
             ),
           ),
         ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1210,6 +1219,7 @@ function uclalib_location_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('About the Library');
   t('Address');
+  t('Addresses will display in a single line in most views, so include commas where necessary.');
   t('Alternate Names');
   t('Amenities');
   t('Building Name');
