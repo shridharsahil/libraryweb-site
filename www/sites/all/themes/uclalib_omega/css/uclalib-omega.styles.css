@@ -1181,7 +1181,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399452290');
+  background-image: url('../images/logo-colophon.png?1399407339');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1438,10 +1438,14 @@ a.more-link,
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .views-field-field-destination-room-number,
 .pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .views-field-field-destination-phone,
 .pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .views-field-field-destination-email {
   display: inline-block;
   margin-right: 24px;
+}
+.pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .views-field-field-destination-room-number {
+  font-size: 1em;
 }
 .pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .icon-telephone,
 .pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row .icon-email {
