@@ -60,8 +60,8 @@ function uclalib_system_strongarm() {
       'leftRatio' => '',
       'scrolling' => 'auto',
       'wrapCSS' => '',
-      'arrows' => 0,
-      'closeBtn' => 0,
+      'arrows' => 1,
+      'closeBtn' => 1,
       'closeClick' => 0,
       'nextClick' => 0,
       'mouseWheel' => 0,
@@ -90,7 +90,7 @@ function uclalib_system_strongarm() {
       'prevMethod' => '',
     ),
     'helpers' => array(
-      'title_enabled' => 0,
+      'title_enabled' => 1,
       'title' => array(
         'type' => 'float',
         'position' => 'top',
