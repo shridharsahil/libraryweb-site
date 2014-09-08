@@ -230,7 +230,16 @@ function uclalib_opening_hours_generate_table($node, $start = NULL) {
 
         $title = isset($dest_node->field_destination_oh_name[LANGUAGE_NONE][0]['value']) ?
           $dest_node->field_destination_oh_name[LANGUAGE_NONE][0]['value'] : $dest_node->title;
-        $nodes[$dest_node->nid] = check_plain($title);
+
+        // Default is to show hours, but if this destination is specifically
+        // configured not to show them, don't add it.
+        if (!isset($dest_node->field_display_on_hours_page[LANGUAGE_NONE]) ||
+            (isset($dest_node->field_display_on_hours_page[LANGUAGE_NONE])
+             && count($dest_node->field_display_on_hours_page[LANGUAGE_NONE])
+             && $dest_node->field_display_on_hours_page[LANGUAGE_NONE][0]['value'] == 1)
+        ) {
+          $nodes[$dest_node->nid] = check_plain($title);
+        }
       }
     }
   }

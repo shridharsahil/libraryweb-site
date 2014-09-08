@@ -53,7 +53,8 @@ function uclalib_destination_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_destination_oh_name',
-      1 => 'default_opening_hours',
+      1 => 'field_display_on_hours_page',
+      2 => 'default_opening_hours',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -86,7 +87,8 @@ function uclalib_destination_field_group_info() {
       3 => 'field_destination_phone',
       4 => 'field_destination_sched_link',
       5 => 'field_destination_room_number',
-      6 => 'title',
+      6 => 'field_location_building',
+      7 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
