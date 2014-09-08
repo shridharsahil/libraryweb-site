@@ -512,16 +512,16 @@ function uclalib_resources_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Search and Research';
   $page->admin_description = 'Search and Research landing page.';
-  $page->path = 'search-research';
+  $page->path = 'search';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Search and Research',
+    'title' => 'Search',
     'name' => 'main-menu',
-    'weight' => '0',
+    'weight' => '-50',
     'parent' => array(
       'type' => 'none',
       'title' => '',
