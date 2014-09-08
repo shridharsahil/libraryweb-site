@@ -19,3 +19,28 @@ function uclalib_location_update_7002(&$sandbox) {
   $instance = field_info_instance('node', 'node-location-body', 'location');
   field_delete_instance($instance);
 }
+
+/**
+ * Add building names to locations, inherited from parents.
+ */
+function uclalib_location_update_7003(&$sandbox) {
+  $result = db_query("SELECT nid FROM {node} WHERE type=:type", array('type' => 'location'));
+
+  foreach($result as $row) {
+    $node = node_load($row->nid);
+
+    if ($node->field_location_building[LANGUAGE_NONE][0]['value']) {
+      foreach ($node->field_location_destinations[LANGUAGE_NONE] as $destination_reference) {
+        $destination = node_load($destination_reference['target_id']);
+        $destination->field_location_building = array(
+          LANGUAGE_NONE => array(
+            0 => array(
+              'value' => $node->field_location_building[LANGUAGE_NONE][0]['value'],
+            ),
+          ),
+        );
+        node_save($destination);
+      }
+    }
+  }
+}
