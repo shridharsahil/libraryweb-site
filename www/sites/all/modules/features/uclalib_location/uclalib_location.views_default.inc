@@ -306,23 +306,6 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '250',
-  );
   /* Field: Content: Location image */
   $handler->display->display_options['fields']['field_location_image']['id'] = 'field_location_image';
   $handler->display->display_options['fields']['field_location_image']['table'] = 'field_data_field_location_image';
@@ -364,30 +347,7 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Title */
-  $handler->display->display_options['sorts']['title']['id'] = 'title';
-  $handler->display->display_options['sorts']['title']['table'] = 'node';
-  $handler->display->display_options['sorts']['title']['field'] = 'title';
-
-  /* Display: Location / Image / Social Media */
-  $handler = $view->new_display('panel_pane', 'Location / Image / Social Media', 'panel_pane_2');
-  $handler->display->display_options['display_description'] = 'Locations with images and social media ';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Location image */
   $handler->display->display_options['fields']['field_location_image']['id'] = 'field_location_image';
   $handler->display->display_options['fields']['field_location_image']['table'] = 'field_data_field_location_image';
@@ -397,8 +357,62 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['fields']['field_location_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_location_image']['settings'] = array(
     'image_style' => '',
-    'image_link' => '',
+    'image_link' => 'content',
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '250',
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+
+  /* Display: Location / Image / Social Media */
+  $handler = $view->new_display('panel_pane', 'Location / Image / Social Media', 'panel_pane_2');
+  $handler->display->display_options['display_description'] = 'Locations with images and social media ';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['columns'] = '2';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Location image */
+  $handler->display->display_options['fields']['field_location_image']['id'] = 'field_location_image';
+  $handler->display->display_options['fields']['field_location_image']['table'] = 'field_data_field_location_image';
+  $handler->display->display_options['fields']['field_location_image']['field'] = 'field_location_image';
+  $handler->display->display_options['fields']['field_location_image']['label'] = '';
+  $handler->display->display_options['fields']['field_location_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_location_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_location_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Social Links */
   $handler->display->display_options['fields']['field_location_social_links']['id'] = 'field_location_social_links';
   $handler->display->display_options['fields']['field_location_social_links']['table'] = 'field_data_field_location_social_links';
@@ -411,11 +425,33 @@ function uclalib_location_views_default_views() {
     'view_mode' => 'default',
   );
   $handler->display->display_options['fields']['field_location_social_links']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_location_social_links']['separator'] = '';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'location' => 'location',
+  );
+  /* Filter criterion: Content: Social Links (field_location_social_links:id) */
+  $handler->display->display_options['filters']['field_location_social_links_id']['id'] = 'field_location_social_links_id';
+  $handler->display->display_options['filters']['field_location_social_links_id']['table'] = 'field_data_field_location_social_links';
+  $handler->display->display_options['filters']['field_location_social_links_id']['field'] = 'field_location_social_links_id';
+  $handler->display->display_options['filters']['field_location_social_links_id']['operator'] = 'not empty';
   $export['location_image_list'] = $view;
 
   $view = new view();

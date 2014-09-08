@@ -198,6 +198,7 @@ function uclalib_location_form_views_exposed_form_alter(&$form, &$form_state) {
 
   // Move search field title to html5 placeholder.
   if ($form['submit']['#id'] == 'edit-submit-location-search') {
+    drupal_add_js(drupal_get_path('module', 'uclalib_location') . '/uclalib_location_search.js');
     $form['search_api_views_fulltext']['#attributes']['placeholder'] = $form['#info']['filter-search_api_views_fulltext']['label'];
     $form['#info']['filter-search_api_views_fulltext']['label'] = '';
   }
