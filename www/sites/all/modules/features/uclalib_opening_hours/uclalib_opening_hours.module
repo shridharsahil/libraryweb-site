@@ -49,12 +49,18 @@ function _uclalib_opening_hours_short_time($time) {
     $minute = $matches[2];
 
     $ap = 'a';
-    $hour = ltrim($hour, '0');
-    if ($hour >= 12) {
-      if ($hour > 12) {
-        $hour = $hour - 12;
+    if ($hour > 0) {
+      $hour = ltrim($hour, '0');
+      if ($hour >= 12) {
+        if ($hour > 12) {
+          $hour = $hour - 12;
+        }
+        $ap = 'p';
       }
-      $ap = 'p';
+    }
+    else {
+      // Midnight is special in 12hour time: data is 00, output is 12a
+      $hour = 12;
     }
 
     $time = $hour;
