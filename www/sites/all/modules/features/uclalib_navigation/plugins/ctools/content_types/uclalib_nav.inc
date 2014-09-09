@@ -46,19 +46,13 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
 
   // Where in the world is Carmen san Diego?
   $menu_trail = menu_get_active_trail();
-
-  // Bail if this isn't the main menu.
-  if ($menu_trail[1]['menu_name'] != 'main-menu') {
-    return;
-  }
-
   $parent = $menu_trail[count($menu_trail) - 2];
   $current = $menu_trail[count($menu_trail) - 1];
 
   // Use menu_block module to generate the tree.
   // We fake a configuration for the module.
   $config = array(
-    'menu_name' => 'main-menu',
+    'menu_name' => $menu_trail[1]['menu_name'],
     'level' => 0,
     'follow' => 0,
     'depth' => 5,
