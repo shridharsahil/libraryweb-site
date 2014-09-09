@@ -156,6 +156,14 @@ function uclalib_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'document__wysiwyg__file_field_uclalib_media_file_link';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = '';
+  $export['document__wysiwyg__file_field_uclalib_media_file_link'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'image__custom_crop__file_field_fancybox';
   $file_display->weight = 0;
   $file_display->status = FALSE;
