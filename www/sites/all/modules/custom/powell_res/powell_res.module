@@ -82,14 +82,14 @@ function powell_res_menu() {
 
 ////  global $powell_res_get_user_category;
   $items = array();
-  $items['reservations/powell'] = array(
+  $items['app/reservations/powell'] = array(
     'title' => 'Powell Resource Reservations',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('powell_res_form_page_one'),
     'access callback' => TRUE,
     'menu_name' => 'navigation',
   );
-  $items['reservations/powell-logout'] = array(
+  $items['app/reservations/powell-logout'] = array(
     'title' => 'Powell Resource Reservations Logout',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('powell_res_logout_handler_submit'),
