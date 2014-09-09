@@ -25,7 +25,6 @@ function daterangepicker_daterangepicker_content_type_render($subtype, $conf, $p
   $default_date = NULL;
   if (isset($context) && is_array($context) && count($context) > 0) {
     foreach ($context as $ctx) {
-      //dsm($ctx);
 
       // If we find a context with the keyword 'date', then parse its data into
       // the $default_date argument for the daterangepicker.
