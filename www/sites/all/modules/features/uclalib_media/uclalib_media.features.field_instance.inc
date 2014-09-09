@@ -24,7 +24,7 @@ function uclalib_media_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'preview' => array(
         'label' => 'above',
@@ -58,7 +58,7 @@ function uclalib_media_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -74,7 +74,7 @@ function uclalib_media_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'preview' => array(
         'label' => 'above',
@@ -108,7 +108,7 @@ function uclalib_media_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -124,7 +124,7 @@ function uclalib_media_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'preview' => array(
         'label' => 'above',
@@ -164,7 +164,7 @@ function uclalib_media_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 8,
+      'weight' => 5,
     ),
   );
 
@@ -180,7 +180,7 @@ function uclalib_media_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'preview' => array(
         'label' => 'above',
@@ -244,7 +244,7 @@ function uclalib_media_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
