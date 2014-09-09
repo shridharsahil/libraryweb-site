@@ -159,7 +159,7 @@ function uclalib_homepage_default_page_manager_pages() {
       'url' => '',
       'display' => 'default',
       'override_title' => 1,
-      'override_title_text' => 'Today\'s Hours <span class="icon-hours"></span>',
+      'override_title_text' => 'Today\'s Hours <span class="icon-hours2"></span>',
     );
     $pane->cache = array();
     $pane->style = array(
