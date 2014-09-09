@@ -454,6 +454,53 @@ function uclalib_staff_profile_default_page_manager_pages() {
     $pane->uuid = 'e4751dc2-8a26-4783-8669-87eb046f3505';
     $display->content['new-e4751dc2-8a26-4783-8669-87eb046f3505'] = $pane;
     $display->panels['sidebar_left'][1] = 'new-e4751dc2-8a26-4783-8669-87eb046f3505';
+    $pane = new stdClass();
+    $pane->pid = 'new-48a713bc-3061-4c7b-a021-b95a0df00e94';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-contact-quick-links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Quick Links',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '48a713bc-3061-4c7b-a021-b95a0df00e94';
+    $display->content['new-48a713bc-3061-4c7b-a021-b95a0df00e94'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-48a713bc-3061-4c7b-a021-b95a0df00e94';
+    $pane = new stdClass();
+    $pane->pid = 'new-1442f07f-3a5c-4887-a1ab-3d0a60006a80';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'custom';
+    $pane->subtype = 'questions_highlight';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '1442f07f-3a5c-4887-a1ab-3d0a60006a80';
+    $display->content['new-1442f07f-3a5c-4887-a1ab-3d0a60006a80'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-1442f07f-3a5c-4887-a1ab-3d0a60006a80';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
