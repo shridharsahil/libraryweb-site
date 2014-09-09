@@ -267,3 +267,41 @@ function uclalib_media_views_default_views_alter(&$views) {
     $views['media_default'] = $view;
   }
 }
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function uclalib_media_field_formatter_info() {
+  return array(
+    'uclalib_media_file_link' => array(
+      'label' => t('Simple link to file'),
+      'field types' => array('file'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function uclalib_media_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'uclalib_media_file_link':
+      foreach ($items as $delta => $item) {
+        $file = (object) $item;
+dsm($file);
+        $url = file_create_url($file->uri);
+        $icon_directory = variable_get('file_icon_directory', drupal_get_path('module', 'file') . '/icons');
+        $icon = theme('file_icon', array('file' => $file, 'icon_directory' => $icon_directory));
+        $link = l($file->field_title[LANGUAGE_NONE][0]['safe_value'], $url, $options);
+dsm($link);
+        $element[$delta] = array('#markup' => $link);
+      }
+
+      break;
+  }
+
+  return $element;
+}
+

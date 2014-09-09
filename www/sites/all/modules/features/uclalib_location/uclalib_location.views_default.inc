@@ -144,7 +144,7 @@ function uclalib_location_views_default_views() {
   $handler->display->display_options['fields']['tooltip']['table'] = 'views';
   $handler->display->display_options['fields']['tooltip']['field'] = 'tooltip';
   $handler->display->display_options['fields']['tooltip']['label'] = '';
-  $handler->display->display_options['fields']['tooltip']['alter']['text'] = '[field_icon] [name]';
+  $handler->display->display_options['fields']['tooltip']['alter']['text'] = '[field_icon]';
   $handler->display->display_options['fields']['tooltip']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['tooltip']['tooltip_text'] = '[name]';
   $handler->display->display_options['fields']['tooltip']['tooltip_hide_if_equal'] = 1;
