@@ -101,6 +101,44 @@ function uclalib_location_node_insert($node) {
       _uclalib_location_create_about_page($node);
     }
   }
+  if ($node->type == 'destination') {
+    if (isset($node->field_destination_location[LANGUAGE_NONE]) && count($node->field_destination_location[LANGUAGE_NONE])) {
+      $location = node_load($node->field_destination_location[LANGUAGE_NONE][0]['target_id']);
+      if (isset($location->field_location_building[LANGUAGE_NONE]) && count($location->field_location_building[LANGUAGE_NONE])) {
+        $node->field_location_building = $location->field_location_building;
+        field_attach_update('node', $node);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_node_update().
+ *
+ * Make destination building names inherit from their parent location.
+ */
+function uclalib_location_node_update($node) {
+  if ($node->type == 'location') {
+    $original = $node->original;
+    if ($node->field_location_building[LANGUAGE_NONE][0]['value'] !== $original->field_location_building[LANGUAGE_NONE][0]['value']) {
+      // The building name has been changed, update any destinations at this
+      // location.
+      foreach ($node->field_location_destinations[LANGUAGE_NONE] as $destination_reference) {
+        $destination = node_load($destination_reference['target_id']);
+        $destination->field_location_building = array(
+          LANGUAGE_NONE => array(
+            0 => array(
+              'value' => $node->field_location_building[LANGUAGE_NONE][0]['value'],
+            ),
+          ),
+        );
+        node_save($destination);
+      }
+    }
+
+    // Make sure that the location node changes get saved.
+    field_attach_update('node', $node);
+  }
 }
 
 /**

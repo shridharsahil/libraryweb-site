@@ -66,10 +66,28 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
   function value_form(&$form, &$form_state) {
     parent::value_form($form, $form_state);
 
+    $params = uclalib_opening_hours_get_params();
+
+    // First time the view is loaded (or user click the Reset button), URL doesn't have parameters
+    if (!$params) {
+      $value = 0; // checkbox unchecked by default
+    }
+    // If URL has parameters.
+    else {
+      // If our filter is present in the URL as parameter and its value is '1'
+      if (isset($params['open_now']) && $params['open_now'] == 1) {
+        $value = 1;
+      }
+      else {
+        $value = 0;
+      }
+    }
+
     $form['value']['#title'] = t('Open Now');
     $form['value']['#type'] = 'checkbox';
     $form['value']['#required'] = FALSE;
-    $form['value']['#default_value'] = FALSE;
+    $form['value']['#default_value'] = isset($this->value) ? $this->value : NULL;
+    $form['value']['#value'] = $value;
 
     $this->get_opening_results();
 
@@ -80,3 +98,18 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
   }
 
 }
+
+function uclalib_opening_hours_get_params() {
+  global $base_url;
+  $query = array();
+
+  $url = $base_url.request_uri();
+  $url = parse_url($url);
+
+  if(isset($url['query'])) {
+    parse_str($url['query'],$query);
+  }
+
+  return $query;
+}
+

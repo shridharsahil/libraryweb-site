@@ -84,21 +84,14 @@ function rc_res_menu() {
 
 ////  global $rc_res_get_user_category;
   $items = array();
-  $items['libraries/researchlibrary/research-commons-reservation'] = array(
+  $items['app/reservations/yrl'] = array(
     'title' => 'Research Commons Reservations',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('rc_res_form_page_one'),
     'access callback' => TRUE,
     'menu_name' => 'navigation',
   );
-  $items['reservations/yrl'] = array(
-    'title' => 'Research Commons Reservations',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('rc_res_form_page_one'),
-    'access callback' => TRUE,
-    'menu_name' => 'navigation',
-  );
-  $items['reservations/yrl-logout'] = array(
+  $items['app/reservations/yrl-logout'] = array(
     'title' => 'Research Commons Reservations Logout',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('yrl_logout_handler_submit'),
@@ -139,7 +132,7 @@ function rc_res_form_page_one($form, &$form_state) {
 //  $dev_host_resource_base = 'http://webservices-dev.library.ucla.edu'; // normally use https (this line) but https is not currently working (20130401, 20130514, )
 
   // web site base
-  $host_www_base = 'http://www.library.ucla.edu/reservations/yrl';
+  $host_www_base = 'http://www.library.ucla.edu/app/reservations/yrl';
   rc_session_variable_set('rc-res','host_www_base',$host_www_base);
 
   // web services production server

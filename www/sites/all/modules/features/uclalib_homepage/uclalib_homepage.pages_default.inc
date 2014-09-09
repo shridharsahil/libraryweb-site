@@ -159,7 +159,7 @@ function uclalib_homepage_default_page_manager_pages() {
       'url' => '',
       'display' => 'default',
       'override_title' => 1,
-      'override_title_text' => 'Today\'s Hours <span class="icon-hours"></span>',
+      'override_title_text' => 'Today\'s Hours <span class="icon-hours2"></span>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -175,6 +175,31 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->uuid = 'aaf4703d-ef45-4c09-9188-246947c54849';
     $display->content['new-aaf4703d-ef45-4c09-9188-246947c54849'] = $pane;
     $display->panels['top_left_bottom_left'][0] = 'new-aaf4703d-ef45-4c09-9188-246947c54849';
+    $pane = new stdClass();
+    $pane->pid = 'new-54cf3e3c-a95f-484d-8bc8-0a72e3c0e3d2';
+    $pane->panel = 'top_left_bottom_right';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-get-started-at-the-library';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'title_alignment' => 'default',
+      ),
+      'style' => 'border-blue',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '54cf3e3c-a95f-484d-8bc8-0a72e3c0e3d2';
+    $display->content['new-54cf3e3c-a95f-484d-8bc8-0a72e3c0e3d2'] = $pane;
+    $display->panels['top_left_bottom_right'][0] = 'new-54cf3e3c-a95f-484d-8bc8-0a72e3c0e3d2';
     $pane = new stdClass();
     $pane->pid = 'new-768d72ca-cc3f-49d5-9995-d55c357ef337';
     $pane->panel = 'top_left_main';

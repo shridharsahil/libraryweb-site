@@ -55,6 +55,12 @@ function uclalib_destination_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '140',
   );
+  /* Field: Content: Room Number */
+  $handler->display->display_options['fields']['field_destination_room_number']['id'] = 'field_destination_room_number';
+  $handler->display->display_options['fields']['field_destination_room_number']['table'] = 'field_data_field_destination_room_number';
+  $handler->display->display_options['fields']['field_destination_room_number']['field'] = 'field_destination_room_number';
+  $handler->display->display_options['fields']['field_destination_room_number']['label'] = '';
+  $handler->display->display_options['fields']['field_destination_room_number']['element_label_colon'] = FALSE;
   /* Field: Content: Phone number */
   $handler->display->display_options['fields']['field_destination_phone']['id'] = 'field_destination_phone';
   $handler->display->display_options['fields']['field_destination_phone']['table'] = 'field_data_field_destination_phone';
@@ -62,6 +68,7 @@ function uclalib_destination_views_default_views() {
   $handler->display->display_options['fields']['field_destination_phone']['label'] = '';
   $handler->display->display_options['fields']['field_destination_phone']['element_class'] = 'icon-telephone';
   $handler->display->display_options['fields']['field_destination_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_destination_phone']['hide_empty'] = TRUE;
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_destination_email']['id'] = 'field_destination_email';
   $handler->display->display_options['fields']['field_destination_email']['table'] = 'field_data_field_destination_email';
@@ -69,6 +76,7 @@ function uclalib_destination_views_default_views() {
   $handler->display->display_options['fields']['field_destination_email']['label'] = '';
   $handler->display->display_options['fields']['field_destination_email']['element_class'] = 'icon-email';
   $handler->display->display_options['fields']['field_destination_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_destination_email']['hide_empty'] = TRUE;
   /* Field: Content: Schedule appointment link */
   $handler->display->display_options['fields']['field_destination_sched_link']['id'] = 'field_destination_sched_link';
   $handler->display->display_options['fields']['field_destination_sched_link']['table'] = 'field_data_field_destination_sched_link';

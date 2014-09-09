@@ -49,12 +49,18 @@ function _uclalib_opening_hours_short_time($time) {
     $minute = $matches[2];
 
     $ap = 'a';
-    $hour = ltrim($hour, '0');
-    if ($hour >= 12) {
-      if ($hour > 12) {
-        $hour = $hour - 12;
+    if ($hour > 0) {
+      $hour = ltrim($hour, '0');
+      if ($hour >= 12) {
+        if ($hour > 12) {
+          $hour = $hour - 12;
+        }
+        $ap = 'p';
       }
-      $ap = 'p';
+    }
+    else {
+      // Midnight is special in 12hour time: data is 00, output is 12a
+      $hour = 12;
     }
 
     $time = $hour;
@@ -179,8 +185,24 @@ function uclalib_opening_hours_generate_table_rows($this_nid, $nodes, $day) {
         $end_time = _uclalib_opening_hours_short_time($oh['end_time']);
       }
       $class = (empty($start_time) && empty($end_time)) ? 'closed' : 'open';
+      // Tweak the displayed data for special cases:
+      // 23:45 - 23:45 (formatted as 11:45p) = closed
+      // 00:00 - 00:00 (formatted as 12a)    = 24 hours
+      // no data (empty)                     = nothing
+      if ($start_time == '11:45p' && $end_time == $start_time) {
+        $row_data = 'closed';
+      }
+      elseif ($start_time == '12a' && $end_time == $start_time) {
+        $row_data = '24 hours';
+      }
+      elseif (empty($start_time) && empty($end_time)) {
+        $row_data = '';
+      }
+      else {
+        $row_data = $start_time . '-' . $end_time;
+      }
       $row_cell = array(
-        'data' => $start_time . '-' . $end_time,
+        'data' => $row_data,
         'class' => array(drupal_html_class('day-' . $this_day->format('D')), $class),
       );
 
@@ -230,7 +252,16 @@ function uclalib_opening_hours_generate_table($node, $start = NULL) {
 
         $title = isset($dest_node->field_destination_oh_name[LANGUAGE_NONE][0]['value']) ?
           $dest_node->field_destination_oh_name[LANGUAGE_NONE][0]['value'] : $dest_node->title;
-        $nodes[$dest_node->nid] = check_plain($title);
+
+        // Default is to show hours, but if this destination is specifically
+        // configured not to show them, don't add it.
+        if (!isset($dest_node->field_display_on_hours_page[LANGUAGE_NONE]) ||
+            (isset($dest_node->field_display_on_hours_page[LANGUAGE_NONE])
+             && count($dest_node->field_display_on_hours_page[LANGUAGE_NONE])
+             && $dest_node->field_display_on_hours_page[LANGUAGE_NONE][0]['value'] == 1)
+        ) {
+          $nodes[$dest_node->nid] = check_plain($title);
+        }
       }
     }
   }

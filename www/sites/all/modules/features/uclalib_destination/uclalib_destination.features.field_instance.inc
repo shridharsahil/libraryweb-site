@@ -291,7 +291,7 @@ function uclalib_destination_field_default_field_instances() {
         'size' => 50,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -458,6 +458,49 @@ function uclalib_destination_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-destination-field_display_on_hours_page'
+  $field_instances['node-destination-field_display_on_hours_page'] = array(
+    'bundle' => 'destination',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Show this destination\'s hours on its location\'s hours display.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_display_on_hours_page',
+    'label' => 'Display hours',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-destination-field_equipment'
   $field_instances['node-destination-field_equipment'] = array(
     'bundle' => 'destination',
@@ -492,6 +535,73 @@ function uclalib_destination_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-destination-field_location_building'
+  $field_instances['node-destination-field_location_building'] = array(
+    'bundle' => 'destination',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location_building',
+    'label' => 'Building Name',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
     ),
   );
 
@@ -535,8 +645,10 @@ function uclalib_destination_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Amenities');
+  t('Building Name');
   t('Comment');
   t('Description');
+  t('Display hours');
   t('Email');
   t('Equipment');
   t('Location');
@@ -544,6 +656,7 @@ function uclalib_destination_field_default_field_instances() {
   t('Phone number');
   t('Room Number');
   t('Schedule appointment link');
+  t('Show this destination\'s hours on its location\'s hours display.');
   t('Specify the destination\'s specific location in the building: for example, "Room 22484" "A-level" "First Floor"');
   t('Study areas');
   t('This is the name that will be used in the tables that display these opening hours.');

@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the UCLALIB Destination module.
+ */
+
+/**
+ * Check 'display hours' box on existing destinations.
+ */
+function uclalib_destination_update_7001(&$sandbox) {
+  $result = db_query("SELECT nid FROM {node} WHERE type=:type", array('type' => 'destination'));
+
+  foreach($result as $row) {
+    $node = node_load($row->nid);
+
+    if (!isset($node->field_display_on_hours_page[LANGUAGE_NONE])) {
+      $node->field_display_on_hours_page = array(
+        LANGUAGE_NONE => array(
+          0 => array(
+            'value' => 1,
+          ),
+        ),
+      );
+      node_save($node);
+    }
+  }
+}
