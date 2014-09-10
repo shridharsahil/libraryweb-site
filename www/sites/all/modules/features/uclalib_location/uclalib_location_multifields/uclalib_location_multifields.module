@@ -5,3 +5,10 @@
  */
 
 include_once 'uclalib_location_multifields.features.inc';
+
+/**
+ * Implements hook_form_FORMID_alter.
+ */
+function uclalib_location_multifields_form_location_node_form_alter(&$form, &$form_state) {
+  drupal_add_js(drupal_get_path('module', 'uclalib_location_multifields') . '/uclalib_location_multifields.js');
+}
