@@ -467,6 +467,62 @@ function uclalib_search_default_page_manager_pages() {
     $pane->uuid = '71193235-d727-44a3-aafe-464ac8eb7707';
     $display->content['new-71193235-d727-44a3-aafe-464ac8eb7707'] = $pane;
     $display->panels['sidebar_left'][3] = 'new-71193235-d727-44a3-aafe-464ac8eb7707';
+    $pane = new stdClass();
+    $pane->pid = 'new-5eaadf49-3251-495b-824e-e0893a0fa2ea';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-K1N5DOgzt82fqucZ01oYceT169vcUjCE';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Area of Expertise',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'pane_collapsed' => 0,
+      ),
+      'style' => 'collapsible',
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-options',
+    );
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = '5eaadf49-3251-495b-824e-e0893a0fa2ea';
+    $display->content['new-5eaadf49-3251-495b-824e-e0893a0fa2ea'] = $pane;
+    $display->panels['sidebar_left'][4] = 'new-5eaadf49-3251-495b-824e-e0893a0fa2ea';
+    $pane = new stdClass();
+    $pane->pid = 'new-6f73b118-a04a-4a98-b850-55b8223e2acf';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-0QT9szhBtDxA28U3xxye4AmGG1H0HU6Y';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Departmental Liaison',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'pane_collapsed' => 0,
+      ),
+      'style' => 'collapsible',
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-options',
+    );
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $pane->uuid = '6f73b118-a04a-4a98-b850-55b8223e2acf';
+    $display->content['new-6f73b118-a04a-4a98-b850-55b8223e2acf'] = $pane;
+    $display->panels['sidebar_left'][5] = 'new-6f73b118-a04a-4a98-b850-55b8223e2acf';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
