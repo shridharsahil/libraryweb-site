@@ -13,7 +13,7 @@ Drupal.behaviors.dateRangePicker = {
       $input.autogrowinput({comfortZone: 20, minWidth: 10, maxWidth: 800}).trigger('onChange');
       $input.daterangepicker({
         arrows: false,
-        closeOnSelect: false,
+        closeOnSelect: true,
         dateFormat: 'DD, MM d, yy', // See http://docs.jquery.com/UI/Datepicker/%24.datepicker.formatDate
         presetRanges: [
           {text: 'Today', dateStart: 'today', dateEnd: 'today' },

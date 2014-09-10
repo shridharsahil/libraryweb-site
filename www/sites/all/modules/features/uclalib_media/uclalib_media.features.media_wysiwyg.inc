@@ -16,8 +16,8 @@ function uclalib_media_media_wysiwyg_defaults() {
   // Restricted view modes for document files.
   $media_wysiwyg['document_teaser_restrict_wysiwyg'] = TRUE;
   $media_wysiwyg['document_preview_restrict_wysiwyg'] = TRUE;
-  $media_wysiwyg['document_wysiwyg_restrict_wysiwyg'] = TRUE;
-  $media_wysiwyg['document_default_restrict_wysiwyg'] = FALSE;
+  $media_wysiwyg['document_wysiwyg_restrict_wysiwyg'] = FALSE;
+  $media_wysiwyg['document_default_restrict_wysiwyg'] = TRUE;
 
   // WYSIWYG view mode for image files.
   $media_wysiwyg['image_wysiwyg_view_mode'] = 'none';

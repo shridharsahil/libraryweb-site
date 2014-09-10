@@ -70,10 +70,10 @@ function uclalib_media_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'filename' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'preview' => array(
-          'weight' => '2',
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -284,8 +284,8 @@ function uclalib_media_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'media_wysiwyg_wysiwyg_allowed_types';
   $strongarm->value = array(
-    0 => 'image',
-    1 => 'document',
+    0 => 'document',
+    1 => 'image',
   );
   $export['media_wysiwyg_wysiwyg_allowed_types'] = $strongarm;
 
