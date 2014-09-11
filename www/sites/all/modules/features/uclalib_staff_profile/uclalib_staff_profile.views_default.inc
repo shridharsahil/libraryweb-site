@@ -70,13 +70,12 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">[field_staff_first_name] [field_staff_last_name]</a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Staff Subject Areas */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_staff_subject_areas']['id'] = 'field_staff_subject_areas';
   $handler->display->display_options['fields']['field_staff_subject_areas']['table'] = 'field_data_field_staff_subject_areas';
   $handler->display->display_options['fields']['field_staff_subject_areas']['field'] = 'field_staff_subject_areas';
   $handler->display->display_options['fields']['field_staff_subject_areas']['label'] = '';
   $handler->display->display_options['fields']['field_staff_subject_areas']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_staff_subject_areas']['delta_offset'] = '0';
   /* Field: Content: Staff Location */
   $handler->display->display_options['fields']['field_staff_location']['id'] = 'field_staff_location';
   $handler->display->display_options['fields']['field_staff_location']['table'] = 'field_data_field_staff_location';

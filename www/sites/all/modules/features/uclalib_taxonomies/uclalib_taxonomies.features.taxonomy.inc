@@ -81,13 +81,5 @@ function uclalib_taxonomies_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
-    'staff_subject_areas' => array(
-      'name' => 'Staff Subject Areas',
-      'machine_name' => 'staff_subject_areas',
-      'description' => '',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-    ),
   );
 }

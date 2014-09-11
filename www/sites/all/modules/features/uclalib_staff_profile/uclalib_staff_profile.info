@@ -41,7 +41,6 @@ features[field_base][] = field_staff_last_name
 features[field_base][] = field_staff_location
 features[field_base][] = field_staff_middle_name
 features[field_base][] = field_staff_phone
-features[field_base][] = field_staff_subject_areas
 features[field_instance][] = node-staff_profile-body
 features[field_instance][] = node-staff_profile-field_staff_acad_dept_liaison
 features[field_instance][] = node-staff_profile-field_staff_area_of_expertise
