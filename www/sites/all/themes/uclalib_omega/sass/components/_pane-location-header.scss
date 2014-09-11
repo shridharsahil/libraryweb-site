@@ -11,6 +11,7 @@
 	}
 	.pane-location-map-pin-map-pin-pane,
   .pane-node-field-address,
+  .pane-node-field-location-email,
   .pane-node-field-location-phone {
     font-size: 13px;
     &, div {
@@ -20,6 +21,14 @@
   .pane-node-field-location-phone:before {
     content: " | ";
     display: inline;
+  }
+  .pane-node-field-location-email:before {
+    content: " | ";
+    display: inline;
+  }
+  .pane-node-field-location-email a:link,
+  .pane-node-field-location-email a:visited {
+    color: #666666;
   }
   .pane-node-field-location-social-links {
     position: absolute;

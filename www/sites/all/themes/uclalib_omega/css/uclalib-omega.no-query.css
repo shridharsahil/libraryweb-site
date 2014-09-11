@@ -1515,12 +1515,15 @@ a.more-link,
 }
 .pane-location-header .pane-location-map-pin-map-pin-pane,
 .pane-location-header .pane-node-field-address,
+.pane-location-header .pane-node-field-location-email,
 .pane-location-header .pane-node-field-location-phone {
   font-size: 13px;
 }
 .pane-location-header .pane-location-map-pin-map-pin-pane, .pane-location-header .pane-location-map-pin-map-pin-pane div,
 .pane-location-header .pane-node-field-address,
 .pane-location-header .pane-node-field-address div,
+.pane-location-header .pane-node-field-location-email,
+.pane-location-header .pane-node-field-location-email div,
 .pane-location-header .pane-node-field-location-phone,
 .pane-location-header .pane-node-field-location-phone div {
   display: inline;
@@ -1528,6 +1531,14 @@ a.more-link,
 .pane-location-header .pane-node-field-location-phone:before {
   content: " | ";
   display: inline;
+}
+.pane-location-header .pane-node-field-location-email:before {
+  content: " | ";
+  display: inline;
+}
+.pane-location-header .pane-node-field-location-email a:link,
+.pane-location-header .pane-node-field-location-email a:visited {
+  color: #666666;
 }
 .pane-location-header .pane-node-field-location-social-links {
   position: absolute;
