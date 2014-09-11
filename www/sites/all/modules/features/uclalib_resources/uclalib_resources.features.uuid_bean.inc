@@ -407,8 +407,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'databases',
     'view_mode' => 'default',
     'created' => 1398722354,
-    'log' => 'Updated everything based on today\'s meeting',
-    'uid' => 0,
+    'log' => 'updated links',
+    'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '6af3ea98-f8b9-4531-be52-394394cc5553',
@@ -462,8 +462,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://media2.oid.ucla.edu/htbin/wwform/214/wwk770/',
-                'title' => 'Instructional Media Library',
+                'url' => 'http://www.oid.ucla.edu/edtech/mediacollection/info',
+                'title' => 'Instructional Media Collections and Services',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -482,7 +482,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://cinema.library.ucla.edu/',
+                'url' => 'https://www.cinema.ucla.edu/',
                 'title' => 'Film and Television Archive',
                 'attributes' => array(
                   'target' => 0,
@@ -502,7 +502,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'new guide by Diana',
+                'url' => 'http://guides.library.ucla.edu/videocollections',
                 'title' => 'More Video Collections',
                 'attributes' => array(
                   'target' => 0,
