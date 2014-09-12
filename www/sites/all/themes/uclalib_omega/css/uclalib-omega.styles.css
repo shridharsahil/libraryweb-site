@@ -580,6 +580,10 @@ a[href="#main-content"] {
 .sidebar-options ul .facetapi-checkbox {
   vertical-align: text-bottom;
 }
+.sidebar-options ul li {
+  padding-left: 20px;
+  text-indent: -20px;
+}
 .sidebar-options ul a {
   color: #2d2f35;
   vertical-align: middle;
@@ -1183,7 +1187,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399407339');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
