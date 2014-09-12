@@ -1877,7 +1877,7 @@ a.more-link,
 .l-region--sidebar-left .pane-sub-content .pane-title a.active,
 .l-region--sidebar-left .pane-uclalib-nav .pane-title a.active {
   background: #3283be;
-  color: #000;
+  color: #fff;
 }
 .sidebar-tier-1 li a.active:hover, .l-region--sidebar-left .pane-sibling-content li a.active:hover, .l-region--sidebar-left .pane-sub-content li a.active:hover, .l-region--sidebar-left .pane-uclalib-nav li a.active:hover,
 .sidebar-tier-1 .pane-title a.active:hover,
