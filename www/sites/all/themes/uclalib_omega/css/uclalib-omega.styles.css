@@ -1940,7 +1940,7 @@ a.more-link,
 }
 .sidebar-tier-2 ul li, .l-region--sidebar-left .pane-quick-links ul li {
   list-style: none;
-  margin: 20px 0 14px !important;
+  margin: 0;
 }
 .sidebar-tier-2 ul li a, .l-region--sidebar-left .pane-quick-links ul li a {
   color: #3283be;
