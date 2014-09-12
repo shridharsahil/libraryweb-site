@@ -888,25 +888,8 @@ a[href="#main-content"] {
 
 @media all and (min-width: 1300px) {
   .front .l-main-wrapper {
+    background: url(../images/mol-bg.jpg) 0 0;
     position: relative;
-  }
-  .front .l-main-wrapper:before {
-    background: url(../images/home-bg-left2.jpg) no-repeat 0 0;
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 292px;
-    height: 482px;
-    z-index: -1;
-  }
-  .front .l-main:before {
-    background: url(../images/home-bg-right2.jpg) no-repeat 0 0;
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 292px;
-    height: 482px;
-    z-index: -1;
   }
   .front .l-main {
     background: white;
