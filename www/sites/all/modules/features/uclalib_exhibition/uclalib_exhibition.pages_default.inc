@@ -338,7 +338,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
         0 => '',
       ),
       'override_title' => 1,
-      'override_title_text' => 'Other Exhibitions',
+      'override_title_text' => 'Other Exhibits',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -364,7 +364,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Back to Exhibitions Breadcrumb',
       'title' => '',
-      'body' => '<p><a href="/news-events/exhibitions">&lt; Exhibitions</a></p>
+      'body' => '<p><a href="/news-events/exhibitions">&lt; Exhibits</a></p>
 ',
       'format' => 'full_html',
       'substitute' => 1,
