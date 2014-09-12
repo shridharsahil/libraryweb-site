@@ -152,6 +152,35 @@ function uclalib_location_default_panels_mini() {
     $display->content['new-585e4e8b-496e-443c-b53e-e427b1b53b5d'] = $pane;
     $display->panels['middle'][3] = 'new-585e4e8b-496e-443c-b53e-e427b1b53b5d';
     $pane = new stdClass();
+    $pane->pid = 'new-71418c75-1849-4aac-91c0-a22195317a1c';
+    $pane->panel = 'middle';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_location_email';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'email_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'requiredcontext_entity:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = '71418c75-1849-4aac-91c0-a22195317a1c';
+    $display->content['new-71418c75-1849-4aac-91c0-a22195317a1c'] = $pane;
+    $display->panels['middle'][4] = 'new-71418c75-1849-4aac-91c0-a22195317a1c';
+    $pane = new stdClass();
     $pane->pid = 'new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
@@ -177,11 +206,11 @@ function uclalib_location_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = '927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
     $display->content['new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c'] = $pane;
-    $display->panels['middle'][4] = 'new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
+    $display->panels['middle'][5] = 'new-927eedf1-0c3d-41d2-b4dc-bb0f32e9861c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-0677b681-c039-44da-9280-48e419ae6b64';
   $mini->display = $display;

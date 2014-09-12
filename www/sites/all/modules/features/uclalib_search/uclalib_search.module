@@ -30,7 +30,7 @@ function uclalib_search_entity_property_info_alter(&$info) {
  * Entity property getter callback: Returns the relevant nodequeue position for the queue.
  */
 function uclalib_search_queue_position($entity, $options, $name, $entity_type, $info) {
-  $queue = nodequeue_load_queue_by_name('promoted_locations');
+  $queue = nodequeue_load_queue_by_name('libraries_and_affiliates');
   $subqueues = nodequeue_load_subqueues_by_queue($queue->qid);
   $subqueue = reset($subqueues);
 
@@ -41,27 +41,12 @@ function uclalib_search_queue_position($entity, $options, $name, $entity_type, $
 }
 
 /**
- * Implements hook_views_pre_view().
- */
-function uclalib_search_views_pre_view(&$view, &$display_id, &$args) {
-  /**
-   * In case there is filtering in place, skip sorting by promoted queue.
-   */
-  if ($view->name == 'location_search') {
-    if ((isset($_GET['f']) && is_array($_GET['f']) && !empty($_GET['f'])) ||
-      (isset($_GET['search_api_views_fulltext']) && !empty($_GET['search_api_views_fulltext']))){
-      unset($view->display['default']->handler->options['sorts']['queue_position']);
-    }
-  }
-}
-
-/**
  * Implements hook_nodequeue_save_subqueue_order_alter().
  *
  * When the promoted locations nodequeue is saved, reindex all location nodes.
  */
 function uclalib_search_nodequeue_save_subqueue_order_alter($sqid, $nodes) {
-  $queue = nodequeue_load_queue_by_name('promoted_locations');
+  $queue = nodequeue_load_queue_by_name('libraries_and_affiliates');
   $subqueues = nodequeue_load_subqueues_by_queue($queue->qid);
   $subqueue = reset($subqueues);
 

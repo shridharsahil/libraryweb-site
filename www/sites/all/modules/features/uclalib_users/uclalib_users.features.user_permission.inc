@@ -925,15 +925,6 @@ function uclalib_users_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: 'administer panelizer taxonomy_term staff_subject_areas defaults'.
-  $permissions['administer panelizer taxonomy_term staff_subject_areas defaults'] = array(
-    'name' => 'administer panelizer taxonomy_term staff_subject_areas defaults',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'administer panelizer user user defaults'.
   $permissions['administer panelizer user user defaults'] = array(
     'name' => 'administer panelizer user user defaults',
@@ -1663,16 +1654,6 @@ function uclalib_users_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in staff_subject_areas'.
-  $permissions['delete terms in staff_subject_areas'] = array(
-    'name' => 'delete terms in staff_subject_areas',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content editors' => 'content editors',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'edit any destination content'.
   $permissions['edit any destination content'] = array(
     'name' => 'edit any destination content',
@@ -2040,16 +2021,6 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'edit terms in staff_departments'.
   $permissions['edit terms in staff_departments'] = array(
     'name' => 'edit terms in staff_departments',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content editors' => 'content editors',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in staff_subject_areas'.
-  $permissions['edit terms in staff_subject_areas'] = array(
-    'name' => 'edit terms in staff_subject_areas',
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
