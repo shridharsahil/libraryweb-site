@@ -286,8 +286,12 @@ a[href="#main-content"] {
 }
 
 .l-main-wrapper {
-  padding: 0 0 25px;
+  background: url(../images/mol-bg.jpg) 0 0;
   overflow: hidden;
+}
+.l-main-wrapper .l-main {
+  background: #fff;
+  padding-bottom: 25px;
 }
 
 .l-region--main-column {
@@ -886,15 +890,6 @@ a[href="#main-content"] {
   padding: 0 !important;
 }
 
-@media all and (min-width: 1300px) {
-  .front .l-main-wrapper {
-    background: url(../images/mol-bg.jpg) 0 0;
-    position: relative;
-  }
-  .front .l-main {
-    background: white;
-  }
-}
 /**
  * Override jQuery UI widget default font sizes.
  */
