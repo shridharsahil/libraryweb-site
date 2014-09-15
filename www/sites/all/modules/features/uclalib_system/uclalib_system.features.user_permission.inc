@@ -15,7 +15,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -25,7 +24,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -35,7 +33,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -45,7 +42,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'administer actions',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -55,7 +51,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'administer modules',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -65,7 +60,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'administer site configuration',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -75,7 +69,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'administer software updates',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -85,7 +78,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'administer themes',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -95,7 +87,6 @@ function uclalib_system_user_default_permissions() {
     'name' => 'block IP addresses',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'system',
   );
@@ -106,7 +97,6 @@ function uclalib_system_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'system',
