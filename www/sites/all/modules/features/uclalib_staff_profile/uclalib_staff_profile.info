@@ -77,4 +77,5 @@ features[variable][] = node_options_staff_profile
 features[variable][] = node_preview_staff_profile
 features[variable][] = node_submitted_staff_profile
 features[views_view][] = staff_profiles
+features_exclude[field_instance][node-staff_profile-field_staff_subject_areas] = node-staff_profile-field_staff_subject_areas
 project path = sites/all/modules/features
