@@ -580,6 +580,10 @@ a[href="#main-content"] {
 .sidebar-options ul .facetapi-checkbox {
   vertical-align: text-bottom;
 }
+.sidebar-options ul li {
+  padding-left: 20px;
+  text-indent: -20px;
+}
 .sidebar-options ul a {
   color: #2d2f35;
   vertical-align: middle;
@@ -884,25 +888,8 @@ a[href="#main-content"] {
 
 @media all and (min-width: 1300px) {
   .front .l-main-wrapper {
+    background: url(../images/mol-bg.jpg) 0 0;
     position: relative;
-  }
-  .front .l-main-wrapper:before {
-    background: url(../images/home-bg-left2.jpg) no-repeat 0 0;
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 292px;
-    height: 482px;
-    z-index: -1;
-  }
-  .front .l-main:before {
-    background: url(../images/home-bg-right2.jpg) no-repeat 0 0;
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 292px;
-    height: 482px;
-    z-index: -1;
   }
   .front .l-main {
     background: white;
@@ -1183,7 +1170,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399407339');
+  background-image: url('../images/logo-colophon.png?1399452290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1873,7 +1860,7 @@ a.more-link,
 .l-region--sidebar-left .pane-sub-content .pane-title a.active,
 .l-region--sidebar-left .pane-uclalib-nav .pane-title a.active {
   background: #3283be;
-  color: #000;
+  color: #fff;
 }
 .sidebar-tier-1 li a.active:hover, .l-region--sidebar-left .pane-sibling-content li a.active:hover, .l-region--sidebar-left .pane-sub-content li a.active:hover, .l-region--sidebar-left .pane-uclalib-nav li a.active:hover,
 .sidebar-tier-1 .pane-title a.active:hover,
@@ -1936,7 +1923,7 @@ a.more-link,
 }
 .sidebar-tier-2 ul li, .l-region--sidebar-left .pane-quick-links ul li {
   list-style: none;
-  margin: 20px 0 14px !important;
+  margin: 0;
 }
 .sidebar-tier-2 ul li a, .l-region--sidebar-left .pane-quick-links ul li a {
   color: #3283be;
