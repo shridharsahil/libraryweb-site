@@ -281,12 +281,15 @@ a[href="#main-content"] {
   font-weight: normal;
 }
 
-.l-highlighted-wrapper {
+.l-highlighted-wrapper h1:empty {
+  display: none;
+}
+
+.l-highlighted {
   background: #eff3f4;
 }
 
 .l-main-wrapper {
-  background: url(../images/mol-bg.jpg) 0 0;
   overflow: hidden;
 }
 .l-main-wrapper .l-main {
@@ -409,6 +412,10 @@ a[href="#main-content"] {
   padding-right: 6px;
 }
 
+.l-page {
+  background: url(../images/mol-bg.jpg) 0 0;
+}
+
 .l-region--top {
   background: #eff3f4;
   margin: 0;
@@ -439,7 +446,7 @@ a[href="#main-content"] {
   position: absolute;
   top: 0;
   right: 100%;
-  width: 100%;
+  width: 20px;
   height: 100%;
   background: #eff3f4;
 }
@@ -449,7 +456,7 @@ a[href="#main-content"] {
   position: absolute;
   top: 0;
   left: 100%;
-  width: 100%;
+  width: 20px;
   height: 100%;
   background: #eff3f4;
 }
