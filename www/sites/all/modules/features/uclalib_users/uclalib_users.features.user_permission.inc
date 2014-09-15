@@ -16,7 +16,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'advanced_link',
@@ -27,7 +26,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'access all views',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'views',
   );
@@ -37,7 +35,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'access backup and migrate',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'backup_migrate',
   );
@@ -47,7 +44,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'access backup files',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'backup_migrate',
   );
@@ -58,7 +54,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -70,7 +65,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
@@ -93,7 +87,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -105,7 +98,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'contextual',
@@ -117,7 +109,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'navbar',
@@ -128,7 +119,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'user',
   );
@@ -138,7 +128,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer advanced pane settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels',
   );
@@ -149,7 +138,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'site_alert',
   );
@@ -159,7 +147,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer backup and migrate',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'backup_migrate',
   );
@@ -169,7 +156,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer bean settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'bean',
   );
@@ -179,7 +165,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer bean types',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'bean',
   );
@@ -189,7 +174,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer beans',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'bean',
   );
@@ -200,7 +184,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'block',
@@ -211,7 +194,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer cer settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'cer',
   );
@@ -221,7 +203,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer ckeditor',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'ckeditor',
   );
@@ -232,7 +213,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
@@ -243,7 +223,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer content types',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -254,7 +233,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'ctools_custom_content',
@@ -265,7 +243,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer entity view modes',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'entity_view_mode',
   );
@@ -275,7 +252,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer facets',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'facetapi',
   );
@@ -285,7 +261,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer fancybox',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'fancybox',
   );
@@ -295,7 +270,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer features',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'features',
   );
@@ -305,7 +279,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer field collections',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'field_collection',
   );
@@ -315,7 +288,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer fieldgroups',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'field_group',
   );
@@ -325,7 +297,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer filters',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'filter',
   );
@@ -335,7 +306,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer icons',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'icon',
   );
@@ -345,7 +315,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer image styles',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'image',
   );
@@ -355,7 +324,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer linkit',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'linkit',
   );
@@ -365,7 +333,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer manualcrop settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'manualcrop',
   );
@@ -376,7 +343,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'menu',
@@ -387,7 +353,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer mini panels',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels_mini',
   );
@@ -397,7 +362,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer multifield',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'multifield',
   );
@@ -407,7 +371,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer nodequeue',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'nodequeue',
   );
@@ -417,7 +380,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -427,7 +389,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer opening hours configuration',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'opening_hours',
   );
@@ -437,7 +398,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer page manager',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'page_manager',
   );
@@ -447,7 +407,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer pane access',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels',
   );
@@ -458,7 +417,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'panelizer',
@@ -469,7 +427,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean featured_content defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -479,7 +436,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean link_list defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -489,7 +445,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean living_library_gallery defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -499,7 +454,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean news_and_events_bean content',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -509,7 +463,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean news_and_events_bean context',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -519,7 +472,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean news_and_events_bean defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -529,7 +481,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean news_and_events_bean layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -539,7 +490,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean news_and_events_bean overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -549,7 +499,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean news_and_events_bean settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -559,7 +508,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean quick_find defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -569,7 +517,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean showcase content',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -579,7 +526,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean showcase context',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -589,7 +535,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean showcase defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -599,7 +544,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean showcase layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -609,7 +553,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean showcase overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -619,7 +562,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean showcase settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -629,7 +571,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean text_block defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -639,7 +580,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer bean upcoming_events defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -649,7 +589,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node destination content',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -659,7 +598,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node destination context',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -669,7 +607,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node destination defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -679,7 +616,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node destination layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -689,7 +625,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node destination overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -699,7 +634,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node destination settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -709,7 +643,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node exhibition defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -720,7 +653,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -730,7 +662,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node location context',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -740,7 +671,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node location defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -750,7 +680,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node location layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -761,7 +690,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -771,7 +699,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node location settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -781,7 +708,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node news defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -791,7 +717,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node staff_profile defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -802,7 +727,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'panelizer',
@@ -813,7 +737,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node static context',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -823,7 +746,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node static defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -833,7 +755,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node static layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -844,7 +765,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'panelizer',
@@ -855,7 +775,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node static settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -865,7 +784,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node uclalib_event defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -875,7 +793,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node uclalib_resources content',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -885,7 +802,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node uclalib_resources context',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -895,7 +811,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node uclalib_resources defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -905,7 +820,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node uclalib_resources layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -915,7 +829,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node uclalib_resources overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -925,7 +838,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer node uclalib_resources settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -935,7 +847,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term audience defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -945,7 +856,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term events_and_exhibitions_series defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -955,7 +865,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term events_categories defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -965,7 +874,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term location_amenities defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -975,7 +883,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term location_equipment defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -985,7 +892,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term location_study_areas defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -995,7 +901,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term news_categories defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -1005,7 +910,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term resource_categories defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -1015,7 +919,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer taxonomy_term staff_departments defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -1025,7 +928,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panelizer user user defaults',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panelizer',
   );
@@ -1035,7 +937,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer panels layouts',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels',
   );
@@ -1046,7 +947,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
@@ -1057,8 +957,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer pathauto',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
-      'ga_admin' => 'ga_admin',
     ),
     'module' => 'pathauto',
   );
@@ -1068,7 +966,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer permissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'user',
   );
@@ -1078,8 +975,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer search_api',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
-      'ga_admin' => 'ga_admin',
     ),
     'module' => 'search_api',
   );
@@ -1089,7 +984,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer shortcuts',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'shortcut',
   );
@@ -1100,7 +994,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1110,7 +1003,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer tipsy',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'tipsy',
   );
@@ -1120,8 +1012,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
-      'ga_admin' => 'ga_admin',
     ),
     'module' => 'path',
   );
@@ -1131,7 +1021,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'user',
   );
@@ -1141,7 +1030,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer uuid',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'uuid',
   );
@@ -1151,7 +1039,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer views',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'views',
   );
@@ -1161,7 +1048,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1171,7 +1057,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'cancel account',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'user',
   );
@@ -1181,7 +1066,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'change layouts in place editing',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels',
   );
@@ -1191,7 +1075,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'user',
   );
@@ -1202,7 +1085,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1214,7 +1096,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1226,7 +1107,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1238,7 +1118,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1250,7 +1129,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1262,7 +1140,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1274,7 +1151,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1286,7 +1162,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1298,7 +1173,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1309,7 +1183,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1320,7 +1193,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1330,7 +1202,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'create mini panels',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels_mini',
   );
@@ -1341,7 +1212,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1352,7 +1222,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1363,7 +1232,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1375,7 +1243,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1386,7 +1253,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1397,8 +1263,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
-      'ga_admin' => 'ga_admin',
     ),
     'module' => 'path',
   );
@@ -1408,7 +1272,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'customize ckeditor',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'ckeditor',
   );
@@ -1418,7 +1281,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'customize shortcut links',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'shortcut',
   );
@@ -1429,7 +1291,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1440,7 +1301,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1451,7 +1311,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1463,7 +1322,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1475,7 +1333,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1487,7 +1344,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1498,7 +1354,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1509,7 +1364,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1521,7 +1375,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1533,7 +1386,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1545,7 +1397,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1556,7 +1407,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1568,7 +1418,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1580,7 +1429,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1591,7 +1439,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1603,7 +1450,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1614,7 +1460,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete backup files',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'backup_migrate',
   );
@@ -1625,7 +1470,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1636,7 +1480,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1647,7 +1490,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1658,7 +1500,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1669,7 +1510,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1680,7 +1520,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1692,7 +1531,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1703,7 +1541,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1715,7 +1552,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1727,7 +1563,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1738,7 +1573,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1749,7 +1583,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1760,7 +1593,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1771,7 +1603,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1782,7 +1613,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1793,7 +1623,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1804,7 +1633,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'taxonomy',
@@ -1816,7 +1644,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -1827,7 +1654,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1838,7 +1664,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1849,7 +1674,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1861,7 +1685,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1873,7 +1696,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1885,7 +1707,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1896,7 +1717,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1907,7 +1727,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1919,7 +1738,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1931,7 +1749,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1943,7 +1760,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1954,7 +1770,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -1966,7 +1781,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -1978,7 +1792,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -1989,7 +1802,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -2001,7 +1813,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -2012,7 +1823,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit bean view mode',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'bean',
   );
@@ -2023,7 +1833,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'opening_hours',
@@ -2035,7 +1844,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
@@ -2047,7 +1855,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -2058,7 +1865,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -2069,7 +1875,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -2080,7 +1885,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -2091,7 +1895,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -2102,7 +1905,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -2114,7 +1916,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'node',
   );
@@ -2125,7 +1926,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -2137,7 +1937,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2148,7 +1947,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2159,7 +1957,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2170,7 +1967,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2181,7 +1977,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2192,7 +1987,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2203,7 +1997,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2214,7 +2007,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'taxonomy',
@@ -2226,7 +2018,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'taxonomy',
   );
@@ -2236,7 +2027,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'generate features',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'features',
   );
@@ -2246,7 +2036,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'manage features',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'features',
   );
@@ -2257,7 +2046,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'nodequeue',
@@ -2269,7 +2057,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'nodequeue',
@@ -2280,8 +2067,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'notify of path changes',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
-      'ga_admin' => 'ga_admin',
     ),
     'module' => 'pathauto',
   );
@@ -2291,7 +2076,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'perform backup',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'backup_migrate',
   );
@@ -2302,7 +2086,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
@@ -2313,7 +2096,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'restore from backup',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'backup_migrate',
   );
@@ -2324,7 +2106,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -2335,7 +2116,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'select account cancellation method',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'user',
   );
@@ -2346,7 +2126,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2358,7 +2137,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2370,7 +2148,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2382,7 +2159,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2394,7 +2170,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2406,7 +2181,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2418,7 +2192,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2430,7 +2203,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2442,7 +2214,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
@@ -2454,7 +2225,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
@@ -2465,7 +2235,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'switch shortcut sets',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'shortcut',
   );
@@ -2475,7 +2244,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'use PHP for settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'php',
   );
@@ -2485,7 +2253,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'use ipe with page manager',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels',
   );
@@ -2507,7 +2274,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'page_manager',
@@ -2518,7 +2284,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'use panels caching features',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels',
   );
@@ -2529,7 +2294,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
@@ -2541,7 +2305,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
@@ -2552,7 +2315,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'use panels locks',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'panels',
   );
@@ -2563,7 +2325,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'filter',
@@ -2574,7 +2335,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'use text format php_code',
     'roles' => array(
       'administrator' => 'administrator',
-      'dev_admin' => 'dev_admin',
     ),
     'module' => 'filter',
   );
@@ -2665,7 +2425,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -2677,7 +2436,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
@@ -2689,7 +2447,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'icon',
@@ -2701,7 +2458,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
@@ -2713,7 +2469,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
@@ -2725,7 +2480,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'dev_admin' => 'dev_admin',
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
