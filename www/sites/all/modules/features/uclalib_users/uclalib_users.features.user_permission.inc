@@ -30,6 +30,17 @@ function uclalib_users_user_default_permissions() {
     'module' => 'views',
   );
 
+  // Exported permission: 'access all webform results'.
+  $permissions['access all webform results'] = array(
+    'name' => 'access all webform results',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'access backup and migrate'.
   $permissions['access backup and migrate'] = array(
     'name' => 'access backup and migrate',
@@ -104,6 +115,25 @@ function uclalib_users_user_default_permissions() {
     'module' => 'contextual',
   );
 
+  // Exported permission: 'access devel information'.
+  $permissions['access devel information'] = array(
+    'name' => 'access devel information',
+    'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'devel',
+  );
+
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'access navbar'.
   $permissions['access navbar'] = array(
     'name' => 'access navbar',
@@ -113,6 +143,28 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'navbar',
+  );
+
+  // Exported permission: 'access own webform results'.
+  $permissions['access own webform results'] = array(
+    'name' => 'access own webform results',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'access own webform submissions'.
+  $permissions['access own webform submissions'] = array(
+    'name' => 'access own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'access user profiles'.
@@ -296,6 +348,24 @@ function uclalib_users_user_default_permissions() {
     'module' => 'field_group',
   );
 
+  // Exported permission: 'administer file types'.
+  $permissions['administer file types'] = array(
+    'name' => 'administer file types',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'administer files'.
+  $permissions['administer files'] = array(
+    'name' => 'administer files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'administer filters'.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
@@ -303,6 +373,16 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'administer google analytics'.
+  $permissions['administer google analytics'] = array(
+    'name' => 'administer google analytics',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'googleanalytics',
   );
 
   // Exported permission: 'administer icons'.
@@ -339,6 +419,15 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'manualcrop',
+  );
+
+  // Exported permission: 'administer media browser'.
+  $permissions['administer media browser'] = array(
+    'name' => 'administer media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media',
   );
 
   // Exported permission: 'administer menu'.
@@ -582,6 +671,15 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer panelizer bean upcoming_events defaults'.
   $permissions['administer panelizer bean upcoming_events defaults'] = array(
     'name' => 'administer panelizer bean upcoming_events defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer bean upcoming_news defaults'.
+  $permissions['administer panelizer bean upcoming_news defaults'] = array(
+    'name' => 'administer panelizer bean upcoming_news defaults',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -846,6 +944,60 @@ function uclalib_users_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node webform content'.
+  $permissions['administer panelizer node webform content'] = array(
+    'name' => 'administer panelizer node webform content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform context'.
+  $permissions['administer panelizer node webform context'] = array(
+    'name' => 'administer panelizer node webform context',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform defaults'.
+  $permissions['administer panelizer node webform defaults'] = array(
+    'name' => 'administer panelizer node webform defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform layout'.
+  $permissions['administer panelizer node webform layout'] = array(
+    'name' => 'administer panelizer node webform layout',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform overview'.
+  $permissions['administer panelizer node webform overview'] = array(
+    'name' => 'administer panelizer node webform overview',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform settings'.
+  $permissions['administer panelizer node webform settings'] = array(
+    'name' => 'administer panelizer node webform settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer taxonomy_term audience defaults'.
   $permissions['administer panelizer taxonomy_term audience defaults'] = array(
     'name' => 'administer panelizer taxonomy_term audience defaults',
@@ -927,6 +1079,15 @@ function uclalib_users_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer taxonomy_term staff_subject_areas defaults'.
+  $permissions['administer panelizer taxonomy_term staff_subject_areas defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term staff_subject_areas defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer user user defaults'.
   $permissions['administer panelizer user user defaults'] = array(
     'name' => 'administer panelizer user user defaults',
@@ -982,6 +1143,16 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'search_api',
+  );
+
+  // Exported permission: 'administer shibboleth authentication'.
+  $permissions['administer shibboleth authentication'] = array(
+    'name' => 'administer shibboleth authentication',
+    'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'shib_auth',
   );
 
   // Exported permission: 'administer shortcuts'.
@@ -1047,6 +1218,25 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'views',
+  );
+
+  // Exported permission: 'administer xmlsitemap'.
+  $permissions['administer xmlsitemap'] = array(
+    'name' => 'administer xmlsitemap',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'xmlsitemap',
+  );
+
+  // Exported permission: 'bypass file access'.
+  $permissions['bypass file access'] = array(
+    'name' => 'bypass file access',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'bypass node access'.
@@ -1173,6 +1363,15 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'create any upcoming_news bean'.
+  $permissions['create any upcoming_news bean'] = array(
+    'name' => 'create any upcoming_news bean',
+    'roles' => array(
+      'content editors' => 'content editors',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'create destination content'.
   $permissions['create destination content'] = array(
     'name' => 'create destination content',
@@ -1191,6 +1390,15 @@ function uclalib_users_user_default_permissions() {
       'content editors' => 'content editors',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'create files'.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'create location content'.
@@ -1275,6 +1483,15 @@ function uclalib_users_user_default_permissions() {
     'module' => 'path',
   );
 
+  // Exported permission: 'create webform content'.
+  $permissions['create webform content'] = array(
+    'name' => 'create webform content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'customize ckeditor'.
   $permissions['customize ckeditor'] = array(
     'name' => 'customize ckeditor',
@@ -1295,6 +1512,26 @@ function uclalib_users_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'delete all webform submissions'.
+  $permissions['delete all webform submissions'] = array(
+    'name' => 'delete all webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'delete any audio files'.
+  $permissions['delete any audio files'] = array(
+    'name' => 'delete any audio files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'delete any destination content'.
   $permissions['delete any destination content'] = array(
     'name' => 'delete any destination content',
@@ -1303,6 +1540,15 @@ function uclalib_users_user_default_permissions() {
       'content editors' => 'content editors',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete any document files'.
+  $permissions['delete any document files'] = array(
+    'name' => 'delete any document files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'delete any exhibition content'.
@@ -1324,6 +1570,15 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any image files'.
+  $permissions['delete any image files'] = array(
+    'name' => 'delete any image files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'delete any link_list bean'.
@@ -1465,6 +1720,34 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'delete any upcoming_news bean'.
+  $permissions['delete any upcoming_news bean'] = array(
+    'name' => 'delete any upcoming_news bean',
+    'roles' => array(
+      'content editors' => 'content editors',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any video files'.
+  $permissions['delete any video files'] = array(
+    'name' => 'delete any video files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete any webform content'.
+  $permissions['delete any webform content'] = array(
+    'name' => 'delete any webform content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete backup files'.
   $permissions['delete backup files'] = array(
     'name' => 'delete backup files',
@@ -1472,6 +1755,15 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'delete own audio files'.
+  $permissions['delete own audio files'] = array(
+    'name' => 'delete own audio files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'delete own destination content'.
@@ -1484,6 +1776,15 @@ function uclalib_users_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own document files'.
+  $permissions['delete own document files'] = array(
+    'name' => 'delete own document files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'delete own exhibition content'.
   $permissions['delete own exhibition content'] = array(
     'name' => 'delete own exhibition content',
@@ -1492,6 +1793,15 @@ function uclalib_users_user_default_permissions() {
       'content editors' => 'content editors',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete own image files'.
+  $permissions['delete own image files'] = array(
+    'name' => 'delete own image files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'delete own location content'.
@@ -1556,6 +1866,36 @@ function uclalib_users_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own video files'.
+  $permissions['delete own video files'] = array(
+    'name' => 'delete own video files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own webform content'.
+  $permissions['delete own webform content'] = array(
+    'name' => 'delete own webform content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own webform submissions'.
+  $permissions['delete own webform submissions'] = array(
+    'name' => 'delete own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'delete revisions'.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
@@ -1565,6 +1905,24 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete terms in academic_departmental_liaison'.
+  $permissions['delete terms in academic_departmental_liaison'] = array(
+    'name' => 'delete terms in academic_departmental_liaison',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in area_of_expertise'.
+  $permissions['delete terms in area_of_expertise'] = array(
+    'name' => 'delete terms in area_of_expertise',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in audience'.
@@ -1627,6 +1985,24 @@ function uclalib_users_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in media_subject'.
+  $permissions['delete terms in media_subject'] = array(
+    'name' => 'delete terms in media_subject',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in media_tags'.
+  $permissions['delete terms in media_tags'] = array(
+    'name' => 'delete terms in media_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in news_categories'.
   $permissions['delete terms in news_categories'] = array(
     'name' => 'delete terms in news_categories',
@@ -1658,6 +2034,108 @@ function uclalib_users_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in staff_subject_areas'.
+  $permissions['delete terms in staff_subject_areas'] = array(
+    'name' => 'delete terms in staff_subject_areas',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'download any audio files'.
+  $permissions['download any audio files'] = array(
+    'name' => 'download any audio files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download any document files'.
+  $permissions['download any document files'] = array(
+    'name' => 'download any document files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download any image files'.
+  $permissions['download any image files'] = array(
+    'name' => 'download any image files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download any video files'.
+  $permissions['download any video files'] = array(
+    'name' => 'download any video files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own audio files'.
+  $permissions['download own audio files'] = array(
+    'name' => 'download own audio files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own document files'.
+  $permissions['download own document files'] = array(
+    'name' => 'download own document files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own image files'.
+  $permissions['download own image files'] = array(
+    'name' => 'download own image files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own video files'.
+  $permissions['download own video files'] = array(
+    'name' => 'download own video files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit all webform submissions'.
+  $permissions['edit all webform submissions'] = array(
+    'name' => 'edit all webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'edit any audio files'.
+  $permissions['edit any audio files'] = array(
+    'name' => 'edit any audio files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'edit any destination content'.
   $permissions['edit any destination content'] = array(
     'name' => 'edit any destination content',
@@ -1666,6 +2144,15 @@ function uclalib_users_user_default_permissions() {
       'content editors' => 'content editors',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit any document files'.
+  $permissions['edit any document files'] = array(
+    'name' => 'edit any document files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'edit any exhibition content'.
@@ -1687,6 +2174,15 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any image files'.
+  $permissions['edit any image files'] = array(
+    'name' => 'edit any image files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'edit any link_list bean'.
@@ -1828,6 +2324,34 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit any upcoming_news bean'.
+  $permissions['edit any upcoming_news bean'] = array(
+    'name' => 'edit any upcoming_news bean',
+    'roles' => array(
+      'content editors' => 'content editors',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any video files'.
+  $permissions['edit any video files'] = array(
+    'name' => 'edit any video files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit any webform content'.
+  $permissions['edit any webform content'] = array(
+    'name' => 'edit any webform content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit bean view mode'.
   $permissions['edit bean view mode'] = array(
     'name' => 'edit bean view mode',
@@ -1846,6 +2370,15 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'opening_hours',
+  );
+
+  // Exported permission: 'edit own audio files'.
+  $permissions['edit own audio files'] = array(
+    'name' => 'edit own audio files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'edit own comments'.
@@ -1869,6 +2402,15 @@ function uclalib_users_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own document files'.
+  $permissions['edit own document files'] = array(
+    'name' => 'edit own document files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'edit own exhibition content'.
   $permissions['edit own exhibition content'] = array(
     'name' => 'edit own exhibition content',
@@ -1877,6 +2419,15 @@ function uclalib_users_user_default_permissions() {
       'content editors' => 'content editors',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit own image files'.
+  $permissions['edit own image files'] = array(
+    'name' => 'edit own image files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'edit own location content'.
@@ -1941,6 +2492,54 @@ function uclalib_users_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own video files'.
+  $permissions['edit own video files'] = array(
+    'name' => 'edit own video files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own webform content'.
+  $permissions['edit own webform content'] = array(
+    'name' => 'edit own webform content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own webform submissions'.
+  $permissions['edit own webform submissions'] = array(
+    'name' => 'edit own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'edit terms in academic_departmental_liaison'.
+  $permissions['edit terms in academic_departmental_liaison'] = array(
+    'name' => 'edit terms in academic_departmental_liaison',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in area_of_expertise'.
+  $permissions['edit terms in area_of_expertise'] = array(
+    'name' => 'edit terms in area_of_expertise',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in audience'.
   $permissions['edit terms in audience'] = array(
     'name' => 'edit terms in audience',
@@ -2001,6 +2600,24 @@ function uclalib_users_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in media_subject'.
+  $permissions['edit terms in media_subject'] = array(
+    'name' => 'edit terms in media_subject',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in media_tags'.
+  $permissions['edit terms in media_tags'] = array(
+    'name' => 'edit terms in media_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in news_categories'.
   $permissions['edit terms in news_categories'] = array(
     'name' => 'edit terms in news_categories',
@@ -2030,6 +2647,43 @@ function uclalib_users_user_default_permissions() {
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in staff_subject_areas'.
+  $permissions['edit terms in staff_subject_areas'] = array(
+    'name' => 'edit terms in staff_subject_areas',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'execute php code'.
+  $permissions['execute php code'] = array(
+    'name' => 'execute php code',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'devel',
+  );
+
+  // Exported permission: 'export nodes'.
+  $permissions['export nodes'] = array(
+    'name' => 'export nodes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node_export',
+  );
+
+  // Exported permission: 'export own nodes'.
+  $permissions['export own nodes'] = array(
+    'name' => 'export own nodes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node_export',
   );
 
   // Exported permission: 'generate features'.
@@ -2079,6 +2733,16 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'pathauto',
+  );
+
+  // Exported permission: 'opt-in or out of tracking'.
+  $permissions['opt-in or out of tracking'] = array(
+    'name' => 'opt-in or out of tracking',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'googleanalytics',
   );
 
   // Exported permission: 'perform backup'.
@@ -2159,6 +2823,15 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for file'.
+  $permissions['show format selection for file'] = array(
+    'name' => 'show format selection for file',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'better_formats',
   );
@@ -2249,6 +2922,16 @@ function uclalib_users_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'switch users'.
+  $permissions['switch users'] = array(
+    'name' => 'switch users',
+    'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'devel',
+  );
+
   // Exported permission: 'use PHP for settings'.
   $permissions['use PHP for settings'] = array(
     'name' => 'use PHP for settings',
@@ -2256,6 +2939,24 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'php',
+  );
+
+  // Exported permission: 'use PHP for tracking visibility'.
+  $permissions['use PHP for tracking visibility'] = array(
+    'name' => 'use PHP for tracking visibility',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'googleanalytics',
+  );
+
+  // Exported permission: 'use PHP to import nodes'.
+  $permissions['use PHP to import nodes'] = array(
+    'name' => 'use PHP to import nodes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node_export',
   );
 
   // Exported permission: 'use ipe with page manager'.
@@ -2429,6 +3130,16 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'view any upcoming_news bean'.
+  $permissions['view any upcoming_news bean'] = array(
+    'name' => 'view any upcoming_news bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'view bean page'.
   $permissions['view bean page'] = array(
     'name' => 'view bean page',
@@ -2451,6 +3162,19 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'view files'.
+  $permissions['view files'] = array(
+    'name' => 'view files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'view icons'.
   $permissions['view icons'] = array(
     'name' => 'view icons',
@@ -2460,6 +3184,24 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'icon',
+  );
+
+  // Exported permission: 'view own files'.
+  $permissions['view own files'] = array(
+    'name' => 'view own files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'view own private files'.
+  $permissions['view own private files'] = array(
+    'name' => 'view own private files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'view own unpublished content'.
@@ -2482,6 +3224,15 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
+  );
+
+  // Exported permission: 'view private files'.
+  $permissions['view private files'] = array(
+    'name' => 'view private files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'view revisions'.
