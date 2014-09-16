@@ -4,22 +4,6 @@ Patches to Drupal Core
 Patches to Contrib modules
 **************************
 
-Ajax Pane - Does not work in a Panels Everywhere template region.
-https://drupal.org/node/2211513
-https://drupal.org/files/issues/ajax_pane-panels-everywhere-fix-2211513-1.patch
-
-Ajax Pane - Undefined function fix
-https://drupal.org/node/1930628
-https://drupal.org/files/ajax_pane-undefined_function-1930628-1.patch
-
-Ajax Pane - Panels stored in code error
-https://drupal.org/node/1997384
-https://drupal.org/files/ajax_pane-properly_load_display_when_in_code-1997384-1.patch
-
-Ajax Pane - Initialize content in panels_pane_alter
-https://drupal.org/node/2265433
-https://drupal.org/files/issues/ajax_pane-initialize-content-in-pane-alter-2265433.patch
-
 Bean - Panelizer support for Bean
 https://drupal.org/node/2161535
 https://drupal.org/files/issues/bean-panelizer_support-2161535-9.patch
