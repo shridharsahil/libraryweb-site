@@ -1,6 +1,9 @@
 .l-main-wrapper {
-  padding: 0 0 25px;
   overflow: hidden;
+  .l-main {
+    background: #fff;
+    padding-bottom: 25px;
+  }
 }
 
 .l-region--main-column {
