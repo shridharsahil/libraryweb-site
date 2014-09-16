@@ -36,27 +36,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'new database tool',
-                'title' => 'Search for a Database by Title',
-                'attributes' => array(
-                  'target' => 0,
-                ),
-              ),
-            ),
-          ),
-          'field_icon' => array(
-            'und' => array(),
-          ),
-          'id' => 19,
-        ),
-        1 => array(
-          'field_link_description' => array(
-            'und' => array(),
-          ),
-          'field_link_link' => array(
-            'und' => array(
-              0 => array(
-                'url' => 'new database tool',
+                'url' => 'http://unitdev.library.ucla.edu/search/subjects.cfm',
                 'title' => 'Browse Databases by Subject',
                 'attributes' => array(
                   'target' => 0,
@@ -69,6 +49,26 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 20,
         ),
+        1 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'http://unitdev.library.ucla.edu/search/find-database-title.cfm',
+                'title' => 'Find a Database by Title',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 19,
+        ),
         2 => array(
           'field_link_description' => array(
             'und' => array(),
@@ -76,7 +76,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'new database tool',
+                'url' => 'http://guides.library.ucla.edu/atoz',
                 'title' => 'A-Z List of Databases',
                 'attributes' => array(
                   'target' => 0,
@@ -163,8 +163,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'quick-links---search-and-researc',
     'view_mode' => 'default',
     'created' => 1398969197,
-    'log' => '',
-    'uid' => 0,
+    'log' => 'updated links',
+    'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '95745709-2104-4d2c-b237-8139836f3008',
@@ -178,8 +178,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '""',
-                'title' => 'Schedule a tour',
+                'url' => '/support/research-help',
+                'title' => 'Research Help',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -189,7 +189,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_icon' => array(
             'und' => array(),
           ),
-          'id' => 26,
+          'id' => 30,
         ),
         1 => array(
           'field_link_description' => array(
@@ -198,8 +198,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '""',
-                'title' => 'Teaching Support',
+                'url' => '/use/access-privileges/connect-campus',
+                'title' => 'Connect from off-campus',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -218,8 +218,28 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '""',
+                'url' => '/interlibrary-loan-ill',
                 'title' => 'Interlibrary Loans',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 26,
+        ),
+        3 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => '/borrow-renew-return/course-reserves',
+                'title' => 'Course Reserves',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -231,15 +251,15 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 28,
         ),
-        3 => array(
+        4 => array(
           'field_link_description' => array(
             'und' => array(),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '""',
-                'title' => 'Find a place to study',
+                'url' => '/content/suggest-purchase',
+                'title' => 'Suggest a purchase',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -250,26 +270,6 @@ function uclalib_resources_uuid_features_default_beans() {
             'und' => array(),
           ),
           'id' => 29,
-        ),
-        4 => array(
-          'field_link_description' => array(
-            'und' => array(),
-          ),
-          'field_link_link' => array(
-            'und' => array(
-              0 => array(
-                'url' => '""',
-                'title' => 'Copyright Guidance',
-                'attributes' => array(
-                  'target' => 0,
-                ),
-              ),
-            ),
-          ),
-          'field_icon' => array(
-            'und' => array(),
-          ),
-          'id' => 30,
         ),
       ),
     ),
@@ -285,8 +285,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'popular-databases',
     'view_mode' => 'default',
     'created' => 1398722734,
-    'log' => 'Link to citation guides',
-    'uid' => 0,
+    'log' => 'updated links',
+    'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '1087b58c-f0a8-46dc-9806-0c424bd1ac5f',
@@ -340,7 +340,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/support/data-management',
+                'url' => 'node/647',
                 'title' => 'Data Management and Curation',
                 'attributes' => array(
                   'target' => 0,
@@ -579,7 +579,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://ucla.worldcat.org',
                 'title' => 'Melvyl',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -605,7 +605,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://ucla.worldcat.org',
                 'title' => 'Worldcat',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -623,7 +623,7 @@ function uclalib_resources_uuid_features_default_beans() {
             'und' => array(
               0 => array(
                 'url' => 'http://www.cdlib.org/services/d2d/ucelinks/',
-                'title' => 'UC-eLinks: Find e-journals',
+                'title' => 'Find e-journals',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -784,7 +784,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '#',
+                'url' => 'http://guides.library.ucla.edu/primary-sources',
                 'title' => 'Other Digital Collections',
                 'attributes' => array(
                   'target' => 0,
@@ -852,7 +852,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722406,
     'log' => 'updated links',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '106e9ea0-ca4e-4c3c-9350-1e6bf3691027',

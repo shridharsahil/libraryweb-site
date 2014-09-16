@@ -41,7 +41,7 @@ function uclalib_resources_views_default_views() {
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
   $handler->display->display_options['header']['result']['content'] = 'Displaying @start-@end of @total resources.';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -50,14 +50,14 @@ function uclalib_resources_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['separator'] = '';
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Resource Type */
+  /* Field: Indexed Content: Resource Type */
   $handler->display->display_options['fields']['field_resource_type']['id'] = 'field_resource_type';
   $handler->display->display_options['fields']['field_resource_type']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_resource_type']['field'] = 'field_resource_type';
@@ -67,7 +67,7 @@ function uclalib_resources_views_default_views() {
   $handler->display->display_options['fields']['field_resource_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_resource_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_resource_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: The main body text */
+  /* Field: Indexed Content: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -86,19 +86,19 @@ function uclalib_resources_views_default_views() {
   $handler->display->display_options['fields']['body_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_summary']['empty'] = '[body]';
   $handler->display->display_options['fields']['body_summary']['link_to_entity'] = 0;
-  /* Sort criterion: Indexed Node: Date changed */
+  /* Sort criterion: Indexed Content: Date changed */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
   $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'uclalib_resources' => 'uclalib_resources',
   );
-  /* Filter criterion: Indexed Node: Title */
+  /* Filter criterion: Indexed Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['title']['field'] = 'title';
