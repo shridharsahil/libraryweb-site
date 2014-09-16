@@ -28,7 +28,7 @@ function uclalib_location_multifields_field_default_field_instances() {
     'entity_type' => 'multifield',
     'field_name' => 'field_social_link',
     'label' => 'Link',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'attributes' => array(
         'class' => '',
@@ -76,7 +76,7 @@ function uclalib_location_multifields_field_default_field_instances() {
     'entity_type' => 'multifield',
     'field_name' => 'field_social_type',
     'label' => 'Type',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),

@@ -289,7 +289,7 @@ can be changed via a pulldown search limit on the results screen. Many records c
     $form['databases']['databases_container_mel']['description'] = array(
         '#markup' => t('
 
-<strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="http://www.library.ucla.edu/service/campus-access">off-campus access</a> if not being accessed from on campus.
+<strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="/use/access-privileges/connect-campus">off-campus access</a> if not being accessed from on campus and will require a computer to be configured for connecting from off campus if not being access from on campus.
 If you do not find the database you are seeking, try searching the <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> or <a href="http://guides.library.ucla.edu">Research Guides</a>.
 <p>
 <strong>Other Search Options</strong></br>

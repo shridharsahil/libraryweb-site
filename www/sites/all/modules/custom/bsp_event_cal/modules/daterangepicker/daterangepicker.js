@@ -13,7 +13,7 @@ Drupal.behaviors.dateRangePicker = {
       $input.autogrowinput({comfortZone: 20, minWidth: 10, maxWidth: 800}).trigger('onChange');
       $input.daterangepicker({
         arrows: false,
-        closeOnSelect: false,
+        closeOnSelect: true,
         dateFormat: 'DD, MM d, yy', // See http://docs.jquery.com/UI/Datepicker/%24.datepicker.formatDate
         presetRanges: [
           {text: 'Today', dateStart: 'today', dateEnd: 'today' },
@@ -82,7 +82,8 @@ Drupal.behaviors.dateRangePicker = {
                 date_url += "--" + date2.toString("yyyy-MM-dd");
               }
             }
-            var url = "/" + Drupal.settings.dateRangePicker.base_path + "/" + date_url;
+	    // Build final URL, including query parameters from Solr facets
+            var url = "/" + Drupal.settings.dateRangePicker.base_path + "/" + date_url + window.location.search;
             window.location.href = url;
           }, 1000);
         }

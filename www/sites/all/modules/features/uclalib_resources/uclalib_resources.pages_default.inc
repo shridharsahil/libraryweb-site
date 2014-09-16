@@ -712,7 +712,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
@@ -819,7 +819,7 @@ function uclalib_resources_default_page_manager_pages() {
     $pane->panel = 'top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',

@@ -24,7 +24,7 @@
     }
     a.active {
       background: $ucla-blue;
-      color: #000;
+      color: #fff;
     }
     a.active:hover {
       text-decoration: none;
@@ -89,7 +89,7 @@
     padding: 0;
     li {
       list-style: none;
-      margin: 20px 0 14px !important;
+      margin: 0;
       a {
         color: $ucla-blue;
       }

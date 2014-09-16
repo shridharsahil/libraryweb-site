@@ -643,24 +643,16 @@ function uclalib_event_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Events Agenda';
   $page->admin_description = 'Events Agenda landing page';
-  $page->path = 'news-events/events-agenda/!start/!end';
+  $page->path = 'news-events/events-agenda/!date';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
   );
   $page->menu = array();
   $page->arguments = array(
-    'start' => array(
+    'date' => array(
       'id' => 1,
-      'identifier' => 'Start Date',
-      'name' => 'string',
-      'settings' => array(
-        'use_tail' => 0,
-      ),
-    ),
-    'end' => array(
-      'id' => 2,
-      'identifier' => 'End Date',
+      'identifier' => 'String',
       'name' => 'string',
       'settings' => array(
         'use_tail' => 0,

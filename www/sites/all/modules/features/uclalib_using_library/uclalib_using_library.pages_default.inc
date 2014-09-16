@@ -272,34 +272,6 @@ function uclalib_using_library_default_page_manager_pages() {
     $display->content['new-b0d737de-b8a9-4568-a62b-0a94fc20f3f6'] = $pane;
     $display->panels['sidebar_left'][1] = 'new-b0d737de-b8a9-4568-a62b-0a94fc20f3f6';
     $pane = new stdClass();
-    $pane->pid = 'new-c25c61cf-888b-4634-8a47-ca09cfb394db';
-    $pane->panel = 'sidebar_left';
-    $pane->type = 'custom';
-    $pane->subtype = 'questions_highlight';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'sidebar-tier-3',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = 'c25c61cf-888b-4634-8a47-ca09cfb394db';
-    $display->content['new-c25c61cf-888b-4634-8a47-ca09cfb394db'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-c25c61cf-888b-4634-8a47-ca09cfb394db';
-    $pane = new stdClass();
     $pane->pid = 'new-e9fdf0f1-0876-4644-8524-ab2263f17204';
     $pane->panel = 'top';
     $pane->type = 'block';

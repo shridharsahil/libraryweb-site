@@ -50,6 +50,7 @@ function uclalib_system_user_default_permissions() {
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'system',

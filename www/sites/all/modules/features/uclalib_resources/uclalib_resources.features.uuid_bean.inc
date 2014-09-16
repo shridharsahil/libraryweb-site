@@ -21,8 +21,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'articles',
     'view_mode' => 'default',
     'created' => 1398722666,
-    'log' => 'Updated everything based on today\'s meeting',
-    'uid' => 0,
+    'log' => 'updated links',
+    'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '86058cc9-4263-447c-ac03-f4647cbda15c',
@@ -96,7 +96,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'link to cannedd search by resource type in new database tool',
+                'url' => 'http://guides.library.ucla.edu/searchtags.php?iid=261&gid=0&tag=data',
                 'title' => 'Data and Statistics',
                 'attributes' => array(
                   'target' => 0,
@@ -407,7 +407,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'databases',
     'view_mode' => 'default',
     'created' => 1398722354,
-    'log' => 'Updated everything based on today\'s meeting',
+    'log' => 'updated links',
     'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
@@ -462,8 +462,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://media2.oid.ucla.edu/htbin/wwform/214/wwk770/',
-                'title' => 'Instructional Media Library',
+                'url' => 'http://www.oid.ucla.edu/edtech/mediacollection/info',
+                'title' => 'Instructional Media Collections and Services',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -482,7 +482,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://cinema.library.ucla.edu/',
+                'url' => 'https://www.cinema.ucla.edu/',
                 'title' => 'Film and Television Archive',
                 'attributes' => array(
                   'target' => 0,
@@ -502,7 +502,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'new guide by Diana',
+                'url' => 'http://guides.library.ucla.edu/videocollections',
                 'title' => 'More Video Collections',
                 'attributes' => array(
                   'target' => 0,
@@ -529,8 +529,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'books--more',
     'view_mode' => 'default',
     'created' => 1398722227,
-    'log' => 'uc elinks name style correction',
-    'uid' => 0,
+    'log' => 'updated links',
+    'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '874ead3d-654f-41b6-8500-0f6ca7be6009',
@@ -662,8 +662,8 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'node/001',
-                'title' => 'New Book Feeds',
+                'url' => '#',
+                'title' => 'New Books',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -674,6 +674,26 @@ function uclalib_resources_uuid_features_default_beans() {
             'und' => array(),
           ),
           'id' => 107,
+        ),
+        6 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => 'http://ulrichsweb.serialssolutions.com/',
+                'title' => 'Search Ulrichsweb to see where a journal is indexed',
+                'attributes' => array(
+                  'target' => '_blank',
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 206,
         ),
       ),
     ),
@@ -689,8 +709,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'images-audio-video',
     'view_mode' => 'default',
     'created' => 1398722604,
-    'log' => 'normalized capitalization',
-    'uid' => 0,
+    'log' => 'updated links',
+    'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '2afc053b-5a2b-4353-aab8-c794ed39fb37',
@@ -704,7 +724,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'under construction',
+                'url' => 'node/874',
                 'title' => 'UCLA Library Special Collections Guides',
                 'attributes' => array(
                   'target' => 0,
@@ -764,7 +784,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'linked to canned search in new database tool',
+                'url' => '#',
                 'title' => 'Other Digital Collections',
                 'attributes' => array(
                   'target' => 0,
@@ -804,7 +824,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'linked to canned search in new database tool',
+                'url' => 'http://guides.library.ucla.edu/searchtags.php?iid=261&gid=0&tag=data',
                 'title' => 'Data and Statistics',
                 'attributes' => array(
                   'target' => 0,
@@ -831,8 +851,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'journals',
     'view_mode' => 'default',
     'created' => 1398722406,
-    'log' => 'normalized capitalization',
-    'uid' => 0,
+    'log' => 'updated links',
+    'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '106e9ea0-ca4e-4c3c-9350-1e6bf3691027',
@@ -972,7 +992,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'sub-page to be built',
+                'url' => 'http://guides.library.ucla.edu/databases/multiple',
                 'title' => 'Search Multiple Databases at Once',
                 'attributes' => array(
                   'target' => 0,
