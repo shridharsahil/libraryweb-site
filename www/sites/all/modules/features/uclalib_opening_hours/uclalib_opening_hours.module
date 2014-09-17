@@ -185,22 +185,7 @@ function uclalib_opening_hours_generate_table_rows($this_nid, $nodes, $day) {
         $end_time = _uclalib_opening_hours_short_time($oh['end_time']);
       }
       $class = (empty($start_time) && empty($end_time)) ? 'closed' : 'open';
-      // Tweak the displayed data for special cases:
-      // 23:45 - 23:45 (formatted as 11:45p) = closed
-      // 00:00 - 00:00 (formatted as 12a)    = 24 hours
-      // no data (empty)                     = nothing
-      if ($start_time == '11:45p' && $end_time == $start_time) {
-        $row_data = 'closed';
-      }
-      elseif ($start_time == '12a' && $end_time == $start_time) {
-        $row_data = '24 hours';
-      }
-      elseif (empty($start_time) && empty($end_time)) {
-        $row_data = '';
-      }
-      else {
-        $row_data = $start_time . '-' . $end_time;
-      }
+      $row_data = _uclalib_opening_hours_combine_start_end_times($start_time, $end_time);
       $row_cell = array(
         'data' => $row_data,
         'class' => array(drupal_html_class('day-' . $this_day->format('D')), $class),
@@ -289,3 +274,28 @@ function uclalib_opening_hours_render_hours_table($nid, $start) {
   }
   drupal_exit();
 }
+
+/**
+ * Format combined start/end times for display.
+ * Handle special cases:
+ * * 23:45 - 23:45 (formatted as 11:45p) = closed
+ * * 00:00 - 00:00 (formatted as 12a)    = 24 hours
+ * * no data (empty)                     = nothing
+ */
+function _uclalib_opening_hours_combine_start_end_times($start_time, $end_time) {
+  if ($start_time == '11:45p' && $end_time == $start_time) {
+    $row_data = 'closed';
+  }
+  elseif ($start_time == '12a' && $end_time == $start_time) {
+    $row_data = '24 hours';
+  }
+  elseif (empty($start_time) && empty($end_time)) {
+    $row_data = '';
+  }
+  else {
+    $row_data = $start_time . '-' . $end_time;
+  }
+
+  return $row_data;
+}
+
