@@ -45,7 +45,6 @@ function uclalib_users_user_default_permissions() {
   $permissions['access backup and migrate'] = array(
     'name' => 'access backup and migrate',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
@@ -138,6 +137,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access navbar'] = array(
     'name' => 'access navbar',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -191,7 +192,6 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer alerts settings'] = array(
     'name' => 'administer alerts settings',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -325,6 +325,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer features'] = array(
     'name' => 'administer features',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'features',
@@ -1008,6 +1009,13 @@ function uclalib_users_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer taxonomy_term academic_departmental_liaison defaults'.
+  $permissions['administer panelizer taxonomy_term academic_departmental_liaison defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term academic_departmental_liaison defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer taxonomy_term audience defaults'.
   $permissions['administer panelizer taxonomy_term audience defaults'] = array(
     'name' => 'administer panelizer taxonomy_term audience defaults',
@@ -1149,7 +1157,6 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer search_api'] = array(
     'name' => 'administer search_api',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'search_api',
@@ -1159,7 +1166,6 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer shibboleth authentication'] = array(
     'name' => 'administer shibboleth authentication',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'shib_auth',
@@ -1197,7 +1203,6 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
     ),
@@ -1217,7 +1222,6 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer uuid'] = array(
     'name' => 'administer uuid',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'uuid',
@@ -1287,12 +1291,18 @@ function uclalib_users_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'clear ccle_redirects_importer feeds'.
+  $permissions['clear ccle_redirects_importer feeds'] = array(
+    'name' => 'clear ccle_redirects_importer feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear node feeds'.
   $permissions['clear node feeds'] = array(
     'name' => 'clear node feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
-      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -1302,7 +1312,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'clear user feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
-      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -1508,7 +1517,6 @@ function uclalib_users_user_default_permissions() {
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
     ),
@@ -2722,9 +2730,17 @@ function uclalib_users_user_default_permissions() {
   $permissions['generate features'] = array(
     'name' => 'generate features',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'import ccle_redirects_importer feeds'.
+  $permissions['import ccle_redirects_importer feeds'] = array(
+    'name' => 'import ccle_redirects_importer feeds',
+    'roles' => array(),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'import node feeds'.
@@ -2732,7 +2748,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'import node feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
-      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -2742,7 +2757,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'import user feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
-      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -2751,6 +2765,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['manage features'] = array(
     'name' => 'manage features',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'features',
@@ -2978,10 +2993,16 @@ function uclalib_users_user_default_permissions() {
   $permissions['switch users'] = array(
     'name' => 'switch users',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'devel',
+  );
+
+  // Exported permission: 'unlock ccle_redirects_importer feeds'.
+  $permissions['unlock ccle_redirects_importer feeds'] = array(
+    'name' => 'unlock ccle_redirects_importer feeds',
+    'roles' => array(),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'unlock node feeds'.
@@ -2989,7 +3010,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'unlock node feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
-      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -2999,7 +3019,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'unlock user feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
-      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );

@@ -14,6 +14,8 @@ function uclalib_system_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
@@ -32,6 +34,7 @@ function uclalib_system_user_default_permissions() {
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
@@ -50,10 +53,16 @@ function uclalib_system_user_default_permissions() {
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
-      'admin_dev' => 'admin_dev',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term academic_departmental_liaison defaults'.
+  $permissions['administer panelizer taxonomy_term academic_departmental_liaison defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term academic_departmental_liaison defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
   );
 
   // Exported permission: 'administer site configuration'.
@@ -92,10 +101,33 @@ function uclalib_system_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'clear ccle_redirects_importer feeds'.
+  $permissions['clear ccle_redirects_importer feeds'] = array(
+    'name' => 'clear ccle_redirects_importer feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import ccle_redirects_importer feeds'.
+  $permissions['import ccle_redirects_importer feeds'] = array(
+    'name' => 'import ccle_redirects_importer feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock ccle_redirects_importer feeds'.
+  $permissions['unlock ccle_redirects_importer feeds'] = array(
+    'name' => 'unlock ccle_redirects_importer feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
