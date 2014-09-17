@@ -41,7 +41,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<div class="more-link"><a href="/news-events/events-agenda">More Events</a></div>';
+  $handler->display->display_options['header']['area']['content'] = '<div class="more-link"><a href="news-events/events-agenda">More Events</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_events_target_id']['id'] = 'field_events_target_id';
