@@ -26,30 +26,11 @@ $plugin = array(
  */
 function page_site_alert_content_type_render($subtype, $conf, $panel_args) {
 
-  $start = variable_get('alerts_start');
-  $begin = strtotime($start);
-  $alert = variable_get('alerts_expire');
-  $expire = strtotime($alert);
+  drupal_add_js(drupal_get_path('module', 'site_alert') . '/site_alert.js');
 
-  $level = variable_get('alerts_severity');
-  $alert = variable_get('alerts_content');
+  $block = new StdClass();
+  $block->title = '';
+  $block->content = '<div class="site-alert"></div>';
 
-
-  if ($begin < time()) {
-    if ($expire > time()) {
-      $block = new stdClass();
-
-      $output = '<div class=' .$level .'>';
-      $output .= '<div class=text>';
-
-      $tags = array('a', 'em', 'strong');
-      $output .= filter_xss($alert, $tags);
-      $output .= '</div></div>';
-
-      $block->content = $output;
-
-      return $block;
-    }
-  }
-  return;
+  return $block;
 }

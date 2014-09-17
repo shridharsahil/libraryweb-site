@@ -41,6 +41,7 @@ function site_alert_admin() {
   $format = 'm-d-Y h:iA';
 
   $form['alerts_start'] = array(
+    '#prefix' => '<div class="site-alert-date-info">' . t('Dates are stored in the site\'s default timezone, currently %tz', array('%tz' => variable_get('date_default_timezone'))) . '</div>',
     '#type' => 'date_popup',
     '#title' => t('Start date for Alert (Default is now)'),
     '#date_format' => $format,
@@ -102,7 +103,14 @@ function site_alert_menu() {
     'page arguments' => array('site_alert_admin'),
     'access arguments' => array('administer alerts settings'),
     'type' => MENU_NORMAL_ITEM,
-   );
+  );
+
+  $items['ajax/site_alert'] = array(
+    'title' => 'Site Alert',
+    'page callback' => 'site_alert_get_alert',
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+  );
 
   return $items;
 }
@@ -120,4 +128,32 @@ function site_alert_permission() {
     'description' => t('Allow users to administer alerts settings'),
     ),
   );
+}
+
+/**
+ * Callback to get site alert information.
+ */
+function site_alert_get_alert() {
+  $start = variable_get('alerts_start');
+  $begin = strtotime($start);
+  $alert = variable_get('alerts_expire');
+  $expire = strtotime($alert);
+
+  $level = variable_get('alerts_severity');
+  $alert = variable_get('alerts_content');
+
+  if ($begin < time()) {
+    if ($expire > time()) {
+      $output = '<div class=' .$level .'>';
+      $output .= '<div class=text>';
+
+      $tags = array('a', 'em', 'strong');
+      $output .= filter_xss($alert, $tags);
+      $output .= '</div></div>';
+
+      print $output;
+      drupal_page_footer();
+      exit;
+    }
+  }
 }

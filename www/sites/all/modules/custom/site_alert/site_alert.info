@@ -4,8 +4,6 @@ core = 7.x
 
 dependencies[] = date
 dependencies[] = panels_mini
-dependencies[] = ajax_pane
-
 panels_mini[] = alert_pane
 
 stylesheets[all][] = css/site-alert.css

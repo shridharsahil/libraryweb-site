@@ -87,8 +87,8 @@
   function get_full_phone_number ($extension) {
     // Source data has 5-digit extensions, like 68312
     // Convert to full 10-digit US phone numbers, based on first digit of extension.
-    // Use format Drupal expects: nnn.nnn.nnnn, e.g.:
-    // $area_code.$prefix.$last_digits
+    // Use format Drupal expects: (nnn) nnn-nnnn, e.g.:
+    // ($area_code) $prefix-$last_digits
     // Input data may have multiple extensions, like 12345, 23456; handle only the first one.
 
     $area_code = "310";
@@ -106,7 +106,7 @@
       case "9": $prefix = "319"; break;
       default: $prefix = "";
     }
-    $full_phone = $area_code . '.' . $prefix . '.' . $last_digits;
+    $full_phone = '(' . $area_code . ') ' . $prefix . '-' . $last_digits;
     return $full_phone;
   }
 ?>
