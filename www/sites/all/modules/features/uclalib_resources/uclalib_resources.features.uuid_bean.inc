@@ -22,7 +22,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722666,
     'log' => 'updated links',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '86058cc9-4263-447c-ac03-f4647cbda15c',
@@ -163,8 +163,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'quick-links---search-and-researc',
     'view_mode' => 'default',
     'created' => 1398969197,
-    'log' => 'updated links',
-    'uid' => 1,
+    'log' => 'added appropriate use link',
+    'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '95745709-2104-4d2c-b237-8139836f3008',
@@ -271,6 +271,26 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 29,
         ),
+        5 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => '/node/1425/',
+                'title' => 'Appropriate Use of Licensed Electronic Resources',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 225,
+        ),
       ),
     ),
   );
@@ -285,8 +305,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'popular-databases',
     'view_mode' => 'default',
     'created' => 1398722734,
-    'log' => 'updated links',
-    'uid' => 1,
+    'log' => 'added library apps',
+    'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '1087b58c-f0a8-46dc-9806-0c424bd1ac5f',
@@ -393,6 +413,26 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 25,
         ),
+        5 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => '/node/1428/',
+                'title' => 'Library Apps',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 226,
+        ),
       ),
     ),
   );
@@ -407,8 +447,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'databases',
     'view_mode' => 'default',
     'created' => 1398722354,
-    'log' => 'updated links',
-    'uid' => 0,
+    'log' => 'link name',
+    'uid' => 77,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '6af3ea98-f8b9-4531-be52-394394cc5553',
@@ -483,7 +523,7 @@ function uclalib_resources_uuid_features_default_beans() {
             'und' => array(
               0 => array(
                 'url' => 'https://www.cinema.ucla.edu/',
-                'title' => 'Film and Television Archive',
+                'title' => 'UCLA Film & Television Archive',
                 'attributes' => array(
                   'target' => 0,
                 ),
@@ -530,7 +570,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722227,
     'log' => 'updated links',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '874ead3d-654f-41b6-8500-0f6ca7be6009',
@@ -709,8 +749,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'images-audio-video',
     'view_mode' => 'default',
     'created' => 1398722604,
-    'log' => 'updated links',
-    'uid' => 1,
+    'log' => 'link name',
+    'uid' => 77,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '2afc053b-5a2b-4353-aab8-c794ed39fb37',
@@ -785,7 +825,7 @@ function uclalib_resources_uuid_features_default_beans() {
             'und' => array(
               0 => array(
                 'url' => 'http://guides.library.ucla.edu/primary-sources',
-                'title' => 'Other Digital Collections',
+                'title' => 'Subject Guides for Primary Sources',
                 'attributes' => array(
                   'target' => 0,
                 ),

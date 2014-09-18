@@ -66,11 +66,9 @@ function uclalib_opening_hours_ctools_content_types_todays_hours_render($subtype
 
   $output = '';
   if (isset($oh['start_time']) && isset($oh['end_time'])) {
-    $hours =
-      _uclalib_opening_hours_short_time($oh['start_time'])
-      . ' - ' .
-      _uclalib_opening_hours_short_time($oh['end_time']);
-
+    $start_time = _uclalib_opening_hours_short_time($oh['start_time']);
+    $end_time = _uclalib_opening_hours_short_time($oh['end_time']);
+    $hours = _uclalib_opening_hours_combine_start_end_times($start_time, $end_time);
     $output .= t("Today's hours") . ': ' . $hours;
   }
 

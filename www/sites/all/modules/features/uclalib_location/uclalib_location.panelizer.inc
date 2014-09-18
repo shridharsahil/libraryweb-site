@@ -629,6 +629,9 @@ function uclalib_location_panelizer_defaults() {
       'center_' => NULL,
       'right' => NULL,
     ),
+    'center' => array(
+      'style' => '-1',
+    ),
   );
   $display->cache = array();
   $display->title = '%node:title';
@@ -645,13 +648,13 @@ function uclalib_location_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'image',
+      'formatter' => 'image_link_formatter',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'image_style' => 'thumbnail_large',
-        'image_link' => '',
+        'image_link' => 'field_location_map_link',
       ),
       'context' => 'panelizer',
       'override_title' => 1,
@@ -660,6 +663,7 @@ function uclalib_location_panelizer_defaults() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'default',
     );
     $pane->css = array();
     $pane->extras = array();
