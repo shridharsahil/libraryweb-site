@@ -79,7 +79,7 @@ function uclalib_search_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'site-search';
+  $handler->display->display_options['path'] = 'site-search-old';
   $export['content_search'] = $view;
 
   $view = new view();
@@ -171,6 +171,8 @@ function uclalib_search_views_default_views() {
     2 => '2',
     1 => 0,
     3 => 0,
+    4 => 0,
+    5 => 0,
   );
 
   /* Display: Content pane */
@@ -373,6 +375,135 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['inherit_panels_path'] = '1';
   $export['news_search'] = $view;
+
+  $view = new view();
+  $view->name = 'site_multi_search';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_multi';
+  $view->human_name = 'Site Multi Search';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Site Search';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Search: Page manager pages results */
+  $handler->display->display_options['fields']['page_manager_pages']['id'] = 'page_manager_pages';
+  $handler->display->display_options['fields']['page_manager_pages']['table'] = 'search_api_multi';
+  $handler->display->display_options['fields']['page_manager_pages']['field'] = 'page_manager_pages';
+  $handler->display->display_options['fields']['page_manager_pages']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['page_manager_pages']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['page_manager_pages']['display'] = 'view';
+  $handler->display->display_options['fields']['page_manager_pages']['bypass_access'] = 0;
+  /* Field: Search: Site General Search results */
+  $handler->display->display_options['fields']['site_general_search']['id'] = 'site_general_search';
+  $handler->display->display_options['fields']['site_general_search']['table'] = 'search_api_multi';
+  $handler->display->display_options['fields']['site_general_search']['field'] = 'site_general_search';
+  $handler->display->display_options['fields']['site_general_search']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['site_general_search']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['site_general_search']['display'] = 'view';
+  $handler->display->display_options['fields']['site_general_search']['view_mode'] = 'teaser';
+  $handler->display->display_options['fields']['site_general_search']['bypass_access'] = 0;
+  /* Field: Page manager pages: Title (indexed) */
+  $handler->display->display_options['fields']['page_manager_pages_title']['id'] = 'page_manager_pages_title';
+  $handler->display->display_options['fields']['page_manager_pages_title']['table'] = 'search_api_multi';
+  $handler->display->display_options['fields']['page_manager_pages_title']['field'] = 'page_manager_pages_title';
+  $handler->display->display_options['fields']['page_manager_pages_title']['label'] = '';
+  $handler->display->display_options['fields']['page_manager_pages_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['page_manager_pages_title']['link_to_entity'] = 1;
+  /* Field: Site General Search: Title (indexed) */
+  $handler->display->display_options['fields']['site_general_search_title']['id'] = 'site_general_search_title';
+  $handler->display->display_options['fields']['site_general_search_title']['table'] = 'search_api_multi';
+  $handler->display->display_options['fields']['site_general_search_title']['field'] = 'site_general_search_title';
+  $handler->display->display_options['fields']['site_general_search_title']['label'] = '';
+  $handler->display->display_options['fields']['site_general_search_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['site_general_search_title']['link_to_entity'] = 1;
+  /* Field: Search: Excerpt */
+  $handler->display->display_options['fields']['search_api_excerpt']['id'] = 'search_api_excerpt';
+  $handler->display->display_options['fields']['search_api_excerpt']['table'] = 'search_api_multi';
+  $handler->display->display_options['fields']['search_api_excerpt']['field'] = 'search_api_excerpt';
+  $handler->display->display_options['fields']['search_api_excerpt']['label'] = '';
+  $handler->display->display_options['fields']['search_api_excerpt']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
+  /* Sort criterion: Search: Relevance */
+  $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
+  $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_multi';
+  $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
+  $handler->display->display_options['sorts']['search_api_relevance']['order'] = 'DESC';
+  /* Filter criterion: Search: Index */
+  $handler->display->display_options['filters']['search_api_multi_index']['id'] = 'search_api_multi_index';
+  $handler->display->display_options['filters']['search_api_multi_index']['table'] = 'search_api_multi';
+  $handler->display->display_options['filters']['search_api_multi_index']['field'] = 'search_api_multi_index';
+  $handler->display->display_options['filters']['search_api_multi_index']['value'] = array(
+    'site_general_search' => 'site_general_search',
+    'page_manager_pages' => 'page_manager_pages',
+  );
+  /* Filter criterion: Search: Fulltext search */
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['id'] = 'search_api_multi_fulltext';
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['table'] = 'search_api_multi';
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['field'] = 'search_api_multi_fulltext';
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['expose']['operator_id'] = 'search_api_multi_fulltext_op';
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['expose']['label'] = 'Search';
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['expose']['operator'] = 'search_api_multi_fulltext_op';
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['expose']['identifier'] = 'search_query';
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['expose']['required'] = TRUE;
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['filters']['search_api_multi_fulltext']['fields'] = array(
+    'site_general_search:title' => 'site_general_search:title',
+    'site_general_search:field_address' => 'site_general_search:field_address',
+    'site_general_search:field_location_alt_names' => 'site_general_search:field_location_alt_names',
+    'site_general_search:field_location_building' => 'site_general_search:field_location_building',
+    'site_general_search:field_location_email' => 'site_general_search:field_location_email',
+    'site_general_search:field_location_nickname' => 'site_general_search:field_location_nickname',
+    'site_general_search:field_location_phone' => 'site_general_search:field_location_phone',
+    'site_general_search:field_destination_email' => 'site_general_search:field_destination_email',
+    'site_general_search:field_destination_phone' => 'site_general_search:field_destination_phone',
+    'site_general_search:field_event_subtitle' => 'site_general_search:field_event_subtitle',
+    'site_general_search:field_exhibition_subtitle' => 'site_general_search:field_exhibition_subtitle',
+    'site_general_search:field_staff_email' => 'site_general_search:field_staff_email',
+    'site_general_search:field_staff_first_name' => 'site_general_search:field_staff_first_name',
+    'site_general_search:field_staff_job_title' => 'site_general_search:field_staff_job_title',
+    'site_general_search:field_staff_last_name' => 'site_general_search:field_staff_last_name',
+    'site_general_search:field_staff_middle_name' => 'site_general_search:field_staff_middle_name',
+    'site_general_search:field_staff_phone' => 'site_general_search:field_staff_phone',
+    'site_general_search:search_api_viewed' => 'site_general_search:search_api_viewed',
+    'site_general_search:search_api_panelized' => 'site_general_search:search_api_panelized',
+    'site_general_search:body:value' => 'site_general_search:body:value',
+    'site_general_search:body:summary' => 'site_general_search:body:summary',
+    'site_general_search:field_amenities:name' => 'site_general_search:field_amenities:name',
+    'site_general_search:field_amenities:description' => 'site_general_search:field_amenities:description',
+    'site_general_search:field_equipment:name' => 'site_general_search:field_equipment:name',
+    'site_general_search:field_equipment:description' => 'site_general_search:field_equipment:description',
+    'site_general_search:field_study_areas:name' => 'site_general_search:field_study_areas:name',
+    'site_general_search:field_study_areas:description' => 'site_general_search:field_study_areas:description',
+    'page_manager_pages:title' => 'page_manager_pages:title',
+    'page_manager_pages:content' => 'page_manager_pages:content',
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'site-search';
+  $export['site_multi_search'] = $view;
 
   $view = new view();
   $view->name = 'staff_directory';
