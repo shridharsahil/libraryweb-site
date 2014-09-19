@@ -191,17 +191,15 @@ can be changed via a pulldown search limit on the results screen. Many records c
     '#type' => 'checkboxes',
     '#default_value' => $defaults['category'],
     '#options' => array(
-      '103267' => t('<a href="http://www.library.ucla.edu/search/arts-humanities">Arts and Humanities</a>'),
-      '103349' => t('<a href="http://www.library.ucla.edu/search/business-economics">Business and Economics</a>'),
-      '103269' => t('<a href="http://www.library.ucla.edu/search/engineering-applied-sciences">Engineering and Applied Sciences</a>'),
-      '103266' => t('<a href="http://www.library.ucla.edu/search/general-databases">General</a>'),
-      '103378' => t('<a href="http://www.library.ucla.edu/search/health-life-sciences">Health and Life Sciences</a>'),
-      '103270' => t('<a href="http://www.library.ucla.edu/search/physical-sciences-mathematics">Physical Sciences and Mathematics</a>'),
-      '103268' => t('<a href="http://www.library.ucla.edu/search/social-sciences">Social Sciences</a>'),
+      '103267' => t('<a href="search/description-library-resources/arts-humanities">Arts and Humanities</a>'),
+      '103349' => t('<a href="search/description-library-resources/business-economics">Business and Economics</a>'),
+      '103269' => t('<a href="search/description-library-resources/engineering-applied-sciences">Engineering and Applied Sciences</a>'),
+      '103266' => t('<a href="search/description-library-resources/general">General</a>'),
+      '103378' => t('<a href="search/description-library-resources/health-life-sciences">Health and Life Sciences</a>'),
+      '103270' => t('<a href="search/description-library-resources/physical-sciences-mathematics">Physical Sciences and Mathematics</a>'),
+      '103268' => t('<a href="search/description-library-resources/social-sciences">Social Sciences</a>'),
     ),
   );
-
-
 
 
   $form['articles']['articles_search'] = $search_button;
