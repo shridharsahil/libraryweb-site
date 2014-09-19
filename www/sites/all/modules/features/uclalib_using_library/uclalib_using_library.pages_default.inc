@@ -54,7 +54,7 @@ function uclalib_using_library_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar-left-golden';
+  $display->layout = 'sidebar-left';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -104,6 +104,29 @@ function uclalib_using_library_default_page_manager_pages() {
     $pane->uuid = 'bd47704a-7b2b-47af-baa7-81ffab6701e9';
     $display->content['new-bd47704a-7b2b-47af-baa7-81ffab6701e9'] = $pane;
     $display->panels['below_main_left'][0] = 'new-bd47704a-7b2b-47af-baa7-81ffab6701e9';
+    $pane = new stdClass();
+    $pane->pid = 'new-95c85639-ab33-4ad8-8d6f-2e36f921045e';
+    $pane->panel = 'below_main_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-computers--computing-services';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'default',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '95c85639-ab33-4ad8-8d6f-2e36f921045e';
+    $display->content['new-95c85639-ab33-4ad8-8d6f-2e36f921045e'] = $pane;
+    $display->panels['below_main_left'][1] = 'new-95c85639-ab33-4ad8-8d6f-2e36f921045e';
     $pane = new stdClass();
     $pane->pid = 'new-f598a504-1f02-41f8-a340-2744a302258c';
     $pane->panel = 'below_main_right';

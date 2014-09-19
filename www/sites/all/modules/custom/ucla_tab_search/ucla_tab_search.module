@@ -191,17 +191,15 @@ can be changed via a pulldown search limit on the results screen. Many records c
     '#type' => 'checkboxes',
     '#default_value' => $defaults['category'],
     '#options' => array(
-      '103267' => t('<a href="http://www.library.ucla.edu/search/arts-humanities">Arts and Humanities</a>'),
-      '103349' => t('<a href="http://www.library.ucla.edu/search/business-economics">Business and Economics</a>'),
-      '103269' => t('<a href="http://www.library.ucla.edu/search/engineering-applied-sciences">Engineering and Applied Sciences</a>'),
-      '103266' => t('<a href="http://www.library.ucla.edu/search/general-databases">General</a>'),
-      '103378' => t('<a href="http://www.library.ucla.edu/search/health-life-sciences">Health and Life Sciences</a>'),
-      '103270' => t('<a href="http://www.library.ucla.edu/search/physical-sciences-mathematics">Physical Sciences and Mathematics</a>'),
-      '103268' => t('<a href="http://www.library.ucla.edu/search/social-sciences">Social Sciences</a>'),
+      '103267' => t('<a href="search/description-library-resources/arts-humanities">Arts and Humanities</a>'),
+      '103349' => t('<a href="search/description-library-resources/business-economics">Business and Economics</a>'),
+      '103269' => t('<a href="search/description-library-resources/engineering-applied-sciences">Engineering and Applied Sciences</a>'),
+      '103266' => t('<a href="search/description-library-resources/general">General</a>'),
+      '103378' => t('<a href="search/description-library-resources/health-life-sciences">Health and Life Sciences</a>'),
+      '103270' => t('<a href="search/description-library-resources/physical-sciences-mathematics">Physical Sciences and Mathematics</a>'),
+      '103268' => t('<a href="search/description-library-resources/social-sciences">Social Sciences</a>'),
     ),
   );
-
-
 
 
   $form['articles']['articles_search'] = $search_button;
@@ -289,7 +287,7 @@ can be changed via a pulldown search limit on the results screen. Many records c
     $form['databases']['databases_container_mel']['description'] = array(
         '#markup' => t('
 
-<strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="/use/access-privileges/connect-campus">off-campus access</a> if not being accessed from on campus and will require a computer to be configured for connecting from off campus if not being access from on campus.
+<strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="use/access-privileges/connect-campus">off-campus access</a> if not being accessed from on campus. 
 If you do not find the database you are seeking, try searching the <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> or <a href="http://guides.library.ucla.edu">Research Guides</a>.
 <p>
 <strong>Other Search Options</strong></br>

@@ -21,8 +21,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'articles',
     'view_mode' => 'default',
     'created' => 1398722666,
-    'log' => 'updated links',
-    'uid' => 0,
+    'log' => 'unitdev to unitproj',
+    'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '86058cc9-4263-447c-ac03-f4647cbda15c',
@@ -36,7 +36,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://unitdev.library.ucla.edu/search/subjects.cfm',
+                'url' => 'http://unitproj.library.ucla.edu/search/subjects.cfm',
                 'title' => 'Browse Databases by Subject',
                 'attributes' => array(
                   'target' => 0,
@@ -56,7 +56,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://unitdev.library.ucla.edu/search/find-database-title.cfm',
+                'url' => 'http://unitproj.library.ucla.edu/search/find-database-title.cfm',
                 'title' => 'Find a Database by Title',
                 'attributes' => array(
                   'target' => 0,
