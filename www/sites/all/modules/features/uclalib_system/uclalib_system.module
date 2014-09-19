@@ -54,6 +54,7 @@ function uclalib_system_required_modules() {
     'media_wysiwyg_view_mode',
     'better_exposed_filters',
     'search_api_page_manager',
+    'search_api_multi',
   );
 }
 
