@@ -10,7 +10,6 @@ dependencies[] = fe_nodequeue
 dependencies[] = page_manager
 dependencies[] = search_api
 dependencies[] = search_api_facetapi
-dependencies[] = search_api_multi
 dependencies[] = search_api_page_manager
 dependencies[] = search_api_panelized_entity
 dependencies[] = search_api_solr
