@@ -49,11 +49,6 @@ function uclalib_navigation_ctools_content_types_uclalib_nav_render($subtype, $c
   $parent = $menu_trail[count($menu_trail) - 2];
   $current = $menu_trail[count($menu_trail) - 1];
 
-  // Bail if there's no menu.
-  if (!isset($menu_trail[1]['menu_name'])) {
-    return;
-  }
-
   // Use menu_block module to generate the tree.
   // We fake a configuration for the module.
   $config = array(

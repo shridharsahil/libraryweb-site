@@ -158,77 +158,6 @@ function uclalib_search_default_search_api_index() {
     "enabled" : "1",
     "read_only" : "0"
   }');
-  $items['page_manager_pages'] = entity_import('search_api_index', '{
-    "name" : "Page manager pages",
-    "machine_name" : "page_manager_pages",
-    "description" : null,
-    "server" : "uclalib_solr_server",
-    "item_type" : "search_api_page_manager",
-    "options" : {
-      "index_directly" : 0,
-      "cron_limit" : "50",
-      "fields" : {
-        "title" : { "type" : "text" },
-        "content" : { "type" : "text" },
-        "search_api_language" : { "type" : "string" }
-      },
-      "data_alter_callbacks" : {
-        "uclalib_search_staff_index_fields" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_panelized_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : false } },
-        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : false } },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] }
-      },
-      "processors" : {
-        "search_api_case_ignore" : {
-          "status" : 1,
-          "weight" : "0",
-          "settings" : { "fields" : { "title" : true, "content" : true } }
-        },
-        "search_api_html_filter" : {
-          "status" : 1,
-          "weight" : "10",
-          "settings" : {
-            "fields" : { "title" : true, "content" : true },
-            "title" : 0,
-            "alt" : 1,
-            "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
-          }
-        },
-        "search_api_tokenizer" : {
-          "status" : 0,
-          "weight" : "20",
-          "settings" : {
-            "fields" : { "title" : true, "content" : true },
-            "spaces" : "[^[:alnum:]]",
-            "ignorable" : "[\\u0027]"
-          }
-        },
-        "search_api_stopwords" : {
-          "status" : 0,
-          "weight" : "30",
-          "settings" : {
-            "fields" : { "title" : true, "content" : true },
-            "file" : "",
-            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc"
-          }
-        },
-        "search_api_highlighting" : {
-          "status" : 1,
-          "weight" : "35",
-          "settings" : {
-            "prefix" : "\\u003Cstrong\\u003E",
-            "suffix" : "\\u003C\\/strong\\u003E",
-            "excerpt" : 1,
-            "excerpt_length" : "256",
-            "highlight" : "always"
-          }
-        }
-      }
-    },
-    "enabled" : "1",
-    "read_only" : "0"
-  }');
   $items['site_general_search'] = entity_import('search_api_index', '{
     "name" : "Site General Search",
     "machine_name" : "site_general_search",
@@ -385,11 +314,11 @@ function uclalib_search_default_search_api_server() {
       "clean_ids" : true,
       "scheme" : "http",
       "host" : "localhost",
-      "port" : "8983",
+      "port" : "8080",
       "path" : "\\/solr\\/uclalibdev",
       "http_user" : "",
       "http_pass" : "",
-      "excerpt" : 1,
+      "excerpt" : 0,
       "retrieve_data" : 0,
       "highlight_data" : 0,
       "http_method" : "AUTO"
