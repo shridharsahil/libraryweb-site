@@ -30,7 +30,7 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -96,7 +96,7 @@ function uclalib_exhibition_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Indexed Node: Exhibition End Date */
+  /* Field: Indexed Content: Exhibition End Date */
   $handler->display->display_options['fields']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['fields']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_exhibition_end']['field'] = 'field_exhibition_end';
@@ -111,7 +111,7 @@ function uclalib_exhibition_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -119,7 +119,7 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: The main body text */
+  /* Field: Indexed Content: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -139,18 +139,18 @@ function uclalib_exhibition_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
 <div><p>[body]</p></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Indexed Node: Exhibition End Date */
+  /* Sort criterion: Indexed Content: Exhibition End Date */
   $handler->display->display_options['sorts']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['sorts']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['field_exhibition_end']['field'] = 'field_exhibition_end';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'exhibition' => 'exhibition',
   );
-  /* Filter criterion: Indexed Node: Exhibition Start Date */
+  /* Filter criterion: Indexed Content: Exhibition Start Date */
   $handler->display->display_options['filters']['field_exhibition_start']['id'] = 'field_exhibition_start';
   $handler->display->display_options['filters']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_exhibition_start']['field'] = 'field_exhibition_start';
@@ -166,7 +166,7 @@ function uclalib_exhibition_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Indexed Node: Exhibition End Date */
+  /* Filter criterion: Indexed Content: Exhibition End Date */
   $handler->display->display_options['filters']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['filters']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_exhibition_end']['field'] = 'field_exhibition_end';
