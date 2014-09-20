@@ -129,6 +129,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'access media browser',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'media',
   );
@@ -437,6 +439,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer media browser',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'media',
   );
@@ -1153,6 +1156,16 @@ function uclalib_users_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer redirects'.
+  $permissions['administer redirects'] = array(
+    'name' => 'administer redirects',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'redirect',
+  );
+
   // Exported permission: 'administer search_api'.
   $permissions['administer search_api'] = array(
     'name' => 'administer search_api',
@@ -1438,6 +1451,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -1587,6 +1602,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -1617,6 +1634,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -1821,6 +1840,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -1840,6 +1861,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2098,6 +2121,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'download any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2107,6 +2132,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'download any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2134,6 +2161,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'download own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2143,6 +2172,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'download own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2191,6 +2222,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2221,6 +2254,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2447,6 +2482,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -2466,6 +2503,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -3282,6 +3321,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'view own files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -3291,6 +3332,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -3322,6 +3365,8 @@ function uclalib_users_user_default_permissions() {
     'name' => 'view private files',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
