@@ -14,7 +14,7 @@ function uclalib_analytics_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'googleanalytics_account';
-  $strongarm->value = 'UA-54679101-1';
+  $strongarm->value = 'UA-32672693-1';
   $export['googleanalytics_account'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -283,6 +283,8 @@ user/*/*';
     3 => 0,
     4 => 0,
     5 => 0,
+    6 => 0,
+    7 => 0,
   );
   $export['googleanalytics_roles'] = $strongarm;
 
