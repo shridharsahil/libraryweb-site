@@ -891,8 +891,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'journals',
     'view_mode' => 'default',
     'created' => 1398722406,
-    'log' => 'updated links',
-    'uid' => 0,
+    'log' => 'description',
+    'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '106e9ea0-ca4e-4c3c-9350-1e6bf3691027',
@@ -987,7 +987,13 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
         4 => array(
           'field_link_description' => array(
-            'und' => array(),
+            'und' => array(
+              0 => array(
+                'value' => '- locate the article from your citation',
+                'format' => NULL,
+                'safe_value' => '- locate the article from your citation',
+              ),
+            ),
           ),
           'field_link_link' => array(
             'und' => array(
