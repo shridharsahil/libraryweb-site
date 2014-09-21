@@ -16,11 +16,9 @@ class uclalib_opening_hours_field_opening_hours_today extends views_handler_fiel
       ->fetchAssoc();
 
     if (isset($result['start_time']) && isset($result['end_time'])) {
-      $hours =
-      _uclalib_opening_hours_short_time($result['start_time'])
-      . '-' .
-      _uclalib_opening_hours_short_time($result['end_time']);
-
+      $start_time = _uclalib_opening_hours_short_time($result['start_time']);
+      $end_time = _uclalib_opening_hours_short_time($result['end_time']);
+      $hours = _uclalib_opening_hours_combine_start_end_times($start_time, $end_time);
       return $hours;
     }
 
