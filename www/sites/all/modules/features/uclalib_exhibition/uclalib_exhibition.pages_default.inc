@@ -72,9 +72,9 @@ function uclalib_exhibition_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = 'UCLA Library Exhibitions';
+  $display->title = 'UCLA Library Exhibits';
   $display->uuid = 'a3deb7d5-075d-4c7d-adba-059eef82040e';
-  $display->window_title = '%node:title | UCLA Library Exhibitions';
+  $display->window_title = '%node:title | UCLA Library Exhibits';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -250,6 +250,37 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->uuid = '1e30ec1b-9c91-4edc-bc6f-10858150d48e';
     $display->content['new-1e30ec1b-9c91-4edc-bc6f-10858150d48e'] = $pane;
     $display->panels['bottom_left'][5] = 'new-1e30ec1b-9c91-4edc-bc6f-10858150d48e';
+    $pane = new stdClass();
+    $pane->pid = 'new-3653044b-d513-41ea-90bf-7fc50ff81cac';
+    $pane->panel = 'bottom_left';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_event_location';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'entityreference_label',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'link' => 0,
+      ),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $pane->uuid = '3653044b-d513-41ea-90bf-7fc50ff81cac';
+    $display->content['new-3653044b-d513-41ea-90bf-7fc50ff81cac'] = $pane;
+    $display->panels['bottom_left'][6] = 'new-3653044b-d513-41ea-90bf-7fc50ff81cac';
     $pane = new stdClass();
     $pane->pid = 'new-7ca74cc1-ce48-4ae7-a16a-ae13f5486d2b';
     $pane->panel = 'bottom_right';
