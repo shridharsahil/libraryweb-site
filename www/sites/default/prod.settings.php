@@ -5,7 +5,7 @@
 require_once('prod.settings-db.php');
 
 // Memcache settings
-$conf['cache_backends'][] = 'sites/all/modules/memcache/memcache.inc';
+$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
 $conf['cache_default_class'] = 'MemCacheDrupal';
 
 $conf['memcache_servers'] = array(
