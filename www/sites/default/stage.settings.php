@@ -4,6 +4,14 @@
 // Get database info from file which is excluded from repo
 require_once('stage.settings-db.php');
 
+// Memcache settings
+$conf['cache_backends'][] = 'sites/all/modules/memcache/memcache.inc';
+$conf['cache_default_class'] = 'MemCacheDrupal';
+
+$conf['memcache_servers'] = array(
+  'stage-memcached.library.ucla.edu:11211' => 'default',
+);
+
 // Tell Drupal that we are behind a reverse proxy server
 //$conf['reverse_proxy'] = TRUE;
 
