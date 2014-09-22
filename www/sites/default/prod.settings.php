@@ -23,7 +23,7 @@ $conf['memcache_servers'] = array(
 // Solr settings
 $conf['search_api_solr_overrides'] = array(
   'uclalib_solr_server' => array(
-    'name' => t('Solr Server (UCLA Stage)'),
+    'name' => t('Solr Server (UCLA Production)'),
     'options' => array(
       'host' => 'temp-solrsearch.library.ucla.edu',
       'port' => '80',
