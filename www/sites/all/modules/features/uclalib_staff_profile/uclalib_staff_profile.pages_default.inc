@@ -288,9 +288,8 @@ function uclalib_staff_profile_default_page_manager_pages() {
       'body' => '<h2>
 	Search by Library Department</h2>
 <div class="more-link">
-	<a href="/locations">Search all Locations</a>&nbsp;<br />
-	<br />
-	(build link to list of departments in alpha order.)</div>
+	<a href="/staff">Search all Departments</a>&nbsp;<br>
+	</div>
 ',
       'format' => 'full_html',
       'substitute' => TRUE,
