@@ -569,9 +569,6 @@ $env_include = array(
   'uclalib.stage.gobsp.com' => 'stage.settings.php',
   'uclalib.local' => 'local.settings.php',
   // UCLA domains and settings: top-level (varnish) and individual webheads
-  'new-test.library.ucla.edu' => 'test.settings.php',
-  'new-test1.library.ucla.edu' => 'test.settings.php',
-  'new-test2.library.ucla.edu' => 'test.settings.php',
   'www-test.library.ucla.edu' => 'test.settings.php',
   'www-test1.library.ucla.edu' => 'test.settings.php',
   'www-test2.library.ucla.edu' => 'test.settings.php',
