@@ -10,6 +10,17 @@
 function uclalib_users_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access administration pages'.
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: 'access advanced_link autocomplete'.
   $permissions['access advanced_link autocomplete'] = array(
     'name' => 'access advanced_link autocomplete',
@@ -68,6 +79,16 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
+  );
+
+  // Exported permission: 'access broken links report'.
+  $permissions['access broken links report'] = array(
+    'name' => 'access broken links report',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
   );
 
   // Exported permission: 'access comments'.
@@ -148,6 +169,16 @@ function uclalib_users_user_default_permissions() {
     'module' => 'navbar',
   );
 
+  // Exported permission: 'access own broken links report'.
+  $permissions['access own broken links report'] = array(
+    'name' => 'access own broken links report',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'access own webform results'.
   $permissions['access own webform results'] = array(
     'name' => 'access own webform results',
@@ -170,6 +201,25 @@ function uclalib_users_user_default_permissions() {
     'module' => 'webform',
   );
 
+  // Exported permission: 'access site in maintenance mode'.
+  $permissions['access site in maintenance mode'] = array(
+    'name' => 'access site in maintenance mode',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access site reports'.
+  $permissions['access site reports'] = array(
+    'name' => 'access site reports',
+    'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
@@ -179,6 +229,15 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'administer actions'.
+  $permissions['administer actions'] = array(
+    'name' => 'administer actions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
   );
 
   // Exported permission: 'administer advanced pane settings'.
@@ -416,6 +475,16 @@ function uclalib_users_user_default_permissions() {
     'module' => 'image',
   );
 
+  // Exported permission: 'administer linkchecker'.
+  $permissions['administer linkchecker'] = array(
+    'name' => 'administer linkchecker',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'administer linkit'.
   $permissions['administer linkit'] = array(
     'name' => 'administer linkit',
@@ -462,6 +531,15 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'panels_mini',
+  );
+
+  // Exported permission: 'administer modules'.
+  $permissions['administer modules'] = array(
+    'name' => 'administer modules',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
   );
 
   // Exported permission: 'administer multifield'.
@@ -1193,6 +1271,24 @@ function uclalib_users_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'administer site configuration'.
+  $permissions['administer site configuration'] = array(
+    'name' => 'administer site configuration',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer software updates'.
+  $permissions['administer software updates'] = array(
+    'name' => 'administer software updates',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
@@ -1201,6 +1297,15 @@ function uclalib_users_user_default_permissions() {
       'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'administer themes'.
+  $permissions['administer themes'] = array(
+    'name' => 'administer themes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
   );
 
   // Exported permission: 'administer tipsy'.
@@ -1257,6 +1362,15 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'xmlsitemap',
+  );
+
+  // Exported permission: 'block IP addresses'.
+  $permissions['block IP addresses'] = array(
+    'name' => 'block IP addresses',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
   );
 
   // Exported permission: 'bypass file access'.
@@ -2436,6 +2550,16 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit link settings'.
+  $permissions['edit link settings'] = array(
+    'name' => 'edit link settings',
+    'roles' => array(
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'edit opening hours for content'.
   $permissions['edit opening hours for content'] = array(
     'name' => 'edit opening hours for content',
@@ -3380,6 +3504,19 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'view the administration theme'.
+  $permissions['view the administration theme'] = array(
+    'name' => 'view the administration theme',
+    'roles' => array(
+      'admin_dev' => 'admin_dev',
+      'admin_ga' => 'admin_ga',
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'system',
   );
 
   return $permissions;
