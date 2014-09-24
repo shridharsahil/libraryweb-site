@@ -163,8 +163,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'quick-links---search-and-researc',
     'view_mode' => 'default',
     'created' => 1398969197,
-    'log' => 'added appropriate use link',
-    'uid' => 60,
+    'log' => 'links',
+    'uid' => 77,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '95745709-2104-4d2c-b237-8139836f3008',
@@ -178,7 +178,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/support/research-help',
+                'url' => 'support/research-help',
                 'title' => 'Research Help',
                 'attributes' => array(
                   'target' => 0,
@@ -198,7 +198,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/use/access-privileges/connect-campus',
+                'url' => 'use/computers-computing-services/connect-campus',
                 'title' => 'Connect from off-campus',
                 'attributes' => array(
                   'target' => 0,
@@ -218,7 +218,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/interlibrary-loan-ill',
+                'url' => 'use/borrow-renew-return/interlibrary-loan-document-delivery',
                 'title' => 'Interlibrary Loans',
                 'attributes' => array(
                   'target' => 0,
@@ -238,7 +238,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/borrow-renew-return/course-reserves',
+                'url' => 'use/borrow-renew-return/course-reserves',
                 'title' => 'Course Reserves',
                 'attributes' => array(
                   'target' => 0,
@@ -258,7 +258,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/content/suggest-purchase',
+                'url' => 'about/collections/suggest-purchase',
                 'title' => 'Suggest a purchase',
                 'attributes' => array(
                   'target' => 0,
@@ -278,7 +278,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/node/1425/',
+                'url' => 'support/publishing-data-management/scholarly-communication-resources-education/ucla-library-copyright-policies/appropriate-use-licensed-electronic-resources',
                 'title' => 'Appropriate Use of Licensed Electronic Resources',
                 'attributes' => array(
                   'target' => 0,
@@ -569,8 +569,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'books--more',
     'view_mode' => 'default',
     'created' => 1398722227,
-    'log' => 'updated links',
-    'uid' => 0,
+    'log' => 'link',
+    'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '874ead3d-654f-41b6-8500-0f6ca7be6009',
@@ -593,7 +593,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://catalog.library.ucla.edu',
                 'title' => 'UCLA Library Catalog',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -642,7 +642,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://ucla.worldcat.org',
+                'url' => 'http://firstsearch.oclc.org/fsip?dbname=WorldCat',
                 'title' => 'Worldcat',
                 'attributes' => array(
                   'target' => '_blank',
@@ -662,7 +662,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.cdlib.org/services/d2d/ucelinks/',
+                'url' => 'http://ucelinks.cdlib.org:8888/sfx_ucla/az',
                 'title' => 'Find e-journals',
                 'attributes' => array(
                   'target' => 0,
@@ -685,7 +685,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/ebooks',
                 'title' => 'E-books',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -702,7 +702,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '#',
+                'url' => '/node/1501',
                 'title' => 'New Books',
                 'attributes' => array(
                   'target' => 0,
@@ -713,7 +713,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_icon' => array(
             'und' => array(),
           ),
-          'id' => 107,
+          'id' => 249,
         ),
         6 => array(
           'field_link_description' => array(
@@ -733,7 +733,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_icon' => array(
             'und' => array(),
           ),
-          'id' => 206,
+          'id' => 107,
         ),
       ),
     ),
@@ -749,8 +749,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'images-audio-video',
     'view_mode' => 'default',
     'created' => 1398722604,
-    'log' => 'link name',
-    'uid' => 77,
+    'log' => 'links',
+    'uid' => 40,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '2afc053b-5a2b-4353-aab8-c794ed39fb37',
@@ -784,10 +784,10 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://www.oac.cdlib.org/about/',
+                'url' => 'http://www.oac.cdlib.org/institutions/UCLA',
                 'title' => 'Online Archive of California',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -807,7 +807,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://digital2.library.ucla.edu/',
                 'title' => 'UCLA Library Digital Collections',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -827,7 +827,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/primary-sources',
                 'title' => 'Subject Guides for Primary Sources',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
