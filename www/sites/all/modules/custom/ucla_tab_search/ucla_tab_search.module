@@ -232,9 +232,9 @@ can be changed via a pulldown search limit on the results screen. Many records c
 
   
   ////////////////////////////////////////////////////////////////////////////////
-  // Database's tab.
-  // Database's tab.
-  // Database's tab.
+  // Databases tab.
+  // Databases tab.
+  // Databases tab.
   $form['databases'] = array(
     '#title' => t('Databases'),
   ) + $fieldset_default;
@@ -287,7 +287,7 @@ can be changed via a pulldown search limit on the results screen. Many records c
     $form['databases']['databases_container_mel']['description'] = array(
         '#markup' => t('
 
-<strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="use/access-privileges/connect-campus">off-campus access</a> if not being accessed from on campus. 
+<strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="use/computers-computing-services/connect-campus">off-campus access</a> if not being accessed from on campus. 
 If you do not find the database you are seeking, try searching the <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> or <a href="http://guides.library.ucla.edu">Research Guides</a>.
 <p>
 <strong>Other Search Options</strong></br>

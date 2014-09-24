@@ -1,0 +1,7 @@
+name = UCLALIB LinkChecker
+description = Link checker module and configuration
+core = 7.x
+package = UCLALIB
+dependencies[] = features
+dependencies[] = linkchecker
+features[features_api][] = api:2
