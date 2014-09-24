@@ -3,16 +3,16 @@
 /**
  * Implements hook_menu().
  */
-function ucladr_helper_menu() {
+function ucla_data_registry_helper_menu() {
   $items['app/data-registry'] = array(
-    'page callback' => 'ucladr_helper_page',
+    'page callback' => 'ucla_data_registry_helper_page',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
   return $items;
 }
 
-function ucladr_helper_page() {
+function ucla_data_registry_helper_page() {
   $GLOBALS['conf']['cache'] = FALSE; // keep pages out of cache for Shibboleth to work
   $shib_logout = variable_get('shib_auth_full_logout_url');
 
