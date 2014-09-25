@@ -32,7 +32,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -41,7 +41,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['separator'] = '';
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -114,7 +114,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No results found for this search.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_location_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -123,14 +123,14 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['separator'] = '';
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_location_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Sort criterion: Indexed Node: Queue position */
+  /* Sort criterion: Indexed Content: Queue position */
   $handler->display->display_options['sorts']['queue_position']['id'] = 'queue_position';
   $handler->display->display_options['sorts']['queue_position']['table'] = 'search_api_index_location_search';
   $handler->display->display_options['sorts']['queue_position']['field'] = 'queue_position';
@@ -217,7 +217,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = '<span class="location-closed">Closed</span>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_location_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -227,7 +227,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['separator'] = '';
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Node: Node ID */
+  /* Contextual filter: Indexed Content: Node ID */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'search_api_index_location_search';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -288,7 +288,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No results found for this search.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -296,7 +296,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Exhibition Thumbnail */
+  /* Field: Indexed Content: Exhibition Thumbnail */
   $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
   $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
@@ -307,7 +307,7 @@ function uclalib_search_views_default_views() {
     'image_style' => 'thumbnail_small',
     'image_link' => 'content',
   );
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -332,12 +332,12 @@ function uclalib_search_views_default_views() {
 <div><p>[body_summary]</p></div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Indexed Node: Date created */
+  /* Sort criterion: Indexed Content: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -397,7 +397,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'clearfix';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Indexed Node: Staff Image Thumbnail */
+  /* Field: Indexed Content: Staff Image Thumbnail */
   $handler->display->display_options['fields']['field_staff_image_thumbnail']['id'] = 'field_staff_image_thumbnail';
   $handler->display->display_options['fields']['field_staff_image_thumbnail']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_staff_image_thumbnail']['field'] = 'field_staff_image_thumbnail';
@@ -408,7 +408,7 @@ function uclalib_search_views_default_views() {
     'image_style' => 'thumbnail',
     'image_link' => 'content',
   );
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -416,14 +416,14 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Staff First Name */
+  /* Field: Indexed Content: Staff First Name */
   $handler->display->display_options['fields']['field_staff_first_name']['id'] = 'field_staff_first_name';
   $handler->display->display_options['fields']['field_staff_first_name']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_staff_first_name']['field'] = 'field_staff_first_name';
   $handler->display->display_options['fields']['field_staff_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_staff_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_staff_first_name']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Staff Last Name */
+  /* Field: Indexed Content: Staff Last Name */
   $handler->display->display_options['fields']['field_staff_last_name']['id'] = 'field_staff_last_name';
   $handler->display->display_options['fields']['field_staff_last_name']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_staff_last_name']['field'] = 'field_staff_last_name';
@@ -431,13 +431,13 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_last_name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_staff_last_name']['alter']['text'] = '[field_staff_first_name] [field_staff_last_name]';
   $handler->display->display_options['fields']['field_staff_last_name']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Staff Job Title */
+  /* Field: Indexed Content: Staff Job Title */
   $handler->display->display_options['fields']['field_staff_job_title']['id'] = 'field_staff_job_title';
   $handler->display->display_options['fields']['field_staff_job_title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_staff_job_title']['field'] = 'field_staff_job_title';
   $handler->display->display_options['fields']['field_staff_job_title']['label'] = '';
   $handler->display->display_options['fields']['field_staff_job_title']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Staff Subject Areas */
+  /* Field: Indexed Content: Staff Subject Areas */
   $handler->display->display_options['fields']['field_staff_subject_areas']['id'] = 'field_staff_subject_areas';
   $handler->display->display_options['fields']['field_staff_subject_areas']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_staff_subject_areas']['field'] = 'field_staff_subject_areas';
@@ -449,14 +449,14 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_subject_areas']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_staff_subject_areas']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_staff_subject_areas']['bypass_access'] = 0;
-  /* Field: Indexed Node: Staff Email */
+  /* Field: Indexed Content: Staff Email */
   $handler->display->display_options['fields']['field_staff_email']['id'] = 'field_staff_email';
   $handler->display->display_options['fields']['field_staff_email']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
   $handler->display->display_options['fields']['field_staff_email']['label'] = '';
   $handler->display->display_options['fields']['field_staff_email']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_staff_email']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Staff Phone */
+  /* Field: Indexed Content: Staff Phone */
   $handler->display->display_options['fields']['field_staff_phone']['id'] = 'field_staff_phone';
   $handler->display->display_options['fields']['field_staff_phone']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_staff_phone']['field'] = 'field_staff_phone';
@@ -466,11 +466,11 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_phone']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_staff_phone']['empty'] = '[field_staff_email]';
   $handler->display->display_options['fields']['field_staff_phone']['hide_alter_empty'] = FALSE;
-  /* Sort criterion: Indexed Node: Staff Alpha */
+  /* Sort criterion: Indexed Content: Staff Alpha */
   $handler->display->display_options['sorts']['field_staff_glossary_index']['id'] = 'field_staff_glossary_index';
   $handler->display->display_options['sorts']['field_staff_glossary_index']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['field_staff_glossary_index']['field'] = 'field_staff_glossary_index';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -492,7 +492,7 @@ function uclalib_search_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Indexed Node: Staff Subject Librarian */
+  /* Filter criterion: Indexed Content: Staff Subject Librarian */
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['id'] = 'field_staff_is_subject_librarian';
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['field'] = 'field_staff_is_subject_librarian';
@@ -511,7 +511,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -519,7 +519,7 @@ function uclalib_search_views_default_views() {
     'staff_profile' => 'staff_profile',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Staff Subject Librarian */
+  /* Filter criterion: Indexed Content: Staff Subject Librarian */
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['id'] = 'field_staff_is_subject_librarian';
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['field'] = 'field_staff_is_subject_librarian';
