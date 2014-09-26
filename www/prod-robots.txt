@@ -57,3 +57,5 @@ Disallow: /?q=user/password/
 Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
+# Sitemaps
+Sitemap: http://www.library.ucla.edu/sitemap.xml
