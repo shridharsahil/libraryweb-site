@@ -382,15 +382,15 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
 
 
   ////////////////////////////////////////////////////////////////////////////////
-  // Guides's tab.
-  // Guides's tab.
-  // Guides's tab.
+  // Research Guides tab.
+  // Research Guides tab.
+  // Research Guides tab.
   $form['guides'] = array(
     '#title' => t('Research Guides'),
   ) + $fieldset_default;
   $form['guides']['text_query'] = $query_textfield;
   $form['guides']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search for course guides, subject guides and useful resources.'),
+    'placeholder' => t('Search for research guides by subject or course (e.g., "Psychology" or "Engineering 183")'),
   );
 
 
@@ -411,7 +411,7 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
     );
 
     $form['guides']['guides_container_mel']['description'] = array(
-        '#markup' => t('<strong>What am I searching?</strong></br>Research Guides created by Library staff.'),
+        '#markup' => t('<strong>What am I searching?</strong></br>Subject and course guides that compile useful databases, digital library collections, and research strategies.'),
     );
 
 
