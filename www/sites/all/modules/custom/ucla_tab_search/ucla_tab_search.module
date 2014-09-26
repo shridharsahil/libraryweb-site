@@ -390,7 +390,7 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
   ) + $fieldset_default;
   $form['guides']['text_query'] = $query_textfield;
   $form['guides']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search for research guides by subject or course (e.g., "Psychology" or "Engineering 183")'),
+    'placeholder' => t('Search by subject or course (e.g., "Psychology" or "Engineering 183")'),
   );
 
 
@@ -411,7 +411,20 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
     );
 
     $form['guides']['guides_container_mel']['description'] = array(
-        '#markup' => t('<strong>What am I searching?</strong></br>Subject and course guides that compile useful databases, digital library collections, and research strategies.'),
+        '#markup' => t('
+	    <p><strong>What am I searching?</strong></p>
+	    <p>Subject and course guides that compile useful databases, digital library collections, and research strategies.</p>
+	    Featured Research Guides:
+	    <ul>
+	      <li><a href="http://guides.library.ucla.edu/nursing">Nursing</a></li>
+	      <li><a href="http://guides.library.ucla.edu/film">Film and Television</a></li>
+	      <li><a href="http://guides.library.ucla.edu/maps">Maps, Atlases, Aerial Images, and Cartographic Resources</a></li>
+	      <li><a href="http://guides.library.ucla.edu/psychology">Psychology</a></li>
+	      <li><a href="http://guides.library.ucla.edu/citing">Citing Sources</a></li>
+	      <li><a href="http://guides.library.ucla.edu/start">Getting Started: Information Research Tips</a></li>
+	    </ul>
+	    <a href="http://guides.library.ucla.edu/">Browse All Research Guides</a>
+	'),
     );
 
 
