@@ -31,6 +31,7 @@ stylesheets[all][] = css/uclalib-omega.no-query.css
 ; ========================================
 scripts[] = js/uclalib-omega.behaviors.js
 scripts[] = js/qualaroo.js
+scripts[] = js/libsurvey.js
 
 ; ========================================
 ; Plugins
