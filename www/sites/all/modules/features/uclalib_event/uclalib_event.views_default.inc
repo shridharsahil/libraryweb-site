@@ -110,7 +110,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No events match the search criteria. Use the browser back button to return to search.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -239,7 +239,7 @@ function uclalib_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Indexed Node: Event Date */
+  /* Field: Indexed Content: Event Date */
   $handler->display->display_options['fields']['field_event_date_3']['id'] = 'field_event_date_3';
   $handler->display->display_options['fields']['field_event_date_3']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['field_event_date_3']['field'] = 'field_event_date';
@@ -255,7 +255,7 @@ function uclalib_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -263,7 +263,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: The main body text */
+  /* Field: Indexed Content: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -284,11 +284,11 @@ function uclalib_event_views_default_views() {
 <div><p>[body]</p></div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Indexed Node: Event Date */
+  /* Sort criterion: Indexed Content: Event Date */
   $handler->display->display_options['sorts']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['sorts']['field_event_date']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['field_event_date']['field'] = 'field_event_date';
-  /* Sort criterion: Indexed Node: Exhibition Start Date */
+  /* Sort criterion: Indexed Content: Exhibition Start Date */
   $handler->display->display_options['sorts']['field_exhibition_start']['id'] = 'field_exhibition_start';
   $handler->display->display_options['sorts']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['sorts']['field_exhibition_start']['field'] = 'field_exhibition_start';
@@ -297,28 +297,28 @@ function uclalib_event_views_default_views() {
     1 => 'AND',
     2 => 'AND',
   );
-  /* Filter criterion: Indexed Node: Event Date */
+  /* Filter criterion: Indexed Content: Event Date */
   $handler->display->display_options['filters']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['filters']['field_event_date']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_event_date']['field'] = 'field_event_date';
   $handler->display->display_options['filters']['field_event_date']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date']['value'] = '2014-01-01';
   $handler->display->display_options['filters']['field_event_date']['group'] = 1;
-  /* Filter criterion: Indexed Node: Event Date */
+  /* Filter criterion: Indexed Content: Event Date */
   $handler->display->display_options['filters']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['filters']['field_event_date_1']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_event_date_1']['field'] = 'field_event_date';
   $handler->display->display_options['filters']['field_event_date_1']['operator'] = '<=';
   $handler->display->display_options['filters']['field_event_date_1']['value'] = '2015-01-01';
   $handler->display->display_options['filters']['field_event_date_1']['group'] = 1;
-  /* Filter criterion: Indexed Node: Exhibition Start Date */
+  /* Filter criterion: Indexed Content: Exhibition Start Date */
   $handler->display->display_options['filters']['field_exhibition_start']['id'] = 'field_exhibition_start';
   $handler->display->display_options['filters']['field_exhibition_start']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_exhibition_start']['field'] = 'field_exhibition_start';
   $handler->display->display_options['filters']['field_exhibition_start']['operator'] = '<=';
   $handler->display->display_options['filters']['field_exhibition_start']['value'] = 'now + 14 days';
   $handler->display->display_options['filters']['field_exhibition_start']['group'] = 2;
-  /* Filter criterion: Indexed Node: Exhibition End Date */
+  /* Filter criterion: Indexed Content: Exhibition End Date */
   $handler->display->display_options['filters']['field_exhibition_end']['id'] = 'field_exhibition_end';
   $handler->display->display_options['filters']['field_exhibition_end']['table'] = 'search_api_index_site_general_search';
   $handler->display->display_options['filters']['field_exhibition_end']['field'] = 'field_exhibition_end';
@@ -641,15 +641,18 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Event Date */
+  /* Field: Content: Event Date (New) */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['ui_name'] = 'Content: Event Date (New)';
   $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
   $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['text'] = ' - [field_event_date_1] ';
   $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
-    'format_type' => 'time_12hr_',
+    'format_type' => 'bsp_event_cal_time',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -661,7 +664,6 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['label'] = '';
   $handler->display->display_options['fields']['field_event_location']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_location']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '[field_event_location] - ';
   $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_location']['hide_alter_empty'] = FALSE;
@@ -675,7 +677,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
-<div><i>[field_event_location][field_event_date_1]</i></div>';
+<div><i>[field_event_location] [field_event_date_1] </i></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Event Date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';

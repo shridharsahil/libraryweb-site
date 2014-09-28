@@ -481,7 +481,7 @@ function uclalib_search_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => array(
-        'pane_collapsed' => 0,
+        'pane_collapsed' => 1,
       ),
       'style' => 'collapsible',
     );
@@ -509,7 +509,7 @@ function uclalib_search_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => array(
-        'pane_collapsed' => 0,
+        'pane_collapsed' => 1,
       ),
       'style' => 'collapsible',
     );

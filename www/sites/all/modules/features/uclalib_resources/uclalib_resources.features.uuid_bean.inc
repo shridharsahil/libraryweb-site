@@ -21,7 +21,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'articles',
     'view_mode' => 'default',
     'created' => 1398722666,
-    'log' => 'unitdev to unitproj',
+    'log' => 'links opening in new window for external sites',
     'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
@@ -79,7 +79,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/atoz',
                 'title' => 'A-Z List of Databases',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -99,7 +99,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/searchtags.php?iid=261&gid=0&tag=data',
                 'title' => 'Data and Statistics',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -119,7 +119,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'https://escholarship.org/',
                 'title' => 'UC eScholarship Repository',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -139,7 +139,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/content.php?pid=224004',
                 'title' => 'Searching a Database',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -305,7 +305,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'popular-databases',
     'view_mode' => 'default',
     'created' => 1398722734,
-    'log' => 'added library apps',
+    'log' => 'links opening in new window for external sites',
     'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
@@ -323,7 +323,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu',
                 'title' => 'UCLA Library Research Guides',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -343,7 +343,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/searchtags.php?iid=261&gid=0&tag=citation',
                 'title' => 'Citing and Citation Management',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -363,7 +363,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'node/647',
                 'title' => 'Data Management and Curation',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -383,7 +383,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/impact',
                 'title' => 'Impact Metrics',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -403,7 +403,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/advice-guides',
                 'title' => 'More Research Advice and Tools',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -447,8 +447,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'databases',
     'view_mode' => 'default',
     'created' => 1398722354,
-    'log' => 'link name',
-    'uid' => 77,
+    'log' => 'links opening in new window for external sites',
+    'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '6af3ea98-f8b9-4531-be52-394394cc5553',
@@ -465,7 +465,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/images',
                 'title' => 'Images',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -485,7 +485,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/recordings',
                 'title' => 'Audio (Music Recordings)',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -505,7 +505,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://www.oid.ucla.edu/edtech/mediacollection/info',
                 'title' => 'Instructional Media Collections and Services',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -525,7 +525,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'https://www.cinema.ucla.edu/',
                 'title' => 'UCLA Film & Television Archive',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -545,7 +545,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/videocollections',
                 'title' => 'More Video Collections',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -749,8 +749,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'images-audio-video',
     'view_mode' => 'default',
     'created' => 1398722604,
-    'log' => 'links',
-    'uid' => 40,
+    'log' => 'links opening in new window for external sites',
+    'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '2afc053b-5a2b-4353-aab8-c794ed39fb37',
@@ -867,7 +867,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/searchtags.php?iid=261&gid=0&tag=data',
                 'title' => 'Data and Statistics',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -891,7 +891,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'journals',
     'view_mode' => 'default',
     'created' => 1398722406,
-    'log' => 'description',
+    'log' => 'links opening in new window for external sites',
     'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
@@ -915,7 +915,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => '',
                 'title' => 'Articles are indexed in many databases. No single database covers all journals.',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -935,7 +935,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://search.ebscohost.com/login.aspx?authtype=ip,uid&profile=ehost&defaultdb=a9h',
                 'title' => 'Academic Search Complete',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -955,7 +955,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://www.jstor.org/',
                 'title' => 'JSTOR',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -975,7 +975,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://apps.webofknowledge.com/WOS_GeneralSearch_input.do?last_prod=WOS&product=WOS&highlighted_tab=WOS&search_mode=GeneralSearch',
                 'title' => 'Web of Science',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -1001,7 +1001,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi',
                 'title' => 'UC-eLinks: Citation Linker',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -1021,7 +1021,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/news',
                 'title' => 'Newspaper Articles',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),
@@ -1041,7 +1041,7 @@ function uclalib_resources_uuid_features_default_beans() {
                 'url' => 'http://guides.library.ucla.edu/databases/multiple',
                 'title' => 'Search Multiple Databases at Once',
                 'attributes' => array(
-                  'target' => 0,
+                  'target' => '_blank',
                 ),
               ),
             ),

@@ -127,7 +127,7 @@ $form['books']['ucla_catalog_search_index'] = array(
 California (UC) campuses, and libraries worldwide. This search is limited to University of California Libraries, but
 can be changed via a pulldown search limit on the results screen. Many records contain links to full-text articles from
 <a href="http://ucla.worldcat.org/advancedsearch"> selected databases. </a>
-<p><p>Need more help? Browse our <a href="http://guides.library.ucla.edu/">Subject Guides</a>'),
+<p><p>Need more help? Browse our <a href="http://guides.library.ucla.edu/">Research Guides</a>'),
   );
   $form['books']['catalog_container_cat'] = array(
     '#type' => 'container',
@@ -382,15 +382,15 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
 
 
   ////////////////////////////////////////////////////////////////////////////////
-  // Guides's tab.
-  // Guides's tab.
-  // Guides's tab.
+  // Research Guides tab.
+  // Research Guides tab.
+  // Research Guides tab.
   $form['guides'] = array(
     '#title' => t('Research Guides'),
   ) + $fieldset_default;
   $form['guides']['text_query'] = $query_textfield;
   $form['guides']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search for course guides, subject guides and useful resources.'),
+    'placeholder' => t('Search by subject or course (e.g., "Psychology" or "Engineering 183")'),
   );
 
 
@@ -411,7 +411,20 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
     );
 
     $form['guides']['guides_container_mel']['description'] = array(
-        '#markup' => t('<strong>What am I searching?</strong></br>Research Guides created by Library staff.'),
+        '#markup' => t('
+	    <p><strong>What am I searching?</strong></p>
+	    <p>Subject and course guides that compile useful databases, digital library collections, and research strategies.</p>
+	    Featured Research Guides:
+	    <ul>
+	      <li><a href="http://guides.library.ucla.edu/nursing">Nursing</a></li>
+	      <li><a href="http://guides.library.ucla.edu/film">Film and Television</a></li>
+	      <li><a href="http://guides.library.ucla.edu/maps">Maps, Atlases, Aerial Images, and Cartographic Resources</a></li>
+	      <li><a href="http://guides.library.ucla.edu/psychology">Psychology</a></li>
+	      <li><a href="http://guides.library.ucla.edu/citing">Citing Sources</a></li>
+	      <li><a href="http://guides.library.ucla.edu/start">Getting Started: Information Research Tips</a></li>
+	    </ul>
+	    <a href="http://guides.library.ucla.edu/">Browse All Research Guides</a>
+	'),
     );
 
 
@@ -596,44 +609,13 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
 	  }
         break;
 
-        case 'journals-dev':
-          $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['journals']['catalog']];
-	    switch ( $maps[$form_state['values']['journals']['catalog']] ) {
-	      case 'J-ALL':
-		foreach ( $form_state['values']['journals']['ucla_tabbed_index_container']['ucla_tabbed_index'] as $tab => $type_choice ) {
-		  // The submit button name is used to decide where we are.
-		  if (empty( $form_state['values']['journals']['ucla_tabbed_index_container']['ucla_tabbed_index']['$tab'] )) {
-		    // Not this tab.
-		    continue;
-		  }
-		}
-		// Put form info into array expected by search logger / handlers
-		$search_info = array (
-		'search_target' => 'melvyl',
-		'search_terms' => $form_state['values']['books']['text_query'],
-		'search_date' => $search_date,
-		'browser_ip' => $browser_ip,
-		'search_form' => 'J-E',
-		);
-	      break;
-	      case 'J-E':
-		// Put form info into array expected by search logger / handlers
-		$search_info = array (
-		'search_target' => 'catalog',
-		'search_terms' => $form_state['values']['books']['text_query'],
-		'search_code' => $form_state['values']['books']['ucla_catalog_search_index'],
-		'search_date' => $search_date,
-		'browser_ip' => $browser_ip,
-		'search_form' => 'J-ALL',
-		);
-	      break;
-	    }
-        break;
-
         case 'edit-journals':
-          $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['journals']['catalog']];
+	  // 2014-09-27 akohler: I have no idea why ucla_form_id is important here but not on all tabs.
+	  // Workaround for OP-439 (undefined index notices): use isset().
+	  if (isset($maps[$form_state['values']['journals']['catalog']])) {
+            $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['journals']['catalog']];
+	  }
 	    switch ( $form_state['values']['journals']['catalog'] ) {
-//	    switch ( $maps[$form_state['values']['journals']['catalog']] ) {
 	      case 'J-ALL':
 		$search_info = array (
 		'search_target' => 'catalog',
