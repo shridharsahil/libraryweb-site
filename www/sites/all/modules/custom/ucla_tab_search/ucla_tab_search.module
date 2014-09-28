@@ -127,7 +127,7 @@ $form['books']['ucla_catalog_search_index'] = array(
 California (UC) campuses, and libraries worldwide. This search is limited to University of California Libraries, but
 can be changed via a pulldown search limit on the results screen. Many records contain links to full-text articles from
 <a href="http://ucla.worldcat.org/advancedsearch"> selected databases. </a>
-<p><p>Need more help? Browse our <a href="http://guides.library.ucla.edu/">Subject Guides</a>'),
+<p><p>Need more help? Browse our <a href="http://guides.library.ucla.edu/">Research Guides</a>'),
   );
   $form['books']['catalog_container_cat'] = array(
     '#type' => 'container',
