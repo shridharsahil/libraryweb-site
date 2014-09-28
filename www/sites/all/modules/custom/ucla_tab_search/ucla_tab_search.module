@@ -610,9 +610,12 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
         break;
 
         case 'edit-journals':
-          $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['journals']['catalog']];
+	  // 2014-09-27 akohler: I have no idea why ucla_form_id is important here but not on all tabs.
+	  // Workaround for OP-439 (undefined index notices): use isset().
+	  if (isset($maps[$form_state['values']['journals']['catalog']])) {
+            $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['journals']['catalog']];
+	  }
 	    switch ( $form_state['values']['journals']['catalog'] ) {
-//	    switch ( $maps[$form_state['values']['journals']['catalog']] ) {
 	      case 'J-ALL':
 		$search_info = array (
 		'search_target' => 'catalog',
