@@ -609,40 +609,6 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
 	  }
         break;
 
-        case 'journals-dev':
-          $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['journals']['catalog']];
-	    switch ( $maps[$form_state['values']['journals']['catalog']] ) {
-	      case 'J-ALL':
-		foreach ( $form_state['values']['journals']['ucla_tabbed_index_container']['ucla_tabbed_index'] as $tab => $type_choice ) {
-		  // The submit button name is used to decide where we are.
-		  if (empty( $form_state['values']['journals']['ucla_tabbed_index_container']['ucla_tabbed_index']['$tab'] )) {
-		    // Not this tab.
-		    continue;
-		  }
-		}
-		// Put form info into array expected by search logger / handlers
-		$search_info = array (
-		'search_target' => 'melvyl',
-		'search_terms' => $form_state['values']['books']['text_query'],
-		'search_date' => $search_date,
-		'browser_ip' => $browser_ip,
-		'search_form' => 'J-E',
-		);
-	      break;
-	      case 'J-E':
-		// Put form info into array expected by search logger / handlers
-		$search_info = array (
-		'search_target' => 'catalog',
-		'search_terms' => $form_state['values']['books']['text_query'],
-		'search_code' => $form_state['values']['books']['ucla_catalog_search_index'],
-		'search_date' => $search_date,
-		'browser_ip' => $browser_ip,
-		'search_form' => 'J-ALL',
-		);
-	      break;
-	    }
-        break;
-
         case 'edit-journals':
           $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['journals']['catalog']];
 	    switch ( $form_state['values']['journals']['catalog'] ) {
