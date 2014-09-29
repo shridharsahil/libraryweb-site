@@ -213,8 +213,12 @@ function uclalib_opening_hours_generate_table($node, $start = NULL) {
     $day = date_create($start);
   }
   else {
-    // default to this week.
-    $day = date_create('this week');
+    // Default to this week, defined as Monday - Sunday.
+    // Work around PHP bug/behavior where "this week" jumps to *next* Monday, on Sundays.
+    // See https://bugs.php.net/bug.php?id=63740
+    $day = date_create(); // now
+    // Set $day to last Monday, from tomorrow's point of view.
+    $day->setTimestamp(strtotime('last monday', strtotime('tomorrow')));
   }
 
   // Generate a header with the days of the week.
