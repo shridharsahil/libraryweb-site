@@ -438,7 +438,7 @@ function uclalib_event_views_default_views() {
 
   /* Display: Exhibitions Highlight */
   $handler = $view->new_display('panel_pane', 'Exhibitions Highlight', 'exhibition_highlight_pane');
-  $handler->display->display_options['link_url'] = 'news-events/exhibitions';
+  $handler->display->display_options['link_url'] = 'news-events/exhibits';
   $export['exhibitions_highlight'] = $view;
 
   $view = new view();
