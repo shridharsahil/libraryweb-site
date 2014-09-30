@@ -487,9 +487,9 @@ function uclalib_exhibition_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'exhibitions_main_page';
   $page->task = 'page';
-  $page->admin_title = 'Exhibitions Main Page';
+  $page->admin_title = 'Exhibits Main Page';
   $page->admin_description = 'Events Agenda landing page';
-  $page->path = 'news-events/exhibitions';
+  $page->path = 'news-events/exhibits';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
