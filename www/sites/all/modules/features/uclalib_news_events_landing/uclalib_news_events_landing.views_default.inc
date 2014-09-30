@@ -115,7 +115,7 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_end_1']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_end_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['text'] = 'EXHIBITION';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['text'] = 'Exhibits';
   $handler->display->display_options['fields']['field_exhibition_end_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_end_1']['type'] = 'date_plain';
   $handler->display->display_options['fields']['field_exhibition_end_1']['settings'] = array(
