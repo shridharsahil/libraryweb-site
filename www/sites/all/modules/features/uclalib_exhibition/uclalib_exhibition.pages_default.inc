@@ -395,7 +395,7 @@ function uclalib_exhibition_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Back to Exhibitions Breadcrumb',
       'title' => '',
-      'body' => '<p><a href="/news-events/exhibitions">&lt; Exhibits</a></p>
+      'body' => '<p><a href="/news-events/exhibits">&lt; Exhibits</a></p>
 ',
       'format' => 'full_html',
       'substitute' => 1,
