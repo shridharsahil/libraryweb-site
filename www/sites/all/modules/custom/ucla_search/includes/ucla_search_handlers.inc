@@ -44,15 +44,19 @@ function ucla_search_route_search($search_info) {
 
 function ucla_search_catalog($search_info) {
   $target_url = 'http://catalog.library.ucla.edu/vwebv/search?searchArg=';
-  $extra_params = '&searchCode=';
-  if ($search_info['search_code']) {
-    $extra_params .= $search_info['search_code'];
-  } else {
-    $extra_params .= 'GKEY^*';
-  }
-  $extra_params .= '&searchType=1';
-  // Replace space with plus, but do NOT url encode the terms
+  // Replace space with plus, but do NOT url-encode the terms
   $target_url .= str_replace(' ', '+', $search_info['search_terms']);
+  // Start building remaining parameters
+  $extra_params = '&searchCode=';
+  // Default to keyword if none provided
+  $search_code = 'GKEY^*';
+  if ($search_info['search_code']) {
+    $search_code = $search_info['search_code'];
+  }
+  // search_code must be url-encoded
+  $extra_params .= drupal_encode_path($search_code);
+  // Add remaining parameters needed by catalog
+  $extra_params .= '&searchType=1&page.search.search.button=Search';
   // Extra params must be after the search terms in the URL
   $target_url .= $extra_params;
   drupal_goto($path = $target_url);
