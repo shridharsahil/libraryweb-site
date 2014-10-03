@@ -3,6 +3,11 @@ input[type=text] {
   -webkit-border-radius: 0px;
 }
 
+.form-checkbox + label,
+.form-radio + label {
+  vertical-align: middle;
+}
+
 /* Responsive images */
 img {
   max-width: 100%;
@@ -531,12 +536,11 @@ a[href="#main-content"] {
 }
 .sidebar-search .form-type-textfield {
   margin-left: -13px;
-  margin-right: 17px;
+  margin-right: -13px;
 }
 .sidebar-search .form-text {
-  background: white;
-  border: none;
-  padding: 6px 3px;
+  background: #fff;
+  padding: 3px 6px;
   width: 100%;
 }
 .sidebar-search .views-widget-filter-search_api_views_fulltext,
@@ -556,18 +560,22 @@ a[href="#main-content"] {
   padding: 0;
 }
 .sidebar-search .views-submit-button input {
-  margin: 0 !important;
+  margin: 2px !important;
 }
 .sidebar-search .views-widget-filter-field_staff_is_subject_librarian {
   display: none;
 }
 .sidebar-search .form-submit {
   background: white url(../images/icon-search.png) 50% 55% no-repeat;
-  width: 30px;
+  width: 24px;
   text-indent: -99999em;
   border: none;
-  padding: 6px 6px;
   line-height: normal;
+}
+.sidebar-search .form-submit:hover,
+.sidebar-search .form-submit:active,
+.sidebar-search .form-submit:focus {
+  background-image: url(../images/icon-search-hover.png);
 }
 .sidebar-search .views-reset-button {
   display: none;
