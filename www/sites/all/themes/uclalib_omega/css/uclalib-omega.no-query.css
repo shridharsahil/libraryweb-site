@@ -1172,7 +1172,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399407339');
+  background-image: url('../images/logo-colophon.png?1399382991');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -2379,4 +2379,26 @@ a.more-link,
 }
 .view-find-resources .pane-node-body p {
   margin: 0;
+}
+
+.view-location-image-list table {
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.view-location-image-list td {
+  text-align: center;
+  vertical-align: top;
+  width: 50%;
+}
+.view-location-image-list .views-field-title {
+  max-width: 280px;
+  margin: 10px auto 24px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.views-field-field-location-image a,
+.views-field-field-location-image img {
+  display: inline-block;
 }

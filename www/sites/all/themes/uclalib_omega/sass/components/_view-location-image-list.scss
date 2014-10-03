@@ -1,0 +1,22 @@
+.view-location-image-list {
+  table {
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  td {
+    text-align: center;
+    vertical-align: top;
+    width: 50%;
+  }
+  .views-field-title {
+    max-width: 280px;
+    margin: 10px auto 24px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+.views-field-field-location-image a,
+.views-field-field-location-image img {
+  display: inline-block;
+}
