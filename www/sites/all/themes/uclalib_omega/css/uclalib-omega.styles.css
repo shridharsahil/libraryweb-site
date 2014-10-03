@@ -2163,6 +2163,12 @@ a.more-link,
   margin-bottom: 1em;
 }
 
+img[src="images/down.png"],
+img[src="images/up.png"] {
+  vertical-align: top;
+  margin: 0 4px 0 0;
+}
+
 .cal-exhibition-date {
   min-width: 7em;
 }
