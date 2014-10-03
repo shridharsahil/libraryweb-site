@@ -510,6 +510,10 @@ a[href="#main-content"] {
   margin-top: 0;
 }
 
+.views-exposed-form .captcha-admin-links {
+  display: none;
+}
+
 .contact-links li .field {
   display: table-cell;
   padding-right: 6px;
@@ -575,7 +579,6 @@ a[href="#main-content"] {
   background-image: url(../images/icon-search-hover.png);
 }
 .sidebar-search .views-widget-filter-field_staff_is_subject_librarian,
-.sidebar-search .captcha-admin-links,
 .sidebar-search .views-reset-button {
   display: none;
 }
