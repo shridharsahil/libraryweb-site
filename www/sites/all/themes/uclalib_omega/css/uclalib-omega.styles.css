@@ -827,6 +827,7 @@ a[href="#main-content"] {
   padding-bottom: 16px;
 }
 
+.pane-event-dates,
 .pane-node-field-event-date,
 .pane-exhibition-date-range,
 .pane-news-byline,
@@ -848,6 +849,7 @@ a[href="#main-content"] {
   content: "";
 }
 
+.pane-event-dates,
 .pane-node-field-event-date,
 .pane-exhibition-date-range {
   font-style: italic;
