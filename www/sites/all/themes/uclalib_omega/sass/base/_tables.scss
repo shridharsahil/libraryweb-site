@@ -1,12 +1,12 @@
 table {
   border: 1px solid $border-color;
   border-collapse: separate;
-  border-spacing: 2px; 
+  border-spacing: 2px;
   display: table;
   margin-bottom: 1em;
   padding-left: 1px;
   width: 100%;
-  th, tr.even {
+  tr.even {
     background: #fff;
   }
   tr.odd {
@@ -15,13 +15,39 @@ table {
       background: #fed97e;
     }
   }
+  caption {
+    background-color: $ucla-blue;
+    border: 1px solid $ucla-blue;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.1em;
+  }
   th,
   td {
     padding: 2px 5px;
   }
   th + th,
   td + td {
-    text-align: center;
+   text-align: center;
+  }
+  th {
+    background-color: $border-color;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.1em;
+  }
+  caption,
+  th {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+    }
   }
   td.current-day {
     background: #ffefc4;
@@ -57,5 +83,19 @@ table {
     th, td {
       text-align: center;
     }
+  }
+  p {
+    margin: 0;
+  }
+  p + p {
+    margin-top: 1em;
+  }
+}
+
+table[border="1"] {
+  border-spacing: 0;
+  border-collapse: collapse;
+  td {
+    border: 1px solid $border-color;
   }
 }

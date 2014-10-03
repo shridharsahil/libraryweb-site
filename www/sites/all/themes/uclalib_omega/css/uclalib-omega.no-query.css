@@ -41,7 +41,7 @@ table {
   padding-left: 1px;
   width: 100%;
 }
-table th, table tr.even {
+table tr.even {
   background: #fff;
 }
 table tr.odd {
@@ -50,6 +50,16 @@ table tr.odd {
 table tr.odd .current-day {
   background: #fed97e;
 }
+table caption {
+  background-color: #3283be;
+  border: 1px solid #3283be;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.1em;
+}
 table th,
 table td {
   padding: 2px 5px;
@@ -57,6 +67,23 @@ table td {
 table th + th,
 table td + td {
   text-align: center;
+}
+table th {
+  background-color: #adcde5;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.1em;
+}
+table caption h1,
+table caption h2,
+table caption h3,
+table caption h4,
+table th h1,
+table th h2,
+table th h3,
+table th h4 {
+  margin: 0;
 }
 table td.current-day {
   background: #ffefc4;
@@ -86,6 +113,20 @@ table a.next-week {
 }
 table.opening-hours-week th, table.opening-hours-week td {
   text-align: center;
+}
+table p {
+  margin: 0;
+}
+table p + p {
+  margin-top: 1em;
+}
+
+table[border="1"] {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table[border="1"] td {
+  border: 1px solid #adcde5;
 }
 
 html {
