@@ -42,9 +42,6 @@
       margin: 2px !important;
     }
   }
-  .views-widget-filter-field_staff_is_subject_librarian {
-    display: none;
-  }
   .form-submit {
     background: #fff url(../images/icon-search.png) 50% 55% no-repeat;
     width: 24px;
@@ -57,6 +54,8 @@
   .form-submit:focus {
     background-image: url(../images/icon-search-hover.png);
   }
+  .views-widget-filter-field_staff_is_subject_librarian,
+  .captcha-admin-links,
   .views-reset-button {
     display: none;
   }

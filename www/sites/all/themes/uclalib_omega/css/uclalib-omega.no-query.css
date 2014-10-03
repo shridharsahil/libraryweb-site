@@ -562,9 +562,6 @@ a[href="#main-content"] {
 .sidebar-search .views-submit-button input {
   margin: 2px !important;
 }
-.sidebar-search .views-widget-filter-field_staff_is_subject_librarian {
-  display: none;
-}
 .sidebar-search .form-submit {
   background: white url(../images/icon-search.png) 50% 55% no-repeat;
   width: 24px;
@@ -577,6 +574,8 @@ a[href="#main-content"] {
 .sidebar-search .form-submit:focus {
   background-image: url(../images/icon-search-hover.png);
 }
+.sidebar-search .views-widget-filter-field_staff_is_subject_librarian,
+.sidebar-search .captcha-admin-links,
 .sidebar-search .views-reset-button {
   display: none;
 }
