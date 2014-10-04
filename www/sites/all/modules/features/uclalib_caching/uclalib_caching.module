@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB Caching feature.
+ */
+
+include_once 'uclalib_caching.features.inc';
