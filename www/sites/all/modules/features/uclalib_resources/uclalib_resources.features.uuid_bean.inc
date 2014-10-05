@@ -569,7 +569,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'books--more',
     'view_mode' => 'default',
     'created' => 1398722227,
-    'log' => 'link',
+    'log' => 'added link',
     'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
@@ -735,6 +735,26 @@ function uclalib_resources_uuid_features_default_beans() {
           ),
           'id' => 107,
         ),
+        7 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => '/node/1432',
+                'title' => 'Description of Library Catalogs',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 254,
+        ),
       ),
     ),
   );
@@ -891,7 +911,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'journals',
     'view_mode' => 'default',
     'created' => 1398722406,
-    'log' => 'links opening in new window for external sites',
+    'log' => 'link',
     'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
@@ -1033,15 +1053,21 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
         6 => array(
           'field_link_description' => array(
-            'und' => array(),
+            'und' => array(
+              0 => array(
+                'value' => '- search several databases at once',
+                'format' => NULL,
+                'safe_value' => '- search several databases at once',
+              ),
+            ),
           ),
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://guides.library.ucla.edu/databases/multiple',
-                'title' => 'Search Multiple Databases at Once',
+                'url' => 'https://www.library.ucla.edu/search/articles',
+                'title' => 'Quick Articles',
                 'attributes' => array(
-                  'target' => '_blank',
+                  'target' => 0,
                 ),
               ),
             ),

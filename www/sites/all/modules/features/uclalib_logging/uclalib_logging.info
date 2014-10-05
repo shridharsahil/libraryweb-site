@@ -1,0 +1,13 @@
+name = UCLALIB Logging
+description = Configuration for Drupal logging
+core = 7.x
+package = UCLALIB
+dependencies[] = ctools
+dependencies[] = strongarm
+dependencies[] = syslog_ng
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = syslog_ng_enabled
+features[variable][] = syslog_ng_facility
+features[variable][] = syslog_ng_format
+features[variable][] = syslog_ng_ident

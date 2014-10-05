@@ -100,7 +100,7 @@
 @media (max-width: 816px) {
   .ui-tabs .ui-tabs-panel,
   .pane-bean-upcoming-events {
-    .views-field-field-event-thumbnail + .views-field, 
+    .views-field-field-event-thumbnail + .views-field,
     .views-field {
       padding: 10px 0 10px 7px !important;
     }
@@ -108,6 +108,29 @@
     .views-field-field-exhibition-image,
     .views-field-field-event-thumbnail {
       padding: 4px 0 4px 7px !important;
+    }
+  }
+}
+
+.view-related-events {
+  .view-content {
+    clear: both;
+    overflow: hidden;
+    display: table;
+    width: 100%;
+  }
+  .views-row {
+    display: table-row;
+    &:hover {
+      background: $ucla-lt-gray;
+    }
+  }
+  .views-field {
+    padding: 10px 0 10px 22px;
+    display: table-cell;
+    vertical-align: middle;
+    @media (max-width: 816px) {
+      padding: 4px 0 4px 7px;
     }
   }
 }

@@ -3,6 +3,11 @@ input[type=text] {
   -webkit-border-radius: 0px;
 }
 
+.form-checkbox + label,
+.form-radio + label {
+  vertical-align: middle;
+}
+
 /* Responsive images */
 img {
   max-width: 100%;
@@ -36,7 +41,7 @@ table {
   padding-left: 1px;
   width: 100%;
 }
-table th, table tr.even {
+table tr.even {
   background: #fff;
 }
 table tr.odd {
@@ -45,6 +50,16 @@ table tr.odd {
 table tr.odd .current-day {
   background: #fed97e;
 }
+table caption {
+  background-color: #3283be;
+  border: 1px solid #3283be;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.1em;
+}
 table th,
 table td {
   padding: 2px 5px;
@@ -52,6 +67,23 @@ table td {
 table th + th,
 table td + td {
   text-align: center;
+}
+table th {
+  background-color: #adcde5;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.1em;
+}
+table caption h1,
+table caption h2,
+table caption h3,
+table caption h4,
+table th h1,
+table th h2,
+table th h3,
+table th h4 {
+  margin: 0;
 }
 table td.current-day {
   background: #ffefc4;
@@ -81,6 +113,20 @@ table a.next-week {
 }
 table.opening-hours-week th, table.opening-hours-week td {
   text-align: center;
+}
+table p {
+  margin: 0;
+}
+table p + p {
+  margin-top: 1em;
+}
+
+table[border="1"] {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table[border="1"] td {
+  border: 1px solid #adcde5;
 }
 
 html {
@@ -505,6 +551,10 @@ a[href="#main-content"] {
   margin-top: 0;
 }
 
+.views-exposed-form .captcha-admin-links {
+  display: none;
+}
+
 .contact-links li .field {
   display: table-cell;
   padding-right: 6px;
@@ -531,12 +581,11 @@ a[href="#main-content"] {
 }
 .sidebar-search .form-type-textfield {
   margin-left: -13px;
-  margin-right: 17px;
+  margin-right: -13px;
 }
 .sidebar-search .form-text {
-  background: white;
-  border: none;
-  padding: 6px 3px;
+  background: #fff;
+  padding: 3px 6px;
   width: 100%;
 }
 .sidebar-search .views-widget-filter-search_api_views_fulltext,
@@ -556,19 +605,21 @@ a[href="#main-content"] {
   padding: 0;
 }
 .sidebar-search .views-submit-button input {
-  margin: 0 !important;
-}
-.sidebar-search .views-widget-filter-field_staff_is_subject_librarian {
-  display: none;
+  margin: 2px !important;
 }
 .sidebar-search .form-submit {
   background: white url(../images/icon-search.png) 50% 55% no-repeat;
-  width: 30px;
+  width: 24px;
   text-indent: -99999em;
   border: none;
-  padding: 6px 6px;
   line-height: normal;
 }
+.sidebar-search .form-submit:hover,
+.sidebar-search .form-submit:active,
+.sidebar-search .form-submit:focus {
+  background-image: url(../images/icon-search-hover.png);
+}
+.sidebar-search .views-widget-filter-field_staff_is_subject_librarian,
 .sidebar-search .views-reset-button {
   display: none;
 }
@@ -776,6 +827,7 @@ a[href="#main-content"] {
   padding-bottom: 16px;
 }
 
+.pane-event-dates,
 .pane-node-field-event-date,
 .pane-exhibition-date-range,
 .pane-news-byline,
@@ -797,6 +849,7 @@ a[href="#main-content"] {
   content: "";
 }
 
+.pane-event-dates,
 .pane-node-field-event-date,
 .pane-exhibition-date-range {
   font-style: italic;
@@ -1172,7 +1225,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399407339');
+  background-image: url('../images/logo-colophon.png?1399382991');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -2163,6 +2216,12 @@ a.more-link,
   margin-bottom: 1em;
 }
 
+img[src="images/down.png"],
+img[src="images/up.png"] {
+  vertical-align: top;
+  margin: 0 4px 0 0;
+}
+
 .cal-exhibition-date {
   min-width: 7em;
 }
@@ -2350,6 +2409,29 @@ a.more-link,
     padding: 4px 0 4px 7px !important;
   }
 }
+.view-related-events .view-content {
+  clear: both;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+}
+.view-related-events .views-row {
+  display: table-row;
+}
+.view-related-events .views-row:hover {
+  background: #eff3f4;
+}
+.view-related-events .views-field {
+  padding: 10px 0 10px 22px;
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 816px) {
+  .view-related-events .views-field {
+    padding: 4px 0 4px 7px;
+  }
+}
+
 .view-exhibitions-main-view .view-filters {
   display: none;
 }
@@ -2379,4 +2461,26 @@ a.more-link,
 }
 .view-find-resources .pane-node-body p {
   margin: 0;
+}
+
+.view-location-image-list table {
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.view-location-image-list td {
+  text-align: center;
+  vertical-align: top;
+  width: 50%;
+}
+.view-location-image-list .views-field-title {
+  max-width: 280px;
+  margin: 10px auto 24px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.views-field-field-location-image a,
+.views-field-field-location-image img {
+  display: inline-block;
 }

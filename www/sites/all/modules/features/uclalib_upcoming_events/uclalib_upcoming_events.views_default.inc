@@ -427,7 +427,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_end_1']['label'] = '';
   $handler->display->display_options['fields']['field_exhibition_end_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['text'] = 'Exhibition:';
+  $handler->display->display_options['fields']['field_exhibition_end_1']['alter']['text'] = 'Exhibits:';
   $handler->display->display_options['fields']['field_exhibition_end_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_end_1']['type'] = 'date_plain';
   $handler->display->display_options['fields']['field_exhibition_end_1']['settings'] = array(
@@ -445,19 +445,18 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['relationship'] = 'field_upcoming_events_events_target_id';
   $handler->display->display_options['fields']['field_event_location']['label'] = '';
   $handler->display->display_options['fields']['field_event_location']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_location']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '[field_event_location] - ';
   $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_location']['settings'] = array(
     'link' => 0,
   );
+  $handler->display->display_options['fields']['field_event_location']['delta_offset'] = '0';
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date_2']['id'] = 'field_event_date_2';
   $handler->display->display_options['fields']['field_event_date_2']['table'] = 'field_data_field_event_date';
@@ -465,6 +464,8 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_date_2']['relationship'] = 'field_upcoming_events_events_target_id';
   $handler->display->display_options['fields']['field_event_date_2']['label'] = '';
   $handler->display->display_options['fields']['field_event_date_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_2']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_2']['alter']['text'] = ' - [field_event_date_2]';
   $handler->display->display_options['fields']['field_event_date_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_2']['settings'] = array(
     'format_type' => 'bsp_event_cal_time',
@@ -480,7 +481,7 @@ function uclalib_upcoming_events_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[field_exhibition_end_1]</div>
 <div>[title]</div>
-<div><i>[field_event_location][field_event_date_2]</i></div>';
+<div><i>[field_event_location][field_event_date_2] </i></div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Contextual filter: Block: Internal, numeric block ID */
