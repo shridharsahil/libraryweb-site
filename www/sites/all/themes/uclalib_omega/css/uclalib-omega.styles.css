@@ -85,35 +85,6 @@ table th h3,
 table th h4 {
   margin: 0;
 }
-table td.current-day {
-  background: #ffefc4;
-}
-table .current-day {
-  color: #2d2f35;
-}
-table .week-selector {
-  width: 146px;
-}
-table .week-selector a {
-  color: #fff;
-  display: inline-block;
-  height: 18px;
-  overflow: hidden;
-  padding-top: 3px;
-  width: 18px;
-}
-table .week-selector a:after {
-  border-left: 0.4em solid #666666 !important;
-}
-table .week-selector a:before {
-  border-right: 0.4em solid #666666 !important;
-}
-table a.next-week {
-  text-indent: -66px;
-}
-table.opening-hours-week th, table.opening-hours-week td {
-  text-align: center;
-}
 table p {
   margin: 0;
 }
@@ -1033,10 +1004,10 @@ a[href="#main-content"] {
   display: none;
 }
 
-.more-link-triangle-after:after, table a.next-week:after, div.more-link > a:after,
+.more-link-triangle-after:after, div.more-link > a:after,
 a.more-link:after,
 .more-link-block a:after, .pane-bean-featured-content .field--name-field-featured-thumbnail-image a:after,
-.pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .no-description .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, .pane-todays-hours .views-field-title a:after {
+.pane-bean-featured-content .field--name-field-featured-link a:after, .pane-bean-link-list .no-description .field--name-field-link-link a:after, .pane-bean-quick-find.pane-style-border-blue .views-field-name a:after, a.next-week:after, .pane-todays-hours .views-field-title a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -1049,7 +1020,7 @@ a.more-link:after,
   font-size: 0.9em;
 }
 
-.left-link-triangle-before:before, table a.previous-week:before {
+.left-link-triangle-before:before, a.previous-week:before {
   content: "";
   position: absolute;
   width: 0;
@@ -1674,6 +1645,48 @@ a.more-link,
   font-size: 14px;
   font-weight: bold;
   background: #fdb930;
+}
+
+.pane-opening-hours-table table th, .pane-opening-hours-table table td {
+  text-align: center;
+}
+.pane-opening-hours-table table th {
+  font-size: 14px;
+  padding: 4px 5px;
+  white-space: nowrap;
+}
+.pane-opening-hours-table table td.current-day {
+  background: #ffefc4;
+}
+.pane-opening-hours-table table td[class^='day'],
+.pane-opening-hours-table table th[class^='day'] {
+  width: 3.6em !important;
+}
+.pane-opening-hours-table table .current-day {
+  color: #2d2f35;
+}
+
+.week-selector {
+  width: 146px;
+}
+.week-selector a {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  text-indent: -9999em;
+}
+
+a.previous-week:before {
+  border-right: 0.4em solid #666666 !important;
+  left: 0;
+  margin-top: .15em !important;
+}
+
+a.next-week:after {
+  border-left: 0.4em solid #666666 !important;
+  right: 0;
+  margin-top: .15em !important;
 }
 
 .pane-page-content > .contextual-links-region > .contextual-links-wrapper {
