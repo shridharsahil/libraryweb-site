@@ -10,10 +10,15 @@
     width: 50%;
   }
   .views-field-title {
-    max-width: 280px;
-    margin: 10px auto 24px;
     font-weight: bold;
     font-size: 16px;
+  }
+  .views-field {
+    max-width: 280px;
+    margin: 5px auto;
+  }
+  .views-field:last-child {
+    margin-bottom: 24px;
   }
 }
 .views-field-field-location-image a,
