@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the UCLALIB LinkChecker feature.
  */
+
+include_once 'uclalib_linkchecker.features.inc';
