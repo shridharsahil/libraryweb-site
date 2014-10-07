@@ -49,41 +49,6 @@ table {
       margin: 0;
     }
   }
-  td.current-day {
-    background: #ffefc4;
-  }
-  .current-day {
-    color: $ucla-dark-gray;
-  }
-  .week-selector {
-    width: 146px;
-      a {
-      color: #fff;
-      display: inline-block;
-      height: 18px;
-      overflow: hidden;
-      padding-top: 3px;
-      width: 18px;
-    }
-    a:after {
-      border-left: .4em solid $text-color !important;
-    }
-    a:before {
-      border-right: .4em solid $text-color !important;
-    }
-  }
-  a.previous-week {
-    @extend .left-link-triangle-before;
-  }
-  a.next-week {
-    @extend .more-link-triangle-after;
-    text-indent: -66px;
-  }
-  &.opening-hours-week {
-    th, td {
-      text-align: center;
-    }
-  }
   p {
     margin: 0;
   }
