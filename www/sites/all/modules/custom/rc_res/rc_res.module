@@ -1144,7 +1144,9 @@ function rc_res_form_page_five($form, &$form_state) {
     // Convert to 24hr time for the date()
     $apms = strtolower($apm[0]);
     if( $apms == 'pm'){
-      $thour[0] = $thour[0] + 12;
+      if( $thour[0] < 12){
+	$thour[0] = $thour[0] + 12;
+      }
     }
   
     $ddyear = date("Y", mktime(0, 0, 0, $tmonth[0], $tday[0], $tyear[0]));  // use date() to allow formatting of year. "Y" yields 2012
