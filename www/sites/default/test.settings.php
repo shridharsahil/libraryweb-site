@@ -43,3 +43,9 @@ $conf['shib_auth_link_text'] = 'Shibboleth Login';
 $conf['shib_auth_logout_url'] = 'https://shb.ais.ucla.edu/shibboleth-idp/Logout';
 $conf['shib_auth_username_variable'] = 'HTTP_SHIBUCLAUNIVERSITYID';
 
+// In Test, enable detailed errors
+error_reporting(E_ALL);  // Have PHP complain about absolutely everything.
+$conf['error_level'] = 2;  // Show all messages on your screen
+ini_set('display_errors', TRUE);  // These lines give you content on WSOD pages.
+ini_set('display_startup_errors', TRUE);
+

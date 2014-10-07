@@ -39,3 +39,10 @@ $conf['search_api_solr_overrides'] = array(
 );
 
 $conf['stage_file_proxy_origin'] = 'http://library.ucla.edu';
+
+// In local dev, enable detailed errors
+error_reporting(E_ALL);  // Have PHP complain about absolutely everything.
+$conf['error_level'] = 2;  // Show all messages on your screen
+ini_set('display_errors', TRUE);  // These lines give you content on WSOD pages.
+ini_set('display_startup_errors', TRUE);
+
