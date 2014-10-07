@@ -63,20 +63,18 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
 
   
   ////////////////////////////////////////////////////////////////////////////////
-  // Books & more tab.
-  // Books & more tab.
-  // Books & more tab.
+  // Books & More tab.
+  // Books & More tab.
+  // Books & More tab.
   $form['books'] = array(
-    '#title' => t('Books & more'),
+    '#title' => t('Books & More'),
   ) + $fieldset_default;
   $form['books']['text_query'] = $query_textfield;
   $form['books']['text_query']['#attributes'] = array(
     'placeholder' => t('Find books, journals and more.'),
   );
 
-
-// moving keyword block
-$form['books']['ucla_catalog_search_index'] = array(
+  $form['books']['ucla_catalog_search_index'] = array(
     '#type' => 'select',
     '#options' => array(
         'GKEY^*' => t('Keyword'),
@@ -99,7 +97,6 @@ $form['books']['ucla_catalog_search_index'] = array(
       'visible' => array(':input[name="books[catalog]"]' => array('value' => 'BM-CAT')),
     ),
   );
-// end moving keyword block
 
   $form['books']['catalog'] = array(
     '#type' => 'radios',
@@ -109,6 +106,10 @@ $form['books']['ucla_catalog_search_index'] = array(
     ),
     '#default_value' => 'BM-Mel',
   );
+
+  $form['books']['books_search'] = $search_button;
+  $form['books']['books_search']['#name'] = 'op_books';
+
   $form['books']['catalog_container_mel'] = array(
     '#type' => 'container',
     '#states' => array(
@@ -147,12 +148,6 @@ can be changed via a pulldown search limit on the results screen. Many records c
 <strong>UCLA Library Catalog</strong> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong> but it does not contain journal article titles or authors.</strong>'),
   );
 
-
-  
-  $form['books']['books_search'] = $search_button;
-  $form['books']['books_search']['#name'] = 'op_books';
-
-  
   ////////////////////////////////////////////////////////////////////////////////
   // Articles tab.
   // Articles tab.
@@ -376,8 +371,8 @@ If you do not find the database you are seeking, try searching the <a href="http
 The titles and abbreviations of journals subscribed to electronically by the UCLA Library and linked to article databases and Google Scholar.  To find journal articles by title and author, use <a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Citation Linker</a> .
 <p>
 <strong>Other Search Options</strong></br>
-<a href="http://ucelinks.cdlib.org:8888/sfx_ucla/az/default?&param_sid_save=e21718f6c370481f02f52709928f7941&param_lang_save=eng&param_letter_group_save=A&param_perform_save=searchCategories&param_letter_group_script_save=Latin&param_chinese_checkbox_save=0&param_services2filter_save=getFullTxt&param_services2filter_save=getSelectedFullTxt&param_current_view_save=table&param_pattern_save=&param_jumpToPage_save=&param_type_save=browseLetterGroup&param_textSearchType_save=startsWith&&param_perform_value=searchTitle" target="blank" title="A-Z Journal Titles Search">A-Z journal titles</a></br>
-<a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Locate the Article from your Citation</a>'),
+<a href="http://ucelinks.cdlib.org:8888/sfx_ucla/az/default?&param_sid_save=e21718f6c370481f02f52709928f7941&param_lang_save=eng&param_letter_group_save=A&param_perform_save=searchCategories&param_letter_group_script_save=Latin&param_chinese_checkbox_save=0&param_services2filter_save=getFullTxt&param_services2filter_save=getSelectedFullTxt&param_current_view_save=table&param_pattern_save=&param_jumpToPage_save=&param_type_save=browseLetterGroup&param_textSearchType_save=startsWith&&param_perform_value=searchTitle" target="blank" title="A-Z Journal Titles Search">A-Z Journal Titles</a></br>
+<a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Locate the Article from Your Citation</a>'),
     );
 
 
