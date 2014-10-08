@@ -105,7 +105,7 @@ function uclalib_opening_hours_generate_table_header($day, $nid) {
   $prev_week = clone($day);
   $interval = DateInterval::createFromDateString('7 days');
   $prev_week->sub($interval);
-  $week_str = '<a nid="' . $nid . '" date="' . $prev_week->format('d-m-Y') . '" class="opening-hours-link previous-week" href="#">Previous week</a>';
+  $week_str = '<a nid="' . $nid . '" date="' . $prev_week->format('d-m-Y') . '" class="opening-hours-link previous-week" href="#" title="Previous week">‹</a>';
 
   $end_day = clone($day);
   $interval = DateInterval::createFromDateString('6 days');
@@ -124,7 +124,7 @@ function uclalib_opening_hours_generate_table_header($day, $nid) {
   // Create an interval of 1 day to add to the date for each week day.
   $interval = DateInterval::createFromDateString('1 day');
   $end_day->add($interval);
-  $week_str .= '<a nid="' . $nid . '" date="' . $end_day->format('d-m-Y') . '" class="opening-hours-link next-week" href="#">Next week</a>';
+  $week_str .= '<a nid="' . $nid . '" date="' . $end_day->format('d-m-Y') . '" class="opening-hours-link next-week" href="#" title="Next week">›</a>';
 
   $start_day = clone($day);
   $header = array(array('data' => $week_str,'class' => array('week-selector')));

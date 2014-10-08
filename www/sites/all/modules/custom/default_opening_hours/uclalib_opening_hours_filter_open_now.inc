@@ -43,16 +43,13 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
     // Get current date and time.
     $date = date_create();
     $time = $date->format('H:i:s');
-    // We calculate a time ahead to give a 15 min margin to open.
-    // So we will be including nodes that open in 15 min from now.
-    $time_ahead = $date->add(DateInterval::createFromDateString('15 minutes'))->format('H:i:s');
     $date = $date->format('Y-m-d');
 
     // Get the list of all nodes that are currently open.
     $this->opening_results = db_select('opening_hours', 'oh')
       ->fields('oh', array('nid'))
       ->condition('date', $date)
-      ->condition('start_time', $time_ahead, '<=')
+      ->condition('start_time', $time, '<=')
       ->condition('end_time', $time, '>=')
       ->execute()
       ->fetchAllAssoc('nid');

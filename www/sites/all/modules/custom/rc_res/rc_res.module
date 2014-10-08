@@ -16,7 +16,7 @@
 function rc_res_form_page_one_validate($form, &$form_state) {
   $checkboxErrorMsg1 = 'Please select a checkbox before clicking on the Delete button.';
   $checkboxErrorMsg2 = 'Please select a checkbox before clicking on the Delete button.';
-  $checkboxErrorMsg3 = 'A login mismatch has occurred. Please <A href=>try again</a> or contact a staff member for assistance.';
+  $checkboxErrorMsg3 = 'A login problem has occurred. Please <A href=>try again</a> by logging out and then logging back in or contact a staff member for assistance.';
   if (!empty($form_state['page_num']) && $form_state['page_num'] == 3) {
     $login_ok = rc_session_variable_get('rc-res','login_ok');
     if( $login_ok == 0 ){
@@ -328,7 +328,7 @@ if ( !empty( $working_uid )) {
 } else {
   $rc_res_get_user_category = '';
   rc_session_variable_set('rc-res','rc_res_get_user_category', '');
-  $login_ok = 0;
+//  $login_ok = 0; // set this in only one place (above) and set only for Nothing Returned From Shiboleth
 }
 
   // TEMP FOR TESTING
@@ -352,9 +352,8 @@ if ( !empty( $working_uid )) {
   } else if( preg_match("/academic/i", $rc_res_get_user_category) ) {
     $rc_res_get_user_category = 'UCLA Staff';
   } else {
-  $rc_res_get_user_category = '';
-  rc_session_variable_set('rc-res','rc_res_get_user_category', '');
-  $login_ok = 0;
+    $rc_res_get_user_category = 'UCLA Staff'; // default to permissive to accomodate Faculty/Graduates that are not in Voyager
+    // $login_ok = 0; // Possibly use this flag (set to other than 0) to send an email to an admin alerting that the user is not in Voyager
   }
   rc_session_variable_set('rc-res','rc_res_get_user_category', $rc_res_get_user_category);
   rc_session_variable_set('rc-res','login_ok', $login_ok); // use this to trigger error message after form submission
@@ -1145,7 +1144,9 @@ function rc_res_form_page_five($form, &$form_state) {
     // Convert to 24hr time for the date()
     $apms = strtolower($apm[0]);
     if( $apms == 'pm'){
-      $thour[0] = $thour[0] + 12;
+      if( $thour[0] < 12){
+	$thour[0] = $thour[0] + 12;
+      }
     }
   
     $ddyear = date("Y", mktime(0, 0, 0, $tmonth[0], $tday[0], $tyear[0]));  // use date() to allow formatting of year. "Y" yields 2012
