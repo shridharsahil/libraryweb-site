@@ -168,9 +168,9 @@ function uclalib_search_default_search_api_index() {
       "index_directly" : 0,
       "cron_limit" : "50",
       "fields" : {
-        "title" : { "type" : "text" },
         "content" : { "type" : "text" },
-        "search_api_language" : { "type" : "string" }
+        "search_api_language" : { "type" : "string" },
+        "title" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
         "uclalib_search_staff_index_fields" : { "status" : 0, "weight" : "0", "settings" : [] },
@@ -385,7 +385,7 @@ function uclalib_search_default_search_api_server() {
       "clean_ids" : true,
       "scheme" : "http",
       "host" : "localhost",
-      "port" : "8983",
+      "port" : "8080",
       "path" : "\\/solr\\/uclalibdev",
       "http_user" : "",
       "http_pass" : "",
