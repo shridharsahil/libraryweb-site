@@ -35,6 +35,13 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
         }
         $this->query->where[$this->options['group']]['type'] = 'OR';
       }
+      else {
+        // There are no open locations for the requested time.
+        // Set a query condition that will never be satisfied, to prevent 
+        // any locations from being shown as open.
+        $this->query->condition('nid', $nid, '=', 0);
+      }
+
     }
   }
 
@@ -53,7 +60,6 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
       ->condition('end_time', $time, '>=')
       ->execute()
       ->fetchAllAssoc('nid');
-
     }
 
     return $this->opening_results;
