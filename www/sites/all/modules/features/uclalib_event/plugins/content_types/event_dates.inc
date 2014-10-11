@@ -49,8 +49,6 @@ function uclalib_event_dates_render($subtype, $conf, $args, $pane_context, $inco
   }
   $format = 'l, M j, Y - g:ia';
 
-  dpm($node);
-
   $start_date = strtotime($node->field_event_date[LANGUAGE_NONE][0]['value']);
   $end_date = '';
   if (isset($node->field_event_end_date[LANGUAGE_NONE])) {
