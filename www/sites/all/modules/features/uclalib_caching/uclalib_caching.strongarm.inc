@@ -15,6 +15,7 @@ function uclalib_caching_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'cacheexclude_list';
   $strongarm->value = 'ajax/open_now/*
+hours
 locations
 aasc
 aiscl
