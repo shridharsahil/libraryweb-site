@@ -15,6 +15,7 @@ function uclalib_caching_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'cacheexclude_list';
   $strongarm->value = 'ajax/open_now/*
+hours
 locations
 aasc
 aiscl
@@ -28,7 +29,6 @@ err
 ethnomusicology
 gonda-family-library
 law
-location/research-library-charles-e-young
 music
 powell
 rosenfeld
@@ -36,6 +36,7 @@ sel
 social-science-data-archive
 special-collections
 srlf
+yrl
 ';
   $export['cacheexclude_list'] = $strongarm;
 

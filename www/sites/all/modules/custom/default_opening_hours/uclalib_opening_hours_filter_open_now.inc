@@ -47,20 +47,30 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
 
   public function get_opening_results() {
     if (!isset($this->opening_results)) {
-    // Get current date and time.
-    $date = date_create();
-    $time = $date->format('H:i:s');
-    $date = $date->format('Y-m-d');
+      // Get current date and time.
+      $date = date_create();
+      $time = $date->format('H:i:s');
+      $date = $date->format('Y-m-d');
 
-    // Get the list of all nodes that are currently open.
-    $this->opening_results = db_select('opening_hours', 'oh')
-      ->fields('oh', array('nid'))
-      ->condition('date', $date)
-      ->condition('start_time', $time, '<=')
-      ->condition('end_time', $time, '>=')
-      ->execute()
-      ->fetchAllAssoc('nid');
-    }
+      // Get the list of all nodes that are currently open.
+      // Complex query condition, as we use 23:45-23:45 to indicate a location is closed all day,
+      // 00:00-00:00 that it's open 24 hours, and some locations are open past midnight (e.g.,
+      // 07:30-02:00), crossing a date boundary.  To handle these, add 24 hours to the ending
+      // time, so "now" is always between a start time and end time.
+      $condition = "
+            date = :date
+	AND CASE
+	  WHEN start_time < end_time THEN start_time <= :time AND :time <= end_time
+	  ELSE (start_time <= :time OR :time <= end_time)
+	  END
+	AND (start_time <> '23:45:00' and end_time <> '23:45:00')";
+
+      $this->opening_results = db_select('opening_hours', 'oh')
+        ->fields('oh', array('nid'))
+	->where($condition, array(':date' => $date, ':time' => $time))
+	->execute()
+	->fetchAllAssoc('nid');
+      }
 
     return $this->opening_results;
   }
