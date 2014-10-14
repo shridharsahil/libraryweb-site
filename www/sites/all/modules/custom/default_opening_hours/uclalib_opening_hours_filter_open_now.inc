@@ -59,8 +59,10 @@ class uclalib_opening_hours_filter_open_now extends views_handler_filter_boolean
       // time, so "now" is always between a start time and end time.
       $condition = "
             date = :date
-	AND start_time <= :time
-	AND :time <= case when end_time <= start_time then addtime(end_time, '24:00:00') else end_time end
+	AND CASE
+	  WHEN start_time < end_time THEN start_time <= :time AND :time <= end_time
+	  ELSE (start_time <= :time OR :time <= end_time)
+	  END
 	AND (start_time <> '23:45:00' and end_time <> '23:45:00')";
 
       $this->opening_results = db_select('opening_hours', 'oh')
