@@ -11,6 +11,7 @@ dependencies[] = list
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = ucla_data_registry_helper
 dependencies[] = views
 dependencies[] = views_mods
 features[ctools][] = strongarm:strongarm:1
