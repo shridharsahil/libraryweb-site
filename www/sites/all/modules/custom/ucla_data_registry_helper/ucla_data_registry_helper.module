@@ -20,7 +20,7 @@ function ucla_data_registry_helper_page() {
   $output = '
     <h2>Data Registry&nbsp;</h2>
     <p><a href="/app/data-registry/add">Add Data Registry Content</a></p>
-    <p><a href="/app/data-registry/update-registry">Edit Your Data Registry Entries</a>
+    <p><a href="/app/data-registry/update-registry">View or Edit Your Data Registry Entries</a>
     </p><p>&nbsp;</p><h2>Shibboleth Logout</h2>
     <p><a href="' . $shib_logout . '" target="_blank">Shibboleth Logout</a></p>
     <p>Use the above link to log out of your Shibboleth session.&nbsp;</p>
