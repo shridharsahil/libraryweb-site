@@ -10,6 +10,78 @@
 function uclalib_data_registry_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'field_collection_item-field_institution_department-field_department'
+  $field_instances['field_collection_item-field_institution_department-field_department'] = array(
+    'bundle' => 'field_institution_department',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_department',
+    'label' => 'Department',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_institution_department-field_institution'
+  $field_instances['field_collection_item-field_institution_department-field_institution'] = array(
+    'bundle' => 'field_institution_department',
+    'default_value' => array(
+      0 => array(
+        'value' => 'UCLA',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_institution',
+    'label' => 'Institution',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-data-body'
   $field_instances['node-data-body'] = array(
     'bundle' => 'data',
@@ -818,6 +890,7 @@ function uclalib_data_registry_field_default_field_instances() {
   t('Data Registered by (Last Name, First Name)');
   t('Date of Collection ');
   t('Date of Registration');
+  t('Department');
   t('Description of Data Type');
   t('Description or Abstract of the Project');
   t('Email Address for Person Registering the Data');
@@ -826,6 +899,7 @@ function uclalib_data_registry_field_default_field_instances() {
   t('Equipment Used in Data Collection');
   t('Funding Agency (example: NSF, NIH, NOAA, or any other funder)');
   t('If Embargo Selected in the Question above, List End Date');
+  t('Institution');
   t('Institution and Department');
   t('Keywords ');
   t('Link to Data');
