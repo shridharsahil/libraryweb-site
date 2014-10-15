@@ -96,16 +96,19 @@ function uclalib_data_registry_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '22',
+          'weight' => '23',
         ),
         'metatags' => array(
           'weight' => '20',
         ),
         'redirect' => array(
-          'weight' => '23',
+          'weight' => '24',
         ),
         'xmlsitemap' => array(
-          'weight' => '24',
+          'weight' => '25',
+        ),
+        'default_opening_hours' => array(
+          'weight' => '22',
         ),
       ),
       'display' => array(),

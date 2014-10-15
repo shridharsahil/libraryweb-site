@@ -202,6 +202,7 @@ function uclalib_data_registry_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Your Data Registry Entries';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
@@ -248,7 +249,7 @@ function uclalib_data_registry_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/record/[nid]/mods.xml">MODS XML</a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['path'] = 'update-registry';
+  $handler->display->display_options['path'] = 'app/data-registry/update-registry';
   $export['update_registry'] = $view;
 
   $view = new view();
