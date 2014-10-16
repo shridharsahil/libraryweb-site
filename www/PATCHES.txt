@@ -1,5 +1,7 @@
 Patches to Drupal Core
 **********************
+2014-10-15: Critical patch applied, until we can upgrade to 7.32
+https://www.drupal.org/files/issues/SA-CORE-2014-005-D7.patch
 
 Patches to Contrib modules
 **************************
