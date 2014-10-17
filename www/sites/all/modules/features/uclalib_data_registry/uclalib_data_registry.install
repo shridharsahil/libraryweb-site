@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ *
+ * Installation routines.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function uclalib_data_registry_enable() {
+  // Make sure the alias we need is set
+  $source = 'node/add/data';
+  $alias = 'app/data-registry/add';
+  $alias_exists = path_load($source);
+  if (empty($alias_exists)) {
+    $path = array('source' => $source, 'alias' => $alias);
+    path_save($path);
+  }
+}
+
