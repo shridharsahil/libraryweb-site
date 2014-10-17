@@ -184,11 +184,9 @@ function uclalib_opening_hours_generate_table_rows($this_nid, $nodes, $day) {
         $start_time = _uclalib_opening_hours_short_time($oh['start_time']);
         $end_time = _uclalib_opening_hours_short_time($oh['end_time']);
       }
-      $class = (empty($start_time) && empty($end_time)) ? 'closed' : 'open';
       $row_data = _uclalib_opening_hours_combine_start_end_times($start_time, $end_time);
       $row_cell = array(
         'data' => $row_data,
-        'class' => array(drupal_html_class('day-' . $this_day->format('D')), $class),
       );
 
       // If current day add a class.
