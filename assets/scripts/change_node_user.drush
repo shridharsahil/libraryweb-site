@@ -1,0 +1,19 @@
+<?php
+  // Change all nodes which are owned by bluespark (uid 1) to be owned by Chris Thompson.
+
+  $user = user_load_by_name('ccthompson');
+
+  $nids = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('n.uid', 1)
+    // ->condition('n.nid', 350, '<')
+    ->execute()
+    ->fetchCol();
+  foreach ($nids as $nid) {
+    $node = node_load($nid);
+    echo "$node->nid \t $node->title \n";
+    $node->uid = $user->uid;
+    node_save($node);
+  }
+?>
+

@@ -25,6 +25,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access advanced_link autocomplete'] = array(
     'name' => 'access advanced_link autocomplete',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -45,6 +47,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access all webform results'] = array(
     'name' => 'access all webform results',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -74,6 +78,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access bean overview'] = array(
     'name' => 'access bean overview',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -85,8 +91,12 @@ function uclalib_users_user_default_permissions() {
   $permissions['access broken links report'] = array(
     'name' => 'access broken links report',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'linkchecker',
   );
@@ -97,7 +107,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
   );
@@ -117,6 +126,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -128,6 +139,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -149,6 +162,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access media browser'] = array(
     'name' => 'access media browser',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -160,6 +175,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access navbar'] = array(
     'name' => 'access navbar',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'admin_dev' => 'admin_dev',
       'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
@@ -173,8 +190,12 @@ function uclalib_users_user_default_permissions() {
   $permissions['access own broken links report'] = array(
     'name' => 'access own broken links report',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'linkchecker',
   );
@@ -183,6 +204,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access own webform results'] = array(
     'name' => 'access own webform results',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -194,6 +217,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access own webform submissions'] = array(
     'name' => 'access own webform submissions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -224,6 +249,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -253,6 +280,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer alerts settings'] = array(
     'name' => 'administer alerts settings',
     'roles' => array(
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -301,7 +329,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'block',
   );
@@ -330,7 +357,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
   );
@@ -350,7 +376,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'ctools_custom_content',
   );
@@ -498,7 +523,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'administer media browser',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'media',
   );
@@ -509,7 +533,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'menu',
   );
@@ -592,7 +615,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'panelizer',
   );
@@ -911,7 +933,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'panelizer',
   );
@@ -949,7 +970,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'panelizer',
   );
@@ -1201,7 +1221,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
   );
@@ -1437,6 +1456,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any featured_content bean'] = array(
     'name' => 'create any featured_content bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1448,6 +1469,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any link_list bean'] = array(
     'name' => 'create any link_list bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1459,6 +1482,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any living_library_gallery bean'] = array(
     'name' => 'create any living_library_gallery bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1472,7 +1497,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1481,6 +1505,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any quick_find bean'] = array(
     'name' => 'create any quick_find bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1492,6 +1518,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any showcase bean'] = array(
     'name' => 'create any showcase bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1503,6 +1531,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any text_block bean'] = array(
     'name' => 'create any text_block bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1514,6 +1544,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any upcoming_events bean'] = array(
     'name' => 'create any upcoming_events bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1525,7 +1557,10 @@ function uclalib_users_user_default_permissions() {
   $permissions['create any upcoming_news bean'] = array(
     'name' => 'create any upcoming_news bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1544,6 +1579,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create exhibition content'] = array(
     'name' => 'create exhibition content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -1554,6 +1591,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create files'] = array(
     'name' => 'create files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1584,6 +1623,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create news content'] = array(
     'name' => 'create news content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -1604,6 +1645,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create static content'] = array(
     'name' => 'create static content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1615,6 +1658,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['create uclalib_event content'] = array(
     'name' => 'create uclalib_event content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -1646,7 +1691,10 @@ function uclalib_users_user_default_permissions() {
   $permissions['create webform content'] = array(
     'name' => 'create webform content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1656,8 +1704,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'customize ckeditor',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'ckeditor',
   );
@@ -1675,6 +1721,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete all webform submissions'] = array(
     'name' => 'delete all webform submissions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1696,7 +1744,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any destination content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1706,8 +1753,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any document files',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -1716,8 +1761,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any exhibition content'] = array(
     'name' => 'delete any exhibition content',
     'roles' => array(
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1727,8 +1772,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any featured_content bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1738,8 +1781,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any image files',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -1749,8 +1790,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any link_list bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1760,8 +1799,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any living_library_gallery bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1771,7 +1808,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any location content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1781,7 +1817,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1791,8 +1826,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any news_and_events_bean bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1802,8 +1835,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any quick_find bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1813,8 +1844,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any showcase bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1824,7 +1853,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any staff_profile content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1834,8 +1862,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any static content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -1845,8 +1871,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any text_block bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1855,8 +1879,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete any uclalib_event content'] = array(
     'name' => 'delete any uclalib_event content',
     'roles' => array(
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1866,8 +1890,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any uclalib_resources content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -1877,8 +1899,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any upcoming_events bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -1886,9 +1906,7 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'delete any upcoming_news bean'.
   $permissions['delete any upcoming_news bean'] = array(
     'name' => 'delete any upcoming_news bean',
-    'roles' => array(
-      'content editors' => 'content editors',
-    ),
+    'roles' => array(),
     'module' => 'bean',
   );
 
@@ -1906,7 +1924,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1934,7 +1951,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete own destination content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1943,6 +1959,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own document files'] = array(
     'name' => 'delete own document files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1954,8 +1972,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own exhibition content'] = array(
     'name' => 'delete own exhibition content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1964,6 +1983,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own image files'] = array(
     'name' => 'delete own image files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -1976,7 +1997,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete own location content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1985,8 +2005,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own news content'] = array(
     'name' => 'delete own news content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -1996,7 +2016,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete own staff_profile content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -2006,8 +2025,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete own static content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -2016,8 +2033,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own uclalib_event content'] = array(
     'name' => 'delete own uclalib_event content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
     ),
     'module' => 'node',
   );
@@ -2027,8 +2045,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete own uclalib_resources content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -2046,6 +2062,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own webform content'] = array(
     'name' => 'delete own webform content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2056,6 +2074,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['delete own webform submissions'] = array(
     'name' => 'delete own webform submissions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2068,8 +2088,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'node',
   );
@@ -2079,6 +2097,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete terms in academic_departmental_liaison',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2088,6 +2107,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete terms in area_of_expertise',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2157,6 +2177,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete terms in media_subject',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2166,6 +2187,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'delete terms in media_tags',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2224,6 +2246,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['download any document files'] = array(
     'name' => 'download any document files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2235,6 +2259,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['download any image files'] = array(
     'name' => 'download any image files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2264,6 +2290,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['download own document files'] = array(
     'name' => 'download own document files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2275,6 +2303,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['download own image files'] = array(
     'name' => 'download own image files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2295,6 +2325,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit all webform submissions'] = array(
     'name' => 'edit all webform submissions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2315,6 +2347,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any destination content'] = array(
     'name' => 'edit any destination content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
+      'Hours' => 'Hours',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2325,6 +2360,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any document files'] = array(
     'name' => 'edit any document files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2336,6 +2373,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any exhibition content'] = array(
     'name' => 'edit any exhibition content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2346,6 +2385,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any featured_content bean'] = array(
     'name' => 'edit any featured_content bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2357,6 +2398,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any image files'] = array(
     'name' => 'edit any image files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2368,6 +2411,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any link_list bean'] = array(
     'name' => 'edit any link_list bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2379,6 +2424,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any living_library_gallery bean'] = array(
     'name' => 'edit any living_library_gallery bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2390,6 +2437,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any location content'] = array(
     'name' => 'edit any location content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
+      'Hours' => 'Hours',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2400,6 +2450,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any news content'] = array(
     'name' => 'edit any news content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2412,7 +2464,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -2421,6 +2472,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any quick_find bean'] = array(
     'name' => 'edit any quick_find bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2432,6 +2485,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any showcase bean'] = array(
     'name' => 'edit any showcase bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2443,6 +2498,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any staff_profile content'] = array(
     'name' => 'edit any staff_profile content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2453,6 +2510,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any static content'] = array(
     'name' => 'edit any static content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2464,6 +2523,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any text_block bean'] = array(
     'name' => 'edit any text_block bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2475,6 +2536,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any uclalib_event content'] = array(
     'name' => 'edit any uclalib_event content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2496,6 +2559,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any upcoming_events bean'] = array(
     'name' => 'edit any upcoming_events bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2507,7 +2572,10 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any upcoming_news bean'] = array(
     'name' => 'edit any upcoming_news bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'bean',
   );
@@ -2525,6 +2593,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit any webform content'] = array(
     'name' => 'edit any webform content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2544,8 +2614,12 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit link settings'] = array(
     'name' => 'edit link settings',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'linkchecker',
   );
@@ -2554,9 +2628,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit opening hours for content'] = array(
     'name' => 'edit opening hours for content',
     'roles' => array(
+      'Hours' => 'Hours',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'opening_hours',
   );
@@ -2576,7 +2650,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
   );
@@ -2585,6 +2658,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own destination content'] = array(
     'name' => 'edit own destination content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
+      'Hours' => 'Hours',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2595,6 +2671,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own document files'] = array(
     'name' => 'edit own document files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2606,6 +2684,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own exhibition content'] = array(
     'name' => 'edit own exhibition content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2616,6 +2696,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own image files'] = array(
     'name' => 'edit own image files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2627,6 +2709,9 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own location content'] = array(
     'name' => 'edit own location content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
+      'Hours' => 'Hours',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2637,6 +2722,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own news content'] = array(
     'name' => 'edit own news content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2647,6 +2734,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own staff_profile content'] = array(
     'name' => 'edit own staff_profile content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2657,6 +2746,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own static content'] = array(
     'name' => 'edit own static content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2668,6 +2759,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own uclalib_event content'] = array(
     'name' => 'edit own uclalib_event content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2698,6 +2791,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own webform content'] = array(
     'name' => 'edit own webform content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
     ),
@@ -2708,6 +2803,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['edit own webform submissions'] = array(
     'name' => 'edit own webform submissions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -2720,6 +2817,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit terms in academic_departmental_liaison',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2729,6 +2827,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit terms in area_of_expertise',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2798,6 +2897,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit terms in media_subject',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2807,6 +2907,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'edit terms in media_tags',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'taxonomy',
   );
@@ -2930,7 +3031,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'nodequeue',
   );
@@ -2941,7 +3041,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'nodequeue',
   );
@@ -2970,7 +3069,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
   );
@@ -2988,6 +3086,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3008,6 +3108,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for bean'] = array(
     'name' => 'show format selection for bean',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3019,6 +3121,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for comment'] = array(
     'name' => 'show format selection for comment',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3030,6 +3134,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for field_collection_item'] = array(
     'name' => 'show format selection for field_collection_item',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3041,7 +3147,11 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for file'] = array(
     'name' => 'show format selection for file',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
     ),
     'module' => 'better_formats',
   );
@@ -3050,6 +3160,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for multifield'] = array(
     'name' => 'show format selection for multifield',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3061,6 +3173,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3072,6 +3186,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for taxonomy_term'] = array(
     'name' => 'show format selection for taxonomy_term',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3083,6 +3199,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format selection for user'] = array(
     'name' => 'show format selection for user',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3094,6 +3212,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show format tips'] = array(
     'name' => 'show format tips',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3105,6 +3225,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['show more format tips link'] = array(
     'name' => 'show more format tips link',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3118,7 +3240,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'comment',
   );
@@ -3210,7 +3331,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'page_manager',
   );
@@ -3230,7 +3350,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
   );
@@ -3241,7 +3360,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
   );
@@ -3259,6 +3377,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3369,6 +3489,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view bean page'] = array(
     'name' => 'view bean page',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3380,6 +3502,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view bean revisions'] = array(
     'name' => 'view bean revisions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3404,6 +3528,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view icons'] = array(
     'name' => 'view icons',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3415,6 +3541,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view own files'] = array(
     'name' => 'view own files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3426,6 +3554,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view own private files'] = array(
     'name' => 'view own private files',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3437,6 +3567,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3450,7 +3582,6 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'panels',
   );
@@ -3460,8 +3591,6 @@ function uclalib_users_user_default_permissions() {
     'name' => 'view private files',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editors' => 'content editors',
-      'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
   );
@@ -3470,6 +3599,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
@@ -3481,6 +3612,8 @@ function uclalib_users_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
       'admin_dev' => 'admin_dev',
       'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
