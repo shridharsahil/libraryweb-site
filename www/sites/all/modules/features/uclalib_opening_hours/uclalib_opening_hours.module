@@ -319,6 +319,7 @@ function uclalib_opening_hours_generate_master() {
   $content = $view->preview('default');
 
   print $content;
+  drupal_page_is_cacheable(FALSE);
   drupal_page_footer();
   exit;
 }
