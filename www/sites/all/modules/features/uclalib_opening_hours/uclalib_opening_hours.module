@@ -18,6 +18,13 @@ function uclalib_opening_hours_menu() {
     'access arguments' => array('access content'),
   );
 
+  $items['ajax/todays_hours_master'] = array(
+    'title' => 'Todays Hours Master',
+    'page callback' => 'uclalib_opening_hours_generate_master',
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+  );
+
   return $items;
 }
 
@@ -301,3 +308,17 @@ function _uclalib_opening_hours_combine_start_end_times($start_time, $end_time) 
   return $row_data;
 }
 
+/**
+ * Callback for /ajax/todays_hours_master
+ */
+function uclalib_opening_hours_generate_master() {
+  $view = views_get_view('todays_hours');
+  $view->set_display('default');
+  $view->pre_execute();
+  $view->execute('default');
+  $content = $view->preview('default');
+
+  print $content;
+  drupal_page_footer();
+  exit;
+}
