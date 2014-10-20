@@ -46,10 +46,17 @@ function uclalib_opening_hours_master_ctools_content_types_todays_hours_render($
   $block->module = 'uclalib_opening_hours_master';
   $block->delta = $subtype;
   $block->title = 'Today\'s Hours <span class="icon-hours2"></span>';
+
+  $view = views_get_view('todays_hours');
+  $view->set_display('default');
+  $view->pre_execute();
+  $view->execute('default');
+  $content = $view->preview('default');
+
   $block->content = array(
     'content' => array(
       '#type' => 'markup',
-      '#markup' => '',
+      '#markup' => $content,
     ),
   );
 
