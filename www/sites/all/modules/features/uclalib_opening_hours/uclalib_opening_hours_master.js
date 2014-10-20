@@ -21,7 +21,7 @@ var loadHours = function () {
       timeRemaining = hour - d;
   // Add between one and three minutes to the time returned to keep
   // all open pages from hitting the server at once.
-  timeRemaining = Math.floor((Math.random() * 120000) + 60000);
+  timeRemaining += Math.floor((Math.random() * 120000) + 60000);
   if (timeRemaining > 1000) {
     window.setTimeout(loadHours, timeRemaining);
   }
