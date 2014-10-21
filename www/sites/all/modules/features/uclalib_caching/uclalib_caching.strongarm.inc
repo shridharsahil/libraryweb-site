@@ -14,7 +14,7 @@ function uclalib_caching_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cacheexclude_list';
-  $strongarm->value = 'ajax/open_now/*
+  $strongarm->value = 'ajax/*
 hours
 locations
 aasc
