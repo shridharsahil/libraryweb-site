@@ -30,6 +30,10 @@ Media - Custom wrapper breaks tokens with CKEditor >=4.0 without widget plugin
 https://www.drupal.org/node/2177893
 https://www.drupal.org/files/issues/media-ckeditor4-media-plugin-2177893-13.patch
 
+Media - Media inline filter: Delegate "float" to outer element
+https://www.drupal.org/node/2018075
+https://www.drupal.org/files/issues/media_filter_float_delegate-2018075-8.patch
+
 Panels - Allow users to manually control window title.
 https://drupal.org/node/2262173
 https://drupal.org/files/issues/panels-allow_users_control_window_title-2262173-4.patch
