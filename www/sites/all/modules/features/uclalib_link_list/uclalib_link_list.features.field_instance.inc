@@ -10,6 +10,67 @@
 function uclalib_link_list_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'bean-link_list-field_introduction'
+  $field_instances['bean-link_list-field_introduction'] = array(
+    'bundle' => 'link_list',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_introduction',
+    'label' => 'Introduction',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'php_code' => 0,
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'bean-link_list-field_linklist_links'
   $field_instances['bean-link_list-field_linklist_links'] = array(
     'bundle' => 'link_list',
@@ -24,7 +85,7 @@ function uclalib_link_list_field_default_field_instances() {
           'view_mode' => 'default',
         ),
         'type' => 'multifield_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'bean',
@@ -39,12 +100,13 @@ function uclalib_link_list_field_default_field_instances() {
       'module' => 'multifield',
       'settings' => array(),
       'type' => 'multifield_default',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Introduction');
   t('Links');
 
   return $field_instances;

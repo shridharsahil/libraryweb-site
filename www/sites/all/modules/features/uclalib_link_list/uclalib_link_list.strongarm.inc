@@ -35,16 +35,19 @@ function uclalib_link_list_strongarm() {
           'weight' => '1',
         ),
         'revision' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'view_mode' => array(
-          'weight' => '3',
+          'weight' => '4',
+        ),
+        'redirect' => array(
+          'weight' => '6',
         ),
       ),
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '-9',
+            'weight' => '0',
             'visible' => TRUE,
           ),
         ),
