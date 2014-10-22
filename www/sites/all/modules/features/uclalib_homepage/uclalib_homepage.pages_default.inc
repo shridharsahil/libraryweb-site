@@ -114,43 +114,6 @@ function uclalib_homepage_default_page_manager_pages() {
     $display->content['new-ec681041-0a57-47c4-80dd-9b52a8f3acd4'] = $pane;
     $display->panels['bottom_left'][1] = 'new-ec681041-0a57-47c4-80dd-9b52a8f3acd4';
     $pane = new stdClass();
-    $pane->pid = 'new-aaf4703d-ef45-4c09-9188-246947c54849';
-    $pane->panel = 'top_left_bottom_left';
-    $pane->type = 'views';
-    $pane->subtype = 'todays_hours';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'override_title' => 1,
-      'override_title_text' => 'Today\'s Hours <span class="icon-hours2"></span>',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => array(
-        'title_alignment' => 'left',
-      ),
-      'style' => 'border-blue',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'aaf4703d-ef45-4c09-9188-246947c54849';
-    $display->content['new-aaf4703d-ef45-4c09-9188-246947c54849'] = $pane;
-    $display->panels['top_left_bottom_left'][0] = 'new-aaf4703d-ef45-4c09-9188-246947c54849';
-    $pane = new stdClass();
     $pane->pid = 'new-a6495e16-112d-4a6a-9c90-9e8412d95a0a';
     $pane->panel = 'top_left_bottom_left';
     $pane->type = 'todays_hours_master';
@@ -173,11 +136,11 @@ function uclalib_homepage_default_page_manager_pages() {
       'css_class' => 'pane-todays-hours',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'a6495e16-112d-4a6a-9c90-9e8412d95a0a';
     $display->content['new-a6495e16-112d-4a6a-9c90-9e8412d95a0a'] = $pane;
-    $display->panels['top_left_bottom_left'][1] = 'new-a6495e16-112d-4a6a-9c90-9e8412d95a0a';
+    $display->panels['top_left_bottom_left'][0] = 'new-a6495e16-112d-4a6a-9c90-9e8412d95a0a';
     $pane = new stdClass();
     $pane->pid = 'new-54cf3e3c-a95f-484d-8bc8-0a72e3c0e3d2';
     $pane->panel = 'top_left_bottom_right';
