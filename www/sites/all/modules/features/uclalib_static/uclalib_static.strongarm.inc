@@ -14,7 +14,7 @@ function uclalib_static_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_static';
-  $strongarm->value = 'edit-submenutree';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_static'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -118,6 +118,7 @@ function uclalib_static_strongarm() {
   $strongarm->name = 'node_options_static';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_static'] = $strongarm;
 

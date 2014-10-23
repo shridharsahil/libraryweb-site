@@ -9,6 +9,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = link
+dependencies[] = list
 dependencies[] = opening_hours
 dependencies[] = options
 dependencies[] = panelizer
