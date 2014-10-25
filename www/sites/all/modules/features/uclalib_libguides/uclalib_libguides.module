@@ -11,10 +11,11 @@ include_once 'uclalib_libguides.features.inc';
  */
 function uclalib_libguides_bean_view(Bean $bean, $view_mode = 'default', $langcode = NULL) {
   if ($bean->type == 'libguides_api_v1') {
-    dsm($bean);
     $content = array();
     $html = _uclalib_libguides_build_html($bean);
     $content[] = array('#markup' => $html);
+    // Theme uclalib_omega_preprocess_panels_pane() looks for bundle in content, instead of using bean->type
+    $content['#bundle'] = $bean->type;
     $bean->content = $content;
   }
 }
@@ -29,15 +30,23 @@ function _uclalib_libguides_build_html(Bean $bean) {
   $terms = $bean->field_lg_api_v1_search_term['und'][0]['value'];
   $type = $bean->field_lg_api_v1_search_type['und'][0]['value'];
 
-  // Boolean checkboxes store either 0 (false) or 1 (true).
-  $desc = ($desc ? 'on' : 'off');
-  $more = ($more ? 'true' : 'false');
+  $base_id = '261'; // our id, assigned by Springshare
+  // To allow multiple blocks / api calls per page, we need to override the id so it's unique.
+  // Just do this for all blocks, so we don't have to figure out if there are others on a page.
+  // Append the internal bean id to the id to make it unique.
+  $override_id = $base_id . 'x' . $bean->bid;
 
-  $id = '261';
-  $params = 'iid=' . $id;
+  // Also need to modify the div id when using override id.
+  $div_id = 'api_search_' . $type . '_iid' . $override_id;
+
+  // Finally, start putting together the parameter string for the API call.
+  $params = 'iid=' . $base_id;
   $params .= '&type=' . $type;
   $params .= '&search=' . $terms;
-  $params .= '&sortby=' . $sortby;
+  // Only output sortby parameter if non-default
+  if ($sortby != 'SKIP') {
+    $params .= '&sortby=' . $sortby;
+  }
   // Only output limit parameter if set
   if ($limit > 0) {
     $params .= '&limit=' . $limit;
@@ -46,16 +55,15 @@ function _uclalib_libguides_build_html(Bean $bean) {
   if ($desc == '1') {
     $params .= '&desc=on';
   }
-  // Only output more parameter if false
+  // Only output more parameter if false (to turn off display of "View more results")
   if ($more == '0') {
     $params .= '&more=false';
   }
   $params .= '&context=object';
   $params .= '&format=js';
+  $params .= '&id_override=' . $div_id; // parameter needs to use the same value as the div
   $output = <<<EOD
-    <!-- debugging -->
-    <b>{$params}</b>
-    <div id='api_search_{$type}_iid{$id}'></div>
+    <div id='{$div_id}'></div>
     <script type='text/javascript' src='http://api.libguides.com/api_search.php?{$params}'></script>
 EOD;
   return $output;
