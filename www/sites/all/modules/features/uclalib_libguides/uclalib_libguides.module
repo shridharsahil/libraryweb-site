@@ -9,7 +9,6 @@ include_once 'uclalib_libguides.features.inc';
 /**
  * Implements hook_bean_view
  */
-
 function uclalib_libguides_bean_view(Bean $bean, $view_mode = 'default', $langcode = NULL) {
   if ($bean->type == 'libguides_api_v1') {
     dsm($bean);

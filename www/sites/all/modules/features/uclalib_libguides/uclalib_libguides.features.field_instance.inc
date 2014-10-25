@@ -50,9 +50,13 @@ function uclalib_libguides_field_default_field_instances() {
   // Exported field_instance: 'bean-libguides_api_v1-field_lg_api_v1_limit'
   $field_instances['bean-libguides_api_v1-field_lg_api_v1_limit'] = array(
     'bundle' => 'libguides_api_v1',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
-    'description' => 'Enter the number of results to display, or leave blank for display all matching items.',
+    'description' => 'Enter the number of results to display, or enter 0 (zero) to display all matching items.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -70,7 +74,7 @@ function uclalib_libguides_field_default_field_instances() {
     'entity_type' => 'bean',
     'field_name' => 'field_lg_api_v1_limit',
     'label' => 'Number of results',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -254,7 +258,7 @@ function uclalib_libguides_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Display a "more results" link at the bottom of your results that points back to the LibGuides search page.');
-  t('Enter the number of results to display, or leave blank for display all matching items.');
+  t('Enter the number of results to display, or enter 0 (zero) to display all matching items.');
   t('Include description?');
   t('Include the guide description next to the guide title in your results.');
   t('Number of results');
