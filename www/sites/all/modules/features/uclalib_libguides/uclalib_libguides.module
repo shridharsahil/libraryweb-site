@@ -7,55 +7,58 @@
 include_once 'uclalib_libguides.features.inc';
 
 /**
- * Implements hook_views_post_render.
- *
- * We need to wrap View results in javascript, which Views does not normally allow.
- * Intercept the content after Views is done with it and rewrite it.
+ * Implements hook_bean_view
  */
-function uclalib_libguides_views_post_render(&$view, &$output, &$cache) {
-  if ($view->name == 'libguides_api') {
-    $result = $view->result[0];
-    $bean = bean_load($result->bid);
-    // We know from content type definition that all fields are single-value and no language
-    // so the inflexible ['und'][0]['value'] approach should be ok.
-    $desc = $bean->field_lg_api_v1_desc['und'][0]['value'];
-    $limit = $bean->field_lg_api_v1_limit['und'][0]['value'];
-    $more = $bean->field_lg_api_v1_more['und'][0]['value'];
-    $sortby = $bean->field_lg_api_v1_sortby['und'][0]['value'];
-    $terms = $bean->field_lg_api_v1_search_term['und'][0]['value'];
-    $type = $bean->field_lg_api_v1_search_type['und'][0]['value'];
 
-    // Boolean checkboxes store either 0 (false) or 1 (true).
-    $desc = ($desc ? 'on' : 'off');
-    $more = ($more ? 'true' : 'false');
-
-    //$type = $result->field_field_lg_api_v1_search_type[0]['raw']['value'];
-    //$terms = $result->field_field_lg_api_v1_search_term[0]['raw']['value'];
-    $id = '261';
-    $params = 'iid=' . $id;
-    $params .= '&type=' . $type;
-    $params .= '&search=' . $terms;
-    $params .= '&sortby=' . $sortby;
-    // Only output limit parameter if set
-    if ($limit > 0) {
-      $params .= '&limit=' . $limit;
-    }
-    // Only output desc parameter if true
-    if ($desc == '1') {
-      $params .= '&desc=on';
-    }
-    // Only output more parameter if false
-    if ($more == '0') {
-      $params .= '&more=false';
-    }
-    $params .= '&context=object';
-    $params .= '&format=js';
-    $output = <<<EOD
-      <!-- debugging -->
-      <b>{$params}</b>
-      <div id='api_search_categoryexact_iid{$id}'></div>
-      <script type='text/javascript' src='http://api.libguides.com/api_search.php?{$params}'></script>
-EOD;
+function uclalib_libguides_bean_view(Bean $bean, $view_mode = 'default', $langcode = NULL) {
+  if ($bean->type == 'libguides_api_v1') {
+    dsm($bean);
+    $content = array();
+    $html = _uclalib_libguides_build_html($bean);
+    $content[] = array('#markup' => $html);
+    $bean->content = $content;
   }
+}
+
+function _uclalib_libguides_build_html(Bean $bean) {
+  // We know from content type definition that all fields are single-value and no language
+  // so the inflexible ['und'][0]['value'] approach should be ok.
+  $desc = $bean->field_lg_api_v1_desc['und'][0]['value'];
+  $limit = $bean->field_lg_api_v1_limit['und'][0]['value'];
+  $more = $bean->field_lg_api_v1_more['und'][0]['value'];
+  $sortby = $bean->field_lg_api_v1_sortby['und'][0]['value'];
+  $terms = $bean->field_lg_api_v1_search_term['und'][0]['value'];
+  $type = $bean->field_lg_api_v1_search_type['und'][0]['value'];
+
+  // Boolean checkboxes store either 0 (false) or 1 (true).
+  $desc = ($desc ? 'on' : 'off');
+  $more = ($more ? 'true' : 'false');
+
+  $id = '261';
+  $params = 'iid=' . $id;
+  $params .= '&type=' . $type;
+  $params .= '&search=' . $terms;
+  $params .= '&sortby=' . $sortby;
+  // Only output limit parameter if set
+  if ($limit > 0) {
+    $params .= '&limit=' . $limit;
+  }
+  // Only output desc parameter if true
+  if ($desc == '1') {
+    $params .= '&desc=on';
+  }
+  // Only output more parameter if false
+  if ($more == '0') {
+    $params .= '&more=false';
+  }
+  $params .= '&context=object';
+  $params .= '&format=js';
+  $output = <<<EOD
+    <!-- debugging -->
+    <b>{$params}</b>
+    <div id='api_search_{$type}_iid{$id}'></div>
+    <script type='text/javascript' src='http://api.libguides.com/api_search.php?{$params}'></script>
+EOD;
+  return $output;
 }
 
