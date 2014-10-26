@@ -328,7 +328,7 @@ if ( !empty( $working_uid )) {
 } else {
   $rc_res_get_user_category = '';
   rc_session_variable_set('rc-res','rc_res_get_user_category', '');
-//  $login_ok = 0; // set this in only one place (above) and set only for Nothing Returned From Shiboleth
+  $login_ok = 0; // set this in only one place (above) and set only for Nothing Returned From Shiboleth
 }
 
   // TEMP FOR TESTING
@@ -352,8 +352,9 @@ if ( !empty( $working_uid )) {
   } else if( preg_match("/academic/i", $rc_res_get_user_category) ) {
     $rc_res_get_user_category = 'UCLA Staff';
   } else {
-    $rc_res_get_user_category = 'UCLA Staff'; // default to permissive to accomodate Faculty/Graduates that are not in Voyager
-    // $login_ok = 0; // Possibly use this flag (set to other than 0) to send an email to an admin alerting that the user is not in Voyager
+    $rc_res_get_user_category = ''; // see github for a temp workaround for blank category id
+    rc_session_variable_set('rc-res','rc_res_get_user_category', '');
+    $login_ok = 0; // Possibly use this flag (set to other than 0) to send an email to an admin alerting that the user is not in Voyager
   }
   rc_session_variable_set('rc-res','rc_res_get_user_category', $rc_res_get_user_category);
   rc_session_variable_set('rc-res','login_ok', $login_ok); // use this to trigger error message after form submission

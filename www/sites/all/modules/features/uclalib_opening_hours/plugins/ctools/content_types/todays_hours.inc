@@ -9,7 +9,7 @@
 
 $plugin = array(
   'category' => t('UCLALIB Opening Hours'),
-  'title' => t("Today's Hours"),
+  'title' => t("Today's Hours By Node"),
   'description' => t("Today's opening hours for a node"),
 
   'required context' => array(

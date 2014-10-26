@@ -14,7 +14,7 @@ function uclalib_location_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_location';
-  $strongarm->value = 'edit-menu';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_location'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -125,6 +125,7 @@ function uclalib_location_strongarm() {
   $strongarm->name = 'node_options_location';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_location'] = $strongarm;
 

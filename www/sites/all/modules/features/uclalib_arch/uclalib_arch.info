@@ -48,6 +48,7 @@ features[variable][] = date_format_month
 features[variable][] = date_format_month_with_date
 features[variable][] = date_format_time
 features[variable][] = date_format_time_12hr_
+features[variable][] = date_format_uclalib_event_date_time
 features[variable][] = date_format_year
 features[variable][] = page_manager_node_view_disabled
 features[variable][] = page_manager_term_view_disabled
