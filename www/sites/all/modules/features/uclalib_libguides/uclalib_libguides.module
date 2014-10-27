@@ -17,6 +17,7 @@ function uclalib_libguides_bean_view(Bean $bean, $view_mode = 'default', $langco
     // Theme uclalib_omega_preprocess_panels_pane() looks for bundle in content, instead of using bean->type
     $content['#bundle'] = $bean->type;
     $bean->content = $content;
+    $bean->title = 'Research Guides: ' . $bean->title;
   }
 }
 
