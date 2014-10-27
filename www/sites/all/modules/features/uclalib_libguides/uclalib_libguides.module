@@ -13,11 +13,17 @@ function uclalib_libguides_bean_view(Bean $bean, $view_mode = 'default', $langco
   if ($bean->type == 'libguides_api_v1') {
     $content = array();
     $html = _uclalib_libguides_build_html($bean);
-    $content[] = array('#markup' => $html);
+    $content[] = array(
+      '#type'   => 'markup',
+      '#prefix' => '<div class="pane-style-background-blue">',
+      '#markup' => $html,
+      '#suffix' => '</div',
+    );
     // Theme uclalib_omega_preprocess_panels_pane() looks for bundle in content, instead of using bean->type
     $content['#bundle'] = $bean->type;
     $bean->content = $content;
-    $bean->title = 'Research Guides: ' . $bean->title;
+    // Suppress the bean title as it's overridden/reformatted and included in the block body
+    $bean->title = '';
   }
 }
 
@@ -63,7 +69,11 @@ function _uclalib_libguides_build_html(Bean $bean) {
   $params .= '&context=object';
   $params .= '&format=js';
   $params .= '&id_override=' . $div_id; // parameter needs to use the same value as the div
+  // Output the bean title (reformatted), the div which will be targeted by the javascript,
+  // and the javascript itself.
+  $title = 'Research Guides' . '<br />' . $bean->title;
   $output = <<<EOD
+    <h3 style='margin-top: 0px;'>{$title}</h3>
     <div id='{$div_id}'></div>
     <script type='text/javascript' src='http://api.libguides.com/api_search.php?{$params}'></script>
 EOD;
