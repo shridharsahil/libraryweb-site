@@ -1,0 +1,16 @@
+.media-element-container {
+  display: table;
+}
+
+.media-element-container.media-float-left {
+  float: left;
+}
+.media-element-container.media-float-right {
+  float: right;
+}
+
+.media-element-container .field--name-field-attribution {
+  font-style: italic;
+  text-align: right;
+  font-size: .85em;
+}
