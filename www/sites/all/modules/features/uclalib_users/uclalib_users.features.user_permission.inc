@@ -1465,6 +1465,19 @@ function uclalib_users_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'create any libguides_api_v1 bean'.
+  $permissions['create any libguides_api_v1 bean'] = array(
+    'name' => 'create any libguides_api_v1 bean',
+    'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'create any link_list bean'.
   $permissions['create any link_list bean'] = array(
     'name' => 'create any link_list bean',
@@ -1783,6 +1796,15 @@ function uclalib_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete any libguides_api_v1 bean'.
+  $permissions['delete any libguides_api_v1 bean'] = array(
+    'name' => 'delete any libguides_api_v1 bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
   );
 
   // Exported permission: 'delete any link_list bean'.
@@ -2405,6 +2427,19 @@ function uclalib_users_user_default_permissions() {
       'resources editors' => 'resources editors',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit any libguides_api_v1 bean'.
+  $permissions['edit any libguides_api_v1 bean'] = array(
+    'name' => 'edit any libguides_api_v1 bean',
+    'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Communication' => 'Communication',
+      'administrator' => 'administrator',
+      'content editors' => 'content editors',
+      'resources editors' => 'resources editors',
+    ),
+    'module' => 'bean',
   );
 
   // Exported permission: 'edit any link_list bean'.
@@ -3398,6 +3433,16 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'view any featured_content bean'.
   $permissions['view any featured_content bean'] = array(
     'name' => 'view any featured_content bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any libguides_api_v1 bean'.
+  $permissions['view any libguides_api_v1 bean'] = array(
+    'name' => 'view any libguides_api_v1 bean',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
