@@ -7,6 +7,21 @@
 include_once 'uclalib_libguides.features.inc';
 
 /**
+ * Implements hook_form_ID_alter
+ */
+function uclalib_libguides_form_bean_form_alter(&$form, &$form_state) {
+  // Note: other common alterations found in uclalib_arch_form_bean_form_alter().
+  if ($form['#bundle'] == 'libguides_api_v1') {
+    // Hide the revision checkbox.
+    $form['revision']['is_new_revision']['#type'] = 'hidden';
+    // Make "Create new revision" off by default.
+    $form['revision']['is_new_revision']['#default_value'] = 0;
+    // Hide the revision log field.
+    $form['revision']['log']['#type'] = 'hidden';
+  }
+}
+
+/**
  * Implements hook_bean_view
  */
 function uclalib_libguides_bean_view(Bean $bean, $view_mode = 'default', $langcode = NULL) {

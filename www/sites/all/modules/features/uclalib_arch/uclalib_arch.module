@@ -236,6 +236,7 @@ function uclalib_arch_form_bean_form_alter(&$form, &$form_state, $form_id) {
   // entirely from the edit form for the following bean types.
   $bean_types_that_dont_need_view_modes = array(
     'featured_content',
+    'libguides_api_v1',
     'link_list',
     'living_library_gallery',
     'news_and_events_bean',
