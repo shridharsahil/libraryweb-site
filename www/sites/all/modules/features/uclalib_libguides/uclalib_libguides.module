@@ -86,11 +86,12 @@ function _uclalib_libguides_build_html(Bean $bean) {
   $params .= '&id_override=' . $div_id; // parameter needs to use the same value as the div
   // Output the bean title (reformatted), the div which will be targeted by the javascript,
   // and the javascript itself.
+  // Use protocol-independent URL so it works regardless of http/https.
   $title = 'Research Guides' . '<br />' . $bean->title;
   $output = <<<EOD
     <h3 style='margin-top: 0px;'>{$title}</h3>
     <div id='{$div_id}'></div>
-    <script type='text/javascript' src='http://api.libguides.com/api_search.php?{$params}'></script>
+    <script type='text/javascript' src='//api.libguides.com/api_search.php?{$params}'></script>
 EOD;
   return $output;
 }
