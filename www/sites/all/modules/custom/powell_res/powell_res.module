@@ -4,7 +4,7 @@
 /*** Master validation function for the POWELL-Res form *******************************************************/
 /***********************************************************************************************************/
 
-/**  LAST UPDATED 20140123                                                                               **/
+/**  LAST UPDATED 20141028                                                                               **/
 /**
  * Master validation function for the customer survey form - uses per-stage 
  * validation and calls functions for each one.
