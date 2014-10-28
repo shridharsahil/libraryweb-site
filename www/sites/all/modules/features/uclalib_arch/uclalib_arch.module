@@ -228,7 +228,9 @@ function uclalib_arch_form_bean_form_alter(&$form, &$form_state, $form_id) {
 
   // Hide the view mode selector if there is only one to choose from.
   // This really should be built into the Bean module itself. ;)
-  if(count($form['view_mode']['#options']) == 1) {
+  // Avoid undefined index errors which happen for non-administrators...
+  // .. view_mode['#options'] is (always?) not present for non-admins, don't know why.
+  if (isset($form['view_mode']['#options']) && count($form['view_mode']['#options']) == 1) {
     $form['view_mode']['#type'] = 'hidden';
   }
 
