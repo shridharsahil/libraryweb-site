@@ -550,6 +550,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
+      'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
@@ -1284,6 +1285,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
+      'admin_ga' => 'admin_ga',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
