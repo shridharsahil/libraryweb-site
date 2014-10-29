@@ -297,13 +297,13 @@ function powell_res_form_page_three($form, &$form_state) {
     $working_uid = $_SERVER['SHIBUCLAUNIVERSITYID'];
     //print_r($_SERVER['SHIBUCLAUNIVERSITYID']);
     $login_ok = 1;
-//  } else if ( !empty($_SERVER['HTTP_HOST']) ) { //dhc: temporary to allow operation on non-shib workstation // comment ou this section before putting onto DrupalTest and/or Production
-//    if ( $_SERVER['HTTP_HOST']=='localhost' ) {
-//      $working_uid = '502673598';
-//      //print_r($_SERVER['HTTP_HOST']);
-//      //print_r($working_uid);
-//      $login_ok = 1;
-//    }
+  } else if ( !empty($_SERVER['HTTP_HOST']) ) { //dhc: temporary to allow operation on non-shib workstation // comment ou this section before putting onto DrupalTest and/or Production
+    if ( $_SERVER['HTTP_HOST']=='localhost' || $_SERVER['HTTP_HOST']=='uclalib.local') {
+      $working_uid = '502673598';
+      //print_r($_SERVER['HTTP_HOST']);
+      //print_r($working_uid);
+      $login_ok = 1;
+    }
   } else {
 	// login failed, pick up in validation routine
       $working_uid = '';
@@ -332,12 +332,13 @@ if ( !empty( $working_uid )) {
 }
 
   // TEMP FOR TESTING
-  // powell_session_variable_set('powell-res','powell_res_get_user_category', 'undergraduate');
-  // powell_session_variable_set('powell-res','powell_res_get_user_category', 'graduate');
-  // powell_session_variable_set('powell-res','powell_res_get_user_category', 'staff');
-  //$powell_res_get_user_category = 'extension';
-  //powell_session_variable_set('powell-res','powell_res_get_user_category', 'extension');
-  //print_r($powell_res_get_user_category);
+   //rc_session_variable_set('rc-res','rc_res_get_user_category', 'undergraduate');
+   //$rc_res_get_user_category = "undergraduate";
+  // rc_session_variable_set('rc-res','rc_res_get_user_category', 'graduate');
+  // rc_session_variable_set('rc-res','rc_res_get_user_category', 'staff');
+  //$rc_res_get_user_category = 'extension';
+  //rc_session_variable_set('rc-res','rc_res_get_user_category', 'extension');
+  //print_r($rc_res_get_user_category);
   // END TEMP FOR TESTING
 
   // translate Voyager terms to match local terms
@@ -382,6 +383,7 @@ if ( !empty( $working_uid )) {
   // get the current date/time of the DrupalTest server
   $nowDate = strtotime("now");
   $earliest_new_reservation = strtotime("now".$earliest_new_reservation_inc); //dhc_change move this to just before needing it so that it is set at the time the user clicks on a button dhcdhcdhc
+  
   $startDatePast = array();
   $startDateFuture = array();
   $startDateLatest = array();
@@ -779,7 +781,9 @@ function powell_res_form_page_four($form, &$form_state) {
 
   // get the number of items the current category of user is allowed to reserve into the future - typically either 1 or 3
   $my_resv_lim = $my_kvar[0]['time_per'];
-
+  $my_advance = $my_kvar[0]['cls_adv'];
+  $my_advance_days = $my_advance/24;
+  
   if (!empty($form_state['page_values'][4])) {
     $form_state['values'] = $form_state['page_values'][4];
     $default_date_time = $form_state['values']['date'];
@@ -829,10 +833,10 @@ function powell_res_form_page_four($form, &$form_state) {
 
   $earliest_new_reservationDisplay = date('g:ia \o\n l jS F Y', $earliest_new_reservation);
 
-  // dhc here: check undergrad pulling $my_resv_lim from business rules
+  // dhc here: check undergrad pulling $my_advance_days from business rules
 
   // UNDERGRAD SECTION
-  if ( $my_resv_lim == 1 ){
+  if ( $my_advance_days == 1 ){
     $maxDate = strtotime("now".' +1 day');
 
     $zone[0] = strtotime("now");
@@ -875,7 +879,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 
   // GRADUATE, STAFF SECTION
   } else {
-//  } else if ( $my_resv_lim > 1 ){
+//  } else if ( $my_advance_days > 1 ){
 
   // calculate legal reservation zones based on any existing reservations in the n-24 to n+168 interval
   $nm1 = 0;
@@ -886,7 +890,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
   // if no reservation exists
   if( $existing_resv == 0 ){
     $zone[0] = strtotime("now");
-    $zone[1] = strtotime("now".' +'.$my_resv_lim.' day');
+    $zone[1] = strtotime("now".' +'.$my_advance_days.' day');
     $maxDate = $zone[1];
 
   // else if one or more than one reservation exists and they are in the past and future OR just in the future
@@ -912,14 +916,14 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 	}
       }
     }
-    if( (strtotime($options[$i]['startDate'])+(24*3600)) <= (strtotime("now".' +'.$my_resv_lim.' day')) ) {
+    if( (strtotime($options[$i]['startDate'])+(24*3600)) <= (strtotime("now".' +'.$my_advance_days.' day')) ) {
       if ( strtotime("now") <= (strtotime($options[$i]['startDate'])+(24*3600)) ){
 	$zone[$j+=1] = strtotime($options[$i]['startDate'])+(24*3600);
-	$zone[$j+=1] = strtotime("now".' +'.$my_resv_lim.' day');
+	$zone[$j+=1] = strtotime("now".' +'.$my_advance_days.' day');
       }
-      else if( (strtotime("now")) <= (strtotime("now".' +'.$my_resv_lim.' day')) ) {
+      else if( (strtotime("now")) <= (strtotime("now".' +'.$my_advance_days.' day')) ) {
 	$zone[$j+=1] = strtotime("now");
-	$zone[$j+=1] = strtotime("now".' +'.$my_resv_lim.' day');
+	$zone[$j+=1] = strtotime("now".' +'.$my_advance_days.' day');
       }
     }
     // END - calculate zones time within which a reservation can be made  
@@ -979,7 +983,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
   } else if( $outOfRange == 1 ) {
     powell_session_variable_set('powell-res','no_res_available',0);
 
-form_set_error('', 'Please choose a start time in one of the following time slot(s)<br>(reservations can be no more than '.$my_resv_lim.' day(s) into the future and must be at least 24 hours from any existing reservations.)<br>
+form_set_error('', 'Please choose a start time in one of the following time slot(s)<br>(reservations can be no more than '.$my_advance_days.' day(s) into the future and must be at least 24 hours from any existing reservations.)<br>
 Also, please make the reservation during hours of operation. See <a href="http://www.library.ucla.edu/powell" target="_new">Powell hours</a>.');
 
     $zones = ucfirst(powell_session_variable_get('powell-res','name_first')).' '.ucfirst(powell_session_variable_get('powell-res','name_last')).'&nbsp;( <a href="powell-logout">logout</a> )<br><br>
@@ -1046,7 +1050,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 		      <b>Start before ').$earliest_new_reservation_time.' tomorrow</b> ('.$earliest_new_reservation_time_date.')'
     );
   }
-  } // else if ( $my_resv_lim > 1 )
+  } // else if ( $my_advance_days > 1 )
 
   powell_session_variable_set('powell-res','maxDate', $maxDate);
 
@@ -1281,7 +1285,17 @@ function powell_res_form_page_six($form, &$form_state) {
   $rhours_available = $rhours_available * 60;
 
   if (preg_match("/Group/i", $rtitle)) {
+    if( $my_pod_lim < $rhours_available ){
+      $myLim = $my_pod_lim;
+    } else {
+      $myLim = $rhours_available;
+    }
   } else if (preg_match("/Classroom/i", $rtitle)) {
+    if( $my_pod_lim < $rhours_available ){
+      $myLim = $my_pod_lim;
+    } else {
+      $myLim = $rhours_available;
+    }
   } else  { // use pod if nothing else matches
     if( $my_pod_lim < $rhours_available ){
       $myLim = $my_pod_lim;
