@@ -12,6 +12,10 @@
 
   <div class="content"<?php print $content_attributes; ?>>
 
+  <?php if (isset($content['field_introduction'])) { ?>
+    <div class="link-list-intro"><?php print $content['field_introduction'][0]['#markup']; ?></div>
+  <?php } ?>
+
     <?php
       $items = array();
       foreach(element_children($content['field_linklist_links']) as $link) {

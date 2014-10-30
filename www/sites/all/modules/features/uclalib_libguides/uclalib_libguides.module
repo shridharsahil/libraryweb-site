@@ -1,0 +1,98 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB LibGuides feature.
+ */
+
+include_once 'uclalib_libguides.features.inc';
+
+/**
+ * Implements hook_form_ID_alter
+ */
+function uclalib_libguides_form_bean_form_alter(&$form, &$form_state) {
+  // Note: other common alterations found in uclalib_arch_form_bean_form_alter().
+  if ($form['#bundle'] == 'libguides_api_v1') {
+    // Hide the revision checkbox.
+    $form['revision']['is_new_revision']['#type'] = 'hidden';
+    // Make "Create new revision" off by default.
+    $form['revision']['is_new_revision']['#default_value'] = 0;
+    // Hide the revision log field.
+    $form['revision']['log']['#type'] = 'hidden';
+  }
+}
+
+/**
+ * Implements hook_bean_view
+ */
+function uclalib_libguides_bean_view(Bean $bean, $view_mode = 'default', $langcode = NULL) {
+  if ($bean->type == 'libguides_api_v1') {
+    $content = array();
+    $html = _uclalib_libguides_build_html($bean);
+    $content[] = array(
+      '#type'   => 'markup',
+      '#prefix' => '<div class="pane-style-background-blue">',
+      '#markup' => $html,
+      '#suffix' => '</div',
+    );
+    // Theme uclalib_omega_preprocess_panels_pane() looks for bundle in content, instead of using bean->type
+    $content['#bundle'] = $bean->type;
+    $bean->content = $content;
+    // Suppress the bean title as it's overridden/reformatted and included in the block body
+    $bean->title = '';
+  }
+}
+
+function _uclalib_libguides_build_html(Bean $bean) {
+  // We know from content type definition that all fields are single-value and no language
+  // so the inflexible ['und'][0]['value'] approach should be ok.
+  $desc = $bean->field_lg_api_v1_desc['und'][0]['value'];
+  $limit = $bean->field_lg_api_v1_limit['und'][0]['value'];
+  $more = $bean->field_lg_api_v1_more['und'][0]['value'];
+  $sortby = $bean->field_lg_api_v1_sortby['und'][0]['value'];
+  $terms = $bean->field_lg_api_v1_search_term['und'][0]['value'];
+  $type = $bean->field_lg_api_v1_search_type['und'][0]['value'];
+
+  $base_id = '261'; // our id, assigned by Springshare
+  // To allow multiple blocks / api calls per page, we need to override the id so it's unique.
+  // Just do this for all blocks, so we don't have to figure out if there are others on a page.
+  // Append the internal bean id to the id to make it unique.
+  $override_id = $base_id . 'x' . $bean->bid;
+
+  // Also need to modify the div id when using override id.
+  $div_id = 'api_search_' . $type . '_iid' . $override_id;
+
+  // Finally, start putting together the parameter string for the API call.
+  $params = 'iid=' . $base_id;
+  $params .= '&type=' . $type;
+  $params .= '&search=' . $terms;
+  // Only output sortby parameter if non-default
+  if ($sortby != 'SKIP') {
+    $params .= '&sortby=' . $sortby;
+  }
+  // Only output limit parameter if set
+  if ($limit > 0) {
+    $params .= '&limit=' . $limit;
+  }
+  // Only output desc parameter if true
+  if ($desc == '1') {
+    $params .= '&desc=on';
+  }
+  // Only output more parameter if false (to turn off display of "View more results")
+  if ($more == '0') {
+    $params .= '&more=false';
+  }
+  $params .= '&context=object';
+  $params .= '&format=js';
+  $params .= '&id_override=' . $div_id; // parameter needs to use the same value as the div
+  // Output the bean title (reformatted), the div which will be targeted by the javascript,
+  // and the javascript itself.
+  // Use protocol-independent URL so it works regardless of http/https.
+  $title = 'Research Guides' . '<br />' . $bean->title;
+  $output = <<<EOD
+    <h3 style='margin-top: 0px;'>{$title}</h3>
+    <div id='{$div_id}'></div>
+    <script type='text/javascript' src='//api.libguides.com/api_search.php?{$params}'></script>
+EOD;
+  return $output;
+}
+

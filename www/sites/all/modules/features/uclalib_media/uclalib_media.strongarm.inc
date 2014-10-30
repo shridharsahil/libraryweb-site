@@ -121,14 +121,23 @@ function uclalib_media_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'filename' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'preview' => array(
-          'weight' => '1',
+          'weight' => '3',
+        ),
+        'redirect' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(

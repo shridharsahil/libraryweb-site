@@ -1004,6 +1004,24 @@ a[href="#main-content"] {
   display: none;
 }
 
+.media-element-container {
+  display: table;
+}
+
+.media-element-container.media-float-left {
+  float: left;
+}
+
+.media-element-container.media-float-right {
+  float: right;
+}
+
+.media-element-container .field--name-field-attribution {
+  font-style: italic;
+  text-align: right;
+  font-size: .85em;
+}
+
 .more-link-triangle-after:after, div.more-link > a:after,
 a.more-link:after,
 .more-link-block a:after, .pane-bean-featured-content .field--name-field-featured-thumbnail-image a:after,
@@ -1196,7 +1214,7 @@ a.more-link,
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo-colophon.png?1399382991');
+  background-image: url('../images/logo-colophon.png?1399407339');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 150px;
@@ -1231,6 +1249,11 @@ a.more-link,
 
 .pane-bean-link-list .menu li {
   margin: 10px 0;
+}
+.pane-bean-link-list .link-list-intro {
+  margin-top: -10px;
+  font-size: .9em;
+  font-style: italic;
 }
 .pane-bean-link-list .field--name-field-link-description,
 .pane-bean-link-list .field--name-field-link-link {
