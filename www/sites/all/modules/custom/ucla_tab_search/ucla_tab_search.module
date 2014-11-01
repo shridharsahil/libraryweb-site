@@ -144,8 +144,9 @@ can be changed via a pulldown search limit on the results screen. Many records c
 
 
     $form['books']['catalog_container_cat']['description'] = array(
-    '#markup' => t('<strong>What am I searching?</strong></br>
-<strong>UCLA Library Catalog</strong> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong> but it does not contain journal article titles or authors.</strong>'),
+    '#markup' => t(
+      '<strong>What am I searching?</strong></br>
+       <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong>but it does not contain journal article titles or authors.</strong>'),
   );
 
   ////////////////////////////////////////////////////////////////////////////////
