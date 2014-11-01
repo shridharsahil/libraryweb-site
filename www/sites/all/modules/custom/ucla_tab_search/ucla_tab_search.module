@@ -124,7 +124,7 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
 
  $form['books']['catalog_container_mel']['description'] = array(
     '#markup' => t('<strong>What am I searching?</strong></br>
-<strong>Melvyl</strong> provides information about articles, books, journals and other materials held by UCLA, other University of
+<a href="http://ucla.worldcat.org/">Melvyl</a> provides information about articles, books, journals and other materials held by UCLA, other University of
 California (UC) campuses, and libraries worldwide. This search is limited to University of California Libraries, but
 can be changed via a pulldown search limit on the results screen. Many records contain links to full-text articles from
 <a href="http://ucla.worldcat.org/advancedsearch"> selected databases. </a>
