@@ -124,7 +124,7 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
 
  $form['books']['catalog_container_mel']['description'] = array(
     '#markup' => t('<strong>What am I searching?</strong></br>
-<strong>Melvyl</strong> provides information about articles, books, journals and other materials held by UCLA, other University of
+<a href="http://ucla.worldcat.org/">Melvyl</a> provides information about articles, books, journals and other materials held by UCLA, other University of
 California (UC) campuses, and libraries worldwide. This search is limited to University of California Libraries, but
 can be changed via a pulldown search limit on the results screen. Many records contain links to full-text articles from
 <a href="http://ucla.worldcat.org/advancedsearch"> selected databases. </a>
@@ -144,8 +144,9 @@ can be changed via a pulldown search limit on the results screen. Many records c
 
 
     $form['books']['catalog_container_cat']['description'] = array(
-    '#markup' => t('<strong>What am I searching?</strong></br>
-<strong>UCLA Library Catalog</strong> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong> but it does not contain journal article titles or authors.</strong>'),
+    '#markup' => t(
+      '<strong>What am I searching?</strong></br>
+       <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong>but it does not contain journal article titles or authors.</strong>'),
   );
 
   ////////////////////////////////////////////////////////////////////////////////
