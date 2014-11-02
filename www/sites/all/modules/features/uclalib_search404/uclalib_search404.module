@@ -4,4 +4,4 @@
  * Code for the UCLALIB Search 404 feature.
  */
 
-include_once 'uclalib_search_404.features.inc';
+include_once 'uclalib_search404.features.inc';
