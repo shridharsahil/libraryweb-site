@@ -3,6 +3,7 @@ description = Configuration for Search 404
 core = 7.x
 package = UCLALIB
 dependencies[] = ctools
+dependencies[] = search404
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
