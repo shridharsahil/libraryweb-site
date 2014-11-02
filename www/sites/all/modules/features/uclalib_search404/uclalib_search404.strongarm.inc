@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * uclalib_search_404.strongarm.inc
+ * uclalib_search404.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function uclalib_search_404_strongarm() {
+function uclalib_search404_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
