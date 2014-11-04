@@ -22,7 +22,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722666,
     'log' => 'links opening in new window for external sites',
-    'uid' => 60,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '86058cc9-4263-447c-ac03-f4647cbda15c',
@@ -151,6 +151,7 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Quick Links - Search and Research',
@@ -164,7 +165,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398969197,
     'log' => 'links',
-    'uid' => 77,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '95745709-2104-4d2c-b237-8139836f3008',
@@ -293,6 +294,7 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Research Tools',
@@ -306,7 +308,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722734,
     'log' => 'links opening in new window for external sites',
-    'uid' => 60,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '1087b58c-f0a8-46dc-9806-0c424bd1ac5f',
@@ -435,6 +437,7 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Images, Audio, & Video',
@@ -448,7 +451,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722354,
     'log' => 'links opening in new window for external sites',
-    'uid' => 60,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '6af3ea98-f8b9-4531-be52-394394cc5553',
@@ -557,6 +560,7 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Books & Journals',
@@ -570,7 +574,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722227,
     'log' => 'added link',
-    'uid' => 60,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '874ead3d-654f-41b6-8500-0f6ca7be6009',
@@ -757,6 +761,7 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Archives & Primary Resources',
@@ -770,7 +775,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1398722604,
     'log' => 'links opening in new window for external sites',
-    'uid' => 60,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '2afc053b-5a2b-4353-aab8-c794ed39fb37',
@@ -899,6 +904,7 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Articles',
@@ -911,7 +917,7 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'journals',
     'view_mode' => 'default',
     'created' => 1398722406,
-    'log' => 'link',
+    'log' => 'fixed url',
     'uid' => 60,
     'default_revision' => 1,
     'revisions' => array(),
@@ -1064,7 +1070,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'https://www.library.ucla.edu/search/articles',
+                'url' => '/node/1536',
                 'title' => 'Quick Articles',
                 'attributes' => array(
                   'target' => 0,
@@ -1079,6 +1085,7 @@ function uclalib_resources_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   return $beans;
 }
