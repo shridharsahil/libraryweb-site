@@ -917,8 +917,8 @@ function uclalib_resources_uuid_features_default_beans() {
     'delta' => 'journals',
     'view_mode' => 'default',
     'created' => 1398722406,
-    'log' => 'fixed url',
-    'uid' => 60,
+    'log' => 'updated link',
+    'uid' => 42,
     'default_revision' => 1,
     'revisions' => array(),
     'vuuid' => '106e9ea0-ca4e-4c3c-9350-1e6bf3691027',
@@ -1070,7 +1070,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => '/node/1536',
+                'url' => 'node/1536',
                 'title' => 'Quick Articles',
                 'attributes' => array(
                   'target' => 0,
