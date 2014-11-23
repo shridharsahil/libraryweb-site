@@ -138,11 +138,11 @@ function uclalib_arch_ckeditor_profile_defaults() {
           'media' => array(
             'name' => 'media',
             'desc' => 'Plugin for inserting images from Drupal media module',
-            'path' => '%plugin_dir%media/',
+            'path' => '/sites/all/modules/contrib/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
             'buttons' => array(
               'Media' => array(
-                'label' => 'Media',
                 'icon' => 'images/icon.gif',
+                'label' => 'Add media',
               ),
             ),
             'default' => 'f',
