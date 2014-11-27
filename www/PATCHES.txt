@@ -35,3 +35,7 @@ https://www.drupal.org/files/issues/media_filter_float_delegate-2018075-8.patch
 Panels - Allow users to manually control window title.
 https://drupal.org/node/2262173
 https://drupal.org/files/issues/panels-allow_users_control_window_title-2262173-4.patch
+
+References Dialog - Recoverable fatal error: Argument 3 passed to l() must be an array, string given with references_dialogs
+https://www.drupal.org/node/2315905
+https://www.drupal.org/files/issues/references_dialog_fix_theme_links-2315905-5.patch.patch
