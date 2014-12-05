@@ -331,7 +331,7 @@ function uclalib_data_registry_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'List of Your Projects';
+  $handler->display->display_options['title'] = 'Contents of the UCLA Data Registry';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
@@ -371,7 +371,12 @@ function uclalib_data_registry_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/record/[nid]/mods.xml">MODS XML</a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['path'] = 'service/data-registry-update-all';
+  $handler->display->display_options['path'] = 'support/publishing-data-management/data-management-curation-services/data-registry/browse/view';
+  $handler->display->display_options['menu']['title'] = 'Browse Data Registry';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: UCLA DR List */
   $handler = $view->new_display('block', 'UCLA DR List', 'block_1');
