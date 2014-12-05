@@ -296,7 +296,7 @@ function uclalib_destination_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'link' => 0,
+      'link' => 1,
       'markup' => 'h3',
       'id' => '',
       'class' => '',
