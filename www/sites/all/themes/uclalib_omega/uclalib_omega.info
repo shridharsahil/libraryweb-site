@@ -9,6 +9,7 @@ core = 7.x
 ; Core Stylesheet Overrides
 ; ========================================
 stylesheets[all][] = css/modules/system/system.menus.theme.css
+stylesheets[all][] = css/modules/site_alert/site-alert.css
 
 ; ========================================
 ; Icons and Fonts
