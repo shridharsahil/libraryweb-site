@@ -439,6 +439,33 @@ function uclalib_event_views_default_views() {
   /* Display: Exhibitions Highlight */
   $handler = $view->new_display('panel_pane', 'Exhibitions Highlight', 'exhibition_highlight_pane');
   $handler->display->display_options['link_url'] = 'news-events/exhibits';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Exhibition End Date (field_exhibition_end) */
+  $handler->display->display_options['sorts']['field_exhibition_end_value']['id'] = 'field_exhibition_end_value';
+  $handler->display->display_options['sorts']['field_exhibition_end_value']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['sorts']['field_exhibition_end_value']['field'] = 'field_exhibition_end_value';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'exhibition' => 'exhibition',
+  );
+  /* Filter criterion: Content: Exhibition End Date (field_exhibition_end) */
+  $handler->display->display_options['filters']['field_exhibition_end_value']['id'] = 'field_exhibition_end_value';
+  $handler->display->display_options['filters']['field_exhibition_end_value']['table'] = 'field_data_field_exhibition_end';
+  $handler->display->display_options['filters']['field_exhibition_end_value']['field'] = 'field_exhibition_end_value';
+  $handler->display->display_options['filters']['field_exhibition_end_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_exhibition_end_value']['default_date'] = 'now';
   $export['exhibitions_highlight'] = $view;
 
   $view = new view();
