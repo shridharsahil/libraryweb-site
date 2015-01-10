@@ -1,0 +1,30 @@
+.l-region--help .pane-page-site-alert {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.pane-page-site-alert div.text {
+  text-align: center;
+  padding: .6em 2em;
+  margin: 0;
+  font-size: 18px;
+  line-height: 32px;
+  color: #58595B;
+}
+.pane-page-site-alert div.text:before {
+  content: "";
+  background-image: url("../../../images/icon-alert.png");
+  background-image: url("../../../images/icon-alert.svg"), none;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  margin-left: -37px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.pane-page-site-alert div.low {
+  background: #fee4b1;
+}
+.pane-page-site-alert div.high {
+  background: #f1c9ca;
+}

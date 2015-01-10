@@ -1,0 +1,32 @@
+.pane-page-site-alert {
+  .l-region--help & {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  div.text {
+    text-align: center;
+    padding: .6em 2em;
+    margin: 0;
+    font-size: 18px;
+    line-height: 32px;
+    color: #58595B;
+    &:before {
+      content: "";
+      background-image: url('../../../images/icon-alert.png');
+      background-image: url('../../../images/icon-alert.svg'), none;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
+      margin-left: -37px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+  div.low {
+    background: #fee4b1;
+  }
+  div.high {
+    background: #f1c9ca;
+  }
+}
