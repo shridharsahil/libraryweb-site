@@ -16,7 +16,10 @@ function uclalib_data_registry_default_page_manager_pages() {
   $page->admin_title = 'Browse Data Registry';
   $page->admin_description = '';
   $page->path = 'support/publishing-data-management/data-management-curation-services/data-registry/browse';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'none',
     'title' => '',
