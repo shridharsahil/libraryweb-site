@@ -1842,6 +1842,35 @@ function rc_res_form_page_four_handler_submit($form, &$form_state) {
     $form_state['values'] = $form_state['page_values'][5];
   }
 
+$openClose[1][0] = 7;
+$openClose[1][1] = 30;
+$openClose[1][2] = 23;
+$openClose[1][3] = 00;
+$openClose[2][0] = 7;
+$openClose[2][1] = 30;
+$openClose[2][2] = 23;
+$openClose[2][3] = 00;
+$openClose[3][0] = 7;
+$openClose[3][1] = 30;
+$openClose[3][2] = 23;
+$openClose[3][3] = 00;
+$openClose[4][0] = 7;
+$openClose[4][1] = 30;
+$openClose[4][2] = 23;
+$openClose[4][3] = 00;
+$openClose[5][0] = 7;
+$openClose[5][1] = 30;
+$openClose[5][2] = 18;
+$openClose[5][3] = 00;
+$openClose[6][0] = 9;
+$openClose[6][1] = 00;
+$openClose[6][2] = 17;
+$openClose[6][3] = 00;
+$openClose[7][0] = 11;
+$openClose[7][1] = 00;
+$openClose[7][2] = 21;
+$openClose[7][3] = 00;
+  
   // get the current time/date from server
   $nowDate = strtotime("now");
 
@@ -1854,26 +1883,30 @@ function rc_res_form_page_four_handler_submit($form, &$form_state) {
   // print out ranges for the user
   $zonePoints = sizeof( $zone );
 
+  
+  // check to ensure that the user specified date/time falls within a zone and within operating hours
   $i = 0;
   $outOfRange = 0;
   $zoneOk = 0;
   $zoneRange = '';
   while ($i < $zonePoints) {
-    if (  !empty($zone[$i]) && !empty($zone[$i+1]) && $zoneOk==0  ) {
+  if (  !empty($zone[$i]) && !empty($zone[$i+1]) && $zoneOk==0  ) {
       // is the user specified date/time within a zone? Pad the upper limit by 30 minutes because of earlier rounding; eg choosing a 3:30pm resv would fail if the realtime is between 3:00 and 3:30
       if( !( $userDate>=$zone[$i]&&$userDate<=$zone[$i+1]+1800 ) ){
-	$outOfRange = 1;
-      // is the user specified date/time during operating hours? (simplified for now, need to pull actual hours in the future)
-      } else if( !(( date('G', $userDate)>='8' && date('i', $userDate)>='30' )  ||  ( date('G', $userDate)<='21' && date('i', $userDate)<='30' )) ) {
-	$outOfRange = 1;
+      $outOfRange = 1;
+      // is the user specified date/time during operating hours? Check for each day of week (in array). (simplified for now, need to pull actual hours into the array from an Hours Web Service
+      } else if( !( ( date('G', $userDate)*60+date('i', $userDate) >= ( $openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1] )  ) && ( date('G', $userDate)*60+date('i', $userDate) <= ( $openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3]-60 )  ) ) ) {
+      $outOfRange = 1;
       } else {
-	$outOfRange = 0;
+      $outOfRange = 0;
 	$zoneOk = 1;
       }
     }
     $i+=2;
   }
-
+  // END - check to ensure that the user specified date/time falls within a zone and within operating hours
+  
+  
   $no_res_available = 0;
   // if the user picked time/date falls within a legal time slot
   if( $outOfRange == 0 ){
