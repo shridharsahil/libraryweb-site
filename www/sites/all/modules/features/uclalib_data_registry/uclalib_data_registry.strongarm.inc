@@ -120,14 +120,16 @@ function uclalib_data_registry_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_data';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
   $export['menu_options_data'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_data';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'main-menu:2608';
   $export['menu_parent_data'] = $strongarm;
 
   $strongarm = new stdClass();
