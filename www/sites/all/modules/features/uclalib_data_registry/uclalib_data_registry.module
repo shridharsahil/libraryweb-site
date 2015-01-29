@@ -25,6 +25,5 @@ function uclalib_data_registry_form_data_node_form_alter(&$form, &$form_state, $
  * Submit handler for hook_form_data_node_form_alter().
  */
 function disable_data_menu_item_submit($form, &$form_state) {
-  dpm($form_state, "\$form_state - from handler");
   $form_state['values']['menu']['hidden'] = $form_state['values']['menu']['disable'];
 }
