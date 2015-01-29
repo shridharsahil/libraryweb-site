@@ -989,7 +989,7 @@ Also, please make the reservation during hours of operation. See <a href="http:/
     $zones = ucfirst(rc_session_variable_get('rc-res','name_first')).' '.ucfirst(rc_session_variable_get('rc-res','name_last')).'&nbsp;( <a href="yrl-logout">logout</a> )<br><br>
 Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish &nbsp;&nbsp;&nbsp;<br>
 		      <br>
-		      Start date/time must fall within this range:2<br>
+		      Start date/time must fall within this range:<br>
 		      <b>'
 		      .$zoneRange.'</b>
 		      <br>and occur during building hours: <a href="http://www.library.ucla.edu/about/research-library-hours" target="_new">YRL hours</a><br>
@@ -999,7 +999,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
     $zones = ucfirst(rc_session_variable_get('rc-res','name_first')).' '.ucfirst(rc_session_variable_get('rc-res','name_last')).'&nbsp;( <a href="yrl-logout">logout</a> )<br><br>
 Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish &nbsp;&nbsp;&nbsp;<br>
 		      <br>
-		      Start date/time must fall within this range3:<br>
+		      Start date/time must fall within this range:<br>
 		      <b>'
 		      .$zoneRange.'</b>
 		      <br>and occur during building hours:<br>
@@ -1015,7 +1015,7 @@ Also, please make the reservation during hours of operation. See <a href="http:/
     $zones = ucfirst(rc_session_variable_get('rc-res','name_first')).' '.ucfirst(rc_session_variable_get('rc-res','name_last')).'&nbsp;( <a href="yrl-logout">logout</a> )<br><br>
 Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish &nbsp;&nbsp;&nbsp;<br>
 		      <br>
-		      Start date/time must fall within this range4:<br>
+		      Start date/time must fall within this range:<br>
 		      <b>'
 		      .$zoneRange.'</b>
 		      <br>and occur during building hours: <a href="http://www.library.ucla.edu/about/research-library-hours" target="_new">YRL hours</a><br>
@@ -1540,8 +1540,8 @@ Current Reservation(s):
 	}
       }
       $body = '
-<br>You have successfully reserved '.$newRoomName.' from '.$newStartDate.' to '.$newEndDate.'. Please bring your current Bruincard to the CLICC Laptop Lending Desk in the Research Library to claim your reservation. You can only claim your reservation from fifteen minutes before until fifteen minutes after the beginning of your reservation. Unclaimed reservations will be canceled. Laptop display adapters and dry erase markers and erasers are available for check out.
-'; // <b></b> is translated to ** in ASCII enail
+<br>You have successfully reserved '.$newRoomName.' from '.$newStartDate.' to '.$newEndDate.'. Please bring your current Bruincard to the CLICC Desk in the Powell Library to claim your reservation. You can only claim your reservation from fifteen minutes before until fifteen minutes after the beginning of your reservation. Unclaimed reservations will be canceled.
+'; // <b></b> is translated to ** in ASCII email
     }
 
 

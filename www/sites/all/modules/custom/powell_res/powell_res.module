@@ -54,7 +54,7 @@ function powell_res_form_page_one_validate($form, &$form_state) {
     if ($form_state['values']['pnumber'] == 0) {
       form_set_error('pnumber', 'Please choose the number of persons in your group.');
     }
-    if ($form_state['values']['res_length'] == 0) {
+    if (($form_state['values']['res_length'] <= 30) || ($form_state['values']['res_length'] > rc_session_variable_get('rc-res','myLim'))) { // error if no choice or if user spoofs a illegally high duration
       form_set_error('res_length', 'Please enter the duration of your reservation.');
     }
 //    if (!$form_state['values']['user_dept']) {
@@ -461,7 +461,7 @@ if ( !empty( $working_uid )) {
 	  if( $startDatePastCnt > 0 ){
 	    if( $my_resv_lim == 1 ){
 	      if( $startDatePastCnt > 1 ){
-		print_r('ERROR - call Darrow Cole at Library IT 310-206-5565');
+		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 464');
 	      } else {
 //		$myRow = 1;
 		$myDelete = 1;
@@ -503,7 +503,7 @@ if ( !empty( $working_uid )) {
 	  $startDatePastCnt += 1;
 	  if( $startDateFutureCnt > 0 ){
 	    if( $my_resv_lim == 1 ){
-		print_r('ERROR - call Darrow Cole at Library IT 310-206-5565');
+		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 464');
 	    } else if( $lcnt < $my_resv_lim ){
 //	      $myRow = 1;
 	      $myDelete = 1;
@@ -636,7 +636,7 @@ Graduate Student, Faculty, and Library Staff Reservations
 <li>up to four hours long
 <li>up to one week in advance
 <li>all reservation start times must be at least twenty-four hours apart
-<li>users who require exceptions may contact yrlrc@library.ucla.edu
+<li>users who require exceptions may contact irma@library.ucla.edu
 </ul>
 '),
     ),
@@ -663,7 +663,7 @@ Graduate Student, Faculty, and Library Staff Reservations
 <li>up to four hours long
 <li>up to one week in advance
 <li>all reservation start times must be at least twenty-four hours apart
-<li>users who require exceptions may contact yrlrc@library.ucla.edu
+<li>users who require exceptions may contact irma@library.ucla.edu
 </ul></b>
 Undergraduate Student and Staff Reservations
 <ul>
@@ -1303,56 +1303,26 @@ function powell_res_form_page_six($form, &$form_state) {
       $myLim = $rhours_available;
     }
   }
+  $maxResv = rc_session_variable_get('rc-res','maxResv'); // maxResv is the number of minutes between the start of the user's reservation and the closing time
+  $maxResv += 60; //add 60 min here to loop and populate the Duration dropdown
 
-  // Improvement needed: change this to an unlimited list using mod and ?
-  if( $myLim >= 240 ){
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-    $resLength[90] = '1 1/2 hours';
-    $resLength[120] = '2 hours';
-    $resLength[150] = '2 1/2 hours';
-    $resLength[180] = '3 hours';
-    $resLength[210] = '3 1/2 hours';
-    $resLength[240] = '4 hours';
-  } else  if( $myLim >= 210 ) {
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-    $resLength[90] = '1 1/2 hours';
-    $resLength[120] = '2 hours';
-    $resLength[150] = '2 1/2 hours';
-    $resLength[180] = '3 hours';
-    $resLength[210] = '3 1/2 hours';
-  } else  if( $myLim >= 180 ) {
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-    $resLength[90] = '1 1/2 hours';
-    $resLength[120] = '2 hours';
-    $resLength[150] = '2 1/2 hours';
-    $resLength[180] = '3 hours';
-  } else  if( $myLim >= 150 ) {
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-    $resLength[90] = '1 1/2 hours';
-    $resLength[120] = '2 hours';
-    $resLength[150] = '2 1/2 hours';
-  } else  if( $myLim >= 120 ) {
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-    $resLength[90] = '1 1/2 hours';
-    $resLength[120] = '2 hours';
-  } else  if( $myLim >= 120 ) {
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-    $resLength[90] = '1 1/2 hours';
-    $resLength[120] = '2 hours';
-  } else  if( $myLim >= 90 ) {
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-    $resLength[90] = '1 1/2 hours';
-  } else {
-    $resLength[0] = 'Choose';
-    $resLength[60] = '1 hours';
-  }
+  $resLengthMsg[30] = 'Choose'; // pad by 30 minutes to allow loop (below) to start at 30 and then increment by 30
+  $resLengthMsg[60] = '1 hour';
+  $resLengthMsg[90] = '1 1/2 hours';
+  $resLengthMsg[120] = '2 hours';
+  $resLengthMsg[150] = '2 1/2 hours';
+  $resLengthMsg[180] = '3 hours';
+  $resLengthMsg[210] = '3 1/2 hours';
+  $resLengthMsg[240] = '4 hours';
+
+  // populate the Duration pulldown. Limit if the reservation end time is too close to closing time and/or limit choices if the patron category rule has a reduced allowable duration
+  for( $w=30; $w<=$maxResv; $w+=30 ){ // 30 minute resolution on reservations - but starting at 60 minutes. So. start at 30 and increment each by 30 in the loop. Note that this will need to be changed if a 30 minute reservation is ever allowed. if so, just start at [o] for the Choose label.
+    $resLengthMsgCount = count($resLengthMsg); // get the length of the arrary to calulate the maximum reservation length (4 hrs)
+      if ($w<=$myLim){ // do not add a menu choice unless it is <= than the maximum reservation length [dhc: a check is needed server side on the returned value to prevent spoofing]
+	$resLength[$w] = $resLengthMsg[$w]; // build the array that is used to populate the contents of the pulldown
+	rc_session_variable_set('rc-res','myLim',$myLim); // save for server-side error checking when this page is submitted to prevent user insertion of an illegal higher than permitted value for duration
+	}
+      }
 
   $form = array();
   $form['description'] = array
@@ -1387,8 +1357,13 @@ Your Reservations > Date & Time > Available Resources > <B>Details</B> > Finish 
     '#default_value' => 'Choose',
   );
 
+  $durationMsg = 'Duration';
+  if( $maxResv < $myLim ){
+    $durationMsg = 'Duration (Note: Available hours are limited due to closing time)';
+  }
+  
   $form['res_length'] = array(
-    '#title' => t('Duration'),
+    '#title' => t($durationMsg),
     '#type' => 'select',
     '#options' => $resLength,
     '#default_value' => 'Choose',
@@ -1842,6 +1817,35 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
     $form_state['values'] = $form_state['page_values'][5];
   }
 
+$openClose[1][0] = 7;
+$openClose[1][1] = 30;
+$openClose[1][2] = 23;
+$openClose[1][3] = 00;
+$openClose[2][0] = 7;
+$openClose[2][1] = 30;
+$openClose[2][2] = 23;
+$openClose[2][3] = 00;
+$openClose[3][0] = 7;
+$openClose[3][1] = 30;
+$openClose[3][2] = 23;
+$openClose[3][3] = 00;
+$openClose[4][0] = 7;
+$openClose[4][1] = 30;
+$openClose[4][2] = 23;
+$openClose[4][3] = 00;
+$openClose[5][0] = 7;
+$openClose[5][1] = 30;
+$openClose[5][2] = 18;
+$openClose[5][3] = 00;
+$openClose[6][0] = 9;
+$openClose[6][1] = 00;
+$openClose[6][2] = 17;
+$openClose[6][3] = 00;
+$openClose[7][0] = 11;
+$openClose[7][1] = 00;
+$openClose[7][2] = 21;
+$openClose[7][3] = 00;
+  
   // get the current time/date from server
   $nowDate = strtotime("now");
 
@@ -1854,6 +1858,7 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
   // print out ranges for the user
   $zonePoints = sizeof( $zone );
 
+  // check to ensure that the user specified start date/time falls within a zone and within operating hours (greater than OPENING AND less than CLOSING-60). Ending time is checked around line 1322
   $i = 0;
   $outOfRange = 0;
   $zoneOk = 0;
@@ -1862,10 +1867,10 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
     if (  !empty($zone[$i]) && !empty($zone[$i+1]) && $zoneOk==0  ) {
       // is the user specified date/time within a zone? Pad the upper limit by 30 minutes because of earlier rounding; eg choosing a 3:30pm resv would fail if the realtime is between 3:00 and 3:30
       if( !( $userDate>=$zone[$i]&&$userDate<=$zone[$i+1]+1800 ) ){
-	$outOfRange = 1;
-      // is the user specified date/time during operating hours? (simplified for now, need to pull actual hours in the future)
-      } else if( !(( date('G', $userDate)>='8' && date('i', $userDate)>='30' )  ||  ( date('G', $userDate)<='21' && date('i', $userDate)<='30' )) ) {
-	$outOfRange = 1;
+      $outOfRange = 1;
+      // is the user specified date/time >= opening AND at least 60 minutes before closing? Check for each day of week (in array). (simplified for now, need to pull actual hours into the array from an Hours Web Service
+      } else if( !( ( date('G', $userDate)*60+date('i', $userDate) >= ( $openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1] )  ) && ( date('G', $userDate)*60+date('i', $userDate) <= ( $openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3]-60 )  ) ) ) {
+      $outOfRange = 1;
       } else {
 	$outOfRange = 0;
 	$zoneOk = 1;
@@ -1873,7 +1878,12 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
     }
     $i+=2;
   }
-
+  // END - check to ensure that the user specified date/time falls within a zone and within operating hours
+  
+  // calc and save the number of minutes between the start of the user's reservation and the closing time
+  $maxResv = ($openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3]) - (date('G', $userDate)*60+date('i', $userDate)) - 60;
+  rc_session_variable_set('rc-res','maxResv',$maxResv);
+  
   $no_res_available = 0;
   // if the user picked time/date falls within a legal time slot
   if( $outOfRange == 0 ){
