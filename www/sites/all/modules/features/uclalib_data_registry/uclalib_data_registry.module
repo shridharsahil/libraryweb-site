@@ -5,3 +5,25 @@
  */
 
 include_once 'uclalib_data_registry.features.inc';
+
+/**
+ * Implementation of hook_form_data_node_form_alter().
+ */
+function uclalib_data_registry_form_data_node_form_alter(&$form, &$form_state, $form_id) {
+  // add a checkbox to disable the menu item by default
+  $form['menu']['enabled']['#default_value'] = 1;
+  $form['menu']['link']['disable'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Disable',
+    '#default_value' => 1,
+    '#description' => t("Hide this menu item from the sidebar."),
+  );
+  $form['#submit'][] = 'disable_data_menu_item_submit';
+}
+
+/**
+ * Submit handler for hook_form_data_node_form_alter().
+ */
+function disable_data_menu_item_submit($form, &$form_state) {
+  $form_state['values']['menu']['hidden'] = $form_state['values']['menu']['disable'];
+}
