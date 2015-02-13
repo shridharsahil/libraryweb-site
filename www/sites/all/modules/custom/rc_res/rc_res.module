@@ -1880,12 +1880,6 @@ function rc_res_form_page_four_handler_submit($form, &$form_state) {
   $sunClosesHour = $sunClosesTime[0];
   $sunClosesMin = $sunClosesTime[1];
 
-
-krumo($rc_res_get_unit_hours);
-krumo($sunOpensHour);
-krumo($sunOpensMin);
-  
-  
   // populate an opening / closing array for following calculations
   $openClose[1][0] = $monThursOpensHour;	// monday
   $openClose[1][1] = $monThursOpensMin;
@@ -1916,6 +1910,14 @@ krumo($sunOpensMin);
   $openClose[7][2] = $sunClosesHour;
   $openClose[7][3] = $sunClosesMin;
 
+  // FOR TESTING ONLY - TURN OFF WHEN FINISHED TESTING - SET THE DOW MANUALLY
+  // populate an opening / closing array for following calculations
+//  $openClose[4][0] = 7;	// monday
+//  $openClose[4][1] = 30;
+//  $openClose[4][2] = 15;
+//  $openClose[4][3] = 30;
+  // FOR TESTING ONLY - TURN OFF WHEN FINISHED TESTING - SET THE DOW MANUALLY
+  
   // get the current time/date from server
   $nowDate = strtotime("now");
 
@@ -1941,7 +1943,7 @@ krumo($sunOpensMin);
   $zoneOk = 0;
   $zoneRange = '';
   while ($i < $zonePoints) {
-  if (  !empty($zone[$i]) && !empty($zone[$i+1]) && $zoneOk==0  ) {
+    if (  !empty($zone[$i]) && !empty($zone[$i+1]) && $zoneOk==0  ) {
       // is the user specified date/time within a zone? Pad the upper limit by 30 minutes because of earlier rounding; eg choosing a 3:30pm resv would fail if the realtime is between 3:00 and 3:30
       if( !( $userDate>=$zone[$i]&&$userDate<=$zone[$i+1]+1800 ) ){
       $outOfRange = 1;
