@@ -1836,7 +1836,7 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
   // get the opening and closing hours for laptop lending. Set YRL or Powell at the top of this file
   $unit_uid = powell_session_variable_get('powell-res','unit_uid');
   $powell_res_get_unit_hours = powell_res_get_unit_hours($unit_uid);
-krumo($unit_uid);
+//krumo($unit_uid);
   $monThursOpens = $powell_res_get_unit_hours['unitSchedule']['monThursOpens'];
   $monThursOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursOpens']);
   $monThursOpensTime = explode(":", $monThursOpensDateTime[1]);
@@ -2157,7 +2157,7 @@ function powell_res_get_unit_hours($unit_uid) {
   $dev_host_resource_base_non_secure = powell_session_variable_get('powell-res','dev_host_resource_base_non_secure');
   $url_stack = "$dev_host_resource_base_non_secure"."/libservices/hours/unit/" . "$unit_uid"; // same category source for workstation, drupaltest and production
   $url = $url_stack; 
-print_r($url);
+//print_r($url);
   drupal_http_build_query(array());
   $options = array(
     "headers" => array(
@@ -2353,7 +2353,7 @@ function powell_res_get_resources_for_period_complete($form, $form_state) {
   } else {
     $patron_reservations = $response_voy->data;
     $patron_reservations_array = drupal_json_decode($patron_reservations, TRUE);
-krumo($patron_reservations_array);
+//krumo($patron_reservations_array);
   //dsm($patron_status);
   return $patron_reservations_array;
   }

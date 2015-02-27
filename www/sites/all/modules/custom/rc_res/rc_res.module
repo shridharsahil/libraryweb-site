@@ -337,7 +337,7 @@ if ( !empty( $working_uid )) {
   $rc_res_get_user_category = rc_res_get_user_category($working_uid);
 //  $rc_res_get_user_category = 'Undergraduate'; // for testing only
     $rc_res_get_user_category = 'Graduate'; // for testing only
-  print_r($rc_res_get_user_category); // for testing only
+//  print_r($rc_res_get_user_category); // for testing only
   rc_session_variable_set('rc-res','rc_res_get_user_category', $rc_res_get_user_category);
 } else {
   $rc_res_get_user_category = '';
@@ -2160,7 +2160,7 @@ function rc_res_get_unit_hours($unit_uid) {
   $dev_host_resource_base_non_secure = rc_session_variable_get('rc-res','dev_host_resource_base_non_secure');
   $url_stack = "$dev_host_resource_base_non_secure"."/libservices/hours/unit/" . "$unit_uid"; // same category source for workstation, drupaltest and production
   $url = $url_stack; 
-print_r($url);
+//print_r($url);
   drupal_http_build_query(array());
   $options = array(
     "headers" => array(
@@ -2185,7 +2185,7 @@ function rc_res_get_user_category($working_uid) {
   $dev_host_resource_base = rc_session_variable_get('rc-res','dev_host_resource_base');
   $url_stack = "$dev_host_resource_base"."/rcres/patron/group/" . "$working_uid"; // same category source for workstation, drupaltest and production
   $url = $url_stack;
-print_r($url);
+//print_r($url);
   drupal_http_build_query(array());
   $options = array(
     "headers" => array(
@@ -2348,7 +2348,7 @@ function rc_res_get_resources_for_period_complete($form, $form_state) {
   $data = '';
   $request_retry = 3;
 
-krumo('$request_url===>'.$request_url);
+//krumo('$request_url===>'.$request_url);
   // Send the request.
   $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
