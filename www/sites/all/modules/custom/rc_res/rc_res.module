@@ -126,7 +126,7 @@ function rc_res_form_page_one($form, &$form_state) {
   rc_session_variable_set('rc-res','outOfRange', 0); // this is used in page 4 and set in the page 4 handler
 
   $ucla_locale = "yrl"; //"powell"
-  rc_session_variable_set('powell-res','ucla_locale',$ucla_locale);
+  rc_session_variable_set('rc-res','ucla_locale',$ucla_locale);
 
   // set unit number
 //  $unit_uid = 47; // college
@@ -330,14 +330,19 @@ function rc_res_form_page_three($form, &$form_state) {
 
 if ( !empty( $working_uid )) {
   rc_session_variable_set('rc-res','working_uid', $working_uid);
-  // get user category here
+
+  // get user category here ...............................................................
+  // get user category here ...............................................................
+  // get user category here ...............................................................
   $rc_res_get_user_category = rc_res_get_user_category($working_uid);
-  //print_r($rc_res_get_user_category);
+//  $rc_res_get_user_category = 'Undergraduate'; // for testing only
+    $rc_res_get_user_category = 'Graduate'; // for testing only
+  print_r($rc_res_get_user_category); // for testing only
   rc_session_variable_set('rc-res','rc_res_get_user_category', $rc_res_get_user_category);
 } else {
   $rc_res_get_user_category = '';
   rc_session_variable_set('rc-res','rc_res_get_user_category', '');
-  $login_ok = 0; // set this in only one place (above) and set only for Nothing Returned From Shiboleth
+  $login_ok = 0; // set this in only one place (above) and set only for Nothing Returned From Shibboleth
 }
 
   // TEMP FOR TESTING
@@ -830,7 +835,8 @@ function rc_res_form_page_four($form, &$form_state) {
       $earliest_new_reservation = $earliest_new_reservation - $mod_minute + 3600;
     }
   }
-
+  // $earliest_new_reservation is now set to be on the hour or 30min after the hour
+  
   // convert to old style to work under php 5.2.x that is running on the Production servers
   $old_date_timestamp = strtotime($earliest_new_reservation);
   $earliest_new_reservation_time = date('g:ia', $earliest_new_reservation);
@@ -842,7 +848,7 @@ function rc_res_form_page_four($form, &$form_state) {
 
   $earliest_new_reservationDisplay = date('g:ia \o\n l jS F Y', $earliest_new_reservation);
 
-  // dhc here: check undergrad pulling $my_advance_days from business rules
+  // dhc: check - undergrad needs to pull $my_advance_days from business rules
 
   // UNDERGRAD SECTION
   if ( $my_advance_days == 1 ){
@@ -852,6 +858,7 @@ function rc_res_form_page_four($form, &$form_state) {
     $zone[1] = strtotime("now".' +1 day');
     rc_session_variable_set('rc-res','zone',$zone);
 
+  // $userDateTime was intentionally zeroed out in the page 3 handler (n-1) so should be zero on the first time in on page 4
   if( $userDateTime > $earliest_new_reservation){
     $form['description'] = array
     (
@@ -1199,7 +1206,7 @@ Your Reservations > Date & Time > <B>Available Resources</B> > Details > Finish 
       '#header' => $header,
       '#options' => $options,
       '#multiple' => FALSE,
-      '#empty' => t('<center>No available resources found</center>'),
+      '#empty' => t('<center>No available resources found0</center>'),
       '#default_value' => isset($form_state['values']['table']) ? $form_state['values']['table'] : NULL,
     ),
 
@@ -1237,7 +1244,7 @@ Your Reservations > Date & Time > <B>Available Resources</B> > Details > Finish 
       '#header' => $header,
       '#options' => $options,
       '#multiple' => FALSE,
-      '#empty' => t('<center>No available resources found</center>'),
+      '#empty' => t('<center>No available resources found1</center>'),
     ),
 
     $form['submit2'] = array
@@ -1551,7 +1558,7 @@ Current Reservation(s):
 	}
       }
       $body = '
-<br>You have successfully reserved '.$newRoomName.' from '.$newStartDate.' to '.$newEndDate.'. Please bring your current Bruincard to the CLICC Desk in the Powell Library to claim your reservation. You can only claim your reservation from fifteen minutes before until fifteen minutes after the beginning of your reservation. Unclaimed reservations will be canceled.
+<br>You have successfully reserved '.$newRoomName.' from '.$newStartDate.' to '.$newEndDate.'. Please bring your current Bruincard to the Laptop Lending Desk in YRL (Young Research Library) to claim your reservation. You can only claim your reservation from fifteen minutes before until fifteen minutes after the beginning of your reservation. Unclaimed reservations will be canceled.
 '; // <b></b> is translated to ** in ASCII email
     }
 
@@ -1968,10 +1975,11 @@ function rc_res_form_page_four_handler_submit($form, &$form_state) {
   if( $outOfRange == 0 ){
     rc_session_variable_set('rc-res','outOfRange', $outOfRange);
 
-    // read reervations given an UID (currently simulated in drupal)
+    // retrieve available resources, given an UID, from web service
+    // retrieve available resources, given an UID, from web service
+    // retrieve available resources, given an UID, from web service
     $rows = array();
     $rows = rc_res_get_resources_for_period_complete($form, $form_state);
-
     // if there are no free resources at the time chosen
     if ( $rows == 'Not Found' ){
       $no_res_available = 1;
@@ -2177,7 +2185,7 @@ function rc_res_get_user_category($working_uid) {
   $dev_host_resource_base = rc_session_variable_get('rc-res','dev_host_resource_base');
   $url_stack = "$dev_host_resource_base"."/rcres/patron/group/" . "$working_uid"; // same category source for workstation, drupaltest and production
   $url = $url_stack;
-
+print_r($url);
   drupal_http_build_query(array());
   $options = array(
     "headers" => array(
@@ -2271,7 +2279,7 @@ function rc_res_get_user_reservations($working_uid) {
 function rc_res_get_resources_for_period($form, $form_state) {
   // test and setup string
   //$request_url = 'http://lit321v-b.library.ucla.edu/rcres/availablerooms/after/2013-01-17+07%3a00+PM/until/96/length/1';
-  $ucla_locale = rc_session_variable_get('powell-res','ucla_locale');
+  $ucla_locale = rc_session_variable_get('rc-res','ucla_locale');
 
   $delimiter = ' ';
   $string = $form_state['page_values'][4]['date'];
@@ -2314,7 +2322,7 @@ function rc_res_get_resources_for_period($form, $form_state) {
  */
 function rc_res_get_resources_for_period_complete($form, $form_state) {
 
-  $ucla_locale = rc_session_variable_get('powell-res','ucla_locale');
+  $ucla_locale = rc_session_variable_get('rc-res','ucla_locale');
 
   // test and setup string
   //$request_url = 'http://lit321v-b.library.ucla.edu/rcres/availablerooms/after/2013-01-17+07%3a00+PM/until/96/length/1';
@@ -2340,6 +2348,7 @@ function rc_res_get_resources_for_period_complete($form, $form_state) {
   $data = '';
   $request_retry = 3;
 
+krumo('$request_url===>'.$request_url);
   // Send the request.
   $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 

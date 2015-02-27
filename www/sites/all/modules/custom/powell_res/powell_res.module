@@ -2179,8 +2179,8 @@ print_r($url);
  */
 function powell_res_get_user_category($working_uid) {
   // get patron status from Voyager (or Patron Type)
-  $dev_host_resource_base_non_secure = powell_session_variable_get('powell-res','dev_host_resource_base_non_secure');
-  $url_stack = "$dev_host_resource_base_non_secure"."/rcres/patron/group/" . "$working_uid"; // same category source for workstation, drupaltest and production
+  $dev_host_resource_base = powell_session_variable_get('powell-res','dev_host_resource_base');
+  $url_stack = "$dev_host_resource_base"."/rcres/patron/group/" . "$working_uid"; // same category source for workstation, drupaltest and production
   $url = $url_stack;
 
   drupal_http_build_query(array());
