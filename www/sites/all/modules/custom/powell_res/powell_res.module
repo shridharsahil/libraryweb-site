@@ -12,6 +12,11 @@
  * @param type $form
  * @param type $form_state
  * @return type 
+ *
+ * GET FREE RESOURCES         --- 2316 function powell_res_get_resources_for_period_complete($form, $form_state) {
+ *
+ *
+ *
  */
 function powell_res_form_page_one_validate($form, &$form_state) {
   $checkboxErrorMsg1 = 'Please select a checkbox before clicking on the Delete button.';
@@ -54,7 +59,7 @@ function powell_res_form_page_one_validate($form, &$form_state) {
     if ($form_state['values']['pnumber'] == 0) {
       form_set_error('pnumber', 'Please choose the number of persons in your group.');
     }
-    if (($form_state['values']['res_length'] <= 30) || ($form_state['values']['res_length'] > rc_session_variable_get('rc-res','myLim'))) { // error if no choice or if user spoofs a illegally high duration
+    if (($form_state['values']['res_length'] <= 30) || ($form_state['values']['res_length'] > powell_session_variable_get('powell-res','myLim'))) { // error if no choice or if user spoofs a illegally high duration
       form_set_error('res_length', 'Please enter the duration of your reservation.');
     }
 //    if (!$form_state['values']['user_dept']) {
@@ -128,6 +133,11 @@ function powell_res_form_page_one($form, &$form_state) {
   $ucla_locale = "powell"; //"yrl"
   powell_session_variable_set('powell-res','ucla_locale',$ucla_locale);
 
+  // set unit number
+  $unit_uid = 47; // college
+//  $unit_uid = 48; // yrl
+  powell_session_variable_set('powell-res','unit_uid',$unit_uid);
+  
   // web services development server
 //  $dev_host_resource_base = 'http://webservices-dev.library.ucla.edu'; // normally use https (this line) but https is not currently working (20130401, 20130514, )
 
@@ -138,6 +148,10 @@ function powell_res_form_page_one($form, &$form_state) {
   // web services production server
   $dev_host_resource_base = 'https://webservices.library.ucla.edu'; // normally use https (this line) but https is not currently working (20130401, 20130514, )
   powell_session_variable_set('powell-res','dev_host_resource_base',$dev_host_resource_base);
+
+  // web services production server non-secure
+  $dev_host_resource_base_non_secure = 'http://webservices.library.ucla.edu'; // normally use https (this line) but https is not currently working (20130401, 20130514, )
+  powell_session_variable_set('powell-res','dev_host_resource_base_non_secure',$dev_host_resource_base_non_secure);
 
   // set this below when no resources are available for the user specified time; use it in the form validation above
   powell_session_variable_set('powell-res','noResources', 0);
@@ -332,13 +346,13 @@ if ( !empty( $working_uid )) {
 }
 
   // TEMP FOR TESTING
-   //rc_session_variable_set('rc-res','rc_res_get_user_category', 'undergraduate');
-   //$rc_res_get_user_category = "undergraduate";
-  // rc_session_variable_set('rc-res','rc_res_get_user_category', 'graduate');
-  // rc_session_variable_set('rc-res','rc_res_get_user_category', 'staff');
-  //$rc_res_get_user_category = 'extension';
-  //rc_session_variable_set('rc-res','rc_res_get_user_category', 'extension');
-  //print_r($rc_res_get_user_category);
+   //powell_session_variable_set('powell-res','powell_res_get_user_category', 'undergraduate');
+   //$powell_res_get_user_category = "undergraduate";
+  // powell_session_variable_set('powell-res','powell_res_get_user_category', 'graduate');
+  // powell_session_variable_set('powell-res','powell_res_get_user_category', 'staff');
+  //$powell_res_get_user_category = 'extension';
+  //powell_session_variable_set('powell-res','powell_res_get_user_category', 'extension');
+  //print_r($powell_res_get_user_category);
   // END TEMP FOR TESTING
 
   // translate Voyager terms to match local terms
@@ -461,7 +475,7 @@ if ( !empty( $working_uid )) {
 	  if( $startDatePastCnt > 0 ){
 	    if( $my_resv_lim == 1 ){
 	      if( $startDatePastCnt > 1 ){
-		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 464');
+		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 469');
 	      } else {
 //		$myRow = 1;
 		$myDelete = 1;
@@ -503,7 +517,7 @@ if ( !empty( $working_uid )) {
 	  $startDatePastCnt += 1;
 	  if( $startDateFutureCnt > 0 ){
 	    if( $my_resv_lim == 1 ){
-		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 464');
+		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 511');
 	    } else if( $lcnt < $my_resv_lim ){
 //	      $myRow = 1;
 	      $myDelete = 1;
@@ -1066,6 +1080,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
     '#date_increment' => 30,
     '#required' => TRUE,
     '#date_label_position' => 'above',
+    '#date_timezone' => 'America/Los_Angeles',
   );
 
 
@@ -1303,7 +1318,8 @@ function powell_res_form_page_six($form, &$form_state) {
       $myLim = $rhours_available;
     }
   }
-  $maxResv = rc_session_variable_get('rc-res','maxResv'); // maxResv is the number of minutes between the start of the user's reservation and the closing time
+
+  $maxResv = powell_session_variable_get('powell-res','maxResv'); // maxResv is the number of minutes between the start of the user's reservation and the closing time
   $maxResv += 60; //add 60 min here to loop and populate the Duration dropdown
 
   $resLengthMsg[30] = 'Choose'; // pad by 30 minutes to allow loop (below) to start at 30 and then increment by 30
@@ -1317,10 +1333,10 @@ function powell_res_form_page_six($form, &$form_state) {
 
   // populate the Duration pulldown. Limit if the reservation end time is too close to closing time and/or limit choices if the patron category rule has a reduced allowable duration
   for( $w=30; $w<=$maxResv; $w+=30 ){ // 30 minute resolution on reservations - but starting at 60 minutes. So. start at 30 and increment each by 30 in the loop. Note that this will need to be changed if a 30 minute reservation is ever allowed. if so, just start at [o] for the Choose label.
-    $resLengthMsgCount = count($resLengthMsg); // get the length of the arrary to calulate the maximum reservation length (4 hrs)
+    // $resLengthMsgCount = count($resLengthMsg); // CURRENTLY NOT USED - get the length of the arrary to calulate the maximum reservation length (4 hrs)
       if ($w<=$myLim){ // do not add a menu choice unless it is <= than the maximum reservation length [dhc: a check is needed server side on the returned value to prevent spoofing]
 	$resLength[$w] = $resLengthMsg[$w]; // build the array that is used to populate the contents of the pulldown
-	rc_session_variable_set('rc-res','myLim',$myLim); // save for server-side error checking when this page is submitted to prevent user insertion of an illegal higher than permitted value for duration
+	powell_session_variable_set('powell-res','myLim',$myLim); // save for server-side error checking when this page is submitted to prevent user insertion of an illegal higher than permitted value for duration
 	}
       }
 
@@ -1817,40 +1833,107 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
     $form_state['values'] = $form_state['page_values'][5];
   }
 
-$openClose[1][0] = 7;
-$openClose[1][1] = 30;
-$openClose[1][2] = 23;
-$openClose[1][3] = 00;
-$openClose[2][0] = 7;
-$openClose[2][1] = 30;
-$openClose[2][2] = 23;
-$openClose[2][3] = 00;
-$openClose[3][0] = 7;
-$openClose[3][1] = 30;
-$openClose[3][2] = 23;
-$openClose[3][3] = 00;
-$openClose[4][0] = 7;
-$openClose[4][1] = 30;
-$openClose[4][2] = 23;
-$openClose[4][3] = 00;
-$openClose[5][0] = 7;
-$openClose[5][1] = 30;
-$openClose[5][2] = 18;
-$openClose[5][3] = 00;
-$openClose[6][0] = 9;
-$openClose[6][1] = 00;
-$openClose[6][2] = 17;
-$openClose[6][3] = 00;
-$openClose[7][0] = 11;
-$openClose[7][1] = 00;
-$openClose[7][2] = 21;
-$openClose[7][3] = 00;
+  // get the opening and closing hours for laptop lending. Set YRL or Powell at the top of this file
+  $unit_uid = powell_session_variable_get('powell-res','unit_uid');
+  $powell_res_get_unit_hours = powell_res_get_unit_hours($unit_uid);
+//krumo($unit_uid);
+  $monThursOpens = $powell_res_get_unit_hours['unitSchedule']['monThursOpens'];
+  $monThursOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursOpens']);
+  $monThursOpensTime = explode(":", $monThursOpensDateTime[1]);
+  $monThursOpensHour = $monThursOpensTime[0];
+  $monThursOpensMin = $monThursOpensTime[1];
+  
+  $monThursCloses = $powell_res_get_unit_hours['unitSchedule']['monThursCloses'];
+  $monThursClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursCloses']);
+  $monThursClosesTime = explode(":", $monThursClosesDateTime[1]);
+  $monThursClosesHour = $monThursClosesTime[0];
+  $monThursClosesMin = $monThursClosesTime[1];
+  
+  $friOpens = $powell_res_get_unit_hours['unitSchedule']['friOpens'];
+  $friOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['friOpens']);
+  $friOpensTime = explode(":", $friOpensDateTime[1]);
+  $friOpensHour = $friOpensTime[0];
+  $friOpensMin = $friOpensTime[1];
+  
+  $friCloses = $powell_res_get_unit_hours['unitSchedule']['friCloses'];
+  $friClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['friCloses']);
+  $friClosesTime = explode(":", $friClosesDateTime[1]);
+  $friClosesHour = $friClosesTime[0];
+  $friClosesMin = $friClosesTime[1];
+
+  $satOpens = $powell_res_get_unit_hours['unitSchedule']['satOpens'];
+  $satOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['satOpens']);
+  $satOpensTime = explode(":", $satOpensDateTime[1]);
+  $satOpensHour = $satOpensTime[0];
+  $satOpensMin = $satOpensTime[1];
+  
+  $satCloses = $powell_res_get_unit_hours['unitSchedule']['satCloses'];
+  $satClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['satCloses']);
+  $satClosesTime = explode(":", $satClosesDateTime[1]);
+  $satClosesHour = $satClosesTime[0];
+  $satClosesMin = $satClosesTime[1];
+
+  $sunOpens = $powell_res_get_unit_hours['unitSchedule']['sunOpens'];
+  $sunOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['sunOpens']);
+  $sunOpensTime = explode(":", $sunOpensDateTime[1]);
+  $sunOpensHour = $sunOpensTime[0];
+  $sunOpensMin = $sunOpensTime[1];
+  
+  $sunCloses = $powell_res_get_unit_hours['unitSchedule']['sunCloses'];
+  $sunClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['sunCloses']);
+  $sunClosesTime = explode(":", $sunClosesDateTime[1]);
+  $sunClosesHour = $sunClosesTime[0];
+  $sunClosesMin = $sunClosesTime[1];
+
+  // populate an opening / closing array for following calculations
+  $openClose[1][0] = $monThursOpensHour;	// monday
+  $openClose[1][1] = $monThursOpensMin;
+  $openClose[1][2] = $monThursClosesHour;
+  $openClose[1][3] = $monThursClosesMin;
+  $openClose[2][0] = $monThursOpensHour;	// Tuesday
+  $openClose[2][1] = $monThursOpensMin;
+  $openClose[2][2] = $monThursClosesHour;
+  $openClose[2][3] = $monThursClosesMin;
+  $openClose[3][0] = $monThursOpensHour;	// Wednesday
+  $openClose[3][1] = $monThursOpensMin;
+  $openClose[3][2] = $monThursClosesHour;
+  $openClose[3][3] = $monThursClosesMin;
+  $openClose[4][0] = $monThursOpensHour;	// Thursday
+  $openClose[4][1] = $monThursOpensMin;
+  $openClose[4][2] = $monThursClosesHour;
+  $openClose[4][3] = $monThursClosesMin;
+  $openClose[5][0] = $friOpensHour;		// Friday
+  $openClose[5][1] = $friOpensMin;
+  $openClose[5][2] = $friClosesHour;
+  $openClose[5][3] = $friClosesMin;
+  $openClose[6][0] = $satOpensHour;		// Saturday
+  $openClose[6][1] = $satOpensMin;
+  $openClose[6][2] = $satClosesHour;
+  $openClose[6][3] = $satClosesMin;
+  $openClose[7][0] = $sunOpensHour;		// Sunday
+  $openClose[7][1] = $sunOpensMin;
+  $openClose[7][2] = $sunClosesHour;
+  $openClose[7][3] = $sunClosesMin;
+
+  // FOR TESTING ONLY - TURN OFF WHEN FINISHED TESTING - SET THE DOW MANUALLY
+  // populate an opening / closing array for following calculations
+//  $openClose[4][0] = 7;	// monday
+//  $openClose[4][1] = 30;
+//  $openClose[4][2] = 15;
+//  $openClose[4][3] = 30;
+  // FOR TESTING ONLY - TURN OFF WHEN FINISHED TESTING - SET THE DOW MANUALLY
   
   // get the current time/date from server
   $nowDate = strtotime("now");
 
   // get the user's selection
   $userDate = strtotime($form_state['page_values'][4]['date']);
+  
+  // Adjust closing time if it is after midnight
+  $closingTime = ( $openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3] );
+  if( ( $closingTime ) < ($openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1]) ){
+    $closingTime = ( $closingTime ) + (24*60); // 24hrs x 60 minutes
+    }
 
   // save the zones for use in the handler
   $zone = powell_session_variable_get('powell-res','zone');
@@ -1858,7 +1941,8 @@ $openClose[7][3] = 00;
   // print out ranges for the user
   $zonePoints = sizeof( $zone );
 
-  // check to ensure that the user specified start date/time falls within a zone and within operating hours (greater than OPENING AND less than CLOSING-60). Ending time is checked around line 1322
+  // NEW: check to ensure that the user specified start date/time falls within a zone and within operating hours (greater than OPENING AND less than or equal to Laptop Lending CLOSING). Ending time is checked around line 1322
+  // OLD: check to ensure that the user specified start date/time falls within a zone and within operating hours (greater than OPENING AND less than CLOSING-60). Ending time is checked around line 1322
   $i = 0;
   $outOfRange = 0;
   $zoneOk = 0;
@@ -1868,8 +1952,8 @@ $openClose[7][3] = 00;
       // is the user specified date/time within a zone? Pad the upper limit by 30 minutes because of earlier rounding; eg choosing a 3:30pm resv would fail if the realtime is between 3:00 and 3:30
       if( !( $userDate>=$zone[$i]&&$userDate<=$zone[$i+1]+1800 ) ){
       $outOfRange = 1;
-      // is the user specified date/time >= opening AND at least 60 minutes before closing? Check for each day of week (in array). (simplified for now, need to pull actual hours into the array from an Hours Web Service
-      } else if( !( ( date('G', $userDate)*60+date('i', $userDate) >= ( $openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1] )  ) && ( date('G', $userDate)*60+date('i', $userDate) <= ( $openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3]-60 )  ) ) ) {
+      // is the user specified start date/time >= opening AND <= Laptop Lending closing (typically at least 60 minutes before closing of building)? Check for each day of week (in array). (simplified for now, need to pull actual hours into the array from an Hours Web Service
+      } else if( !( ( date('G', $userDate)*60+date('i', $userDate) >= ( $openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1] )  ) && ( date('G', $userDate)*60+date('i', $userDate) <= ( $closingTime )  ) ) ) {
       $outOfRange = 1;
       } else {
 	$outOfRange = 0;
@@ -1881,8 +1965,8 @@ $openClose[7][3] = 00;
   // END - check to ensure that the user specified date/time falls within a zone and within operating hours
   
   // calc and save the number of minutes between the start of the user's reservation and the closing time
-  $maxResv = ($openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3]) - (date('G', $userDate)*60+date('i', $userDate)) - 60;
-  rc_session_variable_set('rc-res','maxResv',$maxResv);
+  $maxResv = ( $closingTime ) - (date('G', $userDate)*60+date('i', $userDate)); // maxResv is the number of minutes between the start of the user's reservation and the closing time
+  powell_session_variable_set('powell-res','maxResv',$maxResv);
   
   $no_res_available = 0;
   // if the user picked time/date falls within a legal time slot
@@ -2068,11 +2152,36 @@ function powell_res_form_page_seven_handler_submit($form, &$form_state) {
  * get user category from Voyager
  * get user category from Voyager
  */
+function powell_res_get_unit_hours($unit_uid) {
+  // get unit hours from web service: Hours WS - Hours for Unit
+  $dev_host_resource_base_non_secure = powell_session_variable_get('powell-res','dev_host_resource_base_non_secure');
+  $url_stack = "$dev_host_resource_base_non_secure"."/libservices/hours/unit/" . "$unit_uid"; // same category source for workstation, drupaltest and production
+  $url = $url_stack; 
+//print_r($url);
+  drupal_http_build_query(array());
+  $options = array(
+    "headers" => array(
+        "Pragma" => "no-cache",
+        "Cache-Control" => "no-cache",
+    ),
+  );
+  $response_ws = drupal_http_request($url, $options);
+  $unit_hours = $response_ws->data;
+  $unit_hours_array = drupal_json_decode($unit_hours, TRUE);
+  //dsm($unit_hours);
+  return $unit_hours_array;
+}
+
+/**
+ * get user category from Voyager
+ * get user category from Voyager
+ * get user category from Voyager
+ */
 function powell_res_get_user_category($working_uid) {
-  // get patron status from Voyager
+  // get patron status from Voyager (or Patron Type)
   $dev_host_resource_base = powell_session_variable_get('powell-res','dev_host_resource_base');
   $url_stack = "$dev_host_resource_base"."/rcres/patron/group/" . "$working_uid"; // same category source for workstation, drupaltest and production
-  $url = $url_stack . 
+  $url = $url_stack;
 
   drupal_http_build_query(array());
   $options = array(
@@ -2235,6 +2344,7 @@ function powell_res_get_resources_for_period_complete($form, $form_state) {
   $request_method = 'POST';
   $data = '';
   $request_retry = 3;
+
   // Send the request.
   $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
@@ -2243,7 +2353,7 @@ function powell_res_get_resources_for_period_complete($form, $form_state) {
   } else {
     $patron_reservations = $response_voy->data;
     $patron_reservations_array = drupal_json_decode($patron_reservations, TRUE);
-
+//krumo($patron_reservations_array);
   //dsm($patron_status);
   return $patron_reservations_array;
   }
