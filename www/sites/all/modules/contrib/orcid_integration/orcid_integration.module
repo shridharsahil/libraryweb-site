@@ -20,7 +20,7 @@ function orcid_integration_menu() {
     'access arguments' => array('administer site configuration'),
     'file' => 'includes/orcid_integration.admin.inc',
   );
-  
+
   $items['user/%user/orcid'] = array(
     'title' => 'ORCID',
     'page callback' => 'orcid_integration_view_page',
@@ -105,7 +105,7 @@ function orcid_integration_search_by_orcid_id($id) {
 }
 
 /**
- * Generates publich search url (and parameters).
+ * Generates public search url (and parameters).
  */
 function orcid_integration_generate_public_search_url($api_url = NULL) {
   if (empty($api_url)) {
