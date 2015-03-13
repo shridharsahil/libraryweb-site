@@ -2348,7 +2348,7 @@ function rc_res_get_resources_for_period_complete($form, $form_state) {
   $data = '';
   $request_retry = 3;
 
-krumo('$request_url===>'.$request_url); // dhc retreive krumo request url
+//krumo('$request_url===>'.$request_url); // dhc retreive krumo request url
   // Send the request.
   $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
