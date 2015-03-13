@@ -129,7 +129,7 @@ function rc_res_form_page_one($form, &$form_state) {
   rc_session_variable_set('rc-res','ucla_locale',$ucla_locale);
 
   // set unit number
-//  $unit_uid = 47; // college
+//  $unit_uid = 47; // powell college
   $unit_uid = 48; // yrl
   rc_session_variable_set('rc-res','unit_uid',$unit_uid);
   
@@ -1112,7 +1112,7 @@ function rc_res_form_page_five($form, &$form_state) {
 
   $form = array();
 
-  // read reervations given an UID (currently simulated in drupal)
+  // read reervations given an UID
   $rows = array();
   $rows = rc_res_get_resources_for_period_complete($form, $form_state);
   $header = array
@@ -2348,7 +2348,7 @@ function rc_res_get_resources_for_period_complete($form, $form_state) {
   $data = '';
   $request_retry = 3;
 
-//krumo('$request_url===>'.$request_url);
+krumo('$request_url===>'.$request_url); // dhc retreive krumo request url
   // Send the request.
   $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
