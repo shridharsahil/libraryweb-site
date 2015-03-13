@@ -1952,7 +1952,7 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
   $userDate0 = date('g:ia D m/d/y', $userDate);
   $zone0 = date('g:ia D m/d/y', $zone[0]);
   $zone1 = date('g:ia D m/d/y', $zone[1]);
-krumo("$i $userDate0 $zone0 $zone1 $zoneOk $outOfRange");
+///krumo("$i $userDate0 $zone0 $zone1 $zoneOk $outOfRange");
 
     if (  !empty($zone[$i]) && !empty($zone[$i+1]) && $zoneOk==0  ) {
       // is the user specified date/time within a zone? Pad the upper limit by 30 minutes because of earlier rounding; eg choosing a 3:30pm resv would fail if the realtime is between 3:00 and 3:30
@@ -1965,18 +1965,19 @@ krumo("$i $userDate0 $zone0 $zone1 $zoneOk $outOfRange");
       $openClose00 = $openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1];
       $closingTime00 = $closingTime;
       
-      krumo($userDate00."   ".$openClose00."   ".$closingTime00);
+///      krumo($userDate00."   ".$openClose00."   ".$closingTime00);
       // dhc here
       
       
       
       
-      $outOfRange = 1;krumo($outOfRange);
+      $outOfRange = 1;
+///krumo($outOfRange);
       } else {
 	$outOfRange = 0;
 	$zoneOk = 1;
       }
-krumo("$i $userDate0 $zone0 $zone1 $zoneOk $outOfRange");
+///krumo("$i $userDate0 $zone0 $zone1 $zoneOk $outOfRange");
       }
     $i+=2;
   }
@@ -2363,7 +2364,7 @@ function powell_res_get_resources_for_period_complete($form, $form_state) {
   $data = '';
   $request_retry = 3;
 
-krumo('$request_url===>'.$request_url); // dhc retreive krumo request url
+///krumo('$request_url===>'.$request_url); // dhc retreive krumo request url
   // Send the request.
   $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
