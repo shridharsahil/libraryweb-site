@@ -1023,7 +1023,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 powell_session_variable_set('powell-res','firstAccess4', 1);
   } else if( $firstAccess4 > 0 ) {
 
-form_set_error('', 'Please choose a start time in one of the following time slot(s)<br>(reservations can be no more than '.$my_resv_lim.' day(s) into the future and must be at least 24 hours from any existing reservations.)<br>
+form_set_error('', 'Please choose a start time in one of the following time slot(s)<br>(reservations can be no more than '.$my_advance_days.' day(s) into the future and must be at least 24 hours from any existing reservations.)<br>
 Also, please make the reservation during hours of operation. See <a href="http://www.library.ucla.edu/powell" target="_new">Powell hours</a>.)');
 
     $zones = ucfirst(powell_session_variable_get('powell-res','name_first')).' '.ucfirst(powell_session_variable_get('powell-res','name_last')).'&nbsp;( <a href="powell-logout">logout</a> )<br><br>
