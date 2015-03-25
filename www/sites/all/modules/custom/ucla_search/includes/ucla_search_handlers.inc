@@ -86,7 +86,7 @@ function ucla_search_database($search_info) {
 }
 
 function ucla_search_guides($search_info) {
-  $target_url = 'http://guides.library.ucla.edu/search.php?iid=261&c=0&search=';
+  $target_url = 'http://guides.library.ucla.edu/srch.php?q=';
   // Replace space with plus, but do NOT url encode the terms
   $target_url .= str_replace(' ', '+', $search_info['search_terms']);
   drupal_goto($path = $target_url);
