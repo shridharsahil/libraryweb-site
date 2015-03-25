@@ -7,3 +7,6 @@ sites/*/*.settings-db.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+# Ignore robots.txt - we use site-specific files via symlink
+robots.txt

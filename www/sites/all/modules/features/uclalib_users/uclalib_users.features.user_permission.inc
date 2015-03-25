@@ -1103,7 +1103,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'administer panelizer taxonomy_term academic_departmental_liaison defaults'.
   $permissions['administer panelizer taxonomy_term academic_departmental_liaison defaults'] = array(
     'name' => 'administer panelizer taxonomy_term academic_departmental_liaison defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
@@ -1430,7 +1432,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'clear ccle_redirects_importer feeds'.
   $permissions['clear ccle_redirects_importer feeds'] = array(
     'name' => 'clear ccle_redirects_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -1439,6 +1443,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'clear node feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -1448,6 +1453,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'clear user feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -1559,6 +1565,7 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'CE_Basic' => 'CE_Basic',
       'Communication' => 'Communication',
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -1906,7 +1913,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'delete any upcoming_news bean'.
   $permissions['delete any upcoming_news bean'] = array(
     'name' => 'delete any upcoming_news bean',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'bean',
   );
 
@@ -2574,6 +2583,7 @@ function uclalib_users_user_default_permissions() {
     'roles' => array(
       'CE_Basic' => 'CE_Basic',
       'Communication' => 'Communication',
+      'administrator' => 'administrator',
       'content editors' => 'content editors',
       'resources editors' => 'resources editors',
     ),
@@ -2993,7 +3003,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'import ccle_redirects_importer feeds'.
   $permissions['import ccle_redirects_importer feeds'] = array(
     'name' => 'import ccle_redirects_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -3002,6 +3014,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'import node feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -3011,6 +3024,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'import user feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -3265,7 +3279,9 @@ function uclalib_users_user_default_permissions() {
   // Exported permission: 'unlock ccle_redirects_importer feeds'.
   $permissions['unlock ccle_redirects_importer feeds'] = array(
     'name' => 'unlock ccle_redirects_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -3274,6 +3290,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'unlock node feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
@@ -3283,6 +3300,7 @@ function uclalib_users_user_default_permissions() {
     'name' => 'unlock user feeds',
     'roles' => array(
       'admin_dev' => 'admin_dev',
+      'administrator' => 'administrator',
     ),
     'module' => 'feeds',
   );
