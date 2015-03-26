@@ -134,7 +134,8 @@ function powell_res_form_page_one($form, &$form_state) {
   powell_session_variable_set('powell-res','ucla_locale',$ucla_locale);
 
   // set unit number
-  $unit_uid = 47; // college
+  $unit_uid = 54; // college CLICC
+//  $unit_uid = 47; // college laptop lending
 //  $unit_uid = 48; // yrl
   powell_session_variable_set('powell-res','unit_uid',$unit_uid);
   
@@ -475,7 +476,7 @@ if ( !empty( $working_uid )) {
 	  if( $startDatePastCnt > 0 ){
 	    if( $my_resv_lim == 1 ){
 	      if( $startDatePastCnt > 1 ){
-		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 469');
+		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: P479');
 	      } else {
 //		$myRow = 1;
 		$myDelete = 1;
@@ -517,7 +518,7 @@ if ( !empty( $working_uid )) {
 	  $startDatePastCnt += 1;
 	  if( $startDateFutureCnt > 0 ){
 	    if( $my_resv_lim == 1 ){
-		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: 511');
+		print_r('SERVER ERROR - Please contact the Help Desk and report Error-Line: P521');
 	    } else if( $lcnt < $my_resv_lim ){
 //	      $myRow = 1;
 	      $myDelete = 1;
@@ -1023,7 +1024,7 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 powell_session_variable_set('powell-res','firstAccess4', 1);
   } else if( $firstAccess4 > 0 ) {
 
-form_set_error('', 'Please choose a start time in one of the following time slot(s)<br>(reservations can be no more than '.$my_resv_lim.' day(s) into the future and must be at least 24 hours from any existing reservations.)<br>
+form_set_error('', 'Please choose a start time in one of the following time slot(s)<br>(reservations can be no more than '.$my_advance_days.' day(s) into the future and must be at least 24 hours from any existing reservations.)<br>
 Also, please make the reservation during hours of operation. See <a href="http://www.library.ucla.edu/powell" target="_new">Powell hours</a>.)');
 
     $zones = ucfirst(powell_session_variable_get('powell-res','name_first')).' '.ucfirst(powell_session_variable_get('powell-res','name_last')).'&nbsp;( <a href="powell-logout">logout</a> )<br><br>
@@ -1836,55 +1837,87 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
   // get the opening and closing hours for laptop lending. Set YRL or Powell at the top of this file
   $unit_uid = powell_session_variable_get('powell-res','unit_uid');
   $powell_res_get_unit_hours = powell_res_get_unit_hours($unit_uid);
-//krumo($unit_uid);
-  $monThursOpens = $powell_res_get_unit_hours['unitSchedule']['monThursOpens'];
-  $monThursOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursOpens']);
-  $monThursOpensTime = explode(":", $monThursOpensDateTime[1]);
-  $monThursOpensHour = $monThursOpensTime[0];
-  $monThursOpensMin = $monThursOpensTime[1];
-  
-  $monThursCloses = $powell_res_get_unit_hours['unitSchedule']['monThursCloses'];
-  $monThursClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursCloses']);
-  $monThursClosesTime = explode(":", $monThursClosesDateTime[1]);
-  $monThursClosesHour = $monThursClosesTime[0];
-  $monThursClosesMin = $monThursClosesTime[1];
-  
-  $friOpens = $powell_res_get_unit_hours['unitSchedule']['friOpens'];
-  $friOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['friOpens']);
-  $friOpensTime = explode(":", $friOpensDateTime[1]);
-  $friOpensHour = $friOpensTime[0];
-  $friOpensMin = $friOpensTime[1];
-  
-  $friCloses = $powell_res_get_unit_hours['unitSchedule']['friCloses'];
-  $friClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['friCloses']);
-  $friClosesTime = explode(":", $friClosesDateTime[1]);
-  $friClosesHour = $friClosesTime[0];
-  $friClosesMin = $friClosesTime[1];
+//krumo($powell_res_get_unit_hours);
 
-  $satOpens = $powell_res_get_unit_hours['unitSchedule']['satOpens'];
-  $satOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['satOpens']);
-  $satOpensTime = explode(":", $satOpensDateTime[1]);
-  $satOpensHour = $satOpensTime[0];
-  $satOpensMin = $satOpensTime[1];
-  
-  $satCloses = $powell_res_get_unit_hours['unitSchedule']['satCloses'];
-  $satClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['satCloses']);
-  $satClosesTime = explode(":", $satClosesDateTime[1]);
-  $satClosesHour = $satClosesTime[0];
-  $satClosesMin = $satClosesTime[1];
 
-  $sunOpens = $powell_res_get_unit_hours['unitSchedule']['sunOpens'];
-  $sunOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['sunOpens']);
-  $sunOpensTime = explode(":", $sunOpensDateTime[1]);
-  $sunOpensHour = $sunOpensTime[0];
-  $sunOpensMin = $sunOpensTime[1];
-  
-  $sunCloses = $powell_res_get_unit_hours['unitSchedule']['sunCloses'];
-  $sunClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['sunCloses']);
-  $sunClosesTime = explode(":", $sunClosesDateTime[1]);
-  $sunClosesHour = $sunClosesTime[0];
-  $sunClosesMin = $sunClosesTime[1];
+  // set time to zero if the unit is closed on a particular day. e.g. friClosed indicates closed on Friday
 
+  if ( $powell_res_get_unit_hours['unitSchedule']['monThursClosed'] == 'false' ) {
+    $monThursOpens = $powell_res_get_unit_hours['unitSchedule']['monThursOpens'];
+    $monThursOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursOpens']);
+    $monThursOpensTime = explode(":", $monThursOpensDateTime[1]);
+    $monThursOpensHour = $monThursOpensTime[0];
+    $monThursOpensMin = $monThursOpensTime[1];
+  
+    $monThursCloses = $powell_res_get_unit_hours['unitSchedule']['monThursCloses'];
+    $monThursClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursCloses']);
+    $monThursClosesTime = explode(":", $monThursClosesDateTime[1]);
+    $monThursClosesHour = $monThursClosesTime[0];
+    $monThursClosesMin = $monThursClosesTime[1];
+  } else {
+    $monThursOpensHour = 0;
+    $monThursOpensMin = 0;
+    $monThursClosesHour = 0;
+    $monThursClosesMin = 0;
+  }
+
+  if ( $powell_res_get_unit_hours['unitSchedule']['friClosed'] == 'false' ) {
+    $friOpens = $powell_res_get_unit_hours['unitSchedule']['friOpens'];
+    $friOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['friOpens']);
+    $friOpensTime = explode(":", $friOpensDateTime[1]);
+    $friOpensHour = $friOpensTime[0];
+    $friOpensMin = $friOpensTime[1];
+  
+    $friCloses = $powell_res_get_unit_hours['unitSchedule']['friCloses'];
+    $friClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['friCloses']);
+    $friClosesTime = explode(":", $friClosesDateTime[1]);
+    $friClosesHour = $friClosesTime[0];
+    $friClosesMin = $friClosesTime[1];
+  } else {
+    $friOpensHour = 0;
+    $friOpensMin = 0;
+    $friClosesHour = 0;
+    $friClosesMin = 0;
+  }
+
+  if ( $powell_res_get_unit_hours['unitSchedule']['satClosed'] == 'false' ) {
+    $satOpens = $powell_res_get_unit_hours['unitSchedule']['satOpens'];
+    $satOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['satOpens']);
+    $satOpensTime = explode(":", $satOpensDateTime[1]);
+    $satOpensHour = $satOpensTime[0];
+    $satOpensMin = $satOpensTime[1];
+
+    $satCloses = $powell_res_get_unit_hours['unitSchedule']['satCloses'];
+    $satClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['satCloses']);
+    $satClosesTime = explode(":", $satClosesDateTime[1]);
+    $satClosesHour = $satClosesTime[0];
+    $satClosesMin = $satClosesTime[1];
+  } else {  
+    $satOpensHour = 0;
+    $satOpensMin = 0;
+    $satClosesHour = 0;
+    $satClosesMin = 0;
+  }
+  
+  if ( $powell_res_get_unit_hours['unitSchedule']['sunClosed'] == 'false' ) {
+    $sunOpens = $powell_res_get_unit_hours['unitSchedule']['sunOpens'];
+    $sunOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['sunOpens']);
+    $sunOpensTime = explode(":", $sunOpensDateTime[1]);
+    $sunOpensHour = $sunOpensTime[0];
+    $sunOpensMin = $sunOpensTime[1];
+  
+    $sunCloses = $powell_res_get_unit_hours['unitSchedule']['sunCloses'];
+    $sunClosesDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['sunCloses']);
+    $sunClosesTime = explode(":", $sunClosesDateTime[1]);
+    $sunClosesHour = $sunClosesTime[0];
+    $sunClosesMin = $sunClosesTime[1];
+  } else {  
+    $sunOpensHour = 0;
+    $sunOpensMin = 0;
+    $sunClosesHour = 0;
+    $sunClosesMin = 0;
+  }
+  
   // populate an opening / closing array for following calculations
   $openClose[1][0] = $monThursOpensHour;	// monday
   $openClose[1][1] = $monThursOpensMin;
@@ -1928,8 +1961,8 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
 
   // get the user's selection
   $userDate = strtotime($form_state['page_values'][4]['date']);
-  
-  // Adjust closing time if it is after midnight
+
+  // Adjust closing time if it is after midnight. dhc: adjust for 24hr time?? Note: time is expressed in minutes into the day
   $closingTime = ( $openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3] );
   if( ( $closingTime ) < ($openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1]) ){
     $closingTime = ( $closingTime ) + (24*60); // 24hrs x 60 minutes
@@ -1948,18 +1981,37 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
   $zoneOk = 0;
   $zoneRange = '';
   while ($i < $zonePoints) {
+
+  $userDate0 = date('g:ia D m/d/y', $userDate);
+  $zone0 = date('g:ia D m/d/y', $zone[0]);
+  $zone1 = date('g:ia D m/d/y', $zone[1]);
+///krumo("$i $userDate0 $zone0 $zone1 $zoneOk $outOfRange");
+
     if (  !empty($zone[$i]) && !empty($zone[$i+1]) && $zoneOk==0  ) {
       // is the user specified date/time within a zone? Pad the upper limit by 30 minutes because of earlier rounding; eg choosing a 3:30pm resv would fail if the realtime is between 3:00 and 3:30
       if( !( $userDate>=$zone[$i]&&$userDate<=$zone[$i+1]+1800 ) ){
       $outOfRange = 1;
       // is the user specified start date/time >= opening AND <= Laptop Lending closing (typically at least 60 minutes before closing of building)? Check for each day of week (in array). (simplified for now, need to pull actual hours into the array from an Hours Web Service
       } else if( !( ( date('G', $userDate)*60+date('i', $userDate) >= ( $openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1] )  ) && ( date('G', $userDate)*60+date('i', $userDate) <= ( $closingTime )  ) ) ) {
+
+      $userDate00 = date('G', $userDate)*60+date('i', $userDate);
+      $openClose00 = $openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1];
+      $closingTime00 = $closingTime;
+      
+///      krumo($userDate00."   ".$openClose00."   ".$closingTime00);
+      // dhc here
+      
+      
+      
+      
       $outOfRange = 1;
+///krumo($outOfRange);
       } else {
 	$outOfRange = 0;
 	$zoneOk = 1;
       }
-    }
+///krumo("$i $userDate0 $zone0 $zone1 $zoneOk $outOfRange");
+      }
     $i+=2;
   }
   // END - check to ensure that the user specified date/time falls within a zone and within operating hours
@@ -2157,7 +2209,7 @@ function powell_res_get_unit_hours($unit_uid) {
   $dev_host_resource_base_non_secure = powell_session_variable_get('powell-res','dev_host_resource_base_non_secure');
   $url_stack = "$dev_host_resource_base_non_secure"."/libservices/hours/unit/" . "$unit_uid"; // same category source for workstation, drupaltest and production
   $url = $url_stack; 
-//print_r($url);
+//krumo($url);
   drupal_http_build_query(array());
   $options = array(
     "headers" => array(
@@ -2345,6 +2397,7 @@ function powell_res_get_resources_for_period_complete($form, $form_state) {
   $data = '';
   $request_retry = 3;
 
+krumo('$request_url===>'.$request_url); // dhc retreive krumo request url
   // Send the request.
   $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
