@@ -1841,8 +1841,7 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
 
 
   // set time to zero if the unit is closed on a particular day. e.g. friClosed indicates closed on Friday
-
-  if ( $powell_res_get_unit_hours['unitSchedule']['monThursClosed'] == 'false' ) {
+  if ( !empty($powell_res_get_unit_hours['unitSchedule']['monThursClosed']) && $powell_res_get_unit_hours['unitSchedule']['monThursClosed'] == 'false' ) {
     $monThursOpens = $powell_res_get_unit_hours['unitSchedule']['monThursOpens'];
     $monThursOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['monThursOpens']);
     $monThursOpensTime = explode(":", $monThursOpensDateTime[1]);
@@ -1861,7 +1860,7 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
     $monThursClosesMin = 0;
   }
 
-  if ( $powell_res_get_unit_hours['unitSchedule']['friClosed'] == 'false' ) {
+  if ( !empty($powell_res_get_unit_hours['unitSchedule']['friClosed']) && $powell_res_get_unit_hours['unitSchedule']['friClosed'] == 'false' ) {
     $friOpens = $powell_res_get_unit_hours['unitSchedule']['friOpens'];
     $friOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['friOpens']);
     $friOpensTime = explode(":", $friOpensDateTime[1]);
@@ -1880,7 +1879,7 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
     $friClosesMin = 0;
   }
 
-  if ( $powell_res_get_unit_hours['unitSchedule']['satClosed'] == 'false' ) {
+  if ( !empty($powell_res_get_unit_hours['unitSchedule']['satClosed']) && $powell_res_get_unit_hours['unitSchedule']['satClosed'] == 'false' ) {
     $satOpens = $powell_res_get_unit_hours['unitSchedule']['satOpens'];
     $satOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['satOpens']);
     $satOpensTime = explode(":", $satOpensDateTime[1]);
@@ -1899,7 +1898,7 @@ function powell_res_form_page_four_handler_submit($form, &$form_state) {
     $satClosesMin = 0;
   }
   
-  if ( $powell_res_get_unit_hours['unitSchedule']['sunClosed'] == 'false' ) {
+  if ( !empty($powell_res_get_unit_hours['unitSchedule']['sunClosed']) && $powell_res_get_unit_hours['unitSchedule']['sunClosed'] == 'false' ) {
     $sunOpens = $powell_res_get_unit_hours['unitSchedule']['sunOpens'];
     $sunOpensDateTime = explode("T", $powell_res_get_unit_hours['unitSchedule']['sunOpens']);
     $sunOpensTime = explode(":", $sunOpensDateTime[1]);
