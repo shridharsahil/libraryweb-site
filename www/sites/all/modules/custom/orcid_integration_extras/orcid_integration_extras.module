@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ * via:
+ * Implementation of hook_form_user_profile_form_alter().
+ */
+ function orcid_integration_extras_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+ 	// hide the ORCID field on the user edit form (aka user_profile_form) via: DRUP-668
+  $form['field_orcid_id']['#access'] = FALSE;
+}
