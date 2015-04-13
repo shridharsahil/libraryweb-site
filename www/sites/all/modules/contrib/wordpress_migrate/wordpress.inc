@@ -5,7 +5,7 @@
  * Implementation of migration from WordPress into Drupal
  */
 
-abstract class WordPressMigration extends DynamicMigration {
+abstract class WordPressMigration extends XMLMigration {
   /**
    * The filespec of the WXR file this migration is based on.
    *
@@ -21,49 +21,41 @@ abstract class WordPressMigration extends DynamicMigration {
   protected $blog;
 
   /**
+   * List of items skipped because they don't belong in the migration at all
+   * (e.g., wrong post type).
+   *
+   * @var array
+   */
+  protected $skippedItems = array();
+
+  /**
    * Constructor - general setup for WordPress migrations.
    *
    * @param array $arguments
    *  'filename' => WXR file managed by this migration
    */
   public function __construct(array $arguments) {
-    if (!isset($arguments['filename'])) {
-      throw new Exception(t('Filename is a required parameter for WordPress migrations'));
-    }
+    parent::__construct($arguments);
 
-    // Must be set before calling the parent constructor, which will call
-    // generateMachineName() below.
-    $filename = $arguments['filename'];
+    $filename = $this->arguments['filename'];
     $this->wxrFile = $filename;
     $this->blog = wordpress_migrate_blog($filename);
-    parent::__construct(MigrateGroup::getInstance($this->blog->getTitle()));
-  }
-
-  /**
-   * Construct the machine name from the blog title
-   */
-  protected function generateMachineName($class_name = NULL) {
-    if (!$class_name) {
-      $class_name = get_class($this);
-    }
-
-    // The machine name is the cleansed blog title, followed by the portion
-    // of the class name after WordPress. For example, for
-    // category migration (class WordPressCategory) of "Mike's Blog",
-    // the generated machine name will be MikesBlogCategory.
-    return $this->blog->machineName($class_name);
   }
 
   /**
    * Called after completion of each migration.
    */
-  public function postImport() {
+  protected function postImport() {
     parent::postImport();
     // Clear ignored rows from the map, so as not to confuse reporting.
     $map_table = $this->map->getMapTable();
-    db_delete($map_table)
-      ->condition('needs_update', MigrateMap::STATUS_IGNORED)
-      ->execute();
+    foreach ($this->skippedItems as $postID) {
+      db_delete($map_table)
+        ->condition('needs_update', MigrateMap::STATUS_IGNORED)
+        ->condition('sourceid1', $postID)
+        ->execute();
+    }
+    $this->skippedItems = array();
   }
 
   /**
@@ -170,6 +162,10 @@ class WordPressBlog {
   public function getTitle() {
     return $this->title;
   }
+  protected $displayTitle;
+  public function getDisplayTitle() {
+    return $this->displayTitle;
+  }
   protected $blog_url;
   public function getBlogUrl() {
     return $this->blog_url;
@@ -183,10 +179,13 @@ class WordPressBlog {
     return $this->uid;
   }
 
+  protected $arguments = array();
+
   protected $migrations = array();
 
-  public function __construct($filename) {
+  public function __construct($filename, $arguments = array()) {
     $this->filename = $filename;
+    $this->arguments = $arguments;
 
     // Make sure the upload directory is properly protected
     file_create_htaccess('wordpress://', TRUE);
@@ -206,6 +205,7 @@ class WordPressBlog {
           switch ($reader->name) {
             case 'title':
               $title = WordPressBlog::readString($reader);
+              $this->displayTitle = $title;
               break;
             case 'wp:wxr_version':
               $this->wxrVersion = WordPressBlog::readString($reader);
@@ -266,29 +266,6 @@ class WordPressBlog {
                     ->condition('blog_url', $this->blog_url)
                     ->execute()
                     ->fetchField();
-
-    foreach ($this->migrationClasses() as $class) {
-      // Skip authors with WXR 1.0
-      if ($class == 'WordPressAuthor' && $this->wxrVersion == '1.0') {
-        continue;
-      }
-      // Skip comments if comment module is not enabled
-      if ($class == 'WordPressComment' && !module_exists('comment')) {
-        continue;
-      }
-      // Skip tags/categories if taxonomy is not enabled
-      if ($class == 'WordPressTag' || $class == 'WordPressCategory') {
-        if (!module_exists('taxonomy')) {
-          continue;
-        }
-      }
-      // Skip tags/categories if there's no destination vocabulary
-      if ($class == 'WordPressTag' && !variable_get('wordpress_migrate_tag_vocabulary', '') ||
-          $class == 'WordPressCategory' && !variable_get('wordpress_migrate_category_vocabulary', '')) {
-        continue;
-      }
-      Migration::registerMigration($class, $this->machineName($class), array('filename' => $filename));
-    }
   }
 
   public function machineName($class_name) {
@@ -319,36 +296,32 @@ class WordPressBlog {
     );
   }
 
+  /**
+   * Get a list of all migrations in this blog.
+   *
+   * @return Migration[]
+   */
   public function migrations() {
     if (empty($this->migrations)) {
       $this->migrations = array();
       foreach ($this->migrationClasses() as $base_class => $actual_class) {
-        // Skip authors with WXR 1.0
-        if ($base_class == 'WordPressAuthor' && $this->wxrVersion == '1.0') {
-          continue;
+        try {
+          $this->migrations[$actual_class] =
+            MigrationBase::getInstance($this->machineName($actual_class));
         }
-        // Skip comments if comment module is not enabled
-        if ($base_class == 'WordPressComment' && !module_exists('comment')) {
-          continue;
+        catch (Exception $e) {
+          // Simply ignore non-existent migrations
         }
-        // Skip tags/categories if taxonomy is not enabled
-        if ($base_class == 'WordPressTag' || $base_class == 'WordPressCategory') {
-          if (!module_exists('taxonomy')) {
-            continue;
-          }
-        }
-        // Skip tags/categories if there's no destination vocabulary
-        if ($base_class == 'WordPressTag' && !variable_get('wordpress_migrate_tag_vocabulary', '') ||
-            $base_class == 'WordPressCategory' && !variable_get('wordpress_migrate_category_vocabulary', '')) {
-          continue;
-        }
-        $this->migrations[$actual_class] = MigrationBase::getInstance($this->machineName($actual_class), $actual_class,
-          array('filename' => $this->filename));
       }
     }
     return $this->migrations;
   }
 
+  /**
+   * Get a list of all WordPress blogs.
+   *
+   * @return WordPressBlog[]
+   */
   static public function blogs() {
     $blogs = array();
     $result = db_select('wordpress_migrate', 'wm')
@@ -367,21 +340,33 @@ class WordPressBlog {
    * @param $sourcefile
    *  The raw WXR file as uploaded.
    * @param $destination
-   *  Filespec to which to write the cleaned-up WXR file.
+   *  Filespec to which to write the cleaned-up WXR file. Omit when
+   *  $namespaces_only == TRUE.
+   * @param bool $unlink
+   *  Indicates whether $sourcefile will be deleted after preprocessing.
+   * @param bool $namespaces_only
+   *  When TRUE, do not rewrite the file, simply gather and return the namespaces.
+   *
+   * @return array
+   *  List of referenced namespaces, keyed by prefix.
    */
-  static public function preprocessFile($sourcefile, $destination) {
+  static public function preprocessFile($sourcefile, $destination, $unlink = TRUE, $namespaces_only = FALSE) {
     // Cleanup some stuff in the process of moving the file to its final
     // destination
     $source_handle = fopen($sourcefile, 'r');
-    $dest_handle = fopen($destination, 'w');
+    if (!$namespaces_only) {
+      $dest_handle = fopen($destination, 'w');
+    }
 
     // First, get the header (everything before the <channel> element) to
-    // rewrite the namespaces
+    // rewrite the namespaces (skipping any empty lines).
     $header = '';
-    while ($line = fgets($source_handle)) {
-      $header .= $line;
-      if (strpos($line, '<channel>') !== FALSE) {
-        break;
+    while (($line = fgets($source_handle)) !== FALSE) {
+      if (trim($line)) {
+        $header .= $line;
+        if (strpos($line, '<channel>') !== FALSE) {
+          break;
+        }
       }
     }
 
@@ -399,6 +384,16 @@ class WordPressBlog {
     // What the hell, throw in iTunes too
     $itunes_ns = 'xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"';
     $header = str_replace($content_ns, $itunes_ns . "\n\t" . $content_ns, $header);
+
+    preg_match_all('|xmlns:(.+?)="(.+?)"|i', $header, $matches, PREG_SET_ORDER);
+    $namespaces = array();
+    foreach ($matches as $index => $match) {
+      $namespaces[$match[1]] = $match[2];
+    }
+
+    if ($namespaces_only) {
+      return $namespaces;
+    }
 
     // Replace HTML entities with XML entities
     $header = strtr($header, self::$entityReplacements);
@@ -420,7 +415,11 @@ class WordPressBlog {
 
     fclose($dest_handle);
     fclose($source_handle);
-    unlink($sourcefile);
+    if ($unlink) {
+      unlink($sourcefile);
+    }
+
+    return $namespaces;
   }
 
   /**
