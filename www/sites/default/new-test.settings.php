@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Language" content="en">
     
     
-    <title>libraryweb-site/dev.settings.php at DRUP-568 · UCLALibrary/libraryweb-site · GitHub</title>
+    <title>libraryweb-site/new-test.settings.php at DRUP-568 · UCLALibrary/libraryweb-site · GitHub</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
@@ -32,7 +32,7 @@
     <meta name="selected-link" value="repo_source" data-pjax-transient>
       <meta name="google-analytics" content="UA-3769691-2">
 
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="A4439814:09F9:92E1C7A:552C60FE" name="octolytics-dimension-request_id" />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="A4439814:1418:781253E:552C6230" name="octolytics-dimension-request_id" />
     
     <meta content="Rails, view, blob#show" name="analytics-event" />
     <meta class="js-ga-set" name="dimension1" content="Logged Out">
@@ -46,7 +46,7 @@
 
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="SV9WPes5mJwQvHoQpFlLOmAuvAlD2EIbhHeECXstyPb+J+tmlULI14l1L8PnagkUj0xU+bn5c5VIoKPh/DBGyg==" name="csrf-token" />
+<meta content="FQCoPfd1L/izmAx9LD982tmtoa0wjMkkMFOGbIeKvRG7UPfTdVYtlsjx/59bTgsFAqJMJ81bajdzxPEMUJkkIA==" name="csrf-token" />
 
     <link href="https://assets-cdn.github.com/assets/github-6a4174aa7e25ce4268078491fdfa22273eef841d99e1ab07ccce9b89c747f55d.css" media="all" rel="stylesheet" />
     <link href="https://assets-cdn.github.com/assets/github2-5b5e999e041f2586f9dc06b940229076225e6ec5ab5406be292a87331325fdc0.css" media="all" rel="stylesheet" />
@@ -84,7 +84,7 @@
 
     <div class="header-actions" role="navigation">
         <a class="btn btn-primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
-      <a class="btn" href="/login?return_to=%2FUCLALibrary%2Flibraryweb-site%2Fblob%2FDRUP-568%2Fwww%2Fsites%2Fdefault%2Fdev.settings.php" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+      <a class="btn" href="/login?return_to=%2FUCLALibrary%2Flibraryweb-site%2Fblob%2FDRUP-568%2Fwww%2Fsites%2Fdefault%2Fnew-test.settings.php" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
     </div>
 
     <div class="site-search repo-scope js-site-search" role="search">
@@ -284,9 +284,9 @@
         <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
           
 
-<a href="/UCLALibrary/libraryweb-site/blob/b1cac7b3c0fb4cc8ccef7d72023564d3c1acd418/www/sites/default/dev.settings.php" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+<a href="/UCLALibrary/libraryweb-site/blob/b1cac7b3c0fb4cc8ccef7d72023564d3c1acd418/www/sites/default/new-test.settings.php" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
-<!-- blob contrib key: blob_contributors:v21:50272bed2ac366af2410a82f8a1337aa -->
+<!-- blob contrib key: blob_contributors:v21:1e606a070f20b5e422c20c3a89720fb7 -->
 
 <div class="file-navigation js-zeroclipboard-container">
   
@@ -331,7 +331,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/UCLALibrary/libraryweb-site/blob/DRUP-568/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/DRUP-568/www/sites/default/new-test.settings.php"
                data-name="DRUP-568"
                data-skip-pjax="true"
                rel="nofollow">
@@ -341,7 +341,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/DRUP-598/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/DRUP-598/www/sites/default/new-test.settings.php"
                data-name="DRUP-598"
                data-skip-pjax="true"
                rel="nofollow">
@@ -351,7 +351,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/DRUP-610/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/DRUP-610/www/sites/default/new-test.settings.php"
                data-name="DRUP-610"
                data-skip-pjax="true"
                rel="nofollow">
@@ -361,7 +361,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/DRUP-671/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/DRUP-671/www/sites/default/new-test.settings.php"
                data-name="DRUP-671"
                data-skip-pjax="true"
                rel="nofollow">
@@ -371,7 +371,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-11/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-11/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-11"
                data-skip-pjax="true"
                rel="nofollow">
@@ -381,7 +381,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-82/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-82/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-82"
                data-skip-pjax="true"
                rel="nofollow">
@@ -391,7 +391,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-94/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-94/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-94"
                data-skip-pjax="true"
                rel="nofollow">
@@ -401,7 +401,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-185-Adrian/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-185-Adrian/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-185-Adrian"
                data-skip-pjax="true"
                rel="nofollow">
@@ -411,7 +411,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-186/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-186/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-186"
                data-skip-pjax="true"
                rel="nofollow">
@@ -421,7 +421,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-190/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-190/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-190"
                data-skip-pjax="true"
                rel="nofollow">
@@ -431,7 +431,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-206/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-206/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-206"
                data-skip-pjax="true"
                rel="nofollow">
@@ -441,7 +441,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-210/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/UCLALIB-210/www/sites/default/new-test.settings.php"
                data-name="UCLALIB-210"
                data-skip-pjax="true"
                rel="nofollow">
@@ -451,7 +451,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/master/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/master/www/sites/default/new-test.settings.php"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -461,7 +461,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/media/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/media/www/sites/default/new-test.settings.php"
                data-name="media"
                data-skip-pjax="true"
                rel="nofollow">
@@ -471,7 +471,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/production/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/production/www/sites/default/new-test.settings.php"
                data-name="production"
                data-skip-pjax="true"
                rel="nofollow">
@@ -481,7 +481,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/staging/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/staging/www/sites/default/new-test.settings.php"
                data-name="staging"
                data-skip-pjax="true"
                rel="nofollow">
@@ -491,7 +491,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/ucla-76-2/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/ucla-76-2/www/sites/default/new-test.settings.php"
                data-name="ucla-76-2"
                data-skip-pjax="true"
                rel="nofollow">
@@ -501,7 +501,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-15/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-15/www/sites/default/new-test.settings.php"
                data-name="uclalib-15"
                data-skip-pjax="true"
                rel="nofollow">
@@ -511,7 +511,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-22/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-22/www/sites/default/new-test.settings.php"
                data-name="uclalib-22"
                data-skip-pjax="true"
                rel="nofollow">
@@ -521,7 +521,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-24/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-24/www/sites/default/new-test.settings.php"
                data-name="uclalib-24"
                data-skip-pjax="true"
                rel="nofollow">
@@ -531,7 +531,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-37/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-37/www/sites/default/new-test.settings.php"
                data-name="uclalib-37"
                data-skip-pjax="true"
                rel="nofollow">
@@ -541,7 +541,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-46/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-46/www/sites/default/new-test.settings.php"
                data-name="uclalib-46"
                data-skip-pjax="true"
                rel="nofollow">
@@ -551,7 +551,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-50/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-50/www/sites/default/new-test.settings.php"
                data-name="uclalib-50"
                data-skip-pjax="true"
                rel="nofollow">
@@ -561,7 +561,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-67/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-67/www/sites/default/new-test.settings.php"
                data-name="uclalib-67"
                data-skip-pjax="true"
                rel="nofollow">
@@ -571,7 +571,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-76/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-76/www/sites/default/new-test.settings.php"
                data-name="uclalib-76"
                data-skip-pjax="true"
                rel="nofollow">
@@ -581,7 +581,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib-78/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib-78/www/sites/default/new-test.settings.php"
                data-name="uclalib-78"
                data-skip-pjax="true"
                rel="nofollow">
@@ -591,7 +591,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib_ct_features/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib_ct_features/www/sites/default/new-test.settings.php"
                data-name="uclalib_ct_features"
                data-skip-pjax="true"
                rel="nofollow">
@@ -601,7 +601,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/UCLALibrary/libraryweb-site/blob/uclalib_profile/www/sites/default/dev.settings.php"
+               href="/UCLALibrary/libraryweb-site/blob/uclalib_profile/www/sites/default/new-test.settings.php"
                data-name="uclalib_profile"
                data-skip-pjax="true"
                rel="nofollow">
@@ -640,11 +640,11 @@
   </div>
 
   <div class="breadcrumb js-zeroclipboard-target">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">libraryweb-site</span></a></span></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568/www" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">www</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568/www/sites" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">sites</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568/www/sites/default" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">default</span></a></span><span class="separator">/</span><strong class="final-path">dev.settings.php</strong>
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">libraryweb-site</span></a></span></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568/www" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">www</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568/www/sites" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">sites</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/UCLALibrary/libraryweb-site/tree/DRUP-568/www/sites/default" class="" data-branch="DRUP-568" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">default</span></a></span><span class="separator">/</span><strong class="final-path">new-test.settings.php</strong>
   </div>
 </div>
 
-<include-fragment class="commit commit-loader file-history-tease" src="/UCLALibrary/libraryweb-site/contributors/DRUP-568/www/sites/default/dev.settings.php">
+<include-fragment class="commit commit-loader file-history-tease" src="/UCLALibrary/libraryweb-site/contributors/DRUP-568/www/sites/default/new-test.settings.php">
   <div class="file-history-tease-header">
     Fetching contributors&hellip;
   </div>
@@ -659,9 +659,9 @@
     <div class="file-actions">
 
       <div class="btn-group">
-        <a href="/UCLALibrary/libraryweb-site/raw/DRUP-568/www/sites/default/dev.settings.php" class="btn btn-sm " id="raw-url">Raw</a>
-          <a href="/UCLALibrary/libraryweb-site/blame/DRUP-568/www/sites/default/dev.settings.php" class="btn btn-sm js-update-url-with-hash">Blame</a>
-        <a href="/UCLALibrary/libraryweb-site/commits/DRUP-568/www/sites/default/dev.settings.php" class="btn btn-sm " rel="nofollow">History</a>
+        <a href="/UCLALibrary/libraryweb-site/raw/DRUP-568/www/sites/default/new-test.settings.php" class="btn btn-sm " id="raw-url">Raw</a>
+          <a href="/UCLALibrary/libraryweb-site/blame/DRUP-568/www/sites/default/new-test.settings.php" class="btn btn-sm js-update-url-with-hash">Blame</a>
+        <a href="/UCLALibrary/libraryweb-site/commits/DRUP-568/www/sites/default/new-test.settings.php" class="btn btn-sm " rel="nofollow">History</a>
       </div>
 
 
@@ -675,9 +675,9 @@
     </div>
 
     <div class="file-info">
-        39 lines (34 sloc)
+        38 lines (31 sloc)
         <span class="file-info-divider"></span>
-      0.781 kb
+      1.338 kb
     </div>
   </div>
   
@@ -693,147 +693,143 @@
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Setup DB</span></span></td>
+        <td id="LC3" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Site-specific settings for new-test</span></span></td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$databases</span> <span class="pl-k">=</span> <span class="pl-k">array</span> (</span></td>
+        <td id="LC4" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Get database info from file which is excluded from repo</span></span></td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code js-file-line"><span class="pl-s1">  <span class="pl-s"><span class="pl-pds">&#39;</span>default<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span></span></td>
+        <td id="LC5" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-k">require_once</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>new-test.settings-db.php<span class="pl-pds">&#39;</span></span>);</span></td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code js-file-line"><span class="pl-s1">  <span class="pl-k">array</span> (</span></td>
+        <td id="LC6" class="blob-code js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code js-file-line"><span class="pl-s1">    <span class="pl-s"><span class="pl-pds">&#39;</span>default<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span></span></td>
+        <td id="LC7" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Tell Drupal that we are behind a reverse proxy server</span></span></td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code js-file-line"><span class="pl-s1">    <span class="pl-k">array</span> (</span></td>
+        <td id="LC8" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>reverse_proxy<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">TRUE</span>;</span></td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>database<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>uclalib<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC9" class="blob-code js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>username<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>uclalib<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC10" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// List of trusted IPs (IP numbers of our reverse proxies)</span></span></td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>password<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>uclalib<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC11" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>reverse_proxy_addresses<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">array</span>(</span></td>
       </tr>
       <tr>
         <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>host<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>localhost<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC12" class="blob-code js-file-line"><span class="pl-s1">  <span class="pl-s"><span class="pl-pds">&#39;</span>127.0.0.1<span class="pl-pds">&#39;</span></span>,</span></td>
       </tr>
       <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>port<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC13" class="blob-code js-file-line"><span class="pl-s1">);</span></td>
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>driver<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>mysql<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC14" class="blob-code js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>prefix<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC15" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Solr settings</span></span></td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code js-file-line"><span class="pl-s1">    ),</span></td>
+        <td id="LC16" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>search_api_solr_overrides<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">array</span>(</span></td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code js-file-line"><span class="pl-s1">  ),</span></td>
+        <td id="LC17" class="blob-code js-file-line"><span class="pl-s1">  <span class="pl-s"><span class="pl-pds">&#39;</span>uclalib_solr_server<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">array</span>(</span></td>
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code js-file-line"><span class="pl-s1">);</span></td>
+        <td id="LC18" class="blob-code js-file-line"><span class="pl-s1">    <span class="pl-s"><span class="pl-pds">&#39;</span>name<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> t(<span class="pl-s"><span class="pl-pds">&#39;</span>Solr Server (UCLA Test)<span class="pl-pds">&#39;</span></span>),</span></td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code js-file-line"><span class="pl-s1"></span></td>
+        <td id="LC19" class="blob-code js-file-line"><span class="pl-s1">    <span class="pl-s"><span class="pl-pds">&#39;</span>options<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">array</span>(</span></td>
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Tell Drupal that we are behind a reverse proxy server</span></span></td>
+        <td id="LC20" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>host<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>temp-solrsearch.library.ucla.edu<span class="pl-pds">&#39;</span></span>,</span></td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>reverse_proxy<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">TRUE</span>;</span></td>
+        <td id="LC21" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>port<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>80<span class="pl-pds">&#39;</span></span>,</span></td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code js-file-line"><span class="pl-s1"></span></td>
+        <td id="LC22" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>path<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>/solr/www-test<span class="pl-pds">&#39;</span></span>,</span></td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// List of trusted IPs (IP numbers of our reverse proxies)</span></span></td>
+        <td id="LC23" class="blob-code js-file-line"><span class="pl-s1">    ),</span></td>
       </tr>
       <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>reverse_proxy_addresses<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">array</span>(</span></td>
+        <td id="LC24" class="blob-code js-file-line"><span class="pl-s1">  ),</span></td>
       </tr>
       <tr>
         <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code js-file-line"><span class="pl-s1">  <span class="pl-s"><span class="pl-pds">&#39;</span>127.0.0.1<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC25" class="blob-code js-file-line"><span class="pl-s1">);</span></td>
       </tr>
       <tr>
         <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code js-file-line"><span class="pl-s1">);</span></td>
+        <td id="LC26" class="blob-code js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code js-file-line"><span class="pl-s1"></span></td>
+        <td id="LC27" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Shibboleth settings</span></span></td>
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-c">// Solr settings</span></span></td>
+        <td id="LC28" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_account_linking<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">1</span>;</span></td>
       </tr>
       <tr>
         <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>search_api_solr_overrides<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">array</span>(</span></td>
+        <td id="LC29" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_account_linking_text<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>Link this account with another identity<span class="pl-pds">&#39;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code js-file-line"><span class="pl-s1">  <span class="pl-s"><span class="pl-pds">&#39;</span>uclalib_solr_server<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">array</span>(</span></td>
+        <td id="LC30" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_auto_destroy_session<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">1</span>;</span></td>
       </tr>
       <tr>
         <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code js-file-line"><span class="pl-s1">    <span class="pl-s"><span class="pl-pds">&#39;</span>name<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> t(<span class="pl-s"><span class="pl-pds">&#39;</span>Solr Server (Staging)<span class="pl-pds">&#39;</span></span>),</span></td>
+        <td id="LC31" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_email_variable<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>HTTP_SHIBMAIL<span class="pl-pds">&#39;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code js-file-line"><span class="pl-s1">    <span class="pl-s"><span class="pl-pds">&#39;</span>options<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">array</span>(</span></td>
+        <td id="LC32" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_full_handler_url<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>https://new-test.library.ucla.edu/Shibboleth.sso/Login<span class="pl-pds">&#39;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>host<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>192.168.129.217<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC33" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_full_logout_url<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>https://new-test.library.ucla.edu/Shibboleth.sso/Logout?return=https://shb.ais.ucla.edu/shibboleth-idp/Logout<span class="pl-pds">&#39;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
-        <td id="LC34" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>port<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>8080<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC34" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_link_text<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>Shibboleth Login<span class="pl-pds">&#39;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
-        <td id="LC35" class="blob-code js-file-line"><span class="pl-s1">      <span class="pl-s"><span class="pl-pds">&#39;</span>path<span class="pl-pds">&#39;</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">&#39;</span>/solr/uclalibdev<span class="pl-pds">&#39;</span></span>,</span></td>
+        <td id="LC35" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_logout_url<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>https://shb.ais.ucla.edu/shibboleth-idp/Logout<span class="pl-pds">&#39;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
-        <td id="LC36" class="blob-code js-file-line"><span class="pl-s1">    ),</span></td>
+        <td id="LC36" class="blob-code js-file-line"><span class="pl-s1"><span class="pl-smi">$conf</span>[<span class="pl-s"><span class="pl-pds">&#39;</span>shib_auth_username_variable<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>HTTP_SHIBUCLAUNIVERSITYID<span class="pl-pds">&#39;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
-        <td id="LC37" class="blob-code js-file-line"><span class="pl-s1">  ),</span></td>
-      </tr>
-      <tr>
-        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
-        <td id="LC38" class="blob-code js-file-line"><span class="pl-s1">);</span></td>
+        <td id="LC37" class="blob-code js-file-line"><span class="pl-s1"></span></td>
       </tr>
 </table>
 
@@ -874,7 +870,7 @@
       <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
 </a>
     <ul class="site-footer-links">
-      <li>&copy; 2015 <span title="0.04135s from github-fe137-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2015 <span title="0.04926s from github-fe138-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
         <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
         <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
