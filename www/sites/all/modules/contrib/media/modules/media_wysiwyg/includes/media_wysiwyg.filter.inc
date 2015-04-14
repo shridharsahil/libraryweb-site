@@ -144,11 +144,6 @@ function media_wysiwyg_token_to_markup($match, $wysiwyg = FALSE) {
             $settings[$dimension] = $settings['attributes'][$dimension];
           }
         }
-        // If the element is floated via WYSIWYG editor functionality, delegate
-        // that information to the outer element.
-        if (!empty($css_properties['float'])) {
-          $settings['float'] = $css_properties['float'];
-        }
       }
     }
   }
@@ -184,25 +179,9 @@ function media_wysiwyg_token_to_markup($match, $wysiwyg = FALSE) {
     drupal_add_js(array('mediaDataMap' => array($file->fid => $data)), 'setting');
     $element['#attributes']['data-fid'] = $file->fid;
     $element['#attributes']['class'][] = 'media-element';
-
-    // Render file in WYSIWYG using appropriate view mode.
-    $view_mode = db_query('SELECT view_mode FROM {media_view_mode_wysiwyg} WHERE type = :type', array(
-      ':type' => $file->type,
-    ))
-      ->fetchField();
-    if (empty($view_mode)) {
-      $view_mode = $tag_info['view_mode'];
-    }
-    $element = media_wysiwyg_get_file_without_label($file, $view_mode, $settings);
-
   }
   else {
     // Display the field elements.
-    foreach (array('width', 'height') as $dimension) {
-      if (isset($settings['attributes'][$dimension]) && isset($file->metadata[$dimension])) {
-        $settings['attributes'][$dimension] = $file->metadata[$dimension];
-      }
-    }
     $element = array();
     $element['content']['file'] = media_wysiwyg_get_file_without_label($file, $tag_info['view_mode'], $settings);
     // Overwrite or set the file #alt attribute if it has been set in this
@@ -220,21 +199,16 @@ function media_wysiwyg_token_to_markup($match, $wysiwyg = FALSE) {
     $element['content'] += field_attach_view('file', $file, $tag_info['view_mode']);
     if (count(element_children($element['content'])) > 1) {
       // Add surrounding divs to group them together.
-      // We don't want divs when there are no additional fields to allow files
+      // We dont want divs when there are no additional fields to allow files
       // to display inline with text, without breaking p tags.
       $element['content']['#type'] = 'container';
       $element['content']['#attributes']['class'] = array(
         'media',
         'media-element-container',
-        drupal_html_class('media-' . $element['content']['file']['#view_mode']),
+        'media-' . $element['content']['file']['#view_mode']
       );
-      // Add the float information to the outer element.
-      if (!empty($settings['float'])) {
-        $element['content']['#attributes']['class'][] = 'media-float-' . $settings['float'];
-      }
     }
   }
-
   drupal_alter('media_wysiwyg_token_to_markup', $element, $tag_info, $settings);
   return drupal_render($element);
 }
@@ -248,20 +222,25 @@ function media_wysiwyg_filter_field_parser($tag_info) {
     foreach($tag_info['fields'] as $field_name => $field_value) {
       if (strpos($field_name, 'field_') === 0) {
         $parsed_field = explode('[', str_replace(']', '', $field_name));
-        if(isset($parsed_field[2])) {
-          if(isset($parsed_field[3])) {
-            $fields[$parsed_field[0]][$parsed_field[1]][$parsed_field[2]][$parsed_field[3]] = $field_value;
-          } else {
-            $fields[$parsed_field[0]][$parsed_field[1]][$parsed_field[2]] = $field_value;
+        $ref = &$fields;
+
+        // Each key of the field needs to be the child of the previous key.
+        foreach ($parsed_field as $key) {
+          if (!isset($ref[$key])) {
+            $ref[$key] = array();
           }
-        } else {
-          $fields[$parsed_field[0]][$parsed_field[1]] = $field_value;
+          $ref = &$ref[$key];
         }
+
+        // The value should be set at the deepest level.
+        // Fields that use rich-text markup will be urlencoded.
+        $ref = urldecode($field_value);
       }
     }
   }
   return $fields;
 }
+
 /**
  * Builds a map of media tags in the element.
  *
@@ -375,19 +354,6 @@ function media_wysiwyg_get_wysiwyg_allowed_view_modes($file) {
   }
 
   $view_modes = $enabled_view_modes[$file->type];
-  media_wysiwyg_wysiwyg_allowed_view_modes_restrict($view_modes, $file);
   drupal_alter('media_wysiwyg_wysiwyg_allowed_view_modes', $view_modes, $file);
   return $view_modes;
-}
-
-/**
- * Do not show restricted view modes.
- */
-function media_wysiwyg_wysiwyg_allowed_view_modes_restrict(&$view_modes, &$file) {
-  $restricted_view_modes = db_query('SELECT display FROM {media_restrict_wysiwyg} WHERE type = :type', array(':type' => $file->type))->fetchCol();
-  foreach ($restricted_view_modes as $restricted_view_mode) {
-    if (array_key_exists($restricted_view_mode, $view_modes)) {
-      unset($view_modes[$restricted_view_mode]);
-    }
-  }
 }
