@@ -96,9 +96,6 @@ function media_wysiwyg_format_form($form, &$form_state, $file) {
     }
   }
 
-  // Add view mode preview.
-  media_wysiwyg_format_form_view_mode($form, $form_state, $file);
-
   // Similar to a form_alter, but we want this to run first so that
   // media.types.inc can add the fields specific to a given type (like alt tags
   // on media). If implemented as an alter, this might not happen, making other
@@ -111,62 +108,4 @@ function media_wysiwyg_format_form($form, &$form_state, $file) {
   }
 
   return $form;
-}
-
-/**
- * Add ajax preview when selecting view mode in wysiwyg editor.
- */
-function media_wysiwyg_format_form_view_mode(&$form, $form_state, $file)  {
-  $default_view_mode = variable_get('media_wysiwyg_wysiwyg_default_view_mode', 'full');
-
-  $view_mode = !empty($form_state['values']['format']) ? $form_state['values']['format'] : $default_view_mode;
-
-  $form['preview'] = array();
-  $form['preview']['#prefix'] = '<div class="media-item"><div class="media-thumbnail">';
-  $form['preview']['#suffix'] = '</div><div class="label-wrapper"><label class="media-filename">' . $file->filename . '</label></div></div>';
-  $form['preview']['thumbnail'] = file_view_file($file, $view_mode);
-  $form['preview']['thumbnail']['#prefix'] = '<div id="media-preview">';
-  $form['preview']['thumbnail']['#suffix'] = '</div>';
-
-  if (!isset($form['options']['format']['#default_value'])) {
-    $form['options']['format']['#default_value'] = $view_mode;
-  }
-  $form['options']['format']['#ajax'] = array(
-    'callback' => 'media_wysiwyg_format_form_preview',
-    'wrapper' => 'media-preview',
-  );
-
-  $wysiwyg_view_mode = db_query('SELECT view_mode FROM {media_view_mode_wysiwyg} WHERE type = :type', array(':type' => $file->type))->fetchField();
-  $view_modes = media_wysiwyg_get_wysiwyg_allowed_view_modes($file);
-  $formats = $options = array();
-
-  foreach ($view_modes as $view_mode => $view_mode_info) {
-    $options[$view_mode] = $view_mode_info['label'];
-
-    if (!empty($wysiwyg_view_mode)) {
-      $element = media_wysiwyg_get_file_without_label($file, $wysiwyg_view_mode, array('wysiwyg' => TRUE));
-    }
-    else {
-      $element = media_wysiwyg_get_file_without_label($file, $view_mode, array('wysiwyg' => TRUE));
-    }
-
-    $formats[$view_mode] = drupal_render($element);
-  }
-
-  $form['#formats'] = $formats;
-}
-
-/**
- * AJAX callback to select the portion of the format form to be updated with a preview.
- *
- * @param array $form
- *   An associative array containing the structure of the form.
- * @param array $form_state
- *   An associative array containing the current state of the form.
- *
- * @return array
- *   The preview form item.
- */
-function media_wysiwyg_format_form_preview($form, $form_state) {
-  return $form['preview']['thumbnail'];
 }

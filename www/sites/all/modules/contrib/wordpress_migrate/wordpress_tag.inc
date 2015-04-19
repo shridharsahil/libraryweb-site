@@ -20,7 +20,7 @@ class WordPressTag extends WordPressMigration {
     // identifier of a tag.
     $this->map = new MigrateSQLMap($this->machineName,
       array(
-        'tag_slug' => array(
+        'wp:tag_slug' => array(
           'type' => 'varchar',
           'length' => 255,
           'not null' => TRUE,
@@ -31,24 +31,27 @@ class WordPressTag extends WordPressMigration {
     );
 
     $fields = array(
-        'tag_slug' => 'Unique "machine name" of the tag',
-        'tag_name' => 'User-friendly tag name',
-        'tag_description' => 'Description of tag',
+        'wp:tag_slug' => 'Unique "machine name" of the tag',
+        'wp:tag_name' => 'User-friendly tag name',
+        'wp:tag_description' => 'Description of tag',
     );
 
     // Construct the source and destination objects.
     $source_options = array(
-      'reader_class' => 'WordPressXMLReader',
+      'reader_class' => 'MigrateXMLReader',
       'cache_counts' => TRUE,
     );
-    $this->source = new WordPressSourceXML($this->wxrFile, '/rss/channel/tag',
-      'wp:tag_slug', $fields, $source_options);
-    $this->destination = new MigrateDestinationTerm(
-      variable_get('wordpress_migrate_tag_vocabulary', ''));
+    $this->source = new MigrateSourceXML($this->wxrFile, '/rss/channel/tag',
+      'wp:tag_slug', $fields, $source_options, $this->arguments['namespaces']);
+    $this->destination = new MigrateDestinationTerm($arguments['tag_vocabulary']);
 
     // The basic mappings
-    $this->addFieldMapping('name', 'tag_name');
-    $this->addFieldMapping('description', 'tag_description');
+    $this->addFieldMapping('name', 'wp:tag_name')
+         ->xpath('wp:tag_name')
+         ->callbacks('html_entity_decode');
+    $this->addFieldMapping('description', 'wp:tag_description')
+         ->xpath('wp:tag_description')
+         ->callbacks('html_entity_decode');
     $this->addFieldMapping('parent_name')
          ->issueGroup('DNM');
 

@@ -122,6 +122,7 @@ Drupal.media.popups.mediaBrowser.getDefaults = function () {
 Drupal.media.popups.mediaBrowser.finalizeSelection = function () {
   var selected = this.contentWindow.Drupal.media.browser.selectedMedia;
   if (selected.length < 1) {
+    alert(notSelected);
     return;
   }
   onSelect(selected);

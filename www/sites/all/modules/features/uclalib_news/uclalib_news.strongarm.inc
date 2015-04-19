@@ -76,6 +76,12 @@ function uclalib_news_strongarm() {
         'path' => array(
           'weight' => '2',
         ),
+        'redirect' => array(
+          'weight' => '13',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '12',
+        ),
       ),
       'display' => array(),
     ),

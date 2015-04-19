@@ -123,7 +123,7 @@ function _default_opening_hours_create_defaults($node) {
 
   $date_prefix = date_create()->format('Y-m');
   // OP-77: Until we define/implement a UI, enter the final date of the session/quarter
-  $to_date = date_create('2015-06-30')->format('Y-m-d');
+  $to_date = date_create('2016-06-30')->format('Y-m-d');
 
   $record = array(
     'nid' => $node->nid,

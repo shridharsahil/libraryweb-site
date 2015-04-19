@@ -273,6 +273,55 @@ function uclalib_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-field_news_blog_name'
+  $field_instances['node-news-field_news_blog_name'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If this news item belongs in a blog, please select the proper Blog Name',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_news_blog_name',
+    'label' => 'Blog Name',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_news_categories'
   $field_instances['node-news-field_news_categories'] = array(
     'bundle' => 'news',
@@ -322,7 +371,7 @@ function uclalib_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -585,7 +634,9 @@ function uclalib_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Blog Name');
   t('Body');
+  t('If this news item belongs in a blog, please select the proper Blog Name');
   t('News');
   t('News Audience');
   t('News Categories');
