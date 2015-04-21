@@ -20,6 +20,12 @@ Facetapi_bonus - add plugin filter to hide facet count.
 https://drupal.org/node/2266717
 https://drupal.org/files/issues/facetapi-bonus-hide-count-2266717-1.patch
 
+Media - Blank WYSWIG with existing multiple Media content
+https://www.drupal.org/node/2317519
+https://www.drupal.org/files/issues/blank_wyswig_with-2317519-12.patch
+
+** The folowing media patches were applied to 7.x-2.0-alpha3 but are no longer present – 4/21/2015 **
+TODO: check if these Media module patches are still needed: 
 Media - Allow custom file view modes for WYSIWYG display
 https://www.drupal.org/node/1792738
 https://www.drupal.org/files/issues/media-custom_view_modes_for_wysiwyg-1792738-139.patch
