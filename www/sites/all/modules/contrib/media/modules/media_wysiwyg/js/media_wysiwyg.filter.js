@@ -44,6 +44,7 @@
           if (!media && media_definition.fid) {
             Drupal.media.filter.ensureSourceMap();
             var source = Drupal.settings.mediaSourceMap[media_definition.fid];
+            if (!source) continue;
             media = document.createElement(source.tagName);
             media.src = source.src;
           }
