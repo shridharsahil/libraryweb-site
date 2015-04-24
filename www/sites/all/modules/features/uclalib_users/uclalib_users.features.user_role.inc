@@ -28,6 +28,12 @@ function uclalib_users_user_default_roles() {
     'weight' => 4,
   );
 
+  // Exported role: Lead Site Editor.
+  $roles['Lead Site Editor'] = array(
+    'name' => 'Lead Site Editor',
+    'weight' => 10,
+  );
+
   // Exported role: admin_dev.
   $roles['admin_dev'] = array(
     'name' => 'admin_dev',

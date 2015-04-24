@@ -1,7 +1,4 @@
-# Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
 # UCLA-specific settings files - no credentials in repo
-# Note that pattern above does not exclude Bluespark settings files
 sites/*/*.settings-db.php
 
 # Ignore paths that contain user-generated content.
