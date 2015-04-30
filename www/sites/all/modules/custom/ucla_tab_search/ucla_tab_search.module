@@ -61,7 +61,6 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
   // Overrides to include default and extra callback.
   $form['#submit'] = array('ucla_tab_search_tabs_form_submit', 'ucla_search_custom_form_submit');
 
-  
   ////////////////////////////////////////////////////////////////////////////////
   // Books & More tab.
   // Books & More tab.
@@ -142,7 +141,6 @@ can be changed via a pulldown search limit on the results screen. Many records c
     ),
   );
 
-
     $form['books']['catalog_container_cat']['description'] = array(
     '#markup' => t(
       '<strong>What am I searching?</strong></br>
@@ -197,7 +195,6 @@ can be changed via a pulldown search limit on the results screen. Many records c
     ),
   );
 
-
   $form['articles']['articles_search'] = $search_button;
   $form['articles']['articles_search']['#name'] = 'op_articles';
 
@@ -219,14 +216,8 @@ can be changed via a pulldown search limit on the results screen. Many records c
         '#markup' => t('Articles in selected databases are searched. </br>For a more comprehensive listing, use <a href="http://unitproj.library.ucla.edu/search/subjects.cfm">Databases by Subject</a>.'),
     );
 
-
 // end  code for description text  - ccthompson
 
-
-
-
-
-  
   ////////////////////////////////////////////////////////////////////////////////
   // Databases tab.
   // Databases tab.
@@ -259,10 +250,6 @@ can be changed via a pulldown search limit on the results screen. Many records c
     '#default_value' => 'within',
   );
 
-
-
-
-
   $form['databases']['databases_search'] = $search_button;
   $form['databases']['databases_search']['#name'] = 'op_databases';
 
@@ -287,19 +274,14 @@ can be changed via a pulldown search limit on the results screen. Many records c
 If you do not find the database you are seeking, try searching the <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> or <a href="http://guides.library.ucla.edu">Research Guides</a>.
 <p>
 <strong>Other Search Options</strong></br>
-<a href="http://unitproj.library.ucla.edu/search/subjects.cfm">Find Databases by Subject</a></br>
+<a href="http://guides.library.ucla.edu/databases-by-subject">Find Databases by Subject</a></br>
 <a href="http://guides.library.ucla.edu/az.php">A-Z List of Databases</a></br>
 
 
           '),
     );
 
-
 // end  code for description text  - ccthompson
-
-
-
-
 
   ////////////////////////////////////////////////////////////////////////////////
   // Journals tab.
@@ -350,8 +332,6 @@ If you do not find the database you are seeking, try searching the <a href="http
     '#default_value' => 'JKEY^',
   );
 
-
-
   $form['journals']['journals_search'] = $search_button;
   $form['journals']['journals_search']['#name'] = 'op_journals';
 
@@ -376,7 +356,6 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
 <a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Locate the Article from Your Citation</a>'),
     );
 
-
   ////////////////////////////////////////////////////////////////////////////////
   // Research Guides tab.
   // Research Guides tab.
@@ -388,7 +367,6 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
   $form['guides']['text_query']['#attributes'] = array(
     'placeholder' => t('Search by subject or course (e.g., "Psychology" or "Engineering 183")'),
   );
-
 
   $form['guides']['guides_search'] = $search_button;
   $form['guides']['guides_search']['#name'] = 'op_guides';
@@ -423,11 +401,8 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
 	'),
     );
 
-
 // end  code for description text  - ccthompson
 
-  
-  
 ////////////////////////////////////////////////////////////////////////////////
   // oac's tab.
   // oac's tab.
@@ -460,25 +435,10 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
         '#markup' => t('<strong>What am I searching?</strong></br>The Online Archive of California (OAC) is a Web-accessible, digital gateway to information about materials such as manuscripts, photographs, and works of art held in libraries, museums, archives, and other institutions across California, including UCLA. The OAC allows patrons to view finding aids, i.e., inventories of collection content, which provide detailed information about collection content that is readily accessible and searchable.'),
     );
 
-
 // end  code for description text  - ccthompson
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   return $form;
 }
-
 
 /** ***********************************************************************************************************************
  * Form submission handler for ucla_tab_search_form().
@@ -514,7 +474,7 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
 	$search_form = $form_state['values']['tabs__active_tab'];
 	switch ($form_state['values']['tabs__active_tab']) {
         case 'edit-books':
-        
+
         $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['books']['catalog']];
 	    switch ( $maps[$form_state['values']['books']['catalog']] ) {
 	      case 'BM-Mel':
