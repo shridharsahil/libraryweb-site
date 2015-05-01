@@ -269,14 +269,18 @@ function uclalib_news_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
   // Exported field_instance: 'node-news-field_news_blog_name'
   $field_instances['node-news-field_news_blog_name'] = array(
     'bundle' => 'news',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 828,
+      ),
+    ),
     'deleted' => 0,
     'description' => 'If this news item belongs in a blog, please select the proper Blog Name',
     'display' => array(
@@ -576,7 +580,7 @@ function uclalib_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -628,7 +632,62 @@ function uclalib_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 10,
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_news_tags'
+  $field_instances['node-news-field_news_tags'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'event_listed_from_bean' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_news_tags',
+    'label' => 'News Tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 9,
     ),
   );
 
@@ -644,6 +703,7 @@ function uclalib_news_field_default_field_instances() {
   t('News Location');
   t('News Related Content');
   t('News Series');
+  t('News Tags');
   t('News Thumbnail');
   t('Select news items to be displayed.');
   t('Upload images here. Once uploaded, they may be cropped and inserted into the body text.');

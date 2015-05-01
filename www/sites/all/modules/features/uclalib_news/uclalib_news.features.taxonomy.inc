@@ -17,5 +17,13 @@ function uclalib_news_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
+    'news_tags' => array(
+      'name' => 'News Tags',
+      'machine_name' => 'news_tags',
+      'description' => 'Tags for news AND blogs',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
   );
 }
