@@ -278,7 +278,7 @@ function uclalib_news_field_default_field_instances() {
     'bundle' => 'news',
     'default_value' => array(
       0 => array(
-        'tid' => 828,
+        'tid' => 839,
       ),
     ),
     'deleted' => 0,

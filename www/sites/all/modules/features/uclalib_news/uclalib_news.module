@@ -17,3 +17,45 @@ function uclalib_news_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['#info']['filter-search_api_views_fulltext']['label'] = '';
   }
 }
+
+/**
+ * Implementation of hook_views_pre_render().
+ */
+function uclalib_news_views_pre_render(&$view) {
+  // De-dupe the blog Categoreies and Tags before rendering
+  if ($view->name == 'blog_terms') {
+    $uniques = array();
+    if ($view->current_display == 'blog_terms_cats_pane') {
+      foreach ($view->result as $key => $value) {
+        // remove repeat results from array and add unique values to array
+        if (in_array($value->field_data_field_news_categories_field_news_categories_tid, $uniques)) {
+          unset($view->result[$key]);
+        } else {
+          $uniques[] = $value->field_data_field_news_categories_field_news_categories_tid;
+        }
+      }
+    }
+    if ($view->current_display == 'blog_terms_tags_pane') {
+      foreach ($view->result as $key => $value) {
+        // remove repeat results from array and add unique values to array
+        if (in_array($value->field_data_field_news_tags_field_news_tags_tid, $uniques)) {
+          unset($view->result[$key]);
+        } else {
+          $uniques[] = $value->field_data_field_news_tags_field_news_tags_tid;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_views_view_summary().
+ */
+function uclalib_news_preprocess_views_view_summary(&$variables) {
+  if ($variables['view']->name == 'blog_archives') {
+    foreach ($variables['view']->result as $key => $row) {
+      // renders the link in YYYY/MM format
+      $variables['view']->result[$key]->url = base_path().'blog/'.arg(1).'/'.substr($row->created_year_month,0,4).'/'.substr($row->created_year_month,4,2);
+    }
+  }
+}
