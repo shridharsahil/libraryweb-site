@@ -36,7 +36,7 @@ function uclalib_resources_uuid_features_default_beans() {
           'field_link_link' => array(
             'und' => array(
               0 => array(
-                'url' => 'http://unitproj.library.ucla.edu/search/subjects.cfm',
+                'url' => 'http://guides.library.ucla.edu/databases-by-subject',
                 'title' => 'Browse Databases by Subject',
                 'attributes' => array(
                   'target' => 0,
