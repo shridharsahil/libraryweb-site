@@ -59,7 +59,7 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
     '#type' => 'textfield',
   );
   // Overrides to include default and extra callback.
-  $form['#submit'] = array('ucla_tab_search_tabs_form_submit', 'ucla_search_custom_form_submit');
+  $form['#submit'] = array('ucla_tab_search_tabs_form_submit');
 
   ////////////////////////////////////////////////////////////////////////////////
   // Books & More tab.
@@ -240,14 +240,6 @@ can be changed via a pulldown search limit on the results screen. Many records c
     '#states' => array(
       'visible' => array(':input[name="databases[databases_catalog]"]' => array('value' => 'TWO')),
     ),
-  );
-  $form['databases']['method'] = array(
-    '#type' => 'radios',
-    '#options' => array(
-        'within' => t('Contains'),
-        'starts' => t('Starts with'),
-    ),
-    '#default_value' => 'within',
   );
 
   $form['databases']['databases_search'] = $search_button;
@@ -538,31 +530,14 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
 	  } else {
 	    $search_year = 'date';
 	  }
-	  switch ( $form_state['values']['databases']['method'] ) {
-//	  $maps[$form_state['values']['databases']['method']] ) {
-	    case 'within':
-	      // Put form info into array expected by search logger / handlers
-	      $search_info = array (
+      $search_info = array (
 	      'search_target' => 'database',
 	      'search_type' => 'contains',
 	      'search_terms' => $form_state['values']['databases']['text_query'],
 	      'search_date' => $search_date,
 	      'browser_ip' => $browser_ip,
-              'search_form' => 'DB',
-	      );
-	    break;
-	    case 'starts':
-	      // Put form info into array expected by search logger / handlers
-	      $search_info = array (
-	      'search_target' => 'database',
-	      'search_type' => 'starts',
-	      'search_terms' => $form_state['values']['databases']['text_query'],
-	      'search_date' => $search_date,
-	      'browser_ip' => $browser_ip,
-              'search_form' => 'DB',
-	      );
-	      break;
-	  }
+        'search_form' => 'DB',
+      );
         break;
 
         case 'edit-journals':
