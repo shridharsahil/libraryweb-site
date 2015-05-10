@@ -76,17 +76,14 @@ function serial_solutions_360($search_info) {
 }
 
 function ucla_search_database($search_info) {
-  $target_url = 'http://unitproj.library.ucla.edu/search/databases-title-result.cfm';
+  $target_url = 'http://guides.library.ucla.edu/az.php';
   // Replace space with plus, but do NOT url encode the terms
-  $target_url .= '?keyword=' . str_replace(' ', '+', $search_info['search_terms']);
-  if ($search_info['search_type']) {
-    $target_url .= '&method=' . map_database_search_type($search_info['search_type']);
-  }
+  $target_url .= '?q=' . str_replace(' ', '+', $search_info['search_terms']);
   drupal_goto($path = $target_url);
 }
 
 function ucla_search_guides($search_info) {
-  $target_url = 'http://guides.library.ucla.edu/srch.php?q=';
+  $target_url = 'http://guides.library.ucla.edu/az.php?q=';
   // Replace space with plus, but do NOT url encode the terms
   $target_url .= str_replace(' ', '+', $search_info['search_terms']);
   drupal_goto($path = $target_url);
