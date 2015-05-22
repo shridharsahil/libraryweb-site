@@ -1,0 +1,9 @@
+name = ORCID - OAuth
+description = ORCID integration via OAuth
+package = ORCID
+core = 7.x
+version = 7.x-2.0
+dependencies[] = orcid_integration
+dependencies[] = wsclient
+dependencies[] = wsclient_rest
+project = orcid_oauth
