@@ -222,7 +222,6 @@ function orcid_integration_account_unlink($form, &$form_state, $account) {
     '#title' => t('Your linked ORCID Account'),
     '#markup' => l(
       variable_get('orcid_integration_main_url') . $account->field_orcid_id[LANGUAGE_NONE][0]['value'],
-      variable_get('orcid_integration_main_url') . $account->field_orcid_id[LANGUAGE_NONE][0]['value'],
       $options = array(
         'attributes' => array(
           'target' => '_blank',
@@ -245,6 +244,8 @@ function orcid_integration_account_unlink_submit($form, &$form_state) {
   $account = user_load($form_state['build_info']['args'][0]->uid);
   unset($account->field_orcid_id);
   $account->field_orcid_id = array();
+  unset($account->data['orcid_response']);
+  unset($account->data['orcid_code']);
   user_save($account);
   drupal_set_message(t('ORCID Account successfully unlinked.'));
 }
