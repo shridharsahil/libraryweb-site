@@ -1,0 +1,182 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function orcid_oauth_menu() {
+  $items['user/%user/orcid_oauth'] = array(
+    'title' => 'ORCID via OAuth',
+    'page callback' => 'orcid_oauth_connector',
+    'access arguments' => array('view own profile'),
+  );
+  $items['user/%user/orcid_thankyou'] = array(
+    'title' => 'ORCID – Thank you',
+    'page callback' => 'orcid_oauth_thankyou',
+    'access arguments' => array('view own profile'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function orcid_oauth_form_orcid_integration_map_account_alter(&$form, &$form_state, $form_id) {
+  // replace form with item templat from orcid_oauth
+  unset($form['existing']);
+  unset($form['mapping']);
+  unset($form['create']);
+  // unset($form['#submit']);
+  $form['orcid_button'] = array(
+    '#type' => 'item',
+    '#theme' => 'orcid_oauth_connect',
+  );
+}
+
+/**
+ * Implementation of hook_preprocess_orcid_oauth_connect().
+ */
+function orcid_oauth_preprocess_orcid_oauth_connect(&$vars) {
+  global $base_url;
+  // build $vars with account and orcid values to pass to theme function
+  $vars['account'] = user_load(arg(1));
+  $vars['orcid']['main_url'] = variable_get('orcid_integration_main_url', 'https://sandbox.orcid.org/');
+  $vars['orcid']['client_id'] = variable_get('orcid_integration_api_client_id');
+  $vars['orcid']['redirect_url'] = variable_get('orcid_integration_api_redirect_url', $base_url);
+}
+
+/*
+ * Returns a link to the users ORCID record or a button to connect to ORCID's OAuth API
+ */
+function orcid_oauth_connector() {
+  global $base_url;
+  // build $vars with account and orcid values to pass to theme function
+  $vars['account'] = user_load(arg(1));
+  $vars['orcid']['main_url'] = variable_get('orcid_integration_main_url', 'https://sandbox.orcid.org/');
+  $vars['orcid']['client_id'] = variable_get('orcid_integration_api_client_id');
+  $vars['orcid']['redirect_url'] = variable_get('orcid_integration_api_redirect_url', $base_url);
+  // check if the user (via /user/%/orcid_oauth not logged in user) has a connected ORCID id.
+  if (array_key_exists('orcid_response', $vars['account']->data)) {
+    if (array_key_exists('orcid', $vars['account']->data['orcid_response'])) {
+      return theme('orcid_oauth_connected', $vars);
+    }
+  } elseif (array_key_exists('orcid_code', $vars['account']->data)) {
+    // call API with code/token to get ORCID id
+    orcid_oauth_get_orcid_id($vars);
+    return theme('orcid_oauth_connect', $vars);
+  } else {
+    return theme('orcid_oauth_connect', $vars);
+  }
+}
+
+/*
+ * Returns a close button for the connect to ORCID's popup window
+ * and saves the orcid code to the user's orcid code field.
+ */
+function orcid_oauth_thankyou() {
+  // get ?code=xxxxxx param
+  $qparams = drupal_get_query_parameters();
+  // load user account from redirection
+  $vars['account'] = user_load(arg(1));
+  // assign code to data array
+  $edit = array(
+    'data' => array(
+      'orcid_code' => $qparams['code'],
+    ),
+  );
+  // save code to user['data'] via $edit param
+  user_save($vars['account'], $edit);
+	return theme('orcid_oauth_thankyou', $vars);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function orcid_oauth_theme($existing, $type, $theme, $path) {
+  return array(
+    'orcid_oauth_connect' => array(
+      'template' => 'orcid-oauth-connect',
+      'variables' => array(),
+    ),
+    'orcid_oauth_connected' => array(
+      'template' => 'orcid-oauth-connected',
+    ),
+    'orcid_oauth_thankyou' => array(
+      'template' => 'orcid-oauth-thankyou',
+    ),
+  );
+}
+
+/**
+ * Implements hook_page_build().
+ */
+function orcid_oauth_page_build(&$page) {
+	// attach css to oauth connect page TODO: not every page
+  $page['page_bottom']['orcid_oauth']['#attached']['css'] = array(
+  	drupal_get_path('module', 'orcid_oauth') . '/orcid_oauth.css',
+	);
+  // moved js to inline via template
+ //  $page['page_bottom']['orcid_oauth']['#attached']['js'] = array(
+ //  	drupal_get_path('module', 'orcid_oauth') . '/orcid_oauth.js',
+	// );
+}
+
+function orcid_oauth_access() {
+	// return TRUE;
+}
+
+function orcid_oauth_get_orcid_id($vars) {
+  $service = wsclient_service_load('orcid_oauth_service');
+  $client_secret = variable_get('orcid_integration_api_client_secret');
+  try {
+    // call ORCID service with params to override defaults
+    $response = $service->getOrcidId(
+      $vars['orcid']['client_id'],
+      $client_secret,
+      'authorization_code',
+      $vars['account']->data['orcid_code']
+    );
+    $vars['account']->field_orcid_id[LANGUAGE_NONE][0]['value'] = $response['orcid'];
+    // save orcid response to user data array
+    user_save($vars['account'], array(
+      'data' => array(
+        'orcid_response' => $response,
+        'orcid_response_timestamp' => time(),
+        // TODO: use this in calls later to see if we have to get a new access_token
+      )
+    ));
+  }
+  catch (WSClientException $exception) {
+    return false;
+  }
+  return $response;
+}
+
+/*
+ * Implements hook_default_wsclient_service().
+ */
+function orcid_oauth_default_wsclient_service() {
+  // construct ORCID service
+  $service = new WSClientServiceDescription();
+  $service->name = 'orcid_oauth_service';
+  $service->label = 'ORCID Service';
+  $service->url = 'https://pub.sandbox.orcid.org/oauth/token';
+  // TODO: make this url ^^ dynamic
+  $service->type = 'rest';
+  // construct operations
+  $operation['parameter']['client_id'] = array('type' => 'text', 'default_value' => '');
+  $operation['parameter']['client_secret'] = array('type' => 'text', 'default_value' => '');
+  $operation['parameter']['grant_type'] = array('type' => 'text', 'default_value' => 'authorization_code');
+  $operation['parameter']['code'] = array('type' => 'text', 'default_value' => '');
+  $operation['type'] = 'POST';
+  // add operations to service
+  $service->operations['getOrcidId'] = $operation;
+  $service->settings['curl options'] = array('Accept: application/json');
+  // add service to services array
+  $services[$service->name] = $service;
+  // clear $operation array for possible later use
+  $operation = array();
+
+  return $services;
+}
