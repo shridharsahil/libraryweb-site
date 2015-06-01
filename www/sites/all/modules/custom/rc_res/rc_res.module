@@ -1935,7 +1935,9 @@ function rc_res_form_page_four_handler_submit($form, &$form_state) {
   $closingTime = ( $openClose[date('N', $userDate)][2]*60 + $openClose[date('N', $userDate)][3] );
   if( ( $closingTime ) < ($openClose[date('N', $userDate)][0]*60 + $openClose[date('N', $userDate)][1]) ){
     $closingTime = ( $closingTime ) + (24*60); // 24hrs x 60 minutes
-    }
+  } else if( $closingTime == 0 ){
+    $closingTime = (24*60); // 24hrs x 60 minutes
+  }
 
   // save the zones for use in the handler
   $zone = rc_session_variable_get('rc-res','zone');
