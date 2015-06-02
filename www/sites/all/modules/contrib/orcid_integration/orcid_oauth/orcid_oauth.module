@@ -12,8 +12,8 @@ function orcid_oauth_menu() {
   $items['user/%user/orcid_thankyou'] = array(
     'title' => 'ORCID – Thank you',
     'page callback' => 'orcid_oauth_thankyou',
-    'access arguments' => array('view own profile'),
-    'type' => MENU_NORMAL_ITEM,
+    'access callback' => 'orcid_integration_edit_access',
+    'access arguments' => array(1),
   );
 
   return $items;
