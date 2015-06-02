@@ -7,3 +7,7 @@ sites/*/private
 
 # Ignore robots.txt - we use site-specific files via symlink
 robots.txt
+
+# Ignore hidden swap files from "kate" editor
+*.kate-swp
+
