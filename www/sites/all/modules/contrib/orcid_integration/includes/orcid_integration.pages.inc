@@ -221,6 +221,7 @@ function orcid_integration_account_unlink($form, &$form_state, $account) {
     '#type' => 'item',
     '#title' => t('Your linked ORCID Account'),
     '#markup' => l(
+      t(variable_get('orcid_integration_main_url') . $account->field_orcid_id[LANGUAGE_NONE][0]['value']),
       variable_get('orcid_integration_main_url') . $account->field_orcid_id[LANGUAGE_NONE][0]['value'],
       $options = array(
         'attributes' => array(
