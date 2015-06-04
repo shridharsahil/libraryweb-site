@@ -162,8 +162,7 @@ function orcid_oauth_default_wsclient_service() {
   $service = new WSClientServiceDescription();
   $service->name = 'orcid_oauth_service';
   $service->label = 'ORCID Service';
-  $service->url = 'https://pub.sandbox.orcid.org/oauth/token';
-  // TODO: make this url ^^ dynamic
+  $service->url = variable_get('orcid_integration_public_api_url', 'https://pub.sandbox.orcid.org/') . 'oauth/token';
   $service->type = 'rest';
   // construct operations
   $operation['parameter']['client_id'] = array('type' => 'text', 'default_value' => '');

@@ -2351,8 +2351,9 @@ function powell_res_get_resources_for_period($form, $form_state) {
   $request_method = 'POST';
   $data = '';
   $request_retry = 3;
+  $request_timeout = 180.0;
   // Send the request.
-  $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
+  $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry, $request_timeout);
 
   if ($response_voy->data == "[]" ) {
     return "Not Found";
