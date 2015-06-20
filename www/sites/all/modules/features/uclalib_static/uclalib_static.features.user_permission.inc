@@ -14,7 +14,10 @@ function uclalib_static_user_default_permissions() {
   $permissions['enter static revision log entry'] = array(
     'name' => 'enter static revision log entry',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Lead Site Editor' => 'Lead Site Editor',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'override_node_options',
   );
@@ -23,7 +26,10 @@ function uclalib_static_user_default_permissions() {
   $permissions['override static authored by option'] = array(
     'name' => 'override static authored by option',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Lead Site Editor' => 'Lead Site Editor',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'override_node_options',
   );
@@ -32,7 +38,10 @@ function uclalib_static_user_default_permissions() {
   $permissions['override static authored on option'] = array(
     'name' => 'override static authored on option',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Lead Site Editor' => 'Lead Site Editor',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'override_node_options',
   );
@@ -50,7 +59,10 @@ function uclalib_static_user_default_permissions() {
   $permissions['override static published option'] = array(
     'name' => 'override static published option',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Lead Site Editor' => 'Lead Site Editor',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'override_node_options',
   );
@@ -59,7 +71,10 @@ function uclalib_static_user_default_permissions() {
   $permissions['override static revision option'] = array(
     'name' => 'override static revision option',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Lead Site Editor' => 'Lead Site Editor',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'override_node_options',
   );
@@ -77,7 +92,10 @@ function uclalib_static_user_default_permissions() {
   $permissions['view any unpublished static content'] = array(
     'name' => 'view any unpublished static content',
     'roles' => array(
+      'CE_Basic' => 'CE_Basic',
+      'Lead Site Editor' => 'Lead Site Editor',
       'administrator' => 'administrator',
+      'content editors' => 'content editors',
     ),
     'module' => 'view_unpublished',
   );
