@@ -227,7 +227,7 @@ can be changed via a pulldown search limit on the results screen. Many records c
   ) + $fieldset_default;
   $form['databases']['text_query'] = $query_textfield;
   $form['databases']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search for a database title.'),
+    'placeholder' => t('Search for a database.'),
   );
   $form['databases']['sfx_search_index_container'] = array(
     '#type' => 'container',
