@@ -55,7 +55,7 @@ function uclalib_exhibition_dates_render($subtype, $conf, $args, $pane_context, 
 
   $block = new stdClass();
   $block->title = '';
-  $block->content = '<i>' . date('l, F j, Y - g:ia', $start_date) . ' to ' . date('l, F j, Y - g:ia', $end_date);
+  $block->content = '<i>' . date('l, F j, Y - g:ia', $start_date) . ' to ' . date('l, F j, Y - g:ia', $end_date). '</i>';
 
   return $block;
 }
