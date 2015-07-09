@@ -127,7 +127,7 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
 California (UC) campuses, and libraries worldwide. This search is limited to University of California Libraries, but
 can be changed via a pulldown search limit on the results screen. Many records contain links to full-text articles from
 <a href="http://ucla.worldcat.org/advancedsearch"> selected databases. </a>
-<p><p>Need more help? Browse our <a href="http://guides.library.ucla.edu/">Research Guides</a>'),
+<p><p><a href="http://catalog.library.ucla.edu/vwebv/enterCourseReserve.do">Search Course Reserves</a>'),
   );
   $form['books']['catalog_container_cat'] = array(
     '#type' => 'container',
@@ -144,7 +144,8 @@ can be changed via a pulldown search limit on the results screen. Many records c
     $form['books']['catalog_container_cat']['description'] = array(
     '#markup' => t(
       '<strong>What am I searching?</strong></br>
-       <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong>but it does not contain journal article titles or authors.</strong>'),
+       <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong>but it does not contain journal article titles or authors.</strong>
+       <p><p><a href="http://catalog.library.ucla.edu/vwebv/enterCourseReserve.do">Search Course Reserves</a>'),
   );
 
   ////////////////////////////////////////////////////////////////////////////////
