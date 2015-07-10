@@ -4,6 +4,7 @@ base theme = omega
 screenshot = screenshot.png
 engine = phptemplate
 core = 7.x
+version = 1.0
 
 ; ========================================
 ; Core Stylesheet Overrides
@@ -31,7 +32,6 @@ stylesheets[all][] = css/uclalib-omega.no-query.css
 ; Scripts
 ; ========================================
 scripts[] = js/uclalib-omega.behaviors.js
-scripts[] = js/qualaroo.js
 
 ; ========================================
 ; Plugins
