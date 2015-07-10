@@ -5,7 +5,7 @@
  * ORCID core functions.
  */
 
-define('ORCID_INTEGRATION_API_VERSION', 'v1.1');
+define('ORCID_INTEGRATION_API_VERSION', 'v1.2');
 
 /**
  * Implements hook_menu().
