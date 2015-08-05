@@ -106,6 +106,11 @@ function orcid_integration_provision_import_user($data, &$context) {
       $account->field_orcid_id[LANGUAGE_NONE][0] = array(
         'value' => $orcid,
       );
+      // if first and last name fields exist and are empty populate them
+      if (property_exists($account, 'field_first_name') && property_exists($account, 'field_last_name')) {
+        $account->field_first_name[LANGUAGE_NONE][0]['value'] = $data['first_name'];
+        $account->field_last_name[LANGUAGE_NONE][0]['value'] = $data['last_name'];
+      }
       user_save($account);
       drupal_set_message(t('User %user claimed ORCID: @orcid', array('%user' => $account->name, '@orcid' => $orcid)));
     }
