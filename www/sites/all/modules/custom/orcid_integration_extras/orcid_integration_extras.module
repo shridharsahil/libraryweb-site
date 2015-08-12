@@ -6,6 +6,41 @@
  * Implementation of hook_form_user_profile_form_alter().
  */
  function orcid_integration_extras_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
- 	// hide the ORCID field on the user edit form (aka user_profile_form) via: DRUP-668
+  // hide the ORCID field on the user edit form (aka user_profile_form) via: DRUP-668
   $form['field_orcid_id']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_user_presave().
+ */
+function orcid_integration_extras_user_presave(&$edit, $account, $category) {
+  // set first name and last name for new orcid users
+  if (array_key_exists('first_name', $edit) && array_key_exists('last_name', $edit) ) {
+    $edit['field_first_name'][LANGUAGE_NONE][0]['value'] = $edit['first_name'];
+    $edit['field_last_name'][LANGUAGE_NONE][0]['value'] = $edit['last_name'];
+  }
+}
+
+/**
+ * Implements hook_user_insert().
+ */
+function orcid_integration_extras_user_insert(&$edit, $account, $category) {
+  // shib-o-lize new users if the were created by orcid batch script
+  if ($account->data['from_orcid_batch'] && module_exists('shib_auth') ) {
+    // update shib_auth module tables after "Pre-creating users" with ORCID batch
+    // per documentation: https://wiki.aai.niif.hu/index.php/DrupalShibbolethReadmeDev#Pre-creating_users
+    db_insert('shib_authmap')
+      ->fields(array(
+        'uid' => $account->uid,
+        'targeted_id' => $account->name,
+      ))
+      ->execute();
+    db_insert('authmap')
+      ->fields(array(
+        'uid' => $account->uid,
+        'authname' => $account->name,
+        'module' => 'shib_auth',
+      ))
+      ->execute();
+  }
 }
