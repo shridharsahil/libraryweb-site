@@ -80,10 +80,12 @@ function orcid_integration_provision_import_user($data, &$context) {
                 }
                 $conflict_orcids[] = $orcid_account['orcid-profile']['orcid-identifier']['path'];
                 $conflict = TRUE;
+                // break out of both loops
                 break 2;
               }
               else {
                 $orcid = $orcid_account['orcid-profile']['orcid-identifier']['path'];
+                // break out of both loops
                 break 2;
               }
             }
@@ -94,7 +96,7 @@ function orcid_integration_provision_import_user($data, &$context) {
     if (!empty($conflict)) {
       $orcid = NULL;
     }
-
+    // set original email from Drupal user
     $account->mail = $original_mail;
     // Claim account if same email exists and there were no conflicts.
     if (empty($orcid) && !$conflict) {
@@ -106,12 +108,8 @@ function orcid_integration_provision_import_user($data, &$context) {
       $account->field_orcid_id[LANGUAGE_NONE][0] = array(
         'value' => $orcid,
       );
-      // if first and last name fields exist and are empty populate them
-      if (property_exists($account, 'field_first_name') && property_exists($account, 'field_last_name')) {
-        $account->field_first_name[LANGUAGE_NONE][0]['value'] = $data['first_name'];
-        $account->field_last_name[LANGUAGE_NONE][0]['value'] = $data['last_name'];
-      }
-      user_save($account);
+      // save user and pass extra data
+      user_save($account, $data);
       drupal_set_message(t('User %user claimed ORCID: @orcid', array('%user' => $account->name, '@orcid' => $orcid)));
     }
   }
@@ -164,9 +162,15 @@ function orcid_integration_provision_import_finished($success, $results, $operat
 function _orcid_integration_provision_create_new_account($data) {
   $user_info = array(
     'name' => $data['username'],
+    'first_name' => $data['first_name'],
+    'last_name' => $data['last_name'],
     'mail' => $data['email'][0],
     'pass' => user_password(),
     'status' => 1,
+    'data' => array(
+      // flags user as coming from an ORCID batch process
+      'from_orcid_batch' => TRUE,
+    ),
   );
   $account = new stdClass();
   $account = user_save($account, $user_info);
