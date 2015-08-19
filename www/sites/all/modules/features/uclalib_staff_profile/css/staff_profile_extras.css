@@ -1,0 +1,220 @@
+
+/* CSS Document Elaine's Additions*/
+
+h2.pane-title.left {
+    float: left;
+    margin-top: -10px;
+
+}
+h3.pane-title.left {
+    clear: left;
+    float: left;
+    font-size: 16px;
+  margin-top:0;
+}
+.contact {
+clear: left;
+    display: block;
+    float: left;
+	width:90%;
+	}
+.social-link-twitter {
+    clear: none !important;
+    margin-left: -15px;
+}
+.field__item.two ul {
+    list-style: none;
+    padding:0;
+}
+.field__item.two {
+    text-align: left;
+	font-weight:100;
+    float:left;
+    width:70%;
+}
+.content .field__items.clearfix {
+    width: 100%;
+}
+.field__item.one {
+    display: block;
+    float: left;
+    width: 30%;
+    clear: left;
+	font-weight:100;
+}
+.views-field.views-field-field-staff-last-name {
+font-weight:100;
+padding-top:15px;
+font-size:1.1em;
+}
+.views-field-field-staff-job-title {
+    font-weight: 100;
+}
+.views-field-field-staff-phone {
+    font-weight: 100;
+}
+
+.more-link-block a:after, .field--name-field-link-link a:after {
+	display:none;
+}
+.l-region.l-region--below-secondary-right {
+	width:100%;
+}
+
+
+ .pager {
+    padding: 48px 0 0;
+ }
+ .form-item,
+.form-actions {
+  margin-bottom: 0;
+
+}
+.form-text {
+    background: #fff;
+    padding: 3px 6px;
+   
+}
+.form-type-textfield {
+    margin-left: -13px;
+    margin-right: -13px;
+}
+.views-widget-filter-search_api_views_fulltext,
+.views-widget-filter-title {
+    margin: 0;
+    padding: 0;
+}
+
+.views-widget-checkboxes {
+    color: #2d2f35;
+    margin-left: 5px;
+}
+
+.views-submit-button {
+    margin-left: 18px;
+    position: absolute;
+    right: -13px;
+    margin: 0;
+    padding: 0;
+}
+
+.views-submit-button input {
+    margin: 2px !important;
+}
+
+
+/*Staff profile do not delete*/
+.pane-style-border-blue h2.pane-title {
+    font-weight: 600;
+}
+.pane-style-background-gray {
+    text-align: left;
+}
+
+.bean-showcase img {
+    clear: left;
+    float: left;
+	padding:0 10px 0 10px;
+	margin-left:-15px;
+}
+.bean-showcase .field--name-field-showcase-link .field__item.two {
+  padding-top: 3px;
+font-weight:100;
+}
+.bean-showcase .field--name-field-showcase-link .field__item.one {
+    padding: 3px;
+    float: left;
+
+}
+.bean-showcase .field--name-field-showcase-caption {
+  
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.address {
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 32px;
+    padding: 12px 8px;
+    width: 62%;
+}
+.l-main-wrapper .l-main {
+    background: none repeat scroll 0 0 none;
+    padding-bottom: 25px;
+}
+h6.pane-title {
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 10px;
+	
+}
+.pane-style-background-gray div.pane-content {
+    text-align: left;
+	font-weight:100;
+}
+.boxed {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.field__item.even h2 {
+    margin-top: -10px;
+}
+.panel-pane.pane-custom.pane-1.pane-style-background-grayone {
+    background-color: #eff3f4;
+    display: block;
+    font-weight: bold;
+    padding: 20px;
+
+}
+.pane-style-background-gray .pane-title {
+
+    font-weight: 600;
+}
+.l-region--main .facetapi-facet-field-staff-glossary-index {
+    font-size: 14px;
+	padding:0;
+}
+.l-region--main .facetapi-facet-field-staff-glossary-index li {
+    padding: 0 9px;
+}
+/*collapsible menu**/
+
+.description{
+	padding: 5px 23px 26px;
+    display:none;
+}
+span#expandAll.links.links, span#collapseAll.links.links.links {
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 15px;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+#header1.header, #header2.header {
+    padding: 5px;
+	color: #3283BE;
+	font-size:16px;
+	padding-left:20px;
+}
+.sidebar-tier-2, .l-region--sidebar-left .pane-quick-links {
+    margin: 0;
+    padding: 0;
+}
+/*styles added after templatizing in Drupal*/
+
+.not-front.not-logged-in.node-type-staff-profile.section-content.node-type-staff-profile.section-content ul.links {list-style-type: none; padding:0; margin:0;}
+
+
+
+.not-front.logged-in.node-type-staff-profile.section-content.node-type-staff-profile.section-content ul.links {list-style-type: none; ;}
+
+.field--type-taxonomy-term-reference.field--label-hidden.clearfix
+{-webkit-margin-before:-10px}
+
+.field.field--name-field-staff-departments.field--type-taxonomy-term-reference.field--label-hidden.clearfix {
+    -webkit-margin-start: -40px;
+}

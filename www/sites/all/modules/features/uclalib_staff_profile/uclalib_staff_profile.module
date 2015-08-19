@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Code for the UCLALIB Staff Profile feature.
@@ -8,7 +9,7 @@ include_once 'uclalib_staff_profile.features.inc';
 
 /**
  * Implements hook_ctools_plugin_directory()
- */
+*/
 function uclalib_staff_profile_ctools_plugin_directory($owner, $plugin_type) {
   switch ("$owner:$plugin_type") {
     case 'ctools:content_types':
@@ -17,4 +18,79 @@ function uclalib_staff_profile_ctools_plugin_directory($owner, $plugin_type) {
 
   return NULL;
 }
+
+/**
+ * Implementation of hook_preprocess_node().
+ */
+function uclalib_staff_profile_preprocess_node(&$variables) {
+  if ($variables['type'] == 'staff_profile') {
+    // check for image in field
+    if (!array_key_exists('field_staff_image_thumbnail', $variables['content'])) {
+      // if no image render default image from module
+      $variables['content']['field_staff_image_thumbnail'][] = array(
+        '#theme' => 'image_formatter',
+        '#item' => array(
+          'uri' => drupal_get_path('module', 'uclalib_staff_profile') . '/images/avatar_400.gif',
+        ),
+        '#image_stlye' => 'thumbnail',
+      );
+    }
+  }
+}
+
+/**
+ * implements theme_registry_alter
+ * For content-types we're going to need to manually add
+ * these to our features set since ctools exports doesn't handle these.
+ * In our features folder (ex. uclalib_staff_profile), we create a subfolder for  our template
+ * and use hook_theme_registry_alter to add content-type templates in.
+ * http://drupal.stackexchange.com/questions/20594/how-do-i-add-a-custom-template-to-my-feature
+ * <!-- BEGIN OUTPUT from 'sites/all//modules/features/uclalib_staff_profile/templates/node--staff_profile.tpl.php' -->
+ */
+// To include views templates in features, see https://www.deeson.co.uk/labs/views-templates-features-module
+
+/**
+ * Implements hook_theme_registry_alter(). Added by EB
+ */
+function uclalib_omega_theme_registry_alter(&$theme_registry) {
+  // Defined path to the current module.
+  $module_path = drupal_get_path('module', 'staff_profile');
+  // Find all .tpl.php files in this module's folder recursively.
+  $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
+  // Iterate through all found template file objects.
+  foreach ($template_file_objects as $key => $template_file_object) {
+    // If the template has not already been overridden by a theme.
+    if (!isset($theme_registry[$key]['theme path']) || !preg_match('#/themes/#', $theme_registry[$key]['theme path'])) {
+      // Alter the theme path and template elements.
+      $theme_registry[$key]['theme path'] = $module_path;
+      $theme_registry[$key] = array_merge($theme_registry[$key], $template_file_object);
+      $theme_registry[$key]['type'] = 'module';
+      $theme_registry['field']['theme path'] = drupal_get_path('module', 'staff_profile');
+      $theme_registry['field']['function'] = 'staff_profile_theme_field';
+    }
+  }
+}
+
+
+ function uclalib_omega_field__taxonomy_term_reference($variables) {
+   $output = '';
+
+   // Render the label, if it's not hidden.
+   if (!$variables['label_hidden']) {
+     $output .= '<strong="field-label">' . $variables['label'] . ': </strong>';
+   }
+
+   // Render the items.
+   $output .= ($variables['element']['#label_display'] == 'inline') ? '<ul class="links inline">' : '<ul class="links">';
+   foreach ($variables['items'] as $delta => $item) {
+     $output .= '<li class="taxonomy-term-reference-' . $delta . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+   }
+   $output .= '</ul>';
+
+   // Render the top-level DIV.
+   $output = '<div class="' . $variables['classes'] . (!in_array('clearfix', $variables['classes_array']) ? ' clearfix' : '') . '">' . $output . '</div>';
+
+   return $output;
+
+ }
 
