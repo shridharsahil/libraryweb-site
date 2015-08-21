@@ -12,7 +12,7 @@ include_once 'uclalib_users.features.inc';
 function uclalib_users_username_alter(&$name, $account) {
   // Display the user's first and last name instead of drupal username (aka. UID).
   if (property_exists($account, 'field_first_name') && property_exists($account, 'field_last_name')  ) {
-    $name = $account->field_first_name['und'][0]['value'] . '' . $account->field_last_name['und'][0]['value'];
+    $name = $account->field_first_name['und'][0]['value'] . ' ' . $account->field_last_name['und'][0]['value'];
   }
 }
 
