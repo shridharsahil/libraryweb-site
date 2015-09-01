@@ -51,6 +51,7 @@ function uclalib_staff_profile_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Other Research Support Options',
@@ -171,6 +172,7 @@ function uclalib_staff_profile_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Have a Technical Question?',
@@ -259,6 +261,7 @@ function uclalib_staff_profile_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   $beans[] = array(
     'label' => 'Interested in making a donation?',
@@ -301,6 +304,7 @@ function uclalib_staff_profile_uuid_features_default_beans() {
         ),
       ),
     ),
+    'field_introduction' => array(),
   );
   return $beans;
 }
