@@ -206,16 +206,17 @@ span#expandAll.links.links, span#collapseAll.links.links.links {
 }
 /*styles added after templatizing in Drupal*/
 
-.not-front.not-logged-in.node-type-staff-profile.section-content.node-type-staff-profile.section-content ul.links {list-style-type: none; padding:0; margin:0;}
 
-
-
-.not-front.logged-in.node-type-staff-profile.section-content.node-type-staff-profile.section-content ul.links {list-style-type: none; ;}
-
-.field--type-taxonomy-term-reference.field--label-hidden.clearfix  {
-   /* -webkit-margin-before:-10px*/
+.not-front.logged-in.node-type-staff-profile.section-content.node-type-staff-profile.section-content ul.links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.field.field--name-field-staff-departments.field--type-taxonomy-term-reference.field--label-hidden.clearfix {
-    /*-webkit-margin-start: -40px;*/
+
+.field.field--name-field-staff-departments ul.links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-padding-start: 0;
 }
