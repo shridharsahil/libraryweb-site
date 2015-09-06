@@ -5,3 +5,20 @@
  */
 
 include_once 'uclalib_users.features.inc';
+
+/**
+ * Implements hook_username_alter().
+ */
+function uclalib_users_username_alter(&$name, $account) {
+  // Display the user's first and last name instead of drupal username (aka. UID).
+  if (property_exists($account, 'field_first_name') && property_exists($account, 'field_last_name')  ) {
+    $name = $account->field_first_name['und'][0]['value'] . ' ' . $account->field_last_name['und'][0]['value'];
+  }
+}
+
+/**
+ * Implementation of hook_form_user_profile_form_alter().
+ */
+function uclalib_users_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  $form['account']['name']['#title'] = $form['account']['name']['#title'] . " (UID)";
+}
