@@ -92,9 +92,7 @@ drupal_set_title(t('Staff Directory'));
 
 <!--EB added, can we use field groups or field collections instead?-->
     <h2 class="pane-title left"><strong>
-        <?php echo render($content['field_staff_first_name']);?>
-        <?php echo render($content['field_staff_middle_name']);?>
-        <?php echo render($content['field_staff_last_name']);?>
+        <?php echo render($content['uclalib_staff_name']);?>
 
 </strong></h2>
     <h3 class="pane-title left"><strong> <?php echo render($content['field_staff_job_title']);?></strong></h3>
@@ -128,10 +126,9 @@ drupal_set_title(t('Staff Directory'));
                           <div class="field field--name-field-showcase-image field--type-image field--label-hidden"><div class="field__items">
                               <div class="field__item even"><div class="field__items"><div class="field__item even">
 
-                                    <?php $content['field_staff_departments']['#label_display'] = 'hidden';
+                                    <?php 
                                     print '<strong>Department</strong>'; // change to any HTML
                                     print render($content['field_staff_departments']);
-
                                     ?>
 
 
@@ -175,9 +172,10 @@ drupal_set_title(t('Staff Directory'));
             <?php } ?>
 
             <?php foreach ((array)$field_text_block as $item) { ?>
-              <?php $content['field_text_block']['#label_display'] = 'hidden';
+              <?php 
+              // $content['field_text_block']['#label_display'] = 'hidden';
               print '<strong>Biography</strong><br />'; // change to any HTML
-              print render($content['field_text_block']);
+              // print render($content['field_text_block']);
 
               ?>
             <?php } ?>
