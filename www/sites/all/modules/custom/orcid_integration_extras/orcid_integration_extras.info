@@ -2,5 +2,5 @@ name = ORCID Integration - extras
 description = Extra tweaks to the Orcid integration that are specific to UCLA Library and do not belong in the main orcid_integration module
 package = ORCID
 core = 7.x
-version = 7.x-1.1
+version = 7.x-1.2
 dependencies[] = orcid_integration

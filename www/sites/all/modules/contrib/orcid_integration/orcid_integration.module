@@ -220,16 +220,13 @@ function orcid_integration_provision_new_account($email, $first_name, $last_name
   }
   // if ORCID user email exists
   elseif ($response->code == "400" && $response->status_message == "Bad Request") {
-    dpm(get_defined_vars(), "This user might have a private email in the ORCID system:");
     $account = user_load_by_mail($email);
-    dpm($account, "\$account");
     $edit = array(
       'data' => array(
         'orcid_integration_may_have_orcid' => TRUE,
       )
     );
     user_save($account, $edit);
-    dpm(user_load($account->uid), "user_load():");
   }
   else {
     drupal_set_message($response->error, 'error');

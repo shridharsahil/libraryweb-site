@@ -169,7 +169,7 @@ function _orcid_integration_provision_create_new_account($data) {
     'status' => 1,
     'data' => array(
       // flags user as coming from an ORCID batch process
-      'orcid_integration_provision_from_batch' => TRUE,
+      'orcid_integration_provision_new_drupal_account_from_batch' => TRUE,
     ),
   );
   $account = new stdClass();
