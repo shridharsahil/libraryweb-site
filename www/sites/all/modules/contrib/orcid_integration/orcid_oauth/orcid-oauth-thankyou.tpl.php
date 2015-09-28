@@ -1,4 +1,5 @@
-<p>Thank you for connecting your ORCID account.</p>
+<article>You linked your ORCID to your University ID.
+<p><strong>One more step</strong>: a verification email has been sent to you from orcid.org. Please <strong>follow the link</strong> within the email to verify the registered address.</p></article>
 <button id="thankyou-close">Close this window</button>
 <script type="text/javascript">
 	(function ($) {
