@@ -105,10 +105,10 @@ function uclalib_staff_profile_strongarm() {
           'weight' => '2',
         ),
         'redirect' => array(
-          'weight' => '18',
+          'weight' => '20',
         ),
         'xmlsitemap' => array(
-          'weight' => '17',
+          'weight' => '19',
         ),
       ),
       'display' => array(

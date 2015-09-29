@@ -217,7 +217,7 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['field_staff_acad_dept_liaison']['label'] = '';
   $handler->display->display_options['fields']['field_staff_acad_dept_liaison']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_staff_acad_dept_liaison']['delta_offset'] = '0';
-  /* Field: Content: Social Links */
+  /* Field: Field: Social Links */
   $handler->display->display_options['fields']['field_location_social_links']['id'] = 'field_location_social_links';
   $handler->display->display_options['fields']['field_location_social_links']['table'] = 'field_data_field_location_social_links';
   $handler->display->display_options['fields']['field_location_social_links']['field'] = 'field_location_social_links';
@@ -229,7 +229,7 @@ function uclalib_staff_profile_views_default_views() {
     'view_mode' => 'default',
   );
   $handler->display->display_options['fields']['field_location_social_links']['delta_offset'] = '0';
-  /* Field: Content: Social Links (field_location_social_links:delta) */
+  /* Field: Field: Social Links (field_location_social_links:delta) */
   $handler->display->display_options['fields']['delta']['id'] = 'delta';
   $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_location_social_links';
   $handler->display->display_options['fields']['delta']['field'] = 'delta';
