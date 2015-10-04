@@ -26,7 +26,7 @@ function orcid_integration_extras_user_presave(&$edit, $account, $category) {
  */
 function orcid_integration_extras_user_insert(&$edit, $account, $category) {
   // shib-o-lize new users if the were created by orcid batch script
-  if ($account->data['from_orcid_batch'] && module_exists('shib_auth') ) {
+  if ($account->data['orcid_integration_provision_new_drupal_account_from_batch'] && module_exists('shib_auth') ) {
     // update shib_auth module tables after "Pre-creating users" with ORCID batch
     // per documentation: https://wiki.aai.niif.hu/index.php/DrupalShibbolethReadmeDev#Pre-creating_users
     db_insert('shib_authmap')

@@ -313,7 +313,12 @@ a[href="#main-content"] {
   background: #fff;
   padding-bottom: 25px;
 }
-
+body.page-user .l-main-wrapper .l-main {
+  padding-top: 25px;
+}
+body.page-user-orcid-thankyou .l-content {
+  width: 50%;
+}
 .l-region--main-column {
   padding-top: 1em;
 }
