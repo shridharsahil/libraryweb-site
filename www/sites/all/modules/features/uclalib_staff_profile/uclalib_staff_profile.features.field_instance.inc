@@ -10,56 +10,6 @@
 function uclalib_staff_profile_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-staff_profile-body'
-  $field_instances['node-staff_profile-body'] = array(
-    'bundle' => 'staff_profile',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'hours_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-staff_profile-field_location_social_links'
   $field_instances['node-staff_profile-field_location_social_links'] = array(
     'bundle' => 'staff_profile',
@@ -1009,7 +959,6 @@ function uclalib_staff_profile_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Add your Social Links URLs here, a clickable icon will automatically be added to your profile.');
   t('Biography');
-  t('Body');
   t('Enter academic degree(s) or professional credentials.');
   t('Enter some interesting professional facts about yourself here.');
   t('Social Links');
