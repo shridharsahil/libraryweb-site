@@ -84,63 +84,48 @@ drupal_set_title(t('Staff Directory'));
 ?>
 
 <div class="panel-pane pane-custom pane-1 pane-style-background-grayone">
-
-
-
-
   <div class="panel-pane pane-bean-showcase pane-bean-sample-image-showcase">
-
-
-<!--EB added, can we use field groups or field collections instead?-->
-    <h2 class="pane-title left"><strong>
-        <?php echo render($content['uclalib_staff_name']);?>
-
-</strong></h2>
-    <h3 class="pane-title left"><strong> <?php echo render($content['field_staff_job_title']);?></strong></h3>
-
-
     <div class="pane-content">
       <div class="entity entity-bean bean-showcase clearfix">
-
         <div class="content">
           <div class="field__items clearfix">
             <div class="field__item one">
               <div class="field-collection-view clearfix view-mode-full">
-
                 <div class="field field--name-field-showcase-image field--type-image field--label-hidden"><div class="field__items">
-
                     <div class="field__item even"><?php echo render($content['field_staff_image_thumbnail']);?></div>
                     <div class="field field--name-field-showcase-image field--type-image field--label-hidden"><div class="field__items">
-
-                        <!--try this-->
                         <div class="contact">
                           <div class="field__item even">
                             <br />
-                            Phone:
-                            <?php echo render($content['field_staff_phone']);?><br />
-                            email: <?php echo render($content['field_staff_email']);?><br />
-                            <?php echo render($content['field_staff_location']);?> <br />
-
-
-                          <br />
-
+                            <strong>Phone</strong>
+                            <?php echo render($content['field_staff_phone']);?>
+                            <strong>Email</strong> <?php echo render($content['field_staff_email']);?>
                           <div class="field field--name-field-showcase-image field--type-image field--label-hidden"><div class="field__items">
                               <div class="field__item even"><div class="field__items"><div class="field__item even">
-
+                                    <?php
+                                    print '<strong>Location</strong>'; // change to any HTML
+                                    print render($content['field_staff_location']);
+                                    ?>
                                     <?php 
                                     print '<strong>Department</strong>'; // change to any HTML
                                     print render($content['field_staff_departments']);
                                     ?>
-
-
 <!-- social icons reused from BS -->
                                     <div class="panel-pane pane-entity-field pane-node-field-location-social-links">
 
                                       <div class="pane-content">
-                                        <?php echo render ($content['field_location_social_links']); ?>
 
+            <?php foreach ((array)$field_location_social_links as $item) { ?>
 
-                                      </div>
+              <?php $content['field_location_social_links']['#label_display'] = 'hidden';
+                                        print '<strong>Connect with me</strong>'; // change to any HTML
+                                        print render($content['field_location_social_links']);
+                                        break;
+
+                                        ?>
+            <?php } ?>
+
+                                        </div>
 </div>
 
                                       <br />
@@ -153,6 +138,12 @@ drupal_set_title(t('Staff Directory'));
 
 
           <div class="field__item two">
+            <h2 class="pane-title left"><strong>
+                <?php echo render($content['uclalib_staff_name']);?>
+
+              </strong></h2>
+            <h3 class="pane-title left"><strong> <?php echo render($content['field_staff_job_title']);?></strong></h3>
+<br />
             <?php foreach ((array)$field_staff_area_of_expertise as $item) { ?>
 
               <?php $content['field_staff_area_of_expertise']['#label_display'] = 'hidden';
@@ -162,27 +153,29 @@ drupal_set_title(t('Staff Directory'));
 
              ?>
             <?php } ?>
+            <br />
             <?php foreach ((array)$field_staff_acad_dept_liaison as $item) { ?>
 
               <?php $content['field_staff_acad_dept_liaison']['#label_display'] = 'hidden';
-              print '<strong>Department Liaison</strong>'; // change to any HTML
+
+              print '<strong>Subject Specialty Areas</strong>'; // change to any HTML
               print render($content['field_staff_acad_dept_liaison']);
               break;
 
               ?>
             <?php } ?>
-
+            <br />
             <?php foreach ((array)$field_text_block as $item) { ?>
               <?php 
-              // $content['field_text_block']['#label_display'] = 'hidden';
+              $content['field_text_block']['#label_display'] = 'hidden';
+
               print '<strong>Biography</strong><br />'; // change to any HTML
-              // print render($content['field_text_block']);
+              print render($content['field_text_block']);
 
               ?>
             <?php } ?>
 
 
           </div></div></div></div></div></div></div>
-</div>
 
 

@@ -22,10 +22,7 @@ clear: left;
     clear: none !important;
     margin-left: -15px;
 }
-.field__item.two ul {
-    list-style: none;
-    padding:0;
-}
+
 .field__item.two {
     text-align: left;
 	font-weight:100;
@@ -73,7 +70,7 @@ font-size:1.1em;
 .form-text {
     background: #fff;
     padding: 3px 6px;
-   
+
 }
 .form-type-textfield {
     margin-left: -13px;
@@ -127,9 +124,12 @@ font-weight:100;
 
 }
 .bean-showcase .field--name-field-showcase-caption {
-  
+
     font-size: 16px;
     font-weight: normal;
+}
+.field__item .even {
+    text-align: left;
 }
 
 .address {
@@ -148,7 +148,7 @@ h6.pane-title {
     font-size: 17px;
     font-weight: bold;
     padding-top: 10px;
-	
+
 }
 .pane-style-background-gray div.pane-content {
     text-align: left;
@@ -163,7 +163,7 @@ h6.pane-title {
     margin-top: -10px;
 }
 .panel-pane.pane-custom.pane-1.pane-style-background-grayone {
-    background-color: #eff3f4;
+    background-color: #FFF;
     display: block;
     font-weight: bold;
     padding: 20px;
@@ -208,15 +208,25 @@ span#expandAll.links.links, span#collapseAll.links.links.links {
 
 
 .not-front.logged-in.node-type-staff-profile.section-content.node-type-staff-profile.section-content ul.links {
-    list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
-
-.field.field--name-field-staff-departments ul.links {
+.field__item.two ul, .field__item.even ul {
+    padding:0;
     list-style-type: none;
+}
+.field__item.two ul.links li:before{
     padding: 0;
     margin: 0;
     -webkit-padding-start: 0;
+    content:"\00bb";
+    font-size:16px;
+    color:red;
+    padding-bottom: 0;
+    padding-right: 5px;
+    padding-top: 0;
 }
+.field__item.two ul, .field__item.even ul {
+    margin:0;
+}
+
