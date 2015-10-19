@@ -18,9 +18,8 @@ clear: left;
     float: left;
 	width:90%;
 	}
-.social-link-twitter {
+.social-link {
     clear: none !important;
-    margin-left: -15px;
 }
 
 .field__item.two {

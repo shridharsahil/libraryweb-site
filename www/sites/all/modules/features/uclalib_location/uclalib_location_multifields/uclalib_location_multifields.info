@@ -1,6 +1,9 @@
 name = UCLALIB Location Multifields
 core = 7.x
 package = UCLALIB
+version = 7.x-1.1
+project = uclalib_location_multifields
+dependencies[] = ctools
 dependencies[] = features
 dependencies[] = link
 dependencies[] = list
@@ -13,3 +16,4 @@ features[field_base][] = field_social_type
 features[field_instance][] = multifield-social_links-field_social_link
 features[field_instance][] = multifield-social_links-field_social_type
 features[multifield][] = social_links
+mtime = 1444692476

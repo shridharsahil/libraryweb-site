@@ -64,6 +64,8 @@ function uclalib_location_multifields_field_default_field_bases() {
         'Instagram' => 'Instagram',
         'RSS' => 'RSS',
         'Youtube' => 'Youtube',
+        'Tumblr' => 'Tumblr',
+        'Linkedin' => 'Linkedin',
       ),
       'allowed_values_function' => '',
     ),
