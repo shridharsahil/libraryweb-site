@@ -76,8 +76,9 @@ function uclalib_staff_profile_theme($existing, $type, $theme, $path) {
    // Render the items.
    $output .= ($variables['element']['#label_display'] == 'inline') ? '<ul class="links inline">' : '<ul class="links">';
    foreach ($variables['items'] as $delta => $item) {
-     $output .= '<li class="taxonomy-term-reference-' . $delta . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
-   }
+     $output .= '<li class="taxonomy_term_reference"' . $delta . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+
+}
    $output .= '</ul>';
 
    // Render the top-level DIV.
@@ -86,5 +87,38 @@ function uclalib_staff_profile_theme($existing, $type, $theme, $path) {
    return $output;
 
 }
+/**
+ * This chunk does exactly what the chunk of code above does, refactor? What the hack????.
+ * Conforming collection field to bullet list.
+ */
+function uclalib_omega_field__link_field($variables) {
+  $output = '';
 
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<strong="field-label">' . $variables['label'] . ': </strong>';
+  }
 
+  // Render the items.
+  $output .= ($variables['element']['#label_display'] == 'inline') ? '<ul class="links inline">' : '<ul class="links">';
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<li class="taxonomy_term_reference"' . $delta . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+
+  }
+  $output .= '</ul>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . (!in_array('clearfix', $variables['classes_array']) ? ' clearfix' : '') . '">' . $output . '</div>';
+
+  return $output;
+
+}
+
+/**
+ * Implements hook_update_N() - removes the body field instance from the Staff Profile content type.
+ */
+function uclalib_staff_profile_update_7100(&$sandbox) {
+  if ($instance = field_info_instance('node', 'body', 'staff_profile')) {
+    field_delete_instance($instance);
+  }
+}

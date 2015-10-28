@@ -10,6 +10,25 @@
 function uclalib_staff_profile_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_ask_me_about'
+  $field_bases['field_ask_me_about'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ask_me_about',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
   // Exported field_base: 'field_staff_acad_dept_liaison'
   $field_bases['field_staff_acad_dept_liaison'] = array(
     'active' => 1,
