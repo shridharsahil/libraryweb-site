@@ -1,0 +1,47 @@
+<?php
+
+/**
+  * Implements hook_menu()
+  */
+  function angular_res_menu() {
+    $items['reservations'] = array(
+      'title' => 'UCLA Library Resource Reservations',
+      'page callback' => 'all_angular_res_page',
+      'access arguments' => array('access content'),
+    );
+    return $items;
+  }
+
+/**
+  * hook_theme()
+  */
+  function angular_res_theme() {
+    return array(
+      'all_angular_res' => array(
+	'template' => 'all-angular_res',
+      ),
+    );
+  }
+
+/**
+ * Cats page callback
+ */
+function all_angular_res_page() {
+  // Set the path
+  $path = drupal_get_path('module', 'angular_res');
+
+  // Load angular
+  drupal_add_library('angularjs', 'angularjs');
+
+  // Load the app
+//  drupal_add_js($path . '/js/angular/app.js');
+//  drupal_add_js($path . '/js/angular.gen.js');
+//  drupal_add_js($path . '/app/scripts/app.js');
+//  drupal_add_js($path . '/app/scripts/controllers/angular_resController.js');
+  drupal_add_js($path . '/angular_res.js');
+
+  // drupal_add_css($path . '/css/bootstrap.css');
+
+  // Return the HTML template
+  return theme('all_angular_res');
+}
