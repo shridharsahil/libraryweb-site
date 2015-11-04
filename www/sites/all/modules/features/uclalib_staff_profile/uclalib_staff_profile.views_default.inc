@@ -101,7 +101,7 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
   $handler->display->display_options['fields']['field_staff_email']['label'] = '';
   $handler->display->display_options['fields']['field_staff_email']['element_label_colon'] = FALSE;
-  /* Field: Content: Staff Area of Expertise */
+  /* Field: Field collection item: Staff Area of Expertise */
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['id'] = 'field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['table'] = 'field_data_field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['field'] = 'field_staff_area_of_expertise';
@@ -203,7 +203,7 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
   $handler->display->display_options['fields']['field_staff_email']['label'] = '';
   $handler->display->display_options['fields']['field_staff_email']['element_label_colon'] = FALSE;
-  /* Field: Content: Staff Area of Expertise */
+  /* Field: Field collection item: Staff Area of Expertise */
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['id'] = 'field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['table'] = 'field_data_field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['field'] = 'field_staff_area_of_expertise';

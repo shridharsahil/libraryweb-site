@@ -22,7 +22,7 @@ clear: left;
     clear: none !important;
 }
 
-.field__item.two {
+.field__item.two, .field--name-field-ask-me-about.field--type-field-collection {
     text-align: left;
 	font-weight:100;
     float:left;
@@ -85,21 +85,22 @@ font-size:1.1em;
     color: #2d2f35;
     margin-left: 5px;
 }
-
-.views-submit-button {
-    margin-left: 18px;
-    position: absolute;
-    right: -13px;
-    margin: 0;
-    padding: 0;
-}
-
-.views-submit-button input {
-    margin: 2px !important;
-}
-
-
 /*Staff profile do not delete*/
+
+p.space-above {
+    padding-top: 13px;
+    margin-bottom: 0;
+}
+p.space-above-contact {
+    padding-top: 0;
+    margin-bottom: 0;
+}
+p.space-below-title {
+    padding-bottom: 26px;
+}
+p.space-above-textbox {
+    margin-bottom:-12px;
+}
 .pane-style-border-blue h2.pane-title {
     font-weight: 600;
 }
@@ -214,18 +215,41 @@ span#expandAll.links.links, span#collapseAll.links.links.links {
     padding:0;
     list-style-type: none;
 }
-.field__item.two ul.links li:before{
+
+.field__item.two ul.links li:before, li.taxonomy_term_reference {
     padding: 0;
     margin: 0;
     -webkit-padding-start: 0;
-    content:"\00bb";
-    font-size:16px;
-    color:red;
+    content: "\2022";
+    font-size:14px;
+    color:#3283C1;
     padding-bottom: 0;
     padding-right: 5px;
     padding-top: 0;
+    text-align: left;
 }
 .field__item.two ul, .field__item.even ul {
     margin:0;
 }
-
+.field-collection-container {
+    padding:0;
+    list-style-type: none;
+    margin:0;
+}
+.field--name-field-ask-me-about.field--type-field-collection {
+    padding: 0;
+    margin: 0;
+    -webkit-padding-start: 0;
+    content: "\2022";
+    font-size:16px;
+    color:#3283C1;
+    padding-bottom: 0;
+    padding-right: 5px;
+    padding-top: 0;
+}
+/*
+Hiding the UI editing buttons that come with field collections
+*/
+ul.field-collection-view-links, ul.action-links.action-links-field-collection-add {
+    display: none;
+}

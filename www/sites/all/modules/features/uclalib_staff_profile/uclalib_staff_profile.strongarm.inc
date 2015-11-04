@@ -96,32 +96,32 @@ function uclalib_staff_profile_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'default_opening_hours' => array(
-          'weight' => '1',
+          'weight' => '20',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '1',
         ),
         'redirect' => array(
-          'weight' => '20',
+          'weight' => '18',
         ),
         'xmlsitemap' => array(
-          'weight' => '19',
+          'weight' => '17',
         ),
       ),
       'display' => array(
         'webform' => array(
           'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '19',
+            'visible' => FALSE,
           ),
         ),
         'default_opening_hours' => array(
           'default' => array(
-            'weight' => '5',
-            'visible' => TRUE,
+            'weight' => '17',
+            'visible' => FALSE,
           ),
         ),
       ),
