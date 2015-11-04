@@ -101,7 +101,7 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
   $handler->display->display_options['fields']['field_staff_email']['label'] = '';
   $handler->display->display_options['fields']['field_staff_email']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Staff Area of Expertise */
+  /* Field: Field: Staff Area of Expertise */
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['id'] = 'field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['table'] = 'field_data_field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['field'] = 'field_staff_area_of_expertise';
@@ -203,7 +203,7 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
   $handler->display->display_options['fields']['field_staff_email']['label'] = '';
   $handler->display->display_options['fields']['field_staff_email']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Staff Area of Expertise */
+  /* Field: Field: Staff Area of Expertise */
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['id'] = 'field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['table'] = 'field_data_field_staff_area_of_expertise';
   $handler->display->display_options['fields']['field_staff_area_of_expertise']['field'] = 'field_staff_area_of_expertise';
@@ -217,7 +217,7 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['field_staff_acad_dept_liaison']['label'] = '';
   $handler->display->display_options['fields']['field_staff_acad_dept_liaison']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_staff_acad_dept_liaison']['delta_offset'] = '0';
-  /* Field: Field: Social Links */
+  /* Field: Content: Social Links */
   $handler->display->display_options['fields']['field_location_social_links']['id'] = 'field_location_social_links';
   $handler->display->display_options['fields']['field_location_social_links']['table'] = 'field_data_field_location_social_links';
   $handler->display->display_options['fields']['field_location_social_links']['field'] = 'field_location_social_links';
@@ -229,7 +229,7 @@ function uclalib_staff_profile_views_default_views() {
     'view_mode' => 'default',
   );
   $handler->display->display_options['fields']['field_location_social_links']['delta_offset'] = '0';
-  /* Field: Field: Social Links (field_location_social_links:delta) */
+  /* Field: Content: Social Links (field_location_social_links:delta) */
   $handler->display->display_options['fields']['delta']['id'] = 'delta';
   $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_location_social_links';
   $handler->display->display_options['fields']['delta']['field'] = 'delta';
