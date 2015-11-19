@@ -416,7 +416,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['site_general_search']['display'] = 'view';
   $handler->display->display_options['fields']['site_general_search']['view_mode'] = 'teaser';
   $handler->display->display_options['fields']['site_general_search']['bypass_access'] = 0;
-  /* Field: Broken/missing handler */
+  /* Field: Page manager pages: Title (indexed) */
   $handler->display->display_options['fields']['page_manager_pages_title']['id'] = 'page_manager_pages_title';
   $handler->display->display_options['fields']['page_manager_pages_title']['table'] = 'search_api_multi';
   $handler->display->display_options['fields']['page_manager_pages_title']['field'] = 'page_manager_pages_title';
@@ -667,6 +667,13 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_staff_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_staff_first_name']['element_label_colon'] = FALSE;
+  /* Field: Indexed Content: Staff Middle Name */
+  $handler->display->display_options['fields']['field_staff_middle_name']['id'] = 'field_staff_middle_name';
+  $handler->display->display_options['fields']['field_staff_middle_name']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_middle_name']['field'] = 'field_staff_middle_name';
+  $handler->display->display_options['fields']['field_staff_middle_name']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_middle_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_middle_name']['element_label_colon'] = FALSE;
   /* Field: Indexed Content: Staff Last Name */
   $handler->display->display_options['fields']['field_staff_last_name']['id'] = 'field_staff_last_name';
   $handler->display->display_options['fields']['field_staff_last_name']['table'] = 'search_api_index_site_general_search';
@@ -674,7 +681,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['field_staff_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_staff_last_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_staff_last_name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_staff_last_name']['alter']['text'] = '[field_staff_first_name] [field_staff_last_name]';
+  $handler->display->display_options['fields']['field_staff_last_name']['alter']['text'] = '[field_staff_first_name] [field_staff_middle_name] [field_staff_last_name]';
   $handler->display->display_options['fields']['field_staff_last_name']['element_label_colon'] = FALSE;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
