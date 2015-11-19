@@ -416,13 +416,12 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['fields']['site_general_search']['display'] = 'view';
   $handler->display->display_options['fields']['site_general_search']['view_mode'] = 'teaser';
   $handler->display->display_options['fields']['site_general_search']['bypass_access'] = 0;
-  /* Field: Page manager pages: Title (indexed) */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['page_manager_pages_title']['id'] = 'page_manager_pages_title';
   $handler->display->display_options['fields']['page_manager_pages_title']['table'] = 'search_api_multi';
   $handler->display->display_options['fields']['page_manager_pages_title']['field'] = 'page_manager_pages_title';
   $handler->display->display_options['fields']['page_manager_pages_title']['label'] = '';
   $handler->display->display_options['fields']['page_manager_pages_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['page_manager_pages_title']['link_to_entity'] = 1;
   /* Field: Site General Search: Title (indexed) */
   $handler->display->display_options['fields']['site_general_search_title']['id'] = 'site_general_search_title';
   $handler->display->display_options['fields']['site_general_search_title']['table'] = 'search_api_multi';
@@ -641,6 +640,85 @@ function uclalib_search_views_default_views() {
   /* Display: Staff DIrectory */
   $handler = $view->new_display('panel_pane', 'Staff DIrectory', 'staff_directory_pane');
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Content: Staff Image Thumbnail */
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['id'] = 'field_staff_image_thumbnail';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['field'] = 'field_staff_image_thumbnail';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_staff_image_thumbnail']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Indexed Content: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
+  /* Field: Indexed Content: Staff First Name */
+  $handler->display->display_options['fields']['field_staff_first_name']['id'] = 'field_staff_first_name';
+  $handler->display->display_options['fields']['field_staff_first_name']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_first_name']['field'] = 'field_staff_first_name';
+  $handler->display->display_options['fields']['field_staff_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_first_name']['element_label_colon'] = FALSE;
+  /* Field: Indexed Content: Staff Last Name */
+  $handler->display->display_options['fields']['field_staff_last_name']['id'] = 'field_staff_last_name';
+  $handler->display->display_options['fields']['field_staff_last_name']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_last_name']['field'] = 'field_staff_last_name';
+  $handler->display->display_options['fields']['field_staff_last_name']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_last_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_last_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_last_name']['alter']['text'] = '[field_staff_first_name] [field_staff_last_name]';
+  $handler->display->display_options['fields']['field_staff_last_name']['element_label_colon'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = '[field_staff_last_name]';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  /* Field: Indexed Content: Staff Job Title */
+  $handler->display->display_options['fields']['field_staff_job_title']['id'] = 'field_staff_job_title';
+  $handler->display->display_options['fields']['field_staff_job_title']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_job_title']['field'] = 'field_staff_job_title';
+  $handler->display->display_options['fields']['field_staff_job_title']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_job_title']['element_label_colon'] = FALSE;
+  /* Field: Indexed Content: Staff Subject Areas */
+  $handler->display->display_options['fields']['field_staff_subject_areas']['id'] = 'field_staff_subject_areas';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['field'] = 'field_staff_subject_areas';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['alter']['text'] = '<strong>I can help with </strong>[field_staff_subject_areas]';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_staff_subject_areas']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_staff_subject_areas']['bypass_access'] = 0;
+  /* Field: Indexed Content: Staff Email */
+  $handler->display->display_options['fields']['field_staff_email']['id'] = 'field_staff_email';
+  $handler->display->display_options['fields']['field_staff_email']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
+  $handler->display->display_options['fields']['field_staff_email']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_email']['element_label_colon'] = FALSE;
+  /* Field: Indexed Content: Staff Phone */
+  $handler->display->display_options['fields']['field_staff_phone']['id'] = 'field_staff_phone';
+  $handler->display->display_options['fields']['field_staff_phone']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_staff_phone']['field'] = 'field_staff_phone';
+  $handler->display->display_options['fields']['field_staff_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_phone']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_phone']['alter']['text'] = '[field_staff_email] | [field_staff_phone] ';
+  $handler->display->display_options['fields']['field_staff_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_phone']['empty'] = '[field_staff_email]';
+  $handler->display->display_options['fields']['field_staff_phone']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed Content: Content type */
