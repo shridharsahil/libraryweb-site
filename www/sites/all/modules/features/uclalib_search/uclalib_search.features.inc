@@ -167,7 +167,11 @@ function uclalib_search_default_search_api_index() {
     "options" : {
       "index_directly" : 0,
       "cron_limit" : "50",
-      "fields" : [],
+      "fields" : {
+        "content" : { "type" : "text" },
+        "search_api_language" : { "type" : "string" },
+        "title" : { "type" : "text" }
+      },
       "data_alter_callbacks" : {
         "uclalib_search_staff_index_fields" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_add_panelized_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : false } },
