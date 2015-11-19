@@ -86,10 +86,10 @@ function uclalib_staff_profile_default_page_manager_handlers() {
     $display->content['new-3e940704-6675-4c34-8afd-3bb893cbff48'] = $pane;
     $display->panels['main'][0] = 'new-3e940704-6675-4c34-8afd-3bb893cbff48';
     $pane = new stdClass();
-    $pane->pid = 'new-20fb9e97-c2ec-4394-989e-70be6c636c69';
+    $pane->pid = 'new-313a0fc7-859e-47cb-abb2-6b51bc2d3b8f';
     $pane->panel = 'sidebar_left';
-    $pane->type = 'uclalib_nav';
-    $pane->subtype = 'uclalib_nav';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-at-a-glance---staff-profile';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -105,11 +105,59 @@ function uclalib_staff_profile_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '20fb9e97-c2ec-4394-989e-70be6c636c69';
-    $display->content['new-20fb9e97-c2ec-4394-989e-70be6c636c69'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-20fb9e97-c2ec-4394-989e-70be6c636c69';
+    $pane->uuid = '313a0fc7-859e-47cb-abb2-6b51bc2d3b8f';
+    $display->content['new-313a0fc7-859e-47cb-abb2-6b51bc2d3b8f'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-313a0fc7-859e-47cb-abb2-6b51bc2d3b8f';
+    $pane = new stdClass();
+    $pane->pid = 'new-aa5be553-d25e-4d20-a9e4-56258efa4c75';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-contact-quick-links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Quick Links',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'aa5be553-d25e-4d20-a9e4-56258efa4c75';
+    $display->content['new-aa5be553-d25e-4d20-a9e4-56258efa4c75'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-aa5be553-d25e-4d20-a9e4-56258efa4c75';
+    $pane = new stdClass();
+    $pane->pid = 'new-3380d70e-f9b8-4403-a530-fdc9a3cefac7';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'custom';
+    $pane->subtype = 'questions_highlight';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '3380d70e-f9b8-4403-a530-fdc9a3cefac7';
+    $display->content['new-3380d70e-f9b8-4403-a530-fdc9a3cefac7'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-3380d70e-f9b8-4403-a530-fdc9a3cefac7';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-20fb9e97-c2ec-4394-989e-70be6c636c69';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view__staff_profile'] = $handler;
 

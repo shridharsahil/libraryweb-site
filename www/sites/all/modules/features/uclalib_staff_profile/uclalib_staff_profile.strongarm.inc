@@ -96,7 +96,7 @@ function uclalib_staff_profile_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'default_opening_hours' => array(
-          'weight' => '20',
+          'weight' => '19',
         ),
         'title' => array(
           'weight' => '0',
@@ -108,7 +108,7 @@ function uclalib_staff_profile_strongarm() {
           'weight' => '18',
         ),
         'xmlsitemap' => array(
-          'weight' => '17',
+          'weight' => '20',
         ),
       ),
       'display' => array(
@@ -117,11 +117,19 @@ function uclalib_staff_profile_strongarm() {
             'weight' => '19',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
         ),
         'default_opening_hours' => array(
           'default' => array(
             'weight' => '17',
             'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '5',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -169,6 +177,13 @@ function uclalib_staff_profile_strongarm() {
   $strongarm->name = 'node_submitted_staff_profile';
   $strongarm->value = 0;
   $export['node_submitted_staff_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_staff_profile_pattern';
+  $strongarm->value = 'staff/[node:title]';
+  $export['pathauto_node_staff_profile_pattern'] = $strongarm;
 
   return $export;
 }
