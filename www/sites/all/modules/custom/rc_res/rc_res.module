@@ -637,6 +637,15 @@ if ( !empty( $working_uid )) {
 <br>
 <B>Your Reservations</B> > Date & Time > Available Resources > Details > Finish &nbsp;&nbsp;&nbsp;
 <br><br>
+
+  <div class="pane-content">
+    <div class="messages messages--error"><h2 class="element-invisible">Error message</h2>
+	<em><b>Notice</b></em>: During 10th week and finals YRL is open 24 hours, however reservations may only be made for times when the Laptop Lending desk is staffed. When the desk is closed, all rooms and pods are first-come, first-served.<br>
+	Laptop Lending desk hours: <a href="http://www.library.ucla.edu/yrl/clicc-laptop-lending-research-library" target="_new">http://www.library.ucla.edu/yrl/clicc-laptop-lending-research-library</a>
+	</div>
+    </div>
+
+<br>
 <b>Reservation Policies</b><br>
 <br>
 <b>Undergraduate Student and Staff Reservations
@@ -670,6 +679,15 @@ Graduate Student, Faculty, and Library Staff Reservations
       '#markup' => t(ucfirst(rc_session_variable_get('rc-res','name_first')).' '.ucfirst(rc_session_variable_get('rc-res','name_last')).'&nbsp;( <a href="yrl-logout">logout</a> )<br><br>
 <B>Your Reservations</B> > Date & Time > Available Resources > Details > Finish &nbsp;&nbsp;&nbsp;
 <br><br>
+
+  <div class="pane-content">
+    <div class="messages messages--error"><h2 class="element-invisible">Error message</h2>
+	<em><b>Notice</b></em>: During 10th week and finals YRL is open 24 hours, however reservations may only be made for times when the Laptop Lending desk is staffed. When the desk is closed, all rooms and pods are first-come, first-served.<br>
+	Laptop Lending desk hours: <a href="http://www.library.ucla.edu/yrl/clicc-laptop-lending-research-library" target="_new">http://www.library.ucla.edu/yrl/clicc-laptop-lending-research-library</a>
+	</div>
+    </div>
+
+<br>
 <b>Reservation Policies</b><br>
 <br>
 <b>Graduate Student, Faculty, and Library Staff Reservations
@@ -1576,14 +1594,18 @@ Current Reservation(s):
 '.'<br><br>'.$mySpace.'
 '.$roomName.'
 '.'   Date/Time: '.date('g:ia \o\n l jS F Y',$startDate).'<br>'.'
-'.'   Duration: '.$dDate.' hour(s)
+'.'   Duration: '.$dDate.' hour(s)<br><br>
+'.'   NOTICE: During 10th week and finals YRL is open 24 hours, however reservations may only be made for times when the Laptop Lending desk is staffed. When the desk is closed, all rooms and pods are first-come, first-served.<br>
+	Laptop Lending desk hours: http://www.library.ucla.edu/yrl/clicc-laptop-lending-research-library
 ';
       } else {
 	$body = $body.'
 '.'<br><br>'.$mySpace.'
 '.''.$roomName.'
 '.'   Date/Time: '.date('g:ia \o\n l jS F Y',$startDate).'<br>'.'
-'.'   Duration:'.$dDate.' hour(s)
+'.'   Duration: '.$dDate.' hour(s)<br><br>
+'.'   NOTICE: During 10th week and finals YRL is open 24 hours, however reservations may only be made for times when the Laptop Lending desk is staffed. When the desk is closed, all rooms and pods are first-come, first-served.<br>
+	Laptop Lending desk hours: http://www.library.ucla.edu/yrl/clicc-laptop-lending-research-library
 ';
       }
     }
@@ -1658,7 +1680,7 @@ $mail_message['result'] = $mail_system->mail($mail_message);
 Your Reservations > Date & Time > Available Resources > Details > Finish &nbsp;&nbsp;&nbsp;<br>'.$email_body),
   );
 
-  // Show the change button only whenthe reservation failed on submit
+  // Show the change button only when the reservation failed on submit
   if (preg_match("/400/", $response->code)) {
     $form['submit'] = array(
       '#type'  => 'submit',
