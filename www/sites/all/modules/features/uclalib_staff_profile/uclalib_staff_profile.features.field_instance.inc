@@ -10,19 +10,19 @@
 function uclalib_staff_profile_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-staff_profile-body'
-  $field_instances['node-staff_profile-body'] = array(
+  // Exported field_instance: 'node-staff_profile-field_location_social_links'
+  $field_instances['node-staff_profile-field_location_social_links'] = array(
     'bundle' => 'staff_profile',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add your Social Links URLs here, a clickable icon will automatically be added to your profile.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
+        'label' => 'above',
+        'module' => 'uclalib_location',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'social_links',
+        'weight' => 15,
       ),
       'hours_page' => array(
         'label' => 'above',
@@ -31,32 +31,25 @@ function uclalib_staff_profile_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'field_name' => 'field_location_social_links',
+    'label' => 'Social Links',
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'active' => 0,
+      'module' => 'multifield',
+      'settings' => array(),
+      'type' => 'multifield_default',
+      'weight' => 14,
     ),
   );
 
@@ -71,7 +64,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 14,
       ),
       'hours_page' => array(
@@ -120,7 +113,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 13,
       ),
       'hours_page' => array(
@@ -138,7 +131,7 @@ function uclalib_staff_profile_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_staff_area_of_expertise',
-    'label' => 'Staff Area of Expertise',
+    'label' => 'Ask Me About',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -169,7 +162,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 6,
       ),
       'hours_page' => array(
@@ -246,7 +239,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
@@ -314,7 +307,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -325,7 +318,7 @@ function uclalib_staff_profile_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -352,7 +345,7 @@ function uclalib_staff_profile_field_default_field_instances() {
     'label' => 'Staff Image Thumbnail',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -367,33 +360,62 @@ function uclalib_staff_profile_field_default_field_instances() {
       'module' => 'image',
       'settings' => array(
         'insert' => 0,
-        'insert_absolute' => FALSE,
+        'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
+        'insert_default' => 'auto',
         'insert_styles' => array(
-          0 => 'auto',
+          'auto' => 'auto',
+          'fancybox__category_icon' => 0,
+          'fancybox__custom_crop' => 0,
+          'fancybox__large' => 0,
+          'fancybox__linkit_thumb' => 0,
+          'fancybox__media_thumbnail' => 0,
+          'fancybox__medium' => 0,
+          'fancybox__thumbnail' => 0,
+          'fancybox__thumbnail_crop' => 0,
+          'fancybox__thumbnail_large' => 0,
+          'fancybox__thumbnail_small' => 0,
+          'fancybox__widescreen_crop' => 0,
+          'fancybox__widescreen_large' => 0,
+          'fancybox__widescreen_medium' => 0,
+          'fancybox__widescreen_small' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_category_icon' => 0,
+          'image_custom_crop' => 0,
+          'image_large' => 0,
+          'image_linkit_thumb' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_thumbnail' => 0,
+          'image_thumbnail_crop' => 0,
+          'image_thumbnail_large' => 0,
+          'image_thumbnail_small' => 0,
+          'image_widescreen_crop' => 0,
+          'image_widescreen_large' => 0,
+          'image_widescreen_medium' => 0,
+          'image_widescreen_small' => 0,
+          'link' => 0,
         ),
         'insert_width' => '',
-        'manualcrop_crop_info' => TRUE,
-        'manualcrop_default_crop_area' => TRUE,
-        'manualcrop_enable' => FALSE,
-        'manualcrop_filter_insert' => TRUE,
-        'manualcrop_inline_crop' => FALSE,
-        'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => TRUE,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_filter_insert' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(),
         'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => FALSE,
+        'manualcrop_thumblist' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -442,7 +464,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -593,7 +615,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 5,
@@ -626,7 +648,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'path' => '',
         'references_dialog_add' => 0,
         'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
+        'references_dialog_search' => 1,
         'references_dialog_search_view' => '',
         'size' => 60,
       ),
@@ -699,6 +721,144 @@ function uclalib_staff_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-staff_profile-field_staff_name_prefix'
+  $field_instances['node-staff_profile-field_staff_name_prefix'] = array(
+    'bundle' => 'staff_profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 18,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_staff_name_prefix',
+    'label' => 'Staff Name Prefix',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-staff_profile-field_staff_name_suffix'
+  $field_instances['node-staff_profile-field_staff_name_suffix'] = array(
+    'bundle' => 'staff_profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter academic degree(s) or professional credentials.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 17,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_staff_name_suffix',
+    'label' => 'Staff Name Suffix',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 6,
     ),
   );
@@ -747,15 +907,88 @@ function uclalib_staff_profile_field_default_field_instances() {
       'module' => 'phone',
       'settings' => array(),
       'type' => 'phone_textfield',
-      'weight' => 13,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-staff_profile-field_text_block'
+  $field_instances['node-staff_profile-field_text_block'] = array(
+    'bundle' => 'staff_profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter some interesting professional facts about yourself here.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_text_block',
+    'label' => 'Biography',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 17,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
+  t('Add your Social Links URLs here, a clickable icon will automatically be added to your profile.');
+  t('Ask Me About');
+  t('Biography');
+  t('Enter academic degree(s) or professional credentials.');
+  t('Enter some interesting professional facts about yourself here.');
+  t('Social Links');
   t('Staff Academic Dept Liaison');
-  t('Staff Area of Expertise');
   t('Staff Departments');
   t('Staff Email');
   t('Staff First Name');
@@ -764,6 +997,8 @@ function uclalib_staff_profile_field_default_field_instances() {
   t('Staff Last Name');
   t('Staff Location');
   t('Staff Middle Name');
+  t('Staff Name Prefix');
+  t('Staff Name Suffix');
   t('Staff Phone');
   t('Staff Subject Librarian');
 

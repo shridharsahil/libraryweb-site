@@ -12,11 +12,11 @@ function uclalib_staff_profile_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['menu_block-3'] = array(
-    'cache' => -1,
+  $export['bean-at-a-glance---staff-profile'] = array(
+    'cache' => 1,
     'custom' => 0,
-    'delta' => 3,
-    'module' => 'menu_block',
+    'delta' => 'at-a-glance---staff-profile',
+    'module' => 'bean',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -40,7 +40,7 @@ function uclalib_staff_profile_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'User menu second level',
+    'title' => '',
     'visibility' => 0,
   );
 
