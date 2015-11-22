@@ -5,6 +5,166 @@
  */
 
 /**
+ * Implements hook_default_page_manager_handlers().
+ */
+function uclalib_staff_profile_default_page_manager_handlers() {
+  $export = array();
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__staff_profile';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -25;
+  $handler->conf = array(
+    'title' => 'Staff Profile',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'staff_profile',
+    'access' => array(
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'sidebar-left';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'sidebar_left' => NULL,
+      'main' => NULL,
+      'below_main_left' => NULL,
+      'below_main_right' => NULL,
+      'secondary' => NULL,
+      'below_secondary_left' => NULL,
+      'below_secondary_right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd266c3f8-2180-4321-b114-f5f72bb678c4';
+  $display->window_title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-3e940704-6675-4c34-8afd-3bb893cbff48';
+    $pane->panel = 'main';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 0,
+      'no_extras' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'build_mode' => 'full',
+      'context' => 'argument_entity_id:node_1',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3e940704-6675-4c34-8afd-3bb893cbff48';
+    $display->content['new-3e940704-6675-4c34-8afd-3bb893cbff48'] = $pane;
+    $display->panels['main'][0] = 'new-3e940704-6675-4c34-8afd-3bb893cbff48';
+    $pane = new stdClass();
+    $pane->pid = 'new-313a0fc7-859e-47cb-abb2-6b51bc2d3b8f';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-at-a-glance---staff-profile';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '313a0fc7-859e-47cb-abb2-6b51bc2d3b8f';
+    $display->content['new-313a0fc7-859e-47cb-abb2-6b51bc2d3b8f'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-313a0fc7-859e-47cb-abb2-6b51bc2d3b8f';
+    $pane = new stdClass();
+    $pane->pid = 'new-aa5be553-d25e-4d20-a9e4-56258efa4c75';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-contact-quick-links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Quick Links',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'aa5be553-d25e-4d20-a9e4-56258efa4c75';
+    $display->content['new-aa5be553-d25e-4d20-a9e4-56258efa4c75'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-aa5be553-d25e-4d20-a9e4-56258efa4c75';
+    $pane = new stdClass();
+    $pane->pid = 'new-3380d70e-f9b8-4403-a530-fdc9a3cefac7';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'custom';
+    $pane->subtype = 'questions_highlight';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '3380d70e-f9b8-4403-a530-fdc9a3cefac7';
+    $display->content['new-3380d70e-f9b8-4403-a530-fdc9a3cefac7'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-3380d70e-f9b8-4403-a530-fdc9a3cefac7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__staff_profile'] = $handler;
+
+  return $export;
+}
+
+/**
  * Implements hook_default_page_manager_pages().
  */
 function uclalib_staff_profile_default_page_manager_pages() {

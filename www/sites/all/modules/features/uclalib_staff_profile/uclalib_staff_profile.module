@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Code for the UCLALIB Staff Profile feature.
@@ -8,7 +9,7 @@ include_once 'uclalib_staff_profile.features.inc';
 
 /**
  * Implements hook_ctools_plugin_directory()
- */
+*/
 function uclalib_staff_profile_ctools_plugin_directory($owner, $plugin_type) {
   switch ("$owner:$plugin_type") {
     case 'ctools:content_types':
@@ -18,3 +19,79 @@ function uclalib_staff_profile_ctools_plugin_directory($owner, $plugin_type) {
   return NULL;
 }
 
+/**
+ * Implementation of hook_preprocess_node().
+ */
+function uclalib_staff_profile_preprocess_node(&$variables) {
+  if ($variables['type'] == 'staff_profile') {
+    // check for image in field
+    if (!array_key_exists('field_staff_image_thumbnail', $variables['content'])) {
+      // if no image render default image from module
+      $variables['content']['field_staff_image_thumbnail'][] = array(
+        '#theme' => 'image_formatter',
+        '#item' => array(
+          'uri' => drupal_get_path('module', 'uclalib_staff_profile') . '/images/avatar_400.gif',
+        ),
+        '#image_stlye' => 'thumbnail',
+      );
+    }
+    // prepare name
+    if ($variables['field_staff_middle_name']) {
+      $variables['content']['uclalib_staff_name'] = $variables['field_staff_name_prefix'][0]['safe_value'] ." ". $variables['field_staff_first_name'][0]['safe_value'] ." ". $variables['field_staff_middle_name'][0]['safe_value'] ." ". $variables['field_staff_last_name'][0]['safe_value'] ." ". $variables['field_staff_name_suffix'][0]['safe_value'];
+    } else {
+      $variables['content']['uclalib_staff_name'] = $variables['field_staff_name_prefix'][0]['safe_value'] ." ". $variables['field_staff_first_name'][0]['safe_value'] ." ". $variables['field_staff_last_name'][0]['safe_value'] ." ". $variables['field_staff_name_suffix'][0]['safe_value'];
+    }
+    // hide select labels
+    $variables['content']['field_staff_departments']['#label_display'] = 'hidden';
+    $variables['content']['field_staff_email']['#label_display'] = 'hidden';
+    $variables['content']['field_staff_location']['#label_display'] = 'hidden';
+    $variables['content']['field_staff_job_title']['#label_display'] = 'hidden';
+    $variables['content']['field_staff_phone']['#label_display'] = 'hidden';
+    $variables['content']['field_location_social_links']['#label_display'] = 'hidden';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function uclalib_staff_profile_theme($existing, $type, $theme, $path) {
+  return array(
+    'node__staff_profile' => array(
+      'render element' => 'content',
+      'base hook' => 'node',
+      'template' => 'node--staff_profile',
+      'path' => drupal_get_path('module', 'uclalib_staff_profile') . '/templates',
+    ),
+  );
+}
+
+function uclalib_omega_field__taxonomy_term_reference($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<strong="field-label">' . $variables['label'] . ': </strong>';
+  }
+
+  // Render the items.
+  $output .= ($variables['element']['#label_display'] == 'inline') ? '<ul class="links inline">' : '<ul class="links">';
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<li class="taxonomy_term_reference"' . $delta . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+
+  }
+  $output .= '</ul>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . (!in_array('clearfix', $variables['classes_array']) ? ' clearfix' : '') . '">' . $output . '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements hook_update_N() - removes the body field instance from the Staff Profile content type.
+ */
+function uclalib_staff_profile_update_7100(&$sandbox) {
+ if ($instance = field_info_instance('node', 'body', 'staff_profile')) {
+    field_delete_instance($instance);
+  }
+}

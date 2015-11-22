@@ -1,0 +1,296 @@
+/* CSS Document Elaine's Additions*/
+
+.node-type-staff-profile {
+  .contact {
+/*    clear: left;
+    display: block;
+    float: left;*/
+    width: 90%;
+}
+  .social-link {
+    clear: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .field__item.two {
+    text-align: left;
+    font-weight: 100;
+    float: left;
+    width: 70%;
+    padding-left: 5px;
+  }
+}
+
+.field--name-field-ask-me-about.field--type-field-collection {
+  text-align: left;
+  font-weight: 100;
+  float: left;
+  width: 70%;
+  padding-left: 26px;
+}
+
+.node-type-staff-profile {
+  .content .field__items.clearfix {
+    width: 100%;
+  }
+  .field__item.one {
+    display: block;
+    float: left;
+    width: 30%;
+    clear: left;
+    font-weight: 300;
+    padding-right: 3px;
+  }
+  .panel-pane.pane-uclalib-nav .pane-content h2.pane-title a {
+    background: none repeat scroll 0 0 #3283be;
+    color: #fff;
+  }
+  .sidebar-tier-2, .l-region--sidebar-left .pane-quick-links {
+    background: none repeat scroll 0 0 #eff3f4;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.429em;
+    margin: 0 -25px;
+    padding: 10px 28px 11px;
+  }
+}
+
+
+.views-field.views-field-field-staff-last-name {
+  font-weight: 100;
+  padding-top: 15px;
+  font-size: 1.1em;
+}
+
+.views-field-field-staff-job-title, .views-field-field-staff-phone {
+  font-weight: 100;
+}
+
+.pager {
+  padding: 48px 0 0;
+}
+
+.space-above {
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-top: 7px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+p {
+  &.space-below-title {
+    padding-bottom: 26px;
+  }
+  &.space-above-textbox {
+    margin-bottom: -12px;
+  }
+}
+
+.pane-style-background-gray {
+  text-align: left;
+}
+
+.node-type-staff-profile {
+  .bean-showcase {
+    img {
+      clear: left;
+      float: left;
+      padding: 0 10px 0 10px;
+      margin-left: -15px;
+      padding: 0 10px 10px;
+    }
+    .field--name-field-showcase-link .field__item {
+      &.two {
+        padding-top: 3px;
+        font-weight: 100;
+      }
+      &.one {
+        padding: 3px;
+        float: left;
+      }
+    }
+    .field--name-field-showcase-caption {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+  .field__item .even {
+    text-align: left;
+  }
+}
+
+.address {
+  float: left;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 32px;
+  padding: 12px 8px;
+  width: 62%;
+}
+
+.boxed {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.node-type-staff-profile {
+  .field__item.even h2 {
+    margin-top: -10px;
+  }
+  &.panel-pane.pane-custom.pane-1.pane-style-background-grayone {
+    background-color: none;
+    display: block;
+    padding: 5px;
+    margin: 0;
+  }
+}
+
+/*collapsible menu**/
+
+span {
+  &#expandAll.links.links, &#collapseAll.links.links.links {
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 15px;
+    padding: 0 5px;
+    text-transform: uppercase;
+  }
+}
+
+.node-type-staff-profile #header1.header, #header2.header {
+  padding: 5px;
+  color: #3283BE;
+  font-size: 16px;
+  padding-left: 20px;
+}
+/*
+
+.node-type-staff-profile .l-region--sidebar-left .pane-quick-links {
+  margin: 0;
+  padding: 0;
+}
+*/
+
+/*styles added after templatizing in Drupal*/
+
+.node-type-staff-profile.node-type-staff-profile ul.links {
+  padding: 0;
+  margin: 0;
+}
+
+.node-type-staff-profile .field__item.two ul, .field__item.even ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.node-type-staff-profile .field__item.two ul.links li:before, li.taxonomy_term_reference {
+  padding: 0;
+  margin: 0;
+  -webkit-padding-start: 0;
+  content: "\2022";
+  font-size: 14px;
+  color: #3283C1;
+  padding-bottom: 0;
+  padding-right: 5px;
+  padding-top: 0;
+  text-align: left;
+}
+.node-type-staff-profile .sidebar-left.panel-sidebar-left.with-sidebar-left > div.l-region.l-region--sidebar-left > div.contextual-links-region.panel-pane.pane-bean-link-list.pane-bean-at-a-glance-staff-profile-0 {
+  background: #3283be;
+  color: #fff;
+}
+
+.node-type-staff-profile .field__item.two ul, .field__item.even ul {
+  margin: 0;
+}
+.node-type-staff-profile .panel-pane.pane-bean-link-list.pane-bean-contact-quick-links {
+  background: #eff3f4 !important;
+  line-height: 1.429em !important;
+  margin: 0 -25px !important;
+  padding: 10px 28px 11px !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+.node-type-staff-profile .panel-pane.pane-bean-link-list {
+  background: #c1daeb;
+  margin: 0 -25px;
+  padding: 24px 30px 15px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.node-type-staff-profile .field.field--name-field-text-block.field--type-text-long.field--label-hidden .field__items .field__item.even ul li {
+list-style-type: square;
+}
+
+.node-type-staff-profile h2.pane-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 4px 0 0;
+}
+.node-type-staff-profile .l-region--sidebar-left .pane-uclalib-nav .pane-title a.active {
+  background: #3283be;
+  color: #fff;
+}
+
+
+.node-type-staff-profile {
+  .field-collection-container {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+  }
+  .field--name-field-ask-me-about.field--type-field-collection {
+    padding: 0;
+    margin: 0;
+    -webkit-padding-start: 0;
+    content: "\2022";
+    font-size: 16px;
+    color: #3283C1;
+    padding-bottom: 0;
+    padding-right: 5px;
+    padding-top: 0;
+  }
+  .field.field--name-field-text-block.field--type-text-long.field--label-hidden .field__items .field__item.even p {
+    margin-top: 0;
+  }
+}
+
+.librarian-name {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.librarian-title {
+  font-size: 18px;
+}
+
+.node-type-staff-profile {
+  .field {
+    &.field--name-field-staff-departments.field--type-taxonomy-term-reference.field--label-hidden.clearfix ul.links li.taxonomy_term_reference {
+      color: #666;
+      padding-bottom: 8px;
+    }
+    &.field--name-field-staff-acad-dept-liaison.field--type-taxonomy-term-reference.field--label-hidden.clearfix ul.links li.taxonomy_term_reference, &.field--name-field-staff-area-of-expertise.field--type-taxonomy-term-reference.field--label-hidden.clearfix ul.links li.taxonomy_term_reference {
+      color: #666;
+    }
+  }
+  .field__item {
+    &.even a, &.odd a {
+      margin-bottom: 15px;
+    }
+  }
+  .field--type-social-links.field--label-hidden {
+    margin: 0;
+  }
+  .field.field--name-field-text-block.field--type-text-long.field--label-hidden .field__items .field__item.even p em a {
+    float: none;
+  }
+}
+
+.field.field--name-field-staff-location.field--type-entityreference.field--label-hidden .field__items .field__item {
+  &.odd, &.even {
+    padding-bottom: 8px;
+  }
+}
