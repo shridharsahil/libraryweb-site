@@ -264,6 +264,49 @@ function uclalib_staff_profile_uuid_features_default_beans() {
     'field_introduction' => array(),
   );
   $beans[] = array(
+    'label' => 'At a Glance - Staff Profile',
+    'description' => NULL,
+    'title' => 'At a Glance',
+    'type' => 'link_list',
+    'data' => array(
+      'view_mode' => 'default',
+    ),
+    'delta' => 'at-a-glance---staff-profile',
+    'view_mode' => 'default',
+    'created' => 1447797569,
+    'log' => '',
+    'uid' => 0,
+    'default_revision' => 1,
+    'revisions' => array(),
+    'vuuid' => 'aa6c35ff-ecaf-4de4-b8d1-e740529d1097',
+    'uuid' => '96f64bc3-2b86-4872-9258-e05d13ed0d7b',
+    'field_linklist_links' => array(
+      'und' => array(
+        0 => array(
+          'field_link_description' => array(
+            'und' => array(),
+          ),
+          'field_link_link' => array(
+            'und' => array(
+              0 => array(
+                'url' => '/staff',
+                'title' => 'Staff Directory',
+                'attributes' => array(
+                  'target' => 0,
+                ),
+              ),
+            ),
+          ),
+          'field_icon' => array(
+            'und' => array(),
+          ),
+          'id' => 374,
+        ),
+      ),
+    ),
+    'field_introduction' => array(),
+  );
+  $beans[] = array(
     'label' => 'Interested in making a donation?',
     'description' => NULL,
     'title' => '',
@@ -301,52 +344,6 @@ function uclalib_staff_profile_uuid_features_default_beans() {
             'und' => array(),
           ),
           'id' => 39,
-        ),
-      ),
-    ),
-    'field_introduction' => array(),
-  );
-  $beans[] = array(
-    'label' => 'At a Glance - Staff Profile',
-    'description' => NULL,
-    'title' => 'At a Glance',
-    'type' => 'link_list',
-    'data' => array(
-      'view_mode' => 'default',
-    ),
-    'delta' => 'at-a-glance---staff-profile',
-    'view_mode' => 'default',
-    // 'bid' => '390',
-    // 'vid' => '2829',
-    'created' => 1447797569,
-       // 'changed' => '1447797569',
-    'log' => '',
-    'uid' => 0,
-    'default_revision' => 1,
-    'revisions' => array(),
-    'vuuid' => 'aa6c35ff-ecaf-4de4-b8d1-e740529d1097',
-    'uuid' => '96f64bc3-2b86-4872-9258-e05d13ed0d7b',
-    'field_linklist_links' => array(
-      'und' => array(
-        0 => array(
-          'field_link_description' => array(
-            'und' => array(),
-          ),
-          'field_link_link' => array(
-            'und' => array(
-              0 => array(
-                'url' => '/staff',
-                'title' => 'Staff Directory',
-                'attributes' => array(
-                  'target' => 0,
-                ),
-              ),
-            ),
-          ),
-          'field_icon' => array(
-            'und' => array(),
-          ),
-          'id' => '374',
         ),
       ),
     ),
