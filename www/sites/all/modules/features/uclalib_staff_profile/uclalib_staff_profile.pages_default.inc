@@ -31,6 +31,18 @@ function uclalib_staff_profile_default_page_manager_handlers() {
     'name' => 'staff_profile',
     'access' => array(
       'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'staff_profile' => 'staff_profile',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
     ),
   );
   $display = new panels_display();
