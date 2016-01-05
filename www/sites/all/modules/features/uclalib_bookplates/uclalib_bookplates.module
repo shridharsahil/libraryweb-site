@@ -1,0 +1,67 @@
+<?php
+/**
+ * @file
+<<<<<<< Updated upstream
+ * Code for the UCLALIB Bookplates feature.
+=======
+ * Code for the uclalib_bookplates feature.
+>>>>>>> Stashed changes
+ */
+
+include_once 'uclalib_bookplates.features.inc';
+
+
+/**
+ * Implements hook_ctools_plugin_directory()
+ */
+function uclalib_bookplates_ctools_plugin_directory($owner, $plugin_type) {
+  // Form 1 - for a module implementing only the 'content_types' plugin owned
+  // by CTools, this would cause the plugin system to search the
+  // <moduleroot>/plugins/content_types directory for .inc plugin files.
+  if ($owner == 'ctools' && $plugin_type == 'access') {
+    return 'plugins/access';
+  }
+
+  // Form 2 - if your module implements only Panels plugins, and has 'layouts'
+  // and 'styles' plugins but no 'cache' or 'display_renderers', it is OK to be
+  // lazy and return a directory for a plugin you don't actually implement (so
+  // long as that directory doesn't exist). This lets you avoid ugly in_array()
+  // logic in your conditional, and also makes it easy to add plugins of those
+  // types later without having to change this hook implementation.
+  if ($owner == 'panels') {
+    return "plugins/$plugin_type";
+  }
+
+  // Form 3 - CTools makes no assumptions about where your plugins are located,
+  // so you still have to implement this hook even for plugins created by your
+  // own module.
+  if ($owner == 'uclalib_bookplates') {
+    // Yes, this is exactly like Form 2 - just a different reasoning for it.
+    return "plugins/$plugin_type";
+  }
+  // Finally, if nothing matches, it's safe to return nothing at all (or NULL).
+  return NULL;
+}
+
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function uclalib_bookplates_preprocess_node(&$variables) {
+  if($variables['view_mode'] == 'bookplates_landing_page') {
+    $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__landing_page';
+  }
+}
+/**
+ * Implements hook_theme().
+ */
+function uclalib_bookplates_theme($existing, $type, $theme, $path) {
+  return array(
+    'node__bookplates' => array(
+      'render element' => 'content',
+      'base hook' => 'node',
+      'template' => 'node--bookplates',
+      'path' => drupal_get_path('module', 'uclalib_bookplates') . '/templates',
+    ),
+  );
+}
