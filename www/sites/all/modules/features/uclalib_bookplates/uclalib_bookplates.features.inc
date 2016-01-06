@@ -14,12 +14,6 @@ function uclalib_bookplates_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
-  if ($module == "multifield" && $api == "") {
-    return array("version" => "");
-  }
-  if ($module == "multifield" && $api == "multifield") {
-    return array("version" => "1");
-  }
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
@@ -70,9 +64,12 @@ function uclalib_bookplates_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "fields" : {
+        "field_bookplate_author_first_nam" : { "type" : "string" },
+        "field_bookplate_author_last_name" : { "type" : "string" },
         "field_bookplate_description:value" : { "type" : "text" },
         "field_bookplate_fund_purpose:value" : { "type" : "text" },
         "field_bookplates_subject_area" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_donor_name_bookplates" : { "type" : "list\\u003Ctext\\u003E" },
         "nid" : { "type" : "integer" },
         "search_api_language" : { "type" : "string" },
         "title" : { "type" : "text" },
