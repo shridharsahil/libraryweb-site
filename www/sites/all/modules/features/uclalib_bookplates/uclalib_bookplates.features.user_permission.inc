@@ -10,13 +10,6 @@
 function uclalib_bookplates_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'administer panelizer node bookplates defaults'.
-  $permissions['administer panelizer node bookplates defaults'] = array(
-    'name' => 'administer panelizer node bookplates defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'create bookplates content'.
   $permissions['create bookplates content'] = array(
     'name' => 'create bookplates content',
