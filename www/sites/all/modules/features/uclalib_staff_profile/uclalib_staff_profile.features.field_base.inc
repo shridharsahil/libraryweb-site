@@ -304,7 +304,9 @@ function uclalib_staff_profile_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(),
+        'target_bundles' => array(
+          'location' => 'location',
+        ),
       ),
       'target_type' => 'node',
     ),
