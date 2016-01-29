@@ -1733,6 +1733,10 @@ a.next-week:after {
   margin: 27px 0;
 }
 
+.panel-pane.pane-page-title {
+  padding-top: 5px;
+}
+
 .header-search-form-wrapper .form-type-textfield {
   margin: 1em -4px 1.3em 0;
   display: inline-block;
