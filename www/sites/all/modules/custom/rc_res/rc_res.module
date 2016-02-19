@@ -994,6 +994,10 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 		      <b>'
 		      .$zoneRange.'</b>
 		      <br>and occur during building hours: <a href="http://www.library.ucla.edu/yrl" target="_new">YRL hours</a><br>
+		      <br>
+			Help us evaluate group study room reservation systems<br>
+			<br>
+			Through June 2016, we are piloting a new reservation system for the Powell Group Study Rooms and the Research Commons Collaboration Pods. Please take a moment to complete a survey regarding your experience here (<a href="https://www.surveymonkey.com/r/YRLrooms">https://www.surveymonkey.com/r/YRLrooms</a>).
 		      <br><br>
 		      <b>Enter start date/time:</b>';
   } else if( $outOfRange == 1 ) {
@@ -1009,6 +1013,10 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 		      <b>'
 		      .$zoneRange.'</b>
 		      <br>and occur during building hours: <a href="http://www.library.ucla.edu/yrl" target="_new">YRL hours</a><br>
+		      <br>
+			Help us evaluate group study room reservation systems<br>
+			<br>
+			Through June 2016, we are piloting a new reservation system for the Powell Group Study Rooms and the Research Commons Collaboration Pods. Please take a moment to complete a survey regarding your experience here (<a href="https://www.surveymonkey.com/r/YRLrooms">https://www.surveymonkey.com/r/YRLrooms</a>).
 		      <br><br>
 		      <b>Enter start date/time:</b>';
   } else if( $firstAccess4 == 0 ) {
@@ -1020,6 +1028,10 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 		      .$zoneRange.'</b>
 		      <br>and occur during building hours:<br>
 		      <a href="http://www.library.ucla.edu/yrl" target="_new">YRL hours</a><br>
+		      <br>
+			Help us evaluate group study room reservation systems<br>
+			<br>
+			Through June 2016, we are piloting a new reservation system for the Powell Group Study Rooms and the Research Commons Collaboration Pods. Please take a moment to complete a survey regarding your experience here (<a href="https://www.surveymonkey.com/r/YRLrooms">https://www.surveymonkey.com/r/YRLrooms</a>).
 		      <br><br>
 		      <b>Enter start date/time:</b>';
 rc_session_variable_set('rc-res','firstAccess4', 1);
@@ -1035,6 +1047,10 @@ Your Reservations > <b>Date & Time</b> > Available Resources > Details > Finish 
 		      <b>'
 		      .$zoneRange.'</b>
 		      <br>and occur during building hours: <a href="http://www.library.ucla.edu/yrl" target="_new">YRL hours</a><br>
+		      <br>
+			Help us evaluate group study room reservation systems<br>
+			<br>
+			Through June 2016, we are piloting a new reservation system for the Powell Group Study Rooms and the Research Commons Collaboration Pods. Please take a moment to complete a survey regarding your experience here (<a href="https://www.surveymonkey.com/r/YRLrooms">https://www.surveymonkey.com/r/YRLrooms</a>).
 		      <br><br>
 		      <b>Enter start date/time:</b>';
   }
