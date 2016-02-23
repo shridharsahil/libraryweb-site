@@ -1,0 +1,17 @@
+.give_now_sprites {
+  display: block;
+  width: 120px;
+  height: 56px;
+  background: url(../images/sprites.png) no-repeat 0 1px;
+  overflow: hidden;
+  text-indent: -15000px;
+  font-size: 0px;
+  line-height: 0px;
+  float: right;
+  margin-left: 20px;
+  margin: -13px auto 0;
+  transform: scale(1.04);
+  &:hover {
+    background-position: 0 -56px;
+  }
+}
