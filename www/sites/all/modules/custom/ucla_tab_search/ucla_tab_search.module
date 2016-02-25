@@ -149,6 +149,50 @@ can be changed via a pulldown search limit on the results screen. Many records c
   );
 
   ////////////////////////////////////////////////////////////////////////////////
+  // ArticlesPlus tab.
+  // ArticlesPlus tab.
+  // ArticlesPlus tab.
+  $form['articlesplus'] = array(
+    '#title' => t('ArticlesPlus'),
+  ) + $fieldset_default;
+  $form['articlesplus']['text_query'] = $query_textfield;
+  $form['articlesplus']['text_query']['#attributes'] = array(
+    'placeholder' => t('Search several databases at once.'),
+  );
+  $form['articlesplus']['text_query']['#field_suffix'] = t('<a href="http://ucla.summon.serialssolutions.com/#!/search">Advanced Search</a>');
+
+  $form['articlesplus']['peer_review'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Limit to peer-reviewed journals'),
+  );
+
+  $form['articlesplus']['articlesplus_search'] = $search_button;
+  $form['articlesplus']['articlesplus_search']['#name'] = 'op_articlesplus';
+
+  // 2016-02-24 akohler: I think this container markup is overly complex for most tabs... but copied/adapted from OAC tab's markup...
+  $form['articlesplus']['articlesplus_container_mel'] = array(
+    '#type' => 'container',
+    '#states' => array(
+      'visible' => array(':input[name="articleplus[catalog]"]' => array('value' => 'articleplus-Mel')),
+    ),
+    '#attributes' => array(
+      'class' => array(
+        'pane-description',
+      ),
+    ),
+  );
+  $form['articlesplus']['articlesplus_container_mel']['description'] = array(
+    '#markup' => t('
+      <strong>What am I searching?</strong>
+      <img src="http://placehold.it/150x150"
+           alt="ArticlesPlus contains journal articles, newspaper articles, ebooks, other"
+      ></br>
+      <a href="/about-articlesplus">About ArticlesPlus</a></br>
+      <a href="/search">Where else can I search?</a>
+    '),
+  );
+
+  ////////////////////////////////////////////////////////////////////////////////
   // Articles tab.
   // Articles tab.
   // Articles tab.
@@ -448,9 +492,12 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
   $browser_ip = (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
 //  $search_form = 'ucla_tab';
 
+  // 2016-02-24 akohler: Not sure of the purpose of this array, other than to provide op_$tab names for the switch below...
   $tab_form_id_map = array(
     'books' => array('BM-CAT' => 'BM-CAT', 'BM-Mel' => 'BM-Mel'),
     'articles' => array('ART' => 'ART', 'article' => 'article'),
+    // 2016-02-24 akohler: Added simplest possible array for ArticlesPlus tab
+    'articlesplus' => array('AP' => 'AP'),
     'journals' => array('J-ALL' => 'J-ALL', 'J-E' => 'J-E'),
     'databases' => array('within' => 'within', 'starts' => 'starts'),
     'guides' => array('within' => 'within', 'starts' => 'starts'),
@@ -591,6 +638,21 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
 	  'browser_ip' => $browser_ip,
 	  'search_form' => 'MA',
 	  );
+	break;
+
+        case 'edit-articlesplus':
+	  // Put form info into array expected by search logger / handlers
+	  $search_info = array (
+	  'search_target' => 'articlesplus',
+	  'search_terms' => $form_state['values']['articlesplus']['text_query'],
+	  'search_date' => $search_date,
+	  'browser_ip' => $browser_ip,
+	  'search_form' => 'AP',
+	  );
+	  // Add optional limit
+	  if ($form_state['values']['articlesplus']['peer_review'] == 1) {
+	    $search_info['search_limit'] = 'IsScholarly,true,f';
+	  }
 	break;
 
         default:
