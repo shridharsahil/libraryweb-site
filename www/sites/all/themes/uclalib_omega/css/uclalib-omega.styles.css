@@ -1420,23 +1420,36 @@ a.more-link,
 }
 
 .give_now_sprites {
-  display: block;
   width: 120px;
   height: 56px;
   background: url(../images/sprites.png) no-repeat 0 1px;
   overflow: hidden;
-  text-indent: -15000px;
-  font-size: 0px;
-  line-height: 0px;
   float: right;
-  margin-left: 20px;
-  margin: -15px -90px 0 0;
   transform: scale(1.04);
+  margin-right: -90px;
+  padding: 7px 22px;
 }
 .give_now_sprites:hover {
-  background-position: 0 -54px;
+  background-position: 0 -56px;
 }
 
+.pane-give-now-button p {
+  text-shadow: 0 0.04em 0.02em #8d6e2d;
+  font-size: 16px;
+  text-align: center;
+  margin-top: -16px;
+  text-transform: uppercase;
+}
+
+.pane-give-now-button p a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1150px) {
+  .give_now_sprites {
+    margin-right: 0;
+  }
+}
 .pane-horizontal-rule {
   border-bottom: 1px solid #adcde5;
   margin-bottom: 35px;

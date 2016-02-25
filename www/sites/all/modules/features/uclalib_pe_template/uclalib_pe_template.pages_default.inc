@@ -270,8 +270,7 @@ function uclalib_pe_template_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Give Now Button [PLACEHOLDER]',
       'title' => '',
-      'body' => '<p><a class="give_now_sprites" href="https://giving.ucla.edu/Standard/NetDonate.aspx?SiteNum=463">Give Now</a></p>
-',
+      'body' => '<p><a class="give_now_sprites" href="https://giving.ucla.edu/Standard/NetDonate.aspx?SiteNum=463">Give Now</a></p>',
       'format' => 'full_html',
       'substitute' => 0,
     );
