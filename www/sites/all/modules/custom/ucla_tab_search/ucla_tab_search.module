@@ -163,7 +163,7 @@ can be changed via a pulldown search limit on the results screen. Many records c
 
   $form['articlesplus']['peer_review'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Limit to peer-reviewed journals'),
+    '#title' => t('Limit to peer-reviewed materials'),
   );
 
   $form['articlesplus']['articlesplus_search'] = $search_button;
@@ -181,15 +181,9 @@ can be changed via a pulldown search limit on the results screen. Many records c
       ),
     ),
   );
-  $form['articlesplus']['articlesplus_container_mel']['description'] = array(
-    '#markup' => t('
-      <strong>What am I searching?</strong>
-      <img src="http://placehold.it/150x150"
-           alt="ArticlesPlus contains journal articles, newspaper articles, ebooks, other"
-      ></br>
-      <a href="/about-articlesplus">About ArticlesPlus</a></br>
-      <a href="/search">Where else can I search?</a>
-    '),
+
+  $form['articlesplus']['articles_container_mel']['description'] = array(
+    '#theme' => 'articleplus_articles_container_mel_description',
   );
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -676,4 +670,16 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
       $form_state['values']['ucla_form_id'] = $maps;
     }
   }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ucla_tab_search_theme($existing, $type, $theme, $path) {
+  return array(
+    'articleplus_articles_container_mel_description' => array(
+      'render element' => 'element',
+      'template' => 'articleplus_articles_container_mel_description'
+    )
+  );
 }
