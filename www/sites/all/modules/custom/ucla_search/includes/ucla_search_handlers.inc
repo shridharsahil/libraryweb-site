@@ -82,7 +82,7 @@ function summon_articlesplus($search_info) {
   $target_url = 'http://ucla.summon.serialssolutions.com/#!/search';
   $extra_params = '?ho=t&l=en';
   if ( isset($search_info['search_limit']) ) {
-    $extra_params .= '&fvf=' . $search_info['search_limit']; // debugging
+    $extra_params .= '&fvf=' . $search_info['search_limit'];
   }
   $extra_params .= '&q=' . $search_info['search_terms'];
   $target_url .= $extra_params;
