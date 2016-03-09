@@ -2129,7 +2129,8 @@ a.next-week:after {
   border: none;
   margin: 4px 0;
   padding-right: 7px;
-  text-align: center;
+  text-align: left;
+  text-indent: 7px;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .vertical-tabs .vertical-tabs-list li a {
   background-color: #eff3f4;
