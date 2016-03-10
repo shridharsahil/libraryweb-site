@@ -1,7 +1,7 @@
 name = UCLALIB Bookplates
 core = 7.x
 package = UCLALIB
-version = 7.x-1.0-beta2
+version = 7.x-1.0-beta3
 project = uclalib_bookplates
 dependencies[] = advanced_link
 dependencies[] = autocomplete_deluxe
