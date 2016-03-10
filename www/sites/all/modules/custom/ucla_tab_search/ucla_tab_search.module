@@ -68,10 +68,14 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
   $form['books'] = array(
     '#title' => t('Books & More'),
   ) + $fieldset_default;
+  $books_placeholder_label = 'Find books, journals and more.';
   $form['books']['text_query'] = $query_textfield;
   $form['books']['text_query']['#attributes'] = array(
-    'placeholder' => t('Find books, journals and more.'),
+    'placeholder' => t($books_placeholder_label),
   );
+  $form['books']['text_query']['#title'] = t($books_placeholder_label);
+  $form['books']['text_query']['#title_display'] = 'invisible';
+
 
   $form['books']['ucla_catalog_search_index'] = array(
     '#type' => 'select',
@@ -95,6 +99,8 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
     '#states' => array(
       'visible' => array(':input[name="books[catalog]"]' => array('value' => 'BM-CAT')),
     ),
+    '#title' => t('Select search field'),
+    '#title_display' => 'invisible',
   );
 
   $form['books']['catalog'] = array(
@@ -155,11 +161,14 @@ can be changed via a pulldown search limit on the results screen. Many records c
   $form['articlesplus'] = array(
     '#title' => t('ArticlesPlus'),
   ) + $fieldset_default;
+  $articlesplus_placeholder_label = 'Search several databases at once.';
   $form['articlesplus']['text_query'] = $query_textfield;
   $form['articlesplus']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search several databases at once.'),
+    'placeholder' => t($articlesplus_placeholder_label),
   );
   $form['articlesplus']['text_query']['#field_suffix'] = t('<a href="http://ucla.summon.serialssolutions.com/#!/search">Advanced Search</a>');
+  $form['articlesplus']['text_query']['#title'] = t($articlesplus_placeholder_label);
+  $form['articlesplus']['text_query']['#title_display'] = 'invisible';
 
   $form['articlesplus']['peer_review'] = array(
     '#type' => 'checkbox',
@@ -193,10 +202,14 @@ can be changed via a pulldown search limit on the results screen. Many records c
   $form['databases'] = array(
     '#title' => t('Databases'),
   ) + $fieldset_default;
+  $databases_placeholder_label = 'Search for a database.';
   $form['databases']['text_query'] = $query_textfield;
   $form['databases']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search for a database.'),
+    'placeholder' => t($databases_placeholder_label),
   );
+  $form['databases']['text_query']['#title'] = t($databases_placeholder_label);
+  $form['databases']['text_query']['#title_display'] = 'invisible';
+
   $form['databases']['sfx_search_index_container'] = array(
     '#type' => 'container',
     '#states' => array(
@@ -250,10 +263,13 @@ If you do not find the database you are seeking, try searching the <a href="http
   $form['journals'] = array(
     '#title' => t('Journals'),
   ) + $fieldset_default;
+  $journals_placeholder_label = 'Search journal titles.';
   $form['journals']['text_query'] = $query_textfield;
   $form['journals']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search e-journal titles.'),
+    'placeholder' => t($journals_placeholder_label),
   );
+  $form['journals']['text_query']['#title'] = t($journals_placeholder_label);
+  $form['journals']['text_query']['#title_display'] = 'invisible';
   $form['journals']['catalog'] = array(
     '#type' => 'radios',
     '#options' => array(
@@ -323,10 +339,13 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
   $form['guides'] = array(
     '#title' => t('Research Guides'),
   ) + $fieldset_default;
+  $guides_placeholder_label = 'Search by subject or course (e.g., "Psychology" or "Engineering 183")';
   $form['guides']['text_query'] = $query_textfield;
   $form['guides']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search by subject or course (e.g., "Psychology" or "Engineering 183")'),
+    'placeholder' => t($guides_placeholder_label),
   );
+  $form['guides']['text_query']['#title'] = t($guides_placeholder_label);
+  $form['guides']['text_query']['#title_display'] = 'invisible';
 
   $form['guides']['guides_search'] = $search_button;
   $form['guides']['guides_search']['#name'] = 'op_guides';
@@ -370,10 +389,13 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
   $form['oac'] = array(
     '#title' => t('Archives & Manuscripts'),
   ) + $fieldset_default;
+  $oac_placeholder_label = 'Search the OAC for a manuscript or archive.';
   $form['oac']['text_query'] = $query_textfield;
   $form['oac']['text_query']['#attributes'] = array(
-    'placeholder' => t('Search the OAC for a manuscript or archive'),
+    'placeholder' => t($oac_placeholder_label),
   );
+  $form['oac']['text_query']['#title'] = t($oac_placeholder_label);
+  $form['oac']['text_query']['#title_display'] = 'invisible';
   $form['oac']['oac_search'] = $search_button;
   $form['oac']['oac_search']['#name'] = 'op_oac';
 
