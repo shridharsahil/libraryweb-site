@@ -167,7 +167,7 @@ function uclalib_bookplates_menu() {
     'description' => 'Spak URL and arguments',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('uclalib_bookplates_admin'),
-    'access arguments' => array('administer bookplates settings'),
+    'access arguments' => array('administer site configuration'),
     'type' => MENU_NORMAL_ITEM,
   );
 
@@ -189,4 +189,4 @@ function uclalib_bookplates_update_7000(&$sandbox) {
     field_delete_field($field);
     field_purge_batch();
   }
-} 
+}
