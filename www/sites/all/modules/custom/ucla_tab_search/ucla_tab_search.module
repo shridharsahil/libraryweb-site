@@ -419,6 +419,23 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
 
 // end  code for description text  - ccthompson
 
+  // pass vertical tab id(s) to javascript for hash-landers
+  $ids = array();
+  foreach($form as $key => $element) {
+    if (substr($key, 0, 1) != '#') {
+      $ids[] = $key;
+    }
+  }
+  $form['tabs']['#attached']['js'] = array(
+    array(
+      'data' => array('ucla_tab_search' => array('ids' => $ids)),
+      'type' => 'setting'
+    ),
+    array(
+      'data' => drupal_get_path('module', 'ucla_tab_search') . '/ucla_tab_search.js'
+    )
+  );
+
   return $form;
 }
 
