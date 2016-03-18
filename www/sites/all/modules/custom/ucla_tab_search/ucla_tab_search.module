@@ -464,21 +464,49 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
     'oac' => array('within' => 'within', 'starts' => 'starts'),
   );
 
+  // Get current tab, according to the form.  However, this can be wrong
+  // if the tab was accessed via url#hash, instead of by clicking, so this
+  // value will be further checked against submitted form data.
+  $form_tab = $form_state['values']['tabs__active_tab'];
+
+  // Initialize other values used for tab checking.
+  $query_tab = "";
+  $query_tab_count = 0;
+  $tab_key = "";
+
+  // Iterate through tab form data to determine which set of inputs to use.
   foreach ($tab_form_id_map as $tab => $maps) {
-    // A submitted text_query field indicates which tab/form to use.
+    // A submitted text_query field helps indicate which tab/form to use.
     if (empty($form_state['values'][$tab]['text_query'])) {
       // Not this tab.
       continue;
     }
-    if (is_array($maps)) {
-	// Can't trust tabs__active_tab if user came to tab via url has (e.g., site/#oac)
-	// Rely instead on $tab, from tab (form) submitted, obtained above.
-	$current_form = "edit-$tab";
-	switch ($current_form) {
+    else {
+      // Save current array key for later use outside this loop
+      $tab_key = $tab;
+      $query_tab = "edit-$tab";
+      $query_tab_count++;
+      // If match, this is the correct tab, no need to check further.
+      if ($form_tab == $query_tab) {
+	$real_form_tab = $query_tab;
+        break;
+      }
+    }
+  }
+  // If, after going through all tab form data, we don't have a match but 
+  // do have query data, use the tab for the query data, not the alleged form tab.
+  if ($query_tab_count == 1 && $form_tab != $query_tab) {
+    $real_form_tab = $query_tab;
+    $tab_key = str_replace("edit-", "", $query_tab);
+  }
+
+  $maps = $tab_form_id_map[$tab_key];
+
+  if (is_array($maps)) {
+    switch ($real_form_tab) {
 
         case 'edit-books':
-
-        $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['books']['catalog']];
+          $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['books']['catalog']];
 	    switch ( $maps[$form_state['values']['books']['catalog']] ) {
 	      case 'BM-Mel':
 		// Put form info into array expected by search logger / handlers
@@ -601,8 +629,7 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
     }
     else {
       $form_state['values']['ucla_form_id'] = $maps;
-    }
-  }
+    } // end of very long if(is_array($maps))
 }
 
 /**

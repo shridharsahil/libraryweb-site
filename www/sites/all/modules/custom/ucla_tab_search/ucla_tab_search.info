@@ -1,5 +1,5 @@
 name = UCLA Tab Search
 description = Custom tab forms for searching on the UCLA Library homepage.
 core = 7.x
-version = "7.x-1.5-beta6"
+version = "7.x-1.5-beta7"
 dependencies[] = ucla_search
