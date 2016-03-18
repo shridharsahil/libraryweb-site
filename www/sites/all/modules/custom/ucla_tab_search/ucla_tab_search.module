@@ -452,7 +452,6 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
   module_load_include('inc', 'ucla_search', 'includes/ucla_search_handlers');
   $search_date = $_SERVER['REQUEST_TIME'];
   $browser_ip = (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
-//  $search_form = 'ucla_tab';
 
   // 2016-02-24 akohler: Not sure of the purpose of this array, other than to provide op_$tab names for the switch below...
   $tab_form_id_map = array(
@@ -466,14 +465,17 @@ function ucla_tab_search_tabs_form_submit($form, &$form_state) {
   );
 
   foreach ($tab_form_id_map as $tab => $maps) {
-    // The submit button name is used to decide where we are.
-    if (empty($form_state['values']["op_$tab"])) {
+    // A submitted text_query field indicates which tab/form to use.
+    if (empty($form_state['values'][$tab]['text_query'])) {
       // Not this tab.
       continue;
     }
     if (is_array($maps)) {
-	$search_form = $form_state['values']['tabs__active_tab'];
-	switch ($form_state['values']['tabs__active_tab']) {
+	// Can't trust tabs__active_tab if user came to tab via url has (e.g., site/#oac)
+	// Rely instead on $tab, from tab (form) submitted, obtained above.
+	$current_form = "edit-$tab";
+	switch ($current_form) {
+
         case 'edit-books':
 
         $form_state['values']['ucla_form_id'] = $maps[$form_state['values']['books']['catalog']];
