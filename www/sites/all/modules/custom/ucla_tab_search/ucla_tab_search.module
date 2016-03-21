@@ -166,7 +166,6 @@ can be changed via a pulldown search limit on the results screen. Many records c
   $form['articlesplus']['text_query']['#attributes'] = array(
     'placeholder' => t($articlesplus_placeholder_label),
   );
-  $form['articlesplus']['text_query']['#field_suffix'] = t('<a href="http://ucla.summon.serialssolutions.com/#!/search">Advanced Search</a>');
   $form['articlesplus']['text_query']['#title'] = t($articlesplus_placeholder_label);
   $form['articlesplus']['text_query']['#title_display'] = 'invisible';
 
@@ -178,7 +177,6 @@ can be changed via a pulldown search limit on the results screen. Many records c
   $form['articlesplus']['articlesplus_search'] = $search_button;
   $form['articlesplus']['articlesplus_search']['#name'] = 'op_articlesplus';
 
-  // 2016-02-24 akohler: I think this container markup is overly complex for most tabs... but copied/adapted from OAC tab's markup...
   $form['articlesplus']['articlesplus_container_mel'] = array(
     '#type' => 'container',
     '#states' => array(
@@ -192,7 +190,16 @@ can be changed via a pulldown search limit on the results screen. Many records c
   );
 
   $form['articlesplus']['articlesplus_container_mel']['description'] = array(
-    '#theme' => 'articleplus_container_mel_description',
+    '#markup' => t('
+      <strong>What am I searching?</strong></br>
+      <a href="/#articlesplus">ArticlesPlus</a> searches many millions of scholarly articles,
+      newspaper articles, e-books, government documents, and more.  It combines hundreds of
+      online databases (like JSTOR and Web of Science) into a single search box.  See more
+      <a href="/about-articlesplus">about ArticlesPlus</a>.</br>
+      </br>
+      <a href="http://ucla.summon.serialssolutions.com/advanced">Advanced Search</a></br>
+      <a href="/search">Where else can I search?</a>
+    '),
   );
 
   ////////////////////////////////////////////////////////////////////////////////
