@@ -33,6 +33,9 @@ function ucla_search_views_data() {
       'handler' => 'views_handler_field_date',
       'click sortable' => TRUE,
     ),
+    'sort' => array(
+      'handler' => 'views_handler_sort_date',
+    ),
     'filter' => array(
       'handler' => 'views_handler_filter_date',
       'allow empty' => TRUE,
@@ -77,6 +80,36 @@ function ucla_search_views_data() {
   $data['ucla_search_log']['search_form'] = array(
     'title' => t('Search Form'),
     'help' => t('Form which submitted the search'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+      'click sortable' => TRUE,
+    ),
+  );
+
+  // search_code column
+  $data['ucla_search_log']['search_code'] = array(
+    'title' => t('Search Code'),
+    'help' => t('Search/index code (when relevant)'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+      'click sortable' => TRUE,
+    ),
+  );
+
+  // search_limit column
+  $data['ucla_search_log']['search_limit'] = array(
+    'title' => t('Search Limit'),
+    'help' => t('Search limit (when relevant)'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+      'click sortable' => TRUE,
+    ),
+  );
+
+  // search_type column
+  $data['ucla_search_log']['search_type'] = array(
+    'title' => t('Search Type'),
+    'help' => t('Search type (when relevant)'),
     'field' => array(
       'handler' => 'views_handler_field',
       'click sortable' => TRUE,
