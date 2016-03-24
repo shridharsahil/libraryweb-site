@@ -43,6 +43,24 @@ function ucla_search_schema() {
         'not null' => TRUE,
         'default' => 'ucla_search'
       ),
+      'search_limit' => array(
+        'description' => 'Optional limit entered by user',
+        'type' => 'varchar',
+        'length' => 25,
+        'not null' => FALSE,
+      ),
+      'search_code' => array(
+        'description' => 'Search code (index type) used by some forms',
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => FALSE,
+      ),
+      'search_type' => array(
+        'description' => 'Search type (starts, contains etc.) used by some forms',
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => FALSE,
+      ),
     ),
     'primary key' => array('search_date', 'browser_ip')
   );
@@ -111,3 +129,16 @@ function ucla_search_update_7101() {
   db_add_field($table, $field, $schema['fields'][$field]);
 }
 
+/**
+ * Update logging table by adding new columns for search codes, limits and types.
+ */
+function ucla_search_update_7102() {
+  // Get complete schema (defined in hook_schema above)
+  $table = 'ucla_search_log';
+  $schema = drupal_get_schema_unprocessed('ucla_search', $table);
+  // Add new fields, defined in schema above
+  $fields = array('search_code', 'search_limit', 'search_type');
+  foreach ($fields as $field) {
+    db_add_field($table, $field, $schema['fields'][$field]);
+  }
+}
