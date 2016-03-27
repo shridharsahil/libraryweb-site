@@ -84,6 +84,23 @@ $handler->display->display_options['fields']['search_terms']['field'] = 'search_
 $handler->display->display_options['fields']['search_form']['id'] = 'search_form';
 $handler->display->display_options['fields']['search_form']['table'] = 'ucla_search_log';
 $handler->display->display_options['fields']['search_form']['field'] = 'search_form';
+/* Field: Search data: Search Code */
+$handler->display->display_options['fields']['search_code']['id'] = 'search_code';
+$handler->display->display_options['fields']['search_code']['table'] = 'ucla_search_log';
+$handler->display->display_options['fields']['search_code']['field'] = 'search_code';
+/* Field: Search data: Search Limit */
+$handler->display->display_options['fields']['search_limit']['id'] = 'search_limit';
+$handler->display->display_options['fields']['search_limit']['table'] = 'ucla_search_log';
+$handler->display->display_options['fields']['search_limit']['field'] = 'search_limit';
+/* Field: Search data: Search Type */
+$handler->display->display_options['fields']['search_type']['id'] = 'search_type';
+$handler->display->display_options['fields']['search_type']['table'] = 'ucla_search_log';
+$handler->display->display_options['fields']['search_type']['field'] = 'search_type';
+/* Sort criterion: Search data: Search Date */
+$handler->display->display_options['sorts']['search_date']['id'] = 'search_date';
+$handler->display->display_options['sorts']['search_date']['table'] = 'ucla_search_log';
+$handler->display->display_options['sorts']['search_date']['field'] = 'search_date';
+$handler->display->display_options['sorts']['search_date']['order'] = 'DESC';
 /* Filter criterion: Search data: Search Date */
 $handler->display->display_options['filters']['search_date']['id'] = 'search_date';
 $handler->display->display_options['filters']['search_date']['table'] = 'ucla_search_log';
@@ -121,9 +138,9 @@ $handler->display->display_options['filters']['search_target']['group_info']['la
 $handler->display->display_options['filters']['search_target']['group_info']['identifier'] = 'search_target';
 $handler->display->display_options['filters']['search_target']['group_info']['group_items'] = array(
   1 => array(
-    'title' => 'Articles',
+    'title' => 'ArticlesPlus',
     'operator' => '=',
-    'value' => 'articles',
+    'value' => 'articlesplus',
   ),
   2 => array(
     'title' => 'Catalog',
@@ -159,6 +176,11 @@ $handler->display->display_options['filters']['search_target']['group_info']['gr
     'title' => 'Site',
     'operator' => '=',
     'value' => 'site',
+  ),
+  9 => array(
+    'title' => 'Articles (OLD)',
+    'operator' => '=',
+    'value' => 'articles',
   ),
 );
 
