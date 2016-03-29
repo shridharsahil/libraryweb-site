@@ -192,7 +192,7 @@ can be changed via a pulldown search limit on the results screen. Many records c
   $form['articlesplus']['articlesplus_container_mel']['description'] = array(
     '#markup' => t('
       <strong>What am I searching?</strong></br>
-      <a href="/#articlesplus">ArticlesPlus</a> searches many millions of scholarly articles,
+      <a href="http://ucla.summon.serialssolutions.com/">ArticlesPlus</a> searches many millions of scholarly articles,
       newspaper articles, e-books, government documents, and more.  It combines hundreds of
       online databases (like JSTOR and Web of Science) into a single search box.  See more
       <a href="/about-articlesplus">about ArticlesPlus</a>.</br>
@@ -299,6 +299,8 @@ If you do not find the database you are seeking, try searching the <a href="http
         'exact' => t('Exact'),
     ),
     '#default_value' => 'starts',
+    '#title' => t('Select search modifier'),
+    '#title_display' => 'invisible',
   );
   $form['journals']['ucla_tabbed_index_container'] = array(
     '#type' => 'container',
@@ -313,6 +315,8 @@ If you do not find the database you are seeking, try searching the <a href="http
         'JAL2' => t('Starts with'),
     ),
     '#default_value' => 'JKEY^',
+    '#title' => t('Select search modifier'),
+    '#title_display' => 'invisible',
   );
 
   $form['journals']['journals_search'] = $search_button;
