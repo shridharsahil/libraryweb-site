@@ -36,7 +36,8 @@ function search_form_content_type_render($subtype, $conf, $args, $context) {
       <form class="header-search-form" action="{$url}" method="get" accept-charset="UTF-8">
         <div class="form-wrapper">
           <div class="form-item form-type-textfield">
-            <input type="text" class="form-text" id='' name="search_query" value="" size="15" maxlength="128"  placeholder="{$placeholder}">
+	    <label class="element-invisible" for="site-search-query">${placeholder}</label>
+            <input type="text" class="form-text" id="site-search-query" name="search_query" value="" size="15" maxlength="128"  placeholder="{$placeholder}">
           </div>
           <div class="form-actions">
             <input type="submit" class="form-submit" id="submit" value="{$submit}" >
