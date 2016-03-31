@@ -12,10 +12,23 @@ function ucla_shib_extras_user_insert(&$edit, $account, $category) {
   // At this point, $account has been created and $account->uid is valid.
 
   // Do the following only if certain HTTP headers are set by Shibboleth
-  // HTTP_SHIBGIVENNAME = first name; HTTP_SHIBSN = last name
-  if ( !empty($_SERVER['HTTP_SHIBGIVENNAME']) && !empty($_SERVER['HTTP_SHIBSN']) ) {
-    $edit['field_first_name']['und'][0]['value'] = $_SERVER['HTTP_SHIBGIVENNAME'];
-    $edit['field_last_name']['und'][0]['value'] = $_SERVER['HTTP_SHIBSN'];
+  // HTTP_SHIBGIVENNAME = first name;
+  // HTTP_SHIBSN (obsolete) or HTTP_SHIBSURNAME = last name
+  $first_name = "";
+  $last_name = "";
+  if ( !empty($_SERVER['HTTP_SHIBGIVENNAME']) ) {
+    $first_name = $_SERVER['HTTP_SHIBGIVENNAME'];
+  }
+  if ( !empty($_SERVER['HTTP_SHIBSN']) ) {
+    $last_name = $_SERVER['HTTP_SHIBSN'];
+  }
+  elseif ( !empty($_SERVER['HTTP_SHIBSURNAME']) ) {
+    $last_name = $_SERVER['HTTP_SHIBSURNAME'];
+  }
+
+  if ( !empty($first_name) && !empty($last_name) ) {
+    $edit['field_first_name']['und'][0]['value'] = $first_name;
+    $edit['field_last_name']['und'][0]['value'] = $last_name;
 
     // Flag $edit array as existing, so saving will update instead of create (insert)
     $edit['is_new'] = FALSE;
