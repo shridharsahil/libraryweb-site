@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+
+function schedule_source_menu() {
+  $items['schedule_source'] = array(
+    'title' => 'Schedule Source',
+    'page callback' => 'schedule_source',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * page callback
+ */
+function schedule_source(){
+	$source_ip = $_SERVER['REMOTE_ADDR'];
+	$code = schedule_source_get_code( $source_ip );
+	$newURL = "https://www.schedulesource.net/enterprise/teamwork/kiosk/default.aspx?code=$code";
+	header('Location: '.$newURL);
+	exit;
+}
+
+/**
+ * Get Code Number from rules table that matches the IP of the Clicc Clock-In Kiosk that called this module
+ * The IPs and Codes are maintained through a gui provided by the schedule_source_config module
+ */
+function schedule_source_get_code($source_ip) {
+  $entries = array();
+  // select table
+  $select = db_select('schedule_source_config', 'e');
+  // fields to read
+  $select->addField('e', 'source_ip');
+  $select->addField('e', 'code');
+  // read in only records that match te the IP
+  $select->condition('e.source_ip', $source_ip);
+  // Now, loop all these entries and show them in a table. Note that there is no
+  // db_fetch_* object or array function being called here. Also note that the
+  // following line could have been written as
+  // $entries = $select->execute()->fetchAll() which would return each selected
+  // record as an object instead of an array.
+  $entries = $select->execute()->fetchAll(PDO::FETCH_ASSOC);
+
+  if (!empty($entries)) {
+    $code_num = $entries[0]['code'];
+  }
+  else {
+    $code_num = -1;
+  }
+  return $code_num;
+}
+
