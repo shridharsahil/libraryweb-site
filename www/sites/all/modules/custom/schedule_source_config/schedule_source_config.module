@@ -117,7 +117,7 @@ function schedule_source_config_list() {
       $rows[] = array_map('check_plain', (array) $entry);
     }
     // Make a table for them.
-    $header = array(t('Id'), t('Source IP'), t('Code Number for this IP'));
+    $header = array(t('Id'), t('Source IP'), t('Department'), t('Department Description'), t('Code Number for this IP'));
     $output .= theme('table', array('header' => $header, 'rows' => $rows));
   }
   else {
@@ -139,6 +139,16 @@ function schedule_source_config_form_add($form, &$form_state) {
   $form['add']['source_ip'] = array(
     '#type'  => 'textfield',
     '#title' => t('Source IP'),
+    '#size'  => 15,
+  );
+  $form['add']['dept'] = array(
+    '#type'  => 'textfield',
+    '#title' => t('Department'),
+    '#size'  => 15,
+  );
+  $form['add']['dept_desc'] = array(
+    '#type'  => 'textfield',
+    '#title' => t('Department Description'),
     '#size'  => 15,
   );
   $form['add']['code'] = array(
@@ -166,6 +176,8 @@ function schedule_source_config_form_add_submit($form, &$form_state) {
   // Save the submitted entry.
   $entry = array(
     'source_ip'    => $form_state['values']['source_ip'],
+    'dept'    => $form_state['values']['dept'],
+    'dept_desc'    => $form_state['values']['dept_desc'],
     'code' => $form_state['values']['code'],
   );
   // write to db
@@ -211,12 +223,31 @@ function schedule_source_config_form_update($form, &$form_state) {
       'callback' => 'schedule_source_config_form_update_callback',
     ),
   );
+  $form['delete'] = array(
+    '#type'  => 'submit',
+    '#value' => t('Delete'),
+    '#submit' => array('schedule_source_config_form_delete_submit'),
+  );
 
   $form['source_ip'] = array(
     '#type' => 'textfield',
-    '#title' => t('Entrer the IP for the new Clicc Clock-In Kiosk'),
+    '#title' => t('<br>Enter the IP for the new Clicc Clock-In Kiosk'),
     '#size' => 15,
     '#default_value' => $default_entry->source_ip,
+  );
+
+  $form['dept'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Enter the Department using dept_1, etc'),
+    '#size' => 15,
+    '#default_value' => $default_entry->dept,
+  );
+
+  $form['dept_desc'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Entrer a himan readable dept, location, or unit description'),
+    '#size' => 15,
+    '#default_value' => $default_entry->dept_desc,
   );
 
   $form['code'] = array(
@@ -250,20 +281,36 @@ function schedule_source_config_form_update_callback($form, $form_state) {
 }
 
 /**
+ * Delete handler for 'update entry' form.
+ */
+function schedule_source_config_form_delete_submit($form, &$form_state) {
+  global $user;
+  // Delete the selected entry.
+  $entry = array(
+    'pid' => $form_state['values']['pid'],
+  );
+  $count = schedule_source_config_entry_delete($entry);
+
+  drupal_set_message(t("Deleted entry @entry (@count row updated)", array('@count' => $count, '@entry' => print_r($entry, TRUE))));
+}
+
+/**
  * Submit handler for 'update entry' form.
  */
 function schedule_source_config_form_update_submit($form, &$form_state) {
   global $user;
-
   // Save the submitted entry.
   $entry = array(
     'pid' => $form_state['values']['pid'],
     'source_ip' => $form_state['values']['source_ip'],
+    'dept' => $form_state['values']['dept'],
+    'dept_desc' => $form_state['values']['dept_desc'],
     'code' => $form_state['values']['code'],
   );
   $count = schedule_source_config_entry_update($entry);
   drupal_set_message(t("Updated entry @entry (@count row updated)", array('@count' => $count, '@entry' => print_r($entry, TRUE))));
 }
+
 /**
  * @} End of "defgroup Schedule_Source".
  */

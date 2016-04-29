@@ -23,6 +23,8 @@ function schedule_source_config_install() {
   // Add a default entry for development
   $fields = array(
     'source_ip'    => '164.67.152.25',
+    'dept'    => 'dept_1',
+    'dept_desc'    => 'Powell',
     'code' => '44a75672-0b31-4cec-838f-039a29e33171'
   );
   db_insert('schedule_source_config')
@@ -32,6 +34,8 @@ function schedule_source_config_install() {
   // Add another entry for using the VM
   $fields = array(
     'source_ip'    => '192.168.177.1',
+    'dept'    => 'dept_2',
+    'dept_desc'    => 'YRL',
     'code' => '44a75672-0b31-4cec-838f-039a29e33171'
   );
   db_insert('schedule_source_config')
@@ -79,6 +83,20 @@ function schedule_source_config_schema() {
         'not null' => TRUE,
         'default' => '',
         'description' => 'Client Workstation IP',
+      ),
+      'dept' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Location, department, or unit expressed as dept_1, etc',
+      ),
+      'dept_desc' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Human readable description of Location, department, or unit',
       ),
       'code' => array(
         'type' => 'varchar',

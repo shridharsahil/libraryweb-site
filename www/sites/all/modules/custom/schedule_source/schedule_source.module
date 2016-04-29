@@ -17,8 +17,31 @@ function schedule_source_menu() {
  * page callback
  */
 function schedule_source(){
-	$source_ip = $_SERVER['REMOTE_ADDR'];
-	$code = schedule_source_get_code( $source_ip );
+
+
+
+
+$dept='';
+$query = drupal_get_query_parameters();
+if(count($query) > 0){
+    $dept= $query['work_loc'];
+};
+
+
+
+	$browser_ip = (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
+	$code = schedule_source_get_code( $browser_ip, $dept );
+
+
+
+print_r("dept===>$dept<br>\n");
+print_r("dept===>$browser_ip<br>\n");
+print_r("dept===>$code<br>\n");
+//exit;
+
+
+
+
 	$newURL = "https://www.schedulesource.net/enterprise/teamwork/kiosk/default.aspx?code=$code";
 	header('Location: '.$newURL);
 	exit;
@@ -28,15 +51,19 @@ function schedule_source(){
  * Get Code Number from rules table that matches the IP of the Clicc Clock-In Kiosk that called this module
  * The IPs and Codes are maintained through a gui provided by the schedule_source_config module
  */
-function schedule_source_get_code($source_ip) {
+function schedule_source_get_code($browser_ip, $dept) {
   $entries = array();
   // select table
   $select = db_select('schedule_source_config', 'e');
   // fields to read
   $select->addField('e', 'source_ip');
+  $select->addField('e', 'dept');
   $select->addField('e', 'code');
   // read in only records that match te the IP
-  $select->condition('e.source_ip', $source_ip);
+  $select->condition(db_and()
+    ->condition('e.source_ip', $browser_ip)
+    ->condition('e.dept', $dept)
+  );
   // Now, loop all these entries and show them in a table. Note that there is no
   // db_fetch_* object or array function being called here. Also note that the
   // following line could have been written as
