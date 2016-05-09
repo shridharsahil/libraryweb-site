@@ -17,34 +17,16 @@ function schedule_source_menu() {
  * page callback
  */
 function schedule_source(){
-
-
-
-
-$dept='';
-$query = drupal_get_query_parameters();
-if(count($query) > 0){
+  $dept='';
+  $query = drupal_get_query_parameters();
+  if(count($query) > 0){
     $dept= $query['work_loc'];
-};
-
-
-
-	$browser_ip = (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
-	$code = schedule_source_get_code( $browser_ip, $dept );
-
-
-
-print_r("dept===>$dept<br>\n");
-print_r("dept===>$browser_ip<br>\n");
-print_r("dept===>$code<br>\n");
-//exit;
-
-
-
-
-	$newURL = "https://www.schedulesource.net/enterprise/teamwork/kiosk/default.aspx?code=$code";
-	header('Location: '.$newURL);
-	exit;
+  };
+    $browser_ip = (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
+    $code = schedule_source_get_code( $browser_ip, $dept );
+    $newURL = "https://www.schedulesource.net/enterprise/teamwork/kiosk/default.aspx?code=$code";
+    header('Location: '.$newURL);
+    exit;
 }
 
 /**
