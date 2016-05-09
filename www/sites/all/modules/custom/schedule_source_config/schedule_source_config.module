@@ -68,36 +68,50 @@ function schedule_source_config_entry_load($entry = array()) {
 }
 
 /**
+ * Implements hook_permission().
+ */
+function schedule_source_config_permission() {
+  return array(
+    'administer schedule source' => array(
+      'title' => t('Admin Schedule Source'),
+      'description' => t('Access the Schedule Source config module to set IP & code'),
+    )
+  );
+}
+
+/**
  * Implements hook_menu().
  *
  * Set up calls to drupal_get_form() for all our example cases.
  */
 function schedule_source_config_menu() {
   $items = array();
-  $items['schedule_source_config'] = array(
-    'title' => 'Schedule Source Configuration',
+  $items['admin/config/system/schedule_source'] = array(
+    'title' => 'Schedule Source',
+    'description' => 'Set IPs and Codes for Clicc Clock-In run by Schedule Source.',
     'page callback' => 'schedule_source_config_list',
-    'access callback' => TRUE,
+//    'access callback' => TRUE,
+    'access arguments' => array('administer schedule source'),
   );
-  $items['schedule_source_config/list'] = array(
+  $items['admin/config/system/schedule_source/list'] = array(
     'title' => 'List',
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
   );
-  $items['schedule_source_config/add'] = array(
+  $items['admin/config/system/schedule_source/add'] = array(
     'title' => 'Add entry',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('schedule_source_config_form_add'),
-    'access callback' => TRUE,
+    'access arguments' => array('administer schedule source'),
     'type' => MENU_LOCAL_TASK,
     'weight' => -9,
   );
-  $items['schedule_source_config/update'] = array(
+  $items['admin/config/system/schedule_source/update'] = array(
     'title' => 'Update entry',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('schedule_source_config_form_update'),
     'type' => MENU_LOCAL_TASK,
-    'access callback' => TRUE,
+    'access arguments' => array('administer schedule source'),
     'weight' => -5,
   );
   return $items;
