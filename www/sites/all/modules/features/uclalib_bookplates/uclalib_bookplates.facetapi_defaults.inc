@@ -96,32 +96,6 @@ function uclalib_bookplates_facetapi_default_facet_settings() {
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'search_api@bookplates::type';
-  $facet->searcher = 'search_api@bookplates';
-  $facet->realm = '';
-  $facet->facet = 'type';
-  $facet->enabled = FALSE;
-  $facet->settings = array(
-    'operator' => 'and',
-    'hard_limit' => '50',
-    'dependencies' => array(
-      'facets' => array(),
-      'force_deactivation' => TRUE,
-      'regex' => FALSE,
-    ),
-    'facet_mincount' => '1',
-    'facet_missing' => '0',
-    'flatten' => 0,
-    'query_type' => 'term',
-    'default_true' => TRUE,
-    'facet_search_ids' => array(),
-    'exclude' => 0,
-  );
-  $export['search_api@bookplates::type'] = $facet;
-
-  $facet = new stdClass();
-  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
-  $facet->api_version = 1;
   $facet->name = 'search_api@bookplates:block:enabled';
   $facet->searcher = 'search_api@bookplates';
   $facet->realm = 'block';
