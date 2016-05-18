@@ -130,13 +130,32 @@ function uclalib_bookplates_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_donor_name_bookplates'
-  $field_bases['field_donor_name_bookplates'] = array(
+  // Exported field_base: 'field_collection_donor'
+  $field_bases['field_collection_donor'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_donor_name_bookplates',
+    'field_name' => 'field_collection_donor',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
+  // Exported field_base: 'field_donor_name_first'
+  $field_bases['field_donor_name_first'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_donor_name_first',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -159,13 +178,13 @@ function uclalib_bookplates_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_sort_by'
-  $field_bases['field_sort_by'] = array(
+  // Exported field_base: 'field_donor_name_last'
+  $field_bases['field_donor_name_last'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_sort_by',
+    'field_name' => 'field_donor_name_last',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(

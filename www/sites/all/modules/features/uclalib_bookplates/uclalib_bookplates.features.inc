@@ -66,7 +66,12 @@ function uclalib_bookplates_default_search_api_index() {
       "fields" : {
         "field_bookplate_description:value" : { "type" : "text" },
         "field_bookplates_subject_area" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_donor_name_bookplates" : { "type" : "list\\u003Ctext\\u003E" },
+        "field_collection_donor" : {
+          "type" : "list\\u003Cinteger\\u003E",
+          "entity_type" : "field_collection_item"
+        },
+        "field_collection_donor:field_donor_name_first" : { "type" : "list\\u003Ctext\\u003E" },
+        "field_collection_donor:field_donor_name_last" : { "type" : "list\\u003Ctext\\u003E" },
         "nid" : { "type" : "integer" },
         "search_api_language" : { "type" : "string" },
         "title" : { "type" : "text" },

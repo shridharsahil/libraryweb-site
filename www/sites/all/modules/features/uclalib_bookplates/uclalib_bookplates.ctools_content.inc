@@ -20,7 +20,7 @@ function uclalib_bookplates_default_ctools_custom_content() {
   $content->settings = array(
     'admin_title' => 'Back to Bookplates breadcrumbs',
     'title' => '',
-    'body' => '<p><a href="/bookplates">&lt; All Bookplates</a></p>
+    'body' => '<span class="uclalib-nav-breadcrumb"><a href="/bookplates">All Bookplates</a> » </span>
 ',
     'format' => 'full_html',
     'substitute' => 1,

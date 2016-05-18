@@ -37,6 +37,10 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  /* Relationship: Indexed Content: Donor */
+  $handler->display->display_options['relationships']['field_collection_donor']['id'] = 'field_collection_donor';
+  $handler->display->display_options['relationships']['field_collection_donor']['table'] = 'search_api_index_bookplates';
+  $handler->display->display_options['relationships']['field_collection_donor']['field'] = 'field_collection_donor';
   /* Field: Indexed Content: Bookplate Description */
   $handler->display->display_options['fields']['field_bookplate_description']['id'] = 'field_bookplate_description';
   $handler->display->display_options['fields']['field_bookplate_description']['table'] = 'search_api_index_bookplates';
@@ -95,6 +99,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No results found for this search.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Indexed Content: Node ID */
   $handler->display->display_options['sorts']['nid']['id'] = 'nid';
@@ -131,6 +136,10 @@ function uclalib_bookplates_views_default_views() {
     7 => 0,
     11 => 0,
   );
+  /* Filter criterion: Indexed Content: Donor */
+  $handler->display->display_options['filters']['field_collection_donor']['id'] = 'field_collection_donor';
+  $handler->display->display_options['filters']['field_collection_donor']['table'] = 'search_api_index_bookplates';
+  $handler->display->display_options['filters']['field_collection_donor']['field'] = 'field_collection_donor';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -295,6 +304,10 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '%1';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  /* Relationship: Content: Donor (field_collection_donor) */
+  $handler->display->display_options['relationships']['field_collection_donor_value']['id'] = 'field_collection_donor_value';
+  $handler->display->display_options['relationships']['field_collection_donor_value']['table'] = 'field_data_field_collection_donor';
+  $handler->display->display_options['relationships']['field_collection_donor_value']['field'] = 'field_collection_donor_value';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -305,22 +318,26 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'div';
-  /* Field: Content: Donor(s) */
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['id'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['table'] = 'field_data_field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['field'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['label'] = 'Made possible by a gift from';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['alter']['text'] = '[field_donor_name_bookplates-format]';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_wrapper_type'] = 'span';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_wrapper_class'] = 'bookplates-donor-gift';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['type'] = 'text_plain';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['separator'] = ' and ';
+  /* Field: Content: Donor */
+  $handler->display->display_options['fields']['field_collection_donor']['id'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['table'] = 'field_data_field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['field'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['label'] = 'Made possible by a gift from ';
+  $handler->display->display_options['fields']['field_collection_donor']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_collection_donor']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_collection_donor']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_type'] = 'span';
+  $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_class'] = 'bookplates-donor-gift';
+  $handler->display->display_options['fields']['field_collection_donor']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_collection_donor']['settings'] = array(
+    'edit' => '',
+    'delete' => '',
+    'add' => '',
+    'description' => 0,
+    'view_mode' => 'full',
+  );
+  $handler->display->display_options['fields']['field_collection_donor']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_collection_donor']['separator'] = ' ';
   /* Field: Content: Bookplate Image */
   $handler->display->display_options['fields']['field_bookplate_image']['id'] = 'field_bookplate_image';
   $handler->display->display_options['fields']['field_bookplate_image']['table'] = 'field_data_field_bookplate_image';
@@ -402,18 +419,19 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '8';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '8, 20, 40, 60, 200';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '6, 24, 48, 60, 200';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['row_class'] = 'grid-3';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -422,13 +440,14 @@ function uclalib_bookplates_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '38';
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Bookplate Image */
@@ -443,22 +462,22 @@ function uclalib_bookplates_views_default_views() {
     'image_style' => '',
     'image_link' => 'content',
   );
-  /* Field: Content: Donor(s) */
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['id'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['table'] = 'field_data_field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['field'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['multi_type'] = 'ul';
+  /* Field: Content: Donor */
+  $handler->display->display_options['fields']['field_collection_donor']['id'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['table'] = 'field_data_field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['field'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['label'] = 'Donor(s)';
+  $handler->display->display_options['fields']['field_collection_donor']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_collection_donor']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_type'] = 'span';
+  $handler->display->display_options['fields']['field_collection_donor']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_collection_donor']['type'] = 'field_collection_fields';
+  $handler->display->display_options['fields']['field_collection_donor']['settings'] = array(
+    'view_mode' => 'token',
+  );
+  $handler->display->display_options['fields']['field_collection_donor']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_collection_donor']['separator'] = ' ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Sort by (field_sort_by) */
-  $handler->display->display_options['sorts']['field_sort_by_value']['id'] = 'field_sort_by_value';
-  $handler->display->display_options['sorts']['field_sort_by_value']['table'] = 'field_data_field_sort_by';
-  $handler->display->display_options['sorts']['field_sort_by_value']['field'] = 'field_sort_by_value';
-  /* Sort criterion: Content: Updated/commented date */
-  $handler->display->display_options['sorts']['last_updated']['id'] = 'last_updated';
-  $handler->display->display_options['sorts']['last_updated']['table'] = 'node_comment_statistics';
-  $handler->display->display_options['sorts']['last_updated']['field'] = 'last_updated';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -534,6 +553,20 @@ function uclalib_bookplates_views_default_views() {
     'fancybox_caption' => 'title',
     'fancybox_caption_custom' => '',
   );
+  /* Field: Content: Donor */
+  $handler->display->display_options['fields']['field_collection_donor']['id'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['table'] = 'field_data_field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['field'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['label'] = 'What?';
+  $handler->display->display_options['fields']['field_collection_donor']['settings'] = array(
+    'edit' => '',
+    'delete' => '',
+    'add' => '',
+    'description' => 0,
+    'view_mode' => 'full',
+  );
+  $handler->display->display_options['fields']['field_collection_donor']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_collection_donor']['separator'] = '';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -542,14 +575,6 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '49';
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Donor(s) */
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['id'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['table'] = 'field_data_field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['field'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['label'] = '';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['multi_type'] = 'ul';
   /* Field: Content: Subject Area(s) */
   $handler->display->display_options['fields']['field_bookplates_subject_area']['id'] = 'field_bookplates_subject_area';
   $handler->display->display_options['fields']['field_bookplates_subject_area']['table'] = 'field_data_field_bookplates_subject_area';
@@ -611,25 +636,56 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
-    'field_url_after_spak_code' => 'field_url_after_spak_code',
-    'field_url_before_spak_code' => 'field_url_before_spak_code',
+    'field_donor_name_first' => 'field_donor_name_first',
+    'field_donor_name_last' => 'field_donor_name_last',
+    'field_collection_donor' => 'field_collection_donor',
     'field_bookplates_spak_code' => 'field_bookplates_spak_code',
   );
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Field: Content: Donor(s) */
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['id'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['table'] = 'field_data_field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['field'] = 'field_donor_name_bookplates';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['label'] = 'Made possible by a gift from ';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_wrapper_type'] = 'span';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['element_wrapper_class'] = 'bookplates-donor-gift';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['type'] = 'text_plain';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['multi_type'] = 'ul';
-  $handler->display->display_options['fields']['field_donor_name_bookplates']['separator'] = '';
+  /* Relationship: Content: Donor (field_collection_donor) */
+  $handler->display->display_options['relationships']['field_collection_donor_value']['id'] = 'field_collection_donor_value';
+  $handler->display->display_options['relationships']['field_collection_donor_value']['table'] = 'field_data_field_collection_donor';
+  $handler->display->display_options['relationships']['field_collection_donor_value']['field'] = 'field_collection_donor_value';
+  $handler->display->display_options['relationships']['field_collection_donor_value']['delta'] = '-1';
+  /* Relationship: Field collection item: Entity with the Donor (field_collection_donor) */
+  $handler->display->display_options['relationships']['field_collection_donor_node']['id'] = 'field_collection_donor_node';
+  $handler->display->display_options['relationships']['field_collection_donor_node']['table'] = 'field_collection_item';
+  $handler->display->display_options['relationships']['field_collection_donor_node']['field'] = 'field_collection_donor_node';
+  $handler->display->display_options['relationships']['field_collection_donor_node']['relationship'] = 'field_collection_donor_value';
+  /* Field: Field collection item: First Name */
+  $handler->display->display_options['fields']['field_donor_name_first']['id'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['field'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['relationship'] = 'field_collection_donor_value';
+  $handler->display->display_options['fields']['field_donor_name_first']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_first']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_first']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_first']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Last Name */
+  $handler->display->display_options['fields']['field_donor_name_last']['id'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['field'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['relationship'] = 'field_collection_donor_value';
+  $handler->display->display_options['fields']['field_donor_name_last']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_last']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_last']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_last']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_donor_name_last']['hide_empty'] = TRUE;
+  /* Field: Content: Donor */
+  $handler->display->display_options['fields']['field_collection_donor']['id'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['table'] = 'field_data_field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['field'] = 'field_collection_donor';
+  $handler->display->display_options['fields']['field_collection_donor']['label'] = 'Make possible by a gift from ';
+  $handler->display->display_options['fields']['field_collection_donor']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_type'] = 'span';
+  $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_class'] = 'bookplates-donor-gift';
+  $handler->display->display_options['fields']['field_collection_donor']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_collection_donor']['type'] = 'field_collection_fields';
+  $handler->display->display_options['fields']['field_collection_donor']['settings'] = array(
+    'view_mode' => 'token',
+  );
+  $handler->display->display_options['fields']['field_collection_donor']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_collection_donor']['separator'] = ' ';
   /* Field: Content: Bookplate Image */
   $handler->display->display_options['fields']['field_bookplate_image']['id'] = 'field_bookplate_image';
   $handler->display->display_options['fields']['field_bookplate_image']['table'] = 'field_data_field_bookplate_image';
