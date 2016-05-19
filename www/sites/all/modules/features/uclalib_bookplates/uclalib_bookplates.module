@@ -50,24 +50,6 @@ function uclalib_bookplates_theme($existing, $type, $theme, $path) {
       'template' => 'node--bookplates',
       'path' => drupal_get_path('module', 'uclalib_bookplates') . '/templates',
     ),
-  //registering a theme function with a template copy views-view-field
-  // template and call 'views-view-field--bookplates-single_node--field-collection-donor'
-    'views_view_field__bookplates_single_node__field_collection_donor' => array(
-      'render element' => 'content',
-      'variables' => array('view' => NULL, 'field' => NULL, 'row' => NULL),
-      'template' => 'views-view-field--bookplates-single-node--field-collection-donor',
-      'base hook' => 'views_view_field',
-      'path' => drupal_get_path('module', 'uclalib_bookplates') . '/templates',
-    ),
-    // template and call 'views-view-field--bookplates-landing-page--default--field-collection-donor'
-    'views_view_field__bookplates_landing_page__default__field_collection_donor' =>
-      array(
-      'render element' => 'content',
-      'variables' => array('view' => NULL, 'field' => NULL, 'row' => NULL),
-      'template' => 'views-view-field--bookplates-landing-page--default--field-collection-donor',
-      'base hook' => 'views_view_field',
-      'path' => drupal_get_path('module', 'uclalib_bookplates') . '/templates',
-    ),
   );
 }
 
@@ -168,7 +150,7 @@ function uclalib_bookplates_preprocess_views_view_field(&$variables) {
   if ($variables['field']->field == 'field_collection_donor') {
     // create array of donor names
     $variables['donor_names'] = array();
-    $variables['output_donors'] = '';
+    $variables['output'] = '';
 
     foreach ($variables['row']->field_field_collection_donor as $key => $value) {
       $variables['donor_names'][] = $donor_name;
@@ -178,7 +160,7 @@ function uclalib_bookplates_preprocess_views_view_field(&$variables) {
 
     // render text for single donor
     if (count($variables['row']->field_field_collection_donor) == 1) {
-      $variables['output_donors'] = $variables['field']->last_render_text;
+      $variables['output'] = $variables['field']->last_render_text;
     }
     else {
       // get all the donors
@@ -192,7 +174,7 @@ function uclalib_bookplates_preprocess_views_view_field(&$variables) {
 
       // append the last donor with an "and" before it
       $donor_last = array_pop($donors);
-      $variables['output_donors'] = implode(', ', $donors) . ' and ' . $donor_last;
+      $variables['output'] = implode(', ', $donors) . ' and ' . $donor_last;
     }
   }
 }
