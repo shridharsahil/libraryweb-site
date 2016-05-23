@@ -153,7 +153,7 @@ function uclalib_bookplates_preprocess_views_view_field(&$variables) {
     $variables['output'] = '';
 
     foreach ($variables['row']->field_field_collection_donor as $key => $value) {
-      $variables['donor_names'][] = $donor_name;
+      $variables['donor_names'][] = $value;
       $value_raw = $value['raw']['value'];
       $donor_name = $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_first']['#items'][0]['safe_value'] . " " . $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_last']['#items'][0]['safe_value'];
     }
