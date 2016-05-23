@@ -260,6 +260,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
@@ -381,11 +382,6 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_bookplate_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bookplate_description']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_bookplate_description']['element_default_classes'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';

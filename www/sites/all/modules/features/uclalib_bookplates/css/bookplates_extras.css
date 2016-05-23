@@ -1,7 +1,6 @@
 /* make all images the height of largest image*/
 .view-bookplates-landing-page.view-id-bookplates_landing_page.view-display-id-bookplates_landing_page table.views-view-grid tbody tr td.grid-3 div.views-field.views-field-field-bookplate-image {
     height: 331px;
-    overflow: hidden;
 }
 .page-bookplates.section-bookplates .field-collection-item-field-collection-donor.clearfix .field.field--name-field-donor-name-first.field--type-text.field--label-hidden div.field__items div.field__item.even {
     float: left;
