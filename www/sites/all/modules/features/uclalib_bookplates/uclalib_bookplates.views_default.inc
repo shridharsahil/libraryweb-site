@@ -352,7 +352,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_bookplate_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_bookplate_image']['type'] = 'image_link_formatter';
   $handler->display->display_options['fields']['field_bookplate_image']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => '',
     'image_link' => 'content',
   );
   /* Field: Content: Nid */
