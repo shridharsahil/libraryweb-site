@@ -147,7 +147,7 @@ function site_alert_get_alert() {
       $output = '<div class=' .$level .'>';
       $output .= '<div class=text>';
 
-      $tags = array('a', 'em', 'strong');
+      $tags = array('a', 'br', 'em', 'strong');
       $output .= filter_xss($alert, $tags);
       $output .= '</div></div>';
 
