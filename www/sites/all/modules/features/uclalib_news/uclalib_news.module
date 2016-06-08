@@ -76,7 +76,7 @@ function uclalib_news_taxonomy_term_view($term, $view_mode, $langcode) {
         $blog_root_path = drupal_get_path_alias('taxonomy/term/'. $term->tid);
         // get cattag path via term ID of category or tag
         $cattag_tid = arg(4);
-        $cattag_path = drupal_get_path_alias('taxonomy/term/'. $cattag_tid;
+        $cattag_path = drupal_get_path_alias('taxonomy/term/'. $cattag_tid);
         // prepare the new alias
         $path = array(
           'source' => drupal_get_path_alias(),
