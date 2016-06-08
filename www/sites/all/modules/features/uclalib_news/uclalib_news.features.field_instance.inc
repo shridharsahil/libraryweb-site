@@ -122,7 +122,7 @@ function uclalib_news_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -236,7 +236,7 @@ function uclalib_news_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -286,10 +286,9 @@ function uclalib_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -335,10 +334,9 @@ function uclalib_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -393,7 +391,7 @@ function uclalib_news_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -480,7 +478,7 @@ function uclalib_news_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -539,7 +537,7 @@ function uclalib_news_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -596,7 +594,7 @@ function uclalib_news_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -645,9 +643,8 @@ function uclalib_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'event_listed_from_bean' => array(
