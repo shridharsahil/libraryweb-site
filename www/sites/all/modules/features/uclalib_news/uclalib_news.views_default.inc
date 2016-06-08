@@ -235,26 +235,33 @@ function uclalib_news_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
   $handler->display->display_options['arguments']['created_year']['table'] = 'node';
   $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
+  $handler->display->display_options['arguments']['created_year']['default_action'] = 'default';
   $handler->display->display_options['arguments']['created_year']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['created_year']['title'] = '%1 – %3 %2';
-  $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['created_year']['default_argument_options']['index'] = '4';
   $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['created_year']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['created_year']['validate']['type'] = 'numeric';
-  $handler->display->display_options['arguments']['created_year']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['created_year']['validate']['fail'] = 'ignore';
   /* Contextual filter: Content: Created month */
   $handler->display->display_options['arguments']['created_month']['id'] = 'created_month';
   $handler->display->display_options['arguments']['created_month']['table'] = 'node';
   $handler->display->display_options['arguments']['created_month']['field'] = 'created_month';
+  $handler->display->display_options['arguments']['created_month']['default_action'] = 'default';
   $handler->display->display_options['arguments']['created_month']['exception']['value'] = '';
   $handler->display->display_options['arguments']['created_month']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['created_month']['title'] = '%1 – %3 %2';
-  $handler->display->display_options['arguments']['created_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_month']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['created_month']['default_argument_options']['index'] = '5';
   $handler->display->display_options['arguments']['created_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_month']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['created_month']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['created_month']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['created_month']['validate']['type'] = 'numeric';
+  $handler->display->display_options['arguments']['created_month']['validate']['fail'] = 'ignore';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -311,6 +318,214 @@ function uclalib_news_views_default_views() {
       'label' => 'Content: Created month',
     ),
   );
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: Blog Content - Single */
+  $handler = $view->new_display('panel_pane', 'Blog Content - Single', 'panel_pane_1');
+  $handler->display->display_options['display_description'] = 'shows a single blog post';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'full';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Blog Name (field_news_blog_name) */
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['id'] = 'field_news_blog_name_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['table'] = 'field_data_field_news_blog_name';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['field'] = 'field_news_blog_name_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['title'] = '%1 Blog';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate_options']['vocabularies'] = array(
+    'blog_name' => 'blog_name',
+  );
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['fail'] = 'ignore';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['nid']['default_argument_options']['index'] = '4';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Created year */
+  $handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
+  $handler->display->display_options['arguments']['created_year']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
+  $handler->display->display_options['arguments']['created_year']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year']['title'] = '%1 – %3 %2';
+  $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['created_year']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['created_year']['validate']['type'] = 'numeric';
+  $handler->display->display_options['arguments']['created_year']['validate']['fail'] = 'empty';
+  /* Contextual filter: Content: Created month */
+  $handler->display->display_options['arguments']['created_month']['id'] = 'created_month';
+  $handler->display->display_options['arguments']['created_month']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_month']['field'] = 'created_month';
+  $handler->display->display_options['arguments']['created_month']['exception']['value'] = '';
+  $handler->display->display_options['arguments']['created_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_month']['title'] = '%1 – %3 %2';
+  $handler->display->display_options['arguments']['created_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_month']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_month']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['argument_input'] = array(
+    'field_news_blog_name_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Blog Name (field_news_blog_name)',
+    ),
+    'nid' => array(
+      'type' => 'user',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '1',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+    'created_year' => array(
+      'type' => 'none',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '1',
+      'fixed' => '',
+      'label' => 'Content: Created year',
+    ),
+    'created_month' => array(
+      'type' => 'none',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '2',
+      'fixed' => '',
+      'label' => 'Content: Created month',
+    ),
+  );
+
+  /* Display: Blog Content by category- Content pane */
+  $handler = $view->new_display('panel_pane', 'Blog Content by category- Content pane', 'blog_content_pane_cat');
+  $handler->display->display_options['display_description'] = 'shows blog posts of a specific category';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Blog Name (field_news_blog_name) */
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['id'] = 'field_news_blog_name_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['table'] = 'field_data_field_news_blog_name';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['field'] = 'field_news_blog_name_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['title'] = '%1 Blog';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate_options']['vocabularies'] = array(
+    'blog_name' => 'blog_name',
+  );
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['fail'] = 'ignore';
+  /* Contextual filter: Content: News Categories (field_news_categories) */
+  $handler->display->display_options['arguments']['field_news_categories_tid']['id'] = 'field_news_categories_tid';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['table'] = 'field_data_field_news_categories';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['field'] = 'field_news_categories_tid';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_news_categories_tid']['validate_options']['vocabularies'] = array(
+    'news_categories' => 'news_categories',
+  );
+  $handler->display->display_options['argument_input'] = array(
+    'field_news_blog_name_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Blog Name (field_news_blog_name)',
+    ),
+    'field_news_categories_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '1',
+      'fixed' => '',
+      'label' => 'Content: News Categories (field_news_categories)',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: Blog Content by tag- Content pane */
+  $handler = $view->new_display('panel_pane', 'Blog Content by tag- Content pane', 'blog_content_pane_tag');
+  $handler->display->display_options['display_description'] = 'shows blog posts of a specific tag';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Blog Name (field_news_blog_name) */
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['id'] = 'field_news_blog_name_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['table'] = 'field_data_field_news_blog_name';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['field'] = 'field_news_blog_name_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['title'] = '%1 Blog';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate_options']['vocabularies'] = array(
+    'blog_name' => 'blog_name',
+  );
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['fail'] = 'ignore';
+  /* Contextual filter: Content: News Tags (field_news_tags) */
+  $handler->display->display_options['arguments']['field_news_tags_tid']['id'] = 'field_news_tags_tid';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['table'] = 'field_data_field_news_tags';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['field'] = 'field_news_tags_tid';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_tags_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_news_tags_tid']['validate_options']['vocabularies'] = array(
+    'news_tags' => 'news_tags',
+  );
+  $handler->display->display_options['argument_input'] = array(
+    'field_news_blog_name_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Blog Name (field_news_blog_name)',
+    ),
+    'field_news_tags_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '1',
+      'fixed' => '',
+      'label' => 'Content: News Tags (field_news_tags)',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['blog_content'] = $view;
 
   $view = new view();
@@ -353,6 +568,11 @@ function uclalib_news_views_default_views() {
   $handler->display->display_options['arguments']['field_news_blog_name_tid']['field'] = 'field_news_blog_name_tid';
   $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_argument_options']['limit'] = TRUE;
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['default_argument_options']['vocabularies'] = array(
+    'blog_name' => 'blog_name',
+  );
   $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_news_blog_name_tid']['summary_options']['items_per_page'] = '25';
@@ -361,8 +581,7 @@ function uclalib_news_views_default_views() {
   $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate_options']['vocabularies'] = array(
     'blog_name' => 'blog_name',
   );
-  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['field_news_blog_name_tid']['validate']['fail'] = 'empty';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -387,20 +606,21 @@ function uclalib_news_views_default_views() {
 
   /* Display: Categories - Page */
   $handler = $view->new_display('page', 'Categories - Page', 'blog_terms_cats_page');
-  $handler->display->display_options['path'] = 'blog_terms_cats';
+  $handler->display->display_options['path'] = 'blog_terms_cats/%';
 
   /* Display: Categories - Content pane */
   $handler = $view->new_display('panel_pane', 'Categories - Content pane', 'blog_terms_cats_pane');
   $handler->display->display_options['argument_input'] = array(
     'field_news_blog_name_tid' => array(
       'type' => 'user',
-      'context' => 'entity:comment.author',
+      'context' => 'terms.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: Blog Name (field_news_blog_name)',
     ),
   );
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: Tags - Page */
   $handler = $view->new_display('page', 'Tags - Page', 'blog_terms_tags_page');
@@ -430,16 +650,40 @@ function uclalib_news_views_default_views() {
   $handler->display->display_options['fields']['field_news_tags']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_news_tags']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_news_tags']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Filter criterion: Content: News Tags (field_news_tags) */
+  $handler->display->display_options['filters']['field_news_tags_tid']['id'] = 'field_news_tags_tid';
+  $handler->display->display_options['filters']['field_news_tags_tid']['table'] = 'field_data_field_news_tags';
+  $handler->display->display_options['filters']['field_news_tags_tid']['field'] = 'field_news_tags_tid';
+  $handler->display->display_options['filters']['field_news_tags_tid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_news_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_news_tags_tid']['vocabulary'] = 'news_tags';
   $handler->display->display_options['argument_input'] = array(
     'field_news_blog_name_tid' => array(
       'type' => 'user',
-      'context' => 'entity:comment.author',
+      'context' => 'terms.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: Blog Name (field_news_blog_name)',
     ),
   );
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['blog_terms'] = $view;
 
   $view = new view();
