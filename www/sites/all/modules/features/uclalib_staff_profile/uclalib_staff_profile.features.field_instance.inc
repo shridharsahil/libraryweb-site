@@ -10,6 +10,55 @@
 function uclalib_staff_profile_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-staff_profile-field_ask_me_about'
+  $field_instances['node-staff_profile-field_ask_me_about'] = array(
+    'bundle' => 'staff_profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 13,
+      ),
+      'hours_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ask_me_about',
+    'label' => 'Ask Me About',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'node-staff_profile-field_location_social_links'
   $field_instances['node-staff_profile-field_location_social_links'] = array(
     'bundle' => 'staff_profile',
@@ -322,7 +371,7 @@ function uclalib_staff_profile_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'staff_profile_photo',
         ),
         'type' => 'image',
         'weight' => 9,
@@ -371,6 +420,8 @@ function uclalib_staff_profile_field_default_field_instances() {
           'fancybox__linkit_thumb' => 0,
           'fancybox__media_thumbnail' => 0,
           'fancybox__medium' => 0,
+          'fancybox__staff_profile_photo' => 0,
+          'fancybox__staff_profile_photo_thumbnail' => 0,
           'fancybox__thumbnail' => 0,
           'fancybox__thumbnail_crop' => 0,
           'fancybox__thumbnail_large' => 0,
@@ -387,6 +438,8 @@ function uclalib_staff_profile_field_default_field_instances() {
           'image_linkit_thumb' => 0,
           'image_media_thumbnail' => 0,
           'image_medium' => 0,
+          'image_staff_profile_photo' => 0,
+          'image_staff_profile_photo_thumbnail' => 0,
           'image_thumbnail' => 0,
           'image_thumbnail_crop' => 0,
           'image_thumbnail_large' => 0,
@@ -400,15 +453,19 @@ function uclalib_staff_profile_field_default_field_instances() {
         'insert_width' => '',
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 0,
+        'manualcrop_enable' => 1,
         'manualcrop_filter_insert' => 0,
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
         'manualcrop_keyboard' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_require_cropping' => array(
+          'staff_profile_photo' => 'staff_profile_photo',
+        ),
+        'manualcrop_styles_list' => array(
+          'staff_profile_photo' => 'staff_profile_photo',
+        ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
         'preview_image_style' => 'thumbnail',
