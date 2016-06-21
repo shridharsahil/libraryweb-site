@@ -1,3 +1,14 @@
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.node-type-bookplates.section-bookplates h1.panel-pane.pane-uclalib-title {
+    color: #666666;
+    font-family: "AkzidenzGrotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+}
 /* make all images the height of largest image*/
 .view-bookplates-landing-page.view-id-bookplates_landing_page.view-display-id-bookplates_landing_page table.views-view-grid tbody tr td.grid-3 div.views-field.views-field-field-bookplate-image {
     height: 331px;
@@ -7,6 +18,9 @@
     padding-right: 3px;
 }
 .section-collection-endowment-initiative table.views-view-grid {
+    border: 0;
+}
+.section-bookplates table.views-view-grid {
     border: 0;
 }
 span.views-field.views-field-field-bookplates-spak-code {
@@ -35,9 +49,25 @@ span.bookplates-donor-gift {
     vertical-align: top;
     padding-top:20px;
 }
-span.views-label.views-label-field-collection-donor, .node-type-bookplates.section-content .field__item.even {
+.node-type-bookplates.section-bookplates .pane-bookplates-single-node .field.field--name-field-donor-name-last {
+    clear: none;
     float: left;
-    padding: 0 3px 0 0;
+    padding: 0 0 0 3px;
+}
+.node-type-bookplates.section-bookplates .pane-bookplates-single-node .field.field--name-field-donor-name-first {
+    float: left;
+}
+.node-type-bookplates.section-bookplates .view.view-bookplates-single-node.view-id-bookplates_single_node .views-label-field-collection-donor {
+    clear: none;
+    float: left;
+}
+.node-type-bookplates.section-bookplates .view-id-bookplates_single_node .field.field--name-field-donor-name-first .field__items div.field__item.even {
+    padding: 0 0 0 3px;
+}
+.page-bookplates.section-bookplates .view.view-bookplates-landing-page .field__item.even {
+    clear: none;
+    float: left;
+    padding: 0 0 0 3px;
 }
 .page-bookplates.section-bookplates table.views-view-grid tbody tr td.grid-3 article.node.node--bookplates.node--bookplates-landing-page.node--bookplates--bookplates-landing-page {
     text-align: left;
@@ -131,18 +161,6 @@ span.views-label.views-label-field-donor-name-bookplates {
     padding-bottom: 20px;
     font-style: italic;
 }
-.node--bookplates.node--full.node--bookplates--full .donors-name:last-child:after {
-    content: ".";
-    margin-left:-3px;
-}
-.page-bookplates.section-bookplates .donors-name {
-    font-style: italic;
-    padding-bottom: 10px;
-}
-.donors-name:after {
-    content: ".";
-    margin-left:-3px;
-}
 .page-bookplates.section-bookplates .view-content header h2.node__title {
     margin-top: 0;
 }
@@ -180,7 +198,11 @@ span.views-label.views-label-field-donor-name-bookplates {
 .page-bookplates.section-bookplates hr {
      margin: 0 0 -50px;
  }
-.node-type-bookplates.section-content .views-field.views-field-field-bookplate-image .field-content img {
+.node-type-bookplates.section-bookplates .views-field.views-field-field-bookplate-image .field-content img {
+    float: left;
+    padding: 8px 20px 0 0;
+}
+.node-type-bookplates.section-bookplates .views-field.views-field-field-bookplate-image .field-content img {
     float: left;
     padding: 8px 20px 0 0;
 }
@@ -207,6 +229,15 @@ span.views-field.views-field-field-url-after-spak-code, span.views-field.views-f
 }
 .page-bookplates.section-bookplates .view-header p {
     display: none;
+}
+.page-taxonomy.page-taxonomy-term .view-content table.views-view-grid tbody tr td.grid-3 {
+    vertical-align: top;
+    text-align: left;
+}
+.page-taxonomy.page-taxonomy-term span.views-label.views-label-field-collection-donor {
+    clear: none;
+    float: left;
+    padding-right: 3px;
 }
 /*tables on taxonomy results page*/
 .section-collection-endowment-initiative .view-content table.views-view-grid tbody {

@@ -188,35 +188,35 @@ function uclalib_bookplates_default_page_manager_handlers() {
     $display->content['new-724bbc15-6ae2-4aac-86be-b4ea82ffc408'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-724bbc15-6ae2-4aac-86be-b4ea82ffc408';
     $pane = new stdClass();
-    $pane->pid = 'new-3cb57e0e-d422-4efe-9e6a-e49ffbc08671';
+    $pane->pid = 'new-d10758e4-d6a2-486a-aa43-6e4a135cc5aa';
     $pane->panel = 'top';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Back to Bookplates breadcrumbs',
-      'title' => '',
-      'body' => '<p><a href="/bookplates">&lt; All Bookplates</a></p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
-      'name' => 'bookplates_breadcrumbs',
+      'link' => 0,
+      'markup' => 'h1',
+      'id' => '',
+      'class' => 'panel-pane pane-uclalib-title',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'default',
     );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '3cb57e0e-d422-4efe-9e6a-e49ffbc08671';
-    $display->content['new-3cb57e0e-d422-4efe-9e6a-e49ffbc08671'] = $pane;
-    $display->panels['top'][0] = 'new-3cb57e0e-d422-4efe-9e6a-e49ffbc08671';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3cb57e0e-d422-4efe-9e6a-e49ffbc08671';
+    $pane->uuid = 'd10758e4-d6a2-486a-aa43-6e4a135cc5aa';
+    $display->content['new-d10758e4-d6a2-486a-aa43-6e4a135cc5aa'] = $pane;
+    $display->panels['top'][0] = 'new-d10758e4-d6a2-486a-aa43-6e4a135cc5aa';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view__panel_context_51f84529-a3a2-4b4e-b6d8-31e6044daae0'] = $handler;
 
@@ -343,31 +343,6 @@ function uclalib_bookplates_default_page_manager_handlers() {
     $pane->uuid = 'dab89867-e312-47cb-bc60-30803c0afc09';
     $display->content['new-dab89867-e312-47cb-bc60-30803c0afc09'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-dab89867-e312-47cb-bc60-30803c0afc09';
-    $pane = new stdClass();
-    $pane->pid = 'new-1d9d4c21-1d76-47a8-af9b-5d1871fa3879';
-    $pane->panel = 'top';
-    $pane->type = 'custom';
-    $pane->subtype = 'bookplates_breadcrumbs';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '1d9d4c21-1d76-47a8-af9b-5d1871fa3879';
-    $display->content['new-1d9d4c21-1d76-47a8-af9b-5d1871fa3879'] = $pane;
-    $display->panels['top'][0] = 'new-1d9d4c21-1d76-47a8-af9b-5d1871fa3879';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-dab89867-e312-47cb-bc60-30803c0afc09';
   $handler->conf['display'] = $display;

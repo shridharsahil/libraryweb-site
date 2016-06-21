@@ -6,7 +6,6 @@
 
 include_once 'uclalib_bookplates.features.inc';
 
-
 /**
  * Implements hook_ctools_plugin_directory()
  */
@@ -53,18 +52,19 @@ function uclalib_bookplates_theme($existing, $type, $theme, $path) {
   );
 }
 
-
 /**
  * Implements hook_form_alter().
  */
 function uclalib_bookplates_form_alter(&$form, &$form_state, $form_id) {
-
-  if ($form_id == "views_exposed_form") {// not to be changed form_id
-    if (isset($form['search_api_views_fulltext'])) { //title is name attribute value of input
-      $form['search_api_views_fulltext']['#attributes'] = array(
-        'placeholder'
-        => array(t('Search by Donor Name'))
-      );
+  if ($form_id == 'views_exposed_form') {
+    $view = $form_state['view'];
+    if ($view->name == 'bookplates_full_content') {
+      if (isset($form['search_api_views_fulltext'])) {
+        $form['search_api_views_fulltext']['#attributes'] = array(
+          'placeholder'
+          => array(t('Search by Donor Name'))
+        );
+      }
     }
   }
 }
@@ -127,8 +127,8 @@ function uclalib_bookplates_menu() {
     'access arguments' => array('administer site configuration'),
     'type' => MENU_NORMAL_ITEM,
   );
-
   return $items;
+
 }
 
 /**
