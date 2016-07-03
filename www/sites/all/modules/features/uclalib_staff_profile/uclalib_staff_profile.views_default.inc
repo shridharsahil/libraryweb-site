@@ -171,7 +171,7 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['field_staff_image_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_staff_image_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_staff_image_thumbnail']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'staff_profile_photo',
     'image_link' => 'content',
   );
   /* Field: Staff Full Name (First Last) */
