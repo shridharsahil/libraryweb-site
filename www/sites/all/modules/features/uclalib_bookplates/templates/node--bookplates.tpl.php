@@ -97,7 +97,7 @@
   </div>
 <?php else: ?>
 <!-- regular node view template HTML here -->
-<div class="donor-name">
+
 <?php if (!empty($title_prefix) || !empty($title_suffix) || !$page): ?>
   <header>
   <?php print render($title_prefix); ?>
@@ -106,7 +106,7 @@
 <?php endif; ?>
   <?php print render($title_suffix); ?>
   </header>
-  </div>
+
   </div>
   <?php endif; ?>
   </article>

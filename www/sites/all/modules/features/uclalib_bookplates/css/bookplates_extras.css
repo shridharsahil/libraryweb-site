@@ -3,6 +3,23 @@
     display: table;
     clear: both;
 }
+.node-type-bookplates.section-bookplates .views-field-field-collection-donor.bookplates-donor-gift span.field-content {
+    padding-left: 3px;
+}
+.page-bookplates.section-bookplates span.views-field.views-field-field-bookplate-description span.field-content p {
+    margin-top: -10px;
+}
+.node-type-bookplates.section-bookplates .pane-bookplates-single-node .views-field-field-bookplates-subject-area-1 span.views-label.views-label-field-bookplates-subject-area-1 {
+    margin-top: 15px;
+}
+.page-bookplates.section-bookplates .views-field.views-field-field-bookplates-spak-code span.field-content a {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.page-bookplates.section-bookplates .pane-bookplates-single-node .views-field-field-collection-donor.bookplates-donor-gift span.field-content {
+    padding-left:3px;
+}
 .node-type-bookplates.section-bookplates h1.panel-pane.pane-uclalib-title {
     color: #666666;
     font-family: "AkzidenzGrotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -26,9 +43,15 @@
 span.views-field.views-field-field-bookplates-spak-code {
     line-height: 2;
 }
-span.bookplates-donor-gift {
-    font-style: italic;
+.node-type-bookplates.section-bookplates .pane-bookplates-single-node .view.view-bookplates-single-node span.views-field.views-field-field-collection-donor.bookplates-donor-gift {    font-family: AkzidenzGrotesk, sans-serif;
+    font-size: 19px;
+    font-weight: 100;
     text-align: left;
+}
+.page-taxonomy.page-taxonomy-term .view-content table.views-view-grid tbody tr td.grid-3 span.views-field.views-field-field-collection-donor.bookplates-donor-gift {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
 }
 .node--bookplates--bookplates-landing-page header h2.node__title {
     font-size: 16px;
@@ -49,6 +72,11 @@ span.bookplates-donor-gift {
     vertical-align: top;
     padding-top:20px;
 }
+.node-type-bookplates.section-bookplates span.views-field.views-field-field-collection-donor.bookplates-donor-gift span.field-content .field-collection-item-field-collection-donor.clearfix {
+    display: block;
+    clear: none;
+    float: left;
+}
 .node-type-bookplates.section-bookplates .pane-bookplates-single-node .field.field--name-field-donor-name-last {
     clear: none;
     float: left;
@@ -61,7 +89,7 @@ span.bookplates-donor-gift {
     clear: none;
     float: left;
 }
-.node-type-bookplates.section-bookplates .view-id-bookplates_single_node .field.field--name-field-donor-name-first .field__items div.field__item.even {
+.node-type-bookplates.section-bookplates .view-id-bookplates_single_node .field.field--name-field-donor-name-first .field__items .field__item.even {
     padding: 0 0 0 3px;
 }
 .page-bookplates.section-bookplates .view.view-bookplates-landing-page .field__item.even {

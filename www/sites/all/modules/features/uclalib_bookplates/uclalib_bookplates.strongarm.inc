@@ -154,7 +154,7 @@ function uclalib_bookplates_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_bookplates';
   $strongarm->value = array(
-    0 => 'menu-bookplates-breadcrumbs',
+    0 => 'menu-bookplates',
   );
   $export['menu_options_bookplates'] = $strongarm;
 
@@ -162,7 +162,7 @@ function uclalib_bookplates_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_bookplates';
-  $strongarm->value = 'menu-bookplates-breadcrumbs:0';
+  $strongarm->value = 'menu-bookplates:0';
   $export['menu_parent_bookplates'] = $strongarm;
 
   $strongarm = new stdClass();
