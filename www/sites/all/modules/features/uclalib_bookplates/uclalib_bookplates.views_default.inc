@@ -83,12 +83,29 @@ function uclalib_bookplates_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content Pane', 'bookplates_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['display_description'] = 'Used in solr search';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'entity';
-  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'title' => 'title',
+    'field_bookplate_description' => 'field_bookplate_description',
+  );
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
@@ -100,6 +117,44 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'No results found for this search.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_bookplates';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Content: Bookplate Description */
+  $handler->display->display_options['fields']['field_bookplate_description']['id'] = 'field_bookplate_description';
+  $handler->display->display_options['fields']['field_bookplate_description']['table'] = 'search_api_index_bookplates';
+  $handler->display->display_options['fields']['field_bookplate_description']['field'] = 'field_bookplate_description';
+  $handler->display->display_options['fields']['field_bookplate_description']['label'] = '';
+  $handler->display->display_options['fields']['field_bookplate_description']['alter']['max_length'] = '250';
+  $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_text'] = 'Read more about this endowment';
+  $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_path'] = '[title]';
+  $handler->display->display_options['fields']['field_bookplate_description']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_bookplate_description']['element_label_colon'] = FALSE;
+  /* Field: Indexed Content: Subject Area(s) */
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['id'] = 'field_bookplates_subject_area_1';
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['table'] = 'search_api_index_bookplates';
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['field'] = 'field_bookplates_subject_area';
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['label'] = '';
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['list']['separator'] = '&nbsp;|&nbsp;';
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['bypass_access'] = 1;
+  /* Field: Indexed Content: Spak Code */
+  $handler->display->display_options['fields']['field_bookplates_spak_code']['id'] = 'field_bookplates_spak_code';
+  $handler->display->display_options['fields']['field_bookplates_spak_code']['table'] = 'search_api_index_bookplates';
+  $handler->display->display_options['fields']['field_bookplates_spak_code']['field'] = 'field_bookplates_spak_code';
+  $handler->display->display_options['fields']['field_bookplates_spak_code']['label'] = '';
+  $handler->display->display_options['fields']['field_bookplates_spak_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bookplates_spak_code']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_bookplates_spak_code']['group_column'] = '';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Indexed Content: Node ID */
   $handler->display->display_options['sorts']['nid']['id'] = 'nid';
@@ -140,13 +195,13 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['filters']['field_collection_donor']['id'] = 'field_collection_donor';
   $handler->display->display_options['filters']['field_collection_donor']['table'] = 'search_api_index_bookplates';
   $handler->display->display_options['filters']['field_collection_donor']['field'] = 'field_collection_donor';
-  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
   $handler->display->display_options['allow']['link_to_view'] = 0;
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['link_to_view'] = '0';
@@ -306,7 +361,6 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '%1';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   /* Relationship: Content: Donor (field_collection_donor) */

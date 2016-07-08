@@ -68,37 +68,6 @@ function uclalib_bookplates_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-53057e06-2bd4-498e-aabb-7033213d00e0';
-    $pane->panel = 'main';
-    $pane->type = 'node_content';
-    $pane->subtype = 'node_content';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'links' => 0,
-      'no_extras' => 1,
-      'override_title' => 0,
-      'override_title_text' => '',
-      'identifier' => '',
-      'link' => 0,
-      'leave_node_title' => 1,
-      'build_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'default',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '53057e06-2bd4-498e-aabb-7033213d00e0';
-    $display->content['new-53057e06-2bd4-498e-aabb-7033213d00e0'] = $pane;
-    $display->panels['main'][0] = 'new-53057e06-2bd4-498e-aabb-7033213d00e0';
-    $pane = new stdClass();
     $pane->pid = 'new-e545e4a1-efc6-4acc-a2d2-4186256789db';
     $pane->panel = 'main';
     $pane->type = 'views';
@@ -128,39 +97,11 @@ function uclalib_bookplates_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'e545e4a1-efc6-4acc-a2d2-4186256789db';
     $display->content['new-e545e4a1-efc6-4acc-a2d2-4186256789db'] = $pane;
-    $display->panels['main'][1] = 'new-e545e4a1-efc6-4acc-a2d2-4186256789db';
-    $pane = new stdClass();
-    $pane->pid = 'new-db284ac2-8c85-4c1a-861e-afba19145998';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'bookplates_subject_areas-panel_pane_1';
-    $pane->shown = FALSE;
-    $pane->access = array(
-      'plugins' => array(),
-    );
-    $pane->configuration = array(
-      'arguments' => array(
-        'nid' => '%taxonomy_term:name',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Collection Endowments',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = 'db284ac2-8c85-4c1a-861e-afba19145998';
-    $display->content['new-db284ac2-8c85-4c1a-861e-afba19145998'] = $pane;
-    $display->panels['main'][2] = 'new-db284ac2-8c85-4c1a-861e-afba19145998';
+    $display->panels['main'][0] = 'new-e545e4a1-efc6-4acc-a2d2-4186256789db';
     $pane = new stdClass();
     $pane->pid = 'new-724bbc15-6ae2-4aac-86be-b4ea82ffc408';
     $pane->panel = 'sidebar_left';
@@ -188,33 +129,31 @@ function uclalib_bookplates_default_page_manager_handlers() {
     $display->content['new-724bbc15-6ae2-4aac-86be-b4ea82ffc408'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-724bbc15-6ae2-4aac-86be-b4ea82ffc408';
     $pane = new stdClass();
-    $pane->pid = 'new-d10758e4-d6a2-486a-aa43-6e4a135cc5aa';
+    $pane->pid = 'new-2e3ef122-2a25-4e4f-8546-1aecdc1bfa7d';
     $pane->panel = 'top';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
+    $pane->type = 'uclalib_title';
+    $pane->subtype = 'uclalib_title';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h1',
-      'id' => '',
-      'class' => 'panel-pane pane-uclalib-title',
-      'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',
-      'override_title_heading' => 'h2',
+      'override_title_heading' => 'h1',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'uclalib-nav-breadcrumb',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'd10758e4-d6a2-486a-aa43-6e4a135cc5aa';
-    $display->content['new-d10758e4-d6a2-486a-aa43-6e4a135cc5aa'] = $pane;
-    $display->panels['top'][0] = 'new-d10758e4-d6a2-486a-aa43-6e4a135cc5aa';
+    $pane->uuid = '2e3ef122-2a25-4e4f-8546-1aecdc1bfa7d';
+    $display->content['new-2e3ef122-2a25-4e4f-8546-1aecdc1bfa7d'] = $pane;
+    $display->panels['top'][0] = 'new-2e3ef122-2a25-4e4f-8546-1aecdc1bfa7d';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -343,7 +282,30 @@ function uclalib_bookplates_default_page_manager_handlers() {
     $pane->uuid = 'dab89867-e312-47cb-bc60-30803c0afc09';
     $display->content['new-dab89867-e312-47cb-bc60-30803c0afc09'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-dab89867-e312-47cb-bc60-30803c0afc09';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane = new stdClass();
+    $pane->pid = 'new-0da855ce-d6c6-4e5c-8310-bfc0df9bcd79';
+    $pane->panel = 'top';
+    $pane->type = 'uclalib_title';
+    $pane->subtype = 'uclalib_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '%title',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '0da855ce-d6c6-4e5c-8310-bfc0df9bcd79';
+    $display->content['new-0da855ce-d6c6-4e5c-8310-bfc0df9bcd79'] = $pane;
+    $display->panels['top'][0] = 'new-0da855ce-d6c6-4e5c-8310-bfc0df9bcd79';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-dab89867-e312-47cb-bc60-30803c0afc09';
   $handler->conf['display'] = $display;
   $export['term_view__panel_context_106d1ac8-d0a0-46a9-a879-67d3e65c2b65'] = $handler;
