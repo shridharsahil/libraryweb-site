@@ -1,3 +1,16 @@
+/*directory view*/
+.page-bookplates.page-bookplates-donor-directory .pane-bookplates-donor-directory .attachment.attachment-before {
+    font-size: 18px;
+    padding: 20px 0 20px 8px;
+}
+.page-bookplates.page-bookplates-donor-directory table td + td {
+    text-align: left;
+}
+.page-bookplates.page-bookplates-donor-directory table td span.field-content {
+    font-family: "AkzidenzGrotesk", sans-serif;
+    font-size: 19px;
+    font-weight: 100;
+}
 .clearfix:after {
     content: "";
     display: table;
@@ -28,7 +41,13 @@
 }
 /* make all images the height of largest image*/
 .view-bookplates-landing-page.view-id-bookplates_landing_page.view-display-id-bookplates_landing_page table.views-view-grid tbody tr td.grid-3 div.views-field.views-field-field-bookplate-image {
-    height: 331px;
+    /*height: 331px;*/
+}
+.page-bookplates.section-bookplates span.views-field.views-field-field-collection-donor {
+
+}
+.page-bookplates.section-bookplates table.views-view-grid tbody tr td.grid-3 div.views-field.views-field-field-bookplate-image div.field-content a img {
+
 }
 .page-bookplates.section-bookplates .field-collection-item-field-collection-donor.clearfix .field.field--name-field-donor-name-first.field--type-text.field--label-hidden div.field__items div.field__item.even {
     float: left;
@@ -67,6 +86,9 @@ span.views-field.views-field-field-bookplates-spak-code {
 .page-bookplates.section-bookplates .views-view-grid {
     table-layout: fixed;
     border: none;
+}
+.page-bookplates.section-bookplates table.views-view-grid {
+    margin-top: -10px;
 }
 .page-bookplates.section-bookplates td.grid-3 {
     vertical-align: top;
@@ -202,9 +224,6 @@ span.views-label.views-label-field-donor-name-bookplates {
 .page-bookplates.section-bookplates .panel-pane.pane-custom.pane-1 {
     padding: 0;
     margin-top: -5px;
-}
-.page-bookplates.section-bookplates table.views-view-grid {
-    margin-top: -10px;
 }
 .page-bookplates.section-bookplates .l-main {
     padding-top: 1px;
