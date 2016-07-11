@@ -11,6 +11,294 @@ function uclalib_bookplates_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'bookplates_donor_directory';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'field_collection_item';
+  $view->human_name = 'Bookplates Donor Directory CP';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Bookplates Donor Directory';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  /* Field: Field collection item: First Name */
+  $handler->display->display_options['fields']['field_donor_name_first']['id'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['field'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_first']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_first']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Last Name */
+  $handler->display->display_options['fields']['field_donor_name_last']['id'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['field'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_last']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_last']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Field collection item ID */
+  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['label'] = '';
+  $handler->display->display_options['fields']['item_id']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['item_id']['alter']['text'] = '[field_donor_name_first] [field_donor_name_last]';
+  $handler->display->display_options['fields']['item_id']['element_label_colon'] = FALSE;
+  /* Sort criterion: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['sorts']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['sorts']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['sorts']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  /* Contextual filter: Field collection item: First Name (field_donor_name_first) */
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['id'] = 'field_donor_name_first_value';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['field'] = 'field_donor_name_first_value';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['glossary'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['limit'] = '1';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['case'] = 'upper';
+  /* Contextual filter: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['glossary'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['limit'] = '1';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['case'] = 'upper';
+  /* Filter criterion: Field collection item: First Name (field_donor_name_first) */
+  $handler->display->display_options['filters']['field_donor_name_first_value']['id'] = 'field_donor_name_first_value';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['field'] = 'field_donor_name_first_value';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['operator'] = 'not empty';
+  /* Filter criterion: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['filters']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['operator'] = 'not empty';
+
+  /* Display: Bookplates Donor DIrectory */
+  $handler = $view->new_display('panel_pane', 'Bookplates Donor DIrectory', 'panel_pane_1');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field collection item: First Name (field_donor_name_first) */
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['id'] = 'field_donor_name_first_value';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['field'] = 'field_donor_name_first_value';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['glossary'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['limit'] = '0';
+  $handler->display->display_options['arguments']['field_donor_name_first_value']['case'] = 'upper';
+  /* Contextual filter: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['glossary'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['limit'] = '1';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['case'] = 'upper';
+  /* Contextual filter: Field collection item: Field name */
+  $handler->display->display_options['arguments']['field_name']['id'] = 'field_name';
+  $handler->display->display_options['arguments']['field_name']['table'] = 'field_collection_item';
+  $handler->display->display_options['arguments']['field_name']['field'] = 'field_name';
+  $handler->display->display_options['arguments']['field_name']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_name']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_name']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_name']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_name']['limit'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: Attachment */
+  $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_donor_name_first' => 'field_donor_name_first',
+    'field_donor_name_last' => 'field_donor_name_last',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' | ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Entity: Rendered entity */
+  $handler->display->display_options['header']['entity']['id'] = 'entity';
+  $handler->display->display_options['header']['entity']['table'] = 'entity__global';
+  $handler->display->display_options['header']['entity']['field'] = 'entity';
+  $handler->display->display_options['header']['entity']['entity_type'] = 'field_collection_item';
+  $handler->display->display_options['header']['entity']['view_mode'] = 'token';
+  $handler->display->display_options['header']['entity']['bypass_access'] = 0;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field collection item: First Name */
+  $handler->display->display_options['fields']['field_donor_name_first']['id'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['field'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_first']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_first']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Last Name */
+  $handler->display->display_options['fields']['field_donor_name_last']['id'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['field'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_last']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_last']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Field collection item ID */
+  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['label'] = '';
+  $handler->display->display_options['fields']['item_id']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['item_id']['alter']['text'] = '[field_donor_name_first] [field_donor_name_last]';
+  $handler->display->display_options['fields']['item_id']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['item_id']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['item_id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['default_action'] = 'summary';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['format'] = 'unformatted_summary';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary_options']['count'] = FALSE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary_options']['inline'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary_options']['separator'] = ' | ';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['glossary'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['limit'] = '1';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['case'] = 'upper';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['transform_dash'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['filters']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['group'] = 1;
+  /* Filter criterion: Field collection item: First Name (field_donor_name_first) */
+  $handler->display->display_options['filters']['field_donor_name_first_value']['id'] = 'field_donor_name_first_value';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['field'] = 'field_donor_name_first_value';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['group'] = 1;
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'panel_pane_1' => 0,
+  );
+  $handler->display->display_options['inherit_arguments'] = FALSE;
+  $handler->display->display_options['inherit_pager'] = TRUE;
+
+  /* Display: BD 2 */
+  $handler = $view->new_display('entityreference', 'BD 2', 'entityreference_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'entityreference_style';
+  $handler->display->display_options['style_options']['search_fields'] = array(
+    'field_donor_name_last' => 'field_donor_name_last',
+    'field_donor_name_first' => 0,
+    'item_id' => 0,
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entityreference_fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_donor_name_first' => 'field_donor_name_first',
+    'field_donor_name_last' => 'field_donor_name_last',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+  /* Display: BD 3 */
+  $handler = $view->new_display('page', 'BD 3', 'page');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['alignment'] = 'vertical';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_donor_name_first' => 'field_donor_name_first',
+    'field_donor_name_last' => 'field_donor_name_last',
+  );
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['glossary'] = TRUE;
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['limit'] = '1';
+  $handler->display->display_options['arguments']['field_donor_name_last_value']['case'] = 'upper';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Field collection item: Last Name (field_donor_name_last) */
+  $handler->display->display_options['filters']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_donor_name_last_value']['group'] = 1;
+  /* Filter criterion: Field collection item: First Name (field_donor_name_first) */
+  $handler->display->display_options['filters']['field_donor_name_first_value']['id'] = 'field_donor_name_first_value';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['field'] = 'field_donor_name_first_value';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_donor_name_first_value']['group'] = 1;
+  $handler->display->display_options['path'] = 'donor-directory';
+  $export['bookplates_donor_directory'] = $view;
+
+  $view = new view();
   $view->name = 'bookplates_full_content';
   $view->description = '';
   $view->tag = 'default';
@@ -501,7 +789,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['max_length'] = '38';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '45';
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Bookplate Image */
@@ -730,6 +1018,8 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_collection_donor']['table'] = 'field_data_field_collection_donor';
   $handler->display->display_options['fields']['field_collection_donor']['field'] = 'field_collection_donor';
   $handler->display->display_options['fields']['field_collection_donor']['label'] = 'Make possible by a gift from ';
+  $handler->display->display_options['fields']['field_collection_donor']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_collection_donor']['alter']['text'] = '[field_donor_name_first] [field_donor_name_last]';
   $handler->display->display_options['fields']['field_collection_donor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_class'] = 'bookplates-donor-gift';

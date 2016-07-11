@@ -64,7 +64,7 @@ function uclalib_bookplates_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = 'Collection Endowments';
   $display->uuid = '2b8a5ef6-b358-452c-a9ce-94c35f66f55f';
-  $display->window_title = '';
+  $display->window_title = 'UCLA Library Bookplates | %node:title';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -221,7 +221,7 @@ function uclalib_bookplates_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = 'Collection Endowments';
   $display->uuid = '8f7910d2-1e76-4f28-a45d-4619c4a47230';
-  $display->window_title = '';
+  $display->window_title = 'UCLA Library Bookplates | %node:title';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -390,7 +390,7 @@ function uclalib_bookplates_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Collection Endowments';
   $display->uuid = '5730a645-80d8-4490-9906-bd90d72db03d';
-  $display->window_title = '';
+  $display->window_title = 'Welcome to UCLA Library Bookplates';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -556,6 +556,29 @@ function uclalib_bookplates_default_page_manager_pages() {
     $display->content['new-cb453f78-d7b0-4208-a942-3be84ec96b8a'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-cb453f78-d7b0-4208-a942-3be84ec96b8a';
     $pane = new stdClass();
+    $pane->pid = 'new-9068172c-002e-4599-b8e1-2ff55ca0b795';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'bean-bookplates-list-of-donors-link';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => 'List of Donors',
+      'override_title_heading' => 'h3',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '9068172c-002e-4599-b8e1-2ff55ca0b795';
+    $display->content['new-9068172c-002e-4599-b8e1-2ff55ca0b795'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-9068172c-002e-4599-b8e1-2ff55ca0b795';
+    $pane = new stdClass();
     $pane->pid = 'new-3c2cb5d8-ecbf-467b-962e-d13e769749ab';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
@@ -580,11 +603,11 @@ function uclalib_bookplates_default_page_manager_pages() {
       'css_class' => 'sidebar-options',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '3c2cb5d8-ecbf-467b-962e-d13e769749ab';
     $display->content['new-3c2cb5d8-ecbf-467b-962e-d13e769749ab'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-3c2cb5d8-ecbf-467b-962e-d13e769749ab';
+    $display->panels['sidebar_left'][2] = 'new-3c2cb5d8-ecbf-467b-962e-d13e769749ab';
     $pane = new stdClass();
     $pane->pid = 'new-5287f64b-5199-4460-ba35-59d923522122';
     $pane->panel = 'top';
