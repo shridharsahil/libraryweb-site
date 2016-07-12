@@ -8,8 +8,12 @@
 }
 .page-bookplates.page-bookplates-donor-directory table td span.field-content {
     font-family: "AkzidenzGrotesk", sans-serif;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 100;
+}
+.page-bookplates.page-bookplates-donor-directory tr > td {
+    padding-bottom: 20px;
+    padding-right: 30px;
 }
 .clearfix:after {
     content: "";
@@ -48,6 +52,9 @@
 }
 .page-bookplates.section-bookplates table.views-view-grid tbody tr td.grid-3 div.views-field.views-field-field-bookplate-image div.field-content a img {
 
+}
+.page-bookplates.page-bookplates-donor-directory.page-bookplates-donor-directory-all table.views-view-grid tbody {
+    vertical-align: text-top;
 }
 .page-bookplates.section-bookplates .field-collection-item-field-collection-donor.clearfix .field.field--name-field-donor-name-first.field--type-text.field--label-hidden div.field__items div.field__item.even {
     float: left;

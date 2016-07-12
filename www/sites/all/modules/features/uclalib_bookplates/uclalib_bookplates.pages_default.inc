@@ -556,16 +556,16 @@ function uclalib_bookplates_default_page_manager_pages() {
     $display->content['new-cb453f78-d7b0-4208-a942-3be84ec96b8a'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-cb453f78-d7b0-4208-a942-3be84ec96b8a';
     $pane = new stdClass();
-    $pane->pid = 'new-9068172c-002e-4599-b8e1-2ff55ca0b795';
+    $pane->pid = 'new-72ae2c7d-e5a3-4897-9bf4-a2b1417a3687';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'bean-bookplates-list-of-donors-link';
+    $pane->subtype = 'bean-donor-directory';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 0,
-      'override_title_text' => 'List of Donors',
-      'override_title_heading' => 'h3',
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -575,9 +575,9 @@ function uclalib_bookplates_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '9068172c-002e-4599-b8e1-2ff55ca0b795';
-    $display->content['new-9068172c-002e-4599-b8e1-2ff55ca0b795'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-9068172c-002e-4599-b8e1-2ff55ca0b795';
+    $pane->uuid = '72ae2c7d-e5a3-4897-9bf4-a2b1417a3687';
+    $display->content['new-72ae2c7d-e5a3-4897-9bf4-a2b1417a3687'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-72ae2c7d-e5a3-4897-9bf4-a2b1417a3687';
     $pane = new stdClass();
     $pane->pid = 'new-3c2cb5d8-ecbf-467b-962e-d13e769749ab';
     $pane->panel = 'sidebar_left';
@@ -636,6 +636,150 @@ function uclalib_bookplates_default_page_manager_pages() {
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['bookplates'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'bookplates_donors_a_z';
+  $page->task = 'page';
+  $page->admin_title = 'Bookplates Donors A-Z';
+  $page->admin_description = '';
+  $page->path = 'bookplates/donor-directory';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_bookplates_donors_a_z__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'bookplates_donors_a_z';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+  );
+  $display = new panels_display();
+  $display->layout = 'sidebar-left';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'sidebar_left' => NULL,
+      'main' => NULL,
+      'below_main_left' => NULL,
+      'below_main_right' => NULL,
+      'secondary' => NULL,
+      'below_secondary_left' => NULL,
+      'below_secondary_right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'b7ff1956-5887-400b-a13c-84383a1bc08b';
+  $display->window_title = 'UCLA Library Bookplates | %node:title';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-563dbefd-be97-4867-8a6b-a514f75a199c';
+    $pane->panel = 'main';
+    $pane->type = 'views';
+    $pane->subtype = 'bookplates_donor_directory';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '100',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 1,
+      'link_to_view' => 0,
+      'args' => '%N',
+      'url' => 'bookplates/donor-directory/all',
+      'display' => 'page',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '563dbefd-be97-4867-8a6b-a514f75a199c';
+    $display->content['new-563dbefd-be97-4867-8a6b-a514f75a199c'] = $pane;
+    $display->panels['main'][0] = 'new-563dbefd-be97-4867-8a6b-a514f75a199c';
+    $pane = new stdClass();
+    $pane->pid = 'new-5cd15459-bf86-46dd-b6a2-0d5704aeb654';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'uclalib_nav';
+    $pane->subtype = 'uclalib_nav';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '5cd15459-bf86-46dd-b6a2-0d5704aeb654';
+    $display->content['new-5cd15459-bf86-46dd-b6a2-0d5704aeb654'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-5cd15459-bf86-46dd-b6a2-0d5704aeb654';
+    $pane = new stdClass();
+    $pane->pid = 'new-ee1d4685-0a6c-4b3c-acff-08816f81b7e2';
+    $pane->panel = 'top';
+    $pane->type = 'uclalib_title';
+    $pane->subtype = 'uclalib_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'ee1d4685-0a6c-4b3c-acff-08816f81b7e2';
+    $display->content['new-ee1d4685-0a6c-4b3c-acff-08816f81b7e2'] = $pane;
+    $display->panels['top'][0] = 'new-ee1d4685-0a6c-4b3c-acff-08816f81b7e2';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-ee1d4685-0a6c-4b3c-acff-08816f81b7e2';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['bookplates_donors_a_z'] = $page;
 
   return $pages;
 
