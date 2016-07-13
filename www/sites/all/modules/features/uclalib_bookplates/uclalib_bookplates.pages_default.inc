@@ -691,7 +691,7 @@ function uclalib_bookplates_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'b7ff1956-5887-400b-a13c-84383a1bc08b';
-  $display->window_title = 'UCLA Library Bookplates | %node:title';
+  $display->window_title = 'UCLA Library Bookplates | List of Donors';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -712,7 +712,7 @@ function uclalib_bookplates_default_page_manager_pages() {
       'panel_args' => 1,
       'link_to_view' => 0,
       'args' => '%N',
-      'url' => 'bookplates/donor-directory/all',
+      'url' => 'bookplates/donor-directory',
       'display' => 'page',
       'override_title' => 1,
       'override_title_text' => '',

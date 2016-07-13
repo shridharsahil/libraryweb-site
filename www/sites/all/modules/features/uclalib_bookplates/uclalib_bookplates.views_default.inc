@@ -670,8 +670,6 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_collection_donor']['table'] = 'field_data_field_collection_donor';
   $handler->display->display_options['fields']['field_collection_donor']['field'] = 'field_collection_donor';
   $handler->display->display_options['fields']['field_collection_donor']['label'] = 'Made possible by a gift from ';
-  $handler->display->display_options['fields']['field_collection_donor']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_collection_donor']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_collection_donor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_collection_donor']['element_wrapper_class'] = 'bookplates-donor-gift';
@@ -714,9 +712,8 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['path'] = '[nid]';
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['max_length'] = '300';
-  $handler->display->display_options['fields']['field_bookplate_description']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link'] = TRUE;
-  $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_text'] = 'Read more about this endowment...';
+  $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_text'] = 'Read more about this endowment';
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_bookplate_description']['element_type'] = 'div';
