@@ -1,7 +1,7 @@
 name = UCLALIB Bookplates
 core = 7.x
 package = UCLALIB
-version = 7.x-2.0-beta10
+version = 7.x-2.0-beta11
 project = uclalib_bookplates
 dependencies[] = advanced_link
 dependencies[] = autocomplete_deluxe
@@ -31,7 +31,6 @@ dependencies[] = uclalib_staff_profile
 dependencies[] = view_unpublished
 dependencies[] = views
 dependencies[] = views_content
-stylesheets[all][] = css/bookplates_extras.css
 features[ctools][] = ctools_custom_content:ctools_content:1
 features[ctools][] = facetapi:facetapi_defaults:1
 features[ctools][] = field_group:field_group:1
