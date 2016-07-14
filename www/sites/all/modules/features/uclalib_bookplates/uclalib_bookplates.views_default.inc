@@ -1014,7 +1014,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_collection_donor']['id'] = 'field_collection_donor';
   $handler->display->display_options['fields']['field_collection_donor']['table'] = 'field_data_field_collection_donor';
   $handler->display->display_options['fields']['field_collection_donor']['field'] = 'field_collection_donor';
-  $handler->display->display_options['fields']['field_collection_donor']['label'] = 'Make possible by a gift from ';
+  $handler->display->display_options['fields']['field_collection_donor']['label'] = 'Made possible by a gift from ';
   $handler->display->display_options['fields']['field_collection_donor']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_collection_donor']['alter']['text'] = '[field_donor_name_first] [field_donor_name_last]';
   $handler->display->display_options['fields']['field_collection_donor']['element_label_colon'] = FALSE;
