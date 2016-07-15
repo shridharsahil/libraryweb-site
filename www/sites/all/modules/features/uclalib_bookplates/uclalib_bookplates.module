@@ -1,0 +1,213 @@
+<?php
+/**
+ * @file
+ * Code for the UCLALIB Bookplates feature.
+ */
+
+include_once 'uclalib_bookplates.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory()
+ */
+function uclalib_bookplates_ctools_plugin_directory($owner, $plugin_type) {
+  // Form 1 - for a module implementing only the 'content_types' plugin owned
+  // by CTools, this would cause the plugin system to search the
+  // <moduleroot>/plugins/content_types directory for .inc plugin files.
+  if ($owner == 'ctools' && $plugin_type == 'access') {
+    return 'plugins/access';
+  }
+
+  // Form 2 - if your module implements only Panels plugins, and has 'layouts'
+  // and 'styles' plugins but no 'cache' or 'display_renderers', it is OK to be
+  // lazy and return a directory for a plugin you don't actually implement (so
+  // long as that directory doesn't exist). This lets you avoid ugly in_array()
+  // logic in your conditional, and also makes it easy to add plugins of those
+  // types later without having to change this hook implementation.
+  if ($owner == 'panels') {
+    return "plugins/$plugin_type";
+  }
+
+  // Form 3 - CTools makes no assumptions about where your plugins are located,
+  // so you still have to implement this hook even for plugins created by your
+  // own module.
+  if ($owner == 'uclalib_bookplates') {
+    // Yes, this is exactly like Form 2 - just a different reasoning for it.
+    return "plugins/$plugin_type";
+  }
+  // Finally, if nothing matches, it's safe to return nothing at all (or NULL).
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function uclalib_bookplates_theme($existing, $type, $theme, $path) {
+  return array(
+    'node__bookplates' => array(
+      'render element' => 'content',
+      'base hook' => 'node',
+      'template' => 'node--bookplates',
+      'path' => drupal_get_path('module', 'uclalib_bookplates') . '/templates',
+    ),
+  );
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function uclalib_bookplates_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    $view = $form_state['view'];
+    if ($view->name == 'bookplates_full_content') {
+      if (isset($form['search_api_views_fulltext'])) {
+        $form['search_api_views_fulltext']['#attributes'] = array(
+          'placeholder'
+          => array(t('Search by Donor Name'))
+        );
+      }
+    }
+  }
+}
+
+/**
+ * Callback function for Bookplates Admin form.
+ */
+function uclalib_bookplates_admin() {
+  $form = array();
+
+  $form['uclalib_bookplates_spak_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Spak URL'),
+    '#default_value' => variable_get('uclalib_bookplates_spak_url', 'http://catalog.library.ucla.edu/vwebv/search?searchArg1='),
+    '#size' => 100,
+    '#maxlength' => 1000,
+    '#description' => t("The spak code URL"),
+    '#required' => TRUE,
+  );
+  $form['uclalib_bookplates_spak_args'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Spak args'),
+    '#default_value' => variable_get('uclalib_bookplates_spak_args', '&argType1=all&searchCode1=SPAK&combine2=and&searchArg2=&argType2=all&searchCode2=SPAK&combine3=and&searchArg3=&argType3=all&searchCode3=GKEY&year=2014-2015&fromYear=&toYear=&location=all&place=all&type=all&status=all&medium=all&language=all&content=all&media=all&carrier=all&recCount=50&searchType=2&page.search.search.button=Search'),
+    '#size' => 100,
+    '#maxlength' => 1000,
+    '#description' => t("The spak code arguments to be passed"),
+    '#required' => TRUE,
+  );
+  // Add the reset button.
+  $form['actions']['reset'] = array(
+    '#type' => 'submit',
+    '#value' => t('Reset to defaults'),
+    '#submit' => array('uclalib_bookplates_admin_reset_defaults'),
+  );
+  //will include submit button
+  return system_settings_form($form);
+}
+
+/**
+ * Submit handler for reset button.
+ */
+function uclalib_bookplates_admin_reset_defaults($form, &$form_state) {
+  variable_del('uclalib_bookplates_spak_args');
+  variable_del('uclalib_bookplates_spak_url');
+  drupal_set_message(t('The configuration options have been reset to their default values.'));
+}
+
+/**
+ * Implements hook_menu().
+ */
+function uclalib_bookplates_menu() {
+
+  $items = array();
+
+  $items['admin/config/content/bookplates'] = array(
+    'title' => 'Bookplates Spak Code URL',
+    'description' => 'Spak URL and arguments',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('uclalib_bookplates_admin'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uclalib_bookplates_preprocess_views_view_field(&$variables) {
+  // provide SPAK url
+  if ($variables['field']->field == 'field_bookplates_spak_code') {
+    if (!empty($variables['output'])) {
+      $url = variable_get('uclalib_bookplates_spak_url') . $variables['output'] . variable_get('uclalib_bookplates_spak_args');
+      $variables['output'] = l(t("See all items purchased through this Endowment."), $url, array(
+        'attributes' => array(
+          'target' => '_blank',
+        )
+      ));
+    }
+  }
+  //$variables['classes_array'][] = 'your-class-here';
+  if ($variables['field']->field == 'field_collection_donor') {
+    // create array of donor names
+    $variables['donor_names'] = array();
+    $variables['output'] = '';
+
+    foreach ($variables['row']->field_field_collection_donor as $key => $value) {
+      $variables['donor_names'][] = $value;
+      $value_raw = $value['raw']['value'];
+      $donor_name = $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_first']['#items'][0]['safe_value'] . " " . $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_last']['#items'][0]['safe_value'];
+    }
+
+    // render text for single donor
+    if (count($variables['row']->field_field_collection_donor) == 1) {
+      $variables['output'] = $variables['field']->last_render_text;
+    }
+    else {
+      // get all the donors
+      $donors = array();
+      foreach ($variables['row']->field_field_collection_donor as $value) {
+        $variables['donor_names'][] = $donor_name;
+        $value_raw = $value['raw']['value'];
+        $donor_name = $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_first']['#items'][0]['safe_value'] . " " . $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_last']['#items'][0]['safe_value'];
+        $donors[] = $donor_name;
+      }
+
+      // append the last donor with an "and" before it
+      $donor_last = array_pop($donors);
+      $variables['output'] = implode(', ', $donors) . ' and ' . $donor_last;
+    }
+  }
+}
+
+/**
+ * Implements hook_update_N() - removes unneeded bookplate fields
+ */
+function uclalib_bookplates_update_7000(&$sandbox) {
+  // fields to remove
+  $fields = array(
+    'field_bookplate_author_first_nam',
+    'field_bookplate_author_last_name',
+    'field_bookplate_fund_purpose',
+    'field_image_custom_link',
+  );
+  foreach ($fields as $field) {
+    field_delete_field($field);
+    field_purge_batch();
+  }
+}
+
+/**
+ * Implements hook_update_N() - removes unneeded sorted by and donor name
+ * bookplates fields
+ */
+function uclalib_bookplates_update_7200(&$sandbox) {
+  // fields to remove
+  $fields = array(
+    'field_donor_name_bookplates',
+    'field_sort_by',
+  );
+  foreach ($fields as $field) {
+    field_delete_field($field);
+    field_purge_batch();
+  }
+}
