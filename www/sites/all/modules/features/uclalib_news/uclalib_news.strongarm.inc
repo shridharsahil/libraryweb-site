@@ -1459,5 +1459,19 @@ function uclalib_news_strongarm() {
   $strongarm->value = 'blog/[term:name]';
   $export['pathauto_taxonomy_term_blog_name_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_news_categories_pattern';
+  $strongarm->value = 'category/[term:name]';
+  $export['pathauto_taxonomy_term_news_categories_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_news_tags_pattern';
+  $strongarm->value = 'tag/[term:name]';
+  $export['pathauto_taxonomy_term_news_tags_pattern'] = $strongarm;
+
   return $export;
 }
