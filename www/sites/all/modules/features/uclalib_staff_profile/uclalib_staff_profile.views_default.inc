@@ -371,7 +371,6 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['name']['ui_name'] = 'Staff Academic Dept. Liaison';
   $handler->display->display_options['fields']['name']['label'] = 'Departmental Liaison';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
   /* Field: Staff Full Name (First Last) */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
