@@ -230,6 +230,10 @@ span.views-field.views-field-field-bookplates-spak-code {
   text-align: left;
 }
 
+.page-bookplates.section-bookplates table.views-view-grid {
+  margin-top: 40px;
+}
+
 article.node.node--bookplates.node-teaser.node--teaser.node--bookplates--teaser .node__content .spak-code a {
   display: none;
 }
@@ -356,10 +360,6 @@ span {
       display: none;
     }
   }
-}
-
-.page-bookplates.section-bookplates .view-header p {
-  display: none;
 }
 
 .page-taxonomy.page-taxonomy-term {

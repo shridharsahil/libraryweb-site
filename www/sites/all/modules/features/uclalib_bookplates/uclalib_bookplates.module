@@ -49,6 +49,13 @@ function uclalib_bookplates_theme($existing, $type, $theme, $path) {
       'template' => 'node--bookplates',
       'path' => drupal_get_path('module', 'uclalib_bookplates') . '/templates',
     ),
+    'views_view_summary_unformatted__bookplates' => array(
+      // 'render element' => 'content',
+      'base hook' => 'views_view_summary_unformatted',
+      'template' => 'views-view-summary-unformatted--bookplates',
+      'path' => drupal_get_path('module', 'uclalib_bookplates') . '/templates',
+    ),
+    
   );
 }
 
@@ -176,6 +183,16 @@ function uclalib_bookplates_preprocess_views_view_field(&$variables) {
       $donor_last = array_pop($donors);
       $variables['output'] = implode(', ', $donors) . ' and ' . $donor_last;
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uclalib_bookplates_preprocess_views_view_summary_unformatted(&$variables) {
+  if ($variables['view']->name == 'bookplates_donor_directory' && $variables['view']->current_display == 'attachment_1') {
+    // suggest using a template that adds an "All" link to the bookplates glossary display
+    $variables['theme_hook_suggestions'][] = 'views_view_summary_unformatted__bookplates';
   }
 }
 

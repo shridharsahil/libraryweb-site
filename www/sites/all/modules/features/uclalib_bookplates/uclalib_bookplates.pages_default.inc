@@ -429,10 +429,9 @@ function uclalib_bookplates_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'About Bookplates',
       'title' => '',
-      'body' => '<p><span style="font-size:16px;">Endowments at The University of California, Los Angeles are a sound investment in a better future. With an endowed gift, you provide permanent support for the UCLA Library and create a living legacy that spans generations. If you have questions or would like to establish an endowment, please contact <a href="http://library.ucla.edu/about/giving-library/contact-us">Library Development</a>.</span></p>
-<hr>
-<p>&nbsp;</p>
-',
+      'body' => '<p class="p1"><span style="font-size:16px;"><span class="s1">Endowments enable the UCLA Library to drive research and spark innovation on campus and beyond. We are grateful to the visionary donors who have invested in their passion, provided permanent support for ongoing research and created a living legacy that spans generations.</span></span></p>
+<p><span style="font-size:16px;">If you have questions or would like to establish an endowment, please contact <a href="http://library.ucla.edu/about/giving-library/contact-us" style="font-size: 16px;">Library Development</a>.</span></p>
+<hr>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -556,14 +555,14 @@ function uclalib_bookplates_default_page_manager_pages() {
     $display->content['new-cb453f78-d7b0-4208-a942-3be84ec96b8a'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-cb453f78-d7b0-4208-a942-3be84ec96b8a';
     $pane = new stdClass();
-    $pane->pid = 'new-72ae2c7d-e5a3-4897-9bf4-a2b1417a3687';
+    $pane->pid = 'new-fefa0c9d-bb58-40cb-a767-d1d7663ec2cc';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'bean-donor-directory';
+    $pane->subtype = 'bean-list-of-donors';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -575,9 +574,9 @@ function uclalib_bookplates_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '72ae2c7d-e5a3-4897-9bf4-a2b1417a3687';
-    $display->content['new-72ae2c7d-e5a3-4897-9bf4-a2b1417a3687'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-72ae2c7d-e5a3-4897-9bf4-a2b1417a3687';
+    $pane->uuid = 'fefa0c9d-bb58-40cb-a767-d1d7663ec2cc';
+    $display->content['new-fefa0c9d-bb58-40cb-a767-d1d7663ec2cc'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-fefa0c9d-bb58-40cb-a767-d1d7663ec2cc';
     $pane = new stdClass();
     $pane->pid = 'new-3c2cb5d8-ecbf-467b-962e-d13e769749ab';
     $pane->panel = 'sidebar_left';
@@ -730,14 +729,14 @@ function uclalib_bookplates_default_page_manager_pages() {
     $display->content['new-563dbefd-be97-4867-8a6b-a514f75a199c'] = $pane;
     $display->panels['main'][0] = 'new-563dbefd-be97-4867-8a6b-a514f75a199c';
     $pane = new stdClass();
-    $pane->pid = 'new-5cd15459-bf86-46dd-b6a2-0d5704aeb654';
+    $pane->pid = 'new-c6b74676-575a-44e2-86df-8ab5f3b7fd5b';
     $pane->panel = 'sidebar_left';
     $pane->type = 'uclalib_nav';
     $pane->subtype = 'uclalib_nav';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -749,9 +748,9 @@ function uclalib_bookplates_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '5cd15459-bf86-46dd-b6a2-0d5704aeb654';
-    $display->content['new-5cd15459-bf86-46dd-b6a2-0d5704aeb654'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-5cd15459-bf86-46dd-b6a2-0d5704aeb654';
+    $pane->uuid = 'c6b74676-575a-44e2-86df-8ab5f3b7fd5b';
+    $display->content['new-c6b74676-575a-44e2-86df-8ab5f3b7fd5b'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-c6b74676-575a-44e2-86df-8ab5f3b7fd5b';
     $pane = new stdClass();
     $pane->pid = 'new-ee1d4685-0a6c-4b3c-acff-08816f81b7e2';
     $pane->panel = 'top';
