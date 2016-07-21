@@ -82,7 +82,7 @@ function uclalib_news_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 3200,
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 0,
@@ -122,7 +122,7 @@ function uclalib_news_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -236,7 +236,7 @@ function uclalib_news_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -278,7 +278,7 @@ function uclalib_news_field_default_field_instances() {
     'bundle' => 'news',
     'default_value' => array(
       0 => array(
-        'tid' => 839,
+        'tid' => 837,
       ),
     ),
     'deleted' => 0,
@@ -385,13 +385,9 @@ function uclalib_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -537,7 +533,7 @@ function uclalib_news_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
@@ -594,7 +590,7 @@ function uclalib_news_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'event_listed_from_bean' => array(
         'label' => 'above',
