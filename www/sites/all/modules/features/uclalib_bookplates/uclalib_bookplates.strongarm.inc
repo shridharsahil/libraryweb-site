@@ -162,7 +162,7 @@ function uclalib_bookplates_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_bookplates';
-  $strongarm->value = 'menu-bookplates:0';
+  $strongarm->value = 'menu-bookplates:3807';
   $export['menu_parent_bookplates'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -185,6 +185,20 @@ function uclalib_bookplates_strongarm() {
   $strongarm->name = 'node_submitted_bookplates';
   $strongarm->value = 0;
   $export['node_submitted_bookplates'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_bookplates_pattern';
+  $strongarm->value = 'bookplates/[node:title]';
+  $export['pathauto_node_bookplates_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_collection_endowment_initiative_pattern';
+  $strongarm->value = 'bookplates/[term:name]';
+  $export['pathauto_taxonomy_term_collection_endowment_initiative_pattern'] = $strongarm;
 
   return $export;
 }

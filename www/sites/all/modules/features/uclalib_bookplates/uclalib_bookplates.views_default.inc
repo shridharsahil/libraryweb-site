@@ -289,12 +289,6 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['filters']['field_donor_name_last_value']['field'] = 'field_donor_name_last_value';
   $handler->display->display_options['filters']['field_donor_name_last_value']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_donor_name_last_value']['group'] = 1;
-  /* Filter criterion: Field collection item: First Name (field_donor_name_first) */
-  $handler->display->display_options['filters']['field_donor_name_first_value']['id'] = 'field_donor_name_first_value';
-  $handler->display->display_options['filters']['field_donor_name_first_value']['table'] = 'field_data_field_donor_name_first';
-  $handler->display->display_options['filters']['field_donor_name_first_value']['field'] = 'field_donor_name_first_value';
-  $handler->display->display_options['filters']['field_donor_name_first_value']['operator'] = 'not empty';
-  $handler->display->display_options['filters']['field_donor_name_first_value']['group'] = 1;
   $handler->display->display_options['path'] = 'donor-directory';
   $export['bookplates_donor_directory'] = $view;
 
