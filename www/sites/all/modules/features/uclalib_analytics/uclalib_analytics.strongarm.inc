@@ -233,7 +233,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'google_tag_container_id';
-  $strongarm->value = 'GTM-KDBHK2';
+  $strongarm->value = 'GTM-T2SXV2';
   $export['google_tag_container_id'] = $strongarm;
 
   $strongarm = new stdClass();
