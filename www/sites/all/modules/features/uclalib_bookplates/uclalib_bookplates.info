@@ -1,7 +1,7 @@
 name = UCLALIB Bookplates
 core = 7.x
 package = UCLALIB
-version = 7.x-2.1-beta1
+version = 7.x-2.3
 project = uclalib_bookplates
 dependencies[] = advanced_link
 dependencies[] = autocomplete_deluxe
@@ -112,4 +112,4 @@ features[views_view][] = bookplates_landing_page
 features[views_view][] = bookplates_single_node
 features_exclude[dependencies][page_manager] = page_manager
 features_exclude[dependencies][fe_block] = fe_block
-mtime = 1468945526
+mtime = 1469121882
