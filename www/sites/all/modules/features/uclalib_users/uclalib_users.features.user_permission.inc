@@ -563,6 +563,7 @@ function uclalib_users_user_default_permissions() {
   $permissions['administer page manager'] = array(
     'name' => 'administer page manager',
     'roles' => array(
+      'Lead Site Editor' => 'Lead Site Editor',
       'administrator' => 'administrator',
     ),
     'module' => 'page_manager',
