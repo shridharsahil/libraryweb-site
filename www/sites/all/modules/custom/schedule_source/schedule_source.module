@@ -23,8 +23,7 @@ function schedule_source(){
     $dept= $query['work_loc'];
   };
     $browser_ip = (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
-    $code = schedule_source_get_code( $browser_ip, $dept );
-    $newURL = "https://www.schedulesource.net/enterprise/teamwork/kiosk/default.aspx?code=$code";
+    $newURL = schedule_source_get_code( $browser_ip, $dept );
     header('Location: '.$newURL);
     exit;
 }
@@ -55,10 +54,12 @@ function schedule_source_get_code($browser_ip, $dept) {
 
   if (!empty($entries)) {
     $code_num = $entries[0]['code'];
+    $newURLString = "https://www.schedulesource.net/enterprise/teamwork/kiosk/default.aspx?code=$code_num";
   }
   else {
     $code_num = -1;
+    $newURLString = "https://www-test.library.ucla.edu/schedule-source-access";
   }
-  return $code_num;
+  return $newURLString;
 }
 
