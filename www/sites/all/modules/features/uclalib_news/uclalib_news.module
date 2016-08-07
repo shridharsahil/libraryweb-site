@@ -6,7 +6,6 @@
 
 include_once 'uclalib_news.features.inc';
 
-
 /**
  * Implements hook_FORMID_alter()
  *
@@ -15,6 +14,100 @@ include_once 'uclalib_news.features.inc';
 function uclalib_news_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-news-search-news-search') {
     $form['#info']['filter-search_api_views_fulltext']['label'] = '';
+  }
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function uclalib_news_node_view($node, $view_mode, $langcode) {
+  // redirect blog nodes to new internal path structure: /taxonomy/term/%/node/% via path alias
+  if ($node->type == 'news') {
+    if (array_key_exists('und',$node->field_news_blog_name)) {
+      // check that the base route is node
+      $route_base = arg(0);
+      if ($route_base == 'node') {
+        // grab term ID
+        $tid = $node->field_news_blog_name[LANGUAGE_NONE][0]['tid'];
+        // look for desired path
+        $path_alias_search = drupal_get_path_alias('taxonomy/term/'. $tid .'/node/'. $node->nid);
+        // create path alias if it does not exist
+        if (current_path() == request_path() && $path_alias_search == 'taxonomy/term/'. $tid .'/node/'. $node->nid) {
+          // check if there is a blog base path
+          $blog_root_path = drupal_get_path_alias('taxonomy/term/'. $tid);
+          // format date for use in URL
+          $post_date = format_date($node->created, 'custom', 'Y/m/d');
+          // manipulate title string to be url friendly
+          $post_title_path = strtolower($node->title);
+          // remove non-alphanumeric characters
+          $post_title_path = preg_replace("/[^A-Za-z0-9 ]/", '', $post_title_path);
+          // replace spaces with dashes
+          $post_title_path = str_replace(' ', '-', $post_title_path);          
+          // prepare the alias
+          $path = array(
+            'source' => $path_alias_search,
+            'alias' => $blog_root_path .'/'. $post_date .'/'. $post_title_path,
+          );
+          // save and go to the new alias
+          path_save($path);
+          drupal_goto('taxonomy/term/'. $node->field_news_blog_name[LANGUAGE_NONE][0]['tid'] .'/node/'. $node->nid);
+        } else {
+          // send user to proper blog path
+          drupal_goto($path_alias_search);
+        }
+      }
+      
+    }
+  }
+}
+
+/**
+ * Implements hook_taxonomy_term_view().
+ */
+function uclalib_news_taxonomy_term_view($term, $view_mode, $langcode) {
+  // check if it's a blog
+  if ($term->vocabulary_machine_name == 'blog_name') {
+    // check if request is for a blog category, tag or archive by looking at the route
+    $route_type = arg(3);
+    if ($route_type == 'cattag') {
+      // check if the current path needs and alias
+      if (current_path() == request_path()) {
+        // get blog's root path
+        $blog_root_path = drupal_get_path_alias('taxonomy/term/'. $term->tid);
+        // get cattag path via term ID of category or tag
+        $cattag_tid = arg(4);
+        $cattag_path = drupal_get_path_alias('taxonomy/term/'. $cattag_tid);
+        // prepare the new alias
+        $path = array(
+          'source' => drupal_get_path_alias(),
+          'alias' => $blog_root_path .'/'. $cattag_path,
+        );
+        // save and go to the new alias
+        path_save($path);
+        drupal_goto(drupal_get_path_alias());
+      }
+    }
+    // check if it is an archives path and create alias
+    if ($route_type == 'archives') {
+      // check if the current path needs an alias
+      if (current_path() == request_path()) {
+        // get blog's root path
+        $blog_root_path = drupal_get_path_alias('taxonomy/term/'. $term->tid);
+        // get year and month for building path
+        // entire route as an array
+        $route = arg();
+        $year_month = array_slice($route, 4);
+        $year_month = implode($year_month, '/');
+        // prepare new archive alias
+        $path = array(
+          'source' => drupal_get_path_alias(),
+          'alias' => $blog_root_path .'/'. $year_month,
+        );
+        // save and go to the new alias
+        path_save($path);
+        drupal_goto(drupal_get_path_alias());
+      }
+    }
   }
 }
 
@@ -32,6 +125,8 @@ function uclalib_news_views_pre_render(&$view) {
           unset($view->result[$key]);
         } else {
           $uniques[] = $value->field_data_field_news_categories_field_news_categories_tid;
+          // modify category link based on current path
+          $view->result[$key]->field_field_news_categories[0]['rendered']['#href'] = 'taxonomy/term/'. $view->args[0] .'/cattag/'. $value->field_data_field_news_categories_field_news_categories_tid;
         }
       }
     }
@@ -42,6 +137,8 @@ function uclalib_news_views_pre_render(&$view) {
           unset($view->result[$key]);
         } else {
           $uniques[] = $value->field_data_field_news_tags_field_news_tags_tid;
+          // modify tag link based on current path
+          $view->result[$key]->field_field_news_tags[0]['rendered']['#href'] = 'taxonomy/term/'. $view->args[0] .'/cattag/'. $value->field_data_field_news_tags_field_news_tags_tid;
         }
       }
     }
@@ -54,8 +151,8 @@ function uclalib_news_views_pre_render(&$view) {
 function uclalib_news_preprocess_views_view_summary(&$variables) {
   if ($variables['view']->name == 'blog_archives') {
     foreach ($variables['view']->result as $key => $row) {
-      // renders the link in YYYY/MM format
-      $variables['view']->result[$key]->url = base_path().'blog/'.arg(1).'/'.substr($row->created_year_month,0,4).'/'.substr($row->created_year_month,4,2);
+      // renders the link in /taxonomy/term/%blog_name/archives/%year/%month (YYYY/MM) format
+      $variables['view']->result[$key]->url = base_path().'taxonomy/term/'.arg(2).'/archives/'.substr($row->created_year_month,0,4).'/'.substr($row->created_year_month,4,2);
     }
   }
 }
