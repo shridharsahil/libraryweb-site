@@ -715,22 +715,19 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_bookplate_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bookplate_description']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_bookplate_description']['element_default_classes'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['anyall'] = '+';
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
+  /* Contextual filter: Content: Subject Area(s) (field_bookplates_subject_area) */
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['id'] = 'field_bookplates_subject_area_tid';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['table'] = 'field_data_field_bookplates_subject_area';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['field'] = 'field_bookplates_subject_area_tid';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_bookplates_subject_area_tid']['validate_options']['vocabularies'] = array(
     'collection_endowment_initiative' => 'collection_endowment_initiative',
   );
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = TRUE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -807,13 +804,6 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -821,10 +811,12 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'bookplates' => 'bookplates',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Subject Area(s) (field_bookplates_subject_area) */
   $handler->display->display_options['filters']['field_bookplates_subject_area_tid']['id'] = 'field_bookplates_subject_area_tid';
   $handler->display->display_options['filters']['field_bookplates_subject_area_tid']['table'] = 'field_data_field_bookplates_subject_area';
   $handler->display->display_options['filters']['field_bookplates_subject_area_tid']['field'] = 'field_bookplates_subject_area_tid';
+  $handler->display->display_options['filters']['field_bookplates_subject_area_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_bookplates_subject_area_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_bookplates_subject_area_tid']['expose']['operator_id'] = 'field_bookplates_subject_area_tid_op';
   $handler->display->display_options['filters']['field_bookplates_subject_area_tid']['expose']['operator'] = 'field_bookplates_subject_area_tid_op';

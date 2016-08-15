@@ -234,12 +234,12 @@ function uclalib_bookplates_default_page_manager_handlers() {
     $pane->configuration = array(
       'override_pager_settings' => 0,
       'use_pager' => 1,
-      'nodes_per_page' => '10',
+      'nodes_per_page' => '6',
       'pager_id' => '0',
       'offset' => '0',
       'more_link' => 0,
       'feed_icons' => 0,
-      'panel_args' => 0,
+      'panel_args' => 1,
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
@@ -247,6 +247,9 @@ function uclalib_bookplates_default_page_manager_handlers() {
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
+      'context' => array(
+        0 => '',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
