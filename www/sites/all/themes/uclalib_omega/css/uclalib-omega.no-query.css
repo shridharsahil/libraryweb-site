@@ -666,8 +666,13 @@ span.views-field.views-field-field-bookplates-spak-code {
 }
 
 .view-bookplates-landing-page.view-id-bookplates_landing_page.view-display-id-bookplates_landing_page table.views-view-grid tbody tr {
-  border-bottom: 1px solid #3293D9;
+  border-bottom: 1px solid #888888;
   display: block;
+  padding-bottom: 14px;
+}
+
+.view-bookplates-landing-page.view-id-bookplates_landing_page.view-display-id-bookplates_landing_page table.views-view-grid tbody tr:last-child {
+  border-bottom: none;
 }
 
 .field--name-field-bookplates-subject-area.field--type-taxonomy-term-reference.field--label-hidden.clearfix ul.links {
