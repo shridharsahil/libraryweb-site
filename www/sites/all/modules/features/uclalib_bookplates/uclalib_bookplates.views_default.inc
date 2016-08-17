@@ -439,6 +439,14 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Content: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'search_api_index_bookplates';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['label'] = '';
+  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
   /* Field: Indexed Content: Bookplate Description */
   $handler->display->display_options['fields']['field_bookplate_description']['id'] = 'field_bookplate_description';
   $handler->display->display_options['fields']['field_bookplate_description']['table'] = 'search_api_index_bookplates';
@@ -447,7 +455,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['max_length'] = '250';
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_text'] = 'Read more about this endowment';
-  $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_path'] = '[title]';
+  $handler->display->display_options['fields']['field_bookplate_description']['alter']['more_link_path'] = '[url]';
   $handler->display->display_options['fields']['field_bookplate_description']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_bookplate_description']['element_label_colon'] = FALSE;
   /* Field: Indexed Content: Subject Area(s) */
@@ -455,6 +463,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_bookplates_subject_area_1']['table'] = 'search_api_index_bookplates';
   $handler->display->display_options['fields']['field_bookplates_subject_area_1']['field'] = 'field_bookplates_subject_area';
   $handler->display->display_options['fields']['field_bookplates_subject_area_1']['label'] = '';
+  $handler->display->display_options['fields']['field_bookplates_subject_area_1']['element_type'] = 'strong';
   $handler->display->display_options['fields']['field_bookplates_subject_area_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bookplates_subject_area_1']['list']['separator'] = '&nbsp;|&nbsp;';
   $handler->display->display_options['fields']['field_bookplates_subject_area_1']['link_to_entity'] = 1;
