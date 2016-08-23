@@ -94,3 +94,12 @@
   padding-right: 20px;
   padding-right: 0;
 }
+
+.page-homepage .pane-bean-link-list span.icon.icomoon {
+  color: #8e8e8e;
+  float: left;
+  font-size: 25px;
+  line-height: 15px;
+  padding-right: 9px;
+  text-align: left;
+}
