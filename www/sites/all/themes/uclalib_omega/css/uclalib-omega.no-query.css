@@ -1890,6 +1890,10 @@ a.more-link,
   .logged-in .l-header .menu li:after {
     content: "";
   }
+
+  .logged-in .l-header {
+    padding-left: 15px;
+  }
 }
 .pane-horizontal-rule {
   border-bottom: 1px solid #adcde5;
