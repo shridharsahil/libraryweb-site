@@ -2,7 +2,12 @@
 // Ensure the $ alias is owned by jQuery.
 (function($) {
 
+// randomly lock a pane.
+// @debug only
 Drupal.settings.Panels = Drupal.settings.Panels || {};
+Drupal.settings.Panels.RegionLock = {
+  10: { 'top': false, 'left': true, 'middle': true }
+}
 
 Drupal.PanelsIPE = {
   editors: {},
@@ -26,17 +31,6 @@ Drupal.PanelsIPE = {
 
 Drupal.behaviors.PanelsIPE = {
   attach: function(context) {
-    // Remove any old editors.
-    for (var i in Drupal.PanelsIPE.editors) {
-      if (Drupal.settings.PanelsIPECacheKeys.indexOf(i) === -1) {
-        // Clean-up a little bit and remove it.
-        Drupal.PanelsIPE.editors[i].editing = false;
-        Drupal.PanelsIPE.editors[i].changed = false;
-        delete Drupal.PanelsIPE.editors[i];
-      }
-    }
-
-    // Initialize new editors.
     for (var i in Drupal.settings.PanelsIPECacheKeys) {
       var key = Drupal.settings.PanelsIPECacheKeys[i];
       $('div#panels-ipe-display-' + key + ':not(.panels-ipe-processed)')
@@ -219,11 +213,9 @@ function DrupalPanelsIPE(cache_key, cfg) {
 
     $('div.panels-ipe-sort-container', ipe.topParent).bind('sortstop', this.enableRegions);
 
-    // Refresh the control jQuery object.
-    ipe.control = $(ipe.control.selector);
     $('.panels-ipe-form-container', ipe.control).append(formdata);
 
-    $('input:submit:not(.ajax-processed), button:not(.ajax-processed)', ipe.control).addClass('ajax-processed').each(function() {
+    $('input:submit:not(.ajax-processed)', ipe.control).addClass('ajax-processed').each(function() {
       var element_settings = {};
 
       element_settings.url = $(this.form).attr('action');
@@ -241,7 +233,7 @@ function DrupalPanelsIPE(cache_key, cfg) {
     // it clears out inline styles.
     $('.panels-ipe-on').show();
     ipe.showForm();
-    $('body').add(ipe.topParent).addClass('panels-ipe-editing');
+    ipe.topParent.addClass('panels-ipe-editing');
 
   };
 
@@ -272,10 +264,6 @@ function DrupalPanelsIPE(cache_key, cfg) {
     // Re-show all the IPE non-editing meta-elements
     $('div.panels-ipe-off').show('fast');
 
-    // Refresh the container and control jQuery objects.
-    ipe.container = $(ipe.container.selector);
-    ipe.control = $(ipe.control.selector);
-
     ipe.showButtons();
     // Re-hide all the IPE meta-elements
     $('div.panels-ipe-on').hide();
@@ -297,7 +285,7 @@ function DrupalPanelsIPE(cache_key, cfg) {
           val += id;
         }
       });
-      $('[name="panel[pane][' +  region + ']"]', ipe.control).val(val);
+      $('input[name="panel[pane][' +  region + ']"]', ipe.control).val(val);
     });
   }
 
