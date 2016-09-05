@@ -114,12 +114,8 @@ function uclalib_news_strongarm() {
       'display' => array(
         'default_opening_hours' => array(
           'default' => array(
-            'weight' => '6',
-            'visible' => FALSE,
-          ),
-          'teaser' => array(
-            'weight' => '5',
-            'visible' => FALSE,
+            'weight' => '4',
+            'visible' => TRUE,
           ),
         ),
       ),

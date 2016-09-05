@@ -256,7 +256,6 @@ function uclalib_bookplates_views_default_views() {
   $handler = $view->new_display('page', 'BD 3', 'page');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
