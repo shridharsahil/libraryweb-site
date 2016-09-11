@@ -1231,6 +1231,16 @@ function uclalib_users_user_default_permissions() {
     'module' => 'redirect',
   );
 
+  // Exported permission: 'administer schedule source'.
+  $permissions['administer schedule source'] = array(
+    'name' => 'administer schedule source',
+    'roles' => array(
+      'Schedule Source Admin' => 'Schedule Source Admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'schedule_source_config',
+  );
+
   // Exported permission: 'administer search_api'.
   $permissions['administer search_api'] = array(
     'name' => 'administer search_api',

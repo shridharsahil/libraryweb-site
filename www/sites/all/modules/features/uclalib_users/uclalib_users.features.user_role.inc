@@ -34,6 +34,12 @@ function uclalib_users_user_default_roles() {
     'weight' => 10,
   );
 
+  // Exported role: Schedule Source Admin.
+  $roles['Schedule Source Admin'] = array(
+    'name' => 'Schedule Source Admin',
+    'weight' => 11,
+  );
+
   // Exported role: admin_dev.
   $roles['admin_dev'] = array(
     'name' => 'admin_dev',

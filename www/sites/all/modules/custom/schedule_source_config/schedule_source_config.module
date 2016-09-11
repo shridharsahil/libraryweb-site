@@ -1,0 +1,331 @@
+<?php
+
+/**
+ * Save an entry in the database.
+ *
+ * use db_insert().
+ *
+ */
+function schedule_source_config_entry_insert($entry) {
+  $return_value = NULL;
+  try {
+    $return_value = db_insert('schedule_source_config')
+                    ->fields($entry)
+                    ->execute();
+  }
+  catch (Exception $e) {
+    drupal_set_message(t('db_insert failed. Message = %message, query= %query',
+      array('%message' => $e->getMessage(), '%query' => $e->query_string)), 'error');
+  }
+  return $return_value;
+}
+
+/**
+ * Update an entry in the database.
+ *
+ */
+function schedule_source_config_entry_update($entry) {
+  try {
+    $count = db_update('schedule_source_config')
+              ->fields($entry)
+              ->condition('pid', $entry['pid'])
+              ->execute();
+  }
+  catch (Exception $e) {
+    drupal_set_message(t('db_update failed. Message = %message, query= %query',
+      array('%message' => $e->getMessage(), '%query' => $e->query_string)), 'error');
+  }
+  return $count;
+}
+
+/**
+ * Delete an entry from the database.
+ *
+ */
+function schedule_source_config_entry_delete($entry) {
+  db_delete('schedule_source_config')
+    ->condition('pid', $entry['pid'])
+    ->execute();
+}
+
+
+/**
+ * Read from the database using a filter array.
+ *
+ */
+function schedule_source_config_entry_load($entry = array()) {
+  // Read all fields from the schedule_source_config table.
+  $select = db_select('schedule_source_config', 'example');
+//  $select->condition('source_ip', 'Graduate');
+  $select->fields('example');
+
+  // Add each field and value as a condition to this query.
+  foreach ($entry as $field => $value) {
+    $select->condition($field, $value);
+  }
+  // Return the result in object format.
+  return $select->execute()->fetchAll();
+}
+
+/**
+ * Implements hook_permission().
+ */
+function schedule_source_config_permission() {
+  return array(
+    'administer schedule source' => array(
+      'title' => t('Admin Schedule Source'),
+      'description' => t('Access the Schedule Source config module to set IP & code'),
+    )
+  );
+}
+
+/**
+ * Implements hook_menu().
+ *
+ * Set up calls to drupal_get_form() for all our example cases.
+ */
+function schedule_source_config_menu() {
+  $items = array();
+  $items['admin/config/system/schedule_source'] = array(
+    'title' => 'Schedule Source',
+    'description' => 'Set IPs and Codes for Clicc Clock-In run by Schedule Source.',
+    'page callback' => 'schedule_source_config_list',
+//    'access callback' => TRUE,
+    'access arguments' => array('administer schedule source'),
+  );
+  $items['admin/config/system/schedule_source/list'] = array(
+    'title' => 'List',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10,
+  );
+  $items['admin/config/system/schedule_source/add'] = array(
+    'title' => 'Add entry',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('schedule_source_config_form_add'),
+    'access arguments' => array('administer schedule source'),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => -9,
+  );
+  $items['admin/config/system/schedule_source/update'] = array(
+    'title' => 'Update entry',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('schedule_source_config_form_update'),
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer schedule source'),
+    'weight' => -5,
+  );
+  return $items;
+}
+
+/**
+ * Render a list of entries in the database.
+ */
+function schedule_source_config_list() {
+  $output = '';
+
+  // Get all entries in the schedule_source_config table.
+  if ($entries = schedule_source_config_entry_load()) {
+    $rows = array();
+    foreach ($entries as $entry) {
+      // Sanitize the data before handing it off to the theme layer.
+      $rows[] = array_map('check_plain', (array) $entry);
+    }
+    // Make a table for them.
+    $header = array(t('Id'), t('Source IP'), t('Department'), t('Department Description'), t('Code Number for this IP'));
+    $output .= theme('table', array('header' => $header, 'rows' => $rows));
+  }
+  else {
+    drupal_set_message(t('No entries have been added yet.'));
+  }
+  return $output;
+}
+
+/**
+ * Set up the form.
+ */
+function schedule_source_config_form_add($form, &$form_state) {
+  $form = array();
+
+  $form['add'] = array(
+    '#type'  => 'fieldset',
+    '#title' => t('Add a Clock-In Kiosk'),
+  );
+  $form['add']['source_ip'] = array(
+    '#type'  => 'textfield',
+    '#title' => t('Source IP'),
+    '#size'  => 15,
+  );
+  $form['add']['dept'] = array(
+    '#type'  => 'textfield',
+    '#title' => t('Department'),
+    '#size'  => 15,
+  );
+  $form['add']['dept_desc'] = array(
+    '#type'  => 'textfield',
+    '#title' => t('Department Description'),
+    '#size'  => 15,
+  );
+  $form['add']['code'] = array(
+    '#type'  => 'textfield',
+    '#title' => t('Code Number for this IP'),
+    '#size'  => 15,
+  );
+  $form['add']['submit'] = array(
+    '#type'  => 'submit',
+    '#value' => t('Add'),
+  );
+
+  return $form;
+}
+
+/**
+ * Submit handler for 'add entry' form.
+ */
+function schedule_source_config_form_add_submit($form, &$form_state) {
+
+    drupal_set_message(t("Created entry"));		
+
+  global $user;
+
+  // Save the submitted entry.
+  $entry = array(
+    'source_ip'    => $form_state['values']['source_ip'],
+    'dept'    => $form_state['values']['dept'],
+    'dept_desc'    => $form_state['values']['dept_desc'],
+    'code' => $form_state['values']['code'],
+  );
+  // write to db
+  $return = schedule_source_config_entry_insert($entry);
+  if ($return) {
+    drupal_set_message(t("Created entry @entry", array('@entry' => print_r($entry, TRUE))));
+  }
+}
+
+/**
+ * Sample UI to update a record.
+ */
+function schedule_source_config_form_update($form, &$form_state) {
+  $form = array(
+    '#prefix' => '<div id="updateform">',
+    '#suffix' => '</div>',
+  );
+
+  $entries = schedule_source_config_entry_load();
+  $keyed_entries = array();
+  if (empty($entries)) {
+    $form['no_values'] = array(
+      '#value' => t("No entries exist in the table schedule_source_config table."),
+    );
+    return $form;
+  }
+
+  foreach ($entries as $entry) {
+    $options[$entry->pid] = t("@pid: @source_ip @code", array('@pid' => $entry->pid, '@source_ip' => $entry->source_ip, '@code' => $entry->code));
+    $keyed_entries[$entry->pid] = $entry;
+  }
+  $default_entry = !empty($form_state['values']['pid']) ? $keyed_entries[$form_state['values']['pid']] : $entries[0];
+
+  $form_state['entries'] = $keyed_entries;
+
+  $form['pid'] = array(
+    '#type' => 'select',
+    '#options' => $options,
+    '#title' => t('Choose entry to update'),
+    '#default_value' => $default_entry->pid,
+    '#ajax' => array(
+      'wrapper' => 'updateform',
+      'callback' => 'schedule_source_config_form_update_callback',
+    ),
+  );
+  $form['delete'] = array(
+    '#type'  => 'submit',
+    '#value' => t('Delete'),
+    '#submit' => array('schedule_source_config_form_delete_submit'),
+  );
+
+  $form['source_ip'] = array(
+    '#type' => 'textfield',
+    '#title' => t('<br>Enter the IP for the new Clicc Clock-In Kiosk'),
+    '#size' => 15,
+    '#default_value' => $default_entry->source_ip,
+  );
+
+  $form['dept'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Enter the Department using dept_1, etc'),
+    '#size' => 15,
+    '#default_value' => $default_entry->dept,
+  );
+
+  $form['dept_desc'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Entrer a himan readable dept, location, or unit description'),
+    '#size' => 15,
+    '#default_value' => $default_entry->dept_desc,
+  );
+
+  $form['code'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Enter the Code Number that matches the new IP'),
+    '#size' => 15,
+    '#default_value' => $default_entry->code,
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Update'),
+  );
+  return $form;
+}
+
+/**
+ * AJAX callback handler for the pid select.
+ *
+ * When the pid changes, populates the defaults from the database in the form.f
+ */
+function schedule_source_config_form_update_callback($form, $form_state) {
+  $entry = $form_state['entries'][$form_state['values']['pid']];
+  // Setting the #value of items is the only way I was able to figure out
+  // to get replaced defaults on these items. #default_value will not do it
+  // and shouldn't.
+  foreach (array('source_ip', 'code') as $item) {
+    $form[$item]['#value'] = $entry->$item;
+  }
+  return $form;
+}
+
+/**
+ * Delete handler for 'update entry' form.
+ */
+function schedule_source_config_form_delete_submit($form, &$form_state) {
+  global $user;
+  // Delete the selected entry.
+  $entry = array(
+    'pid' => $form_state['values']['pid'],
+  );
+  $count = schedule_source_config_entry_delete($entry);
+
+  drupal_set_message(t("Deleted entry @entry (@count row updated)", array('@count' => $count, '@entry' => print_r($entry, TRUE))));
+}
+
+/**
+ * Submit handler for 'update entry' form.
+ */
+function schedule_source_config_form_update_submit($form, &$form_state) {
+  global $user;
+  // Save the submitted entry.
+  $entry = array(
+    'pid' => $form_state['values']['pid'],
+    'source_ip' => $form_state['values']['source_ip'],
+    'dept' => $form_state['values']['dept'],
+    'dept_desc' => $form_state['values']['dept_desc'],
+    'code' => $form_state['values']['code'],
+  );
+  $count = schedule_source_config_entry_update($entry);
+  drupal_set_message(t("Updated entry @entry (@count row updated)", array('@count' => $count, '@entry' => print_r($entry, TRUE))));
+}
+
+/**
+ * @} End of "defgroup Schedule_Source".
+ */
+

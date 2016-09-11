@@ -1,0 +1,113 @@
+<?php	
+/**
+ * @file
+ * Install, update and uninstall functions for the Schedule_Source module.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * In Drupal 7, there is no need to install schema using this hook, the schema
+ * is already installed before this hook is called.
+ *
+ * We will create a default entry in the database.
+ *
+ * @see hook_install()
+ * @ingroup Schedule_Source
+ */
+function schedule_source_config_install() {
+  // Outside of the .install file we would use drupal_write_record() to
+  // populate the database, but it cannot be used here, so we'll use
+  // db_insert().
+
+  // Add a default entry for development
+  $fields = array(
+    'source_ip'    => '164.67.152.25',
+    'dept'    => 'dept_1',
+    'dept_desc'    => 'Powell',
+    'code' => '44a75672-0b31-4cec-838f-039a29e33171'
+  );
+  db_insert('schedule_source_config')
+    ->fields($fields)
+    ->execute();
+
+  // Add another entry for using the VM
+  $fields = array(
+    'source_ip'    => '192.168.177.1',
+    'dept'    => 'dept_2',
+    'dept_desc'    => 'YRL',
+    'code' => '44a75672-0b31-4cec-838f-039a29e33171'
+  );
+  db_insert('schedule_source_config')
+    ->fields($fields)
+    ->execute();
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * As in hook_install, there is no need to uninstall schema, Drupal will do it
+ * for us.
+ *
+ * @see hook_uninstall()
+ * @ingroup Schedule_Source
+ */
+function schedule_source_config_uninstall() {
+  // nothing.
+}
+
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ * Remember that the easiest way to create the code for hook_schema is with
+ * the @link http://drupal.org/project/schema schema module @endlink
+ *
+ * @see hook_schema()
+ * @ingroup Schedule_Source
+ */
+function schedule_source_config_schema() {
+
+  $schema['schedule_source_config'] = array(
+    'description' => 'Stores Workstation IPs and matching Codes for Clicc Clock-In.',
+    'fields' => array(
+      'pid'  => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique rule ID.',
+      ),
+      'source_ip' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Client Workstation IP',
+      ),
+      'dept' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Location, department, or unit expressed as dept_1, etc',
+      ),
+      'dept_desc' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Human readable description of Location, department, or unit',
+      ),
+      'code' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Matching Code for the client Workstation IP',
+      )
+    ),
+    'primary key' => array('pid'),
+  );
+
+  return $schema;
+}
