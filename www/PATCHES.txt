@@ -15,6 +15,9 @@ https://www.drupal.org/files/issues/make_ckeditor_plugin-2159403-90.patch
 Ctools - hide empty page title pane when wrapper tag is used
 https://drupal.org/node/2265451
 https://drupal.org/files/issues/ctools-hide-empty-page-title-with-wrapper-tag-2265451.patch
+Ctools - ctools calling missing file
+https://www.drupal.org/node/1775612
+https://www.drupal.org/files/plugin-load-use-include-1775612-3.patch
 
 Facetapi_bonus - add plugin filter to hide facet count.
 https://drupal.org/node/2266717
