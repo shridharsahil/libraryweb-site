@@ -35,7 +35,8 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'clearfix';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -43,6 +44,12 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<div class="more-link"><a href="news-events/events-agenda">More Events</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="more-link"><a href="/news">More News</a></div>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_events_target_id']['id'] = 'field_events_target_id';
   $handler->display->display_options['relationships']['field_events_target_id']['table'] = 'field_data_field_events';
@@ -62,6 +69,8 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['relationship'] = 'field_events_target_id';
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['element_wrapper_class'] = 'events-teaser__date';
+  $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_date']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
@@ -97,6 +106,8 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_exhibition_end']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end']['alter']['text'] = '[field_exhibition_start] to [field_exhibition_end]';
   $handler->display->display_options['fields']['field_exhibition_end']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibition_end']['element_wrapper_class'] = 'events-teaser__dates';
+  $handler->display->display_options['fields']['field_exhibition_end']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_exhibition_end']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_exhibition_end']['type'] = 'uclablib_event_date_block';
   $handler->display->display_options['fields']['field_exhibition_end']['settings'] = array(
@@ -155,10 +166,12 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="event-type">[field_exhibition_end_1]</div>
-<div class="event-title">[title]</div>
-<div class="event-body">[body]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="event-teaser__type">[field_exhibition_end_1]</div>
+<div class="event-teaser__title">[title]</div>
+<div class="event-teaser__description">[body]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'events-teaser__text-wrapper';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Contextual filter: Block: Title */
   $handler->display->display_options['arguments']['title']['id'] = 'title';
   $handler->display->display_options['arguments']['title']['table'] = 'bean';
@@ -185,6 +198,22 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'More Events';
   $handler->display->display_options['link_url'] = 'news-events/events-agenda';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'events-teaser events-teaser--without-thumbnail';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="more-link"><a href="news-events/events-agenda">More Events</a></div>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -212,6 +241,15 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'news';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'news-teaser news-teaser--with-thumbnail';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -219,6 +257,13 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<div class="more-link"><a href="/news">More News</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="more-link"><a href="/news">More News</a></div>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_news_target_id']['id'] = 'field_news_target_id';
@@ -233,6 +278,14 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['bid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['bid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['bid']['separator'] = '';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_news_target_id';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: News Thumbnail */
   $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
   $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'field_data_field_event_thumbnail';
@@ -240,10 +293,12 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['field_event_thumbnail']['relationship'] = 'field_news_target_id';
   $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
   $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_wrapper_class'] = 'news-teaser__thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_event_thumbnail']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
-    'image_style' => 'thumbnail_small',
+    'image_style' => 'widescreen_medium',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -261,12 +316,15 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['body']['relationship'] = 'field_news_target_id';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['text'] = '[body-summary]';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '128';
-  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'more';
+  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
@@ -275,9 +333,12 @@ function uclalib_news_events_landing_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]
-[body]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="news-teaser__title">[title]</div>
+<div class="news-teaser__description">[body]</div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'news-teaser__text-wrapper';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;

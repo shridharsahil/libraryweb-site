@@ -3,13 +3,15 @@
 // by Nicholas Gallagher.
 .gray-sidebar-left {
 
-  // Add padding and a background color. If any panes need to be
-  // flush left or right, just use negative margines.
-  .l-region--sidebar-left {
-    padding-left: 25px;
-    padding-right: 25px;
-    &:before {
-      background: $ucla-gray;
+  @media #{$desk-only} {
+    // Add padding and a background color. If any panes need to be
+    // flush left or right, just use negative margines.
+    .l-region--sidebar-left {
+      padding-left: 25px;
+      padding-right: 25px;
+      &:before {
+        background: $ucla-gray;
+      }
     }
   }
 }

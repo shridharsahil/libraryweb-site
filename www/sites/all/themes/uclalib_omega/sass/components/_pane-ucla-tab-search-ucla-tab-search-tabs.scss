@@ -1,67 +1,33 @@
 .pane-ucla-tab-search-ucla-tab-search-tabs {
   margin-bottom: 2em;
-  .vertical-tabs {
-    border: none;
-    margin: 1em 0 1em 13em;
-    .vertical-tabs-list {
-      border: none;
-      margin: -1px 0 -1px -13em;
-      width: 14em;
-      li {
-        background: url(../images/arr-right-yell.png) 100% 0 no-repeat;
-        border: none;
-        margin: 4px 0;
-        padding-right: 7px;
-        text-align: left;
-        text-indent: 7px;
-        a {
-          background-color: $ucla-lt-gray;
-          height: 46px;
-          font-size: 1.143em;
-          line-height: 46px;
-          outline: 0 !important;
-          padding: 0;
-        }
-        a:focus {
-          outline: 0;
-        }
-        strong {
-          font-weight: normal;
-        }
-        &.selected {
-          background: url(../images/arr-right-yell.png) 100% 50% no-repeat;
-          a {
-            background-color: $ucla-yellow;
-            outline: 0 !important;
-            strong {
-              color: $ucla-dark-gray;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-      li:focus {
-        outline: 0;
-      }
+  .pane-description {
+    background: url(../images/question-icon.png) 100% 0 no-repeat;
+    margin: 0.4em 0 0.6em;
+    strong:first-child {
+      display: block;
+      margin-bottom: 2px;
+      padding-top: 0.4em;
     }
-    .vertical-tabs-panes {
-      padding: 1em 0;
-      .pane-description {
-        background: url(../images/question-icon.png) 100% 0 no-repeat;
-        margin: 0.4em 0 0.6em;
-        strong:first-child {
-          display: block;
-          margin-bottom: 2px;
-          padding-top: 0.4em;
-        }
-      }
-      input[type="submit"] {
-        background: #000;
-        border: 0 none;
-        color: #fff;
-        font-weight: bold;
-        padding: 4px 10px;
-      }
+  }
+  input[type="text"] {
+    text-align: center;
+    padding: 5px 10px;
+    @media #{$lap-desk-only} {
+      text-align: left;
+      padding: 4px 8px;
+    }
+  }
+  input[type="submit"] {
+    background: #000;
+    border: 0 none;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 8px 16px;
+    display: block;
+    @media #{$lap-desk-only} {
+      padding: 4px 10px;
+      margin: 0;
     }
   }
 }

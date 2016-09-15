@@ -29,4 +29,12 @@
       hyphens: auto;
     }
   }
+  &.is-mobile {
+    .pane-content {
+      background: $ucla-lt-gray;
+    }
+    .bean-link-list {
+      padding: 0 10px;
+    }
+  }
 }

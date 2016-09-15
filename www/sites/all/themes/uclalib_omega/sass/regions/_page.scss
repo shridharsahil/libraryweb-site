@@ -1,4 +1,6 @@
-.l-page {
-  background: url(../images/mol-bg.jpg) 0 0;
+@media #{$desk-only} {
+  .l-page {
+    background: url(../images/mol-bg.jpg) 0 0;
+  }
 }
 

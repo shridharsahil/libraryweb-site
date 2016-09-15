@@ -1,0 +1,49 @@
+// sidebar facet options.
+.sidebar-options {
+  h2 {
+    color: $ucla-blue;
+    font-size: 1.071em;
+    font-weight: bold;
+  }
+  ul {
+    list-style: none;
+    padding-left: 5px;
+    .facetapi-checkbox {
+      vertical-align: text-bottom;
+    }
+    li {
+      padding-left: 20px;
+      text-indent: -20px;
+    }
+    a {
+      color: $ucla-dark-gray;
+      vertical-align: middle;
+    }
+  }
+  &.ctools-collapsible-container ul {
+    padding-left: 22px;
+  }
+}
+
+// Responsive mobile wrapper for sidebar facet options.
+.js-sidebar-options-wrapper.is-mobile {
+  background: $ucla-lt-gray;
+
+  .js-pane-content {
+    padding: 0 20px;
+    padding: 0 1.25rem;
+  }
+
+  .sidebar-options {
+    margin: .6em auto;
+
+    h2 {
+      margin: 0;
+    }
+
+    + .sidebar-options {
+      padding-top: .6em;
+      border-top: 1px solid $ucla-sky-blue;
+    }
+  }
+}

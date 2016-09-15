@@ -4,12 +4,20 @@
     font-size: 2.286em;
     font-weight: 100;
     margin-bottom: 2px;
+    @media #{$palm-lap-only} {
+      color: $ucla-blue;
+      font-size: 24px;
+      margin-top: 0;
+    }
   }
   .pane-title {
     font-size: 1em;
   }
   .pane-horizontal-rule {
     margin-bottom: 28px;
+    @media #{$palm-lap-only} {
+      display: none;
+    }
   }
   .pane-contact-question {
     h2 {
@@ -37,6 +45,9 @@
     margin-bottom: 2.7em;
     h2 {
       margin: 23px 0 6px;
+      @media #{$palm-lap-only} {
+        margin-top: 13px;
+      }
     }
     .header-search-form {
       position: relative;
@@ -45,8 +56,10 @@
         width: 100%;
         .form-text {
           border: 1px solid #d9d9d9;
-          height: 33px;
           width: 100%;
+          @media #{$desk-only} {
+            height: 33px;
+          }
         }
       }
       .form-actions {
@@ -56,6 +69,9 @@
         top: 1px;
         .form-submit {
           padding: 0.55em 0.6em 0.45em;
+          @media #{$palm-lap-only} {
+            padding: 0.85em 0.6em 0.55em;
+          }
         }
       }
     }

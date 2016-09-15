@@ -22,6 +22,9 @@
 .ui-widget-content {
   color: $text-color;
 }
+.ui-widget-content a {
+  color: $link-color;
+}
 
 /**
  * Override jQuery UI tabs default styles.
@@ -56,6 +59,32 @@
   .ui-tabs-panel {
     border-width: 0 1px 1px;
     border-color: $border-color;
+  }
+}
+
+@media #{$palm-only} {
+  .ui-tabs .ui-tabs-nav {
+    @include display-flex;
+    li {
+      @include flex-grow(1);
+      @include align-self(stretch);
+      width: 50%;
+      float: none;
+      text-align: center;
+      font-size: 16px;
+      white-space: normal;
+      a {
+        float: none;
+        display: block;
+      }
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+    &::after {
+      content: '';
+      display: none;
+    }
   }
 }
 

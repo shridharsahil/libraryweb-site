@@ -35,3 +35,26 @@ function uclalib_omega_preprocess_panels_pane(&$vars) {
     }
   }
 }
+
+ /**
+ * Add data-th attributes to table cells in views.
+ */
+function uclalib_preprocess_views_view_table(&$vars) {
+  $view     = $vars['view'];
+  $options  = $vars['options'];
+  $handler  = $view->style_plugin;
+  $fields   = &$view->field;
+  $columns  = $handler->sanitize_columns($options['columns'], $fields);
+  $rows     = $vars['rows'];
+  $result   = $vars['result'];
+  foreach ($columns as $field => $column) {
+    foreach ($result as $num => $row) {
+      if( empty($rows[$num][$field]) ) {
+        $vars['field_classes'][$field][$num] .= ' responsive-data-table__empty-cell';
+      }
+      else {
+        $vars['field_attributes'][$field][$num]['data-label'] = filter_xss(!empty($fields[$field]) ? $fields[$field]->label() : '');
+      }
+    }
+  }
+}

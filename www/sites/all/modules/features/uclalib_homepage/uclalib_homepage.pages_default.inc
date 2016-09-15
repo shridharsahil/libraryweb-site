@@ -54,12 +54,13 @@ function uclalib_homepage_default_page_manager_pages() {
       'top_left_main' => NULL,
       'top_left_bottom_left' => NULL,
       'top_left_bottom_right' => NULL,
+      'top_left_bottom_after' => NULL,
       'top_right_sidebar' => NULL,
       'bottom_left' => NULL,
       'bottom_right' => NULL,
       'top' => NULL,
     ),
-    'bottom_left' => array(
+    'top_left_bottom_after' => array(
       'style' => 'tabs',
     ),
   );
@@ -71,7 +72,7 @@ function uclalib_homepage_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-97526c73-2b2d-4c6e-b996-4400d4747414';
-    $pane->panel = 'bottom_left';
+    $pane->panel = 'top_left_bottom_after';
     $pane->type = 'block';
     $pane->subtype = 'bean-upcoming-events-homepage';
     $pane->shown = TRUE;
@@ -90,10 +91,10 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '97526c73-2b2d-4c6e-b996-4400d4747414';
     $display->content['new-97526c73-2b2d-4c6e-b996-4400d4747414'] = $pane;
-    $display->panels['bottom_left'][0] = 'new-97526c73-2b2d-4c6e-b996-4400d4747414';
+    $display->panels['top_left_bottom_after'][0] = 'new-97526c73-2b2d-4c6e-b996-4400d4747414';
     $pane = new stdClass();
     $pane->pid = 'new-ec681041-0a57-47c4-80dd-9b52a8f3acd4';
-    $pane->panel = 'bottom_left';
+    $pane->panel = 'top_left_bottom_after';
     $pane->type = 'block';
     $pane->subtype = 'bean-homepage-news';
     $pane->shown = TRUE;
@@ -112,7 +113,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'ec681041-0a57-47c4-80dd-9b52a8f3acd4';
     $display->content['new-ec681041-0a57-47c4-80dd-9b52a8f3acd4'] = $pane;
-    $display->panels['bottom_left'][1] = 'new-ec681041-0a57-47c4-80dd-9b52a8f3acd4';
+    $display->panels['top_left_bottom_after'][1] = 'new-ec681041-0a57-47c4-80dd-9b52a8f3acd4';
     $pane = new stdClass();
     $pane->pid = 'new-a6495e16-112d-4a6a-9c90-9e8412d95a0a';
     $pane->panel = 'top_left_bottom_left';
@@ -133,7 +134,7 @@ function uclalib_homepage_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'pane-todays-hours',
+      'css_class' => 'pane-todays-hours mobile-collapsible',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -159,7 +160,10 @@ function uclalib_homepage_default_page_manager_pages() {
       ),
       'style' => 'border-blue',
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'mobile-collapsible',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -184,7 +188,10 @@ function uclalib_homepage_default_page_manager_pages() {
       ),
       'style' => 'border-blue',
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'mobile-collapsible',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();

@@ -281,7 +281,9 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'clearfix';
+  $handler->display->display_options['style_options']['row_class'] = 'news-teaser news-teaser--with-thumbnail';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -364,6 +366,73 @@ function uclalib_search_views_default_views() {
   /* Display: News Search */
   $handler = $view->new_display('panel_pane', 'News Search', 'news_search');
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Content: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
+  /* Field: Indexed Content: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['label'] = '';
+  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
+  /* Field: Indexed Content: Exhibition Thumbnail */
+  $handler->display->display_options['fields']['field_event_thumbnail']['id'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['field_event_thumbnail']['field'] = 'field_event_thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_wrapper_class'] = 'news-teaser__thumbnail';
+  $handler->display->display_options['fields']['field_event_thumbnail']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_event_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_event_thumbnail']['settings'] = array(
+    'image_style' => 'widescreen_medium',
+    'image_link' => 'content',
+  );
+  /* Field: Indexed Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Content: The main body text */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'search_api_index_site_general_search';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '140';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'more';
+  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = '[url]';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '300',
+  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="news-teaser__title">[title]</div>
+<div class="news-teaser__description">[body]</div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'news-teaser__text-wrapper';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;

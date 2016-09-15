@@ -1,0 +1,47 @@
+@media #{$palm-only} {
+  .responsive-data-table {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 0;
+      table-layout: fixed;
+    }
+    thead th {
+      display: none;
+    }
+    table tr,
+    table tr.odd {
+      background: none;
+    }
+    td {
+      display: block;
+      border-bottom: 1px solid $ucla-gray;
+      text-align: right;
+      padding: 0.4em 0;
+      color: $light-text-color;
+      &:before {
+        // Adds the original header title infront of each table cell
+        content: attr(data-label);
+        float: left;
+        margin-right: 1em;
+        text-align: left;
+      }
+      &.views-field-title {
+        font-weight: bold;
+        text-align: left;
+        border: 0;
+        font-size: 16px;
+        padding: 1em 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .views-field-contextual-links {
+      display: none;
+    }
+    .responsive-data-table__empty-cell {
+      display: none;
+    }
+  }
+}

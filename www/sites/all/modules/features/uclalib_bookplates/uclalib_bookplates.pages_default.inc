@@ -120,7 +120,7 @@ function uclalib_bookplates_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'sidebar-options',
+      'css_class' => 'sidebar-options mobile-collapsible',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -278,7 +278,10 @@ function uclalib_bookplates_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'mobile-collapsible',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -747,7 +750,10 @@ function uclalib_bookplates_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'mobile-collapsible',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();

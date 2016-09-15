@@ -5,11 +5,12 @@
     font-size: 16px;
   }
   .field--name-field-showcase-caption {
-    font-size: 12px;
+    font-size: 14px;
     color: $light-text-color;
   }
   img {
     display: block;
+    margin: 0 auto;
   }
   .field-collection-view {
     margin: 0;
@@ -25,24 +26,48 @@
     padding: 0;
     border: none;
   }
+  @media #{$lap-only} {
+    img {
+      float: left;
+      margin-right: 20px;
+      max-width: 50%;
+    }
+    .field-collection-view {
+      text-align: left;
+    }
+  }
+  @media #{$palm-lap-only} {
+    .field--name-field-showcase-caption {
+      font-size: 14px;
+      margin-top: 3px;
+    }
+  }
+  @media #{$palm-only} {
+    .field-collection-view {
+      max-width: 290px;
+      margin: 0 auto;
+    }
+  }
 }
 
-.l-region--top {
-  .bean-showcase {
-    .field--name-field-showcase > .field__items > .field__item {
-      float: left;
-      line-height: 1.1em;
-      margin: 24px 1.12% 0 0;
-      text-align: center;
-      width: 24.16%;
-      &:nth-child(4n+4) { // The last element of each row of four.
-        margin: 0;
-      }
-      &:nth-child(4n+5) { // The first element on a new row of four.
-        clear: left;
-      }
-      &:nth-child(-n+4) { // Select the first four elements.
-        margin-top: 0;
+@media #{$desk-only} {
+  .l-region--top {
+    .bean-showcase {
+      .field--name-field-showcase > .field__items > .field__item {
+        float: left;
+        line-height: 1.1em;
+        margin: 24px 1.12% 0 0;
+        text-align: center;
+        width: 24.16%;
+        &:nth-child(4n+4) { // The last element of each row of four.
+          margin: 0;
+        }
+        &:nth-child(4n+5) { // The first element on a new row of four.
+          clear: left;
+        }
+        &:nth-child(-n+4) { // Select the first four elements.
+          margin-top: 0;
+        }
       }
     }
   }

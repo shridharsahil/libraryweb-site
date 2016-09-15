@@ -50,7 +50,7 @@ function uclalib_news_events_landing_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'page-hide-title',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -76,7 +76,7 @@ function uclalib_news_events_landing_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'News & Events';
   $display->uuid = '81ff575b-b17b-4871-a3ed-f813b4574f00';
   $display->window_title = 'UCLA Library Upcoming News & Events';
   $display->content = array();
@@ -118,14 +118,17 @@ function uclalib_news_events_landing_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'lap-desk-only',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '182fca69-d75c-482e-8da8-f01ad1ff1c72';
     $display->content['new-182fca69-d75c-482e-8da8-f01ad1ff1c72'] = $pane;
     $display->panels['top'][0] = 'new-182fca69-d75c-482e-8da8-f01ad1ff1c72';
-  $display->hide_title = PANELS_TITLE_NONE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;

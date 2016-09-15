@@ -1,3 +1,5 @@
+$mobile-nav-trigger-width: 41px;
+
 .l-header-wrapper {
   background: $header-bg-color;
   font-size: 13px;
@@ -6,6 +8,7 @@
 }
 
 .l-header {
+  position: relative;
   a, a:visited {
     color: $header-link-color;
   }
@@ -13,44 +16,145 @@
     text-decoration: underline;
   }
   .menu {
-    @include horizontal-list;
-    list-style: none;
-    list-style-image: none;
-    li {
-      margin: 0;
-      list-style-image: none;
-      list-style-type: none;
-      a {
-        padding-right: 4px;
-      }
-      &:after {
-        content: " | ";
-      }
-      &.last:after {
-        content: "";
-        a {
-          padding-right: 0;
-        }
-      }
-    }
     .expanded {
       .menu {
         display: none;
       }
+    }
+    @media #{$desktop-header} {
+      @include horizontal-list;
+      list-style: none;
+      list-style-image: none;
+      li {
+        margin: 0;
+        list-style-image: none;
+        list-style-type: none;
+        a {
+          padding-right: 4px;
+        }
+        &:after {
+          content: " | ";
+        }
+        &.last:after {
+          content: "";
+          a {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    @media #{$mobile-header} {
+      @include display-flex;
+      @include flex-direction(row);
+      background-color: $nav-bg-color;
+      margin: 0;
+      margin-right: $mobile-nav-trigger-width;
+      li {
+        @include display-flex('inline-flex');
+        @include flex-grow(1);
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        // Reduce the font size to accomodate the logged in items.
+        .logged-in & {
+          font-size: 13px;
+        }
+      }
+      a {
+        display: block;
+        width: 100%;
+        color: $nav-link-color;
+        font-weight: normal;
+        border-right: 1px solid white;
+        padding: 10px;
+        &.active-trail,
+        &.active {
+          background: white;
+        }
+      }
+    }
+  }
+  .header-search-form-wrapper .form-actions {
+    @media #{$mobile-header} {
+      display: none;
     }
   }
 }
 
 .l-region--branding {
   padding-top: 14px;
+  @media #{$mobile-header} {
+    padding: 17px 14px 14px;
+  }
 }
 .l-region--header {
   text-align: right;
   .panel-pane {
+    @media #{$desktop-header} {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 12px;
+      margin-right: -4px;
+    }
+  }
+  .pane-give-now-button {
+    @media #{$mobile-header} {
+      display: none;
+    }
+  }
+  .pane-ask-a-librarian {
+    @media #{$mobile-header} {
+      display: none;
+    }
+  }
+}
+
+.mobile-nav-trigger {
+  @media #{$desktop-header} {
+    display: none;
+  }
+  @media #{$mobile-header} {
+    display: block;
+    height: $mobile-nav-trigger-width;
+    width: $mobile-nav-trigger-width;
+    padding: 10px;
+    background: $ucla-yellow;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font: 0/0 a;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 100;
+  }
+  .has-mobile-nav & {
+    height: $mobile-nav-trigger-width+1;
+    bottom: -1px;
+  }
+}
+
+// Disable scrolling when the mobile nav is active.
+.has-mobile-nav {
+  @media #{$mobile-header} {
+    overflow: hidden;
+  }
+}
+
+@media #{$desktop-header} and (max-width: 884px) {
+  .logged-in .pane-block.pane-system-user-menu .pane-content ul.menu li {
+    width: 50%;
+    padding: 0;
+  }
+  .logged-in .pane-block.pane-system-user-menu .pane-content ul.menu {
+    width: 165px;
     display: inline-block;
-    vertical-align: middle;
-    margin-left: 12px;
-    margin-right: -4px;
+    padding: 0;
+    margin: 0;
+  }
+  .logged-in .l-header .menu li:after {
+    content: "";
+  }
+  .logged-in .l-header {
+    padding-left: 15px;
   }
 }
 

@@ -26,7 +26,7 @@
     margin-right: 0;
   }
 }
-  @media only screen and (max-width: 884px) {
+  @media only screen and #{$desktop-header} and (max-width: 910px) {
     .logged-in .pane-block.pane-system-user-menu .pane-content ul.menu li {
       width: 50%;
       padding: 0;

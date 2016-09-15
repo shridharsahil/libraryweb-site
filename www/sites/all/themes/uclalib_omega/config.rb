@@ -24,8 +24,9 @@ javascripts_dir = "js"
 # Require any additional compass plugins installed on your system.
 require 'compass-normalize'
 require 'rgbapng'
+require 'breakpoint'
+require 'singularitygs'
 require 'toolkit'
-require 'susy'
 require 'sass-globbing'
 
 ##
@@ -43,6 +44,9 @@ relative_assets = true
 
 # Conditionally enable line comments when in development mode.
 line_comments = (environment == :production) ? false : true
+
+# Source maps in development mode.
+sourcemap = (environment == :production) ? :false : :true
 
 # Output debugging info in development mode.
 sass_options = (environment == :production) ? {} : {:debug_info => false}

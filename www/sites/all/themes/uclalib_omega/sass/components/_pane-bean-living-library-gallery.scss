@@ -1,9 +1,16 @@
 .pane-bean-living-library-gallery {
   margin-bottom: 10px !important;
+  display: none;
+
+  @media #{$desk-only} {
+    display: block;
+  }
+
   .field__item {
     float: left;
     margin: 0 1.6% 0 0;
     width: 23.8%;
+
     &:nth-child(4) {
       margin: 0;
     }
