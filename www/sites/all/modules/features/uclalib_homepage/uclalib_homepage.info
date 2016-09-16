@@ -1,6 +1,6 @@
 name = UCLALIB Homepage
 description = Homepage panel.
-core = 7.x
+core = 7.x-1.0-beta1
 package = UCLALIB
 dependencies[] = ctools
 dependencies[] = page_manager
@@ -10,3 +10,4 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[page_manager_pages][] = homepage
 features[variable][] = site_frontpage
+mtime = 1449164158

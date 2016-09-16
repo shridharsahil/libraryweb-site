@@ -26,6 +26,15 @@
   clear: both;
 }
 
+.page-homepage .pane-bean-link-list span.icon.icomoon {
+  color: #2d2f35;
+  float: left;
+  font-size: 23px;
+  padding-right: 9px;
+  min-height: 27px;
+  line-height: 16px;
+}
+
 @media (min-width: 768px) {
   /**
    * Main columns and separators.
