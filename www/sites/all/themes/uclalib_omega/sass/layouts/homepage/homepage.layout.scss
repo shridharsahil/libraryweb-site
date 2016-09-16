@@ -4,6 +4,7 @@
 @import "abstractions/faux-columns";
 @import "abstractions/clearfix";
 @import "variables/breakpoints";
+@import "variables/colors";
 
 
 .l-region {
@@ -27,6 +28,14 @@
 .l-region--top-left-bottom-after {
   margin-top: 25px;
   clear: both;
+}
+.page-homepage .pane-bean-link-list span.icon.icomoon {
+  color: $ucla-dark-gray;
+  float: left;
+  font-size: 23px;
+  padding-right: 9px;
+  min-height: 27px;
+  line-height: 16px;
 }
 
 @media #{$desk-only} {
@@ -90,17 +99,3 @@
     }
   }
 }
-
-// TODO: added per WST request
-// .page-homepage {
-//   .pane-bean-link-list {
-//     span.icon.icomoon {
-//       color: #8e8e8e;
-//       float: left;
-//       font-size: 25px;
-//       line-height: 15px;
-//       padding-right: 9px;
-//       text-align: left;
-//     }
-//   }
-// }
