@@ -135,7 +135,7 @@ table[border="1"] td {
 html {
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.875em;
-  color: #666;
+  color: #666666;
 }
 
 a {
@@ -167,7 +167,7 @@ a:hover, a:focus {
 
 .l-colophon-wrapper {
   background: #ececec;
-  color: #333;
+  color: #333333;
   padding: 50px 0;
 }
 
@@ -333,7 +333,7 @@ a:hover, a:focus {
   .l-header .menu a {
     display: block;
     width: 100%;
-    color: #333;
+    color: #333333;
     font-weight: normal;
     border-right: 1px solid white;
     padding: 10px;
@@ -522,7 +522,7 @@ a[href="#main-content"] {
   }
   .l-navigation ul.primary-links > li a,
   .l-navigation ul.primary-links > li a:visited {
-    color: #333;
+    color: #333333;
   }
   .l-navigation ul.primary-links > li.active-trail, .l-navigation ul.primary-links > li.active-trail:hover {
     background: #eff3f4;
@@ -603,7 +603,7 @@ a[href="#main-content"] {
     line-height: 1.2em;
     text-align: center;
     border-top: 1px solid white;
-    color: #333;
+    color: #333333;
   }
   .l-navigation-wrapper .pane-menu-menu-colophon-first {
     border-right: 1px solid white;
@@ -660,7 +660,7 @@ a[href="#main-content"] {
     display: block;
     width: 100%;
     background: #fdb930;
-    color: #333;
+    color: #333333;
     padding: 10px;
   }
   .primary-links a.active {
@@ -719,7 +719,7 @@ a[href="#main-content"] {
 }
 .bean-showcase .field--name-field-showcase-caption {
   font-size: 14px;
-  color: #999;
+  color: #999999;
 }
 .bean-showcase img {
   display: block;
@@ -1279,7 +1279,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
   margin: 2px !important;
 }
 .sidebar-search .form-submit {
-  background: #fff url(../images/icon-search.png) 50% 55% no-repeat;
+  background: white url(../images/icon-search.png) 50% 55% no-repeat;
   width: 24px;
   text-indent: -99999em;
   border: none;
@@ -1778,7 +1778,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
  * Use the site-wide content color in jquery ui widgets.
  */
 .ui-widget-content {
-  color: #666;
+  color: #666666;
 }
 
 .ui-widget-content a {
@@ -1890,7 +1890,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
 }
 
 .menu-icon__line {
-  background: #333;
+  background: #333333;
   border-radius: 1px;
   position: absolute;
   margin-top: 12px;
@@ -2090,7 +2090,7 @@ a.more-link,
 }
 
 @media (min-width: 481px) {
-  .page-hide-title .pane-page-title {
+  .page-hide-title .pane-page-title, .page-hide-title .pane-uclalib-title {
     display: none;
   }
 }
@@ -2127,7 +2127,7 @@ a.more-link,
   padding-right: 4.6875em;
 }
 .bean-news-and-events-bean .pane-title a {
-  color: #333;
+  color: #333333;
   font-size: 1.625em;
   text-decoration: none;
 }
@@ -2249,7 +2249,7 @@ a.more-link,
   margin: 0;
 }
 
-.page-search404 .pane-page-title {
+.page-search404 .pane-page-title, .page-search404 .pane-uclalib-title {
   padding-top: 40px;
 }
 .page-search404 .pane-page-content {
@@ -2297,7 +2297,7 @@ a.more-link,
   padding: 0;
 }
 .pane-ask-a-librarian a {
-  color: #fff;
+  color: white;
   text-shadow: 0 .04em .02em #8d6e2d;
 }
 .pane-ask-a-librarian a, .pane-ask-a-librarian a:hover, .pane-ask-a-librarian a:active, .pane-ask-a-librarian a:focus {
@@ -2499,7 +2499,7 @@ a.more-link,
 }
 
 .uclalib-nav-breadcrumb, .uclalib-nav-breadcrumb a {
-  color: #666;
+  color: #666666;
 }
 
 .uclalib-nav-breadcrumb + h1 {
@@ -2549,7 +2549,7 @@ a.more-link,
   margin: 6px 0 3px;
 }
 .pane-daterangepicker .date-input {
-  color: #666;
+  color: #666666;
   font-family: "AkzidenzGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.143em;
   padding: 10px 23px 8px 1px;
@@ -2751,7 +2751,7 @@ a.more-link,
     padding: 0 .4em;
   }
   .pane-location-contact--inline a {
-    color: #666;
+    color: #666666;
     transition: color .3s ease-out;
   }
   .pane-location-contact--inline a:hover, .pane-location-contact--inline a:active, .pane-location-contact--inline a:focus {
@@ -3019,13 +3019,13 @@ a.more-link,
 }
 
 a.previous-week:before {
-  border-right: 0.4em solid #666 !important;
+  border-right: 0.4em solid #666666 !important;
   left: 0;
   margin-top: .15em !important;
 }
 
 a.next-week:after {
-  border-left: 0.4em solid #666 !important;
+  border-left: 0.4em solid #666666 !important;
   right: 0;
   margin-top: .15em !important;
 }
@@ -3209,7 +3209,7 @@ a.next-week:after {
   background: #fee4b1;
 }
 
-.pane-page-title h1, .pane-page-title h2,
+.pane-page-title h1, .pane-uclalib-title h1, .pane-page-title h2, .pane-uclalib-title h2,
 .pane-node-title h1,
 .pane-node-title h2 {
   font-size: 30px;
@@ -3218,7 +3218,7 @@ a.next-week:after {
   margin: 27px 0;
 }
 @media (max-width: 767px) {
-  .pane-page-title h1, .pane-page-title h2,
+  .pane-page-title h1, .pane-uclalib-title h1, .pane-page-title h2, .pane-uclalib-title h2,
   .pane-node-title h1,
   .pane-node-title h2 {
     font-size: 25px;
@@ -3226,8 +3226,16 @@ a.next-week:after {
   }
 }
 
-.panel-pane.pane-page-title {
+.panel-pane.pane-page-title, .panel-pane.pane-uclalib-title {
   padding-top: 5px;
+}
+
+.pane-uclalib-title h1, .pane-uclalib-title h2 {
+  margin-top: 0;
+}
+
+.l-region--top .panel-pane.pane-uclalib-title {
+  margin: 0;
 }
 
 @media (max-width: 699px) {
@@ -3286,7 +3294,7 @@ a.next-week:after {
   -webkit-appearance: none;
   margin: 0;
   padding: .5em .6em .4em;
-  background: #fff url(../images/icon-search.png) no-repeat 50% 50%;
+  background: white url(../images/icon-search.png) no-repeat 50% 50%;
   text-decoration: none;
   font-weight: 100;
   text-indent: -999em;
@@ -3869,7 +3877,7 @@ a.next-week:after {
     border-bottom: 1px solid #d7d9da;
     text-align: right;
     padding: 0.4em 0;
-    color: #999;
+    color: #999999;
   }
   .responsive-data-table td:before {
     content: attr(data-label);
