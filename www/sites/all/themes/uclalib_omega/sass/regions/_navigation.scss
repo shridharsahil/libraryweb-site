@@ -108,8 +108,11 @@ $nav-horiz-space: 8px;
         background-color: $ucla-gray;
       }
       a {
-        display: block;
+        @include display-flex;
+        @include align-items(center);
+        @include justify-content(center);
         padding: 10px 20px;
+        min-height: 3.5em;
         font-size: 18px;
         line-height: 1.2em;
         text-align: center;
@@ -130,18 +133,19 @@ $nav-horiz-space: 8px;
     }
   }
   .l-region--navigation {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 105px;
     left: 0;
+    bottom: 0;
     width: 100vw;
     z-index: 50;
     opacity: 0;
     pointer-events: none;
-    min-height: 100vh;
     background: white;
     &.is-open {
       opacity: 1;
       pointer-events: auto;
+      overflow-y: scroll;
     }
     &.is-animating {
       @include transition(opacity 0.3s ease-out);
