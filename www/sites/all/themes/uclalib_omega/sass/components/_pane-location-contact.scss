@@ -54,6 +54,9 @@
 
 .pane-location-contact--inline {
   @media #{$desk-only} {
+    display: inline;
+    font-size: 13px;
+
     .location__address,
     .location__phone,
     .location__email {

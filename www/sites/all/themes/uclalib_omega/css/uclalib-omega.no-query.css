@@ -2746,6 +2746,10 @@ a.more-link,
 }
 
 @media (min-width: 768px) {
+  .pane-location-contact--inline {
+    display: inline;
+    font-size: 13px;
+  }
   .pane-location-contact--inline .location__address,
   .pane-location-contact--inline .location__phone,
   .pane-location-contact--inline .location__email {
