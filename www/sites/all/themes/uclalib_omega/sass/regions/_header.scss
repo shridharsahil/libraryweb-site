@@ -126,7 +126,7 @@ $mobile-nav-trigger-width: 41px;
     -webkit-tap-highlight-color: transparent;
     z-index: 100;
   }
-  .has-mobile-nav & {
+  .has-mobile-nav:not(.homepage) & {
     height: $mobile-nav-trigger-width+1;
     bottom: -1px;
   }
