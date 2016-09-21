@@ -175,7 +175,7 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->panel = 'top_left_bottom_right';
     $pane->type = 'block';
     $pane->subtype = 'bean-homepage-equipment-block';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 0,
@@ -199,6 +199,44 @@ function uclalib_homepage_default_page_manager_pages() {
     $pane->uuid = '517ce809-7026-47c4-ad9c-2eb1f800d2fd';
     $display->content['new-517ce809-7026-47c4-ad9c-2eb1f800d2fd'] = $pane;
     $display->panels['top_left_bottom_right'][1] = 'new-517ce809-7026-47c4-ad9c-2eb1f800d2fd';
+    $pane = new stdClass();
+    $pane->pid = 'new-2e1fe2dd-919b-4f07-8924-8216471fc9d8';
+    $pane->panel = 'top_left_bottom_right';
+    $pane->type = 'views';
+    $pane->subtype = 'equipment_block_hp_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'title_alignment' => 'left',
+      ),
+      'style' => 'border-blue',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '2e1fe2dd-919b-4f07-8924-8216471fc9d8';
+    $display->content['new-2e1fe2dd-919b-4f07-8924-8216471fc9d8'] = $pane;
+    $display->panels['top_left_bottom_right'][2] = 'new-2e1fe2dd-919b-4f07-8924-8216471fc9d8';
     $pane = new stdClass();
     $pane->pid = 'new-768d72ca-cc3f-49d5-9995-d55c357ef337';
     $pane->panel = 'top_left_main';

@@ -26,13 +26,21 @@
   clear: both;
 }
 
-.page-homepage .pane-bean-link-list span.icon.icomoon {
-  color: #2d2f35;
+.no-bullets ul li span.icon.icomoon {
+  color: #666666;
   float: left;
   font-size: 23px;
   padding-right: 9px;
   min-height: 27px;
   line-height: 16px;
+}
+
+.no-bullets ul {
+  list-style: outside none none;
+  padding: 0;
+}
+.no-bullets ul li {
+  padding-bottom: 13px;
 }
 
 @media (min-width: 768px) {

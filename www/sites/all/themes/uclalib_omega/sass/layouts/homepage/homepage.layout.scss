@@ -29,15 +29,21 @@
   margin-top: 25px;
   clear: both;
 }
-.page-homepage .pane-bean-link-list span.icon.icomoon {
-  color: $ucla-dark-gray;
+.no-bullets ul li span.icon.icomoon {
+  color: #666666;
   float: left;
   font-size: 23px;
   padding-right: 9px;
   min-height: 27px;
   line-height: 16px;
 }
-
+.no-bullets ul {
+  list-style: outside none none;
+  padding: 0;
+  li {
+    padding-bottom: 13px;
+  }
+}
 @media #{$desk-only} {
 
   // 2-column assymetrical grid w/ fixed 20px gutters between columns.
