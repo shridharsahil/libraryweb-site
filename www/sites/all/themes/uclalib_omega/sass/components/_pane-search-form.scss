@@ -1,5 +1,19 @@
 .pane-search-form {
-
+  @media #{$mobile-header} {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 41px;
+    opacity: 0;
+    pointer-events: none;
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    &.is-animating {
+      @include transition(opacity 0.3s ease-out);
+    }
+  }
 }
 .header-search-form-label {
 
@@ -15,6 +29,10 @@
   .form-type-textfield {
     margin: 1em -4px 1.3em 0;
     display: inline-block;
+    @media #{$mobile-header} {
+      margin: 0;
+      width: 100%;
+    }
   }
   .form-actions {
     margin: 1em 0 1.3em;
@@ -25,6 +43,12 @@
     background: #fff;
     padding: .5em .6em .4em;
     font-weight: 100;
+    @media #{$mobile-header} {
+      width: 100%;
+      font-size: 18px;
+      line-height: 1.3em;
+      padding: .4em .6em;
+    }
   }
   .form-submit {
     background: none;
@@ -42,5 +66,58 @@
   .form-submit:active,
   .form-submit:focus {
     background-image: url(../images/icon-search-hover.png);
+  }
+}
+
+.mobile-search-trigger {
+  @media #{$desktop-header} {
+    display: none;
+  }
+  @media #{$mobile-header} {
+    display: block;
+    height: 37px;
+    width: 40px;
+    padding: 8px 15px 8px 8px;
+    background: transparent url(../images/icon-mobile-search.svg) no-repeat;
+    @include background-size(auto 100%);
+    background-origin: content-box;
+    position: absolute;
+    right: 0;
+    top: 14px;
+    font: 0/0 a;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 100;
+    .has-search-open & {
+      background-image: none;
+    }
+  }
+  .mobile-search-trigger__close-left,
+  .mobile-search-trigger__close-right {
+    background: white;
+    display: inline-block;
+    height: 0;
+    opacity: 0;
+    padding-bottom: 55%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: rotate(0deg);
+    transition: transform .25s ease-out .1s, opacity .2s ease;
+    width: 1px;
+    z-index: 1;
+  }
+
+  .mobile-search-trigger__close-left {
+    .has-search-open & {
+      opacity: 1;
+      transform: rotate(45deg);
+    }
+  }
+
+  .mobile-search-trigger__close-right {
+    .has-search-open & {
+      opacity: 1;
+      transform: rotate(-45deg);
+    }
   }
 }

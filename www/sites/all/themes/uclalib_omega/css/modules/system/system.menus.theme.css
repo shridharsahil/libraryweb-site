@@ -15,16 +15,16 @@
   /* Menu Item Hierarchy Modifiers */
 }
 .menu .expanded {
-  list-style-image: url('../../../images/misc/menu-expanded.png?1447171341');
+  list-style-image: url("../../../images/misc/menu-expanded.png");
   list-style-type: circle;
 }
 .menu .collapsed {
-  list-style-image: url('../../../images/misc/menu-collapsed.png?1447171341');
+  list-style-image: url("../../../images/misc/menu-collapsed.png");
   /* LTR */
   list-style-type: disc;
 }
 .menu .leaf {
-  list-style-image: url('../../../images/misc/menu-leaf.png?1447171341');
+  list-style-image: url("../../../images/misc/menu-leaf.png");
   list-style-type: square;
 }
 .menu ul {
@@ -89,7 +89,8 @@
 
 /* Primary Tabs */
 .tabs--primary {
-  margin-top: 1em;
+  margin: 0;
+  padding-top: 1em;
 }
 .tabs--primary a {
   padding: 0.3em 0.8em;
@@ -101,3 +102,5 @@
   margin: 0.4em 0;
   font-size: 1.071em;
 }
+
+/*# sourceMappingURL=system.menus.theme.css.map */

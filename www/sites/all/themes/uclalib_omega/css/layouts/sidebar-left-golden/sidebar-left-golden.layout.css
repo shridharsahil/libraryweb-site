@@ -1,103 +1,116 @@
 .l-region {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.panel-sidebar-left-golden {
-  position: relative;
+@media (min-width: 768px) {
+  .panel-sidebar-left-golden {
+    position: relative;
+  }
+  .panel-sidebar-left-golden:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .l-region--sidebar-left {
+    width: 23.80952%;
+    float: left;
+    margin-right: -100%;
+    clear: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 0;
+    clear: left;
+  }
+  .l-region--sidebar-left:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0%;
+    width: 23.80952%;
+    bottom: 0;
+    background: "";
+  }
+
+  .l-region--main-column {
+    max-width: 50em;
+  }
+
+  .with-sidebar-left .l-region--main-column {
+    max-width: none;
+    width: 76.19048%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-right: 0;
+  }
+  .with-sidebar-left .l-region--main-column:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 23.80952%;
+    width: 76.19048%;
+    bottom: 0;
+    background: "";
+  }
+
+  .l-region--main,
+  .l-region--secondary {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    clear: both;
+    float: left;
+  }
+
+  .l-region--below-main-left,
+  .l-region--below-secondary-left {
+    width: 60%;
+    float: left;
+    margin-right: -100%;
+    clear: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 0;
+    clear: left;
+  }
+
+  .l-region--below-main-right,
+  .l-region--below-secondary-right {
+    width: 40%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-right: 0;
+    clear: right;
+  }
 }
-.panel-sidebar-left-golden:after {
-  content: "";
-  display: table;
-  clear: both;
+@media (max-width: 767px) {
+  .l-region--below-main-left,
+  .l-region--below-main-right,
+  .l-region--below-secondary-left,
+  .l-region--below-secondary-right {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
-.l-region--sidebar-left {
-  width: 23.80952%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0%;
-  clear: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-left: 0;
-  clear: left;
-}
-.l-region--sidebar-left:before {
-  content: " ";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0%;
-  width: 23.80952%;
-  bottom: 0;
-  background: "";
-}
-
-.l-region--main-column {
-  max-width: 50em;
-}
-
-.with-sidebar-left .l-region--main-column {
-  max-width: none;
-  width: 76.19048%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-right: 0;
-}
-.with-sidebar-left .l-region--main-column:before {
-  content: " ";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 23.80952%;
-  width: 76.19048%;
-  bottom: 0;
-  background: "";
-}
-
-.l-region--main,
-.l-region--secondary {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-left: 0;
-  padding-right: 0;
-  clear: both;
-  float: left;
-}
-
-.l-region--below-main-left,
-.l-region--below-secondary-left {
-  width: 60%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0%;
-  clear: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-left: 0;
-  clear: left;
-}
-
-.l-region--below-main-right,
-.l-region--below-secondary-right {
-  width: 40%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-right: 0;
-  clear: right;
-}
+/*# sourceMappingURL=sidebar-left-golden.layout.css.map */

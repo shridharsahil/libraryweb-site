@@ -1,0 +1,15 @@
+$mobile-header: "(max-width: 699px)";
+$desktop-header: "(min-width: 700px)";
+
+$opening-hours-mobile-only: "(max-width: 620px)";
+
+$palm-only: "(max-width: 480px)";
+$palm-lap-only:  "(max-width: 767px)";
+
+// This is an intermediate breakpoint for certain pages like the homepage where
+// additional layouts are needed between small mobile and larger tablets.
+$lap-only: "(min-width: 481px) and (max-width: 767px)";
+$lap-desk-only: "(min-width: 481px)";
+
+// The site lump tablets and desktops into the same breakpoint.
+$desk-only: "(min-width: 768px)";

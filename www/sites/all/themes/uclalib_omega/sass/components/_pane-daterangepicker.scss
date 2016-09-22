@@ -1,7 +1,9 @@
 .pane-daterangepicker {
-  border-bottom: 1px solid $border-color;
-  margin-bottom: 28px;
   padding-bottom: 20px;
+  @media #{$desk-only} {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 28px;
+  }
   h2 {
     font-size: 1.143em;
     font-weight: bold;
@@ -12,6 +14,9 @@
     font-family: $akzidenz;
     font-size: 1.143em;
     padding: 10px 23px 8px 1px;
+    @media #{$palm-only} {
+      font-size: 14px;
+    }
   }
   .date-input:hover,
   .date-input:focus,

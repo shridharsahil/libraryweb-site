@@ -34,6 +34,11 @@
           <?php print $content['top_left_bottom_right'] ?>
         </div>
       <?php endif; ?>
+      <?php if (!empty($content['top_left_bottom_after'])): ?>
+        <div<?php print drupal_attributes($region_attributes_array['top_left_bottom_after'])?>>
+          <?php print $content['top_left_bottom_after'] ?>
+        </div>
+      <?php endif; ?>
     </div> <!-- homepage-top-left -->
     <div class="homepage-top-right-sidebar">
       <?php if (!empty($content['top_right_sidebar'])): ?>

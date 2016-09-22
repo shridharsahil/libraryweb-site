@@ -17,6 +17,7 @@ $plugin = array(
     'top_left_main' => t('Top left main'),
     'top_left_bottom_left' => t('Top left bottom left'),
     'top_left_bottom_right' => t('Top left bottom right'),
+    'top_left_bottom_after' => t('Top left bottom after'),
     'top_right_sidebar' => t('Top right sidebar'),
     'bottom_left' => t('Bottom left'),
     'bottom_right' => t('Bottom left'),

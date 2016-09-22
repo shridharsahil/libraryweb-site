@@ -1,10 +1,5 @@
-@import "susy";
-@import "compass";
-@import "variables/grid";
-
-.l-page {
-  min-width: 768px;
-}
+@import "variables/breakpoints";
+@import "abstractions/clearfix";
 
 .l-header,
 .l-navigation,
@@ -12,47 +7,61 @@
 .l-highlighted,
 .l-colophon,
 .l-footer {
-  @include container;
   max-width: 1004px; // Override default width calculations.
-  _width: 1004px; // Override default width calculations.
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix;
 }
 
-.l-region--branding {
-  @include span-columns(3, 16);
-}
-.l-region--header {
-  @include span-columns(13 omega, 16);
-}
-
-// Save original susy grid values.
-$save-total-columns: $total-columns;
-$save-column-width: $column-width;
-$save-gutter-width: $gutter-width;
-$save-grid-padding: $grid-padding;
-
-// Custom susy grid values for colophon.
-$total-columns: 16;
-$column-width: 50px;
-$gutter-width: 0px;
-$grid-padding: 50px;
-
-.l-region--colophon-first {
-  @include span-columns(10, 16);
-  @include pad(0, 1, 16);
-  // margin-right: 0;
-}
-.l-region--colophon-second {
-  @include span-columns(3, 16);
-  @include pad(.6, 0, 16);
-  // margin-right: 0;
-}
-.l-region--colophon-third {
-  @include span-columns(3 omega, 16);
-  @include pad(.6, 0, 16);
+@media #{$mobile-header} {
+  .l-header,
+  .l-navigation {
+    padding: 0;
+  }
 }
 
-// Replace original susy grid values.
-$total-columns: $save-total-columns;
-$column-width: $save-column-width;
-$gutter-width: $save-gutter-width;
-$grid-padding: $save-grid-padding;
+// This output was produced by susy 1, but we've removed susy from the project
+// because it was only used here.  I was unable to achieve the same grid layout
+// for these elements with either susy 2 nor singularity, so opted to leave the
+// generated code with percentages from susy 1 and remove the dependency bloat.
+@media #{$desk-only} {
+
+  .l-region--branding {
+    width: 17.02128%;
+    float: left;
+    margin-right: 2.12766%;
+    display: inline;
+  }
+
+  .l-region--header {
+    width: 80.85106%;
+    float: right;
+    margin-right: 0;
+    display: inline;
+  }
+
+  .l-region--colophon-first {
+    width: 62.5%;
+    float: left;
+    display: inline;
+    padding-right: 6.25%;
+  }
+
+  .l-region--colophon-second {
+    width: 18.75%;
+    float: left;
+    display: inline;
+    padding-left: 3.75%;
+  }
+
+  .l-region--colophon-third {
+    width: 18.75%;
+    float: right;
+    display: inline;
+    padding-left: 3.75%;
+  }
+}

@@ -1,54 +1,74 @@
+@import "compass";
+@import "breakpoint";
 @import "singularitygs";
 @import "abstractions/faux-columns";
-
-// 2-column symetrical grid w/ fixed 50px gutters between columns.
-$grid: 1 1;
-$gutters: 50px;
-$gutter-styles: 'split'; // gitter is split between left and right of each col.
+@import "abstractions/clearfix";
+@import "variables/breakpoints";
 
 .l-region {
   @include box-sizing(border-box);
 }
 
-@include layout($grid) {
-  .panel-two-col {
-    //@include background-grid($color: blue);
-    @include clearfix;
-    position: relative; // Needed for faux-column.
+.l-region--main,
+.l-region--secondary {
+  clear: both;
+  float: left;
+}
+
+@media #{$desk-only} {
+  // 2-column symetrical grid w/ fixed 50px gutters between columns.
+  @include add-grid(1 1);
+  @include add-gutter(50px);
+  @include add-gutter-style('split'); // gutter is split between left and right of each col.
+
+  @include layout(1 1) {
+    .panel-two-column {
+      //@include background-grid($color: blue);
+      @include clearfix;
+      position: relative; // Needed for faux-column.
+    }
+
+    .l-region--main,
+    .l-region--secondary {
+      @include grid-span(2, 1);
+      padding-left: 0;
+      padding-right: 0;
+      clear: both;
+      float: left;
+    }
+
+    // Span 1 column, starting at the 1st column
+    .l-region--left,
+    .l-region--below-left {
+      @include grid-span(1, 1);
+      padding-left: 0;
+      clear: left;
+
+      // Full-height faux-column for adding a background color in the theme.
+      $left: column-span(0, 1); // Span 0 columns, starting from 1st column.
+      $width: column-span(1, 1); // Span 1 columns, starting from 1st column.
+      @include faux-column($left, $width/* , #ddd */);
+    }
+
+    // Span 1 column, starting at the 2nd column
+    .l-region--right,
+    .l-region--below-right {
+      @include grid-span(1, 2);
+      padding-right: 0;
+      clear: right;
+
+      // Full-height faux-column for adding a background color in the theme.
+      $left: column-span(1, 1); // Span 1 columns, starting from 1st column.
+      $width: column-span(1, 2); // Span 1 column, starting from 2nd column.
+      @include faux-column($left, $width/* , #eee */);
+    }
   }
+}
 
-  .l-region--main,
-  .l-region--secondary {
-    @include grid-span(2, 1);
-    padding-left: 0;
-    padding-right: 0;
-    clear: both;
-    float: left;
-  }
-
-  // Span 1 column, starting at the 1st column
-  .l-region--left,
-  .l-region--below-left {
-    @include grid-span(1, 1);
-    padding-left: 0;
-    clear: left;
-
-    // Full-height faux-column for adding a background color in the theme.
-    $left: column-span(0, 1); // Span 0 columns, starting from 1st column.
-    $width: column-span(1, 1); // Span 1 columns, starting from 1st column.
-    @include faux-column($left, $width/* , #ddd */);
-  }
-
-  // Span 1 column, starting at the 2nd column
-  .l-region--right,
+@media #{$palm-lap-only} {
+  .l-region--below-left,
   .l-region--below-right {
-    @include grid-span(1, 2);
-    padding-right: 0;
-    clear: right;
-
-    // Full-height faux-column for adding a background color in the theme.
-    $left: column-span(1, 1); // Span 1 columns, starting from 1st column.
-    $width: column-span(1, 2); // Span 1 column, starting from 2nd column.
-    @include faux-column($left, $width/* , #eee */);
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }

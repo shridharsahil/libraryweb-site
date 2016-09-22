@@ -11,6 +11,7 @@
 @mixin faux-column($left, $width, $background : '') {
    &:before {
     content: " ";
+    display: block;
     position: absolute; // The relative parent must not be the column itself, but the column's parent div wrapper
     z-index: -1;
     top: 0;

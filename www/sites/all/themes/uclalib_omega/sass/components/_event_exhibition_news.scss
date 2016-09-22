@@ -2,8 +2,10 @@
 .node-type-exhibition,
 .node-type-news {
   .l-region--bottom-left {
-    padding-right: 35px;
-    border-right: 1px solid $border-color;
+    @media #{$desk-only} {
+      padding-right: 35px;
+      border-right: 1px solid $border-color;
+    }
   }
   .l-region--bottom-right {
     padding-left: 35px;
@@ -38,6 +40,7 @@
     margin-top: 25px;
     margin-bottom: 35px;
     p {
+      word-wrap: break-word;
       margin: 0 0 1em !important;
     }
   }
@@ -93,6 +96,11 @@
     padding: 0;
   }
 }
+.pane-news-byline {
+  @media #{$palm-lap-only} {
+    text-align: center;
+  }
+}
 .pane-node-field-news-related-content,
 .pane-node-field-event-related-content,
 .pane-node-field-exhibition-related-content {
@@ -129,6 +137,8 @@
     margin-top: 10px;
   }
 }
+
+// @todo: switch this view's style to .events-teaser custom classes
 .pane-other-events-panel-pane-1,
 .pane-related-events-panel-pane-1 {
   border-top: 1px solid $border-color;

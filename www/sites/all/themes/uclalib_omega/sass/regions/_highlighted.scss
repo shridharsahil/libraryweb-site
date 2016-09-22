@@ -1,6 +1,12 @@
 .l-highlighted-wrapper h1:empty {
   display: none;
 }
+
 .l-highlighted {
-  background: $content-background-gray;
+  @media #{$desk-only} {
+    background: $content-background-gray;
+  }
+  @media #{$palm-lap-only} {
+    text-align: center;
+  }
 }

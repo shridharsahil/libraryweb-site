@@ -196,6 +196,10 @@ function uclalib_opening_hours_generate_table_rows($this_nid, $nodes, $day) {
         'data' => $row_data,
       );
 
+      // data-label for responsive tables.
+      $short_day_str = _uclalib_opening_hours_short_day($this_day->format('w'));
+      $row_cell['data-label'] = $short_day_str . ' ' . $this_day->format('d');
+
       // If current day add a class.
       if ($this_day->format('dmY') == date_create()->format('dmY')) {
         $row_cell['class'][] = 'current-day';

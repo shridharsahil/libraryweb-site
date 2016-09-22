@@ -18,7 +18,7 @@
     margin: 0;
     padding: 0;
     .leaf {
-      margin: 0.5em 0;
+      margin: 8px 0;
       list-style: none;
       list-style-image: none;
     }
@@ -28,11 +28,22 @@
   h3 {
     margin-top: 0;
   }
+
+  &,
+  & .menu {
+    text-align: center;
+    @media #{$desk-only} {
+      text-align: left;
+    }
+  }
 }
-.l-region--colophon-first {
-  border-right: 1px solid $colophon-border-color;
-}
-.l-region--colophon-second,
-.l-region--colophon-third {
-  padding-top: 2.6em;
+
+@media #{$desk-only} {
+  .l-region--colophon-first {
+    border-right: 1px solid $colophon-border-color;
+  }
+  .l-region--colophon-second,
+  .l-region--colophon-third {
+    padding-top: 2.6em;
+  }
 }

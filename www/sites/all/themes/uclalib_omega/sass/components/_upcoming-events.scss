@@ -17,6 +17,9 @@
   font-size: 29px;
   font-weight: 100;
   line-height: 1em;
+  @media #{$palm-only} {
+    font-size: 23px;
+  }
 }
 .cal-time {
   font-size: 11px;
@@ -24,94 +27,27 @@
   font-weight: 600;
   line-height: 1em;
 }
+.date-range-separator {
+  @media #{$palm-only} {
+    font-size: 12px;
+    vertical-align: -6px;
+    font-weight: bold;
+  }
+}
 
 .ui-tabs .ui-tabs-panel,
 .pane-bean-upcoming-events h2 + .pane-content {
   padding: 6px;
   .view-recent-news-highlight,
   .view-upcoming-events-display {
-    .view-content {
-      width: 100%;
-      .views-row {
-        clear: both;
-        overflow: hidden;
-        display: table;
-        width: 100%;
-        &:hover {
-          background: $ucla-lt-gray;
-        }
-      }
-      .views-field {
-        padding: 10px 0 10px 22px;
-        display: table-cell;
-        vertical-align: middle;
-      }
-      .views-field-field-event-image,
-      .views-field-field-exhibition-image,
-      .views-field-field-event-thumbnail {
-        padding: 4px 0 4px 11px;
-        min-width: 80px;
-        img {
-          display: block;
-        }
-      }
-      .views-field-field-exhibition-end {
-        min-width: 120px;
-      }
-      .views-field.views-field-nothing {
-        width: 100%;
-      }
-      .text-news {
-        padding: 8px;
-        .views-field {
-          display: block;
-          padding: 2px 4px;
-        }
-        .views-field-field-event-thumbnail {
-          display: table-cell;
-          padding: 4px 0 4px 4px;
-          width: auto;
-          max-width: auto;
-        }
-        .views-field-field-event-thumbnail + .views-field {
-          display: table-cell;
-          padding: 10px 0 10px 22px;
-          width: auto;
-        }
-      }
-    }
-    a {
-      color: $ucla-blue;
-    }
     .view-footer {
       padding-right: 14px;
       text-align: right;
     }
   }
 }
-/* Images only shown on homepage */
-.not-front .view-upcoming-events-display .views-field-field-event-image,
-.not-front .view-upcoming-events-display .views-field-field-event-thumbnail,
-.not-front .view-upcoming-events-display .views-field-field-exhibition-image {
-  display: none !important;
-}
 
-/* Reduce padding in narrow views */
-@media (max-width: 816px) {
-  .ui-tabs .ui-tabs-panel,
-  .pane-bean-upcoming-events {
-    .views-field-field-event-thumbnail + .views-field,
-    .views-field {
-      padding: 10px 0 10px 7px !important;
-    }
-    .views-field-field-event-image,
-    .views-field-field-exhibition-image,
-    .views-field-field-event-thumbnail {
-      padding: 4px 0 4px 7px !important;
-    }
-  }
-}
-
+// @todo: switch this view's style to .events-teaser custom classes
 .view-related-events {
   .view-content {
     clear: both;

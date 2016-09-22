@@ -29,7 +29,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['js/{,**/}*.js', '!js/{,**/}*.min.js'],
-        tasks: ['jshint', 'uglify:dev']
+        tasks: ['uglify:dist']
       }
     },
 
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
       },
       dev: {
         options: {
-          environment: 'development'
+          environment: 'production'
         }
       },
       dist: {
@@ -88,7 +88,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           mangle: true,
-          compress: true
+          compress: {}
         },
         files: [{
           expand: true,
@@ -113,10 +113,13 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('build', [
+  grunt.registerTask('dist', [
     'uglify:dist',
-    'compass:dist',
-    'jshint'
+    'compass:dist'
   ]);
 
+  grunt.registerTask('default', [
+    'dist',
+    'watch'
+  ]);
 };

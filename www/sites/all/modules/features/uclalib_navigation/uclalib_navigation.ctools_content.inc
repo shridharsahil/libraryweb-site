@@ -20,7 +20,7 @@ function uclalib_navigation_default_ctools_custom_content() {
   $content->settings = array(
     'admin_title' => 'Questions Highlight',
     'title' => '',
-    'body' => '<p>Have questions about your research? <a href="/support/research-help" style="font-weight: normal">We can help!</a></p>
+    'body' => '<p>Have questions about your research? <br class="palm-lap-only" /> <a href="/support/research-help" style="font-weight: normal">We can help!</a></p>
 ',
     'format' => 'full_html',
     'substitute' => 1,

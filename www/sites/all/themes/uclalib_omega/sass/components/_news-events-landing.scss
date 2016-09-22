@@ -1,15 +1,42 @@
-.bean-news-and-events-bean {
-  .grid-item:first-child {
-      margin: 1em 0;
-      width: 50%;
-      .panel-pane {
-      border-right: 1px solid $border-color;
-      padding-right: 8%;
+.page-hide-title {
+  .pane-page-title {
+    @media #{$lap-desk-only} {
+      display: none;
     }
   }
-  .grid-item:last-child {
-    margin-right: 0;
-    padding-left: 1.5%;
+  .l-region--main-column {
+    @media #{$palm-only} {
+      padding: 0;
+    }
+  }
+}
+
+.bean-news-and-events-bean {
+  @media #{$lap-desk-only} {
+    .grid-item:first-child {
+        margin: 1em 0;
+        width: 50%;
+        .panel-pane {
+        border-right: 1px solid $border-color;
+        padding-right: 8%;
+      }
+    }
+    .grid-item:last-child {
+      margin-right: 0;
+      padding-left: 1.5%;
+    }
+  }
+  @media #{$palm-only} {
+    .grid-item,
+    .grid-item:nth-child(odd) {
+      float: none;
+      clear: none;
+      width: auto;
+      margin: 0;
+    }
+  }
+  .pane-title {
+    padding-right: 4.6875em;
   }
   .pane-title a {
     color: $nav-link-color;
@@ -21,12 +48,27 @@
   }
   .view-header {
     float: right;
+    @media #{$palm-only} {
+      display: none;
+    }
     .more-link {
       margin: -66px 11px 0 0;
     }
   }
+  .view-footer {
+    @media #{$lap-desk-only} {
+      display: none;
+
+    }
+    .more-link {
+      text-align: left;
+      padding: 0 11px 15px;
+    }
+  }
   .view-content {
-    margin-top: 40px;
+    @media #{$lap-desk-only} {
+      margin-top: 40px;
+    }
   }
   p {
     font-size: 0.857em;
@@ -41,47 +83,12 @@
     }
   }
 }
-.pane-news-events-landing-display-panel-pane-1 {
-  .views-field {
-    padding: 15px 11px;
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .views-field-nothing {
-    padding: 15px 0;
-  }
-  .views-field-field-exhibition-end {
-    margin-right: 10px;
-    min-width: 125px;
-  }
-  .views-field-field-event-date {
-    margin-right: 14px;
-  }
-}
-.pane-news-events-landing-display-panel-pane-2 {
-  .views-row {
-    margin: 0 -12px 12px;
-    padding: 12px;
-
-  }
-  .views-field {
-    display: block;
-    padding: 2px 4px;
-  }
-  .views-field-field-event-thumbnail {
-    padding: 4px 0 4px 4px;
-    width: auto;
-    display: table-cell;
-    vertical-align: middle;
-    min-width: 80px;
-    a, img {
-      display: block
+.bean-news-and-events-bean .is-mobile {
+  .view-header {
+    float: none;
+    .more-link {
+      margin: 0;
+      text-align: left;
     }
-  }
-  .views-field-field-event-thumbnail + .views-field {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 10px 0 10px 22px;
-    width: auto;
   }
 }

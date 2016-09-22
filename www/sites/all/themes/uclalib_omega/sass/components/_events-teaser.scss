@@ -1,0 +1,74 @@
+.events-teaser {
+  clear: both;
+  display: table;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+
+  &:hover {
+    background: $ucla-lt-gray;
+  }
+
+  > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.events-teaser__thumbnail {
+  margin: 0 auto;
+  max-width: 287px;
+  text-align: center;
+
+  // Images only shown on homepage ¯\_(ツ)_/¯
+  .not-front & {
+    display: none !important;
+  }
+
+  @media #{$palm-only} {
+    display: none;
+  }
+
+  @media #{$lap-desk-only} {
+    width: 30%;
+    margin-right: 14px;
+  }
+
+  a, img {
+    display: block;
+  }
+}
+
+.events-teaser__dates,
+.events-teaser__date {
+  margin-right: 14px;
+  text-align: center;
+}
+
+.events-teaser__dates {
+  min-width: 125px;
+}
+
+.events-teaser__date {
+  min-width: 72px;
+}
+
+.events-teaser__text-wrapper {
+  padding: 15px 0;
+  width: 100%;
+}
+
+.events-teaser__date {
+  margin-right: 14px;
+}
+
+.events-teaser__title {
+  @media #{$palm-only} {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

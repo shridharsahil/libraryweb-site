@@ -8,26 +8,14 @@
       font-weight: 100;
       margin-top: 0;
     }
-    @media (min-width: 900px) {
-      .pane-linked-map {
+    @media #{$desk-only} {
+      .pane-linked-map,
+      .pane-node-field-location-map-image {
         float: left;
         margin-right: 16px;
+        margin-bottom: 10px;
+        max-width: 100px;
       }
-    }
-    .pane-node-field-location-building {
-      padding-top: 26px;
-    }
-    .icon-telephone,
-    .icon-email {
-      clear: right;
-      font-size: 0.875em;
-      margin: 10px 0;
-    }
-    .icon-telephone:before,
-    .icon-email:before {
-      float: left;
-      font-size: 1.429em;
-      margin-right: 3px;
     }
     .panels-flexible-region-last {
       padding-top: 24px;
@@ -35,5 +23,20 @@
   }
   .views-row-last {
     border-bottom: none;
+  }
+  @media #{$palm-lap-only} {
+    .panels-flexible-region-first {
+      text-align: center;
+    }
+    .views-row {
+      margin-left: -20px;
+      margin-right: -20px;
+      margin-left: -1.25rem;
+      margin-right: -1.25rem;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
   }
 }
