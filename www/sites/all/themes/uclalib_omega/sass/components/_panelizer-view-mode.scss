@@ -1,0 +1,40 @@
+@media #{$palm-lap-only} {
+  .panelizer-view-mode.node-hours-page,
+  .panelizer-view-mode.node-teaser {
+    &.node-location,
+    &.node-destination {
+      // Hide at this location and map panes on teasers and hours page view modes
+      // for mobile.
+      .pane-linked-map,
+      .pane-at-this-location-block-panel-pane-1,
+      .pane-node-field-location-map-image {
+        display: none;
+      }
+
+      margin-bottom: 30px;
+
+      // Stack flexible regions.
+      .panels-flexible-region {
+        width: 100%;
+        float: none;
+        .inside {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .pane-node-field-location-social-links,
+  .pane-bean-arts-research-guides,
+  .pane-at-this-location-block-panel-pane-1,
+  .pane-about-this-library-panel-pane-1 {
+    display: none;
+  }
+  .pane-location-header {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+

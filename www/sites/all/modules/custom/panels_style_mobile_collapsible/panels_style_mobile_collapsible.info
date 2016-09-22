@@ -1,0 +1,8 @@
+name = Mobile collapsible region and pane style
+description = Panels style plugin for collapsible regions and panes, on mobile.
+package = Panels style plugins
+dependencies[] = panels
+core = 7.x
+files[] = panels_style_mobile_collapsible
+
+

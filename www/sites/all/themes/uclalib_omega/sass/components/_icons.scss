@@ -1,0 +1,8 @@
+@media #{$palm-only} {
+	.pane-title,
+	.ui-tabs-nav {
+		[class^="icon-"] {
+			display: none;
+		}
+	}
+}

@@ -2,16 +2,25 @@
 // This extension defines a blue 1px background image that extends
 // out to the right of the heading.
 .pane-title--important-column-heading {
-  background-color: transparent;
-  background-image: url('../images/bg-heading-important-horiz.png'), url('../images/bg-heading-important-vert.png');
-  background-position: 0 50%, 100% 50%;
-  background-repeat: repeat-x, repeat-y;
+  text-align: center;
+
   > h2 {
-    display: inline;
-    background: white;
-    padding-right: 10px;
     font-weight: 100;
     font-size: 30px;
     color: $ucla-blue;
+  }
+
+  @media #{$lap-desk-only} {
+    text-align: left;
+    background-color: transparent;
+    background-image: url('../images/bg-heading-important-horiz.png'), url('../images/bg-heading-important-vert.png');
+    background-position: 0 50%, 100% 50%;
+    background-repeat: repeat-x, repeat-y;
+
+    > h2 {
+      display: inline;
+      background: white;
+      padding-right: 10px;
+    }
   }
 }

@@ -2,10 +2,16 @@
   h2 {
     font-weight: bold;
     font-size: 26px;
-    line-height: image-height('logo-colophon.png');
+    line-height: 30px;
     span {
       display: inline-block;
-      @include replace-text-with-dimensions('logo-colophon.png');
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      background: url('../images/logo-colophon.png') no-repeat 50% 50%;
+      background-image: url('../images/logo-colophon.svg'), linear-gradient(transparent, transparent);
+      width: 150px;
+      height: 30px;
       vertical-align: bottom;
     }
   }

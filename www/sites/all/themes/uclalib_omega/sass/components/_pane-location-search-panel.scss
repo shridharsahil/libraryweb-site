@@ -1,28 +1,59 @@
-.page-locations #facetapi-facet-search-apilocation-search-block-type {
-  list-style: none;
-  margin-bottom: 30px;
-  padding: 0;
+
+// The "Locations Only" facet.
+.pane-facetapi-fs8j80opdxzsalawvlwgkithc61lc4sd {
+  .facetapi-facetapi-checkbox-links {
+    padding: 0 0 0 5px;
+    margin: 1em 0;
+    list-style: none;
+  }
+  a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  @media #{$palm-lap-only} {
+    position: absolute;
+    margin-top: -51px;
+    right: 1.25rem;
+  }
 }
+
+.panelizer-view-mode.node-teaser {
+  .pane-at-this-location-block-panel-pane-1 h2 {
+    margin-top: 4px;
+  }
+}
+
 .pane-location-search-panel-pane-1 {
   .view-location-search > .view-content {
-    & > .views-row {
-      border-bottom: 1px solid $border-color;
-      margin-bottom: 30px;
-      padding-bottom: 20px;
+    .pane-todays-hours {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    @media #{$desk-only} {
       h3 {
         font-size: 1.500em;
         font-weight: normal;
         margin-bottom: 0;
       }
       .pane-todays-hours {
-        font-weight: bold;
         margin-top: 17px;
       }
-    }
-    & > .views-row-last {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+      & > .views-row {
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+      }
+      & > .views-row-last {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
     }
   }
 }

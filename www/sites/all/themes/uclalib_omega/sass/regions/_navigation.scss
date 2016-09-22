@@ -6,79 +6,175 @@ $nav-horiz-space: 8px;
   font-size: 18px;
 }
 
-.l-navigation {
-  ul.primary-links {
-    @include horizontal-list;
-    list-style: none;
-    list-style-image: none;
-    display: table;
-    width: 100%;
-    > li {
-      display: table-cell;
-      float: none;
-      padding: $nav-vert-space $nav-horiz-space $nav-vert-space;
-      margin: 0 1px 0 0;
+@media #{$desktop-header} {
+  .l-navigation {
+    ul.primary-links {
+      @include horizontal-list;
+      list-style: none;
       list-style-image: none;
-      list-style-type: none;
-      text-align: center;
-      a {
-        line-height: 1.2em;
-      }
-      a,
-      a:visited {
-        color: $nav-link-color;
-      }
-      &.active-trail,
-      &.active-trail:hover {
-        background: $nav-bg-active-color;
-        color: $nav-link-active-color;
-        text-decoration: none;
-      }
-      a:hover,
-      a:active,
-      a:focus {
-        color: $nav-link-hover-color;
-        text-decoration: underline;
-      }
-      &.active-trail > a:hover {
-        cursor: normal;
-      }
-
-      // Special case for first link.
-      &.first {
-        padding-right: 3px;
+      display: table;
+      width: 100%;
+      > li {
+        display: table-cell;
+        float: none;
+        padding: $nav-vert-space $nav-horiz-space $nav-vert-space;
+        margin: 0 1px 0 0;
+        list-style-image: none;
+        list-style-type: none;
+        text-align: center;
         a {
-          text-indent: -999px;
-          width: 0;
-          display: inline-block;
-          float: left;
-          margin-bottom: -4px;
-          overflow: hidden;
-          padding: 0 $nav-horiz-space+20px 0 0;
-          &:after {
-            font-family: icomoon;
-            content: "\e60b";
-            font-size: 20px;
-            font-weight: normal;
-            font-style: normal;
-            text-indent: 954px;
+          line-height: 1.2em;
+        }
+        a,
+        a:visited {
+          color: $nav-link-color;
+        }
+        &.active-trail,
+        &.active-trail:hover {
+          background: $nav-bg-active-color;
+          color: $nav-link-active-color;
+          text-decoration: none;
+        }
+        a:hover,
+        a:active,
+        a:focus {
+          color: $nav-link-hover-color;
+          text-decoration: underline;
+        }
+        &.active-trail > a:hover {
+          cursor: normal;
+        }
+
+        // Special case for first link.
+        &.first {
+          padding-right: 3px;
+          a {
+            text-indent: -999px;
+            width: 0;
             display: inline-block;
-            line-height: 1em;
-            vertical-align: middle;
+            float: left;
+            margin-bottom: -4px;
+            overflow: hidden;
+            padding: 0 $nav-horiz-space+20px 0 0;
+            &:after {
+              font-family: icomoon;
+              content: "\e60b";
+              font-size: 20px;
+              font-weight: normal;
+              font-style: normal;
+              text-indent: 954px;
+              display: inline-block;
+              line-height: 1em;
+              vertical-align: middle;
+            }
+          }
+          &.active-trail a,
+          &.active a,
+          a.active,
+          a:active,
+          a:hover,
+          a:focus {
+            background: transparent;
+            color: $nav-link-active-color;
           }
         }
-        &.active-trail a,
-        &.active a,
-        a.active,
-        a:active,
-        a:hover,
-        a:focus {
-          background: transparent;
-          color: $nav-link-active-color;
-        }
       }
-      &.last {
-        padding-right: 6px;
+    }
+  }
+}
+
+.l-navigation-wrapper {
+  .pane-menu-menu-colophon-first,
+  .pane-menu-menu-colophon-second {
+    display: none;
+  }
+}
+
+@media #{$mobile-header} {
+  .l-navigation-wrapper {
+    position: relative;
+    overflow: visible;
+
+    .pane-menu-menu-colophon-first,
+    .pane-menu-menu-colophon-second {
+      display: block;
+      float: left;
+      width: 50%;
+      ul {
+        margin: 0;
+      }
+      li {
+        display: block;
+        background-color: $ucla-gray;
+      }
+      a {
+        @include display-flex;
+        @include align-items(center);
+        @include justify-content(center);
+        padding: 10px 20px;
+        min-height: 3.5em;
+        font-size: 18px;
+        line-height: 1.2em;
+        text-align: center;
+        border-top: 1px solid white;
+        color: $nav-link-color;
+      }
+    }
+    .pane-menu-menu-colophon-first {
+      border-right: 1px solid white;
+      li:nth-child(2n) {
+        background-color: $ucla-sky-blue;
+      }
+    }
+    .pane-menu-menu-colophon-second {
+      li:nth-child(2n-1) {
+        background-color: $ucla-sky-blue;
+      }
+    }
+  }
+  .l-region--navigation {
+    position: fixed;
+    top: 105px;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    background: white;
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      overflow-y: scroll;
+    }
+    &.is-animating {
+      @include transition(opacity 0.3s ease-out);
+    }
+  }
+  .primary-links {
+    @include display-flex;
+    @include flex-direction(column);
+    padding: 0;
+    margin: 0;
+
+    li {
+      @include display-flex('inline-flex');
+      @include flex-grow(1);
+      font-size: 18px;
+      line-height: 1.2em;
+      text-align: center;
+      font-weight: normal;
+      border-top: 1px solid white;
+    }
+    a {
+      display: block;
+      width: 100%;
+      background: $ucla-yellow;
+      color: $nav-link-color;
+      padding: 10px;
+      &.active {
+        background: white;
+        font-weight: bold;
       }
     }
   }

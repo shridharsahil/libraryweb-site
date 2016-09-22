@@ -77,136 +77,109 @@
  * @see template_process()
  */
 //dpm($variables);
-
+global $base_url;
 drupal_set_title(t('Staff Directory'));
-
-
 ?>
 
-<div class="panel-pane pane-custom pane-1 pane-style-background-grayone">
-  <div class="panel-pane pane-bean-showcase pane-bean-sample-image-showcase">
-    <div class="pane-content">
-      <div class="entity entity-bean bean-showcase clearfix">
-        <div class="content">
-          <div class="field__items">
-            <div class="field__item one">
-              <div class="field-collection-view clearfix view-mode-full">
-                <div class="field field--name-field-showcase-image field--type-image field--label-hidden"><div class="field__items">
-                    <div class="field__item even"><?php echo render($content['field_staff_image_thumbnail']);?></div>
-                    <div class="field field--name-field-showcase-image field--type-image field--label-hidden"><div class="field__items">
-                        <div class="contact">
-                          <div class="field__item even">
+<div class="staff-profile">
+<div class="staff-profile__column-one">
+  <div class="staff-profile__thumbnail">
+    <?php echo render($content['field_staff_image_thumbnail']);?>
+  </div>
 
-                          <?php global $base_url; ?>
-                            <?php foreach ((array)$field_staff_phone as $item) { ?>
-                              <?php $content['field_staff_phone']['.icon'] = 'hidden';
-                              print '</div><div class="space-above"></div><div class="icon">';
-                              print "<img src='{$base_url}/sites/all/themes/uclalib_omega/images/phone.png' width='42' height='42'/></div>";
+  <h2 class="staff-profile__librarian-name palm-lap-only">
+    <?php echo render($content['uclalib_staff_name']);?>
+  </h2>
+  <h3 class="staff-profile__librarian-title palm-lap-only">
+    <?php echo strip_tags(render($content['field_staff_job_title']));?>
+  </h3>
 
-                              print render($content['field_staff_phone']);
-                              break;
+  <div class="staff-profile__phone">
+    <?php foreach ((array)$field_staff_phone as $item) : ?>
+      <span class="icon-telephone"></span>
+      <?php
+      print strip_tags(render($content['field_staff_phone']));
+      break;
+      ?>
+    <?php endforeach; ?>
+  </div>
 
-                              ?>
-                              <?php } ?>
+  <div class="staff-profile__email">
+    <?php foreach ((array)$field_staff_email as $item) : ?>
+      <span class="icon-email"></span>
+      <?php print strip_tags(render($content['field_staff_email']), '<a>');
+      break;
+      ?>
+    <?php endforeach; ?>
+  </div>
 
-                            <?php foreach ((array)$field_staff_email as $item) { ?>
+  <div class="staff-profile__location">
+    <?php foreach ((array)$field_staff_location as $item) : ?>
+      <h4 class="staff-profile__section-title">Location</h4>
+      <?php $content['field_staff_location']['#label_display'] = 'hidden';
+      print render($content['field_staff_location']);
+      break;
+      ?>
+    <?php endforeach; ?>
+  </div>
 
-                              <?php $content['field_staff_email']['.icon'] = 'hidden';
-                              print '</div><div class="space-above"></div><div class="icon">';
-                              print "<img src='{$base_url}/sites/all/themes/uclalib_omega/images/email.png' width='42' height='42' /></div>";
+  <div class="staff-profile__departments">
+    <?php foreach ((array)$field_staff_departments as $item) : ?>
+      <h4 class="staff-profile__section-title">Department</h4>
+      <?php $content['field_staff_departments']['#label_display'] = 'hidden';
+      print render($content['field_staff_departments']);
+      break;
+      ?>
+    <?php endforeach; ?>
+  </div>
 
-                              print render($content['field_staff_email']);
-                              break;
-
-                              ?>
-                            <?php } ?>
-
-                          <div class="field field--name-field-showcase-image field--type-image field--label-hidden"><div class="field__items">
-                              <div class="field__item even"><div class="field__items"><div class="field__item even">
-
-                           <?php foreach ((array)$field_staff_location as $item) { ?>
-                             <?php $content['field_staff_location']['#label_display'] = 'hidden';
-                             print '<div class="space-above">Location</div>'; // change to any HTML
-                             print render($content['field_staff_location']);
-                             break;
-
-                             ?>
-                           <?php } ?>
-
-                           <?php foreach ((array)$field_staff_departments as $item) { ?>
-                              <?php $content['field_staff_departments']['#label_display'] = 'hidden';
-                              print '<div class="space-above">Department</div>'; // change to any HTML
-                              print render($content['field_staff_departments']);
-                              break;
-                              ?>
-                            <?php } ?>
-
-<!-- social icons reused from BS -->
-                                    <div class="panel-pane pane-entity-field pane-node-field-location-social-links">
-                                      <div class="pane-content">
-
-                           <?php foreach ((array)$field_location_social_links as $item) { ?>
-                             <?php $content['field_location_social_links']['#label_display'] = 'hidden';
-                             print '<div class="space-above">Connect with me</div>'; // change to any HTML                                        print render($content['field_location_social_links']);
-                             print render($content['field_location_social_links']);
-                             break;
-
-                             ?>
-                           <?php } ?>
-
-                                  </div>
-                                 </div>
-                                </div>
-                               </div>
-                              </div>
-                             </div>
-                            </div>
-                           </div>
-                          </div>
-                         </div>
-                        </div>
-                       </div>
-                      </div>
-                     </div>
-                    </div>
-
-                           <div class="field__item two clearfix">
-                           <h2 class="librarian-name left">
-                           <?php echo render ($content['uclalib_staff_name']);?></h2>
-                           <h3 class="librarian-title"><?php echo render($content['field_staff_job_title']);
-                             ?></h3>
-
-                           <?php foreach ((array)$field_staff_area_of_expertise as $item) { ?>
-                             <?php $content['field_staff_area_of_expertise']['#label_display'] = 'hidden';
-                             print '<div class="space-above">Ask me about</div>'; // change to any HTML
-                             print render($content['field_staff_area_of_expertise']);
-                             break;
-
-                             ?>
-                           <?php } ?>
-
-                           <?php foreach ((array)$field_staff_acad_dept_liaison as $item) { ?>
-                             <?php $content['field_staff_acad_dept_liaison']['#label_display'] = 'hidden';
-                             print '<div class="space-above">Subject Specialty Areas</div>'; // change to any HTML
-                             print render($content['field_staff_acad_dept_liaison']);
-                             break;
-
-                             ?>
-                           <?php } ?>
-
-                           <?php foreach ((array)$field_text_block as $item) { ?>
-                             <?php $content['field_text_block']['#label_display'] = 'hidden';
-                             print '<div class="space-above">Biography</div>'; // change to any HTML
-                             print render($content['field_text_block']);
-
-                             ?>
-                           <?php } ?>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- social icons reused from BS -->
+  <div class="staff-profile__social-links">
+    <?php foreach ((array)$field_location_social_links as $item) : ?>
+      <h4 class="staff-profile__section-title">Connect with me</h4>
+      <?php $content['field_location_social_links']['#label_display'] = 'hidden';
+      print render($content['field_location_social_links']);
+      break;
+      ?>
+    <?php endforeach; ?>
+  </div>
+</div>
+<div class="staff-profile__column-two">
+  <h2 class="staff-profile__librarian-name desk-only">
+    <?php echo render($content['uclalib_staff_name']);?>
+  </h2>
+  <h3 class="staff-profile__librarian-title desk-only">
+    <?php echo strip_tags(render($content['field_staff_job_title']));?>
+  </h3>
+  <div class="staff-profile__about">
+    <div class="staff-profile__about--area-of-expertise">
+      <?php foreach ((array)$field_staff_area_of_expertise as $item) : ?>
+        <h4>Ask me about</h4>
+        <?php $content['field_staff_area_of_expertise']['#label_display'] = 'hidden';
+        print render($content['field_staff_area_of_expertise']);
+        break;
+        ?>
+      <?php endforeach; ?>
     </div>
 
+    <div class="staff-profile__about--specialty-areas">
+      <?php foreach ((array)$field_staff_acad_dept_liaison as $item) : ?>
+        <h4 class="staff-profile__section-title">Subject Specialty Areas</h4>
+        <?php $content['field_staff_acad_dept_liaison']['#label_display'] = 'hidden';
+        print render($content['field_staff_acad_dept_liaison']);
+        break;
+        ?>
+      <?php endforeach; ?>
+    </div>
+  </div>
 
+
+  <div class="staff-profile__bio">
+    <?php foreach ((array)$field_text_block as $item) : ?>
+      <h4 class="staff-profile__section-title">Biography</h4>
+      <?php $content['field_text_block']['#label_display'] = 'hidden';
+      print render($content['field_text_block']);
+      ?>
+    <?php endforeach; ?>
+  </div>
+</div>

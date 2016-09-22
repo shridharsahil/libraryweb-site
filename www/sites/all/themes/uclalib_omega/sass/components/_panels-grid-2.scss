@@ -1,0 +1,12 @@
+
+// Responsive overrides for the panels grid-2 provided by omega.
+
+@media #{$palm-only} {
+  .panel-display--grid-2 {
+    .grid-item:nth-child(odd),
+    .grid-item:nth-child(even) {
+      float: none;
+      width: 100%;
+    }
+  }
+}

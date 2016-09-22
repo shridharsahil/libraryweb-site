@@ -26,9 +26,8 @@ for further information on how to leverage the powerful Compass framework.
 ## Compass extensions
 There are many extensions available for Compass. You can install and use as many
 of them together or just a single one depending on your use-case. Good examples
-for useful Compass extensions are "susy" (a responsive grid framework
-[http://susy.oddbird.net/]) or "compass-rgbapng" (a rgba() .png file generator)
-but there are many more.
+for useful Compass extensions include "compass-rgbapng" (a rgba() .png file
+generator) but there are many more.
 
 ## Setting up and using Sass and Compass
 Compass runs on any computer that has
@@ -44,7 +43,6 @@ $ gem install compass
 Any additional library can be installed in the same way:
 ```
 $ gem install compass-rgbapng
-$ gem install susy
 ```
 
 Once you have set up your environment you can navigate to the folder that holds

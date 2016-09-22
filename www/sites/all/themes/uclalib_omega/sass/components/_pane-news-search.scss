@@ -1,31 +1,3 @@
 .pane-news-search-news-search {
   margin-top: 1em;
-  .views-row {
-    border-bottom: 1px solid $border-color;
-    display: table;
-    margin-bottom: 30px;
-    padding-bottom: 27px;
-    width: 100%;
-    .views-field-field-event-thumbnail {
-      width: 80px;
-      display: table-cell;
-      vertical-align: middle;
-    }
-    .views-field-field-event-thumbnail + .views-field {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 4px 1em;
-    }
-    h3 {
-      margin: 0 0 0.4em;
-    }
-    p {
-      margin: 0;
-    }
-  }
-  .views-row-last {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
 }

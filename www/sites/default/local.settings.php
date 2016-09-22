@@ -9,8 +9,8 @@ $databases = array (
       'database' => 'uclalib',
       'username' => 'uclalib',
       'password' => 'uclalib',
-      'host' => 'localhost',
-      'port' => '',
+      'host' => 'uclalib.local',
+      'port' => '3306',
       'driver' => 'mysql',
       'prefix' => '',
     ),
@@ -32,13 +32,13 @@ $conf['search_api_solr_overrides'] = array(
     'name' => t('Solr (dev)'),
     'options' => array(
       'host' => 'localhost',
-      'port' => '8080',
+      'port' => '8983',
       'path' => '/solr/uclalibdev',
     ),
   ),
 );
 
-$conf['stage_file_proxy_origin'] = 'http://library.ucla.edu';
+$conf['stage_file_proxy_origin'] = 'http://www.library.ucla.edu';
 
 // In local dev, enable detailed errors
 error_reporting(E_ALL);  // Have PHP complain about absolutely everything.
@@ -46,3 +46,4 @@ $conf['error_level'] = 2;  // Show all messages on your screen
 ini_set('display_errors', TRUE);  // These lines give you content on WSOD pages.
 ini_set('display_startup_errors', TRUE);
 
+$conf['theme_debug'] = TRUE;

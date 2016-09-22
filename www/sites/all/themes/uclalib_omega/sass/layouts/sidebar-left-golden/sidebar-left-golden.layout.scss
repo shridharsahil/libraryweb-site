@@ -1,76 +1,93 @@
+@import "compass";
+@import "breakpoint";
 @import "singularitygs";
 @import "abstractions/faux-columns";
-
-// 3-column assymetrical grid w/ fixed 30px gutters between columns.
-$grid: 5 8 8;
-$gutters: 40px;
-$gutter-styles: 'split'; // gitter is split between left and right of each col.
+@import "abstractions/clearfix";
+@import "variables/breakpoints";
 
 .l-region {
   @include box-sizing(border-box);
 }
 
-@include layout($grid) {
-  .panel-sidebar-left-golden {
-    //@include background-grid($color: blue);
-    @include clearfix;
-    position: relative; // Needed for faux-column.
+@media #{$desk-only} {
+
+  // 3-column assymetrical grid w/ fixed 40px gutters between columns.
+  @include add-grid(5 8 8);
+  @include add-gutter(40px);
+  @include add-gutter-style('split'); // gutter is split between left and right of each col.
+
+  @include layout(5 8 8) {
+    .panel-sidebar-left-golden {
+      //@include background-grid($color: blue);
+      @include clearfix;
+      position: relative; // Needed for faux-column.
+    }
+
+    // Span 1 column, starting at the 1st column
+    .l-region--sidebar-left {
+      @include grid-span(1, 1);
+      padding-left: 0; // kill left rail gutter.
+      clear: left;
+
+      // Full-height faux-column for adding a background color in the theme.
+      $left: column-span(0, 1); // Span 0 columns, starting from 1st column.
+      $width: column-span(1, 1); // Span 1 column, starting from 1st column.
+      @include faux-column($left, $width/* , #eee */);
+    }
+
+    .l-region--main-column {
+      max-width: 50em;
+    }
+
+    // Span 2 columns, starting at the 2nd column
+    .with-sidebar-left .l-region--main-column {
+      max-width: none;
+      @include grid-span(2, 2);
+      padding-right: 0; // kill right rail gutter.
+
+      // Full-height faux-column for adding a background color in the theme.
+      $left: column-span(1, 1); // Span 1 columns, starting from 1st column.
+      $width: column-span(2, 2); // Span 2 columns, starting from 2nd column.
+      @include faux-column($left, $width/* , #ddd */);
+    }
   }
 
-  // Span 1 column, starting at the 1st column
-  .l-region--sidebar-left {
-    @include grid-span(1, 1);
-    padding-left: 0; // kill left rail gutter.
-    clear: left;
+  // Adjust this nested grid for a two column golden ratio layout.
+  @include layout(3 2) {
 
-    // Full-height faux-column for adding a background color in the theme.
-    $left: column-span(0, 1); // Span 0 columns, starting from 1st column.
-    $width: column-span(1, 1); // Span 1 column, starting from 1st column.
-    @include faux-column($left, $width/* , #eee */);
-  }
+    .l-region--main,
+    .l-region--secondary {
+      @include grid-span(2, 1);
+      padding-left: 0;
+      padding-right: 0;
+      clear: both;
+      float: left;
+    }
 
-  .l-region--main-column {
-    max-width: 50em;
-  }
+    // Span 1 column, starting at the 1st column
+    .l-region--below-main-left,
+    .l-region--below-secondary-left {
+      @include grid-span(1, 1);
+      padding-left: 0;
+      clear: left;
+    }
 
-  // Span 2 columns, starting at the 2nd column
-  .with-sidebar-left .l-region--main-column {
-    max-width: none;
-    @include grid-span(2, 2);
-    padding-right: 0; // kill right rail gutter.
-
-    // Full-height faux-column for adding a background color in the theme.
-    $left: column-span(1, 1); // Span 1 columns, starting from 1st column.
-    $width: column-span(2, 2); // Span 2 columns, starting from 2nd column.
-    @include faux-column($left, $width/* , #ddd */);
+    // Span 1 column, starting at the 1st column
+    .l-region--below-main-right,
+    .l-region--below-secondary-right {
+      @include grid-span(1, 2);
+      padding-right: 0;
+      clear: right;
+    }
   }
 }
 
-// Adjust this nested grid for a two column golden ratio layout.
-@include layout(3 2) {
-
-  .l-region--main,
-  .l-region--secondary {
-    @include grid-span(2, 1);
-    padding-left: 0;
-    padding-right: 0;
-    clear: both;
-    float: left;
-  }
-
-  // Span 1 column, starting at the 1st column
+@media #{$palm-lap-only} {
   .l-region--below-main-left,
-  .l-region--below-secondary-left {
-    @include grid-span(1, 1);
-    padding-left: 0;
-    clear: left;
-  }
-
-  // Span 1 column, starting at the 1st column
   .l-region--below-main-right,
+  .l-region--below-secondary-left,
   .l-region--below-secondary-right {
-    @include grid-span(1, 2);
-    padding-right: 0;
-    clear: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }

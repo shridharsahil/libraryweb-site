@@ -1,0 +1,140 @@
+.mobile-collapsible.is-mobile {
+  border: 1px solid $ucla-sky-blue;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin-bottom: 1px !important;
+
+  &.is-open {
+    margin-bottom: 2px;
+  }
+
+  > .pane-title-inline-wrapper > .pane-title,
+  > .mobile-collapsible__title,
+  > .pane-title {
+    background-color: $ucla-sky-blue;
+    color: $ucla-blue;
+    cursor: pointer;
+    font-size: 16px !important;
+    font-weight: bold;
+    margin: 0;
+    padding: 8px 32px 8px 8px !important;
+    position: relative;
+
+    a {
+      color: inherit;
+      font-size: 1em;
+      margin: -8px 0 -8px -8px !important;
+      padding: 8px 0 8px 8px !important;
+    }
+
+    &::after {
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      content: '';
+      width: 0;
+      height: 0;
+      margin-top: .7em;
+      border-right: .7em solid transparent;
+      border-left: .7em solid transparent;
+      border-bottom: .7em solid transparent;
+      border-top: .7em solid $ucla-blue;
+      font-size: .7em;
+      transform: scaleY(1);
+      transform-origin: center;
+      transition-property: margin-top, transform;
+      transition-duration: .3s, .3s;
+      transition-timing-function: ease-out;
+    }
+  }
+  &.is-open > .pane-title-inline-wrapper > .pane-title::after,
+  &.is-open > .mobile-collapsible__title::after,
+  &.is-open > .pane-title::after {
+    transform: scaleY(-1);
+    margin-top: 0;
+  }
+
+  .mobile-collapsible__content,
+  .pane-content {
+    // This stops positioned absilute elements from showing up when the element
+    // is closed.
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+  }
+  &.is-open .mobile-collapsible__content,
+  &.is-open .pane-content {
+    max-height: 4000px;
+  }
+}
+
+// Sometimes the collapsible pane title should be hidden on desktop.
+// Eg, hours widget.
+@media #{$desk-only} {
+  .mobile-collapsible--title-hidden-on-desktop {
+    > .pane-title-inline-wrapper > .pane-title,
+    > .mobile-collapsible__title,
+    > .pane-title {
+      display:none;
+    }
+  }
+}
+
+
+ // Reset title alignment.
+.mobile-collapsible.is-mobile {
+  > .pane-title-inline-wrapper > .pane-title {
+    display: block;
+  }
+}
+
+ // Reset border style and whitespace.
+.mobile-collapsible--blue.is-mobile,
+.mobile-collapsible.is-mobile.pane-style-border-blue {
+  border: 1px solid $ucla-blue;
+  margin: 0;
+
+  > .pane-title-inline-wrapper > .pane-title,
+  > .mobile-collapsible__title,
+  > .pane-title {
+    background-color: $ucla-blue;
+    color: white;
+    font-weight: normal !important;
+    &::after {
+      border-top-color: white;
+    }
+  }
+
+  .pane-content {
+    border: 0;
+    padding: 0 10px;
+
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      height: 10px;
+    }
+  }
+}
+
+ // Reset pane title alignment.
+.mobile-collapsible.is-mobile.pane-title-align-center {
+  > .pane-title-inline-wrapper > .pane-title,
+  > .mobile-collapsible__title,
+  > .pane-title {
+    text-align: left;
+  }
+}
+
+.mobile-collapsible.is-mobile {
+  .sticky-header {
+    display: none;
+  }
+  &.is-open {
+    .sticky-header {
+      display: table;
+    }
+  }
+}

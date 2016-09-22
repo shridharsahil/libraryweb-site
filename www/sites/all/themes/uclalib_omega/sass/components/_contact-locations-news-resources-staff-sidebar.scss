@@ -15,13 +15,22 @@
   margin: 16px 0 0;
   position: relative;
   .form-type-textfield {
-    margin-left: -13px;
-    margin-right: -13px;
+    @media #{$desk-only} {
+      margin-left: -13px;
+      margin-right: -13px;
+    }
   }
   .form-text {
     background: #fff;
     padding: 3px 6px;
     width: 100%;
+    @media #{$palm-lap-only} {
+      font-size: 16px;
+      margin-bottom: 1em;
+    }
+  }
+  .views-exposed-form .views-exposed-widget {
+    float: none;
   }
   .views-widget-filter-search_api_views_fulltext,
   .views-widget-filter-title {
@@ -31,13 +40,26 @@
   .views-widget-checkboxes {
     color: $ucla-dark-gray;
     margin-left: 5px;
+    .form-checkbox {
+      margin-right: .5em;
+      + label {
+        margin-left: -4px;
+      }
+    }
+    @media #{$palm-lap-only} {
+      margin-bottom: 1em;
+    }
   }
   .views-submit-button {
     margin-left: 18px;
     position: absolute;
-    right: -13px;
+    right: 0;
+    @media #{$desk-only} {
+      right: -13px;
+    }
     margin: 0;
     padding: 0;
+    top: 0;
     input {
       margin: 2px !important;
     }
@@ -57,36 +79,5 @@
   .views-widget-filter-field_staff_is_subject_librarian,
   .views-reset-button {
     display: none;
-  }
-}
-.sidebar-options {
-  .ctools-toggle {
-    background: url(../images/collapsible-expanded.png) 50% 50% no-repeat;
-  }
-  .ctools-toggle-collapsed {
-    background: url(../images/collapsible-collapsed.png) 50% 50% no-repeat;
-  }
-  h2 {
-    color: $ucla-blue;
-    font-size: 1.071em;
-    font-weight: bold;
-  }
-  ul {
-    list-style: none;
-    padding-left: 5px;
-    .facetapi-checkbox {
-      vertical-align: text-bottom;
-    }
-    li {
-      padding-left: 20px;
-      text-indent: -20px;
-    }
-    a {
-      color: $ucla-dark-gray;
-      vertical-align: middle;
-    }
-  }
-  &.ctools-collapsible-container ul {
-    padding-left: 22px;
   }
 }

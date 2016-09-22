@@ -1,0 +1,145 @@
+// Overrides vertical-tabs.css for UCLA theme.
+@import "compass";
+@import "../variables/**/*";
+
+$vertical-tab-width: 14em;
+
+div.vertical-tabs {
+  margin: 1em 0 1em;
+}
+
+ul.vertical-tabs-list {
+  list-style: none;
+  padding: 0;
+  margin: -1px 0; // LTR
+
+  /* Layout of each tab */
+  li {
+    background: none;
+    border: 0;
+    padding: 0; // LTR
+    margin: 0;
+    min-width: 0; // IE7
+    text-align: left; // LTR
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+ul.vertical-tabs-list {
+  li a {
+    display: block;
+    text-decoration: none;
+    padding: 13px 5%;
+    background-color: $ucla-lt-gray;
+    font-size: 14px;
+    border-bottom: 1px solid #fff;
+
+    strong {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    a:focus,
+    &:active,
+    &:hover {
+      outline: 0;
+      strong {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .selected {
+    strong {
+      color: $ucla-dark-gray;
+      text-decoration: none !important;
+    }
+    a {
+      background: $ucla-yellow url(../images/tab-selected--expand.png) no-repeat 95% 50%;
+      background-image: url(../images/tab-selected--expand.svg), linear-gradient(transparent, transparent);
+      outline: 0 !important;
+      text-decoration: none;
+    }
+  }
+
+  .summary {
+    display: block;
+  }
+}
+
+.vertical-tabs-pane {
+  border: 0;
+  margin: 0;
+  padding: 1em 0;
+
+  legend {
+    display: none;
+  }
+
+  fieldset legend {
+    display: block;
+  }
+}
+
+// Prevent text inputs from overflowing when container is too narrow. "width" is
+// applied to override hardcoded cols or size attributes and used in conjunction
+// with "box-sizing" to prevent box model issues from occurring in most browsers.
+.vertical-tabs .form-type-textfield input {
+  width: 100%;
+  @include box-sizing(border-box);
+}
+
+@media #{$palm-only} {
+  .vertical-tabs-list {
+    li {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease-in-out;
+    }
+    li.selected,
+    &.is-expanded li {
+      max-height: 200px; // This value must be larger than the box will ever be.
+    }
+    li.selected {
+      position: relative;
+      z-index: 3;
+    }
+    &.is-expanded li.selected a {
+      background-image: url(../images/tab-selected--collapse.png);
+      background-image: url(../images/tab-selected--collapse.svg), linear-gradient(transparent, transparent);
+    }
+  }
+}
+
+
+@media #{$lap-desk-only} {
+  div.vertical-tabs {
+    margin-left: $vertical-tab-width; // LTR
+  }
+  ul.vertical-tabs-list {
+    width: $vertical-tab-width;
+    float: left; // LTR
+    margin-left: (-1 * $vertical-tab-width); // LTR
+    li {
+      padding-right: 7px;
+      margin: 4px 0;
+      a {
+        padding: 13px 7px;
+      }
+    }
+    .selected {
+      background: url(../images/arr-right-yell.png) 100% 50% no-repeat;
+      a {
+        background: $ucla-yellow;
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+  }
+  .vertical-tabs-pane {
+    padding: 1em;
+  }
+}
