@@ -1,7 +1,7 @@
 name = UCLALIB Bookplates
 core = 7.x
 package = UCLALIB
-version = 7.x-2.6
+version = 7.x-2.7
 project = uclalib_bookplates
 dependencies[] = advanced_link
 dependencies[] = autocomplete_deluxe
@@ -42,7 +42,6 @@ features[facetapi][] = search_api@bookplates::server_entity
 features[facetapi][] = search_api@bookplates:block:enabled
 features[facetapi][] = search_api@bookplates:block:field_bookplate_author_first_nam
 features[facetapi][] = search_api@bookplates:block:field_bookplate_author_last_name
-features[facetapi][] = search_api@bookplates:block:field_bookplates_subject_area
 features[facetapi][] = search_api@bookplates:block:item_type
 features[facetapi][] = search_api@bookplates:block:name
 features[facetapi][] = search_api@bookplates:block:nid
