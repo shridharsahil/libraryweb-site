@@ -19,7 +19,7 @@ function uclalib_link_list_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Recommended: Leave this box unchecked if you do not want links to appear on the Library Home Page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -30,7 +30,7 @@ function uclalib_link_list_field_default_field_instances() {
     ),
     'entity_type' => 'bean',
     'field_name' => 'field_homepage_check',
-    'label' => 'Homepage Check',
+    'label' => 'Check this box if you want links to appear on Library Home Page.',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -39,7 +39,7 @@ function uclalib_link_list_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
       'weight' => 7,
@@ -142,9 +142,10 @@ function uclalib_link_list_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Homepage Check');
+  t('Check this box if you want links to appear on Library Home Page.');
   t('Introduction');
   t('Links');
+  t('Recommended: Leave this box unchecked if you do not want links to appear on the Library Home Page.');
 
   return $field_instances;
 }
