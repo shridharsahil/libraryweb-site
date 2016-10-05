@@ -29,13 +29,24 @@
   margin-top: 25px;
   clear: both;
 }
-.no-bullets ul li span.icon.icomoon {
-  color: #666666;
-  float: left;
-  font-size: 23px;
-  padding-right: 9px;
-  min-height: 27px;
-  line-height: 16px;
+
+.page-homepage.homepage .views-field-field-linklist-links .field-content ul {
+    padding: 0;
+    margin: 0;
+  li {
+    list-style-type: none;
+    padding-top:5px;
+  }
+
+}
+
+.page-homepage.homepage {
+  .icon.icomoon.icon-clicc-computer, .icon.icomoon.icon-collaboration-pod, .icon.icomoon.icon-copy, .icon.icomoon.icon-more {
+    float: left;
+    padding-right: 5px;
+    font-size: 21px;
+    margin-top: -5px;
+  }
 }
 .no-bullets ul {
   list-style: outside none none;
@@ -103,5 +114,8 @@
       @include grid-span(1, 2);
       padding-right: 0;
     }
+  }
+  .page-homepage.homepage .icon.icomoon.icon-collaboration-pod {
+    margin-top:0;
   }
 }
