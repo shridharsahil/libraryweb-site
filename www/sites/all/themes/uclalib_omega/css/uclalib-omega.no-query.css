@@ -4271,11 +4271,6 @@ img[src="images/up.png"] {
   font-size: 1.1em;
 }
 
-.views-field-field-staff-job-title,
-.views-field-field-staff-phone {
-  font-weight: 100;
-}
-
 span#expandAll.links.links, span#collapseAll.links.links.links {
   border: 1px solid;
   cursor: pointer;
