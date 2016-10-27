@@ -676,7 +676,7 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
   $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_event_date_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_event_date_1']['alter']['text'] = ' - [field_event_date_1] ';
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['text'] = ' | <strong>[field_event_date_1]</strong> ';
   $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
     'format_type' => 'bsp_event_cal_time',
