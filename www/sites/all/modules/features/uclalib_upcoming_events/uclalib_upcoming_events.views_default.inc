@@ -161,6 +161,14 @@ function uclalib_upcoming_events_views_default_views() {
 
   /* Display: Recent News with Images */
   $handler = $view->new_display('panel_pane', 'Recent News with Images', 'panel_pane_1');
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="more-link"> <a href="news?f[0]=field_news_categories&#37;3[A]!1&#38;f[1]=field_news_location&#37;3A!2">More</a></div>';
+  $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
