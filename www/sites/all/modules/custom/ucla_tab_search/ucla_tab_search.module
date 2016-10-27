@@ -74,8 +74,10 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
     'placeholder' => t($books_placeholder_label),
   );
   $form['books']['text_query']['#title'] = t($books_placeholder_label);
-  $form['books']['text_query']['#title_display'] = 'invisible';
+  $form['books']['books_search'] = $search_button;
+  $form['books']['books_search']['#name'] = 'op_books';
 
+  $form['books']['text_query']['#title_display'] = 'invisible';
 
   $form['books']['ucla_catalog_search_index'] = array(
     '#type' => 'select',
@@ -112,9 +114,6 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
     '#default_value' => 'BM-Mel',
   );
 
-  $form['books']['books_search'] = $search_button;
-  $form['books']['books_search']['#name'] = 'op_books';
-
   $form['books']['catalog_container_mel'] = array(
     '#type' => 'container',
     '#states' => array(
@@ -128,7 +127,7 @@ function ucla_tab_search_tabs_form($form, &$form_state) {
   );
 
  $form['books']['catalog_container_mel']['description'] = array(
-    '#markup' => t('<strong>What am I searching?</strong></br>
+    '#markup' => t('<div class="clearfix"></div><strong>What am I searching?</strong></br>
 <a href="http://ucla.worldcat.org/">Melvyl</a> provides information about articles, books, journals and other materials held by UCLA, other University of
 California (UC) campuses, and libraries worldwide. This search is limited to University of California Libraries, but
 can be changed via a pulldown search limit on the results screen. Many records contain links to full-text articles from
@@ -149,7 +148,8 @@ can be changed via a pulldown search limit on the results screen. Many records c
 
     $form['books']['catalog_container_cat']['description'] = array(
     '#markup' => t(
-      '<strong>What am I searching?</strong></br>
+      '<div class="clearfix"></div>
+       <strong>What am I searching?</strong></br>
        <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> provides information about the holdings of the UCLA Library, the Southern Regional Library Facility (SRLF), and specialized collections across campus. It includes journals, and periodicals by title, <strong>but it does not contain journal article titles or authors.</strong>
        <p><p><a href="http://catalog.library.ucla.edu/vwebv/enterCourseReserve.do">Search Course Reserves</a>'),
   );
@@ -167,14 +167,13 @@ can be changed via a pulldown search limit on the results screen. Many records c
     'placeholder' => t($articlesplus_placeholder_label),
   );
   $form['articlesplus']['text_query']['#title'] = t($articlesplus_placeholder_label);
+  $form['articlesplus']['articlesplus_search'] = $search_button;
   $form['articlesplus']['text_query']['#title_display'] = 'invisible';
-
   $form['articlesplus']['peer_review'] = array(
     '#type' => 'checkbox',
     '#title' => t('Limit to peer-reviewed'),
   );
 
-  $form['articlesplus']['articlesplus_search'] = $search_button;
   $form['articlesplus']['articlesplus_search']['#name'] = 'op_articlesplus';
 
   $form['articlesplus']['articlesplus_container_mel'] = array(
@@ -191,10 +190,11 @@ can be changed via a pulldown search limit on the results screen. Many records c
 
   $form['articlesplus']['articlesplus_container_mel']['description'] = array(
     '#markup' => t('
+      <div class="clearfix"></div>
       <strong>What am I searching?</strong></br>
       <a href="http://ucla.summon.serialssolutions.com/">ArticlesPlus</a> searches many millions of scholarly articles,
-      newspaper articles, e-books, government documents, and more.  It combines hundreds of
-      online databases (like JSTOR and Web of Science) into a single search box.  See more
+      newspaper articles, e-books, government documents, and more. It combines hundreds of
+      online databases (like JSTOR and Web of Science) into a single search box. See more
       <a href="/about-articlesplus">about ArticlesPlus</a>.</br>
       </br>
       <a href="http://ucla.summon.serialssolutions.com/advanced">Advanced Search</a></br>
@@ -249,13 +249,11 @@ can be changed via a pulldown search limit on the results screen. Many records c
 
     $form['databases']['databases_container_mel']['description'] = array(
         '#markup' => t('
-
-<strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="use/computers-computing-services/connect-campus">off-campus access</a> if not being accessed from on campus. 
-If you do not find the database you are seeking, try searching the <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> or <a href="http://guides.library.ucla.edu">Research Guides</a>.
-<p>
-<strong>Other Search Options</strong></br>
-<a href="http://guides.library.ucla.edu/databases-by-subject">Find Databases by Subject</a></br>
-<a href="http://guides.library.ucla.edu/az.php">A-Z List of Databases</a></br>
+      <div class="clearfix"></div>
+      <strong>What am I searching?</strong></br>Database titles and descriptions of what the database contains. The majority are licensed, subscription titles and will require a computer to be configured for <a href="use/computers-computing-services/connect-campus">off-campus access</a> if not being accessed from on campus. If you do not find the database you are seeking, try searching the <a href="http://catalog.library.ucla.edu">UCLA Library Catalog</a> or <a href="http://guides.library.ucla.edu">Research Guides</a>.<p>
+      <strong>Other Search Options</strong><br>
+      <a href="http://guides.library.ucla.edu/databases-by-subject">Find Databases by Subject</a></br>
+      <a href="http://guides.library.ucla.edu/az.php">A-Z List of Databases</a></br>
 
 
           '),
@@ -275,7 +273,10 @@ If you do not find the database you are seeking, try searching the <a href="http
   $form['journals']['text_query']['#attributes'] = array(
     'placeholder' => t($journals_placeholder_label),
   );
+
   $form['journals']['text_query']['#title'] = t($journals_placeholder_label);
+  $form['journals']['journals_search'] = $search_button;
+  $form['journals']['journals_search']['#name'] = 'op_journals';
   $form['journals']['text_query']['#title_display'] = 'invisible';
   $form['journals']['catalog'] = array(
     '#type' => 'radios',
@@ -319,9 +320,6 @@ If you do not find the database you are seeking, try searching the <a href="http
     '#title_display' => 'invisible',
   );
 
-  $form['journals']['journals_search'] = $search_button;
-  $form['journals']['journals_search']['#name'] = 'op_journals';
-
   $form['journals']['journals_container_mel'] = array(
         '#type' => 'container',
         '#states' => array(
@@ -335,12 +333,13 @@ If you do not find the database you are seeking, try searching the <a href="http
     );
 
   $form['journals']['journals_container_mel']['description'] = array(
-        '#markup' => t('<strong>What am I searching?</strong></br>
-The titles and abbreviations of journals subscribed to electronically by the UCLA Library and linked to article databases and Google Scholar.  To find journal articles by title and author, use <a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Citation Linker</a> .
-<p>
-<strong>Other Search Options</strong></br>
-<a href="http://ucelinks.cdlib.org:8888/sfx_ucla/az/default?&param_sid_save=e21718f6c370481f02f52709928f7941&param_lang_save=eng&param_letter_group_save=A&param_perform_save=searchCategories&param_letter_group_script_save=Latin&param_chinese_checkbox_save=0&param_services2filter_save=getFullTxt&param_services2filter_save=getSelectedFullTxt&param_current_view_save=table&param_pattern_save=&param_jumpToPage_save=&param_type_save=browseLetterGroup&param_textSearchType_save=startsWith&&param_perform_value=searchTitle" target="blank" title="A-Z Journal Titles Search">A-Z Journal Titles</a></br>
-<a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Locate the Article from Your Citation</a>'),
+        '#markup' => t('
+      <div class="clearfix"></div>
+      <strong>What am I searching?</strong></br>The titles and abbreviations of journals subscribed to electronically by the UCLA Library and linked to article databases and Google Scholar.  To find journal articles by title and author, use <a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Citation Linker</a> .<p>
+      <strong>Other Search Options</strong><br>
+      <a href="http://ucelinks.cdlib.org:8888/sfx_ucla/az/default?&param_sid_save=e21718f6c370481f02f52709928f7941&param_lang_save=eng&param_letter_group_save=A&param_perform_save=searchCategories&param_letter_group_script_save=Latin&param_chinese_checkbox_save=0&param_services2filter_save=getFullTxt&param_services2filter_save=getSelectedFullTxt&param_current_view_save=table&param_pattern_save=&param_jumpToPage_save=&param_type_save=browseLetterGroup&param_textSearchType_save=startsWith&&param_perform_value=searchTitle" target="blank" title="A-Z e-Journal Titles Search">A-Z Journal Titles</a></br>
+      <a href="http://ucelinks.cdlib.org:8888/sfx_local/cgi/core/citation-linker.cgi">Locate the Article from Your Citation</a><br>
+      <a href="http://browzine.com/libraries/33/subjects">Browse Scholarly Journals with BrowZine</a>'),
     );
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -357,7 +356,6 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
   );
   $form['guides']['text_query']['#title'] = t($guides_placeholder_label);
   $form['guides']['text_query']['#title_display'] = 'invisible';
-
   $form['guides']['guides_search'] = $search_button;
   $form['guides']['guides_search']['#name'] = 'op_guides';
     // begin  code for description text  - ccthompson
@@ -376,8 +374,9 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
 
     $form['guides']['guides_container_mel']['description'] = array(
         '#markup' => t('
-	    <p><strong>What am I searching?</strong></p>
-	    <p>Subject and course guides that compile useful databases, digital library collections, and research strategies.</p>
+      <div class="clearfix"></div>
+	    <strong>What am I searching?</strong><br>
+	    Subject and course guides that compile useful databases, digital library collections, and research strategies.</p>
 	    Featured Research Guides:
 	    <ul>
 	      <li><a href="http://guides.library.ucla.edu/nursing">Nursing</a></li>
@@ -425,7 +424,9 @@ The titles and abbreviations of journals subscribed to electronically by the UCL
     );
 
     $form['oac']['oac_container_mel']['description'] = array(
-        '#markup' => t('<strong>What am I searching?</strong></br>The Online Archive of California (OAC) is a Web-accessible, digital gateway to information about materials such as manuscripts, photographs, and works of art held in libraries, museums, archives, and other institutions across California, including UCLA. The OAC allows patrons to view finding aids, i.e., inventories of collection content, which provide detailed information about collection content that is readily accessible and searchable.'),
+        '#markup' => t('
+      <div class="clearfix"></div>
+       <strong>What am I searching?</strong></br>The Online Archive of California (OAC) is a Web-accessible, digital gateway to information about materials such as manuscripts, photographs, and works of art held in libraries, museums, archives, and other institutions across California, including UCLA. The OAC allows patrons to view finding aids, i.e., inventories of collection content, which provide detailed information about collection content that is readily accessible and searchable.'),
     );
 
 // end  code for description text  - ccthompson

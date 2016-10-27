@@ -89,6 +89,8 @@ ul.vertical-tabs-list {
 .vertical-tabs .form-type-textfield input {
   width: 100%;
   @include box-sizing(border-box);
+  background: transparent;
+  float:left;
 }
 
 @media #{$palm-only} {
@@ -140,6 +142,6 @@ ul.vertical-tabs-list {
     }
   }
   .vertical-tabs-pane {
-    padding: 1em;
+    padding: 0 1em 0;
   }
 }

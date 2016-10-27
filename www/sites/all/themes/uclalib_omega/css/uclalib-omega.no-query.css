@@ -3745,13 +3745,17 @@ a.next-week:after {
   margin-bottom: 2em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .pane-description {
+  padding-top: 20px;
   background: url(../images/question-icon.png) 100% 0 no-repeat;
-  margin: 0.4em 0 0.6em;
+  margin: 0em 0 0.6em;
 }
-.pane-ucla-tab-search-ucla-tab-search-tabs .pane-description strong:first-child {
-  display: block;
+.pane-ucla-tab-search-ucla-tab-search-tabs #edit-databases-databases-container-mel, .pane-ucla-tab-search-ucla-tab-search-tabs #edit-guides-guides-container-mel, .pane-ucla-tab-search-ucla-tab-search-tabs #edit-oac-oac-container-mel {
+  padding-top: 60px;
+  background: url(../images/question-icon.png) 100% 40px no-repeat;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs #edit-databases-databases-container-mel strong:first-child, .pane-ucla-tab-search-ucla-tab-search-tabs #edit-guides-guides-container-mel strong:first-child, .pane-ucla-tab-search-ucla-tab-search-tabs #edit-oac-oac-container-mel strong:first-child {
   margin-bottom: 2px;
-  padding-top: 0.4em;
+  padding-top: 2em;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs input[type="text"] {
   text-align: center;
@@ -3764,19 +3768,26 @@ a.next-week:after {
   }
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs input[type="submit"] {
-  background: #000;
-  border: 0 none;
-  color: #fff;
-  font-weight: bold;
-  margin: 0 auto;
-  padding: 8px 16px;
-  display: block;
+  background: none;
+  border: none;
+  margin: -1.9em .1em .5em .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: .5em .6em 0;
+  background: white url(../images/icon-search.png) no-repeat 50% 50%;
+  text-decoration: none;
+  font-weight: 100;
+  text-indent: -999em;
+  width: 30px;
+  float: right;
 }
 @media (min-width: 481px) {
   .pane-ucla-tab-search-ucla-tab-search-tabs input[type="submit"] {
     padding: 4px 10px;
-    margin: 0;
   }
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs #edit-books-captcha {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -4442,6 +4453,8 @@ ul.vertical-tabs-list .summary {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background: transparent;
+  float: left;
 }
 
 @media (max-width: 480px) {
@@ -4490,7 +4503,7 @@ ul.vertical-tabs-list .summary {
   }
 
   .vertical-tabs-pane {
-    padding: 1em;
+    padding: 0 1em 0;
   }
 }
 .view-exhibitions-main-view .view-filters {
