@@ -10,7 +10,6 @@
       background: url(../images/question-icon.png) 100% 40px no-repeat;
       strong:first-child {
         margin-bottom: 2px;
-        padding-top: 2em;
       }
     }
     input[type="text"] {
@@ -40,4 +39,19 @@
     #edit-books-captcha {
       display: none;
     }
+    #edit-books-captcha {
+      display: none;
+    }
+  .form-item.form-type-select.form-item-books-ucla-catalog-search-index {
+    margin-bottom: -0.6em;
+    visibility: hidden;
+    display: block !important;
+  }
+  .form-item.form-type-checkbox.form-item-articlesplus-peer-review {
+    margin-bottom: 0;
+    padding-top: 3em;
+  }
+  .form-item.form-type-radio.form-item-journals-catalog:first-child {
+    margin-bottom: 0;
+    padding-top: 3em;
   }
