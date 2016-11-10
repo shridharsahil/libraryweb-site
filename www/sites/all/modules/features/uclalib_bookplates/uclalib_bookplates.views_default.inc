@@ -256,6 +256,7 @@ function uclalib_bookplates_views_default_views() {
   $handler = $view->new_display('page', 'BD 3', 'page');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -267,6 +268,36 @@ function uclalib_bookplates_views_default_views() {
   );
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Field collection item: Entity with the Donor (field_collection_donor) */
+  $handler->display->display_options['relationships']['field_collection_donor_node']['id'] = 'field_collection_donor_node';
+  $handler->display->display_options['relationships']['field_collection_donor_node']['table'] = 'field_collection_item';
+  $handler->display->display_options['relationships']['field_collection_donor_node']['field'] = 'field_collection_donor_node';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field collection item: First Name */
+  $handler->display->display_options['fields']['field_donor_name_first']['id'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['table'] = 'field_data_field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['field'] = 'field_donor_name_first';
+  $handler->display->display_options['fields']['field_donor_name_first']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_first']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_first']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Last Name */
+  $handler->display->display_options['fields']['field_donor_name_last']['id'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['table'] = 'field_data_field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['field'] = 'field_donor_name_last';
+  $handler->display->display_options['fields']['field_donor_name_last']['label'] = '';
+  $handler->display->display_options['fields']['field_donor_name_last']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_donor_name_last']['element_label_colon'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_collection_donor_node';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '[field_donor_name_first] [field_donor_name_last]';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['link_to_node'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field collection item: Last Name (field_donor_name_last) */
   $handler->display->display_options['arguments']['field_donor_name_last_value']['id'] = 'field_donor_name_last_value';
@@ -648,6 +679,7 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';

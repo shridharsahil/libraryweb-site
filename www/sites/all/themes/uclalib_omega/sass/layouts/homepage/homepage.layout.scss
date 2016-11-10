@@ -29,6 +29,31 @@
   clear: both;
 }
 
+.page-homepage.homepage .views-field-field-linklist-links .field-content ul {
+    padding: 0;
+    margin: 0;
+  li {
+    list-style-type: none;
+    padding-top:5px;
+  }
+
+}
+
+.page-homepage.homepage {
+  .icon.icomoon.icon-clicc-computer, .icon.icomoon.icon-collaboration-pod, .icon.icomoon.icon-copy, .icon.icomoon.icon-more {
+    float: left;
+    padding-right: 5px;
+    font-size: 21px;
+    margin-top: -5px;
+  }
+}
+.no-bullets ul {
+  list-style: outside none none;
+  padding: 0;
+  li {
+    padding-bottom: 13px;
+  }
+}
 @media #{$desk-only} {
 
   // 2-column assymetrical grid w/ fixed 20px gutters between columns.
@@ -88,5 +113,8 @@
       @include grid-span(1, 2);
       padding-right: 0;
     }
+  }
+  .page-homepage.homepage .icon.icomoon.icon-collaboration-pod {
+    margin-top:0;
   }
 }

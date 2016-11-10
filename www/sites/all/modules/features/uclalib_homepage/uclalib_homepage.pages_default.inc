@@ -171,33 +171,31 @@ function uclalib_homepage_default_page_manager_pages() {
     $display->content['new-54cf3e3c-a95f-484d-8bc8-0a72e3c0e3d2'] = $pane;
     $display->panels['top_left_bottom_right'][0] = 'new-54cf3e3c-a95f-484d-8bc8-0a72e3c0e3d2';
     $pane = new stdClass();
-    $pane->pid = 'new-6c94d951-6cfe-47a7-b021-d603823cd012';
+    $pane->pid = 'new-b7a1603e-c68e-4a4f-998f-26bae301d717';
     $pane->panel = 'top_left_bottom_right';
     $pane->type = 'block';
-    $pane->subtype = 'bean-find-printers-copiers-and-other-';
+    $pane->subtype = 'bean-homepage-equipment-block';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 0,
       'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => array(
-        'title_alignment' => 'center',
+        'title_alignment' => 'left',
       ),
       'style' => 'border-blue',
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'mobile-collapsible',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '6c94d951-6cfe-47a7-b021-d603823cd012';
-    $display->content['new-6c94d951-6cfe-47a7-b021-d603823cd012'] = $pane;
-    $display->panels['top_left_bottom_right'][1] = 'new-6c94d951-6cfe-47a7-b021-d603823cd012';
+    $pane->uuid = 'b7a1603e-c68e-4a4f-998f-26bae301d717';
+    $display->content['new-b7a1603e-c68e-4a4f-998f-26bae301d717'] = $pane;
+    $display->panels['top_left_bottom_right'][1] = 'new-b7a1603e-c68e-4a4f-998f-26bae301d717';
     $pane = new stdClass();
     $pane->pid = 'new-768d72ca-cc3f-49d5-9995-d55c357ef337';
     $pane->panel = 'top_left_main';
