@@ -5,47 +5,45 @@
     background: url(../images/question-icon.png) 100% 0 no-repeat;
     margin: 0em 0 0.6em;
   }
-    #edit-databases-databases-container-mel, #edit-guides-guides-container-mel, #edit-oac-oac-container-mel {
-      padding-top: 60px;
-      background: url(../images/question-icon.png) 100% 40px no-repeat;
-      strong:first-child {
-        margin-bottom: 2px;
-      }
+  #edit-databases-databases-container-mel, #edit-guides-guides-container-mel, #edit-oac-oac-container-mel {
+    padding-top: 60px;
+    background: url(../images/question-icon.png) 100% 40px no-repeat;
+    strong:first-child {
+      margin-bottom: 2px;
     }
-    input[type="text"] {
-      text-align: center;
-      padding: 5px 10px;
-      @media #{$lap-desk-only} {
-        text-align: left;
-        padding: 4px 8px;
-      }
+  }
+  input[type="text"] {
+    text-align: center;
+    padding: 5px 10px;
+    @media #{$lap-desk-only} {
+      text-align: left;
+      padding: 4px 8px;
     }
-    input[type="submit"] {
-      background: none;
-      border: none;
-      margin: -1.9em .1em .5em .5em;
-      @include appearance(none);
-      padding: .5em .6em 0;
-      background: #fff url(../images/icon-search.png) no-repeat 50% 50%;
-      text-decoration: none;
-      font-weight: 100;
-      text-indent: -999em;
-      width: 30px;
-      float: right;
-      @media #{$lap-desk-only} {
-        padding: 4px 10px;
-      }
+  }
+  input[type="submit"] {
+    background: none;
+    border: none;
+    margin: -1.9em .1em .5em .5em;
+    @include appearance(none);
+    padding: .5em .6em 0;
+    background: #fff url(../images/icon-search.png) no-repeat 50% 50%;
+    text-decoration: none;
+    font-weight: 100;
+    text-indent: -999em;
+    width: 30px;
+    float: right;
+    @media #{$lap-desk-only} {
+      padding: 4px 10px;
     }
-    #edit-books-captcha {
-      display: none;
-    }
-    #edit-books-captcha {
-      display: none;
-    }
+  }
+  #edit-books-captcha {
+    display: none;
+  }
+  #edit-books-captcha {
+    display: none;
+  }
   .form-item.form-type-select.form-item-books-ucla-catalog-search-index {
     margin-bottom: -0.6em;
-    visibility: hidden;
-    display: block !important;
   }
   .form-item.form-type-checkbox.form-item-articlesplus-peer-review {
     margin-bottom: 0;
@@ -55,3 +53,13 @@
     margin-bottom: 0;
     padding-top: 3em;
   }
+  .form-item.form-type-select.form-item-books-ucla-catalog-search-index select {
+    margin-bottom: 20px;
+  }
+  .form-item.form-type-textfield.form-item-books-text-query input#edit-books-text-query.form-text {
+    margin-bottom: 20px;
+  }
+  .fieldset-wrapper input#edit-books-books-search.form-submit {
+    margin-top: -47px;
+  }
+}
