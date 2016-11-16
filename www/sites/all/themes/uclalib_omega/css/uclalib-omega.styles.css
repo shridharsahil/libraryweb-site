@@ -3788,10 +3788,11 @@ a.next-week:after {
 .pane-ucla-tab-search-ucla-tab-search-tabs #edit-books-captcha {
   display: none;
 }
+.pane-ucla-tab-search-ucla-tab-search-tabs #edit-books-captcha {
+  display: none;
+}
 .pane-ucla-tab-search-ucla-tab-search-tabs .form-item.form-type-select.form-item-books-ucla-catalog-search-index {
   margin-bottom: -0.6em;
-  visibility: hidden;
-  display: block !important;
 }
 .pane-ucla-tab-search-ucla-tab-search-tabs .form-item.form-type-checkbox.form-item-articlesplus-peer-review {
   margin-bottom: 0;
@@ -3800,6 +3801,15 @@ a.next-week:after {
 .pane-ucla-tab-search-ucla-tab-search-tabs .form-item.form-type-radio.form-item-journals-catalog:first-child {
   margin-bottom: 0;
   padding-top: 3em;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .form-item.form-type-select.form-item-books-ucla-catalog-search-index select {
+  margin-bottom: 20px;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .form-item.form-type-textfield.form-item-books-text-query input#edit-books-text-query.form-text {
+  margin-bottom: 20px;
+}
+.pane-ucla-tab-search-ucla-tab-search-tabs .fieldset-wrapper input#edit-books-books-search.form-submit {
+  margin-top: -47px;
 }
 
 @media (max-width: 767px) {
