@@ -1201,6 +1201,12 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
   padding-right: 20px;
 }
 
+@media (max-width: 480px) {
+  .page-bookplates.section-bookplates td.grid-3 {
+    display: block;
+    max-width: 100%;
+  }
+}
 .views-exposed-form .captcha-admin-links {
   display: none;
 }
