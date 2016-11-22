@@ -800,6 +800,82 @@ function uclalib_event_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'There are no upcoming events at this time.
 ';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Event Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['type'] = 'uclablib_event_date_block';
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Event End Date */
+  $handler->display->display_options['fields']['field_event_end_date']['id'] = 'field_event_end_date';
+  $handler->display->display_options['fields']['field_event_end_date']['table'] = 'field_data_field_event_end_date';
+  $handler->display->display_options['fields']['field_event_end_date']['field'] = 'field_event_end_date';
+  $handler->display->display_options['fields']['field_event_end_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_end_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_end_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_end_date']['settings'] = array(
+    'format_type' => 'time',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Event Date (New) */
+  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
+  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['ui_name'] = 'Content: Event Date (New)';
+  $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['text'] = ' | <strong>[field_event_date_1] &#45; [field_event_end_date]</strong> ';
+  $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
+    'format_type' => 'bsp_event_cal_time',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Field: Location */
+  $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
+  $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
+  $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
+  $handler->display->display_options['fields']['field_event_location']['label'] = '';
+  $handler->display->display_options['fields']['field_event_location']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_location']['alter']['text'] = '[field_event_location] - ';
+  $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_location']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_event_location']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_event_location']['delta_offset'] = '0';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>[title]</div>
+<div><i>[field_event_location] [field_event_date_1] </i></div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Event series */
   $handler->display->display_options['arguments']['field_event_series_tid']['id'] = 'field_event_series_tid';
