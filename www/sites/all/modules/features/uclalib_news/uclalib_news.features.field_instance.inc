@@ -276,11 +276,7 @@ function uclalib_news_field_default_field_instances() {
   // Exported field_instance: 'node-news-field_news_blog_name'
   $field_instances['node-news-field_news_blog_name'] = array(
     'bundle' => 'news',
-    'default_value' => array(
-      0 => array(
-        'tid' => 837,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'If this news item belongs in a blog, please select the proper Blog Name',
     'display' => array(
