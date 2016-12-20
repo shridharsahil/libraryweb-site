@@ -87,5 +87,5 @@ features[views_view][] = blog_terms
 features[views_view][] = news_category_links
 features[views_view][] = recent_news
 features_exclude[dependencies][entityreference_views_formatter] = entityreference_views_formatter
-mtime = 1476466458
+mtime = 1482267001
 project path = /tmp
