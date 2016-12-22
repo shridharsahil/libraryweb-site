@@ -148,7 +148,7 @@ function uclalib_news_field_default_field_instances() {
     'label' => 'News Thumbnail',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -172,6 +172,7 @@ function uclalib_news_field_default_field_instances() {
           'fancybox__custom_crop' => 0,
           'fancybox__large' => 0,
           'fancybox__linkit_thumb' => 0,
+          'fancybox__media_thumbnail' => 0,
           'fancybox__medium' => 0,
           'fancybox__thumbnail' => 0,
           'fancybox__thumbnail_crop' => 0,
