@@ -317,7 +317,7 @@ function uclalib_exhibition_field_default_field_instances() {
     'label' => 'Exhibition Thumbnail',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -338,6 +338,7 @@ function uclalib_exhibition_field_default_field_instances() {
         'insert_styles' => array(
           'image' => 0,
           'image_custom_crop' => 0,
+          'image_staff_profile_photo' => 0,
           'image_thumbnail_crop' => 0,
           'image_widescreen_crop' => 0,
         ),
