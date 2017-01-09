@@ -61,7 +61,7 @@ function uclalib_titleigation_ctools_content_types_uclalib_title_render($subtype
   }
 
   $block->content .= '<h1>';
-  $block->content .= $current['link_title'];
+  $block->content .= $current['title'];
   $block->content .= '</h1>';
 
   $block->delta = $subtype;

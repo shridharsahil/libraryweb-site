@@ -39,7 +39,7 @@ function uclalib_location_field_formatter_view($entity_type, $entity, $field, $i
         $url = $item['field_social_link'][LANGUAGE_NONE][0]['url'];
 
         $link = '<a href="' . $url . '">' .
-          '<img class="social-link social-link-' . $type . '" src="' . $img_url . '"/>' .
+          '<img alt="social-link-' . $type . ' class="social-link social-link-' . $type . '" src="' . $img_url . '"/>' .
           '</a>';
 
         $element[$delta] = array(
