@@ -150,7 +150,7 @@ function uclalib_bookplates_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -404,7 +404,7 @@ function uclalib_bookplates_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -478,7 +478,7 @@ function uclalib_bookplates_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -560,12 +560,85 @@ function uclalib_bookplates_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-bookplates-field_give_now_link'
+  $field_instances['node-bookplates-field_give_now_link'] = array(
+    'bundle' => 'bookplates',
+    'default_value' => array(
+      0 => array(
+        'field_link_description' => array(
+          'und' => array(
+            0 => array(
+              'value' => '',
+            ),
+          ),
+        ),
+        'field_link_link' => array(
+          'und' => array(
+            0 => array(
+              'title' => 'Your donation will directly support this fund.',
+              'url' => '',
+              'attributes' => array(
+                'target' => '_blank',
+              ),
+            ),
+          ),
+        ),
+        'field_icon' => array(
+          'und' => array(
+            0 => array(
+              'bundle' => 'uclalib',
+              'icon' => 'give-now',
+            ),
+          ),
+        ),
+        'id' => NULL,
+        'actions' => array(
+          'remove_button' => 'Remove',
+        ),
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'multifield',
+        'settings' => array(
+          'view_mode' => 'default',
+        ),
+        'type' => 'multifield_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_give_now_link',
+    'label' => 'Give Now link',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'multifield',
+      'settings' => array(),
+      'type' => 'multifield_default',
+      'weight' => 10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Bookplate Description');
   t('Bookplate Image');
   t('Donor');
   t('First Name');
+  t('Give Now link');
   t('Last Name');
   t('Spak Code');
   t('Subject Area(s)');

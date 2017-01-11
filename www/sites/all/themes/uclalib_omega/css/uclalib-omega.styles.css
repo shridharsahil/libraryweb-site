@@ -1201,6 +1201,10 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
   padding-right: 20px;
 }
 
+.views-field-field-give-now-link span.icon.icomoon.icon-give-now {
+  font-size: 4em;
+}
+
 @media (max-width: 480px) {
   .page-bookplates.section-bookplates td.grid-3 {
     display: block;
