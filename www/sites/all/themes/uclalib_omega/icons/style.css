@@ -1,184 +1,180 @@
 @font-face {
-	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?-38n2xf');
-	src:url('fonts/icomoon.eot?#iefix-38n2xf') format('embedded-opentype'),
-		url('fonts/icomoon.woff?-38n2xf') format('woff'),
-		url('fonts/icomoon.ttf?-38n2xf') format('truetype'),
-		url('fonts/icomoon.svg?-38n2xf#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?m6riq');
+  src:  url('fonts/icomoon.eot?m6riq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?m6riq') format('truetype'),
+    url('fonts/icomoon.woff?m6riq') format('woff'),
+    url('fonts/icomoon.svg?m6riq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-mappin:before {
-	content: "\e634";
+  content: "\e634";
 }
 .icon-misc:before {
-	content: "\e615";
-}
-.icon-printer-ucla-only:before {
-	content: "\e616";
-}
-.icon-cafe:before {
-	content: "\e617";
+  content: "\e615";
 }
 .icon-collaboration-pod:before {
-	content: "\e618";
+  content: "\e618";
 }
 .icon-collaborative-study:before {
-	content: "\e619";
+  content: "\e619";
 }
 .icon-conference-room:before {
-	content: "\e61a";
+  content: "\e61a";
 }
 .icon-inquiry-assistance:before {
-	content: "\e61b";
+  content: "\e61b";
 }
 .icon-lounge:before {
-	content: "\e61c";
+  content: "\e61c";
 }
 .icon-media-room:before {
-	content: "\e61d";
-}
-.icon-presentation-space:before {
-	content: "\e61e";
+  content: "\e61d";
 }
 .icon-classroom:before {
-	content: "\e61f";
+  content: "\e61f";
 }
 .icon-technology-help:before {
-	content: "\e620";
+  content: "\e620";
 }
 .icon-scanner:before {
-	content: "\e621";
+  content: "\e621";
 }
 .icon-reading-room:before {
-	content: "\e622";
+  content: "\e622";
 }
 .icon-circulation-desk:before {
-	content: "\e623";
+  content: "\e623";
 }
 .icon-self-checkout:before {
-	content: "\e624";
+  content: "\e624";
 }
 .icon-pdf-sender:before {
-	content: "\e625";
+  content: "\e625";
 }
 .icon-bruin-card-machine:before {
-	content: "\e626";
+  content: "\e626";
 }
 .icon-hours:before {
-	content: "\e627";
+  content: "\e627";
 }
 .icon-ada-compliant:before {
-	content: "\e628";
+  content: "\e628";
 }
 .icon-laptop:before {
-	content: "\e629";
+  content: "\e629";
 }
 .icon-monitor:before {
-	content: "\e62a";
+  content: "\e62a";
 }
 .icon-computer-ucla-only:before {
-	content: "\e62b";
+  content: "\e62b";
 }
 .icon-computer:before {
-	content: "\e62c";
+  content: "\e62c";
 }
 .icon-projector:before {
-	content: "\e62d";
+  content: "\e62d";
 }
 .icon-study-room:before {
-	content: "\e62e";
+  content: "\e62e";
 }
 .icon-laptop-ucla-only:before {
-	content: "\e631";
+  content: "\e631";
 }
 .icon-clicc-computer:before {
-	content: "\e632";
+  content: "\e632";
 }
 .icon-quiet-area:before {
-	content: "\e633";
+  content: "\e633";
 }
 .icon-laptop-ucla-only2:before {
-	content: "\e62f";
+  content: "\e62f";
 }
 .icon-quiet-area-2:before {
-	content: "\e630";
+  content: "\e630";
 }
 .icon-copy-color:before {
-	content: "\e60c";
+  content: "\e60c";
 }
 .icon-printer-color:before {
-	content: "\e60d";
+  content: "\e60d";
 }
 .icon-telephone:before {
-	content: "\e613";
+  content: "\e613";
 }
 .icon-email:before {
-	content: "\e614";
+  content: "\e614";
 }
 .icon-search:before {
-	content: "\e610";
+  content: "\e610";
 }
 .icon-web:before {
-	content: "\e611";
+  content: "\e611";
 }
 .icon-address:before {
-	content: "\e612";
+  content: "\e612";
 }
 .icon-todo:before {
-	content: "\e600";
+  content: "\e600";
 }
 .icon-start:before {
-	content: "\e601";
+  content: "\e601";
 }
 .icon-search2:before {
-	content: "\e602";
+  content: "\e602";
 }
 .icon-printer:before {
-	content: "\e603";
+  content: "\e603";
 }
 .icon-news:before {
-	content: "\e604";
+  content: "\e604";
 }
 .icon-more:before {
-	content: "\e605";
+  content: "\e605";
 }
 .icon-hours2:before {
-	content: "\e606";
+  content: "\e606";
 }
 .icon-help:before {
-	content: "\e607";
+  content: "\e607";
 }
 .icon-copy:before {
-	content: "\e608";
+  content: "\e608";
 }
 .icon-cash:before {
-	content: "\e609";
+  content: "\e609";
 }
 .icon-arrow-right:before {
-	content: "\e60a";
+  content: "\e60a";
 }
 .icon-home:before {
-	content: "\e60b";
+  content: "\e60b";
 }
 .icon-specialist:before {
-	content: "\e60e";
+  content: "\e60e";
 }
 .icon-calendar:before {
-	content: "\e60f";
+  content: "\e60f";
 }
+.icon-give-now:before {
+  content: "\e900";
+}
+
