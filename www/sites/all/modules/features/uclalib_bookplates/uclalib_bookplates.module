@@ -85,7 +85,7 @@ function uclalib_bookplates_admin() {
   $form['uclalib_bookplates_spak_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Spak URL'),
-    '#default_value' => variable_get('uclalib_bookplates_spak_url', 'http://catalog.library.ucla.edu/vwebv/search?searchArg1='),
+    '#default_value' => variable_get('uclalib_bookplates_spak_url', 'http://catalog.library.ucla.edu/vwebv/search?searchArg=SPAE+'),
     '#size' => 100,
     '#maxlength' => 1000,
     '#description' => t("The spak code URL"),
@@ -94,7 +94,7 @@ function uclalib_bookplates_admin() {
   $form['uclalib_bookplates_spak_args'] = array(
     '#type' => 'textfield',
     '#title' => t('Spak args'),
-    '#default_value' => variable_get('uclalib_bookplates_spak_args', '&argType1=all&searchCode1=SPAK&combine2=and&searchArg2=&argType2=all&searchCode2=SPAK&combine3=and&searchArg3=&argType3=all&searchCode3=GKEY&year=2014-2015&fromYear=&toYear=&location=all&place=all&type=all&status=all&medium=all&language=all&content=all&media=all&carrier=all&recCount=50&searchType=2&page.search.search.button=Search'),
+    '#default_value' => variable_get('uclalib_bookplates_spak_args', '&searchCode=CMD&setLimit=1&recCount=50&searchType=1&page.search.search.button=Search'),
     '#size' => 100,
     '#maxlength' => 1000,
     '#description' => t("The spak code arguments to be passed"),
@@ -227,4 +227,13 @@ function uclalib_bookplates_update_7200(&$sandbox) {
     field_delete_field($field);
     field_purge_batch();
   }
+}
+
+/**
+ * Updates variables for Catalog linking per DRUP-1142.
+ */
+function uclalib_bookplates_update_7201(&$sandbox) {
+  // Same variables as in uclalib_bookplates_admin()
+  variable_set('uclalib_bookplates_spak_url', 'http://catalog.library.ucla.edu/vwebv/search?searchArg=SPAE+');
+  variable_set('uclalib_bookplates_spak_args', '&searchCode=CMD&setLimit=1&recCount=50&searchType=1&page.search.search.button=Search');
 }
