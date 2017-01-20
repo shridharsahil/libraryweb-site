@@ -31,33 +31,28 @@ $plugin = array(
 function meta_social_content_type_render($subtype, $conf, $args, $context) {
   $share_this_text = NULL;
   $block = new stdClass();
-  $block->content = '';
+
+  $block->content['#attached']['css'][] = array(
+    'type' => 'external',
+    'data' => 'https://cdn.rawgit.com/FortAwesome/Font-Awesome/v4.7.0/css/font-awesome.min.css',
+  );
+  $block->content['#attached']['css'][] = array(
+    'type' => 'external',
+    'data' => 'https://cdn.rawgit.com/tabalinas/jssocials/v1.4.0/dist/jssocials.css',
+  );
+  $block->content['#attached']['css'][] = array(
+    'type' => 'external',
+    'data' => 'https://cdn.rawgit.com/tabalinas/jssocials/v1.4.0/dist/jssocials-theme-flat.css',
+  );
+
+  $block->content['#attached']['js'][] = array(
+    'type' => 'external',
+    'data' => 'https://cdn.rawgit.com/tabalinas/jssocials/v1.4.0/dist/jssocials.min.js',
+  );
+
+  $block->content['#theme'] = 'uclalib_system_meta_social';
 
   $block->title = '';
-
-  $block->content .= <<<EOL
-<div class="addthis-block">
-<span class="addthis-text">$share_this_text</span>
-  <span class="addthis_toolbox addthis_default_style addthis_32x32_style">
-    <a class="addthis_button_facebook"></a>
-    <a class="addthis_button_twitter"></a>
-    <a class="addthis_button_email"></a>
-  </span>
-</div>
-<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-531762c77afe51ca"></script>
-<style type="text/css">
-.addthis-block {
-  min-height: 32px;
-}
-.addthis_32x32_style a span {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-</style>
-EOL;
 
   return $block;
 }
