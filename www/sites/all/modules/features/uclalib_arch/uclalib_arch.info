@@ -1,7 +1,7 @@
 name = UCLALIB Architecture
 description = Global architecture configs for the UCLA Library site.
 core = 7.x
-version = 7.x-1.0
+version = 7.x-1.1
 package = UCLALIB
 dependencies[] = better_formats
 dependencies[] = ckeditor

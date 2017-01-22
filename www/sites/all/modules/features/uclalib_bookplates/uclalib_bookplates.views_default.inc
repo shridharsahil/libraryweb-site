@@ -999,6 +999,7 @@ function uclalib_bookplates_views_default_views() {
     'field_donor_name_last' => 'field_donor_name_last',
     'field_collection_donor' => 'field_collection_donor',
     'field_bookplates_spak_code' => 'field_bookplates_spak_code',
+    'field_give_now_link' => 'field_give_now_link',
   );
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Relationship: Content: Donor (field_collection_donor) */
@@ -1079,6 +1080,16 @@ function uclalib_bookplates_views_default_views() {
   $handler->display->display_options['fields']['field_bookplates_spak_code']['alter']['text'] = 'See all items purchased through this Endowment.';
   $handler->display->display_options['fields']['field_bookplates_spak_code']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bookplates_spak_code']['hide_empty'] = TRUE;
+  /* Field: Content: Give Now link */
+  $handler->display->display_options['fields']['field_give_now_link']['id'] = 'field_give_now_link';
+  $handler->display->display_options['fields']['field_give_now_link']['table'] = 'field_data_field_give_now_link';
+  $handler->display->display_options['fields']['field_give_now_link']['field'] = 'field_give_now_link';
+  $handler->display->display_options['fields']['field_give_now_link']['label'] = '';
+  $handler->display->display_options['fields']['field_give_now_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_give_now_link']['click_sort_column'] = 'field_icon_bundle';
+  $handler->display->display_options['fields']['field_give_now_link']['settings'] = array(
+    'view_mode' => 'default',
+  );
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';

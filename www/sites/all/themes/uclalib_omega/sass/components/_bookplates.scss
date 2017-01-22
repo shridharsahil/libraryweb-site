@@ -454,6 +454,10 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift {
   text-align: left;
   padding-right: 20px;
 }
+//larger icon for give now link
+.views-field-field-give-now-link span.icon.icomoon.icon-give-now {
+  font-size: 4em;
+}
 @media #{$palm-only} {
   .page-bookplates.section-bookplates {
     td.grid-3 {
@@ -462,3 +466,5 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift {
     }
   }
 }
+
+

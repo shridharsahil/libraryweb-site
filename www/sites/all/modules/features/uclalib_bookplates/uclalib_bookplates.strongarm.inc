@@ -124,7 +124,7 @@ function uclalib_bookplates_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '5',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'landing_page' => array(

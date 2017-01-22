@@ -94,6 +94,9 @@
     <div class="bookplate-copy">
       <?php print render ($content['field_bookplate_description']); ?>
     </div>
+    <div class="bookplate-give-link">
+      <?php print render ($content['field_give_now_link']); ?>
+    </div>
   </div>
 <?php else: ?>
 <!-- regular node view template HTML here -->

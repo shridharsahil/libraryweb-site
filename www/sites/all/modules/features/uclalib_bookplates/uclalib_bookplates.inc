@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * uclalib_bookplates..inc
+ * uclalib_bookplates.inc
  */
 
 /**
