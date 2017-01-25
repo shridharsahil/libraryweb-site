@@ -10,12 +10,14 @@
     white-space: nowrap;
   }
   td.current-day {
-    background: #ffefc4;
+    background: #FFFF97;
   }
   tr.odd td.current-day {
-    background: #fed97e;
+    background: $ucla-accent_color;
   }
-
+  a {
+    font-weight:400;
+  }
   td[class^='day'],
   th[class^='day'] {
     width: 3.6em !important;

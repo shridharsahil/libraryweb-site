@@ -1,6 +1,6 @@
 
 html {
-  font-family: $akzidenz;
+  font-family: $ProximaNova;
   font-size: 0.875em;
   color: $text-color;
 }
@@ -8,6 +8,7 @@ html {
 a {
   @include link-colors($ucla-blue);
   @include hover-link;
+  font-weight:bold;
 }
 
 .title-light {
