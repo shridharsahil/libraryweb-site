@@ -8,6 +8,10 @@ input[type=text] {
   vertical-align: middle;
 }
 
+.form-required {
+  font-size: 20px;
+}
+
 .clearfix:after {
   content: "";
   display: table;
@@ -106,6 +110,7 @@ table th {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.1em;
+  color: #fff;
 }
 table caption h1,
 table caption h2,
@@ -3072,15 +3077,27 @@ a.give_now_sprites {
 }
 
 a.previous-week:before {
-  border-right: 0.4em solid #666666 !important;
+  border-right: .4em solid #fff !important;
   left: 0;
   margin-top: .15em !important;
 }
 
 a.next-week:after {
-  border-left: 0.4em solid #666666 !important;
+  border-left: .4em solid #fff !important;
   right: 0;
   margin-top: .15em !important;
+}
+
+a.next-week::after, a.next-week::before {
+  color: #fff;
+}
+
+thead tr th.day-mon.current-day {
+  color: #fff;
+}
+
+td.title {
+  color: #1e4b87;
 }
 
 @media (max-width: 620px) {
