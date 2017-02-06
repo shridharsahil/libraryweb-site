@@ -68,7 +68,7 @@ img {
   }
 }
 table {
-  border: 1px solid #adcde5;
+  border: 1px solid #1e4b87;
   border-collapse: separate;
   border-spacing: 2px;
   display: table;
@@ -101,7 +101,7 @@ table td + td {
   text-align: center;
 }
 table th {
-  background-color: #adcde5;
+  background-color: #1e4b87;
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
@@ -129,7 +129,7 @@ table[border="1"] {
   border-collapse: collapse;
 }
 table[border="1"] td {
-  border: 1px solid #adcde5;
+  border: 1px solid #1e4b87;
 }
 
 html {
@@ -1403,7 +1403,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
   text-align: left;
 }
 .page-contact .pane-contact-location-list + .pane-todays-hours .view-content {
-  border: 1px solid #adcde5;
+  border: 1px solid #1e4b87;
   padding: 2px;
 }
 .page-contact .pane-contact-location-list + .pane-todays-hours .view-content .views-field-title {
@@ -1472,7 +1472,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
   .node-type-exhibition .l-region--bottom-left,
   .node-type-news .l-region--bottom-left {
     padding-right: 35px;
-    border-right: 1px solid #adcde5;
+    border-right: 1px solid #1e4b87;
   }
 }
 .node-type-uclalib-event .l-region--bottom-right,
@@ -1540,7 +1540,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
 .node-type-uclalib-event .pane-body-summary-pane + .pane-node-body,
 .node-type-exhibition .pane-body-summary-pane + .pane-node-body,
 .node-type-news .pane-body-summary-pane + .pane-node-body {
-  border-top: 1px solid #adcde5;
+  border-top: 1px solid #1e4b87;
   clear: both;
   padding-top: 35px;
 }
@@ -1604,7 +1604,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
 .pane-node-field-news-related-content h2,
 .pane-node-field-event-related-content h2,
 .pane-node-field-exhibition-related-content h2 {
-  border-top: 1px solid #adcde5;
+  border-top: 1px solid #1e4b87;
   color: #2d2f35;
   font-size: 1.429em;
   font-weight: normal;
@@ -1638,7 +1638,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
 
 .pane-other-events-panel-pane-1,
 .pane-related-events-panel-pane-1 {
-  border-top: 1px solid #adcde5;
+  border-top: 1px solid #1e4b87;
   margin: 40px 0 40px;
   padding-top: 19px;
 }
@@ -1814,7 +1814,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
   padding: 0;
   margin: 0;
   border: 0;
-  border-bottom: 1px solid #adcde5;
+  border-bottom: 1px solid #1e4b87;
   background: none;
 }
 .ui-tabs .ui-tabs-nav li {
@@ -1832,7 +1832,7 @@ span.views-field.views-field-field-donor-name-bookplates.bookplates-donor-gift:a
 }
 .ui-tabs .ui-tabs-panel {
   border-width: 0 1px 1px;
-  border-color: #adcde5;
+  border-color: #1e4b87;
 }
 
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
@@ -2125,7 +2125,7 @@ a.more-link,
     width: 50%;
   }
   .bean-news-and-events-bean .grid-item:first-child .panel-pane {
-    border-right: 1px solid #adcde5;
+    border-right: 1px solid #1e4b87;
     padding-right: 8%;
   }
   .bean-news-and-events-bean .grid-item:last-child {
@@ -2508,7 +2508,7 @@ a.more-link,
   color: white;
 }
 .pane-bean-upcoming-events h2 + .pane-content {
-  border: 1px solid #adcde5;
+  border: 1px solid #1e4b87;
 }
 
 .pane-custom-breadcrumb {
@@ -2559,7 +2559,7 @@ a.more-link,
 }
 @media (min-width: 768px) {
   .pane-daterangepicker {
-    border-bottom: 1px solid #adcde5;
+    border-bottom: 1px solid #1e4b87;
     margin-bottom: 28px;
   }
 }
@@ -2657,7 +2657,7 @@ a.give_now_sprites {
   }
 }
 .pane-horizontal-rule {
-  border-bottom: 1px solid #adcde5;
+  border-bottom: 1px solid #1e4b87;
   margin-bottom: 35px;
 }
 .pane-horizontal-rule hr {
@@ -2676,7 +2676,7 @@ a.give_now_sprites {
   padding-top: 30px;
 }
 .pane-library-hours-panel-pane-1 .views-row {
-  border-bottom: 1px solid #adcde5;
+  border-bottom: 1px solid #1e4b87;
   margin-bottom: 26px;
   padding-bottom: 30px;
 }
@@ -2811,7 +2811,7 @@ a.give_now_sprites {
 }
 
 .pane-location-destinations-panel-pane-1 .view-location-destinations > .view-content > .views-row {
-  border-bottom: 1px solid #adcde5;
+  border-bottom: 1px solid #1e4b87;
   margin-bottom: 20px;
   padding-bottom: 10px;
   font-weight: 400;
@@ -2849,7 +2849,7 @@ a.give_now_sprites {
 }
 
 .location-about {
-  border-bottom: 1px solid #adcde5;
+  border-bottom: 1px solid #1e4b87;
   margin-bottom: 15px;
   padding-bottom: 5px;
 }
@@ -2967,7 +2967,7 @@ a.give_now_sprites {
     margin-top: 17px;
   }
   .pane-location-search-panel-pane-1 .view-location-search > .view-content > .views-row {
-    border-bottom: 1px solid #adcde5;
+    border-bottom: 1px solid #1e4b87;
     margin-bottom: 30px;
     padding-bottom: 20px;
   }
@@ -3416,7 +3416,7 @@ a.next-week:after {
 }
 
 .pane-staff-directory-staff-directory-pane .view-staff-directory > .view-content > .views-row {
-  border-bottom: 1px solid #adcde5;
+  border-bottom: 1px solid #1e4b87;
   margin-bottom: 30px;
   padding-bottom: 27px;
 }
@@ -3449,7 +3449,7 @@ a.next-week:after {
   padding: 0 0 30px;
 }
 .l-region--main .facetapi-facet-field-staff-glossary-index li {
-  border-right: 1px solid #adcde5;
+  border-right: 1px solid #1e4b87;
   float: left;
   padding: 0 8px;
 }
@@ -3499,7 +3499,7 @@ a.next-week:after {
   margin-bottom: 1em;
 }
 .pane-style-border-blue .pane-content {
-  border: 1px solid #adcde5;
+  border: 1px solid #1e4b87;
   padding: 1em 1.5em;
 }
 .pane-style-border-blue .pane-title {
@@ -4586,7 +4586,7 @@ ul.vertical-tabs-list .summary {
 .view-find-resources .views-row {
   margin: 20px 0;
   padding-bottom: 20px;
-  border-bottom: 1px solid #adcde5;
+  border-bottom: 1px solid #1e4b87;
   position: relative;
 }
 .view-find-resources .pane-node-body,
