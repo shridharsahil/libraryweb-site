@@ -9,7 +9,7 @@ input[type=text] {
 }
 
 .form-required {
-  font-size: 20px;
+  color: #a20000;
 }
 
 .clearfix:after {
@@ -472,6 +472,14 @@ a[href="#main-content"] {
 
 .l-region--main-column {
   padding-top: 1em;
+}
+
+.l-region--below-main-right input[type=text],
+.l-region--below-main-right input[type=email] {
+  width: 100%;
+}
+.l-region--below-main-right input#edit-captcha-response {
+  width: auto;
 }
 
 .l-navigation-wrapper {
