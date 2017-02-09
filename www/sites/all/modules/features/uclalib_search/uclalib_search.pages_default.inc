@@ -362,7 +362,7 @@ function uclalib_search_default_page_manager_pages() {
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'views-b954de8eb7d4895146983e3ae88f258e';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'inherit_path' => 1,
