@@ -592,7 +592,7 @@ function uclalib_search_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Submit';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'All Staff';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -824,7 +824,6 @@ function uclalib_search_views_default_views() {
   );
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['expose']['reduce'] = 0;
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['label'] = 'Show';
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['identifier'] = 'field_staff_is_subject_librarian';
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['optional'] = FALSE;
   $handler->display->display_options['filters']['field_staff_is_subject_librarian']['group_info']['widget'] = 'radios';
@@ -835,7 +834,7 @@ function uclalib_search_views_default_views() {
       'operator' => '=',
       'value' => array(
         0 => '0',
-        1 => '1',
+        1 => 0,
       ),
     ),
     2 => array(

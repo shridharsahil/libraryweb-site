@@ -3452,14 +3452,12 @@ td.title {
 }
 
 /* Staff directory search panel */
-.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .views-widget-filter-field_staff_is_subject_librarian > label,
-.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .views-widget-filter-search_api_views_fulltext,
-.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .views-submit-button {
-  display: none;
-}
 .l-region--main .views-exposed-form-staff-directory-staff-directory-pane .form-radios > div {
   float: left;
   margin: 8px 18px 0 0 !important;
+}
+.l-region--main .views-exposed-form-staff-directory-staff-directory-pane .views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 0;
 }
 .l-region--main .facetapi-facet-field-staff-glossary-index {
   list-style: none;
