@@ -9,3 +9,12 @@
 .l-region--main-column {
   padding-top: 1em;
 }
+.l-region--below-main-right {
+  input[type=text],
+  input[type=email] {
+    width: 100%;
+  }
+  input#edit-captcha-response {
+    width: auto;
+  }
+}
