@@ -10,12 +10,14 @@
     white-space: nowrap;
   }
   td.current-day {
-    background: #ffefc4;
+    background: #FFFF97;
   }
   tr.odd td.current-day {
-    background: #fed97e;
+    background: $ucla-accent_color;
   }
-
+  a {
+    font-weight:400;
+  }
   td[class^='day'],
   th[class^='day'] {
     width: 3.6em !important;
@@ -46,7 +48,7 @@
 a.previous-week {
   @extend .left-link-triangle-before;
   &:before {
-    border-right: .4em solid $text-color !important;
+    border-right: .4em solid #fff !important;
     left: 0;
     margin-top: .15em !important;
   }
@@ -54,10 +56,20 @@ a.previous-week {
 a.next-week {
   @extend .more-link-triangle-after;
   &:after {
-    border-left: .4em solid $text-color !important;
+    border-left: .4em solid #fff !important;
     right: 0;
     margin-top: .15em !important;
   }
+}
+a.next-week::after, a.next-week::before {
+  color:#fff;
+}
+thead tr th.day-mon.current-day {
+  color: #fff;
+}
+
+td.title {
+  color: $ucla-blue;
 }
 
 @media #{$opening-hours-mobile-only} {

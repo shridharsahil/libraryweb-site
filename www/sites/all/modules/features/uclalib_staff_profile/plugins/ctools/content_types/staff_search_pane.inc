@@ -28,24 +28,10 @@ function uclalib_staff_ctools_content_types_edit_form($form, &$form_state) {
  */
 function uclalib_staff_ctools_content_types_render($subtype, $conf, $args, $contexts) {
   $block = new stdClass();
-  $url = url('staff');
-  $placeholder = t('search');
-  $submit = t('Go');
+  $block->content['url'] = url('staff');
+  $block->content['placeholder'] = t('search');
+  $block->content['submit'] = t('Go');
+  $block->content['#theme'] = 'uclalib_staff_profile_staff_search_pane';
   $block->title = t('Search the Staff Directory');
-  $block->content = <<<EOD
-    <div class="header-search-form-wrapper">
-      <form class="header-search-form" action="{$url}" method="get" accept-charset="UTF-8">
-        <div class="form-wrapper">
-          <div class="form-item form-type-textfield">
-            <input type="text" class="form-text" id='' name="search_api_views_fulltext" value="" size="70" maxlength="128"  placeholder="{$placeholder}">
-          </div>
-          <div class="form-actions">
-            <input type="submit" class="form-submit" id="submit" value="{$submit}" >
-          </div>
-        </div>
-      </form>
-    </div>
-EOD;
   return $block;
 }
-

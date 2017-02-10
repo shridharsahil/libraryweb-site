@@ -57,7 +57,7 @@ ul.vertical-tabs-list {
       text-decoration: none !important;
     }
     a {
-      background: $ucla-yellow url(../images/tab-selected--expand.png) no-repeat 95% 50%;
+      background: $ucla-accent_color url(../images/tab-selected--expand.png) no-repeat 95% 50%;
       background-image: url(../images/tab-selected--expand.svg), linear-gradient(transparent, transparent);
       outline: 0 !important;
       text-decoration: none;
@@ -132,9 +132,11 @@ ul.vertical-tabs-list {
       }
     }
     .selected {
+      position: relative;
+      background: $ucla-accent_color;
       background: url(../images/arr-right-yell.png) 100% 50% no-repeat;
       a {
-        background: $ucla-yellow;
+        background: $ucla-accent_color;
         &:hover {
           cursor: default;
         }

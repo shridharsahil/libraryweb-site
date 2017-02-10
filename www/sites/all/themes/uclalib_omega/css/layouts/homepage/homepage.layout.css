@@ -40,7 +40,14 @@
   padding-right: 5px;
   font-size: 21px;
   margin-top: -5px;
+}
 
+.no-bullets ul {
+  list-style: outside none none;
+  padding: 0;
+}
+.no-bullets ul li {
+  padding-bottom: 13px;
 }
 
 @media (min-width: 768px) {

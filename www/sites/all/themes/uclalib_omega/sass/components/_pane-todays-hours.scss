@@ -36,6 +36,9 @@
   span.views-field-title {
     width: 60%;
   }
+  .field-content a {
+    font-weight: 400;
+  }
   .views-field-title a {
     @extend .more-link-triangle-after;
   }

@@ -1,6 +1,6 @@
 .pane-ask-a-librarian {
   border-radius: 3px;
-  background: $ucla-yellow;
+  background: $ucla-accent_color;
   padding: .4em .5em .6em;
   position: relative;
   p {
@@ -8,10 +8,11 @@
     padding: 0;
   }
   a {
-    @include link-colors(#fff);
-    text-shadow: 0 .04em .02em #8d6e2d;
+    @include link-colors($ucla-dark-gray);
+    // text-shadow: 0 .04em .02em #8d6e2d;
     &, &:hover, &:active, &:focus {
       text-decoration: none;
+      font-weight: 100;
     }
     span {
       font-size: 16px;
@@ -26,6 +27,6 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-color: transparent $ucla-yellow transparent;
+  border-color: transparent $ucla-accent_color transparent;
   border-width: 0 .7em .7em 0;
 }

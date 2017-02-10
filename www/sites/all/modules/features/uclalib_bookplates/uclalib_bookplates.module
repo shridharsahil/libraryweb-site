@@ -67,9 +67,10 @@ function uclalib_bookplates_form_alter(&$form, &$form_state, $form_id) {
     $view = $form_state['view'];
     if ($view->name == 'bookplates_full_content') {
       if (isset($form['search_api_views_fulltext'])) {
+        $form['search_api_views_fulltext']['#title'] = t('Search by Donor Name');
+        $form['search_api_views_fulltext']['#title_display'] = 'invisible';
         $form['search_api_views_fulltext']['#attributes'] = array(
-          'placeholder'
-          => array(t('Search by Donor Name'))
+          'placeholder' => array(t('Search by Donor Name')),
         );
       }
     }
@@ -162,7 +163,9 @@ function uclalib_bookplates_preprocess_views_view_field(&$variables) {
     foreach ($variables['row']->field_field_collection_donor as $key => $value) {
       $variables['donor_names'][] = $value;
       $value_raw = $value['raw']['value'];
-      $donor_name = $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_first']['#items'][0]['safe_value'] . " " . $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_last']['#items'][0]['safe_value'];
+      if (array_key_exists('field_donor_name_first', $value['rendered']['entity']['field_collection_item'][$value_raw])) {
+        $donor_name = $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_first']['#items'][0]['safe_value'] . " " . $value['rendered']['entity']['field_collection_item'][$value_raw]['field_donor_name_last']['#items'][0]['safe_value'];
+      }
     }
 
     // render text for single donor

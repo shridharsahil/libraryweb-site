@@ -69,6 +69,10 @@ function uclalib_staff_profile_theme($existing, $type, $theme, $path) {
       'template' => 'node--staff_profile',
       'path' => drupal_get_path('module', 'uclalib_staff_profile') . '/templates',
     ),
+    'uclalib_staff_profile_staff_search_pane' => array(
+      'render element' => 'block',
+      'template' => 'plugins/ctools/content_types/templates/uclalib-staff-profile-staff-search-pane',
+    ),
   );
 }
 
