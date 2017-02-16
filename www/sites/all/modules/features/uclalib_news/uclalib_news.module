@@ -146,6 +146,23 @@ function uclalib_news_views_pre_render(&$view) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK().
+ */
+function uclalib_news_preprocess_node(&$variables) {
+  // Custom byline (submitted) for blog posts (news nodes)
+  if ($variables['type'] == 'news' && $variables['field_news_blog_name']) {
+    $user = user_load($variables['uid']);
+    $variables['submitted'] = t('By !first !last on !created',
+      array(
+        '!first' => $user->field_first_name['und'][0]['safe_value'],
+        '!last' => $user->field_last_name['und'][0]['safe_value'],
+        '!created' => format_date($variables['created']),
+      )
+    );
+  }
+}
+
+/**
  * Implementation of hook_preprocess_views_view_summary().
  */
 function uclalib_news_preprocess_views_view_summary(&$variables) {
