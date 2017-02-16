@@ -3066,7 +3066,7 @@ a.give_now_sprites {
 }
 .pane-opening-hours-table .current-day,
 .views-field-opening-hours-week .current-day {
-  color: #2d2f35;
+  font-weight: bold;
 }
 
 .views-field-opening-hours-week .sticky-header {
