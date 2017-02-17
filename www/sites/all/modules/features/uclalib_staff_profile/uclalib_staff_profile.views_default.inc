@@ -11,6 +11,139 @@ function uclalib_staff_profile_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'contact_hours';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Contact Hours';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'opening_hours_today' => 'opening_hours_today',
+    'field_location_email' => 'field_location_email',
+    'field_location_phone' => 'field_location_phone',
+    'nid' => 'nid',
+    'nothing' => 'nothing',
+    'contextual_links' => 'contextual_links',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'opening_hours_today' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_location_email' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_location_phone' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nid' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'contextual_links' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+  );
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'promoted_locations' => 'promoted_locations',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Location';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '20';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Opening hours: Opening hours today */
+  $handler->display->display_options['fields']['opening_hours_today']['id'] = 'opening_hours_today';
+  $handler->display->display_options['fields']['opening_hours_today']['table'] = 'node';
+  $handler->display->display_options['fields']['opening_hours_today']['field'] = 'opening_hours_today';
+  $handler->display->display_options['fields']['opening_hours_today']['label'] = 'Today\'s Hours';
+  $handler->display->display_options['fields']['opening_hours_today']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['opening_hours_today']['empty'] = 'Closed';
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_location_email']['id'] = 'field_location_email';
+  $handler->display->display_options['fields']['field_location_email']['table'] = 'field_data_field_location_email';
+  $handler->display->display_options['fields']['field_location_email']['field'] = 'field_location_email';
+  /* Field: Content: Phone Number */
+  $handler->display->display_options['fields']['field_location_phone']['id'] = 'field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['table'] = 'field_data_field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['field'] = 'field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['label'] = 'Phone';
+  $handler->display->display_options['fields']['field_location_phone']['element_label_colon'] = FALSE;
+  /* Sort criterion: Nodequeue: Position */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'location' => 'location',
+  );
+  $export['contact_hours'] = $view;
+
+  $view = new view();
   $view->name = 'staff_profiles';
   $view->description = 'View(s) of staff profiles';
   $view->tag = 'default';
@@ -236,13 +369,13 @@ function uclalib_staff_profile_views_default_views() {
   $handler->display->display_options['fields']['delta']['label'] = '';
   $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['delta']['separator'] = '';
-  /* Field: Field: Text Block */
+  /* Field: Field: Biography */
   $handler->display->display_options['fields']['field_text_block']['id'] = 'field_text_block';
   $handler->display->display_options['fields']['field_text_block']['table'] = 'field_data_field_text_block';
   $handler->display->display_options['fields']['field_text_block']['field'] = 'field_text_block';
   $handler->display->display_options['fields']['field_text_block']['label'] = '';
   $handler->display->display_options['fields']['field_text_block']['element_label_colon'] = FALSE;
-  /* Field: Field: Text Block */
+  /* Field: Field: Biography */
   $handler->display->display_options['fields']['field_text_block_1']['id'] = 'field_text_block_1';
   $handler->display->display_options['fields']['field_text_block_1']['table'] = 'field_data_field_text_block';
   $handler->display->display_options['fields']['field_text_block_1']['field'] = 'field_text_block';
