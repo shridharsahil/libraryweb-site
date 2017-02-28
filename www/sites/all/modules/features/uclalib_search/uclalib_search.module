@@ -30,7 +30,10 @@ function uclalib_search_entity_property_info_alter(&$info) {
  * Implements hook_form_FORM_ID_alter() for FORM_ID().
  */
 function uclalib_search_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
-  if ($form['#id'] == 'views-exposed-form-staff-directory-staff-directory-pane' || $form['#id'] == 'views-exposed-form-news-search-news-search') {
+  if ($form['#id'] == 'views-exposed-form-staff-directory-staff-directory-pane'
+    || $form['#id'] == 'views-exposed-form-news-search-news-search'
+    || $form['#id'] == 'views-exposed-form-location-search-panel-pane-1'
+  ) {
     $form['search_api_views_fulltext']['#title'] = t('Search');
     $form['search_api_views_fulltext']['#title_display'] = 'invisible';
   }
