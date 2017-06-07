@@ -1,0 +1,7 @@
+name = Default Opening Hours
+description = Provides fields in the node form that can automatically generate default opening hours settings for a node.
+core = 7.x
+
+dependencies[] = opening_hours
+
+files[] = uclalib_opening_hours_filter_open_now.inc

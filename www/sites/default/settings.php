@@ -219,7 +219,7 @@ $databases = array (
       'username' => 'uclalib',
       'password' => 'uclalib',
       'host' => '164.67.152.38',
-      'port' => '32777',
+      'port' => '32770',
       'driver' => 'mysql',
       'prefix' => '',
     ),
